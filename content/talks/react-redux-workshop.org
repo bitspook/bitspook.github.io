@@ -1,0 +1,12 @@
+#+DATE: <2017-02-16>
+#+TITLE: React/Redux Workshop
+
+
+#+begin_export html
+  <iframe src="//slides.com/bitspook/react-redux-workshop/embed?style=light" width="100%" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+#+end_html
+  </iframe>
+#+end_export
+
+React/Redux workshop I gave with [[https://www.meetup.com/Chandigarh-Programmers-Club/][Programmers' Club Chandigarh]] meetup group after
+seeing community's interest in these technologies.
