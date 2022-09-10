@@ -10,6 +10,7 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
+    export CASK_DIR=${pkgs.cask.out}/share/emacs/site-lisp/cask/;
     export MY_LIBRARY_PATH=${pkgs.sqlite.out}/lib:${pkgs.openssl.out}/lib;
   '';
 }
