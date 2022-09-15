@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang=en><head><meta charset=UTF-8><title>Using org-roam as a CRM</title><style>@font-face{font-family:Roboto;font-style:normal;font-weight:300;src:url("/fonts/roboto-thin.woff2");} @font-face{font-family:Roboto;font-style:normal;font-weight:500;src:url("/fonts/roboto-regular.woff2");} @font-face{font-family:Roboto;font-style:normal;font-weight:bold;src:url("/fonts/roboto-bold.woff2");} @font-face{font-family:Cantarell;font-style:normal;font-weight:bold;src:url("/fonts/Cantarell-Bold.ttf");} @font-face{font-family:Cantarell;font-style:normal;font-weight:regular;src:url("/fonts/Cantarell-Regular.ttf");} *{margin:0;padding:0;box-sizing:border-box;} body{font-family:Roboto;font-size:14px;background:#fcfcfc;color:#010400;} a{text-decoration:underline;color:#010400;} h1,h2,h3,h4,h5,h6{font-family:Roboto, sans-serif;margin:4rem 0 2rem 0;} img figcaption,figure figcaption{padding:0.4em;padding-top:0;border-bottom:2px solid #465c69;font-size:0.7em;} blockquote{padding:0.01em 1em;margin:1em 0;border-left:4px solid #465c69;font-size:1.2em;} pre{overflow:auto;padding:1em;} .title{margin:2rem 0;}.title h1{font-family:Roboto, sans-serif;font-weight:bold;font-size:1.7em;line-height:1.2;text-transform:capitalize;} .top-nav{height:90px;display:flex;position:relative;justify-content:space-between;}.top-nav ul{list-style-type:none;display:flex;align-items:center;padding:2em 0;}.top-nav li{flex-grow:1;padding-right:2em;}.top-nav li a{text-decoration:underline;font-size:1.4em;font-family:roboto, sans-serif;color:#006992;}.top-nav li a:hover{color:#465c69;}.top-nav li:last-child{padding:0;}.top-nav .brand{width:60px;height:60px;align-self:center;flex-grow:1;}.top-nav .brand-avatar{height:100%;} @media (max-width: 480px){.top-nav{padding-right:1em;}.top-nav a{font-size:1.2em;}} .top-nav{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.top-nav{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.top-nav{max-width:100%;padding:0 4%;}} .content{font-family:Cantarell, sans-serif;font-style:normal;font-weight:500;font-size:1.5em;line-height:1.4;margin:0 auto;padding:0 124px;} .content{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.content{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.content{max-width:100%;padding:0 4%;}} .content-header h1{margin-bottom:1rem;} .content-meta{margin-top:0;margin-bottom:2rem;font-family:Roboto, sans-serif;color:#465c69;display:flex;}.content-meta .meta-item{border-right:1px solid #6f6f6fd1;line-height:1;padding:0 1rem;font-size:0.8rem;display:flex;}.content-meta .meta-item:last-child{padding-right:0;border:none;}.content-meta .date{padding:0;padding-right:1rem;}.content-meta .tags{list-style-type:none;display:flex;flex-wrap:wrap;}.content-meta .tags li{padding-right:1rem;}.content-meta .tags li a{color:#465c69;} .main-article{font-family:Cantarell, sans-serif;min-height:500px;}.main-article strong,.main-article b{font-weight:bold;}.main-article p{font-family:inherit;font-size:inherit;margin:1rem 0;}.main-article h3{margin:1.2rem 0 0.4rem 0;}.main-article a{text-decoration:underline;}.main-article ul{margin-left:1.4rem;}.main-article li{margin:0.7rem;margin-right:0;} .postamble{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.postamble{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.postamble{max-width:100%;padding:0 4%;}} .btn{display:inline-flex;border:2px solid;border-radius:25px;padding:0 2.1em;cursor:pointer;font-family:Roboto;font-weight:normal;line-height:2.2em;align-items:center;text-align:center;text-decoration:none;} .btn-cta{border-color:#b75d69;background:#b75d69;color:#fcfcfc;} .btn-cta:hover{background:#b75d69;} .btn-cta:active{background:#b75d69;} .btn-primary{border-color:#006992;color:#006992;background:#fcfcfc;} .btn-primary:hover{background:#f9f9f9;} .btn-primary:active{background:#efefef;} .btn-secondary{border-color:#465c69;color:#465c69;background:#fcfcfc;} .btn-secondary:hover{background:#f9f9f9;} .btn-secondary:active{background:#efefef;} .postamble{font-family:monospace;color:#666;margin:4rem auto;}.postamble .validation{display:none;} @media (max-width: NIL){.postamble{max-width:100%;padding:0 8%;}} @media (max-width: NIL){.postamble{max-width:100%;padding:0 4%;}} #mc_embed_signup{max-width:600px;background:transparent;margin-bottom:4rem;} .newsletter-email{border:1px solid #465c69;border-radius:25px;width:100%;margin-bottom:1rem;padding:0.4rem 0.8rem;} .rss-sub{margin:2rem 0;}.rss-sub a{display:flex;align-items:center;}.rss-sub a .rss{width:24px;height:24px;margin-right:1rem;background:url("/images/icons/rss.svg");background-repeat:no-repeat;background-size:contain;}</style></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt="Charanjit Singh"></a></div><div><ul><li><a href=/blog>Blog</a></li><li><a href=/poems>Poems</a></li><li><a href=https://github.com/bitspook>Projects</a></li></ul></div></nav><section class=content><header class=content-header><h1>Using org-roam as a CRM</h1><span class=content-meta><span class="meta-item date">January 22, 2022</span><ul class="meta-item tags"><li class=tag><a href=/tags/short>#short</a></li><li class=tag><a href=/tags/emacs>#emacs</a></li><li class=tag><a href=/tags/org-roam>#org-roam</a></li><li class=tag><a href=/tags/workflow>#workflow</a></li></ul></span></header><article class=main-article><iframe width="560" height="315" src="https://www.youtube.com/embed/DteN5uBV5ts" title="TLDR video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+
+<p>
+org-roam is an Emacs application which makes efficiently capturing and finding
+notes easy. It does so a good job at that, I decided to use it as a makeshift
+personal CRM. With a few lines of Elisp, I get to:
+</p>
+
+<ol class="org-ol">
+<li><p>
+Take notes about people and events. I usually capture their contact
+information, important dates, how they made me feel during our interactions.
+Documenting meetings and calls has proven to be very helpful on more than one
+occasion.
+</p>
+
+<p>
+<code>SPC P f</code> to very quickly find or create a person/event.
+</p></li>
+
+<li><p>
+Link events and people to build a graph of relationships, which provide
+context and help me remember our meetings vividly. It is valuable for me
+because it save me from anxiety about forgetting people and things I discuss
+with them.
+</p>
+
+<p>
+<code>SPC P i</code> to insert link to a person/event in an org file (mostly my diary).
+</p></li>
+</ol>
+
+<p>
+I have similar keybindings for taking (<code>SPC n f</code>) and inserting notes (<code>SPC n
+i</code>), so it builds into a nice theme for easy-to-remember keybindings and
+consistent UI.
+</p>
+
+<div id="outline-container-org4a63d2b" class="outline-2">
+<h2 id="org4a63d2b">Setup</h2>
+<div class="outline-text-2" id="text-org4a63d2b">
+<p>
+Elisp I use org-roam as a CRM, while keeping "normal" org-roam available for
+taking notes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">defvar</span> <span style="color: #c6797e;">spook--org-roam-crm-dir</span> <span style="color: #A3B09A;">"~/Documents/org/people"</span>
+  <span style="color: #A3B09A; font-style: italic;">"Directory where org-roam notes related to people are kept."</span>)
+
+(<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">spook--with-org-roam-crm</span> (func <span style="color: #c6797e;">&amp;rest</span> args)
+  <span style="color: #A3B09A; font-style: italic;">"Evaluate FUNC with ARGS org-roam set for working as CRM."</span>
+  (<span style="color: #b18bb1; font-style: italic;">let*</span> ((org-roam-directory spook--org-roam-crm-dir)
+         (org-roam-db-location (concat org-roam-directory <span style="color: #A3B09A;">"/roam.db"</span>)))
+    (apply func args)))
+
+(<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">spook-crm--db-sync</span> ()
+  (<span style="color: #b18bb1; font-style: italic;">interactive</span>)
+  (spook--with-org-roam-crm #'org-roam-db-sync))
+
+(<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">spook-crm--find-person</span> ()
+  (<span style="color: #b18bb1; font-style: italic;">interactive</span>)
+  (spook--with-org-roam-crm #'org-roam-node-find))
+
+(<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">spook-crm--insert-person</span> ()
+  (<span style="color: #b18bb1; font-style: italic;">interactive</span>)
+  (spook--with-org-roam-crm #'org-roam-node-insert))
+</pre>
+</div>
+
+<p>
+Setup keybindings for calling <code>spook-crm--find-person</code> to quickly search for
+(and/or add) a person or event, and <code>spook-crm--insert-person</code> to add a link to
+a person or event in any org-mode buffer. I frequently use it when adding
+meeting notes and in my diary.
+</p>
+
+<p>
+Here's how I add the keybindings:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(spook-defkeymap
+ <span style="color: #A3B09A;">"spook-people"</span> <span style="color: #A3B09A;">"C-c P"</span>
+ '(<span style="color: #A3B09A;">"f"</span> . spook-crm--find-person)
+ '(<span style="color: #A3B09A;">"i"</span> . spook-crm--insert-person))
+</pre>
+</div>
+
+<p>
+You can find source of my very naive <code>spook-defkeymap</code> macro in my <a href="https://github.com/bitspook/spookmax.d/blob/master/readme.org#helper-utilities">Emacs
+configuration</a>. In addition to this, I assign the <code>spook-people</code> keymap to my
+<a href="https://github.com/meow-edit/meow/">meow</a> leader key, means I can press <code>SPC P f</code> to find a person/event, and <code>SPC P
+i</code> to insert a link to a person/event.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgbdfe91a" class="outline-2">
+<h2 id="orgbdfe91a">Does it solve everything?</h2>
+<div class="outline-text-2" id="text-orgbdfe91a">
+<p>
+No. But it is the quickest solution which achieves satisfactory result and free
+me up to focus on other things. I feel org-roam itself to be over-engineered
+sometimes, and there are a bunch of things I might like but don't need right
+now. e.g
+</p>
+
+<ul class="org-ul">
+<li>More structured way of capturing specific kind of information. e.g contact
+details. Structure of data kept in org files is upto me, which works for now</li>
+<li>Searching by something which isn't title or tags. This is solved by doing grep
+over</li>
+<li>Visualize the people and events I participate in. <a href="https://github.com/org-roam/org-roam-ui">org-roam-ui</a> didn't work on
+first shot.</li>
+<li>Contacts/details on the go i.e a mobile app</li>
+<li>Psychoanalyze people I meet; building, tracking and concluding experiments.
+But it is perhaps too much to ask without making effort</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbfab3f1" class="outline-2">
+<h2 id="orgbfab3f1">Why am I sharing this?</h2>
+<div class="outline-text-2" id="text-orgbfab3f1">
+<ul class="org-ul">
+<li>To bounce ideas off of internet</li>
+<li>Hoping someone will point me in a better direction if there is one</li>
+<li>Hoping someone will solve some problems with this snippet, build on it until I
+come around to do it myself</li>
+<li>To spread the cult of Emacs/org-mode (my precious-es)</li>
+<li>To have some activity on my blog. It is too quiet here</li>
+</ul>
+</div>
+</div>
+</article></section><footer class="site-footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2>Get updates via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class="btn btn-primary" type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Or Follow via RSS</a></p><p>Author: Charanjit Singh <a href=https://twitter.com/bitspook>@bitspook</a></p></footer></div></body><script type=text/javascript>(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^///)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);mixpanel.init('0f28a64d9f8bce370006d36e1e2e3f61');mixpanel.track('Page Load');</script></html>

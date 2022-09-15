@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0">
+    <channel>
+        <title>Posts tagged `adhd&apos;</title>
+        <link>https://bitspook.in/</link>
+        <generator>cl-ownpress</generator>
+        <language>en-us</language>
+        <image>
+            <title>Posts tagged `adhd&apos;</title>
+            <url>/images/avatar.png</url>
+            <link>https://bitspook.in/</link>
+        </image>
+        <item>
+            <title>Helping others to help myself</title>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-help-others-to-help-yourself</link>
+            <description>&lt;p&gt;
+It is near impossible for me to get something done if I don&apos;t have 100%
+peaked interest in it at &lt;b&gt;this&lt;/b&gt; very moment. Occasionally I can hyper
+focus on things, but that hyper focus rarely finish things. Hyper focus
+is like eating all the desert, leaving behind a plate full of broccoli.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have noticed however that most of the times when I have actually
+finished something, I was, in my mind, helping someone else.
+&lt;/p&gt;
+
+&lt;p&gt;
+Reviewing the judicious documentation of my life, that is my journal, I
+can say it for near about 100% of the things that I actually finished.
+The force behind crossing the finishing line was either accountability,
+or my belief that someone else is relying on me.
+&lt;/p&gt;
+
+&lt;p&gt;
+None of my own &quot;side projects&quot; have ever seen a ray of light, but most
+things I started for others were finished. Mostly that was
+presentations, processes, and very personally tailored learning
+materials.
+&lt;/p&gt;
+
+&lt;p&gt;
+Reviewing my journal, I noticed a pattern developing over the course of
+last year. Whenever I had an idea that I wanted to see done, I tried to
+frame it in somebody else&apos; canvas. If I could do that, I shared the idea
+with the person and got them involved as a partner. Chances of success
+I&apos;ve observed were directly proportional to how much I care for the
+person. Some of the things I started that I couldn&apos;t fit in to help
+someone else are still in &quot;TODO&quot; state, despite the long and clear
+road-maps I created for them.
+&lt;/p&gt;
+
+&lt;p&gt;
+This discovery of transforming emotions that come easily to me, into
+what I believe I severely lack has sown seeds of new hope. Perhaps I
+will be able to replace my need of accountability to get things done
+with this. I don&apos;t know if it is vain need of acknowledgment, or
+goodness of heart, but it works.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have started taking actions to optimize this. I am as anti-social as
+they come, and that, now I believe, is a problem to be solved if I want
+to increase my happiness.
+&lt;/p&gt;
+
+&lt;p&gt;
+Most of my activities with other people don&apos;t register to my brain as
+something it should remember. My mind is often meeting people for first
+time despite several previous encounters. That is the first thing I am
+going to tackle. Concrete step I am taking for this, is to start using
+&lt;a href=&quot;https://github.com/monicahq/monica/&quot;&gt;Monica&lt;/a&gt; to keep track of my
+social life. Next step would be to actually start making effort to
+socialize. I suppose saying &quot;hello&quot; to my colleagues every morning could
+be a good start.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>coming-to-terms-with-adhd-help-others-to-help-yourself</guid>
+            <pubDate>2019-05-13T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Managing Chaos</title>
+            <link>https://bitspook.in/blog/managing-chaos-org-mode-as-a-todo-list</link>
+            <description>&lt;p&gt;
+I am thinking about doing a small series of posts on how I am managing
+the chaos that I am trying to stop fighting. I hope the chaos of an ADHD
+mind can be utilized rather than fought against. So far it has been
+working out pretty great (for past ~8 months). This post is about how I
+manage my ever exploding list of things I want to do.
+&lt;/p&gt;
+
+&lt;p&gt;
+I believe one of the most important things is to externalize your
+thoughts. Making it a habit to write them down is immensely helpful. So
+many of my problems stopped being problems as I adopted writing things
+down more and more. I have very small working memory. I forget often and
+I forget most things. Mind is always thinking of new ideas, things to
+do, things to tell people. The knowledge that I am going to forget the
+thing I am thinking right now is a big source of anxiety. The burden of
+remembering innumerable things and then failing to do so has a cognitive
+toll of its own.
+&lt;/p&gt;
+
+&lt;p&gt;
+I use org-mode as a lot of things; a TODO list is one of them. I am not
+going to get into the details of using org-mode for a beginner, but I&apos;ll
+share my flow of using org mode as a TODO list.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-capturing-things-to-do&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;capturing-things-to-do&quot;&gt;Capturing things to do&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-capturing-things-to-do&quot;&gt;
+&lt;p&gt;
+A very useful feature of org-mode is how easy it makes to &quot;capture&quot; TOOD
+items. I use Emacs as my primary text editor; being a software
+developer, most of my day time is spent in Emacs. Any time I think of
+something I [want|have] to do, I capture it with 3 keystrokes and
+usually immediately refile it under an appropriate heading. I keep 2
+TODOs.org files, one for work and one for my personal life.
+&lt;/p&gt;
+
+&lt;p&gt;
+In my personal TODOs.org file, I keep headings categorizing the kind of
+thing it is that I want to do; right now, they are =Study, Personal
+Development, Habits, Projects, Reading List, In Basket&quot;.&quot;In Basket&quot;
+heading keeps things that are quickly done in a day or few, and/or
+cannot be categorized.
+&lt;/p&gt;
+
+&lt;p&gt;
+My work TODOs.org carries all my work related tasks, including Jira
+issues, and general things I want/have to do when I am in the office. I
+have a TODO item to integrate org-jira, but right now I am manually
+copying Jira task IDs around like an imbecile.
+&lt;/p&gt;
+
+&lt;p&gt;
+This is how my org-capture-templates variable looks like right now:
+&lt;/p&gt;
+
+&lt;pre class=&quot;example&quot; id=&quot;org2337649&quot;&gt;
+(setq
+   org-capture-templates
+   &apos;((&quot;d&quot; &quot;Diary Entry&quot; plain (file+datetree org-agenda-diary-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
+     (&quot;f&quot; &quot;Feedback&quot; plain (file+datetree trantor-feedback-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
+     (&quot;i&quot; &quot;Idea&quot; entry (file org-ideas-file) &quot;* %?\n%T&quot;)
+     (&quot;t&quot; &quot;Todo&quot; entry (file+headline &quot;&quot; &quot;Todos&quot;) &quot;* TODO %?\n%U\n[[%F]]&quot;)
+     (&quot;c&quot; &quot;Contact&quot; entry (file org-contacts-file) &quot;* %^{Name}\n:PROPERTIES:\n:COMPANY %^{Company}\n:PHONE: %^{Phone}\n:END:&quot;)))
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-delegating-things-to-future&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;delegating-things-to-future&quot;&gt;Delegating things to future&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-delegating-things-to-future&quot;&gt;
+&lt;p&gt;
+Org-mode has a brilliant feature of scheduling tasks. It&apos;s rare for me
+to schedule a task for &quot;today&quot;; I delegate stuff to future me. I can
+capture and file things in any header, and then use org-mode&apos;s agenda
+views to filter out things past-me assigned for today. I try to finish
+the &quot;today&quot; tasks, and try to stay at peace when I fail to every day.
+Org-mode also display a count of for how long I&apos;ve been missing to do a
+certain task which is a handy reminder that I am falling short on my
+commitments.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-prioritizing-things&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;prioritizing-things&quot;&gt;Prioritizing things&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-prioritizing-things&quot;&gt;
+&lt;p&gt;
+Not all tasks are made equal. Although I try my best to not let my
+&quot;Today&quot; tasks list become too big, sometimes there is simply too much on
+the plate. In that case, I define priorities for the most important
+tasks, which are displayed at the top of the list in Day-agenda view.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-tagging-items&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;tagging-items&quot;&gt;Tagging items&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-tagging-items&quot;&gt;
+&lt;p&gt;
+I often tag my TODO items so I can easily filter them in the agenda view
+when I want to find things I have to do in some particular context. I
+often tag things by:
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;The person&apos;s name who I need to be with for doing something e.g when I
+want to tell someone something&lt;/li&gt;
+&lt;li&gt;The Scrum sprint in which a task need to get done. For this I don&apos;t
+tag each task but instead file my tasks in a &quot;Sprint X&quot; heading which
+is tagged, and org-mode automatically inherit tags to all the
+subheadings&lt;/li&gt;
+&lt;li&gt;Place where I need to be at for doing something&lt;/li&gt;
+&lt;li&gt;Some other task specific metadata that I think can be helpful for
+finding this task&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-finding-things-to-do&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;finding-things-to-do&quot;&gt;Finding things to do&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-finding-things-to-do&quot;&gt;
+&lt;p&gt;
+Org-mode allow me to write my todo items in any order in any manner; I
+have several files where I write a lot of stuff, some of it is things to
+do; most if it isn&apos;t. It&apos;s crucial to write things down for me, because
+I know that I am going to forget it. Org-mode is immensely helpful in
+finding things out when I need it. Org-files being just text files allow
+me to just grep stuff; which is even more powerful with
+helm-projectile-grep. But the killer feature for finding out what I am
+supposed to be doing right now is org&apos;s agenda view. It allow me to
+filter things by time and tags.
+&lt;/p&gt;
+
+&lt;p&gt;
+Org-mode require you to explicitly add files to a list of
+&lt;code&gt;org-agenda-files&lt;/code&gt;. The agenda views only pick tasks from files in this
+list. I have almost all my org files in my agenda list. It also provides
+different views for the agenda; the one I am using most these days is
+the &quot;Day-agenda&quot; view, and Week-agenda view when I want to plan things
+ahead for the week.
+&lt;/p&gt;
+
+&lt;p&gt;
+On my mobile, I use orgzly android app. I am not too happy with it, but
+it&apos;s the best I&apos;ve got for now. I&apos;ve it in my TODO list to create an app
+focused on org-mode and TODO lists the way I want it to work.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>managing-chaos-org-mode-as-a-todo-list</guid>
+            <pubDate>2019-01-05T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Coming to terms with ADHD - Part 2</title>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-part-2</link>
+            <description>&lt;p&gt;
+One of the important aspects of living with ADHD is getting overwhelmed
+by thoughts. This is usually a major pain in the ass. When left
+unchecked it usually leads to a lot of confusion very painfully visible
+to people around you. This made most of my school life very tormenting.
+Despite being an &quot;A&quot; student, I was always completely lost.
+&lt;/p&gt;
+
+&lt;p&gt;
+This got better when I found computers. A book I found while sitting in
+the wrong classroom turned things around for me. My thoughts got
+channeled, things started becoming a lot more clearer when I wasn&apos;t
+thinking of 10 random things at a time. I was still thinking of 10
+things at a time, but it was now manageable; it was interesting. I
+wasn&apos;t fighting the trains of thought anymore, I was enjoying the ride.
+&lt;/p&gt;
+
+&lt;p&gt;
+This was alright while it was fun and games, but it became a problem
+again when I entered software development as a profession. Now I had to
+focus on things for extended duration of time; which usually was more
+than my interest span. It was a struggle again. I got over that period
+though; my current solution is to bring more accountability for my work,
+for which right now, I am doing a day job.
+&lt;/p&gt;
+
+&lt;p&gt;
+During my period of struggle, I did a lot of fight to stay focused. I
+fought to not let distractions come in; I blocked sites, tried several
+time-boxing techniques; most things worked, but for a small duration of
+time. The fight did me more bad than good. Exploring things is what make
+me happy, when I took that away from myself, the frustration that built
+up as a result threw me in a pit of despair.
+&lt;/p&gt;
+
+&lt;p&gt;
+My recommendation to anyone finding [her|him]self in my shoes is to not
+fight it all the time. Do whatever you feel like every once in a while.
+It is very important to keep feeling happy. Trust yourself that you&apos;ll
+manage to get important things done in time. However, you need to
+build/earn this trust. Read my
+&lt;a href=&quot;file:///blog/coming-to-terms-with-adhd/&quot;&gt;previous post&lt;/a&gt; for some tips on how I do it.
+&lt;/p&gt;
+
+&lt;p&gt;
+When you find something you feel passionate about, the multiple trains
+of thought kinda all go in the same direction. They&apos;re all interesting,
+and you want to ride them all. If you fight to ride one (or few) of
+them, you&apos;re gonna give yourself a hard time. Instinct to hop on each
+one of them until another one is more interesting isn&apos;t all that evil.
+I&apos;ll be writing more posts on how I do that (i.e tools and techniques I
+use), I don&apos;t have time right now, and am losing interest in writing
+this post. Try to trust yourself that you&apos;ll come back to what you&apos;re
+pausing, have means that allow you to hop b/w different things, and try
+to be at peace with the fact that this is simply how you operate. It
+might look chaotic to others, you&apos;ll still not be &quot;normal&quot;, but you&apos;ll
+be a whole lot happy, and hopefully satisfied.
+&lt;/p&gt;
+
+&lt;p&gt;
+In my current setup I have tens of different things I am time-sharing
+on, and am still delivering satisfactory value in my work. It is
+certainly possible for you to not fight tooth and nail with your way of
+thinking and have a satisfactory career (at least in Software
+Development).
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>coming-to-terms-with-adhd-part-2</guid>
+            <pubDate>2019-01-03T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Coming to terms with ADHD</title>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd</link>
+            <description>&lt;p&gt;
+After my recent subscription to &lt;a href=&quot;http://reddit.com/r/adhd&quot;&gt;/r/adhd&lt;/a&gt;, I
+realized how important it can be to share experiences. Even when it is
+something very personal and seem unlikely that anyone can relate to it,
+it can be quite helpful for someone who thinks she&apos;s alone with her
+struggles. A while back I deleted most of my old blog posts feeling
+embarrassed of their suspected cringeworthiness. Now I think it was a
+mistake. I am thinking about resurrecting them from archive.org.
+&lt;/p&gt;
+
+&lt;p&gt;
+In this post I want to talk about how I came to the single instance of
+my life when I am not completely lost in self-pity for being too lazy
+and undisciplined. Perhaps it was this self-loathing that slowly turned
+to depression, and a bad event finally pushed me into the hole that I
+believe I am out of now.
+&lt;/p&gt;
+
+&lt;p&gt;
+I started my research on ADHD when my doctor pointed I might have it. At
+that time I was in limbo of a special kind. I was quite used to the
+struggle of making myself do work that wasn&apos;t interesting anymore. I was
+also used to the periods of time when I was simply incapable of doing
+any work. But what made me go to the doctor was a relatively longer
+period of true nothingness. Nothing would excite me, no matter what I
+tried. The chaos inside my head got so out of control I was often
+talking to myself in an attempt to materialize the voices and solidify
+the line of thought so I could deal with them one at a time. Nothing
+worked. I would often contemplate suicide because my mind just wouldn&apos;t
+shut up about how pathetic I was. It was then I decided to consult help
+from a professional.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have not reached a solution, perhaps there is no solution that solves
+everything. But here is a list of things that has made a huge impact in
+helping me come to terms with my ADHD.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-keep-a-daily-journal&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;keep-a-daily-journal&quot;&gt;Keep a daily journal&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-keep-a-daily-journal&quot;&gt;
+&lt;p&gt;
+Try to know yourself. Understanding why you are thinking what you are
+thinking can be immensely helpful. It will help you figure out the flaws
+in your thinking, and how to make up for them. For example, a pat
+routine has saved me so many times once I started noticing that how
+often in a single I would forget my wallet or my phone or keys. Small
+things like this add up to make life miserable, and often go unnoticed
+in the storms of thoughts we face every day.
+&lt;/p&gt;
+
+&lt;p&gt;
+So much of the overwhelmingness can just be let gone by writing it down.
+Try to be your own therapist, try to witness yourself. Not to
+participate, or engage, just analyze. It can be quite an exhausting
+thing to do, but I&apos;ve found it to be more helpful than meditation. When
+I write in my diary, I find myself to be much more in control of life
+the next day. It&apos;ll also help you figure out which of your ideas are
+actually work-able and which are just fluff that need to go in trash
+can.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-write-stuff-down&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;write-stuff-down&quot;&gt;Write stuff down&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-write-stuff-down&quot;&gt;
+&lt;p&gt;
+You don&apos;t need to wait for the night to fall before you can write in
+your diary. Writing often during the day is quite helpful too. Write
+anything and everything down. Is it something you want to do but can&apos;t
+right now? Create a todo entry. Just had a brilliant new idea? Capture
+it. Invest in a tool that can help you capture your thoughts quickly.
+Make this process a part of your life. I use Emacs&apos; Org mode which has a
+brilliant capture system, and I am very happy with it.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-delegate-to-your-future-self&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;delegate-to-your-future-self&quot;&gt;Delegate to your future self&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-delegate-to-your-future-self&quot;&gt;
+&lt;p&gt;
+You don&apos;t need to do all the hundred things you have thought of, today
+itself. Delegate them to your future self. I don&apos;t remember where I
+learned it, but it is very helpful to treat your future self as a
+different person, and just assign tasks to him that you don&apos;t have time
+to work on right now. You can schedule stuff you capture right away, or
+you can have a weekly review when you sort everything you captured in
+the week.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-review-weekly&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;review-weekly&quot;&gt;Review weekly&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-review-weekly&quot;&gt;
+&lt;p&gt;
+It is very important to review everything you capture on regular
+intervals. It&apos;ll give you confidence regarding your system, you could
+trust yourself more. When you can start trusting your future self,
+things becomes a lot very easier. You also become better at estimating
+stuff, so the commitments you give to other people bring you that much
+less anxiety.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-respect-the-decisions-made-by-your-past-self&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;respect-the-decisions-made-by-your-past-self&quot;&gt;Respect the decisions made by your past self&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-respect-the-decisions-made-by-your-past-self&quot;&gt;
+&lt;p&gt;
+Only way you can trust your future self to finish what&apos;s assigned to him
+is if you respect the decisions made by your past self. You don&apos;t have
+to beat yourself up too much about it either. Understand that it&apos;s not
+easy to estimate things. If we could predict things very reliably, we
+could open shops as psychics. Try to achieve &quot;eventual consistency&quot;. Not
+everything is equally important. Make sure that if something has been
+assigned to you, it eventually gets completed.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-find-something-you-can-attach-meaning-to&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;find-something-you-can-attach-meaning-to&quot;&gt;Find something you can attach meaning to&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-find-something-you-can-attach-meaning-to&quot;&gt;
+&lt;p&gt;
+It&apos;s helpful to have something to call home. A principle that you
+wouldn&apos;t compromise with. I have chosen to attach meaning to the quality
+of the work I do. That&apos;s where I try to find solace. That&apos;s what I use
+to bring myself to peace, when I can&apos;t control the mess in some parts of
+my life. It might be one of the cardinal sins, but this kind of pride
+helps build confidence to face life.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>coming-to-terms-with-adhd</guid>
+            <pubDate>2018-12-15T05:30:00.000000+05:30</pubDate>
+        </item>
+    </channel>
+</rss>

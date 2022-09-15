@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0">
+    <channel>
+        <title>Posts tagged `short&apos;</title>
+        <link>https://bitspook.in/</link>
+        <generator>cl-ownpress</generator>
+        <language>en-us</language>
+        <image>
+            <title>Posts tagged `short&apos;</title>
+            <url>/images/avatar.png</url>
+            <link>https://bitspook.in/</link>
+        </image>
+        <item>
+            <title>Using org-roam as a CRM</title>
+            <link>https://bitspook.in/blog/using-org-roam-as-a-crm</link>
+            <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;
+org-roam is an Emacs application which makes efficiently capturing and finding
+notes easy. It does so a good job at that, I decided to use it as a makeshift
+personal CRM. With a few lines of Elisp, I get to:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+Take notes about people and events. I usually capture their contact
+information, important dates, how they made me feel during our interactions.
+Documenting meetings and calls has proven to be very helpful on more than one
+occasion.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;SPC P f&lt;/code&gt; to very quickly find or create a person/event.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Link events and people to build a graph of relationships, which provide
+context and help me remember our meetings vividly. It is valuable for me
+because it save me from anxiety about forgetting people and things I discuss
+with them.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;SPC P i&lt;/code&gt; to insert link to a person/event in an org file (mostly my diary).
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+I have similar keybindings for taking (&lt;code&gt;SPC n f&lt;/code&gt;) and inserting notes (&lt;code&gt;SPC n
+i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings and
+consistent UI.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-org4a63d2b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4a63d2b&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4a63d2b&quot;&gt;
+&lt;p&gt;
+Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
+taking notes.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~/Documents/org/people&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #A3B09A; font-style: italic;&quot;&gt;&quot;Directory where org-roam notes related to people are kept.&quot;&lt;/span&gt;)
+
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #c6797e;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
+  &lt;span style=&quot;color: #A3B09A; font-style: italic;&quot;&gt;&quot;Evaluate FUNC with ARGS org-roam set for working as CRM.&quot;&lt;/span&gt;
+  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let*&lt;/span&gt; ((org-roam-directory spook--org-roam-crm-dir)
+         (org-roam-db-location (concat org-roam-directory &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;/roam.db&quot;&lt;/span&gt;)))
+    (apply func args)))
+
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-crm--db-sync&lt;/span&gt; ()
+  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;interactive&lt;/span&gt;)
+  (spook--with-org-roam-crm #&apos;org-roam-db-sync))
+
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-crm--find-person&lt;/span&gt; ()
+  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;interactive&lt;/span&gt;)
+  (spook--with-org-roam-crm #&apos;org-roam-node-find))
+
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-crm--insert-person&lt;/span&gt; ()
+  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;interactive&lt;/span&gt;)
+  (spook--with-org-roam-crm #&apos;org-roam-node-insert))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Setup keybindings for calling &lt;code&gt;spook-crm--find-person&lt;/code&gt; to quickly search for
+(and/or add) a person or event, and &lt;code&gt;spook-crm--insert-person&lt;/code&gt; to add a link to
+a person or event in any org-mode buffer. I frequently use it when adding
+meeting notes and in my diary.
+&lt;/p&gt;
+
+&lt;p&gt;
+Here&apos;s how I add the keybindings:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;(spook-defkeymap
+ &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;spook-people&quot;&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;C-c P&quot;&lt;/span&gt;
+ &apos;(&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;f&quot;&lt;/span&gt; . spook-crm--find-person)
+ &apos;(&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;i&quot;&lt;/span&gt; . spook-crm--insert-person))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+You can find source of my very naive &lt;code&gt;spook-defkeymap&lt;/code&gt; macro in my &lt;a href=&quot;https://github.com/bitspook/spookmax.d/blob/master/readme.org#helper-utilities&quot;&gt;Emacs
+configuration&lt;/a&gt;. In addition to this, I assign the &lt;code&gt;spook-people&lt;/code&gt; keymap to my
+&lt;a href=&quot;https://github.com/meow-edit/meow/&quot;&gt;meow&lt;/a&gt; leader key, means I can press &lt;code&gt;SPC P f&lt;/code&gt; to find a person/event, and &lt;code&gt;SPC P
+i&lt;/code&gt; to insert a link to a person/event.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-orgbdfe91a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbdfe91a&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbdfe91a&quot;&gt;
+&lt;p&gt;
+No. But it is the quickest solution which achieves satisfactory result and free
+me up to focus on other things. I feel org-roam itself to be over-engineered
+sometimes, and there are a bunch of things I might like but don&apos;t need right
+now. e.g
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;More structured way of capturing specific kind of information. e.g contact
+details. Structure of data kept in org files is upto me, which works for now&lt;/li&gt;
+&lt;li&gt;Searching by something which isn&apos;t title or tags. This is solved by doing grep
+over&lt;/li&gt;
+&lt;li&gt;Visualize the people and events I participate in. &lt;a href=&quot;https://github.com/org-roam/org-roam-ui&quot;&gt;org-roam-ui&lt;/a&gt; didn&apos;t work on
+first shot.&lt;/li&gt;
+&lt;li&gt;Contacts/details on the go i.e a mobile app&lt;/li&gt;
+&lt;li&gt;Psychoanalyze people I meet; building, tracking and concluding experiments.
+But it is perhaps too much to ask without making effort&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgbfab3f1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbfab3f1&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbfab3f1&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
+&lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
+&lt;li&gt;Hoping someone will solve some problems with this snippet, build on it until I
+come around to do it myself&lt;/li&gt;
+&lt;li&gt;To spread the cult of Emacs/org-mode (my precious-es)&lt;/li&gt;
+&lt;li&gt;To have some activity on my blog. It is too quiet here&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>f36bb804-0ae3-4d16-b1ce-392e489007ae</guid>
+            <pubDate>2022-01-22T05:30:00.000000+05:30</pubDate>
+        </item>
+    </channel>
+</rss>

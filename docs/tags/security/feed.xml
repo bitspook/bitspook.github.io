@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0">
+    <channel>
+        <title>Posts tagged `security&apos;</title>
+        <link>https://bitspook.in/</link>
+        <generator>cl-ownpress</generator>
+        <language>en-us</language>
+        <image>
+            <title>Posts tagged `security&apos;</title>
+            <url>/images/avatar.png</url>
+            <link>https://bitspook.in/</link>
+        </image>
+        <item>
+            <title>Microservices</title>
+            <link>https://bitspook.in/talks/microservices-techblend</link>
+            <description>&lt;p&gt;
+I recently joined a Whatsapp group named &quot;Tech Blend&quot;, which conduct
+weekly online meetups. Topic for last meetup was &quot;Microservices&quot;, for
+which I volunteered. Since I was working for around 2 years on a
+microservices based project of decent complexity, I thought it would be
+fun to talk about my experience.
+&lt;/p&gt;
+
+&lt;p&gt;
+The meetup was fun. I ran out of time. The meetup is quite well managed.
+Manpreet, the guy who organizes the meetup does a very good job
+respecting everyone&apos;s time while managing to have meaningful discussions
+at the same time. Their topics/talks are usually quite shallow, but this
+event management is something I can learn from participating in this
+group.
+&lt;/p&gt;
+
+&lt;p&gt;
+Here are the slides for I created for the meetup. I was holding on to
+them hoping I&apos;ll create a video, but that&apos;s not happening. So I am just
+putting the slides over here.
+&lt;/p&gt;
+
+&lt;p&gt;
+Feel free to hit me up if you need some help regarding microservices, or
+if you need me to explain some slide, or just for a chat.
+&lt;/p&gt;
+
+&lt;iframe src=&quot;//slides.com/bitspook/microservices/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;/iframe&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>talks</category>
+            <guid>microservices-techblend</guid>
+            <pubDate>2020-08-06T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Secure Software Teams Trantor</title>
+            <link>https://bitspook.in/talks/secure-software-teams-trantor</link>
+            <description>&lt;iframe src=&quot;//slides.com/bitspook/secure-software-teams/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;
+I gave this talk in one of internal sessions at Trantor. Goal was to
+acquaint one of our software teams into the world of application
+security. This was a basic talk, just to familiarize attendees with
+basic information security concepts. I leveraged this opportunity to
+propose setting up a Red Team in Trantor.
+&lt;/p&gt;
+
+&lt;p&gt;
+As practical part of this session, I created a docker based virtual lab
+with webgoat set up. During the session we went through some of the
+exercises, rest were left for the attendees as homework. Here&apos;s the
+&lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
+&lt;/p&gt;
+
+&lt;pre class=&quot;example&quot; id=&quot;org1659083&quot;&gt;
+version: &apos;3&apos;
+services:
+  webgoat:
+    image: webgoat/webgoat-8.0
+    environment:
+      - WEBWOLF_HOST=webwolf
+      - WEBWOLF_PORT=9090
+    ports:
+      - &quot;8080:8080&quot;
+      - &quot;9001:9001&quot;
+    volumes:
+      - ./docker-volumes/webgoat-home:/home/webgoat/.webgoat
+  webwolf:
+    image: webgoat/webwolf
+    ports:
+      - &quot;9090:9090&quot;
+    command: --spring.datasource.url=jdbc:hsqldb:hsql://webgoat:9001/webgoat --server.address=0.0.0.0
+&lt;/pre&gt;
+
+&lt;p&gt;
+To start the lab, simply create a directory, save above snippet as
+&lt;code&gt;docker-compose.yml&lt;/code&gt;, and run &lt;code&gt;docker-compose up&lt;/code&gt; in it. You will then
+be able to access webgoat on &lt;a href=&quot;http://localhost:8080/WebGoat&quot;&gt;http://localhost:8080/WebGoat&lt;/a&gt;
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>talks</category>
+            <guid>secure-software-teams-trantor</guid>
+            <pubDate>2019-08-26T05:30:00.000000+05:30</pubDate>
+        </item>
+    </channel>
+</rss>

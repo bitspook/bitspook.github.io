@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0">
+    <channel>
+        <title>Posts tagged `video&apos;</title>
+        <link>https://bitspook.in/</link>
+        <generator>cl-ownpress</generator>
+        <language>en-us</language>
+        <image>
+            <title>Posts tagged `video&apos;</title>
+            <url>/images/avatar.png</url>
+            <link>https://bitspook.in/</link>
+        </image>
+        <item>
+            <title>Using ELisp as an HTML templating engine</title>
+            <link>https://bitspook.in/blog/using-elisp-as-an</link>
+            <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;
+HTML templating engines like &lt;a href=&quot;https://jinja.palletsprojects.com/en/3.1.x/&quot;&gt;Jinja&lt;/a&gt; or &lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; are commonly used in web
+development for weaving data into HTML.
+&lt;/p&gt;
+
+&lt;p&gt;
+For last couple of days, I&apos;ve been porting &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;my Hakyll based static-site generator&lt;/a&gt;
+to &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;Emacs Lisp&lt;/a&gt;, for a more fluent thought-publishing workflow. I found myself in
+need of an HTML templating engine so I could convert data about my blog posts
+and notes to HTML.
+&lt;/p&gt;
+
+&lt;p&gt;
+I found that we actually don&apos;t need an HTML templating engine to convert ELisp
+to HTML. Emacs has built-in capability to work with HTML, we can piggy back on
+that to get a templating engine without adding any new code.
+&lt;/p&gt;
+
+&lt;p&gt;
+We can represent DOM, which is a tree data-structure, as a lisp form
+&lt;/p&gt;
+
+&lt;p&gt;
+Consider following HTML element
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #F9B5AC;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;&amp;gt;
+  &amp;lt;&lt;span style=&quot;color: #F9B5AC;&quot;&gt;a&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;href&lt;/span&gt;=&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;&amp;gt;Google&amp;lt;/&lt;span style=&quot;color: #F9B5AC;&quot;&gt;a&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&quot;color: #F9B5AC;&quot;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+We can write it as a lisp form like this:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;&apos;(div ((class . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;))
+      (a ((href . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;))
+         &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Google&quot;&lt;/span&gt;))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Note that this is a quoted lisp form. Which means this code isn&apos;t actually
+executed, &lt;code&gt;div&lt;/code&gt; or &lt;code&gt;a&lt;/code&gt; aren&apos;t lisp functions. We can just put in any symbol
+there, and it is treated as a DOM node.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;shr-dom-to-xml&lt;/code&gt; converts this lisp form to an HTML string:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;))
+  (shr-dom-to-xml
+   `(div ((class . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;))
+         (a ((href . ,my-url))
+            &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Google&quot;&lt;/span&gt;))))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;pre class=&quot;example&quot;&gt;
+&amp;lt;div class=&quot;container&quot;&amp;gt; &amp;lt;a href=&quot;https://google.com&quot;&amp;gt;Google&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+In this example we changed the quote used to showcase how we can run arbitrary
+lisp forms in our DOM to weave data into it.
+&lt;/p&gt;
+
+&lt;p&gt;
+You can check &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;my wip ELisp blogging setup&lt;/a&gt; for more complex examples, and some
+glue code I&apos;ve written to make using ELisp as HTML templating engine easier.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>288bba3a-6385-47bf-b8ea-f832aeae28c2</guid>
+            <pubDate>2022-04-08T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Using org-mode as an SQL playground</title>
+            <link>https://bitspook.in/blog/using-org-mode-as-an-sql-playground</link>
+            <description>&lt;p&gt;
+Showcase video:
+&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DY7t4T4TmUU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;
+For every web app I work on, a database client is always present for exploring
+data and building complex queries. Recently, I have moved on from my PgAdmin to
+org-mode for this purpose, because why not.
+&lt;/p&gt;
+
+&lt;p&gt;
+Org-mode allows executing code snippets and can show results in a nice tabular
+form. But org-mode isn&apos;t &lt;a href=&quot;https://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-320/Microsoft-Office.html&quot;&gt;written by Microsoft&lt;/a&gt;. So it don&apos;t allow arbitrary code
+execution without our explicit consent. To tell org-mode that it is okay to
+execute SQL snippets, we need to run following elisp snippet:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;with-eval-after-load&lt;/span&gt; &apos;org
+(org-babel-do-load-languages
+ &apos;org-babel-load-languages
+ &apos;((sql . t))))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Org-mode has a number of &lt;a href=&quot;https://www.orgmode.org/worg/org-contrib/babel/languages/ob-doc-sql.html#org7f0941b&quot;&gt;header arguments for SQL blocks&lt;/a&gt; which can be used to
+configure how a particular SQL source-code snippet is executed. Most important
+ones perhaps are:
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;code&gt;:engine&lt;/code&gt; which tells which database to run the SQL against&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:dbhost&lt;/code&gt; to configure the database host, most likely &lt;code&gt;localhost&lt;/code&gt; for a dev
+environment&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:dbport&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:dbuser&lt;/code&gt; and &lt;code&gt;:dbpassword&lt;/code&gt; for database authentication&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:database&lt;/code&gt; for database name&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+By default org-mode runs the code snippets in current OS environment. I use this
+fact to get the ability to run SQL against our postgres database without passing
+most of the above arguments. Postgres allows setting &lt;a href=&quot;https://www.postgresql.org/docs/current/libpq-envars.html&quot;&gt;some environment&lt;/a&gt; variables,
+which it then use to for making connections by default. In my &lt;a href=&quot;https://github.com/bitspook/entropy/blob/ae5ee52646c2c67ce713938548d67a722b73a294/flake.nix&quot;&gt;flake.nix&lt;/a&gt; file, I
+setup the required environment variables:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-sh&quot;&gt;&lt;span style=&quot;color: #c6797e;&quot;&gt;PGDIR&lt;/span&gt;=$&lt;span style=&quot;color: #c6797e;&quot;&gt;PWD&lt;/span&gt;/storage/postgres
+&lt;span style=&quot;color: #DB6E8F;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;PGDATA&lt;/span&gt;=$&lt;span style=&quot;color: #c6797e;&quot;&gt;PGDIR&lt;/span&gt;/data
+&lt;span style=&quot;color: #DB6E8F;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;PGHOST&lt;/span&gt;=$&lt;span style=&quot;color: #c6797e;&quot;&gt;PGDIR&lt;/span&gt;/run
+&lt;span style=&quot;color: #DB6E8F;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;PGDATABASE&lt;/span&gt;=entropy
+&lt;span style=&quot;color: #DB6E8F;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;DATABASE_URL&lt;/span&gt;=&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;postgresql:///$PGDATABASE?host=$PGHOST&quot;&lt;/span&gt; &lt;span style=&quot;color: #64727d; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #64727d; font-style: italic;&quot;&gt;not required by postgres, but will be helpful&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+With this, only header option left to set is &lt;code&gt;:engine&lt;/code&gt;, which I prefer to
+configure globally for my &lt;a href=&quot;https://raw.githubusercontent.com/bitspook/entropy/96cc9c0485d972ed819996d61c3730cafb228660/sql-playground.org&quot;&gt;sql-playground.org&lt;/a&gt; since I usually have one database
+for my personal projects. You can check this &lt;a href=&quot;https://github.com/bitspook/entropy/commit/96cc9c0485d972ed819996d61c3730cafb228660&quot;&gt;commit on Entropy project&lt;/a&gt; for how I
+have setup my sql-playground there. Following snippet on top of the
+sql-playground.org does the trick:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #A3B09A;&quot;&gt;#+PROPERTY: header-args:sql  :engine postgres&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Now any SQL snippets that we create can be executed against our development
+database right within the org file. For example, pressing &lt;code&gt;C-c C-c&lt;/code&gt; in following
+SQL block produces output shown below that.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #A3B09A;&quot;&gt;#+name: events&lt;/span&gt;
+&lt;span style=&quot;color: #64727d; background-color: #1F2A3F;&quot;&gt;#+begin_src sql&lt;/span&gt;
+&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot;color: #b18bb1; background-color: #1F2A3F; font-style: italic;&quot;&gt;SELECT&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt; events.title,&lt;/span&gt;
+&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;         events.slug,&lt;/span&gt;
+&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;         start_time,&lt;/span&gt;
+&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;         events.id,&lt;/span&gt;
+&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;         events.&lt;/span&gt;&lt;span style=&quot;color: #b18bb1; background-color: #1F2A3F; font-style: italic;&quot;&gt;source&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;,&lt;/span&gt;
+&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;         format(&lt;/span&gt;&lt;span style=&quot;color: #A3B09A; background-color: #1F2A3F;&quot;&gt;&apos;%s mins&apos;&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color: #DB6E8F; background-color: #1F2A3F;&quot;&gt;extract&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;(epoch &lt;/span&gt;&lt;span style=&quot;color: #b18bb1; background-color: #1F2A3F; font-style: italic;&quot;&gt;from&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt; (events.end_time - events.start_time))/60)&lt;/span&gt;
+&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot;color: #b18bb1; background-color: #1F2A3F; font-style: italic;&quot;&gt;FROM&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt; events;&lt;/span&gt;
+&lt;span style=&quot;color: #64727d; background-color: #1F2A3F;&quot;&gt;#+end_src&lt;/span&gt;
+
+&lt;span style=&quot;color: #A3B09A;&quot;&gt;#+RESULTS: events&lt;/span&gt;
+&lt;span style=&quot;color: #5D80AE;&quot;&gt;| title              | slug                 | start_time          | end_time            | source | format  |&lt;/span&gt;
+&lt;span style=&quot;color: #5D80AE;&quot;&gt;|--------------------+----------------------+---------------------+---------------------+--------+---------|&lt;/span&gt;
+&lt;span style=&quot;color: #5D80AE;&quot;&gt;| Lol bro what       | lol-rofl-lmao        | 2021-11-29 12:30:00 | 2021-11-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
+&lt;span style=&quot;color: #5D80AE;&quot;&gt;| Nested event title | nested-lol-rofl-lmao | 2021-10-29 12:30:00 | 2021-10-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org335d46f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org335d46f&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org335d46f&quot;&gt;
+&lt;p&gt;
+Building SQL queries is my primary use-case, and org-mode configured so far
+serves that purpose. But since I am putting all this effort in writing this blog
+post anyway, I thought let&apos;s go a step further and try configuring LSP mode for
+SQL snippets in my org file. To my surprise, it is possible. &lt;a href=&quot;https://github.com/lighttiger2505/sqls/&quot;&gt;SQLS&lt;/a&gt; provides an
+LSP server for SQL files, which once configured can provide certain features
+like auto-completing table and column names. I have created a &lt;a href=&quot;https://github.com/bitspook/entropy/blob/96cc9c0485d972ed819996d61c3730cafb228660/.dir-locals.el&quot;&gt;.dir-locals&lt;/a&gt; file
+for &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html&quot;&gt;adding directory local variables&lt;/a&gt; to configure LSP to connect to correct
+database.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;((nil . ((eval (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;lambda&lt;/span&gt; ()
+                 (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;setq&lt;/span&gt; lsp-sqls-connections `(((driver . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;postgresql&quot;&lt;/span&gt;)
+                                               (dataSourceName . ,(getenv &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;DATABASE_URL&quot;&lt;/span&gt;))))))))))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+This snippet isn&apos;t actually the right way configuring directory local variables,
+becuase it sets &lt;code&gt;lsp-sqls-connections&lt;/code&gt; globally. This is the result of me
+time-boxing the task of evaluating &lt;code&gt;(getenv &quot;DATABASE_URL&quot;)&lt;/code&gt;, so I won&apos;t need to
+duplicate my database configuration here.
+&lt;/p&gt;
+
+&lt;p&gt;
+LSP for org-mode also need to provide a file to which it can tangle source
+blocks. So I added another snippet to top of my org file.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #A3B09A;&quot;&gt;#+PROPERTY: header-args:sql  :tangle test.sql&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+I can now run &lt;code&gt;lsp-org&lt;/code&gt; in an SQL block, and 8/10 times it has lsp configured
+properly. It isn&apos;t flawless though, but that is expected since &lt;a href=&quot;https://emacs-lsp.github.io/lsp-mode/manual-language-docs/lsp-org/#&quot;&gt;lsp support in
+org-snippets&lt;/a&gt; is in alpha stage right now.
+&lt;/p&gt;
+
+&lt;p&gt;
+I also tried setting up lsp support in edit buffer for SQL statements (which you
+get by pressing &lt;code&gt;C-c &apos;&lt;/code&gt; in org src blocks), but because of a &lt;a href=&quot;https://github.com/emacs-lsp/lsp-mode/issues/2525&quot;&gt;bug in lsp-mode&lt;/a&gt;,
+that didn&apos;t work out too well.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;org-babel-edit-prep:sql&lt;/span&gt; (babel-info)
+  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;setq-local&lt;/span&gt; buffer-file-name (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt; babel-info caddr (alist-get &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:tangle&lt;/span&gt;)))
+  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;setq-local&lt;/span&gt; lsp-buffer-uri (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt; babel-info caddr (alist-get &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:tangle&lt;/span&gt;) lsp--path-to-uri))
+  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;setq-local&lt;/span&gt; lsp-headerline-breadcrumb-enable nil)
+  (lsp))
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orge81521c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge81521c&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge81521c&quot;&gt;
+&lt;p&gt;
+There are 2 main problems I face during my primary use-case.
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;Org tables don&apos;t work well if a column has a lot of data. e.g &lt;code&gt;description&lt;/code&gt;
+of an &lt;code&gt;event&lt;/code&gt; messes up the table real bad. lsp-mode allow executing queries
+which don&apos;t suffer from this.&lt;/li&gt;
+&lt;li&gt;No LSP support in edit buffer is a major bummer.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>803de13c-0598-49f1-979b-fa66194528e9</guid>
+            <pubDate>2022-02-03T05:30:00.000000+05:30</pubDate>
+        </item>
+    </channel>
+</rss>

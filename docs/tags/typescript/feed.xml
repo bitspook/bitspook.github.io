@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0">
+    <channel>
+        <title>Posts tagged `typescript&apos;</title>
+        <link>https://bitspook.in/</link>
+        <generator>cl-ownpress</generator>
+        <language>en-us</language>
+        <image>
+            <title>Posts tagged `typescript&apos;</title>
+            <url>/images/avatar.png</url>
+            <link>https://bitspook.in/</link>
+        </image>
+        <item>
+            <title>Find a functional programmer for your Javascript team</title>
+            <link>https://bitspook.in/blog/find-a-functional-programmer-for-your-javascript-team</link>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;
+Written below are some opinions and rationalizations for them. I have come to
+these opinions by interviewing and working with people for years. However
+strongly I feel about them, they can still be wrong. If you have feedback for
+these, please do contact me on &lt;a href=&quot;https://www.linkedin.com/in/bitspook&quot;&gt;LinkedIn&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/bitspook&quot;&gt;Twitter&lt;/a&gt;. All kind of feedback is
+very much appreciated.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+From &quot;Functional programmer&quot; I mean a programmer familiar with concepts of
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+A good teammate is someone:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;b&gt;Who takes care of themselves&lt;/b&gt;. They invest in themselves. They care
+about their software as a craft, as something more than just cramming
+a whole bunch of frameworks and libraries.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Who take care of their teammates&lt;/b&gt;.
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;They help their teammates grow, by mentoring and/or by serving as
+an example&lt;/li&gt;
+&lt;li&gt;They are empathetic towards other developers. This is most visible
+in kind of code a person writes. An empathetic developer writes
+code for other people.
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;They give preference to readability of code over
+micro-optimizations that make them feel clever&lt;/li&gt;
+&lt;li&gt;They write modular code with independent modules each of which do
+one thing well. And are easily composed to build more complex
+functionality.&lt;/li&gt;
+&lt;li&gt;They write clean, predictable and intuitive APIs&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+FP is steadily gaining popularity, but it is still not popular enough to
+breach the talent pool I get to interview from. Familiarity with FP is a
+very good indication that the person invest in themselves. And they do
+that in a manner which goes beyond just increasing the number of
+&quot;frameworks&quot; they have built a Todo App in.
+&lt;/p&gt;
+
+&lt;p&gt;
+Developer empathy is surprisingly rare. In almost a decade of writing
+code, I have met so few developers who really give a fuck that someone
+else will also read their abomination. Most software is written in
+vacuum. Familiarity with FP don&apos;t fix that magically.
+&lt;/p&gt;
+
+&lt;p&gt;
+However there is another factor at play here. Ironically, as a
+side-effect of FP, code written in a functional manner is often a lot
+more readable than its imperative and OOP equivalents (Impromptu quiz:
+What&apos;s so ironic about this statement?). Not only is functional code
+itself naturally declarative, an FP person is more likely to wtf when
+they see unreadable code in PR reviews.
+&lt;/p&gt;
+
+&lt;p&gt;
+Basic principles of FP also make for great advice for inexperienced
+developers. Good software architecture is hard to learn, it is a lot
+harder to teach. You need a mind capable of holding large amounts of
+complex code before the fancy design patterns even start making sense.
+In comparison, &quot;pure functions + composition&quot; and you are good to go.
+That is it. That is all you need to know to get started with writing
+modular, testable, simple code; which is easy to write and easier to
+maintain. As a mere side effect of avoiding side effects, you write
+naturally &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID&quot;&gt;SOLID&lt;/a&gt; (in spirit)
+code.
+&lt;/p&gt;
+
+&lt;p&gt;
+FP is not a silver bullet, but looking for functional programmers skew
+the universe in your favor a little. You are a lot more likely to get
+good people among functional programmers.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>find-a-functional-programmer-for-your-javascript-team</guid>
+            <pubDate>2020-11-07T05:30:00.000000+05:30</pubDate>
+        </item>
+    </channel>
+</rss>

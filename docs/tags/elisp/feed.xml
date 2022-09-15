@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0">
+    <channel>
+        <title>Posts tagged `elisp&apos;</title>
+        <link>https://bitspook.in/</link>
+        <generator>cl-ownpress</generator>
+        <language>en-us</language>
+        <image>
+            <title>Posts tagged `elisp&apos;</title>
+            <url>/images/avatar.png</url>
+            <link>https://bitspook.in/</link>
+        </image>
+        <item>
+            <title>Using ELisp as an HTML templating engine</title>
+            <link>https://bitspook.in/blog/using-elisp-as-an</link>
+            <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;
+HTML templating engines like &lt;a href=&quot;https://jinja.palletsprojects.com/en/3.1.x/&quot;&gt;Jinja&lt;/a&gt; or &lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; are commonly used in web
+development for weaving data into HTML.
+&lt;/p&gt;
+
+&lt;p&gt;
+For last couple of days, I&apos;ve been porting &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;my Hakyll based static-site generator&lt;/a&gt;
+to &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;Emacs Lisp&lt;/a&gt;, for a more fluent thought-publishing workflow. I found myself in
+need of an HTML templating engine so I could convert data about my blog posts
+and notes to HTML.
+&lt;/p&gt;
+
+&lt;p&gt;
+I found that we actually don&apos;t need an HTML templating engine to convert ELisp
+to HTML. Emacs has built-in capability to work with HTML, we can piggy back on
+that to get a templating engine without adding any new code.
+&lt;/p&gt;
+
+&lt;p&gt;
+We can represent DOM, which is a tree data-structure, as a lisp form
+&lt;/p&gt;
+
+&lt;p&gt;
+Consider following HTML element
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #F9B5AC;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;&amp;gt;
+  &amp;lt;&lt;span style=&quot;color: #F9B5AC;&quot;&gt;a&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;href&lt;/span&gt;=&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;&amp;gt;Google&amp;lt;/&lt;span style=&quot;color: #F9B5AC;&quot;&gt;a&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&quot;color: #F9B5AC;&quot;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+We can write it as a lisp form like this:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;&apos;(div ((class . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;))
+      (a ((href . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;))
+         &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Google&quot;&lt;/span&gt;))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Note that this is a quoted lisp form. Which means this code isn&apos;t actually
+executed, &lt;code&gt;div&lt;/code&gt; or &lt;code&gt;a&lt;/code&gt; aren&apos;t lisp functions. We can just put in any symbol
+there, and it is treated as a DOM node.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;shr-dom-to-xml&lt;/code&gt; converts this lisp form to an HTML string:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;))
+  (shr-dom-to-xml
+   `(div ((class . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;))
+         (a ((href . ,my-url))
+            &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Google&quot;&lt;/span&gt;))))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;pre class=&quot;example&quot;&gt;
+&amp;lt;div class=&quot;container&quot;&amp;gt; &amp;lt;a href=&quot;https://google.com&quot;&amp;gt;Google&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+In this example we changed the quote used to showcase how we can run arbitrary
+lisp forms in our DOM to weave data into it.
+&lt;/p&gt;
+
+&lt;p&gt;
+You can check &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;my wip ELisp blogging setup&lt;/a&gt; for more complex examples, and some
+glue code I&apos;ve written to make using ELisp as HTML templating engine easier.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>288bba3a-6385-47bf-b8ea-f832aeae28c2</guid>
+            <pubDate>2022-04-08T05:30:00.000000+05:30</pubDate>
+        </item>
+    </channel>
+</rss>

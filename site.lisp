@@ -6,9 +6,11 @@
 
 (ql:quickload "cl-ownpress")
 
+(add-package-local-nickname :clp :clown-providers)
+
 (setf (clown:conf :db-name) "./clownpress.db")
-(clown:invoke-provider clown:*org-roam-provider*)
-(clown:invoke-provider clown:*fs-provider* :content-dir "./content/")
+(clp:invoke-provider clp:*org-file-provider* :content-dir "./content/")
+(clp:invoke-provider clp:*org-roam-provider*)
 
 (let ((clown-slick:*debug-transpiles* nil)
       (clown-slick:*conf*
@@ -21,10 +23,10 @@
            :github "https://github.com/bitspook"
            :handle "bitspook"
            :resume "https://docs.google.com/document/d/1HFOxl97RGtuhAX95AhGWwa808SO9qSCYLjP1Pm39la0/"
-           :dest "./_site"
+           :dest "./docs/"
            :static-dir "./static/"
            :mixpanel-token "0f28a64d9f8bce370006d36e1e2e3f61"
            :rss-max-posts 10
            :control-tags ("blog-post" "published")
-           :exclude-tags ("-draft")))))
+           :exclude-tags ("draft")))))
   (clown-slick:build))
