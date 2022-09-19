@@ -199,9 +199,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org335d46f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org335d46f&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org335d46f&quot;&gt;
+&lt;div id=&quot;outline-container-org0c1383e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0c1383e&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0c1383e&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -260,9 +260,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orge81521c&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge81521c&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge81521c&quot;&gt;
+&lt;div id=&quot;outline-container-org475f487&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org475f487&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org475f487&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -323,9 +323,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org4a63d2b&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4a63d2b&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4a63d2b&quot;&gt;
+&lt;div id=&quot;outline-container-org7376820&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7376820&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7376820&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -384,9 +384,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-orgbdfe91a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgbdfe91a&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbdfe91a&quot;&gt;
+&lt;div id=&quot;outline-container-org661ce3b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org661ce3b&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org661ce3b&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -408,9 +408,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgbfab3f1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgbfab3f1&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbfab3f1&quot;&gt;
+&lt;div id=&quot;outline-container-orga37f6d2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga37f6d2&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga37f6d2&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;

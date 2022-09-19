@@ -11,92 +11,228 @@
             <link>https://bitspook.in/</link>
         </image>
         <item>
-            <title>Using ELisp as an HTML templating engine</title>
-            <link>https://bitspook.in/blog/using-elisp-as-an</link>
-            <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;
-HTML templating engines like &lt;a href=&quot;https://jinja.palletsprojects.com/en/3.1.x/&quot;&gt;Jinja&lt;/a&gt; or &lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; are commonly used in web
-development for weaving data into HTML.
+            <title>How I manage my passwords</title>
+            <link>https://bitspook.in/blog/how-i-manage-my-passwords</link>
+            <description>
+&lt;div id=&quot;outline-container-orgc20f9ca&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc20f9ca&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc20f9ca&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+&lt;b&gt;No third-parties&lt;/b&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-For last couple of days, I&apos;ve been porting &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;my Hakyll based static-site generator&lt;/a&gt;
-to &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;Emacs Lisp&lt;/a&gt;, for a more fluent thought-publishing workflow. I found myself in
-need of an HTML templating engine so I could convert data about my blog posts
-and notes to HTML.
+I don&apos;t want to put my trust in any third party. Be it Google/Mozilla (via
+saved passwords in browser), or some dedicated password manager like KeyPass.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;b&gt;Simplicity&lt;/b&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-I found that we actually don&apos;t need an HTML templating engine to convert ELisp
-to HTML. Emacs has built-in capability to work with HTML, we can piggy back on
-that to get a templating engine without adding any new code.
+Simple tools are easier to understand and bend to my will. It also means I&apos;ll
+be able to intervene when something goes wrong.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;b&gt;Composability&lt;/b&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-We can represent DOM, which is a tree data-structure, as a lisp form
+I should be able to make the tool a part of my forever changing workflow. It
+should play nice with presence/absence of other tools.
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgf2e5187&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf2e5187&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf2e5187&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
-Consider following HTML element
+I think it is as simple as it gets. A password-store in pass is a git repo
+(so a directory) which contains gpg encrypted files. Each file represent one
+set of credentials, and can contain all the plain-text, not just password and
+username. E.g I often end up storing recovery codes for accounts in these.
+&lt;/p&gt;
+
+&lt;p&gt;
+There are no third-parties involved, encryption happens on my machine, and I
+can store my password store anywhere I want (e.g a private git repo on
+github).
+&lt;/p&gt;
+
+&lt;p&gt;
+Most pass operations are convenience wrappers on basic operations provided by
+other tools; e.g &lt;code&gt;edit = decrypting a file + open it in an editor +
+   re-encrypting + git-commit&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+Pass has a whole ecosystem of tools written around it, which makes it an easy
+choice considering how much work it saves me when integrating it in my
+workflow.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;https://github.com/carnager/rofi-pass&quot;&gt;rofi-pass&lt;/a&gt; - &lt;i&gt;Rofi-based UI for pass for desktop&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href=&quot;https://github.com/davatorium/rofi&quot;&gt;Rofi&lt;/a&gt; is a lightweight popup choice-selection UI, which has so far worked
+out-of-the-box on all window-managers I have used. &lt;i&gt;rofi-pass&lt;/i&gt; extends rofi
+with:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;Ability to search and select credentials stored in pass&lt;/li&gt;
+&lt;li&gt;Auto-fill credentials into any GUI app&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;https://github.com/bitspook/fireword&quot;&gt;fireword&lt;/a&gt; - &lt;i&gt;Converting easy-to-remember passwords to hard-to-crack ones&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Not all credentials need to be saved. Occasionally I need to create
+&lt;i&gt;throwaway&lt;/i&gt; accounts, for which I like to keep easy-to-guess (for me)
+passwords. But I want even these password to be opaque (so analyzing them
+wouldn&apos;t reveal a theme of my throwaway passwords).
+&lt;/p&gt;
+
+&lt;p&gt;
+Fireword is a small script I wrote many years ago which create insane
+passwords from any string. Even a single change of character in a string
+creates wildly different output. So instead of passing a plain easy-to-guess
+password, I give them to fireword and use its output.
+&lt;/p&gt;
+
+&lt;p&gt;
+For example, &lt;code&gt;pass&lt;/code&gt; becomes &lt;code&gt;5B72?[30:F&lt;/code&gt; but &lt;code&gt;passs&lt;/code&gt; is &lt;code&gt;3Ec012aD5(&lt;/code&gt;.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;https://github.com/android-password-store/Android-Password-Store#readme&quot;&gt;Android Password Store&lt;/a&gt; - Android app for accessing pass
+&lt;/p&gt;
+
+&lt;p&gt;
+Password store on android allows using the passwords I create/edit on my
+desktop on my mobile and tablet. I use &lt;a href=&quot;https://syncthing.net/&quot;&gt;syncthing&lt;/a&gt; to sync my password store to
+my mobile devices.
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgf2ce000&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf2ce000&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf2ce000&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org74084d0&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org74084d0&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org74084d0&quot;&gt;
+&lt;p&gt;
+For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
+mostly just delegates to other Linux utilities. For example, deleting a password
+for &lt;i&gt;my-acc&lt;/i&gt; account in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm example.com/my-acc&lt;/code&gt;; and
+deleting all accounts in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm -r example.com&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;video autoplay loop&gt;
+  &lt;source src=&quot;/videos/how-i-manage-my-passwords/1--pass-cli.webm&quot; type=&quot;video/webm&quot;&gt;
+&lt;/video&gt;
+
+&lt;p&gt;
+I used to use &lt;code&gt;pass generate&lt;/code&gt; for creating new passwords, which creates cryptic
+hard (impossible?) to crack strings. Over time however, I have come to prefer
+password phrases which are easy to type by hand. I pick 3-4 words that come to
+my mind at a time, and make a loose sentence out of them to create a new
+password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org4782355&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org4782355&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org4782355&quot;&gt;
+&lt;p&gt;
+Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
+much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+It gives me a nice prompt to search and select the credentials I want, and
+autofills them. It is smart enough to recognize that credentials are more than
+just a password; so if you edit your password file to look like:
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #F9B5AC;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=&quot;color: #F9B5AC;&quot;&gt;a&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;href&lt;/span&gt;=&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;&amp;gt;Google&amp;lt;/&lt;span style=&quot;color: #F9B5AC;&quot;&gt;a&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&quot;color: #F9B5AC;&quot;&gt;div&lt;/span&gt;&amp;gt;
+&lt;pre class=&quot;src src-text&quot;&gt;mypassword
+
+user: myuser
+some-other-key: some-val
 &lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;
-We can write it as a lisp form like this:
+&lt;i&gt;rofi-pass&lt;/i&gt; will allow you to select the key and auto-type its value. It
+recognizes first line as the password, and a value with &lt;code&gt;user&lt;/code&gt; key to autotype
+both username and password in forms which ask for first username and then
+password (on the same form).
+&lt;/p&gt;
+
+&lt;video autoplay loop&gt;
+  &lt;source src=&quot;/videos/how-i-manage-my-passwords/2--using-rofi-pass.webm&quot; type=&quot;video/webm&quot;&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org543ce26&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org543ce26&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org543ce26&quot;&gt;
+&lt;p&gt;
+I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
+because throwaway passwords, although temporary, tend to be entered frequently
+(private browsing), I have created a small command in my stumpwm configuration
+to make it easy.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;&apos;(div ((class . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;))
-      (a ((href . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;))
-         &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Google&quot;&lt;/span&gt;))
+&lt;pre class=&quot;src src-lisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;spook/fireword-bin&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~/Documents/work/fireword/fireword&quot;&lt;/span&gt;)
+
+(defcommand fireword (pass len)
+  ((&lt;span style=&quot;color: #DB6E8F;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Password: &quot;&lt;/span&gt;)
+   (&lt;span style=&quot;color: #DB6E8F;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Length: &quot;&lt;/span&gt;))
+  (run-shell-command (format nil  &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~a ~a ~a | xclip -sel clip&quot;&lt;/span&gt; spook/fireword-bin pass len)))
+
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;define-key&lt;/span&gt; *top-map* (kbd &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;s-P&quot;&lt;/span&gt;) &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;fireword&quot;&lt;/span&gt;)
 &lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;
-Note that this is a quoted lisp form. Which means this code isn&apos;t actually
-executed, &lt;code&gt;div&lt;/code&gt; or &lt;code&gt;a&lt;/code&gt; aren&apos;t lisp functions. We can just put in any symbol
-there, and it is treated as a DOM node.
+In the end I get a nice prompt on pressing &lt;code&gt;C-P&lt;/code&gt; to enter my password and
+desired length, get the fireword copied to clipboard which I then paste in a
+private browser window.
 &lt;/p&gt;
 
-&lt;p&gt;
-&lt;code&gt;shr-dom-to-xml&lt;/code&gt; converts this lisp form to an HTML string:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;))
-  (shr-dom-to-xml
-   `(div ((class . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;))
-         (a ((href . ,my-url))
-            &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Google&quot;&lt;/span&gt;))))
-&lt;/pre&gt;
+&lt;video autoplay loop&gt;
+  &lt;source src=&quot;/videos/how-i-manage-my-passwords/3-using-fireword-with-stumpwm.webm&quot; type=&quot;video/webm&quot;&gt;
+&lt;/video&gt;
 &lt;/div&gt;
-
-&lt;pre class=&quot;example&quot;&gt;
-&amp;lt;div class=&quot;container&quot;&amp;gt; &amp;lt;a href=&quot;https://google.com&quot;&amp;gt;Google&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-In this example we changed the quote used to showcase how we can run arbitrary
-lisp forms in our DOM to weave data into it.
-&lt;/p&gt;
-
-&lt;p&gt;
-You can check &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;my wip ELisp blogging setup&lt;/a&gt; for more complex examples, and some
-glue code I&apos;ve written to make using ELisp as HTML templating engine easier.
-&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>288bba3a-6385-47bf-b8ea-f832aeae28c2</guid>
-            <pubDate>2022-04-08T05:30:00.000000+05:30</pubDate>
+            <guid>28c52ee9-bd59-4c4a-af1f-13652b3612dd</guid>
+            <pubDate>2022-09-19T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>Using org-mode as an SQL playground</title>
@@ -199,9 +335,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org335d46f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org335d46f&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org335d46f&quot;&gt;
+&lt;div id=&quot;outline-container-org0c1383e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0c1383e&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0c1383e&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -260,9 +396,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orge81521c&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge81521c&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge81521c&quot;&gt;
+&lt;div id=&quot;outline-container-org475f487&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org475f487&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org475f487&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -323,9 +459,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org4a63d2b&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4a63d2b&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4a63d2b&quot;&gt;
+&lt;div id=&quot;outline-container-org7376820&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7376820&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7376820&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -384,9 +520,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-orgbdfe91a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgbdfe91a&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbdfe91a&quot;&gt;
+&lt;div id=&quot;outline-container-org661ce3b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org661ce3b&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org661ce3b&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -408,9 +544,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgbfab3f1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgbfab3f1&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbfab3f1&quot;&gt;
+&lt;div id=&quot;outline-container-orga37f6d2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga37f6d2&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga37f6d2&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;

@@ -11,6 +11,230 @@
             <link>https://bitspook.in/</link>
         </image>
         <item>
+            <title>How I manage my passwords</title>
+            <link>https://bitspook.in/blog/how-i-manage-my-passwords</link>
+            <description>
+&lt;div id=&quot;outline-container-orgc20f9ca&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc20f9ca&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc20f9ca&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+&lt;b&gt;No third-parties&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+I don&apos;t want to put my trust in any third party. Be it Google/Mozilla (via
+saved passwords in browser), or some dedicated password manager like KeyPass.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;b&gt;Simplicity&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Simple tools are easier to understand and bend to my will. It also means I&apos;ll
+be able to intervene when something goes wrong.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;b&gt;Composability&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+I should be able to make the tool a part of my forever changing workflow. It
+should play nice with presence/absence of other tools.
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgf2e5187&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf2e5187&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf2e5187&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+I think it is as simple as it gets. A password-store in pass is a git repo
+(so a directory) which contains gpg encrypted files. Each file represent one
+set of credentials, and can contain all the plain-text, not just password and
+username. E.g I often end up storing recovery codes for accounts in these.
+&lt;/p&gt;
+
+&lt;p&gt;
+There are no third-parties involved, encryption happens on my machine, and I
+can store my password store anywhere I want (e.g a private git repo on
+github).
+&lt;/p&gt;
+
+&lt;p&gt;
+Most pass operations are convenience wrappers on basic operations provided by
+other tools; e.g &lt;code&gt;edit = decrypting a file + open it in an editor +
+   re-encrypting + git-commit&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+Pass has a whole ecosystem of tools written around it, which makes it an easy
+choice considering how much work it saves me when integrating it in my
+workflow.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;https://github.com/carnager/rofi-pass&quot;&gt;rofi-pass&lt;/a&gt; - &lt;i&gt;Rofi-based UI for pass for desktop&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href=&quot;https://github.com/davatorium/rofi&quot;&gt;Rofi&lt;/a&gt; is a lightweight popup choice-selection UI, which has so far worked
+out-of-the-box on all window-managers I have used. &lt;i&gt;rofi-pass&lt;/i&gt; extends rofi
+with:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;Ability to search and select credentials stored in pass&lt;/li&gt;
+&lt;li&gt;Auto-fill credentials into any GUI app&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;https://github.com/bitspook/fireword&quot;&gt;fireword&lt;/a&gt; - &lt;i&gt;Converting easy-to-remember passwords to hard-to-crack ones&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Not all credentials need to be saved. Occasionally I need to create
+&lt;i&gt;throwaway&lt;/i&gt; accounts, for which I like to keep easy-to-guess (for me)
+passwords. But I want even these password to be opaque (so analyzing them
+wouldn&apos;t reveal a theme of my throwaway passwords).
+&lt;/p&gt;
+
+&lt;p&gt;
+Fireword is a small script I wrote many years ago which create insane
+passwords from any string. Even a single change of character in a string
+creates wildly different output. So instead of passing a plain easy-to-guess
+password, I give them to fireword and use its output.
+&lt;/p&gt;
+
+&lt;p&gt;
+For example, &lt;code&gt;pass&lt;/code&gt; becomes &lt;code&gt;5B72?[30:F&lt;/code&gt; but &lt;code&gt;passs&lt;/code&gt; is &lt;code&gt;3Ec012aD5(&lt;/code&gt;.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;https://github.com/android-password-store/Android-Password-Store#readme&quot;&gt;Android Password Store&lt;/a&gt; - Android app for accessing pass
+&lt;/p&gt;
+
+&lt;p&gt;
+Password store on android allows using the passwords I create/edit on my
+desktop on my mobile and tablet. I use &lt;a href=&quot;https://syncthing.net/&quot;&gt;syncthing&lt;/a&gt; to sync my password store to
+my mobile devices.
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgf2ce000&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf2ce000&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf2ce000&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org74084d0&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org74084d0&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org74084d0&quot;&gt;
+&lt;p&gt;
+For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
+mostly just delegates to other Linux utilities. For example, deleting a password
+for &lt;i&gt;my-acc&lt;/i&gt; account in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm example.com/my-acc&lt;/code&gt;; and
+deleting all accounts in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm -r example.com&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;video autoplay loop&gt;
+  &lt;source src=&quot;/videos/how-i-manage-my-passwords/1--pass-cli.webm&quot; type=&quot;video/webm&quot;&gt;
+&lt;/video&gt;
+
+&lt;p&gt;
+I used to use &lt;code&gt;pass generate&lt;/code&gt; for creating new passwords, which creates cryptic
+hard (impossible?) to crack strings. Over time however, I have come to prefer
+password phrases which are easy to type by hand. I pick 3-4 words that come to
+my mind at a time, and make a loose sentence out of them to create a new
+password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org4782355&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org4782355&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org4782355&quot;&gt;
+&lt;p&gt;
+Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
+much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+It gives me a nice prompt to search and select the credentials I want, and
+autofills them. It is smart enough to recognize that credentials are more than
+just a password; so if you edit your password file to look like:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-text&quot;&gt;mypassword
+
+user: myuser
+some-other-key: some-val
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&lt;i&gt;rofi-pass&lt;/i&gt; will allow you to select the key and auto-type its value. It
+recognizes first line as the password, and a value with &lt;code&gt;user&lt;/code&gt; key to autotype
+both username and password in forms which ask for first username and then
+password (on the same form).
+&lt;/p&gt;
+
+&lt;video autoplay loop&gt;
+  &lt;source src=&quot;/videos/how-i-manage-my-passwords/2--using-rofi-pass.webm&quot; type=&quot;video/webm&quot;&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org543ce26&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org543ce26&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org543ce26&quot;&gt;
+&lt;p&gt;
+I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
+because throwaway passwords, although temporary, tend to be entered frequently
+(private browsing), I have created a small command in my stumpwm configuration
+to make it easy.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-lisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;spook/fireword-bin&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~/Documents/work/fireword/fireword&quot;&lt;/span&gt;)
+
+(defcommand fireword (pass len)
+  ((&lt;span style=&quot;color: #DB6E8F;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Password: &quot;&lt;/span&gt;)
+   (&lt;span style=&quot;color: #DB6E8F;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Length: &quot;&lt;/span&gt;))
+  (run-shell-command (format nil  &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~a ~a ~a | xclip -sel clip&quot;&lt;/span&gt; spook/fireword-bin pass len)))
+
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;define-key&lt;/span&gt; *top-map* (kbd &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;s-P&quot;&lt;/span&gt;) &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;fireword&quot;&lt;/span&gt;)
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+In the end I get a nice prompt on pressing &lt;code&gt;C-P&lt;/code&gt; to enter my password and
+desired length, get the fireword copied to clipboard which I then paste in a
+private browser window.
+&lt;/p&gt;
+
+&lt;video autoplay loop&gt;
+  &lt;source src=&quot;/videos/how-i-manage-my-passwords/3-using-fireword-with-stumpwm.webm&quot; type=&quot;video/webm&quot;&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>28c52ee9-bd59-4c4a-af1f-13652b3612dd</guid>
+            <pubDate>2022-09-19T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
             <title>Using ELisp as an HTML templating engine</title>
             <link>https://bitspook.in/blog/using-elisp-as-an</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
@@ -199,9 +423,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org335d46f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org335d46f&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org335d46f&quot;&gt;
+&lt;div id=&quot;outline-container-org0c1383e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0c1383e&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0c1383e&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -260,9 +484,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orge81521c&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge81521c&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge81521c&quot;&gt;
+&lt;div id=&quot;outline-container-org475f487&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org475f487&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org475f487&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -323,9 +547,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org4a63d2b&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4a63d2b&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4a63d2b&quot;&gt;
+&lt;div id=&quot;outline-container-org7376820&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7376820&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7376820&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -384,9 +608,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-orgbdfe91a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgbdfe91a&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbdfe91a&quot;&gt;
+&lt;div id=&quot;outline-container-org661ce3b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org661ce3b&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org661ce3b&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -408,9 +632,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgbfab3f1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgbfab3f1&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbfab3f1&quot;&gt;
+&lt;div id=&quot;outline-container-orga37f6d2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga37f6d2&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga37f6d2&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
@@ -569,7 +793,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org0f8780c&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgf54e61e&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -587,7 +811,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer&apos;s machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org1127b4c&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgb08dc1a&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -626,7 +850,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org15eb17f&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgb0bf0dc&quot;&gt;
 buildDrafts = true
 title = &quot;My Project&quot;
 
@@ -1096,166 +1320,6 @@ Please put in comments below if you have opinions and/or suggestions!
             <category>blog</category>
             <guid>how-to-maximize-individual-growth-in-a-software-team</guid>
             <pubDate>2019-01-21T05:30:00.000000+05:30</pubDate>
-        </item>
-        <item>
-            <title>Managing Chaos</title>
-            <link>https://bitspook.in/blog/managing-chaos-org-mode-as-a-todo-list</link>
-            <description>&lt;p&gt;
-I am thinking about doing a small series of posts on how I am managing
-the chaos that I am trying to stop fighting. I hope the chaos of an ADHD
-mind can be utilized rather than fought against. So far it has been
-working out pretty great (for past ~8 months). This post is about how I
-manage my ever exploding list of things I want to do.
-&lt;/p&gt;
-
-&lt;p&gt;
-I believe one of the most important things is to externalize your
-thoughts. Making it a habit to write them down is immensely helpful. So
-many of my problems stopped being problems as I adopted writing things
-down more and more. I have very small working memory. I forget often and
-I forget most things. Mind is always thinking of new ideas, things to
-do, things to tell people. The knowledge that I am going to forget the
-thing I am thinking right now is a big source of anxiety. The burden of
-remembering innumerable things and then failing to do so has a cognitive
-toll of its own.
-&lt;/p&gt;
-
-&lt;p&gt;
-I use org-mode as a lot of things; a TODO list is one of them. I am not
-going to get into the details of using org-mode for a beginner, but I&apos;ll
-share my flow of using org mode as a TODO list.
-&lt;/p&gt;
-
-&lt;div id=&quot;outline-container-capturing-things-to-do&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;capturing-things-to-do&quot;&gt;Capturing things to do&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-capturing-things-to-do&quot;&gt;
-&lt;p&gt;
-A very useful feature of org-mode is how easy it makes to &quot;capture&quot; TOOD
-items. I use Emacs as my primary text editor; being a software
-developer, most of my day time is spent in Emacs. Any time I think of
-something I [want|have] to do, I capture it with 3 keystrokes and
-usually immediately refile it under an appropriate heading. I keep 2
-TODOs.org files, one for work and one for my personal life.
-&lt;/p&gt;
-
-&lt;p&gt;
-In my personal TODOs.org file, I keep headings categorizing the kind of
-thing it is that I want to do; right now, they are =Study, Personal
-Development, Habits, Projects, Reading List, In Basket&quot;.&quot;In Basket&quot;
-heading keeps things that are quickly done in a day or few, and/or
-cannot be categorized.
-&lt;/p&gt;
-
-&lt;p&gt;
-My work TODOs.org carries all my work related tasks, including Jira
-issues, and general things I want/have to do when I am in the office. I
-have a TODO item to integrate org-jira, but right now I am manually
-copying Jira task IDs around like an imbecile.
-&lt;/p&gt;
-
-&lt;p&gt;
-This is how my org-capture-templates variable looks like right now:
-&lt;/p&gt;
-
-&lt;pre class=&quot;example&quot; id=&quot;org2337649&quot;&gt;
-(setq
-   org-capture-templates
-   &apos;((&quot;d&quot; &quot;Diary Entry&quot; plain (file+datetree org-agenda-diary-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
-     (&quot;f&quot; &quot;Feedback&quot; plain (file+datetree trantor-feedback-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
-     (&quot;i&quot; &quot;Idea&quot; entry (file org-ideas-file) &quot;* %?\n%T&quot;)
-     (&quot;t&quot; &quot;Todo&quot; entry (file+headline &quot;&quot; &quot;Todos&quot;) &quot;* TODO %?\n%U\n[[%F]]&quot;)
-     (&quot;c&quot; &quot;Contact&quot; entry (file org-contacts-file) &quot;* %^{Name}\n:PROPERTIES:\n:COMPANY %^{Company}\n:PHONE: %^{Phone}\n:END:&quot;)))
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-delegating-things-to-future&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;delegating-things-to-future&quot;&gt;Delegating things to future&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-delegating-things-to-future&quot;&gt;
-&lt;p&gt;
-Org-mode has a brilliant feature of scheduling tasks. It&apos;s rare for me
-to schedule a task for &quot;today&quot;; I delegate stuff to future me. I can
-capture and file things in any header, and then use org-mode&apos;s agenda
-views to filter out things past-me assigned for today. I try to finish
-the &quot;today&quot; tasks, and try to stay at peace when I fail to every day.
-Org-mode also display a count of for how long I&apos;ve been missing to do a
-certain task which is a handy reminder that I am falling short on my
-commitments.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-prioritizing-things&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;prioritizing-things&quot;&gt;Prioritizing things&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-prioritizing-things&quot;&gt;
-&lt;p&gt;
-Not all tasks are made equal. Although I try my best to not let my
-&quot;Today&quot; tasks list become too big, sometimes there is simply too much on
-the plate. In that case, I define priorities for the most important
-tasks, which are displayed at the top of the list in Day-agenda view.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-tagging-items&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;tagging-items&quot;&gt;Tagging items&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-tagging-items&quot;&gt;
-&lt;p&gt;
-I often tag my TODO items so I can easily filter them in the agenda view
-when I want to find things I have to do in some particular context. I
-often tag things by:
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;The person&apos;s name who I need to be with for doing something e.g when I
-want to tell someone something&lt;/li&gt;
-&lt;li&gt;The Scrum sprint in which a task need to get done. For this I don&apos;t
-tag each task but instead file my tasks in a &quot;Sprint X&quot; heading which
-is tagged, and org-mode automatically inherit tags to all the
-subheadings&lt;/li&gt;
-&lt;li&gt;Place where I need to be at for doing something&lt;/li&gt;
-&lt;li&gt;Some other task specific metadata that I think can be helpful for
-finding this task&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-finding-things-to-do&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;finding-things-to-do&quot;&gt;Finding things to do&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-finding-things-to-do&quot;&gt;
-&lt;p&gt;
-Org-mode allow me to write my todo items in any order in any manner; I
-have several files where I write a lot of stuff, some of it is things to
-do; most if it isn&apos;t. It&apos;s crucial to write things down for me, because
-I know that I am going to forget it. Org-mode is immensely helpful in
-finding things out when I need it. Org-files being just text files allow
-me to just grep stuff; which is even more powerful with
-helm-projectile-grep. But the killer feature for finding out what I am
-supposed to be doing right now is org&apos;s agenda view. It allow me to
-filter things by time and tags.
-&lt;/p&gt;
-
-&lt;p&gt;
-Org-mode require you to explicitly add files to a list of
-&lt;code&gt;org-agenda-files&lt;/code&gt;. The agenda views only pick tasks from files in this
-list. I have almost all my org files in my agenda list. It also provides
-different views for the agenda; the one I am using most these days is
-the &quot;Day-agenda&quot; view, and Week-agenda view when I want to plan things
-ahead for the week.
-&lt;/p&gt;
-
-&lt;p&gt;
-On my mobile, I use orgzly android app. I am not too happy with it, but
-it&apos;s the best I&apos;ve got for now. I&apos;ve it in my TODO list to create an app
-focused on org-mode and TODO lists the way I want it to work.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>managing-chaos-org-mode-as-a-todo-list</guid>
-            <pubDate>2019-01-05T05:30:00.000000+05:30</pubDate>
         </item>
     </channel>
 </rss>
