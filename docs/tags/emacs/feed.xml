@@ -199,9 +199,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org0c1383e&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0c1383e&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0c1383e&quot;&gt;
+&lt;div id=&quot;outline-container-org258699f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org258699f&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org258699f&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -260,9 +260,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org475f487&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org475f487&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org475f487&quot;&gt;
+&lt;div id=&quot;outline-container-orgac35f1f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgac35f1f&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgac35f1f&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;

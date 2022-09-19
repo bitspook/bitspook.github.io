@@ -11,6 +11,259 @@
             <link>https://bitspook.in/</link>
         </image>
         <item>
+            <title>How I manage my passwords</title>
+            <link>https://bitspook.in/blog/how-i-manage-my-passwords</link>
+            <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;div id=&quot;outline-container-orgfd7edaf&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgfd7edaf&quot;&gt;My requirements&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgfd7edaf&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+&lt;b&gt;No third-parties&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+I don&apos;t want to put my trust in any third party. Be it Google/Mozilla (via
+saved passwords in browser), or some dedicated password manager like KeyPass.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;b&gt;Simplicity&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Simple tools are easier to understand and bend to my will. It also means I&apos;ll
+be able to intervene when something goes wrong.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;b&gt;Composability&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+I should be able to make the tool a part of my forever changing workflow. It
+should play nice with presence/absence of other tools.
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgbd882d2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgbd882d2&quot;&gt;Tools I chose&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgbd882d2&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+I think it is as simple as it gets. A password-store in pass is a git repo
+(so a directory) which contains gpg encrypted files. Each file represent one
+set of credentials, and can contain all the plain-text, not just password and
+username. E.g I often end up storing recovery codes for accounts in these.
+&lt;/p&gt;
+
+&lt;p&gt;
+There are no third-parties involved, encryption happens on my machine, and I
+can store my password store anywhere I want (e.g a private git repo on
+github).
+&lt;/p&gt;
+
+&lt;p&gt;
+Most pass operations are convenience wrappers on basic operations provided by
+other tools; e.g &lt;code&gt;edit = decrypting a file + open it in an editor +
+   re-encrypting + git-commit&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+Pass has a whole ecosystem of tools written around it, which makes it an easy
+choice considering how much work it saves me when integrating it in my
+workflow.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;https://github.com/carnager/rofi-pass&quot;&gt;rofi-pass&lt;/a&gt; - &lt;i&gt;Rofi-based UI for pass for desktop&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href=&quot;https://github.com/davatorium/rofi&quot;&gt;Rofi&lt;/a&gt; is a lightweight popup choice-selection UI, which has so far worked
+out-of-the-box on all window-managers I have used. &lt;i&gt;rofi-pass&lt;/i&gt; extends rofi
+with:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;Ability to search and select credentials stored in pass&lt;/li&gt;
+&lt;li&gt;Auto-fill credentials into any GUI app&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;https://github.com/bitspook/fireword&quot;&gt;fireword&lt;/a&gt; - &lt;i&gt;Converting easy-to-remember passwords to hard-to-crack ones&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Not all credentials need to be saved. Occasionally I need to create
+&lt;i&gt;throwaway&lt;/i&gt; accounts, for which I like to keep easy-to-guess (for me)
+passwords. But I want even these password to be opaque (so analyzing them
+wouldn&apos;t reveal a theme of my throwaway passwords).
+&lt;/p&gt;
+
+&lt;p&gt;
+Fireword is a small script I wrote many years ago which create insane
+passwords from any string. Even a single change of character in a string
+creates wildly different output. So instead of passing a plain easy-to-guess
+password, I give them to fireword and use its output.
+&lt;/p&gt;
+
+&lt;p&gt;
+For example, &lt;code&gt;pass&lt;/code&gt; becomes &lt;code&gt;5B72?[30:F&lt;/code&gt; but &lt;code&gt;passs&lt;/code&gt; is &lt;code&gt;3Ec012aD5(&lt;/code&gt;.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;a href=&quot;https://github.com/android-password-store/Android-Password-Store#readme&quot;&gt;Android Password Store&lt;/a&gt; - Android app for accessing pass
+&lt;/p&gt;
+
+&lt;p&gt;
+Password store on android allows using the passwords I create/edit on my
+desktop on my mobile and tablet. I use &lt;a href=&quot;https://syncthing.net/&quot;&gt;syncthing&lt;/a&gt; to sync my password store to
+my mobile devices.
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org34c0d1b&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org34c0d1b&quot;&gt;Workflow&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org34c0d1b&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgc74b0a3&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgc74b0a3&quot;&gt;Add/edit/delete a password&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc74b0a3&quot;&gt;
+&lt;p&gt;
+For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
+mostly just delegates to other Linux utilities. For example, deleting a password
+for &lt;i&gt;my-acc&lt;/i&gt; account in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm example.com/my-acc&lt;/code&gt;; and
+deleting all accounts in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm -r example.com&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;video autoplay loop&gt;
+  &lt;source src=&quot;/videos/how-i-manage-my-passwords/1--pass-cli.webm&quot; type=&quot;video/webm&quot;&gt;
+&lt;/video&gt;
+
+&lt;p&gt;
+I used to use &lt;code&gt;pass generate&lt;/code&gt; for creating new passwords, which creates cryptic
+hard (impossible?) to crack strings. Over time however, I have come to prefer
+password phrases which are easy to type by hand. I pick 3-4 words that come to
+my mind at a time, and make a loose sentence out of them to create a new
+password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org1e55b61&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org1e55b61&quot;&gt;Using a password&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org1e55b61&quot;&gt;
+&lt;p&gt;
+Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
+much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+It gives me a nice prompt to search and select the credentials I want, and
+autofills them. It is smart enough to recognize that credentials are more than
+just a password; so if you edit your password file to look like:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-text&quot;&gt;mypassword
+
+user: myuser
+some-other-key: some-val
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&lt;i&gt;rofi-pass&lt;/i&gt; will allow you to select the key and auto-type its value. It
+recognizes first line as the password, and a value with &lt;code&gt;user&lt;/code&gt; key to autotype
+both username and password in forms which ask for first username and then
+password (on the same form).
+&lt;/p&gt;
+
+&lt;video autoplay loop&gt;
+  &lt;source src=&quot;/videos/how-i-manage-my-passwords/2--using-rofi-pass.webm&quot; type=&quot;video/webm&quot;&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org7cdd8b5&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org7cdd8b5&quot;&gt;Throwaway passwords&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org7cdd8b5&quot;&gt;
+&lt;p&gt;
+I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
+because throwaway passwords, although temporary, tend to be entered frequently
+(private browsing), I have created a small command in &lt;a href=&quot;https://github.com/bitspook/stumpwm.d&quot;&gt;my stumpwm configuration&lt;/a&gt;
+to make it easy.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-lisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;spook/fireword-bin&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~/Documents/work/fireword/fireword&quot;&lt;/span&gt;)
+
+(defcommand fireword (pass len)
+  ((&lt;span style=&quot;color: #DB6E8F;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Password: &quot;&lt;/span&gt;)
+   (&lt;span style=&quot;color: #DB6E8F;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Length: &quot;&lt;/span&gt;))
+  (run-shell-command (format nil  &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~a ~a ~a | xclip -sel clip&quot;&lt;/span&gt; spook/fireword-bin pass len)))
+
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;define-key&lt;/span&gt; *top-map* (kbd &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;s-P&quot;&lt;/span&gt;) &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;fireword&quot;&lt;/span&gt;)
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+In the end I get a nice prompt on pressing &lt;code&gt;C-P&lt;/code&gt; to enter my password and
+desired length, get the fireword copied to clipboard which I then paste in a
+private browser window.
+&lt;/p&gt;
+
+&lt;video autoplay loop&gt;
+  &lt;source src=&quot;/videos/how-i-manage-my-passwords/3-using-fireword-with-stumpwm.webm&quot; type=&quot;video/webm&quot;&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id=&quot;outline-container-orgb3236ea&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb3236ea&quot;&gt;Transcript&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb3236ea&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;What I don&apos;t like about popular password managers is the thought, that someone
+might have access to my passwords. So my choice of password manager came naturally.&lt;/li&gt;
+&lt;li&gt;Pass is a Linux utility, which stores credentials in gpg encrypted text
+files. The files themselves are organized in a git repository.&lt;/li&gt;
+&lt;li&gt;For adding, editing and deleting passwords, I use the &lt;code&gt;pass&lt;/code&gt; CLI. It is
+simple, intuitive, and mostly just a wrapper around other Linux utils like
+gpg, git and rm.&lt;/li&gt;
+&lt;li&gt;Pass automatically make a git commit every time a change is made to the
+password store, and allow editing the passwords with your configured editor.&lt;/li&gt;
+&lt;li&gt;It works for low volume operations like adding and editing, but it is tedious
+to use when it comes to using the passwords.&lt;/li&gt;
+&lt;li&gt;For that I prefer rofi-pass. It provides a GUI popup in which I can search
+and select the creds I want. It then auto type the selected creds into
+whatever is focused. That means it works for not only web browser, but
+anywhere where you can type with keyboard.&lt;/li&gt;
+&lt;li&gt;Lastly, for throwaway passwords I use a small python script I wrote long
+back. I have written a small stumpwm command to make it even easier to use.&lt;/li&gt;
+&lt;li&gt;You can find more about rational behind my choices, code snippets and some
+more details in the blog post below.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>28c52ee9-bd59-4c4a-af1f-13652b3612dd</guid>
+            <pubDate>2022-09-19T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
             <title>Using ELisp as an HTML templating engine</title>
             <link>https://bitspook.in/blog/using-elisp-as-an</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
@@ -199,9 +452,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org0c1383e&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0c1383e&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0c1383e&quot;&gt;
+&lt;div id=&quot;outline-container-org258699f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org258699f&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org258699f&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -260,9 +513,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org475f487&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org475f487&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org475f487&quot;&gt;
+&lt;div id=&quot;outline-container-orgac35f1f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgac35f1f&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgac35f1f&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
