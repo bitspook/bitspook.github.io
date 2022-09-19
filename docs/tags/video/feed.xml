@@ -15,9 +15,9 @@
             <link>https://bitspook.in/blog/how-i-manage-my-passwords</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;div id=&quot;outline-container-orgfd7edaf&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgfd7edaf&quot;&gt;My requirements&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgfd7edaf&quot;&gt;
+&lt;div id=&quot;outline-container-orgbc0e84d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbc0e84d&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbc0e84d&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;b&gt;No third-parties&lt;/b&gt;
@@ -49,9 +49,9 @@ should play nice with presence/absence of other tools.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgbd882d2&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgbd882d2&quot;&gt;Tools I chose&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgbd882d2&quot;&gt;
+&lt;div id=&quot;outline-container-org7272473&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7272473&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7272473&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
@@ -132,13 +132,13 @@ my mobile devices.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org34c0d1b&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org34c0d1b&quot;&gt;Workflow&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org34c0d1b&quot;&gt;
+&lt;div id=&quot;outline-container-org0649ca1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0649ca1&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0649ca1&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgc74b0a3&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgc74b0a3&quot;&gt;Add/edit/delete a password&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgc74b0a3&quot;&gt;
+&lt;div id=&quot;outline-container-org310dbcb&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org310dbcb&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org310dbcb&quot;&gt;
 &lt;p&gt;
 For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
@@ -160,9 +160,9 @@ password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org1e55b61&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org1e55b61&quot;&gt;Using a password&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org1e55b61&quot;&gt;
+&lt;div id=&quot;outline-container-org9cffd71&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org9cffd71&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org9cffd71&quot;&gt;
 &lt;p&gt;
 Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
 much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
@@ -195,9 +195,9 @@ password (on the same form).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org7cdd8b5&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org7cdd8b5&quot;&gt;Throwaway passwords&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org7cdd8b5&quot;&gt;
+&lt;div id=&quot;outline-container-org77eec5a&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org77eec5a&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org77eec5a&quot;&gt;
 &lt;p&gt;
 I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
@@ -227,34 +227,6 @@ private browser window.
   &lt;source src=&quot;/videos/how-i-manage-my-passwords/3-using-fireword-with-stumpwm.webm&quot; type=&quot;video/webm&quot;&gt;
 &lt;/video&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;div id=&quot;outline-container-orgb3236ea&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb3236ea&quot;&gt;Transcript&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb3236ea&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;What I don&apos;t like about popular password managers is the thought, that someone
-might have access to my passwords. So my choice of password manager came naturally.&lt;/li&gt;
-&lt;li&gt;Pass is a Linux utility, which stores credentials in gpg encrypted text
-files. The files themselves are organized in a git repository.&lt;/li&gt;
-&lt;li&gt;For adding, editing and deleting passwords, I use the &lt;code&gt;pass&lt;/code&gt; CLI. It is
-simple, intuitive, and mostly just a wrapper around other Linux utils like
-gpg, git and rm.&lt;/li&gt;
-&lt;li&gt;Pass automatically make a git commit every time a change is made to the
-password store, and allow editing the passwords with your configured editor.&lt;/li&gt;
-&lt;li&gt;It works for low volume operations like adding and editing, but it is tedious
-to use when it comes to using the passwords.&lt;/li&gt;
-&lt;li&gt;For that I prefer rofi-pass. It provides a GUI popup in which I can search
-and select the creds I want. It then auto type the selected creds into
-whatever is focused. That means it works for not only web browser, but
-anywhere where you can type with keyboard.&lt;/li&gt;
-&lt;li&gt;Lastly, for throwaway passwords I use a small python script I wrote long
-back. I have written a small stumpwm command to make it even easier to use.&lt;/li&gt;
-&lt;li&gt;You can find more about rational behind my choices, code snippets and some
-more details in the blog post below.&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
