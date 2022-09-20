@@ -98,7 +98,7 @@ exercises, rest were left for the attendees as homework. Here&apos;s the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org55a4f6c&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org15739df&quot;&gt;
 version: &apos;3&apos;
 services:
   webgoat:
@@ -128,6 +128,605 @@ be able to access webgoat on &lt;a href=&quot;http://localhost:8080/WebGoat&quot
             <category>talks</category>
             <guid>secure-software-teams-trantor</guid>
             <pubDate>2019-08-26T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Lessons From a Year of TDD</title>
+            <link>https://bitspook.in/talks/lessons-from-a-year-of-tdd</link>
+            <description>&lt;style&gt;img { max-width: 600px; margin: 1rem 0; }&lt;/style&gt;
+
+&lt;iframe src=&quot;///slides.com/bitspook/lessons-from-a-year-of-tdd/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+This talk was delivered in &lt;a href=&quot;https://agilenetworkindia.com/events/technical-agility-day-chandigarh/&quot;&gt;Technical Agility Day, Chandigarh (June 15, 2019)&lt;/a&gt;.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;outline-container-transcript&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;transcript&quot;&gt;Transcript&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-transcript&quot;&gt;
+&lt;p&gt;
+Following is the transcript for the talk. There was no video recording,
+but the transcript I prepared for the talk should sufficiently convey
+what I meant to say in the talk.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-introduction&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-introduction&quot;&gt;
+&lt;img
+  src=&quot;/lfyot-slides/01--introduction-to-tdd-talk.png&quot;
+  title=&quot;Experience from a year of TDD by Charanjit Singh&quot;
+  alt=&quot;Experience from a year of TDD by Charanjit Singh&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+Hello everyone, my name is Charanjit. I am working as a technical lead
+at Trantor.
+&lt;/p&gt;
+
+&lt;p&gt;
+I joined Trantor a year ago, in one of Trantor&apos;s projects where I was
+fortunate enough to see people willing to apply test driven development
+on what was going to become a rather complex project. I am leading one
+part of this project under a team named &quot;The cloud team&quot;. This talk is
+the story of things we learned while practicing test driven development
+to build a micro-services based cloud with several third-party
+integrations.
+&lt;/p&gt;
+
+&lt;p&gt;
+Our cloud is built primarily with Node.js (express.js), uses GraphQL to
+communicate with clients as well as for inter-service communication,
+backed by Azure&apos;s CosmosDB (with its Mongo API), has Kafka for messaging
+queue, and Elasticsearch for complex search solutions. We have about 9
+services till today, and 3 third party integrations. We are building an
+IOT-ish solution, and our cloud primarily serves the android application
+running on our custom hardware, along with some companion applications
+(for support and sales).
+&lt;/p&gt;
+
+&lt;p&gt;
+Before we get into the details of how we did TDD in our project, or of
+TDD itself, let&apos;s take a step back and work out some abstract thoughts.
+Abstract thoughts about what we are trying to accomplish with techniques
+like TDD. Actually, let&apos;s take all the steps back and go to the very
+beginning.
+&lt;/p&gt;
+
+&lt;p&gt;
+In the beginning, there were myths. Humans weren&apos;t always recording
+history. The myths were used to fill the plot holes in stories told by
+one generation to next. A common and very fascinating theme among the
+myths of different cultures is that of magic.
+&lt;/p&gt;
+
+&lt;img src=&quot;/lfyot-slides/02--the-wizard.png&quot; title=&quot;The Wizard&quot; alt=&quot;The
+Wizard&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+Allegedly there used to be some very special people who could use the
+mysterious powers. With flick of a wand they could create things out of
+thin air, they could put life into the inanimate, they could bend the
+reality itself to their will.
+&lt;/p&gt;
+
+&lt;p&gt;
+But those were of course myths. What we have now are developers.
+&lt;/p&gt;
+
+&lt;img src=&quot;/lfyot-slides/03--the-stallman.png&quot; title=&quot;The Stallman&quot;
+alt=&quot;The Stallman&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+Well, I argue that developers are in fact the wizards of the information
+age. We certainly meet the criteria:
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li class=&quot;on&quot;&gt;&lt;code&gt;[X]&lt;/code&gt; Create things (business/products/tools) out of thin air (without
+any raw materials)&lt;/li&gt;
+&lt;li class=&quot;on&quot;&gt;&lt;code&gt;[X]&lt;/code&gt; Put life into the inanimate (software is practically the soul of
+computer)&lt;/li&gt;
+&lt;li class=&quot;on&quot;&gt;&lt;code&gt;[X]&lt;/code&gt; Bend reality to our will (/r/insidethesoftstone reality is what
+you want it to be)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;img src=&quot;/lfyot-slides/04--the-stallzard.png&quot; title=&quot;The Stallzard&quot;
+alt=&quot;The Stallzard&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+Raw materials for the products a software developer creates are the
+thoughts. The third point here is the focus of this talk.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-software-as-universe&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;software-as-universe&quot;&gt;Software as Universe&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-software-as-universe&quot;&gt;
+  &lt;img src=&quot;/lfyot-slides/05--the-universe.png&quot; title=&quot;The Universe&quot;
+alt=&quot;The Universe&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+I am not kidding. I believe it is fair to say that every software is a
+universe of its own. It has its own rules it operates within, its own
+reality, which is at your disposal to do whatever with.
+&lt;/p&gt;
+
+&lt;p&gt;
+It is a living and breathing thing which must change and evolve and die
+as well.
+&lt;/p&gt;
+
+&lt;p&gt;
+Do anyone here watches Rick and Morty? It is a good show about a
+rockstar and a junior software developer. Try it sometime.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/06--the-microverse.png&quot; title=&quot;The Microverse&quot;
+alt=&quot;The Microverse&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+One of the episodes are about the microverse battery. The rockstar
+developer creates a miniature universe whose sole purpose is to provide
+power to his car. It is essentially a very complex car battery.
+&lt;/p&gt;
+
+&lt;p&gt;
+Funnier thing in that episode, the universe within the universe in the
+battery does the exact same thing. Creates a universe whose sole purpose
+is to power its host.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/07--many-layers-of-microverse.png&quot; title=&quot;Many
+layers of the Microverse&quot; alt=&quot;Many layers of the Microverse&quot;
+width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+Software we write are not very different. We create entire universe to
+serve our needs, and it is rarely created in isolation. Usually our
+universe has a bunch of other, more complex universes wrapped around it.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/08--realm-of-tux.png&quot; title=&quot;The realm of Tux&quot;
+alt=&quot;The realm of Tux&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+We often start with a base universe of Operating system. The platform,
+programming language, the frameworks, they all make up for our initial
+&quot;empty&quot; worlds. They set up their layers of rules, on which then we
+write our own. Layers and layers of worlds.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/11--layers-of-software-universe.png&quot; title=&quot;Many
+layered of software universe&quot; alt=&quot;Many layered of software universe&quot;
+width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+Now, how do we populate this empty universe with the inhabitants which
+would do our bidding? Well, with our thoughts and prayers of course.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/13--pray-to-the-machine.png&quot; title=&quot;Pray to the
+machine&quot; alt=&quot;Pray to the machine&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+I am not kidding. But you get it, you aren&apos;t laughing. We literally send
+our thoughts, often prayers as well, formulated in some special form
+governed by some programming language to a compiler (or interpreter),
+which then inhabit and basically forms the universe of our software.
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+Asgard isn&apos;t a place. Asgard is its people.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+  &lt;img src=&quot;/lfyot-slides/14--pray-to-the-compiler.png&quot; title=&quot;Pray to the
+compiler&quot; alt=&quot;Pray to the compiler&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+That brings us to the corollary which takes us in the general direction
+of practices like Test Driven Development.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/15--bugs-are-thoughts-gone-wrong.png&quot; title=&quot;Bugs
+are thoughts too&quot; alt=&quot;Bugs are thoughts too&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-bugs-are-thoughts-gone-wrong&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;bugs-are-thoughts-gone-wrong&quot;&gt;Bugs are thoughts, gone wrong&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-bugs-are-thoughts-gone-wrong&quot;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Correctness of software is inversely proportional to the client side
+product team.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+Thoughts go wrong primarily in two ways:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;They are wrong to begin with. Mostly caused by misunderstanding&lt;/li&gt;
+&lt;li&gt;Thoughts that go wrong during translation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+We can create correct software if we can validate the correctness of
+thoughts that get into the system, and those that reside it
+subsequently.
+&lt;/p&gt;
+
+&lt;p&gt;
+This is what TDD essentially do.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/16--tdd-validates-thoughts.png&quot; title=&quot;Bugs are
+thoughts too&quot; alt=&quot;Bugs are thoughts too&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+The first point points to the red-green-refactor cycle. When doing TDD,
+you write down the &quot;what&quot; aspect of the unit/module/function you are
+going to write. It essentially allow you to pause, sit back, and think
+about what you are going to implement. How it should behave.
+&lt;/p&gt;
+
+&lt;p&gt;
+The second point points to the help we get from our well-written tests
+when we have to then make changes in our.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-busting-some-myths&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;busting-some-myths&quot;&gt;Busting some Myths&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-busting-some-myths&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-myth-1-tdd-is-time-consuming&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;myth-1-tdd-is-time-consuming&quot;&gt;Myth #1 : TDD is time consuming&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-myth-1-tdd-is-time-consuming&quot;&gt;
+&lt;p&gt;
+This one is half a myth. TDD does consume time when you are starting.
+Your mileage may vary depending on how much experience your team has
+with TDD, initial time consumption is more if there is a learning curve
+involved. Disregarding the learning curve, developing same features took
+us roughly 30% longer to develop new features in our project.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/17--myth-tdd-is-time-consuming.png&quot; title=&quot;Myth
+#1: TDD is time consuming&quot; alt=&quot;Myth #1: TDD is time consuming&quot;
+width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+But this time is an investment you are making into your software, as
+well as your developers. When the project started off, we did start off
+slow. Other teams (there are 3 including us) were delivering more &quot;story
+points&quot;. After about 3-4 months however, both other teams had dedicated
+processes set up to tackle bugs, to prioritize and decide which bugs to
+quash and which ones to live with. We still don&apos;t have any process
+explicitly for bugs.
+&lt;/p&gt;
+
+&lt;p&gt;
+Our product is a startup, we have been going through a lot of changes
+and pivots throughout the year. While other teams were struggling with
+new bugs after every such change, we were delivering at pretty much the
+same pace. Every bug that occurred in cloud got test(s) for it too, so
+no mistakes were repeated. Till now, we have been able to keep the list
+of bugs small enough that we don&apos;t pay particular attention to it.
+&lt;/p&gt;
+
+&lt;p&gt;
+On-boarding new people to our team was a no-op, we would just give them
+an overview, and tell them to run the tests. We did put considerable
+amount of effort to make the tests our live documentation for
+developers, and it paid dividends.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/24--tdd-gave-us-free-time.png&quot; title=&quot;TDD gave us
+time to invest elsewhere&quot; alt=&quot;TDD gave us time to invest elsewhere&quot;
+width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+Not just that, TDD actually gave our team to do more than just our
+assigned duties. Most notably, we were able to not have a separate
+dev/ops team at all, and took care of provisioning a cloud with
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Infrastructure_as_Code&quot;&gt;IAC&lt;/a&gt; (using
+Terraform and Ansible), and a small sized K8s cluster too. Our
+development environment is pristine as well. It just takes a single
+command (docker-compose up) to get the complete cloud (including log
+aggregation, Elasticsearch, Kibana and Kafka) running on new machine.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-myth-2-tdd-is-about-tests&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;myth-2-tdd-is-about-tests&quot;&gt;Myth #2 : TDD is about tests&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-myth-2-tdd-is-about-tests&quot;&gt;
+&lt;p&gt;
+It is not. &quot;DD&quot; in &quot;TDD&quot; is more important than &quot;T&quot;. We learned this the
+hard way because of lack of experience with TDD. When you are applying
+TDD on a new project, &lt;b&gt;your tests should be driving the development&lt;/b&gt;.
+Tests by themselves aren&apos;t the goal. The essential thing you must do to
+ensure this, is to ensure that you write tests first.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/24--myth-tdd-is-about-tests.png&quot; title=&quot;Myth #2:
+TDD is about Tests&quot; alt=&quot;Myth #2: TDD is about Tests&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+Tests written after the fact are practically handicapped. No matter how
+good a developer you are, when you are writing tests after you have
+written the feature/code, the &quot;how&quot; aspect of your code will creep in,
+and your tests will never be as effective as they could have been. Same
+goes for the feature you are writing.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-myth-3-tdd-means-no-bugs&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;myth-3-tdd-means-no-bugs&quot;&gt;Myth #3 : TDD means no bugs&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-myth-3-tdd-means-no-bugs&quot;&gt;
+&lt;p&gt;
+This is what I&apos;ve been advertising so far, ain&apos;t I! Well, it is not a
+100% truth. Even if we ignore the fact that your tests will almost never
+be 100% complete, TDD will not guarantee a fully correct software.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/29--myth-tdd-means-no-bugs.png&quot; title=&quot;Myth #3:
+TDD means no bugs&quot; alt=&quot;Myth #3: TDD means no bugs&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+TDD is your last line of defense. By the time you have sat down to
+judiciously implement TDD, the thoughts that are going to populate your
+software&apos;s universe have already been set. All you are going to do is
+verify that they behave as it has been decided.
+&lt;/p&gt;
+
+  &lt;img src=&quot;/lfyot-slides/32--protect-yourself-from-your-po.png&quot;
+title=&quot;Adopt BDD&quot; alt=&quot;Adopt BDD&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+BDD operates at a much higher layer than TDD. At the layer where
+discussions are done and decisions are made. I believe a combination of
+BDD and TDD can create a very solid software. We adopted BDD in our
+project at a much later time, looking back at the long meetings we used
+to have, I can see how much time and confusion it could have saved us.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-grow-as-a-developer&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;grow-as-a-developer&quot;&gt;Grow as a developer&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-grow-as-a-developer&quot;&gt;
+  &lt;img src=&quot;/lfyot-slides/33--tdd-guides-you-in-right-direction.png&quot;
+title=&quot;TDD Guides you in right direction&quot; alt=&quot;TDD Guides you in right
+direction&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+It was an interesting observation. Team seem to have a much higher
+appreciation for design patterns like dependency injection. We also
+observed a shift in PR review comments toward a focus on software design
+and architecture. Discussions we used to have to make our TDD approach
+more fruitful brought a cultural shift in the team.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-when-adding-tdd-to-a-new-team&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;when-adding-tdd-to-a-new-team&quot;&gt;When adding TDD to a new team&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-when-adding-tdd-to-a-new-team&quot;&gt;
+  &lt;img src=&quot;/lfyot-slides/38--brace-yourself.png&quot; title=&quot;When adding TDD to
+a new team&quot; alt=&quot;When adding TDD to a new team&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+Biggest resistance we faced was convincing developers that it&apos;s worth
+their while to write tests &lt;b&gt;before&lt;/b&gt; they write code for their code. We
+ended up introducing an extra step in our PR review checklist: &lt;i&gt;ensure
+there is a &quot;test:&quot; commit which only has test descriptions&lt;/i&gt;. This helped
+somewhat, but it took some time (and a lot of pair programming) till
+developers realized the benefits of this process.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-things-i-wish-we-did&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;things-i-wish-we-did&quot;&gt;Things I wish we did&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-things-i-wish-we-did&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-mutation-testing&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;mutation-testing&quot;&gt;Mutation Testing&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-mutation-testing&quot;&gt;
+  &lt;img src=&quot;/lfyot-slides/41--mutation-testing.png&quot; title=&quot;I wish we did:
+Mutation Testing&quot; alt=&quot;I wish we did: Mutation Testing&quot; width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+So, coverage reports are big fat liars. They don&apos;t tell you how your
+tests are doing. In my opinion, they are more like the Velocity Charts
+our Scrum Master loves so much. They tell you if you are going in the
+correct general direction, and it is very easy to make them lie.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href=&quot;https://stryker-mutator.io/&quot;&gt;Mutation test&lt;/a&gt; is a rather interesting
+concept that we played around with. Big idea is that the test-runner can
+modify your code (e.g replace an if condition with &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;false&lt;/code&gt;),
+and re-run your code to verify how many mutations it can withhold. It
+gives a lot better insight into the strength of your tests.
+&lt;/p&gt;
+
+&lt;p&gt;
+We experimented with mutation testing for a while. But I suppose because
+of lack of integration of a platform for our CI (Bamboo) to present
+thorough coverage reports, we haven&apos;t yet made mutation testing a part
+of our test process.
+&lt;/p&gt;
+
+&lt;p&gt;
+I can see how it can make PR reviews a lot more effective though. I hope
+we can take some time out of our everlasting &quot;churn mode&quot; for this.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-bdd&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;bdd&quot;&gt;BDD&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-bdd&quot;&gt;
+  &lt;img src=&quot;/lfyot-slides/42--bdd.png&quot; title=&quot;I wish we did: Behavior
+Driven Development&quot; alt=&quot;I wish we did: Behavior Driven Development&quot;
+width=&quot;100%&quot; /&gt;
+
+&lt;p&gt;
+We implemented BDD a bit late (just a couple months ago) when we had
+some critical modules for which we wanted automated tests, which
+required the complete cloud up and running. Like all software projects,
+we have always been on a rather tight schedule :-)
+&lt;/p&gt;
+
+&lt;p&gt;
+BDD could have saved us a lot of trouble and confusion. It contributes
+immensely to help you maintain a ubiquitous language of the project, and
+make the communication between product people and developers much more
+correct.
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;
+I apologize for rushing the transcript a bit in last few headlines
+above. Need to get this off my todo list :-). If I get to deliver this
+talk again at some occasion, I will revisit and will probably add some
+velocity/burndown charts from Jira as well.
+&lt;/p&gt;
+
+&lt;img src=&quot;/lfyot-slides/47--thank-you.png&quot; title=&quot;Thank you for your
+patience&quot; alt=&quot;Thank you for your patience&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>talks</category>
+            <guid>lessons-from-a-year-of-tdd</guid>
+            <pubDate>2019-06-21T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>React/Redux Workshop</title>
+            <link>https://bitspook.in/talks/react-redux-workshop</link>
+            <description>  &lt;iframe src=&quot;//slides.com/bitspook/react-redux-workshop/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+#+end_html
+  &lt;/iframe&gt;
+
+&lt;p&gt;
+React/Redux workshop I gave with &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/&quot;&gt;Programmers&apos; Club Chandigarh&lt;/a&gt; meetup group after
+seeing community&apos;s interest in these technologies.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>talks</category>
+            <guid>react-redux-workshop</guid>
+            <pubDate>2017-02-16T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Modern day JS Apps (2017)</title>
+            <link>https://bitspook.in/talks/modern-day-js-apps-2017</link>
+            <description>&lt;iframe src=&quot;//slides.com/bitspook/modern-js-apps-2017/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+
+&lt;div class=&quot;html&quot; id=&quot;orga5fa732&quot;&gt;
+&lt;p&gt;
+&amp;lt;/iframe&amp;gt;
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+I think this was the second meetup I organized after I came back from Bangalore
+(to Chandigarh). It was organized with &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/&quot;&gt;Programmers&apos; Club Chandigarh&lt;/a&gt; meetup
+group.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>talks</category>
+            <guid>modern-day-js-apps-2017</guid>
+            <pubDate>2017-02-07T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>React, Redux and Reactive programming</title>
+            <link>https://bitspook.in/talks/react-redux-and-reactive-programming</link>
+            <description>&lt;iframe src=&quot;//slides.com/bitspook/react-redux-and-reactive-programming/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+Building a React/Redux app with a twist of Reactive programming.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+My first time speaking at a big conference! It was a great experience.
+There is a video as well!
+&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SFPF56BB1Cs&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;
+&lt;a href=&quot;https://github.com/bitspook/frp-with-rxjs-jschannel-conf&quot;&gt;Transcript for this talk&lt;/a&gt; is available in its Github repository.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>talks</category>
+            <guid>react-redux-and-reactive-programming</guid>
+            <pubDate>2016-07-08T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Jschannel RxJS workshop Nov 2015</title>
+            <link>https://bitspook.in/talks/jschannel-rxjs-workshop-now-2015</link>
+            <description>&lt;iframe src=&quot;//slides.com/bitspook/jschannel-rxjs-workshop-nov-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+
+&lt;div class=&quot;html&quot; id=&quot;org34b43bd&quot;&gt;
+&lt;p&gt;
+&amp;lt;/iframe&amp;gt;
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;
+I was very fascinated about Reactive programming, and when we had a shortage of
+talks in &lt;a href=&quot;https://www.meetup.com/jslovers-bengaluru/&quot;&gt;JsChannel&lt;/a&gt;, I decided to give a workshop on RxJS.
+&lt;/p&gt;
+
+&lt;p&gt;
+The &lt;a href=&quot;https://github.com/bitspook/rxjs-workshop-nov-2015&quot;&gt;code used in this workshop&lt;/a&gt; can be found in my Github.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>talks</category>
+            <guid>jschannel-rxjs-workshop-now-2015</guid>
+            <pubDate>2015-11-01T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Meteor Js Jschannel Feb 2015</title>
+            <link>https://bitspook.in/talks/meteor-js-jschannel-feb-2015</link>
+            <description>&lt;iframe src=&quot;//slides.com/bitspook/meteor-jschannel-feb-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;
+First talk I ever gave. I was new to Bangalore and all excited about the
+whole idea of meetup.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>talks</category>
+            <guid>meteor-js-jschannel-feb-2015</guid>
+            <pubDate>2015-02-07T05:30:00.000000+05:30</pubDate>
         </item>
     </channel>
 </rss>

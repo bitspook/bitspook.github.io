@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang=en><head><meta charset=UTF-8><title>Lessons From a Year of TDD</title><style>@font-face{font-family:Roboto;font-style:normal;font-weight:300;src:url("/fonts/roboto-thin.woff2");} @font-face{font-family:Roboto;font-style:normal;font-weight:500;src:url("/fonts/roboto-regular.woff2");} @font-face{font-family:Roboto;font-style:normal;font-weight:bold;src:url("/fonts/roboto-bold.woff2");} @font-face{font-family:Cantarell;font-style:normal;font-weight:bold;src:url("/fonts/Cantarell-Bold.ttf");} @font-face{font-family:Cantarell;font-style:normal;font-weight:regular;src:url("/fonts/Cantarell-Regular.ttf");} *{margin:0;padding:0;box-sizing:border-box;} body{font-family:Roboto;font-size:14px;background:#fcfcfc;color:#010400;} a{text-decoration:underline;color:#010400;} h1,h2,h3,h4,h5,h6{font-family:Roboto, sans-serif;margin:4rem 0 2rem 0;} img figcaption,figure figcaption{padding:0.4em;padding-top:0;border-bottom:2px solid #465c69;font-size:0.7em;} blockquote{padding:0.01em 1em;margin:1em 0;border-left:4px solid #465c69;font-size:1.2em;} pre{overflow:auto;padding:1em;font-family:monospace;font-size:1.2rem;} code{font-family:monospace;color:#b75d69;font-size:1rem;} .title{margin:2rem 0;}.title h1{font-family:Roboto, sans-serif;font-weight:bold;font-size:1.7em;line-height:1.2;text-transform:capitalize;} video{width:100%;} .top-nav{height:90px;display:flex;position:relative;justify-content:space-between;}.top-nav ul{list-style-type:none;display:flex;align-items:center;padding:2em 0;}.top-nav li{flex-grow:1;padding-right:2em;}.top-nav li a{text-decoration:underline;font-size:1.4em;font-family:roboto, sans-serif;color:#006992;}.top-nav li a:hover{color:#465c69;}.top-nav li:last-child{padding:0;}.top-nav .brand{width:60px;height:60px;align-self:center;flex-grow:1;}.top-nav .brand-avatar{height:100%;} @media (max-width: 480px){.top-nav{padding-right:1em;}.top-nav a{font-size:1.2em;}} .top-nav{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.top-nav{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.top-nav{max-width:100%;padding:0 4%;}} .content{font-family:Cantarell, sans-serif;font-style:normal;font-weight:500;font-size:1.5em;line-height:1.4;margin:0 auto;padding:0 124px;} .content{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.content{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.content{max-width:100%;padding:0 4%;}} .content-header h1{margin-bottom:1rem;font-size:2em;} .content-meta{margin-top:0;margin-bottom:2rem;font-family:Roboto, sans-serif;color:#465c69;display:flex;}.content-meta .meta-item{border-right:1px solid #6f6f6fd1;line-height:1;padding:0 1rem;font-size:0.8rem;display:flex;}.content-meta .meta-item:last-child{padding-right:0;border:none;}.content-meta .date{padding:0;padding-right:1rem;}.content-meta .tags{list-style-type:none;display:flex;flex-wrap:wrap;}.content-meta .tags li{padding-right:1rem;}.content-meta .tags li a{color:#465c69;} .main-article{font-family:Cantarell, sans-serif;min-height:500px;}.main-article strong,.main-article b{font-weight:bold;}.main-article p{font-family:inherit;font-size:inherit;margin:1rem 0;}.main-article h3{margin:1.2rem 0 0.4rem 0;}.main-article a{text-decoration:underline;}.main-article ul{margin-left:1.4rem;}.main-article li{margin:0.7rem;margin-right:0;} .postamble{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.postamble{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.postamble{max-width:100%;padding:0 4%;}} .btn{display:inline-flex;border:2px solid;border-radius:25px;padding:0 2.1em;cursor:pointer;font-family:Roboto;font-weight:normal;line-height:2.2em;align-items:center;text-align:center;text-decoration:none;} .btn-cta{border-color:#b75d69;background:#b75d69;color:#fcfcfc;} .btn-cta:hover{background:#b75d69;} .btn-cta:active{background:#b75d69;} .btn-primary{border-color:#006992;color:#006992;background:#fcfcfc;} .btn-primary:hover{background:#f9f9f9;} .btn-primary:active{background:#efefef;} .btn-secondary{border-color:#465c69;color:#465c69;background:#fcfcfc;} .btn-secondary:hover{background:#f9f9f9;} .btn-secondary:active{background:#efefef;} .postamble{font-family:monospace;color:#666;margin:4rem auto;}.postamble .validation{display:none;} @media (max-width: NIL){.postamble{max-width:100%;padding:0 8%;}} @media (max-width: NIL){.postamble{max-width:100%;padding:0 4%;}} #mc_embed_signup{max-width:600px;background:transparent;margin-bottom:4rem;} .newsletter-email{border:1px solid #465c69;border-radius:25px;width:100%;margin-bottom:1rem;padding:0.4rem 0.8rem;} .rss-sub{margin:2rem 0;}.rss-sub a{display:flex;align-items:center;}.rss-sub a .rss{width:24px;height:24px;margin-right:1rem;background:url("/images/icons/rss.svg");background-repeat:no-repeat;background-size:contain;}</style></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt="Charanjit Singh"></a></div><div><ul><li><a href=/blog>Blog</a></li><li><a href=/poems>Poems</a></li><li><a href=https://github.com/bitspook>Projects</a></li></ul></div></nav><section class=content><header class=content-header><h1>Lessons From a Year of TDD</h1><span class=content-meta><span class="meta-item date">June 21, 2019</span></span></header><article class=main-article><style>img { max-width: 600px; margin: 1rem 0; }</style>
+
+<iframe src="///slides.com/bitspook/lessons-from-a-year-of-tdd/embed?style=light" width="100%" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</iframe>
+
+<blockquote>
+<p>
+This talk was delivered in <a href="https://agilenetworkindia.com/events/technical-agility-day-chandigarh/">Technical Agility Day, Chandigarh (June 15, 2019)</a>.
+</p>
+</blockquote>
+
+<div id="outline-container-transcript" class="outline-2">
+<h2 id="transcript">Transcript</h2>
+<div class="outline-text-2" id="text-transcript">
+<p>
+Following is the transcript for the talk. There was no video recording,
+but the transcript I prepared for the talk should sufficiently convey
+what I meant to say in the talk.
+</p>
+</div>
+
+<div id="outline-container-introduction" class="outline-3">
+<h3 id="introduction">Introduction</h3>
+<div class="outline-text-3" id="text-introduction">
+<img
+  src="/lfyot-slides/01--introduction-to-tdd-talk.png"
+  title="Experience from a year of TDD by Charanjit Singh"
+  alt="Experience from a year of TDD by Charanjit Singh" width="100%" />
+
+<p>
+Hello everyone, my name is Charanjit. I am working as a technical lead
+at Trantor.
+</p>
+
+<p>
+I joined Trantor a year ago, in one of Trantor's projects where I was
+fortunate enough to see people willing to apply test driven development
+on what was going to become a rather complex project. I am leading one
+part of this project under a team named "The cloud team". This talk is
+the story of things we learned while practicing test driven development
+to build a micro-services based cloud with several third-party
+integrations.
+</p>
+
+<p>
+Our cloud is built primarily with Node.js (express.js), uses GraphQL to
+communicate with clients as well as for inter-service communication,
+backed by Azure's CosmosDB (with its Mongo API), has Kafka for messaging
+queue, and Elasticsearch for complex search solutions. We have about 9
+services till today, and 3 third party integrations. We are building an
+IOT-ish solution, and our cloud primarily serves the android application
+running on our custom hardware, along with some companion applications
+(for support and sales).
+</p>
+
+<p>
+Before we get into the details of how we did TDD in our project, or of
+TDD itself, let's take a step back and work out some abstract thoughts.
+Abstract thoughts about what we are trying to accomplish with techniques
+like TDD. Actually, let's take all the steps back and go to the very
+beginning.
+</p>
+
+<p>
+In the beginning, there were myths. Humans weren't always recording
+history. The myths were used to fill the plot holes in stories told by
+one generation to next. A common and very fascinating theme among the
+myths of different cultures is that of magic.
+</p>
+
+<img src="/lfyot-slides/02--the-wizard.png" title="The Wizard" alt="The
+Wizard" width="100%" />
+
+<p>
+Allegedly there used to be some very special people who could use the
+mysterious powers. With flick of a wand they could create things out of
+thin air, they could put life into the inanimate, they could bend the
+reality itself to their will.
+</p>
+
+<p>
+But those were of course myths. What we have now are developers.
+</p>
+
+<img src="/lfyot-slides/03--the-stallman.png" title="The Stallman"
+alt="The Stallman" width="100%" />
+
+<p>
+Well, I argue that developers are in fact the wizards of the information
+age. We certainly meet the criteria:
+</p>
+
+<ul class="org-ul">
+<li class="on"><code>[X]</code> Create things (business/products/tools) out of thin air (without
+any raw materials)</li>
+<li class="on"><code>[X]</code> Put life into the inanimate (software is practically the soul of
+computer)</li>
+<li class="on"><code>[X]</code> Bend reality to our will (/r/insidethesoftstone reality is what
+you want it to be)</li>
+</ul>
+
+<img src="/lfyot-slides/04--the-stallzard.png" title="The Stallzard"
+alt="The Stallzard" width="100%" />
+
+<p>
+Raw materials for the products a software developer creates are the
+thoughts. The third point here is the focus of this talk.
+</p>
+</div>
+</div>
+
+<div id="outline-container-software-as-universe" class="outline-3">
+<h3 id="software-as-universe">Software as Universe</h3>
+<div class="outline-text-3" id="text-software-as-universe">
+  <img src="/lfyot-slides/05--the-universe.png" title="The Universe"
+alt="The Universe" width="100%" />
+
+<p>
+I am not kidding. I believe it is fair to say that every software is a
+universe of its own. It has its own rules it operates within, its own
+reality, which is at your disposal to do whatever with.
+</p>
+
+<p>
+It is a living and breathing thing which must change and evolve and die
+as well.
+</p>
+
+<p>
+Do anyone here watches Rick and Morty? It is a good show about a
+rockstar and a junior software developer. Try it sometime.
+</p>
+
+  <img src="/lfyot-slides/06--the-microverse.png" title="The Microverse"
+alt="The Microverse" width="100%" />
+
+<p>
+One of the episodes are about the microverse battery. The rockstar
+developer creates a miniature universe whose sole purpose is to provide
+power to his car. It is essentially a very complex car battery.
+</p>
+
+<p>
+Funnier thing in that episode, the universe within the universe in the
+battery does the exact same thing. Creates a universe whose sole purpose
+is to power its host.
+</p>
+
+  <img src="/lfyot-slides/07--many-layers-of-microverse.png" title="Many
+layers of the Microverse" alt="Many layers of the Microverse"
+width="100%" />
+
+<p>
+Software we write are not very different. We create entire universe to
+serve our needs, and it is rarely created in isolation. Usually our
+universe has a bunch of other, more complex universes wrapped around it.
+</p>
+
+  <img src="/lfyot-slides/08--realm-of-tux.png" title="The realm of Tux"
+alt="The realm of Tux" width="100%" />
+
+<p>
+We often start with a base universe of Operating system. The platform,
+programming language, the frameworks, they all make up for our initial
+"empty" worlds. They set up their layers of rules, on which then we
+write our own. Layers and layers of worlds.
+</p>
+
+  <img src="/lfyot-slides/11--layers-of-software-universe.png" title="Many
+layered of software universe" alt="Many layered of software universe"
+width="100%" />
+
+<p>
+Now, how do we populate this empty universe with the inhabitants which
+would do our bidding? Well, with our thoughts and prayers of course.
+</p>
+
+  <img src="/lfyot-slides/13--pray-to-the-machine.png" title="Pray to the
+machine" alt="Pray to the machine" width="100%" />
+
+<p>
+I am not kidding. But you get it, you aren't laughing. We literally send
+our thoughts, often prayers as well, formulated in some special form
+governed by some programming language to a compiler (or interpreter),
+which then inhabit and basically forms the universe of our software.
+</p>
+
+<blockquote>
+<p>
+Asgard isn't a place. Asgard is its people.
+</p>
+</blockquote>
+
+  <img src="/lfyot-slides/14--pray-to-the-compiler.png" title="Pray to the
+compiler" alt="Pray to the compiler" width="100%" />
+
+<p>
+That brings us to the corollary which takes us in the general direction
+of practices like Test Driven Development.
+</p>
+
+  <img src="/lfyot-slides/15--bugs-are-thoughts-gone-wrong.png" title="Bugs
+are thoughts too" alt="Bugs are thoughts too" width="100%" />
+</div>
+</div>
+
+<div id="outline-container-bugs-are-thoughts-gone-wrong" class="outline-3">
+<h3 id="bugs-are-thoughts-gone-wrong">Bugs are thoughts, gone wrong</h3>
+<div class="outline-text-3" id="text-bugs-are-thoughts-gone-wrong">
+<blockquote>
+<p>
+Correctness of software is inversely proportional to the client side
+product team.
+</p>
+</blockquote>
+
+<p>
+Thoughts go wrong primarily in two ways:
+</p>
+
+<ol class="org-ol">
+<li>They are wrong to begin with. Mostly caused by misunderstanding</li>
+<li>Thoughts that go wrong during translation</li>
+</ol>
+
+<p>
+We can create correct software if we can validate the correctness of
+thoughts that get into the system, and those that reside it
+subsequently.
+</p>
+
+<p>
+This is what TDD essentially do.
+</p>
+
+  <img src="/lfyot-slides/16--tdd-validates-thoughts.png" title="Bugs are
+thoughts too" alt="Bugs are thoughts too" width="100%" />
+
+<p>
+The first point points to the red-green-refactor cycle. When doing TDD,
+you write down the "what" aspect of the unit/module/function you are
+going to write. It essentially allow you to pause, sit back, and think
+about what you are going to implement. How it should behave.
+</p>
+
+<p>
+The second point points to the help we get from our well-written tests
+when we have to then make changes in our.
+</p>
+</div>
+</div>
+
+<div id="outline-container-busting-some-myths" class="outline-3">
+<h3 id="busting-some-myths">Busting some Myths</h3>
+<div class="outline-text-3" id="text-busting-some-myths">
+</div>
+<div id="outline-container-myth-1-tdd-is-time-consuming" class="outline-4">
+<h4 id="myth-1-tdd-is-time-consuming">Myth #1 : TDD is time consuming</h4>
+<div class="outline-text-4" id="text-myth-1-tdd-is-time-consuming">
+<p>
+This one is half a myth. TDD does consume time when you are starting.
+Your mileage may vary depending on how much experience your team has
+with TDD, initial time consumption is more if there is a learning curve
+involved. Disregarding the learning curve, developing same features took
+us roughly 30% longer to develop new features in our project.
+</p>
+
+  <img src="/lfyot-slides/17--myth-tdd-is-time-consuming.png" title="Myth
+#1: TDD is time consuming" alt="Myth #1: TDD is time consuming"
+width="100%" />
+
+<p>
+But this time is an investment you are making into your software, as
+well as your developers. When the project started off, we did start off
+slow. Other teams (there are 3 including us) were delivering more "story
+points". After about 3-4 months however, both other teams had dedicated
+processes set up to tackle bugs, to prioritize and decide which bugs to
+quash and which ones to live with. We still don't have any process
+explicitly for bugs.
+</p>
+
+<p>
+Our product is a startup, we have been going through a lot of changes
+and pivots throughout the year. While other teams were struggling with
+new bugs after every such change, we were delivering at pretty much the
+same pace. Every bug that occurred in cloud got test(s) for it too, so
+no mistakes were repeated. Till now, we have been able to keep the list
+of bugs small enough that we don't pay particular attention to it.
+</p>
+
+<p>
+On-boarding new people to our team was a no-op, we would just give them
+an overview, and tell them to run the tests. We did put considerable
+amount of effort to make the tests our live documentation for
+developers, and it paid dividends.
+</p>
+
+  <img src="/lfyot-slides/24--tdd-gave-us-free-time.png" title="TDD gave us
+time to invest elsewhere" alt="TDD gave us time to invest elsewhere"
+width="100%" />
+
+<p>
+Not just that, TDD actually gave our team to do more than just our
+assigned duties. Most notably, we were able to not have a separate
+dev/ops team at all, and took care of provisioning a cloud with
+<a href="https://en.wikipedia.org/wiki/Infrastructure_as_Code">IAC</a> (using
+Terraform and Ansible), and a small sized K8s cluster too. Our
+development environment is pristine as well. It just takes a single
+command (docker-compose up) to get the complete cloud (including log
+aggregation, Elasticsearch, Kibana and Kafka) running on new machine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-myth-2-tdd-is-about-tests" class="outline-4">
+<h4 id="myth-2-tdd-is-about-tests">Myth #2 : TDD is about tests</h4>
+<div class="outline-text-4" id="text-myth-2-tdd-is-about-tests">
+<p>
+It is not. "DD" in "TDD" is more important than "T". We learned this the
+hard way because of lack of experience with TDD. When you are applying
+TDD on a new project, <b>your tests should be driving the development</b>.
+Tests by themselves aren't the goal. The essential thing you must do to
+ensure this, is to ensure that you write tests first.
+</p>
+
+  <img src="/lfyot-slides/24--myth-tdd-is-about-tests.png" title="Myth #2:
+TDD is about Tests" alt="Myth #2: TDD is about Tests" width="100%" />
+
+<p>
+Tests written after the fact are practically handicapped. No matter how
+good a developer you are, when you are writing tests after you have
+written the feature/code, the "how" aspect of your code will creep in,
+and your tests will never be as effective as they could have been. Same
+goes for the feature you are writing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-myth-3-tdd-means-no-bugs" class="outline-4">
+<h4 id="myth-3-tdd-means-no-bugs">Myth #3 : TDD means no bugs</h4>
+<div class="outline-text-4" id="text-myth-3-tdd-means-no-bugs">
+<p>
+This is what I've been advertising so far, ain't I! Well, it is not a
+100% truth. Even if we ignore the fact that your tests will almost never
+be 100% complete, TDD will not guarantee a fully correct software.
+</p>
+
+  <img src="/lfyot-slides/29--myth-tdd-means-no-bugs.png" title="Myth #3:
+TDD means no bugs" alt="Myth #3: TDD means no bugs" width="100%" />
+
+<p>
+TDD is your last line of defense. By the time you have sat down to
+judiciously implement TDD, the thoughts that are going to populate your
+software's universe have already been set. All you are going to do is
+verify that they behave as it has been decided.
+</p>
+
+  <img src="/lfyot-slides/32--protect-yourself-from-your-po.png"
+title="Adopt BDD" alt="Adopt BDD" width="100%" />
+
+<p>
+BDD operates at a much higher layer than TDD. At the layer where
+discussions are done and decisions are made. I believe a combination of
+BDD and TDD can create a very solid software. We adopted BDD in our
+project at a much later time, looking back at the long meetings we used
+to have, I can see how much time and confusion it could have saved us.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-grow-as-a-developer" class="outline-3">
+<h3 id="grow-as-a-developer">Grow as a developer</h3>
+<div class="outline-text-3" id="text-grow-as-a-developer">
+  <img src="/lfyot-slides/33--tdd-guides-you-in-right-direction.png"
+title="TDD Guides you in right direction" alt="TDD Guides you in right
+direction" width="100%" />
+
+<p>
+It was an interesting observation. Team seem to have a much higher
+appreciation for design patterns like dependency injection. We also
+observed a shift in PR review comments toward a focus on software design
+and architecture. Discussions we used to have to make our TDD approach
+more fruitful brought a cultural shift in the team.
+</p>
+</div>
+</div>
+
+<div id="outline-container-when-adding-tdd-to-a-new-team" class="outline-3">
+<h3 id="when-adding-tdd-to-a-new-team">When adding TDD to a new team</h3>
+<div class="outline-text-3" id="text-when-adding-tdd-to-a-new-team">
+  <img src="/lfyot-slides/38--brace-yourself.png" title="When adding TDD to
+a new team" alt="When adding TDD to a new team" width="100%" />
+
+<p>
+Biggest resistance we faced was convincing developers that it's worth
+their while to write tests <b>before</b> they write code for their code. We
+ended up introducing an extra step in our PR review checklist: <i>ensure
+there is a "test:" commit which only has test descriptions</i>. This helped
+somewhat, but it took some time (and a lot of pair programming) till
+developers realized the benefits of this process.
+</p>
+</div>
+</div>
+
+<div id="outline-container-things-i-wish-we-did" class="outline-3">
+<h3 id="things-i-wish-we-did">Things I wish we did</h3>
+<div class="outline-text-3" id="text-things-i-wish-we-did">
+</div>
+<div id="outline-container-mutation-testing" class="outline-4">
+<h4 id="mutation-testing">Mutation Testing</h4>
+<div class="outline-text-4" id="text-mutation-testing">
+  <img src="/lfyot-slides/41--mutation-testing.png" title="I wish we did:
+Mutation Testing" alt="I wish we did: Mutation Testing" width="100%" />
+
+<p>
+So, coverage reports are big fat liars. They don't tell you how your
+tests are doing. In my opinion, they are more like the Velocity Charts
+our Scrum Master loves so much. They tell you if you are going in the
+correct general direction, and it is very easy to make them lie.
+</p>
+
+<p>
+<a href="https://stryker-mutator.io/">Mutation test</a> is a rather interesting
+concept that we played around with. Big idea is that the test-runner can
+modify your code (e.g replace an if condition with <code>true</code> and <code>false</code>),
+and re-run your code to verify how many mutations it can withhold. It
+gives a lot better insight into the strength of your tests.
+</p>
+
+<p>
+We experimented with mutation testing for a while. But I suppose because
+of lack of integration of a platform for our CI (Bamboo) to present
+thorough coverage reports, we haven't yet made mutation testing a part
+of our test process.
+</p>
+
+<p>
+I can see how it can make PR reviews a lot more effective though. I hope
+we can take some time out of our everlasting "churn mode" for this.
+</p>
+</div>
+</div>
+
+<div id="outline-container-bdd" class="outline-4">
+<h4 id="bdd">BDD</h4>
+<div class="outline-text-4" id="text-bdd">
+  <img src="/lfyot-slides/42--bdd.png" title="I wish we did: Behavior
+Driven Development" alt="I wish we did: Behavior Driven Development"
+width="100%" />
+
+<p>
+We implemented BDD a bit late (just a couple months ago) when we had
+some critical modules for which we wanted automated tests, which
+required the complete cloud up and running. Like all software projects,
+we have always been on a rather tight schedule :-)
+</p>
+
+<p>
+BDD could have saved us a lot of trouble and confusion. It contributes
+immensely to help you maintain a ubiquitous language of the project, and
+make the communication between product people and developers much more
+correct.
+</p>
+
+<hr />
+
+<p>
+I apologize for rushing the transcript a bit in last few headlines
+above. Need to get this off my todo list :-). If I get to deliver this
+talk again at some occasion, I will revisit and will probably add some
+velocity/burndown charts from Jira as well.
+</p>
+
+<img src="/lfyot-slides/47--thank-you.png" title="Thank you for your
+patience" alt="Thank you for your patience" width="100%" />
+</div>
+</div>
+</div>
+</div>
+</article></section><footer class="site-footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2>Get updates via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class="btn btn-primary" type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Or Follow via RSS</a></p><p>Author: Charanjit Singh <a href=https://twitter.com/bitspook>@bitspook</a></p></footer></div></body><script type=text/javascript>(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);mixpanel.init('0f28a64d9f8bce370006d36e1e2e3f61');mixpanel.track('Page Load');</script></html>

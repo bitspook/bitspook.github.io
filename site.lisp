@@ -1,16 +1,16 @@
 (in-package :cl-user)
 
 (ql:quickload "cffi")
+(ql:quickload "cl-ownpress")
+
 (setf cffi::*foreign-library-directories*
       (cffi::explode-path-environment-variable "MY_LIBRARY_PATH"))
-
-(ql:quickload "cl-ownpress")
 
 (add-package-local-nickname :clp :clown-providers)
 
 (setf (clown:conf :db-name) "./clownpress.db")
 (clp:invoke-provider clp:*org-file-provider* :content-dir "./content/")
-(clp:invoke-provider clp:*org-roam-provider*)
+(clp:invoke-provider clp:*org-roam-provider* :tags '("blog-post"))
 
 (let ((clown-slick:*debug-transpiles* nil)
       (clown-slick:*conf*
