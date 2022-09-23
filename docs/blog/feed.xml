@@ -11,13 +11,173 @@
             <link>https://bitspook.in/</link>
         </image>
         <item>
+            <title>Extending org-mode to handle youtube links</title>
+            <link>https://bitspook.in/blog/extending-org-mode-to-handle-youtube-links</link>
+            <description>&lt;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-org29844b2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org29844b2&quot;&gt;Requirement&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org29844b2&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;I want to open youtube in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the browser&lt;/li&gt;
+
+&lt;li&gt;When exporting to HTML, youtube links should become embedded videos instead
+of hyperlinks&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgb871c8f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb871c8f&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb871c8f&quot;&gt;
+&lt;p&gt;
+Org has a concept of &apos;link types&apos;. We can add a new type of link and have it
+behave the way we want.
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+&lt;code&gt;org-link-parameters&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+This variable contains link types and how they behave on follow (i.e when
+someone opens the link with &lt;code&gt;C-c C-o&lt;/code&gt;), export etc. A type of a link is
+determined by the string before first &quot;:&quot; in it. e.g &quot;&lt;a href=&quot;https://bitspook.in&quot;&gt;https://bitspook.in&lt;/a&gt;&quot; has
+&lt;code&gt;https&lt;/code&gt; type, &quot;&lt;a href=&quot;file:///etc&quot;&gt;file:///etc&lt;/a&gt;&quot; has &lt;code&gt;file&lt;/code&gt; type.
+&lt;/p&gt;
+
+&lt;p&gt;
+Items in this list has 2 main components:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;First element in this list is string representing the link type&lt;/li&gt;
+&lt;li&gt;Key-value pairs of behavior name (e.g &lt;code&gt;:follow&lt;/code&gt;, &lt;code&gt;:export&lt;/code&gt;) and
+function which handles that behavior&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+For example:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;((&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;yt&quot;&lt;/span&gt; &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:follow&lt;/span&gt; spook-org--follow-yt-link &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:export&lt;/span&gt; spook-org--export-yt-link)
+ (&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;eww&quot;&lt;/span&gt; &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:follow&lt;/span&gt; org-eww-open &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:store&lt;/span&gt; org-eww-store-link))
+&lt;/pre&gt;
+&lt;/div&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+&lt;code&gt;org-link-set-parameters&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+This function is used to add new link-types (and also to add new behavior to
+existing ones). You can check the docs for &lt;code&gt;org-link-parameters&lt;/code&gt; (with &lt;code&gt;C-h v
+  org-link-parameters&lt;/code&gt;) to see arguments provided to each type of callback.
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Here&apos;s the code I&apos;ve added in &lt;a href=&quot;https://github.com/bitspook/spookmax.d&quot;&gt;my emacs config&lt;/a&gt;:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-org--follow-yt-link&lt;/span&gt; (path prefix)
+  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let*&lt;/span&gt; ((url (format &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https:%s&quot;&lt;/span&gt; path))
+&lt;span id=&quot;coderef-dba&quot; class=&quot;coderef-off&quot;&gt;         (display-buffer-alist `((,shell-command-buffer-name-async . (display-buffer-no-window)))))&lt;/span&gt;
+    (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;and&lt;/span&gt; prefix (executable-find &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;mpv&quot;&lt;/span&gt;))
+        (browse-url url)
+      (async-shell-command (format &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;mpv \&quot;%s\&quot;&quot;&lt;/span&gt; url))
+      (message &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Launched mpv with \&quot;%s\&quot;&quot;&lt;/span&gt; url))))
+
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-org--export-yt-link&lt;/span&gt; (path desc backend)
+  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;when&lt;/span&gt; (eq backend &apos;html)
+    (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let*&lt;/span&gt; ((video-id (cadar (url-parse-query-string path)))
+           (url (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;if&lt;/span&gt; (string-empty-p video-id) path
+                  (format &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;//youtube.com/embed/%s&quot;&lt;/span&gt; video-id))))
+      (format
+       &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;&amp;lt;iframe width=\&quot;560\&quot; height=\&quot;315\&quot; src=\&quot;%s\&quot; title=\&quot;%s\&quot; frameborder=\&quot;0\&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&quot;&lt;/span&gt;
+       url desc))))
+
+(org-link-set-parameters &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;yt&quot;&lt;/span&gt; &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:follow&lt;/span&gt; #&apos;spook-org--follow-yt-link &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:export&lt;/span&gt; #&apos;spook-org--export-yt-link)
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+[&lt;a href=&quot;https://github.com/bitspook/spookmax.d/blame/5f1d71cf572cd18dc7d41f292753d4b7683877c3/readme.org#L643-L660&quot;&gt;Permalink for this snippet&lt;/a&gt;]
+&lt;/p&gt;
+
+&lt;p&gt;
+Setting display-buffer-alist&lt;sup&gt;(&lt;a href=&quot;#coderef-dba&quot; class=&quot;coderef&quot; onmouseover=&quot;CodeHighlightOn(this, &apos;coderef-dba&apos;);&quot; onmouseout=&quot;CodeHighlightOff(this, &apos;coderef-dba&apos;);&quot;&gt;L2&lt;/a&gt;)&lt;/sup&gt; ensures that the process output buffer that get
+created when &lt;code&gt;mpv&lt;/code&gt; is launched don&apos;t come in focus. I have chosen to let the
+shell-output-buffer be created to allow having a peek at the command output, and
+to kill the process if needed.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org0058519&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0058519&quot;&gt;Result&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0058519&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
+in mpv&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-u C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt; with an prefix argument) on a &lt;code&gt;yt://&lt;/code&gt;
+link opens the video in browser&lt;/li&gt;
+&lt;li&gt;When exported to HTML, all &lt;code&gt;yt://&lt;/code&gt; links file are exported as embedded
+youtube videos&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org3cde18a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3cde18a&quot;&gt;Bonus gains 💪&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3cde18a&quot;&gt;
+&lt;p&gt;
+Recently I&apos;ve been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which will make blogging a
+zero-effort activity for me. First step in this is to publish a subset of my
+notes. I have already built a habit of judiciously taking notes. Simply
+publishing a subset of my notes will enable maintaining an active blog without
+doing any &quot;work&quot;.
+&lt;/p&gt;
+
+&lt;p&gt;
+I&apos;ve also been making thickly-accented-awkardly-narrated youtube videos. These
+are almost always &lt;i&gt;tldr;&lt;/i&gt; videos for my blog posts. So they get embedded in my
+blog posts.
+&lt;/p&gt;
+
+&lt;p&gt;
+&apos;Blog with notes + embed youtube videos&apos; become easier to do with this little
+tinkering. Since &lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt; uses my running Emacs to publish my posts, I don&apos;t
+need to make any change in my blogging setup. I can embed my &lt;i&gt;tldr;&lt;/i&gt; videos in
+my blog posts by just prefixing youtube links with &lt;code&gt;yt://&lt;/code&gt; instead of
+&lt;code&gt;https://&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+I am pretty happy that I got zero work blogging-setup, and zero work
+extending-the-blogging-setup as well.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>36381264-4b43-4a3b-ad0c-ccda5b3c0966</guid>
+            <pubDate>2022-09-23T19:43:38.000000+05:30</pubDate>
+        </item>
+        <item>
             <title>How I manage my passwords</title>
             <link>https://bitspook.in/blog/how-i-manage-my-passwords</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;div id=&quot;outline-container-org35c6478&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org35c6478&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org35c6478&quot;&gt;
+&lt;div id=&quot;outline-container-orgf6459c0&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf6459c0&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf6459c0&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;b&gt;No third-parties&lt;/b&gt;
@@ -49,9 +209,9 @@ should play nice with presence/absence of other tools.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org513a6c3&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org513a6c3&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org513a6c3&quot;&gt;
+&lt;div id=&quot;outline-container-org38cab58&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org38cab58&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org38cab58&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
@@ -132,13 +292,13 @@ my mobile devices.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgee9bbea&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgee9bbea&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgee9bbea&quot;&gt;
+&lt;div id=&quot;outline-container-org5c7f848&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org5c7f848&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org5c7f848&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org3723a50&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org3723a50&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org3723a50&quot;&gt;
+&lt;div id=&quot;outline-container-org55a37d3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org55a37d3&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org55a37d3&quot;&gt;
 &lt;p&gt;
 For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
@@ -160,9 +320,9 @@ password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgf945c4d&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgf945c4d&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgf945c4d&quot;&gt;
+&lt;div id=&quot;outline-container-orgbb788e6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgbb788e6&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgbb788e6&quot;&gt;
 &lt;p&gt;
 Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
 much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
@@ -195,9 +355,9 @@ password (on the same form).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgb1ea190&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgb1ea190&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgb1ea190&quot;&gt;
+&lt;div id=&quot;outline-container-org98e7c1f&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org98e7c1f&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org98e7c1f&quot;&gt;
 &lt;p&gt;
 I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
@@ -238,7 +398,9 @@ private browser window.
         <item>
             <title>Using ELisp as an HTML templating engine</title>
             <link>https://bitspook.in/blog/using-elisp-as-an</link>
-            <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+            <description>&lt;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/p&gt;
 
 &lt;p&gt;
 HTML templating engines like &lt;a href=&quot;https://jinja.palletsprojects.com/en/3.1.x/&quot;&gt;Jinja&lt;/a&gt; or &lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; are commonly used in web
@@ -592,9 +754,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgdf984dc&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgdf984dc&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdf984dc&quot;&gt;
+&lt;div id=&quot;outline-container-org406a27d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org406a27d&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org406a27d&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -653,9 +815,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org7a0ed54&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org7a0ed54&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7a0ed54&quot;&gt;
+&lt;div id=&quot;outline-container-orgcfa0684&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcfa0684&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcfa0684&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -716,9 +878,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org17744c0&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org17744c0&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org17744c0&quot;&gt;
+&lt;div id=&quot;outline-container-org10892ee&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org10892ee&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org10892ee&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -777,9 +939,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org40c4cf5&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org40c4cf5&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org40c4cf5&quot;&gt;
+&lt;div id=&quot;outline-container-org173373f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org173373f&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org173373f&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -801,9 +963,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org1c5dada&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org1c5dada&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1c5dada&quot;&gt;
+&lt;div id=&quot;outline-container-orgdab70f9&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgdab70f9&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdab70f9&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
@@ -1078,7 +1240,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org564c45e&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgd0a7720&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -1096,7 +1258,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer&apos;s machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgd93829d&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org4ba4b86&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -1135,7 +1297,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgc97a21b&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org20be0af&quot;&gt;
 buildDrafts = true
 title = &quot;My Project&quot;
 
@@ -1222,147 +1384,6 @@ be a good start.
             <category>blog</category>
             <guid>coming-to-terms-with-adhd-help-others-to-help-yourself</guid>
             <pubDate>2019-05-13T05:30:00.000000+05:30</pubDate>
-        </item>
-        <item>
-            <title>Personal brands for software developers</title>
-            <link>https://bitspook.in/blog/personal-brands-for-software-developers</link>
-            <description>&lt;p&gt;
-&lt;a href=&quot;file:///blog/maximize-individual-growing-in-a-software-team-2-month-report/&quot;&gt;Reflecting on the progress&lt;/a&gt; we have made in our &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;&quot;nurture a culture of individual
-growth in a software team&quot; initiative&lt;/a&gt;, I realized there is much to gain from
-candy wrapping our efforts. As per our plan, we&apos;ll be (and are) giving talks,
-doing research, and writing itch-scratching code. Coming out of shadows and
-presenting our efforts in a nice frame present many fold benefits.
-&lt;/p&gt;
-
-&lt;p&gt;
-My proposal is to invest energy in making our efforts more visible. To
-focus this emotion on a more concrete goal, I have chosen
-&lt;/p&gt;
-
-&lt;div id=&quot;outline-container-establishing-a-personal-brand&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;establishing-a-personal-brand&quot;&gt;Establishing a personal brand&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-establishing-a-personal-brand&quot;&gt;
-&lt;p&gt;
-I believe a person is a brand when (s)he is recognizable for the value
-(s)he carry and can contribute, without fresh proof. Building a genuine
-brand need genuine efforts. Efforts we are already making, and which can
-gain a boost if we focus on this short term goal.
-&lt;/p&gt;
-
-&lt;p&gt;
-Doing so will also incentivize us to engage more in our chosen
-activities. Our objective is personal growth of individuals involved in
-our team(s), and I believe visibility of this growth is important for
-its sustenance. The organization we work for, if it can see us growing
-new skills, will be able to leverage them, hence contributing more to
-our growth. Before I start fantasizing about all the good this can bring
-to us, let&apos;s brainstorm on
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;outline-container-how-can-we-establish-ourselves-as-brands&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;how-can-we-establish-ourselves-as-brands&quot;&gt;How can we establish ourselves as brands?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-can-we-establish-ourselves-as-brands&quot;&gt;
-&lt;p&gt;
-Being a brand is a completely dependent value. Unlike our technical
-skills, it is not something that can independently stand on its own. It
-is almost entirely dependent on other people. People decide how valuable
-you are as a brand. Thinking along these lines, I suppose the first
-natural step turns out to be
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;span class=&quot;underline&quot;&gt;Step 1&lt;/span&gt;: &lt;b&gt;Building an online presence&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-It boils down to having a home to showcase all the value we are
-delivering right now. For starters, this can be a personal website which
-can showcase the talks we are giving (since that is where we are
-investing most of our time). Eventually, I imagine at least
-incorporating all the steps we have chosen in our personal websites:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;b&gt;Talks/Presentations section&lt;/b&gt; for the talks we deliver. Perhaps we
-can have &quot;Review&quot; section for the talks we attend&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;A blog&lt;/b&gt; for sharing the discussions we have on
-&lt;a href=&quot;http://forum.trantorinc.com/&quot;&gt;Trantor forum&lt;/a&gt;, our research notes,
-thoughts, opinions and just about anything. Blogs are great for
-making noise and gather attention to yourself.&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;A Portfolio&lt;/b&gt; for showcasing the open source(?) work we do, as a
-demonstration of our growing skills&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-Even though there are platforms for creating and sharing content, I
-firmly believe in having complete ownership of the content we generate.
-&lt;/p&gt;
-
-&lt;p&gt;
-Once we have a platform where we are creating and sharing content, then
-we can focus on
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;span class=&quot;underline&quot;&gt;Step 2&lt;/span&gt;: &lt;b&gt;Creating online visibility&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-Just creating content is not enough, there is too much noise all over
-the internet to get noticed organically. Once we have the bare minimum
-content creation pipeline, we can then focus on polishing things like
-how it looks, SEO, automatic sharing across social media platforms,
-analytic and data gathering, automatic updates for new content. I
-wouldn&apos;t delve too deep into this right now.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;span class=&quot;underline&quot;&gt;Step 1&lt;/span&gt;: &lt;b&gt;Building an offline presence&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-Another great first step along with aiming to build an online presence
-is to build an offline presence. Local brands are very valuable,
-probably more valuable than internet celebrities to local communities
-and organizations employing us. Building offline presence require
-engagement in local community, organizing and attending meetups,
-hackathons etc.
-&lt;/p&gt;
-
-&lt;p&gt;
-We are in a unique position in this regard, the tech &quot;culture&quot; in our city
-(Chandigarh) is yet barely blossoming. It used to be a &lt;a href=&quot;file:///blog/dear-first-world-dev-have-a-look-at-your-nightmare/&quot;&gt;rather gloomy picture&lt;/a&gt;
-around here, but I believe people have now started seeing the exploitation going
-around in the tech scene of the city for what it is. &lt;a href=&quot;https://www.meetup.com/find/events/?allMeetups=true&amp;amp;radius=10&amp;amp;userFreeform=Chandigarh%252C+India&amp;amp;mcId=z1018132&amp;amp;mcName=Chandigarh%252C+IN&amp;amp;eventFilter=mysugg&quot;&gt;More and more meetup groups&lt;/a&gt;
-are blossoming for the good. Participating in these groups can be a great source
-of content for our online presence. Before I start day-dreaming about how we can
-hack for Chandigarh, I&apos;ll shut up about it : )
-&lt;/p&gt;
-
-&lt;p&gt;
-For this, I suppose the next course of action is to open the sessions we
-have been doing for public to attend. Trantor is one of the few
-companies I have seen being quite open for organizing meetups in
-Tricity, so this shouldn&apos;t be a problem from that front.
-&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;
-Here is what I am imagining for our next goal is to attain our grand
-objective of nurturing the culture of growth. Please do share your
-ideas, opinions and thoughts. You are also always welcome to join us in
-our endeavor.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>personal-brands-for-software-developers</guid>
-            <pubDate>2019-04-01T05:30:00.000000+05:30</pubDate>
         </item>
     </channel>
 </rss>
