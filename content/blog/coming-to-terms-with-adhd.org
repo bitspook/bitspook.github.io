@@ -1,4 +1,4 @@
-#+FILETAGS: adhd introspection
+#+FILETAGS: adhd life
 #+DATE: <2018-12-15>
 #+AUTHOR: Charanjit Singh
 #+TITLE: Coming to terms with ADHD

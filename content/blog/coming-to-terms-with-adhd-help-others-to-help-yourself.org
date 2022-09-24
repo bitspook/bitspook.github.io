@@ -1,8 +1,7 @@
-#+FILETAGS: adhd personal
 #+DATE: <2019-05-13>
 #+AUTHOR: Charanjit Singh
 #+TITLE: Helping others to help myself
-
+#+FILETAGS: adhd life
 
 It is near impossible for me to get something done if I don't have 100%
 peaked interest in it at *this* very moment. Occasionally I can hyper

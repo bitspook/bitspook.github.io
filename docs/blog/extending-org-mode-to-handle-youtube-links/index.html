@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang=en><head><meta charset=UTF-8><title>Extending org-mode to handle youtube links</title><style>@font-face{font-family:Roboto;font-style:normal;font-weight:300;src:url("/fonts/roboto-thin.woff2");} @font-face{font-family:Roboto;font-style:normal;font-weight:500;src:url("/fonts/roboto-regular.woff2");} @font-face{font-family:Roboto;font-style:normal;font-weight:bold;src:url("/fonts/roboto-bold.woff2");} @font-face{font-family:Cantarell;font-style:normal;font-weight:bold;src:url("/fonts/Cantarell-Bold.ttf");} @font-face{font-family:Cantarell;font-style:normal;font-weight:regular;src:url("/fonts/Cantarell-Regular.ttf");} *{margin:0;padding:0;box-sizing:border-box;} body{font-family:Roboto;font-size:14px;background:#fcfcfc;color:#010400;} a{text-decoration:underline;color:#010400;} h1,h2,h3,h4,h5,h6{font-family:Roboto, sans-serif;margin:4rem 0 2rem 0;} img figcaption,figure figcaption{padding:0.4em;padding-top:0;border-bottom:2px solid #465c69;font-size:0.7em;} blockquote{padding:0.01em 1em;margin:1em 0;border-left:4px solid #465c69;font-size:1.2em;} pre{overflow:auto;padding:1em;font-family:monospace;font-size:1.2rem;} code{font-family:monospace;color:#b75d69;font-size:1rem;} .title{margin:2rem 0;}.title h1{font-family:Roboto, sans-serif;font-weight:bold;font-size:1.7em;line-height:1.2;text-transform:capitalize;} video{width:100%;} col{min-width:10rem;} tr:nth-child(even){background-color:#efefef;} td{padding:.4em .8em;} .top-nav{height:90px;display:flex;position:relative;justify-content:space-between;}.top-nav ul{list-style-type:none;display:flex;align-items:center;padding:2em 0;}.top-nav li{flex-grow:1;padding-right:2em;}.top-nav li a{text-decoration:underline;font-size:1.4em;font-family:roboto, sans-serif;color:#006992;}.top-nav li a:hover{color:#465c69;}.top-nav li:last-child{padding:0;}.top-nav .brand{width:60px;height:60px;align-self:center;flex-grow:1;}.top-nav .brand-avatar{height:100%;} @media (max-width: 480px){.top-nav{padding-right:1em;}.top-nav a{font-size:1.2em;}} .top-nav{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.top-nav{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.top-nav{max-width:100%;padding:0 4%;}} .content{font-family:Cantarell, sans-serif;font-style:normal;font-weight:500;font-size:1.5em;line-height:1.4;margin:0 auto;padding:0 124px;} .content{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.content{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.content{max-width:100%;padding:0 4%;}} .content-header h1{margin-bottom:1rem;font-size:2em;} .content-meta{margin-top:0;margin-bottom:2rem;font-family:Roboto, sans-serif;color:#465c69;display:flex;}.content-meta .meta-item{border-right:1px solid #6f6f6fd1;line-height:1;padding:0 1rem;font-size:0.8rem;display:flex;}.content-meta .meta-item:last-child{padding-right:0;border:none;}.content-meta .date{padding:0;padding-right:1rem;}.content-meta .tags{list-style-type:none;display:flex;flex-wrap:wrap;}.content-meta .tags li{padding-right:1rem;}.content-meta .tags li a{color:#465c69;} .main-article{font-family:Cantarell, sans-serif;min-height:500px;}.main-article strong,.main-article b{font-weight:bold;}.main-article p{font-family:inherit;font-size:inherit;margin:1rem 0;}.main-article h3{margin:1.2rem 0 0.4rem 0;}.main-article a{text-decoration:underline;}.main-article ul{margin-left:1.4rem;}.main-article li{margin:0.7rem;margin-right:0;} .postamble{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.postamble{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.postamble{max-width:100%;padding:0 4%;}} .btn{display:inline-flex;border:2px solid;border-radius:25px;padding:0 2.1em;cursor:pointer;font-family:Roboto;font-weight:normal;line-height:2.2em;align-items:center;text-align:center;text-decoration:none;} .btn-cta{border-color:#b75d69;background:#b75d69;color:#fcfcfc;} .btn-cta:hover{background:#b75d69;} .btn-cta:active{background:#b75d69;} .btn-primary{border-color:#006992;color:#006992;background:#fcfcfc;} .btn-primary:hover{background:#f9f9f9;} .btn-primary:active{background:#efefef;} .btn-secondary{border-color:#465c69;color:#465c69;background:#fcfcfc;} .btn-secondary:hover{background:#f9f9f9;} .btn-secondary:active{background:#efefef;} .postamble{font-family:monospace;color:#666;margin:4rem auto;}.postamble .validation{display:none;} @media (max-width: NIL){.postamble{max-width:100%;padding:0 8%;}} @media (max-width: NIL){.postamble{max-width:100%;padding:0 4%;}} #mc_embed_signup{max-width:600px;background:transparent;margin-bottom:4rem;} .newsletter-email{border:1px solid #465c69;border-radius:25px;width:100%;margin-bottom:1rem;padding:0.4rem 0.8rem;} .rss-sub{margin:2rem 0;}.rss-sub a{display:flex;align-items:center;}.rss-sub a .rss{width:24px;height:24px;margin-right:1rem;background:url("/images/icons/rss.svg");background-repeat:no-repeat;background-size:contain;}</style></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt="Charanjit Singh"></a></div><div><ul><li><a href=/blog>Blog</a></li><li><a href=/poems>Poems</a></li><li><a href=https://github.com/bitspook>Projects</a></li></ul></div></nav><section class=content><header class=content-header><h1>Extending org-mode to handle youtube links</h1><span class=content-meta><span class="meta-item date">September 23, 2022</span><ul class="meta-item tags"><li class=tag><a href=/tags/elisp>#elisp</a></li><li class=tag><a href=/tags/org-mode>#org-mode</a></li><li class=tag><a href=/tags/video>#video</a></li><li class=tag><a href=/tags/emacs>#emacs</a></li></ul></span></header><article class=main-article><p>
+<html lang=en><head><meta charset=UTF-8><title>Extending org-mode to handle youtube links</title><style>@font-face{font-family:Roboto;font-style:normal;font-weight:300;src:url("/fonts/roboto-thin.woff2");} @font-face{font-family:Roboto;font-style:normal;font-weight:500;src:url("/fonts/roboto-regular.woff2");} @font-face{font-family:Roboto;font-style:normal;font-weight:bold;src:url("/fonts/roboto-bold.woff2");} @font-face{font-family:Cantarell;font-style:normal;font-weight:bold;src:url("/fonts/Cantarell-Bold.ttf");} @font-face{font-family:Cantarell;font-style:normal;font-weight:regular;src:url("/fonts/Cantarell-Regular.ttf");} *{margin:0;padding:0;box-sizing:border-box;} body{font-family:Roboto;font-size:14px;background:#fcfcfc;color:#010400;} a{text-decoration:underline;color:#010400;} h1,h2,h3,h4,h5,h6{font-family:Roboto, sans-serif;margin:4rem 0 2rem 0;} img figcaption,figure figcaption{padding:0.4em;padding-top:0;border-bottom:2px solid #465c69;font-size:0.7em;} blockquote{padding:0.01em 1em;margin:1em 0;border-left:4px solid #465c69;font-size:1.2em;} pre{overflow:auto;padding:1em;font-family:monospace;font-size:1.2rem;} code{font-family:monospace;color:#b75d69;font-size:1rem;} .title{margin:2rem 0;}.title h1{font-family:Roboto, sans-serif;font-weight:bold;font-size:1.7em;line-height:1.2;text-transform:capitalize;} video{width:100%;} col{min-width:10rem;} tr:nth-child(even){background-color:#efefef;} td{padding:.4em .8em;} .src{font-size:1rem;padding:1em;border:1px solid #6f6f6f29;border-radius:8px;box-sizing:scroll;margin:2em 0;} .top-nav{height:90px;display:flex;position:relative;justify-content:space-between;}.top-nav ul{list-style-type:none;display:flex;align-items:center;padding:2em 0;}.top-nav li{flex-grow:1;padding-right:2em;}.top-nav li a{text-decoration:underline;font-size:1.4em;font-family:roboto, sans-serif;color:#006992;}.top-nav li a:hover{color:#465c69;}.top-nav li:last-child{padding:0;}.top-nav .brand{width:60px;height:60px;align-self:center;flex-grow:1;}.top-nav .brand-avatar{height:100%;} @media (max-width: 480px){.top-nav{padding-right:1em;}.top-nav a{font-size:1.2em;}} .top-nav{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.top-nav{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.top-nav{max-width:100%;padding:0 4%;}} .content{font-family:Cantarell, sans-serif;font-style:normal;font-weight:500;font-size:1.5em;line-height:1.4;margin:0 auto;padding:0 124px;} .content{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.content{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.content{max-width:100%;padding:0 4%;}} .content-header h1{margin-bottom:1rem;font-size:2em;} .content-meta{margin-top:0;margin-bottom:2rem;font-family:Roboto, sans-serif;color:#465c69;display:flex;}.content-meta .meta-item{border-right:1px solid #6f6f6fd1;line-height:1;padding:0 1rem;font-size:0.8rem;display:flex;}.content-meta .meta-item:last-child{padding-right:0;border:none;}.content-meta .date{padding:0;padding-right:1rem;}.content-meta .tags{list-style-type:none;display:flex;flex-wrap:wrap;}.content-meta .tags li{padding-right:1rem;}.content-meta .tags li a{color:#465c69;} .main-article{font-family:Cantarell, sans-serif;min-height:500px;}.main-article strong,.main-article b{font-weight:bold;}.main-article p{font-family:inherit;font-size:inherit;margin:1rem 0;}.main-article h3{margin:1.2rem 0 0.4rem 0;}.main-article a{text-decoration:underline;}.main-article ul{margin-left:1.4rem;}.main-article li{margin:0.7rem;margin-right:0;} .postamble{max-width:1080px;padding:0 124px;margin:0 auto;} @media (max-width: 840px){.postamble{max-width:100%;padding:0 8%;}} @media (max-width: 480px){.postamble{max-width:100%;padding:0 4%;}} .btn{display:inline-flex;border:2px solid;border-radius:25px;padding:0 2.1em;cursor:pointer;font-family:Roboto;font-weight:normal;line-height:2.2em;align-items:center;text-align:center;text-decoration:none;} .btn-cta{border-color:#b75d69;background:#b75d69;color:#fcfcfc;} .btn-cta:hover{background:#b75d69;} .btn-cta:active{background:#b75d69;} .btn-primary{border-color:#006992;color:#006992;background:#fcfcfc;} .btn-primary:hover{background:#f9f9f9;} .btn-primary:active{background:#efefef;} .btn-secondary{border-color:#465c69;color:#465c69;background:#fcfcfc;} .btn-secondary:hover{background:#f9f9f9;} .btn-secondary:active{background:#efefef;} .postamble{font-family:monospace;color:#666;margin:4rem auto;}.postamble .validation{display:none;} @media (max-width: NIL){.postamble{max-width:100%;padding:0 8%;}} @media (max-width: NIL){.postamble{max-width:100%;padding:0 4%;}} #mc_embed_signup{max-width:600px;background:transparent;margin-bottom:4rem;} .newsletter-email{border:1px solid #465c69;border-radius:25px;width:100%;margin-bottom:1rem;padding:0.4rem 0.8rem;} .rss-sub{margin:2rem 0;}.rss-sub a{display:flex;align-items:center;}.rss-sub a .rss{width:24px;height:24px;margin-right:1rem;background:url("/images/icons/rss.svg");background-repeat:no-repeat;background-size:contain;}</style></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt="Charanjit Singh"></a></div><div><ul><li><a href=/blog>Blog</a></li><li><a href=/poems>Poems</a></li><li><a href=https://github.com/bitspook>Projects</a></li></ul></div></nav><section class=content><header class=content-header><h1>Extending org-mode to handle youtube links</h1><span class=content-meta><span class="meta-item date">September 24, 2022</span><ul class="meta-item tags"><li class=tag><a href=/tags/emacs>#emacs</a></li><li class=tag><a href=/tags/elisp>#elisp</a></li><li class=tag><a href=/tags/org-mode>#org-mode</a></li><li class=tag><a href=/tags/video>#video</a></li></ul></span></header><article class=main-article><p>
 <iframe width="560" height="315" src="//youtube.com/embed/eaZUZCzaIgw" title="nil" frameborder="0" allowfullscreen></iframe>
 </p>
 
-<div id="outline-container-org29844b2" class="outline-2">
-<h2 id="org29844b2">Requirement</h2>
-<div class="outline-text-2" id="text-org29844b2">
+<div id="outline-container-orga5c5c1a" class="outline-2">
+<h2 id="orga5c5c1a">Requirement</h2>
+<div class="outline-text-2" id="text-orga5c5c1a">
 <ol class="org-ol">
-<li>I want to open youtube in my notes in <code>mpv</code> instead of opening the browser</li>
+<li>I want to open youtube links in my notes in <code>mpv</code> instead of opening the
+browser</li>
 
 <li>When exporting to HTML, youtube links should become embedded videos instead
 of hyperlinks</li>
@@ -15,9 +16,9 @@ of hyperlinks</li>
 </div>
 </div>
 
-<div id="outline-container-orgb871c8f" class="outline-2">
-<h2 id="orgb871c8f">Implementation</h2>
-<div class="outline-text-2" id="text-orgb871c8f">
+<div id="outline-container-orga6e46fb" class="outline-2">
+<h2 id="orga6e46fb">Implementation</h2>
+<div class="outline-text-2" id="text-orga6e46fb">
 <p>
 Org has a concept of 'link types'. We can add a new type of link and have it
 behave the way we want.
@@ -40,7 +41,7 @@ Items in this list has 2 main components:
 </p>
 
 <ol class="org-ol">
-<li>First element in this list is string representing the link type</li>
+<li>First element is string representing the link type</li>
 <li>Key-value pairs of behavior name (e.g <code>:follow</code>, <code>:export</code>) and
 function which handles that behavior</li>
 </ol>
@@ -73,11 +74,11 @@ Here's the code I've added in <a href="https://github.com/bitspook/spookmax.d">m
 <div class="org-src-container">
 <pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">spook-org--follow-yt-link</span> (path prefix)
   (<span style="color: #b18bb1; font-style: italic;">let*</span> ((url (format <span style="color: #A3B09A;">"https:%s"</span> path))
-<span id="coderef-dba" class="coderef-off">         (display-buffer-alist `((,shell-command-buffer-name-async . (display-buffer-no-window)))))</span>
+         (proc-name (format <span style="color: #A3B09A;">"*yt://%s*"</span> url)))
     (<span style="color: #b18bb1; font-style: italic;">if</span> (<span style="color: #b18bb1; font-style: italic;">and</span> prefix (executable-find <span style="color: #A3B09A;">"mpv"</span>))
         (browse-url url)
-      (async-shell-command (format <span style="color: #A3B09A;">"mpv \"%s\""</span> url))
-      (message <span style="color: #A3B09A;">"Launched mpv with \"%s\""</span> url))))
+      (make-process <span style="color: #DB6E8F;">:name</span> proc-name <span style="color: #DB6E8F;">:buffer</span> proc-name <span style="color: #DB6E8F;">:command</span> `(<span style="color: #A3B09A;">"mpv"</span> ,url))
+      (message <span style="color: #A3B09A;">"Launched mpv in buffer: %s"</span> proc-name))))
 
 (<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">spook-org--export-yt-link</span> (path desc backend)
   (<span style="color: #b18bb1; font-style: italic;">when</span> (eq backend 'html)
@@ -93,21 +94,20 @@ Here's the code I've added in <a href="https://github.com/bitspook/spookmax.d">m
 </div>
 
 <p>
-[<a href="https://github.com/bitspook/spookmax.d/blame/5f1d71cf572cd18dc7d41f292753d4b7683877c3/readme.org#L643-L660">Permalink for this snippet</a>]
+<code>make-process</code> will create a background buffer named <code>*yt://&lt;url&gt;*</code> which
+allow monitoring and killing the mpv process.
 </p>
 
 <p>
-Setting display-buffer-alist<sup>(<a href="#coderef-dba" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-dba');" onmouseout="CodeHighlightOff(this, 'coderef-dba');">L2</a>)</sup> ensures that the process output buffer that get
-created when <code>mpv</code> is launched don't come in focus. I have chosen to let the
-shell-output-buffer be created to allow having a peek at the command output, and
-to kill the process if needed.
+<i>Update</i>: Use <code>make-process</code> instead of <code>async-shell-command</code> for launching mpv.
+Thanks to <a href="https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgmode_to_handle_youtube_links/iplpk57/">nv-elisp on /r/emacs</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org0058519" class="outline-2">
-<h2 id="org0058519">Result</h2>
-<div class="outline-text-2" id="text-org0058519">
+<div id="outline-container-org2e62af8" class="outline-2">
+<h2 id="org2e62af8">Result</h2>
+<div class="outline-text-2" id="text-org2e62af8">
 <ol class="org-ol">
 <li><code>C-c C-o</code> (i.e <code>org-open-at-point</code>) on a <code>yt://</code> link opens the youtube video
 in mpv</li>
@@ -119,15 +119,14 @@ youtube videos</li>
 </div>
 </div>
 
-<div id="outline-container-org3cde18a" class="outline-2">
-<h2 id="org3cde18a">Bonus gains 💪</h2>
-<div class="outline-text-2" id="text-org3cde18a">
+<div id="outline-container-org1908951" class="outline-2">
+<h2 id="org1908951">Bonus gains 💪</h2>
+<div class="outline-text-2" id="text-org1908951">
 <p>
-Recently I've been building a tool (<a href="https://github.com/bitspook/cl-ownpress">cl-ownpress</a>) which will make blogging a
-zero-effort activity for me. First step in this is to publish a subset of my
-notes. I have already built a habit of judiciously taking notes. Simply
-publishing a subset of my notes will enable maintaining an active blog without
-doing any "work".
+Recently I've been building a tool (<a href="https://github.com/bitspook/cl-ownpress">cl-ownpress</a>) which to make blogging a
+zero-effort activity for me. Since I have already built a habit of judicious
+note taking, publishing a subset of my notes will enable maintaining an active
+blog without doing any "work".
 </p>
 
 <p>

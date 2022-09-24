@@ -1,4 +1,4 @@
-#+FILETAGS: introspection
+#+FILETAGS: life
 #+DATE: <2016-08-23>
 #+AUTHOR: Charanjit Singh
 #+TITLE: Losing to Nothingness

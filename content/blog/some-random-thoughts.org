@@ -1,4 +1,4 @@
-#+FILETAGS: introspection
+#+FILETAGS: life
 #+DATE: <2016-09-30>
 #+AUTHOR: Charanjit Singh
 #+TITLE: Some random thoughts

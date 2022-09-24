@@ -86,7 +86,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgd0a7720&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orge84b3dd&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -104,7 +104,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer&apos;s machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org4ba4b86&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgd71047a&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -143,7 +143,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org20be0af&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org14438e9&quot;&gt;
 buildDrafts = true
 title = &quot;My Project&quot;
 
@@ -303,7 +303,7 @@ our endeavor.
             <pubDate>2019-04-01T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
-            <title>Maximize individual growing in a software team</title>
+            <title>Maximize individual growing in a software team (2 month report)</title>
             <link>https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report</link>
             <description>&lt;p&gt;
 Couple months ago we started an &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;initiative&lt;/a&gt; in our team here at &lt;a href=&quot;http://trantorinc.com/&quot;&gt;Trantor&lt;/a&gt; with the

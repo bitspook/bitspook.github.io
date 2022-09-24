@@ -1,8 +1,7 @@
-#+FILETAGS: productivity adhd
 #+DATE: <2019-01-03>
 #+AUTHOR: Charanjit Singh
 #+TITLE: Coming to terms with ADHD - Part 2
-
+#+FILETAGS: adhd life
 
 One of the important aspects of living with ADHD is getting overwhelmed
 by thoughts. This is usually a major pain in the ass. When left

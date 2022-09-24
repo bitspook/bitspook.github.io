@@ -1,4 +1,4 @@
-#+FILETAGS: security trantor
+#+FILETAGS: trantor
 #+DATE: <2020-08-06>
 #+TITLE: Microservices
 

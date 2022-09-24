@@ -1,7 +1,7 @@
 #+DATE: <2022-03-24>
 #+AUTHOR: Charanjit Singh
 #+TITLE: I have quit my job
-
+#+filetags: life
 
 Several years ago, I decided to quit freelancing and do a day job. The
 job would pay much less but I was struggling with mental health (ADHD).

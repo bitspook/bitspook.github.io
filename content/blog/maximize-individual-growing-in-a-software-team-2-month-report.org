@@ -1,7 +1,7 @@
 #+FILETAGS: management trantor
 #+DATE: <2019-03-26>
 #+AUTHOR: Charanjit Singh
-#+TITLE: Maximize individual growing in a software team
+#+TITLE: Maximize individual growing in a software team (2 month report)
 
 
 Couple months ago we started an [[/blog/how-to-maximize-individual-growth-in-a-software-team/][initiative]] in our team here at [[http://trantorinc.com/][Trantor]] with the

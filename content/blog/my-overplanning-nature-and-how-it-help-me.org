@@ -1,4 +1,4 @@
-#+FILETAGS: introspection
+#+FILETAGS: life
 #+DATE: <2016-06-23>
 #+AUTHOR: Charanjit Singh
 #+TITLE: My overplanning nature and how it help me
@@ -30,14 +30,12 @@ it's far more fun to just start writing code then it is to write specs.
 As a matter of fact, thinking and writing all the small details become
 painful on times.
 
-To my great surprise, all it took was a
-[[https://web.archive.org/web/20161117174710/http://www.joelonsoftware.com/articles/fog0000000036.html][single
-blog post]] (well, actually 5 blog posts from a single series) to pull
-this doubt out of me, to take away all the confusion and bring the
-clarity that I knew the right thing to do all along. There are still
-things to learn, "where to draw the line?" for instance. But that is the
-fun part. Hard part will be to write specs for every software I write,
-defeating the laziness; which unfortunatley has become a big part of me.
+To my great surprise, all it took was a [[https://web.archive.org/web/20161117174710/http://www.joelonsoftware.com/articles/fog0000000036.html][single blog post]] (well, actually 5 blog
+posts from a single series) to pull this doubt out of me, to take away all the
+confusion and bring the clarity that I knew the right thing to do all along.
+There are still things to learn, "where to draw the line?" for instance. But
+that is the fun part. Hard part will be to write specs for every software I
+write, defeating the laziness; which unfortunatley has become a big part of me.
 
 I wish more programmers would blog about thier learnings and experiences
 and struggles. That blog post I linked about was written in 2000, and it

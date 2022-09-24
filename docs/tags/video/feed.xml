@@ -17,11 +17,12 @@
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org29844b2&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org29844b2&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org29844b2&quot;&gt;
+&lt;div id=&quot;outline-container-orga5c5c1a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga5c5c1a&quot;&gt;Requirement&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga5c5c1a&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;I want to open youtube in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the browser&lt;/li&gt;
+&lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
+browser&lt;/li&gt;
 
 &lt;li&gt;When exporting to HTML, youtube links should become embedded videos instead
 of hyperlinks&lt;/li&gt;
@@ -29,9 +30,9 @@ of hyperlinks&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgb871c8f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb871c8f&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb871c8f&quot;&gt;
+&lt;div id=&quot;outline-container-orga6e46fb&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga6e46fb&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga6e46fb&quot;&gt;
 &lt;p&gt;
 Org has a concept of &apos;link types&apos;. We can add a new type of link and have it
 behave the way we want.
@@ -54,7 +55,7 @@ Items in this list has 2 main components:
 &lt;/p&gt;
 
 &lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;First element in this list is string representing the link type&lt;/li&gt;
+&lt;li&gt;First element is string representing the link type&lt;/li&gt;
 &lt;li&gt;Key-value pairs of behavior name (e.g &lt;code&gt;:follow&lt;/code&gt;, &lt;code&gt;:export&lt;/code&gt;) and
 function which handles that behavior&lt;/li&gt;
 &lt;/ol&gt;
@@ -87,11 +88,11 @@ Here&apos;s the code I&apos;ve added in &lt;a href=&quot;https://github.com/bits
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-org--follow-yt-link&lt;/span&gt; (path prefix)
   (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let*&lt;/span&gt; ((url (format &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https:%s&quot;&lt;/span&gt; path))
-&lt;span id=&quot;coderef-dba&quot; class=&quot;coderef-off&quot;&gt;         (display-buffer-alist `((,shell-command-buffer-name-async . (display-buffer-no-window)))))&lt;/span&gt;
+         (proc-name (format &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;*yt://%s*&quot;&lt;/span&gt; url)))
     (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;and&lt;/span&gt; prefix (executable-find &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;mpv&quot;&lt;/span&gt;))
         (browse-url url)
-      (async-shell-command (format &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;mpv \&quot;%s\&quot;&quot;&lt;/span&gt; url))
-      (message &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Launched mpv with \&quot;%s\&quot;&quot;&lt;/span&gt; url))))
+      (make-process &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:name&lt;/span&gt; proc-name &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:buffer&lt;/span&gt; proc-name &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:command&lt;/span&gt; `(&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;mpv&quot;&lt;/span&gt; ,url))
+      (message &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Launched mpv in buffer: %s&quot;&lt;/span&gt; proc-name))))
 
 (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-org--export-yt-link&lt;/span&gt; (path desc backend)
   (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;when&lt;/span&gt; (eq backend &apos;html)
@@ -107,21 +108,20 @@ Here&apos;s the code I&apos;ve added in &lt;a href=&quot;https://github.com/bits
 &lt;/div&gt;
 
 &lt;p&gt;
-[&lt;a href=&quot;https://github.com/bitspook/spookmax.d/blame/5f1d71cf572cd18dc7d41f292753d4b7683877c3/readme.org#L643-L660&quot;&gt;Permalink for this snippet&lt;/a&gt;]
+&lt;code&gt;make-process&lt;/code&gt; will create a background buffer named &lt;code&gt;*yt://&amp;lt;url&amp;gt;*&lt;/code&gt; which
+allow monitoring and killing the mpv process.
 &lt;/p&gt;
 
 &lt;p&gt;
-Setting display-buffer-alist&lt;sup&gt;(&lt;a href=&quot;#coderef-dba&quot; class=&quot;coderef&quot; onmouseover=&quot;CodeHighlightOn(this, &apos;coderef-dba&apos;);&quot; onmouseout=&quot;CodeHighlightOff(this, &apos;coderef-dba&apos;);&quot;&gt;L2&lt;/a&gt;)&lt;/sup&gt; ensures that the process output buffer that get
-created when &lt;code&gt;mpv&lt;/code&gt; is launched don&apos;t come in focus. I have chosen to let the
-shell-output-buffer be created to allow having a peek at the command output, and
-to kill the process if needed.
+&lt;i&gt;Update&lt;/i&gt;: Use &lt;code&gt;make-process&lt;/code&gt; instead of &lt;code&gt;async-shell-command&lt;/code&gt; for launching mpv.
+Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgmode_to_handle_youtube_links/iplpk57/&quot;&gt;nv-elisp on /r/emacs&lt;/a&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org0058519&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0058519&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0058519&quot;&gt;
+&lt;div id=&quot;outline-container-org2e62af8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2e62af8&quot;&gt;Result&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2e62af8&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
 in mpv&lt;/li&gt;
@@ -133,15 +133,14 @@ youtube videos&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org3cde18a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org3cde18a&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3cde18a&quot;&gt;
+&lt;div id=&quot;outline-container-org1908951&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org1908951&quot;&gt;Bonus gains 💪&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1908951&quot;&gt;
 &lt;p&gt;
-Recently I&apos;ve been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which will make blogging a
-zero-effort activity for me. First step in this is to publish a subset of my
-notes. I have already built a habit of judiciously taking notes. Simply
-publishing a subset of my notes will enable maintaining an active blog without
-doing any &quot;work&quot;.
+Recently I&apos;ve been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
+zero-effort activity for me. Since I have already built a habit of judicious
+note taking, publishing a subset of my notes will enable maintaining an active
+blog without doing any &quot;work&quot;.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -168,16 +167,16 @@ extending-the-blogging-setup as well.
             <author>Charanjit Singh</author>
             <category>blog</category>
             <guid>36381264-4b43-4a3b-ad0c-ccda5b3c0966</guid>
-            <pubDate>2022-09-23T19:43:38.000000+05:30</pubDate>
+            <pubDate>2022-09-24T23:48:58.000000+05:30</pubDate>
         </item>
         <item>
             <title>How I manage my passwords</title>
             <link>https://bitspook.in/blog/how-i-manage-my-passwords</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;div id=&quot;outline-container-orgf6459c0&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf6459c0&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf6459c0&quot;&gt;
+&lt;div id=&quot;outline-container-orgb627b14&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb627b14&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb627b14&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;b&gt;No third-parties&lt;/b&gt;
@@ -209,9 +208,9 @@ should play nice with presence/absence of other tools.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org38cab58&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org38cab58&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org38cab58&quot;&gt;
+&lt;div id=&quot;outline-container-orgc114231&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc114231&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc114231&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
@@ -292,13 +291,13 @@ my mobile devices.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org5c7f848&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org5c7f848&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org5c7f848&quot;&gt;
+&lt;div id=&quot;outline-container-org599a944&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org599a944&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org599a944&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org55a37d3&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org55a37d3&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org55a37d3&quot;&gt;
+&lt;div id=&quot;outline-container-org6f1bb02&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org6f1bb02&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org6f1bb02&quot;&gt;
 &lt;p&gt;
 For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
@@ -320,9 +319,9 @@ password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgbb788e6&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgbb788e6&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgbb788e6&quot;&gt;
+&lt;div id=&quot;outline-container-org585d59a&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org585d59a&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org585d59a&quot;&gt;
 &lt;p&gt;
 Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
 much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
@@ -355,9 +354,9 @@ password (on the same form).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org98e7c1f&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org98e7c1f&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org98e7c1f&quot;&gt;
+&lt;div id=&quot;outline-container-org087c33a&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org087c33a&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org087c33a&quot;&gt;
 &lt;p&gt;
 I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
@@ -586,9 +585,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org406a27d&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org406a27d&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org406a27d&quot;&gt;
+&lt;div id=&quot;outline-container-orge3b78a1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge3b78a1&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge3b78a1&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -647,9 +646,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgcfa0684&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcfa0684&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcfa0684&quot;&gt;
+&lt;div id=&quot;outline-container-org98217fa&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org98217fa&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org98217fa&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -710,9 +709,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org10892ee&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org10892ee&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org10892ee&quot;&gt;
+&lt;div id=&quot;outline-container-org7037607&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7037607&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7037607&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -771,9 +770,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org173373f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org173373f&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org173373f&quot;&gt;
+&lt;div id=&quot;outline-container-org5f7ae3f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org5f7ae3f&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org5f7ae3f&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -795,9 +794,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgdab70f9&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgdab70f9&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdab70f9&quot;&gt;
+&lt;div id=&quot;outline-container-org2e0f3c0&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2e0f3c0&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2e0f3c0&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;

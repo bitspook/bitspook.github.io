@@ -1,8 +1,7 @@
-#+FILETAGS: productivity adhd
+#+FILETAGS: adhd life
 #+DATE: <2019-01-05>
 #+AUTHOR: Charanjit Singh
 #+TITLE: Managing Chaos
-
 
 I am thinking about doing a small series of posts on how I am managing
 the chaos that I am trying to stop fighting. I hope the chaos of an ADHD

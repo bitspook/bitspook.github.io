@@ -1,8 +1,7 @@
-#+FILETAGS: introspection
 #+DATE: <2018-11-10>
 #+AUTHOR: Charanjit Singh
 #+TITLE: Relationships
-
+#+FILETAGS: life
 
 Romantic relationships are such amazing things. I have had moments in my
 life when I considered myself to have a certain level of control on my
