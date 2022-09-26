@@ -9,8 +9,17 @@
 (add-package-local-nickname :clp :clown-providers)
 
 (setf (clown:conf :db-name) "./clownpress.db")
-(clp:invoke-provider clp:*org-file-provider* :content-dir "./content/")
-(clp:invoke-provider clp:*org-roam-provider* :tags '("blog-post"))
+(defparameter org-file-provider
+  (make-instance 'clp:org-file-provider
+                 :name "local-dir-content"
+                 :content-dir "./content/"))
+(defparameter org-roam-provider
+  (make-instance 'clp:org-roam-provider
+                 :name "personal-notes"
+                 :tags '("blog-post")))
+
+(clp:invoke-provider org-file-provider)
+(clp:invoke-provider org-roam-provider)
 
 (let ((clown-slick:*debug-transpiles* nil)
       (clown-slick:*conf*

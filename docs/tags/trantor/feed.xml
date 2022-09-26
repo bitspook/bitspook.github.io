@@ -125,7 +125,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orge84b3dd&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org6b64af8&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -143,7 +143,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer&apos;s machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgd71047a&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org3124ce6&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -182,7 +182,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org14438e9&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org41e631e&quot;&gt;
 buildDrafts = true
 title = &quot;My Project&quot;
 
@@ -221,7 +221,7 @@ exercises, rest were left for the attendees as homework. Here&apos;s the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org87bfb7d&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org210ebf7&quot;&gt;
 version: &apos;3&apos;
 services:
   webgoat:

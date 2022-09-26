@@ -15,9 +15,9 @@
             <link>https://bitspook.in/blog/how-i-manage-my-passwords</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;div id=&quot;outline-container-orgb627b14&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb627b14&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb627b14&quot;&gt;
+&lt;div id=&quot;outline-container-orgce66e5c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgce66e5c&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgce66e5c&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;b&gt;No third-parties&lt;/b&gt;
@@ -49,9 +49,9 @@ should play nice with presence/absence of other tools.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgc114231&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgc114231&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc114231&quot;&gt;
+&lt;div id=&quot;outline-container-org6ca2389&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org6ca2389&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org6ca2389&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
@@ -132,13 +132,13 @@ my mobile devices.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org599a944&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org599a944&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org599a944&quot;&gt;
+&lt;div id=&quot;outline-container-org0c94a63&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0c94a63&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0c94a63&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org6f1bb02&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org6f1bb02&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org6f1bb02&quot;&gt;
+&lt;div id=&quot;outline-container-orgef83f62&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgef83f62&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgef83f62&quot;&gt;
 &lt;p&gt;
 For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
@@ -160,9 +160,9 @@ password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org585d59a&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org585d59a&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org585d59a&quot;&gt;
+&lt;div id=&quot;outline-container-orgd49f39d&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgd49f39d&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd49f39d&quot;&gt;
 &lt;p&gt;
 Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
 much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
@@ -195,9 +195,9 @@ password (on the same form).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org087c33a&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org087c33a&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org087c33a&quot;&gt;
+&lt;div id=&quot;outline-container-org875ff97&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org875ff97&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org875ff97&quot;&gt;
 &lt;p&gt;
 I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
@@ -336,9 +336,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orge3b78a1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge3b78a1&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge3b78a1&quot;&gt;
+&lt;div id=&quot;outline-container-orgf1adb02&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf1adb02&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf1adb02&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -397,9 +397,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org98217fa&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org98217fa&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org98217fa&quot;&gt;
+&lt;div id=&quot;outline-container-orgc3da4c1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc3da4c1&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc3da4c1&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -460,9 +460,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org7037607&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org7037607&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7037607&quot;&gt;
+&lt;div id=&quot;outline-container-org19bdade&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org19bdade&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org19bdade&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -521,9 +521,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org5f7ae3f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org5f7ae3f&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org5f7ae3f&quot;&gt;
+&lt;div id=&quot;outline-container-org1940170&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org1940170&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1940170&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -545,9 +545,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org2e0f3c0&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2e0f3c0&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2e0f3c0&quot;&gt;
+&lt;div id=&quot;outline-container-orgeb9bd40&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgeb9bd40&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgeb9bd40&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;

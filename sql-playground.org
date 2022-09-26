@@ -20,6 +20,3 @@
   ORDER BY published_at
   DESC LIMIT 5;
 #+end_src
-
-#+RESULTS:
-| relationships | ["life"] | blog | 2018-11-10 00:00:00 |
