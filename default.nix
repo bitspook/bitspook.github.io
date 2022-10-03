@@ -9,6 +9,6 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
-    export MY_LIBRARY_PATH=${pkgs.sqlite.out}/lib:${pkgs.openssl.out}/lib;
+    export CLOWN_LIBRARY_PATH=${pkgs.sqlite.out}/lib:${pkgs.openssl.out}/lib;
   '';
 }
