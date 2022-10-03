@@ -11,8 +11,250 @@
             <link>https://bitspook.in/</link>
         </image>
         <item>
+            <title>After 6 months of voluntary unemployment</title>
+            <link>https://bitspook.in/blog/after-6-months-of-voluntary-unemployment/</link>
+            <description>&lt;p&gt;
+For the last six months, I have been &lt;a href=&quot;https://bitspook.in/blog/i-have-quit-my-job&quot;&gt;voluntarily unemployed&lt;/a&gt;. Here&apos;s a brief
+summary of how the last six months shaped my thoughts, and an abstract plan of
+what I intend to do next.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-org366200a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org366200a&quot;&gt;Mental health&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org366200a&quot;&gt;
+&lt;p&gt;
+I needed this break a lot more than I thought I did. Being perpetually restless
+had been my state of being for too long. It felt good, to breath out.
+&lt;/p&gt;
+
+&lt;p&gt;
+When writing software, you reach a certain point where things start falling into
+place, the uncertainties are answered for and you can feel that the decisions
+you made were right. Those few seconds of invincibility spanned over several
+(not always consequent) days, because I felt it was me in control. Them I
+remember most cherishingly. It was a kind of high I intend to chase again in
+life.
+&lt;/p&gt;
+
+&lt;p&gt;
+Primary reason for which I quit my job was the curiosity about whether I can
+manage my ADHD now; or if I still need the crutches of accountability. On job, I
+could effortlessly perform well, in contrast to solo freelancing. My therapist
+had suggested it will get better with age.
+&lt;/p&gt;
+
+&lt;p&gt;
+I had more good days than bad, which is a win. Unfortunately I still don&apos;t have
+a definite answer to consider the matter resolved. More on this later (below).
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgaa1403f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgaa1403f&quot;&gt;Social work&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgaa1403f&quot;&gt;
+&lt;p&gt;
+When busy with material responsibilities, I used to fantasize that if I had more
+free time I could do so much more for people around me. When I had it, I tried
+to start with the place closest to my heart.
+&lt;/p&gt;
+
+&lt;p&gt;
+I tried to &quot;help&quot; my village by contributing to its small primary school, least
+politically charged of situations there. Well, not so much as tried to help as
+probed with a long stick to assess the willingness to be helped. I quickly found
+out that a significant involvement there is a luxury I can&apos;t afford just yet.
+Established power structures see everything new as threat, and eagerly sabotage
+what they can get away with.
+&lt;/p&gt;
+
+&lt;p&gt;
+So I chose a different avenue. One just as dear to me, but where I have more
+experience and room to maneuver. I decided to make &lt;a href=&quot;https://entropyhacker.space/&quot;&gt;another attempt&lt;/a&gt; to nurture a
+healthy tech culture in my city. It produced mixed results because I was not
+able to put in as much energy as it demanded.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org88c0d77&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org88c0d77&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org88c0d77&quot;&gt;
+&lt;p&gt;
+I was running full speed building &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;foolish&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;things&lt;/a&gt;. Then lisp came calling.
+&lt;/p&gt;
+
+&lt;video autoplay loop alt=&quot;Wile E Coyote hitting the tunnel. Tunnel hits back.&quot;&gt;
+  &lt;source src=&quot;/videos/hit-it.webm&quot; type=&quot;video/webm&quot; /&gt;
+&lt;/video&gt;
+
+&lt;p&gt;
+I was working on &lt;a href=&quot;https://github.com/bitspook/entropy&quot;&gt;Entropy&lt;/a&gt;, to build a software to help me do the leg work of
+building a tech community. Thought came that it is for hackers, so it should be
+hackable. Lisp is praised for how hackable it is. It is also praised for its
+expressiveness. Momentum is something I was finding hard to achieve with Rust,
+because of my inexperience and perhaps the nature of the language and problem I
+was trying to solve with it. At least checking lisp out seemed reasonable.
+&lt;/p&gt;
+
+&lt;p&gt;
+After 30 years of living with them, I have come to recognize desires of pivotal
+nature. In the face of these sublimely consuming whims, I can either do what
+they say, or not do anything at all (I am told it is common with ADHD, so not to
+beat myself too much about it).
+&lt;/p&gt;
+
+&lt;p&gt;
+I&apos;ve learned that it is possible to suppress these urges by feigning blindness.
+My mistake was that of indecision. It is not possible to take a sip and not
+gulp. I chose to look at it, but took too long to engage. I got thrown off the
+build-mode.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have observed that I operate in two distinct modes: build-mode and study-mode.
+Although building something is always a learning experience, and to learn
+something I gotta build something; it is efficient to treat them as separate. It
+is also easier on my mental peace.
+&lt;/p&gt;
+
+&lt;p&gt;
+This time, the transition between the two modes was not smooth. Getting
+involuntarily thrown out of the workshop left me with (mental) bruises. This
+incident is the reason I still consider the matter of my self-discipline
+unresolved. Although the fact that there were only 2 such incidents over 6
+months is a win by itself (another was when I fell in love with a &lt;a href=&quot;https://practicalguidetoevil.wordpress.com&quot;&gt;book&lt;/a&gt;, and
+spent weeks doing nothing else).
+&lt;/p&gt;
+
+&lt;p&gt;
+I filled the downtime during transition with another thing I wanted to do, and
+probably would not have done otherwise. I traveled.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org2311bb0&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2311bb0&quot;&gt;Travel&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2311bb0&quot;&gt;
+&lt;p&gt;
+I am not much of a site-seeing kind of guy. I find traveling exhausting,
+regardless of how beautiful the views or how fun the activities. Being a tourist
+is not for me. I like to stay and experience. I enjoy exploring/observing people
+(people watching?). Witnessing people go by their lives is soothing. There is a
+warm fuzzy feeling behind every smile, however mundane.
+&lt;/p&gt;
+
+&lt;p&gt;
+So I traveled the way I truly like, perhaps for the first time. For about 3
+months trotting around the mountains of Uttrakhand, visiting people in their
+homes (home stays). Observing a way of life familiar yet strange.
+&lt;/p&gt;
+
+&lt;p&gt;
+It came as a surprise how eye-opening the experience turned out to be, despite
+being quite event-less. It was like learning a new language or studying math. I
+could almost feel my brain building new connections. This is one of the few
+feelings which still stays exciting even when the rat-race and hoarding have
+stopped being as stimulating. I did not expect to find an entirely new source of
+it in an experience like this.
+&lt;/p&gt;
+
+&lt;p&gt;
+It is also the easiest methods in terms of active participation, compared to all
+the other sources (most are a variations of intellectual exercises; solving a
+challenging problem, crafting an elegant solution etc). It does have its costs,
+but I believe they do not overlap with those of other methods; so they can be
+employed at the same time.
+&lt;/p&gt;
+
+&lt;p&gt;
+I take it to mean I can have twice of what makes me feel most alive, just by
+putting myself in a place 🤯
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgaba7884&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgaba7884&quot;&gt;What comes next?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgaba7884&quot;&gt;
+&lt;p&gt;
+I can perhaps spend a few more months before I run out of savings, but the
+dimming safety net has already started making me anxious. I miss the tribe-like
+feeling of working in a team, so I am actually looking forward to join work for
+that.
+&lt;/p&gt;
+
+&lt;p&gt;
+Most freeing would be to start a business of my own; not because it will leave
+me with more free time, but because I can feel more like myself when working on
+something I find meaningful. But that won&apos;t be profitable right out of the door,
+so perhaps after a bit more grinding I can save up to give myself a chance.
+&lt;/p&gt;
+
+&lt;p&gt;
+The grind is decided, but I will not choose misery along with. I intend to chase
+the feeling of growth and fulfillment. With these constraints, some more
+decisions make themselves:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;I can&apos;t stay at home. Being home is extremely comfortable, but with
+comfort comes stagnation.&lt;/li&gt;
+&lt;li&gt;I need a job which leaves me with enough time I can invest in something
+demanding like math&lt;/li&gt;
+&lt;li&gt;I need to put myself in a foreign culture&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+Putting these into practice, I have decided I&apos;ll move to Berlin for a few years.
+The city makes itself a good place to be for me for a few reasons:
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Practically, it is perhaps the easiest to immigrate to for an individual
+Indian citizen, with a job in hand&lt;/li&gt;
+&lt;li&gt;It has a good hacker culture, something I&apos;ve always wanted to experience but
+have only ever read about&lt;/li&gt;
+&lt;li&gt;German culture seem like a great fit for my personal tastes&lt;/li&gt;
+&lt;li&gt;I get to learn a new language&lt;/li&gt;
+&lt;li&gt;German work culture is praised (on the Internet) for respecting boundaries and
+giving a priority to life over money&lt;/li&gt;
+&lt;li&gt;If I ever decide to seek higher education (which is likely), German education
+policies are good&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Now that that is decided, what&apos;s left to figure out is how to go about it.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org7c208e2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7c208e2&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7c208e2&quot;&gt;
+&lt;p&gt;
+After 6 months of voluntary unemployment, I am the same man I was before it.
+Things I experienced and burdens I unburdened could be achieved by other means
+as well. Perhaps I&apos;ve sown seeds to make me a different person in future, but
+they will take time to bloom. It is a guessing game, same as what might have
+happened had I done it differently.
+&lt;/p&gt;
+
+&lt;p&gt;
+As for the journey to be where I already was, I&apos;ll do it again if I can.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>20220921T194836</guid>
+            <pubDate>2022-10-03T23:08:04.000000+05:30</pubDate>
+        </item>
+        <item>
             <title>I have quit my job</title>
-            <link>https://bitspook.in/blog/i-have-quit-my-job</link>
+            <link>https://bitspook.in/blog/i-have-quit-my-job/</link>
             <description>&lt;p&gt;
 Several years ago, I decided to quit freelancing and do a day job. The
 job would pay much less but I was struggling with mental health (ADHD).
@@ -180,7 +422,7 @@ balance. I&apos;ll explore.
         </item>
         <item>
             <title>Helping others to help myself</title>
-            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-help-others-to-help-yourself</link>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-help-others-to-help-yourself/</link>
             <description>&lt;p&gt;
 It is near impossible for me to get something done if I don&apos;t have 100%
 peaked interest in it at &lt;b&gt;this&lt;/b&gt; very moment. Occasionally I can hyper
@@ -250,7 +492,7 @@ be a good start.
         </item>
         <item>
             <title>Managing Chaos</title>
-            <link>https://bitspook.in/blog/managing-chaos-org-mode-as-a-todo-list</link>
+            <link>https://bitspook.in/blog/managing-chaos-org-mode-as-a-todo-list/</link>
             <description>&lt;p&gt;
 I am thinking about doing a small series of posts on how I am managing
 the chaos that I am trying to stop fighting. I hope the chaos of an ADHD
@@ -308,7 +550,7 @@ copying Jira task IDs around like an imbecile.
 This is how my org-capture-templates variable looks like right now:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org8b5076d&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org344be95&quot;&gt;
 (setq
    org-capture-templates
    &apos;((&quot;d&quot; &quot;Diary Entry&quot; plain (file+datetree org-agenda-diary-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
@@ -410,7 +652,7 @@ focused on org-mode and TODO lists the way I want it to work.
         </item>
         <item>
             <title>Coming to terms with ADHD - Part 2</title>
-            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-part-2</link>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-part-2/</link>
             <description>&lt;p&gt;
 One of the important aspects of living with ADHD is getting overwhelmed
 by thoughts. This is usually a major pain in the ass. When left
@@ -485,7 +727,7 @@ Development).
         </item>
         <item>
             <title>Coming to terms with ADHD</title>
-            <link>https://bitspook.in/blog/coming-to-terms-with-adhd</link>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd/</link>
             <description>&lt;p&gt;
 After my recent subscription to &lt;a href=&quot;http://reddit.com/r/adhd&quot;&gt;/r/adhd&lt;/a&gt;, I
 realized how important it can be to share experiences. Even when it is
@@ -631,7 +873,7 @@ helps build confidence to face life.
         </item>
         <item>
             <title>Relationships</title>
-            <link>https://bitspook.in/blog/relationships</link>
+            <link>https://bitspook.in/blog/relationships/</link>
             <description>&lt;p&gt;
 Romantic relationships are such amazing things. I have had moments in my
 life when I considered myself to have a certain level of control on my
@@ -671,7 +913,7 @@ this gamble plays out.
         </item>
         <item>
             <title>That sounds fun!</title>
-            <link>https://bitspook.in/blog/that-sounds-fun</link>
+            <link>https://bitspook.in/blog/that-sounds-fun/</link>
             <description>&lt;p&gt;
 I got an opportunity to introspect in a conversation with a client when
 he questioned my use of the word &quot;fun&quot;. What do I mean when I say
@@ -719,7 +961,7 @@ working with motivation is fun.
         </item>
         <item>
             <title>Some random thoughts</title>
-            <link>https://bitspook.in/blog/some-random-thoughts</link>
+            <link>https://bitspook.in/blog/some-random-thoughts/</link>
             <description>&lt;p&gt;
 Life can be so overwhelming sometimes. Sometime I wonder how people go
 on about living without asking questions. Or may be they do ask
@@ -795,7 +1037,7 @@ the one bullshit to rule them all, religion.
         </item>
         <item>
             <title>Losing to Nothingness</title>
-            <link>https://bitspook.in/blog/losing-to-nothingness</link>
+            <link>https://bitspook.in/blog/losing-to-nothingness/</link>
             <description>&lt;p&gt;
 Couple weeks back I executed my plan to return to Chandigarh. The plan
 was to take a break from work and relax for a bit, teach myself some new
@@ -863,7 +1105,7 @@ temporary, but the chaos is just getting started.
         </item>
         <item>
             <title>My overplanning nature and how it help me</title>
-            <link>https://bitspook.in/blog/my-overplanning-nature-and-how-it-help-me</link>
+            <link>https://bitspook.in/blog/my-overplanning-nature-and-how-it-help-me/</link>
             <description>&lt;p&gt;
 Although I try my best to not fall in the conformist&apos;s trap, there is
 always a force lurking right beneath the conscious which want me to fit
@@ -921,6 +1163,186 @@ they&apos;re not alone if they have struggles similar as mine.
             <category>blog</category>
             <guid>my-overplanning-nature-and-how-it-help-me</guid>
             <pubDate>2016-06-23T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Debt of my rebellion</title>
+            <link>https://bitspook.in/blog/debt-of-my-rebellion/</link>
+            <description>&lt;p&gt;
+Most of my school life I was very confused, depressed perhaps. I was a &quot;good
+boy&quot;, as they call those traumatized, obedient kids. Confusion started turning
+into frustration by the end of my 10th standard. It was the &quot;board&quot; class.
+Nonsensical pressure, corporal punishment and stupid as fuck rules had started
+turning my depression into anger. So much pressure was put on by that &lt;a href=&quot;https://sasacademy.com&quot;&gt;shithole
+of a school&lt;/a&gt; that one of my classmates had a mental breakdown. A guy went
+complete nuts. That was the final nail in the coffin.
+&lt;/p&gt;
+
+&lt;p&gt;
+I felt like it was my turn next. So I rebelled. Against everything that
+didn&apos;t make sense to me. Unfortunate for me, one of the foes in my
+rebellion was Mathematics. The dull, complex subject whose applications
+I couldn&apos;t understand. My teachers failed to convince me it was ever
+going to have a practical application at all. All they could come up
+with was &quot;competitive exams need it&quot;. But that won&apos;t make the cut.
+&lt;/p&gt;
+
+&lt;p&gt;
+After a year of being a total brat, I finally pushed my parents to sell
+a cow and buy me a computer. Computers always fascinated me, even though
+I had used Computers only for a total of 10-12 hours max (occasional
+15-20 minutes sittings in IT lab). I taught myself Python from the
+ebooks I would download on my rare visits to cyber-cafe in nearest city.
+It was a revelation. I didn&apos;t need those stupid teachers anymore; there
+was no need to go through all the frustration, frowned looks and grudges
+(which often lead to physical punishment) from the teachers. I could
+teach myself better, faster. Unfortunate side effect of this
+realization: I didn&apos;t need a shiny college.
+&lt;/p&gt;
+
+&lt;p&gt;
+Not going to college however was not an option. My parents were giving me enough
+pain already for using computer too much (despite the fact that I was good at
+school AND helped at home and farm as well). So I went for admission in &lt;a href=&quot;http://dgc.edu.in/&quot;&gt;one of
+those piece of shit colleges which let anyone in for a big some of money&lt;/a&gt;.
+Another story for another day.
+&lt;/p&gt;
+
+&lt;p&gt;
+I could teach myself everything I needed. I was perhaps right about
+that. But there was nobody to tell me what to learn. By the time I got
+Internet I was making enough side money building software to pay for my
+ever growing list of re-appears. I didn&apos;t see no math used anywhere.
+When I got Internet, I started making websites. Again, no math to be
+seen anywhere. The college was as shitty as they get. They never really
+taught any of the syllabus (DS, algorithms etc). So I ignored them as
+mumbo-jumbo schools put in their books to make money. I was making more
+money than most lecturers in that college, I didn&apos;t care.
+&lt;/p&gt;
+
+&lt;p&gt;
+In 2014 I graduated, and went for full time freelancing. It took me some
+time till I reached my limit; when I felt brute forcing my way through
+problems wasn&apos;t really efficient. It was boring. It was becoming more
+and more obvious that I was plateauing. I started realizing that there
+are better ways to do things, and so many of them have already been
+discovered.
+&lt;/p&gt;
+
+&lt;p&gt;
+But now the playtime was over. I was no longer in college, I had to
+support myself; and my family (they&apos;re not very good financially). So I
+continued freelancing. It was paying much more than most approaching
+companies were offering, clients were happy, so what the hell, I
+thought. I planned to save some amount in bank, and then I was to take
+few months off to go back to square one and learn CS theory and
+Mathemetics. I reached there 3 months ago. But then life did what it
+always do. 2 big expenses came up and cleared most of my savings. So I
+continued with freelancing.
+&lt;/p&gt;
+
+&lt;p&gt;
+But I guess it&apos;s about time I put my original plan in action. I have
+started getting the good ol&apos; limbo feeling again. I used to think it was
+my indiscipline which make me feel like shit. But now I think it isn&apos;t.
+Most of the time I have to discipline myself to get away from the
+computer. When I start needing to force myself to code, it&apos;s because
+something somewhere is wrong. I think I&apos;ve hit another plateau (this
+realization (that it&apos;s not indiscipline that put me in limbo) itself was
+a load off my chest, but a story for another time).
+&lt;/p&gt;
+
+&lt;p&gt;
+I have savings to last for only a couple months without work, but I
+guess that&apos;ll have to do. It&apos;s funny deja-vu situation actually. I was
+in similar situation when I headed for Bangalore. Back to square one I
+guess. I think it&apos;s time to put a pause on freelancing, and pay the debt
+of my rebellion.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>debt-of-my-rebellion</guid>
+            <pubDate>2016-06-11T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Directionless Wandering</title>
+            <link>https://bitspook.in/blog/directionless-wandering-cursed-by-dreams/</link>
+            <description>&lt;p&gt;
+It has been about five years since I first got my computer. Endless
+hours I have spent in front of the two dimensional rectangle, the third
+world. Before I got the machine, most of my time was spent in the world
+inside my head. My thoughts, feelings, sensations and so many things. I
+was never at rest. Then I got the machine. I had dreamed of it for like
+years before I got one. I was excited, fascinated. There were so many
+things in my mind to do with the computer, so many plans of changing the
+world. I couldn&apos;t harness any of them. Now it feels like every dream I
+had back then has become a burden on my shoulders, depressing me, making
+my feet heavy. Keeping me from moving forward. I am feeling powerless,
+like I am losing a bit of life with every failed dream. I&apos;m getting
+frightened from dreaming. What have it brought to me other than burden?
+&lt;/p&gt;
+
+&lt;p&gt;
+Clarity of thoughts was never my strength, but nowadays I am feeling
+much more puzzled. Lost. Like I am stuck. World is leaving me behind.
+I&apos;ve always seen the world like a witness. The third person standing on
+the shore looking at the fishes racing, the canaries flying. Something
+has happened. Making me feel as I am in the middle of the race I always
+witnessed. Just witnessed. Never participated. Not even as audience. I
+blame dreams. The fallen ones.
+&lt;/p&gt;
+
+&lt;p&gt;
+Yesterday on reddit I found a name for my madness. Existential
+Depression they call it. It made me believe I am not the only one
+feeling this. There are others. There might be others who have gone
+through the path I am on now. May be they could give me a tip or two.
+Here I am outside my diary, writing in public.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have been into computers for so long. And yet I found myself no where.
+So much time I have put into programming, operating systems, security,
+psychology and so many other things. All seem wasted. It is depressing
+to just look at all the mess I have made of me. I see people so less
+talented than me, with no knowledge of what they are doing, even doing
+it wrong, crossing me in terms of success. They are richer, happier, and
+better than me. I know I can do what they are doing 10 times better, but
+I don&apos;t. Instead of motivating me, it is drowning me even deeper. I feel
+no motivation to finish any project I start. And when the unfinished
+gets piled up, they haunt me. They make me angry and depressed. I can&apos;t
+remember how many times I swiped my hard disk to get rid of the
+unfinished &apos;awesome&apos; projects I thought will change the world. So many
+half written poems whose traces can&apos;t be found now in the burnt
+notebooks. It sucks. I feel like every single thought I had, every new
+idea I ever failed has cursed me. I have a trembling feeling just
+thinking about thinking something new.
+&lt;/p&gt;
+
+&lt;p&gt;
+So many techniques I tried. So many psychology papers, books I read.
+Still I am here. Another trough. I&apos;ve tried the GTD (Getting Things
+Done) and the concept of &apos;limited willpower&apos;. Wrote all my mess down.
+Tried to minimize the decision making. And so much more. This fucking
+wave is just not leaving me. I find myself stuck in the crests and
+troughs all the time. I am on the top of sky when on a crest. Have so
+many new ideas, start new projects. Start reading new books. New
+programming languages. New frameworks. New poets. And then it all start
+fading. Then come the phase when I try to balance things. And just when
+I feel I can do it, I find myself in middle of a trough. The disgust and
+depression of it is just killing. I do many stupid things in troughs.
+All failures. May be writing this blog post is one of them. May be after
+some hours I will start feeling ashamed of writing such a thing, and
+delete it. It just sucks to be here. I know it will pass. It always do.
+But it leave behind scars. Scars that will keep scaring me from thinking
+new ideas, from dreaming. And I think this might be the lesson. Dreams
+suck.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>directionless-wandering-cursed-by-dreams</guid>
+            <pubDate>2013-09-30T05:30:00.000000+05:30</pubDate>
         </item>
     </channel>
 </rss>

@@ -12,7 +12,7 @@
         </image>
         <item>
             <title>Helping others to help myself</title>
-            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-help-others-to-help-yourself</link>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-help-others-to-help-yourself/</link>
             <description>&lt;p&gt;
 It is near impossible for me to get something done if I don&apos;t have 100%
 peaked interest in it at &lt;b&gt;this&lt;/b&gt; very moment. Occasionally I can hyper
@@ -82,7 +82,7 @@ be a good start.
         </item>
         <item>
             <title>Managing Chaos</title>
-            <link>https://bitspook.in/blog/managing-chaos-org-mode-as-a-todo-list</link>
+            <link>https://bitspook.in/blog/managing-chaos-org-mode-as-a-todo-list/</link>
             <description>&lt;p&gt;
 I am thinking about doing a small series of posts on how I am managing
 the chaos that I am trying to stop fighting. I hope the chaos of an ADHD
@@ -140,7 +140,7 @@ copying Jira task IDs around like an imbecile.
 This is how my org-capture-templates variable looks like right now:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org8b5076d&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org344be95&quot;&gt;
 (setq
    org-capture-templates
    &apos;((&quot;d&quot; &quot;Diary Entry&quot; plain (file+datetree org-agenda-diary-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
@@ -242,7 +242,7 @@ focused on org-mode and TODO lists the way I want it to work.
         </item>
         <item>
             <title>Coming to terms with ADHD - Part 2</title>
-            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-part-2</link>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-part-2/</link>
             <description>&lt;p&gt;
 One of the important aspects of living with ADHD is getting overwhelmed
 by thoughts. This is usually a major pain in the ass. When left
@@ -317,7 +317,7 @@ Development).
         </item>
         <item>
             <title>Coming to terms with ADHD</title>
-            <link>https://bitspook.in/blog/coming-to-terms-with-adhd</link>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd/</link>
             <description>&lt;p&gt;
 After my recent subscription to &lt;a href=&quot;http://reddit.com/r/adhd&quot;&gt;/r/adhd&lt;/a&gt;, I
 realized how important it can be to share experiences. Even when it is

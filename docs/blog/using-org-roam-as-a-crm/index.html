@@ -38,9 +38,9 @@ i</code>), so it builds into a nice theme for easy-to-remember keybindings and
 consistent UI.
 </p>
 
-<div id="outline-container-org19bdade" class="outline-2">
-<h2 id="org19bdade">Setup</h2>
-<div class="outline-text-2" id="text-org19bdade">
+<div id="outline-container-orga875abf" class="outline-2">
+<h2 id="orga875abf">Setup</h2>
+<div class="outline-text-2" id="text-orga875abf">
 <p>
 Elisp I use org-roam as a CRM, while keeping "normal" org-roam available for
 taking notes.
@@ -50,7 +50,7 @@ taking notes.
 <pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">defvar</span> <span style="color: #c6797e;">spook--org-roam-crm-dir</span> <span style="color: #A3B09A;">"~/Documents/org/people"</span>
   <span style="color: #A3B09A; font-style: italic;">"Directory where org-roam notes related to people are kept."</span>)
 
-(<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">spook--with-org-roam-crm</span> (func <span style="color: #c6797e;">&amp;rest</span> args)
+(<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">spook--with-org-roam-crm</span> (func <span style="color: #DB6E8F;">&amp;rest</span> args)
   <span style="color: #A3B09A; font-style: italic;">"Evaluate FUNC with ARGS org-roam set for working as CRM."</span>
   (<span style="color: #b18bb1; font-style: italic;">let*</span> ((org-roam-directory spook--org-roam-crm-dir)
          (org-roam-db-location (concat org-roam-directory <span style="color: #A3B09A;">"/roam.db"</span>)))
@@ -99,9 +99,9 @@ i</code> to insert a link to a person/event.
 </div>
 
 
-<div id="outline-container-org1940170" class="outline-2">
-<h2 id="org1940170">Does it solve everything?</h2>
-<div class="outline-text-2" id="text-org1940170">
+<div id="outline-container-org591d922" class="outline-2">
+<h2 id="org591d922">Does it solve everything?</h2>
+<div class="outline-text-2" id="text-org591d922">
 <p>
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -123,9 +123,9 @@ But it is perhaps too much to ask without making effort</li>
 </div>
 </div>
 
-<div id="outline-container-orgeb9bd40" class="outline-2">
-<h2 id="orgeb9bd40">Why am I sharing this?</h2>
-<div class="outline-text-2" id="text-orgeb9bd40">
+<div id="outline-container-org9615411" class="outline-2">
+<h2 id="org9615411">Why am I sharing this?</h2>
+<div class="outline-text-2" id="text-org9615411">
 <ul class="org-ul">
 <li>To bounce ideas off of internet</li>
 <li>Hoping someone will point me in a better direction if there is one</li>

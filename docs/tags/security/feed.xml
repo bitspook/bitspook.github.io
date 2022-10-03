@@ -12,7 +12,7 @@
         </image>
         <item>
             <title>Secure Software Teams Trantor</title>
-            <link>https://bitspook.in/talks/secure-software-teams-trantor</link>
+            <link>https://bitspook.in/talks/secure-software-teams-trantor/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/secure-software-teams/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 &lt;/iframe&gt;
 
@@ -31,7 +31,7 @@ exercises, rest were left for the attendees as homework. Here&apos;s the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org210ebf7&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org0fc4b52&quot;&gt;
 version: &apos;3&apos;
 services:
   webgoat:

@@ -12,7 +12,7 @@
         </image>
         <item>
             <title>Using org-roam as a CRM</title>
-            <link>https://bitspook.in/blog/using-org-roam-as-a-crm</link>
+            <link>https://bitspook.in/blog/using-org-roam-as-a-crm/</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;
 &lt;/iframe&gt;
 
@@ -52,9 +52,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org19bdade&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org19bdade&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org19bdade&quot;&gt;
+&lt;div id=&quot;outline-container-orga875abf&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga875abf&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga875abf&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -64,7 +64,7 @@ taking notes.
 &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~/Documents/org/people&quot;&lt;/span&gt;
   &lt;span style=&quot;color: #A3B09A; font-style: italic;&quot;&gt;&quot;Directory where org-roam notes related to people are kept.&quot;&lt;/span&gt;)
 
-(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #c6797e;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #DB6E8F;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
   &lt;span style=&quot;color: #A3B09A; font-style: italic;&quot;&gt;&quot;Evaluate FUNC with ARGS org-roam set for working as CRM.&quot;&lt;/span&gt;
   (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let*&lt;/span&gt; ((org-roam-directory spook--org-roam-crm-dir)
          (org-roam-db-location (concat org-roam-directory &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;/roam.db&quot;&lt;/span&gt;)))
@@ -113,9 +113,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org1940170&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org1940170&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1940170&quot;&gt;
+&lt;div id=&quot;outline-container-org591d922&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org591d922&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org591d922&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -137,9 +137,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgeb9bd40&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgeb9bd40&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgeb9bd40&quot;&gt;
+&lt;div id=&quot;outline-container-org9615411&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9615411&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9615411&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
@@ -153,7 +153,7 @@ come around to do it myself&lt;/li&gt;
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>f36bb804-0ae3-4d16-b1ce-392e489007ae</guid>
+            <guid>20220120T174152</guid>
             <pubDate>2022-01-22T05:30:00.000000+05:30</pubDate>
         </item>
     </channel>

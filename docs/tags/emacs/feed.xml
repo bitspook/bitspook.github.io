@@ -12,14 +12,14 @@
         </image>
         <item>
             <title>Extending org-mode to handle youtube links</title>
-            <link>https://bitspook.in/blog/extending-org-mode-to-handle-youtube-links</link>
+            <link>https://bitspook.in/blog/extending-org-mode-to-handle-youtube-links/</link>
             <description>&lt;p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org0065723&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0065723&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0065723&quot;&gt;
+&lt;div id=&quot;outline-container-org8916123&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8916123&quot;&gt;Requirement&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org8916123&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
 browser&lt;/li&gt;
@@ -30,9 +30,9 @@ of hyperlinks&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org7180b8b&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org7180b8b&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7180b8b&quot;&gt;
+&lt;div id=&quot;outline-container-orgf9c9b6a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf9c9b6a&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf9c9b6a&quot;&gt;
 &lt;p&gt;
 Org has a concept of &apos;link types&apos;. We can add a new type of link and have it
 behave the way we want.
@@ -119,9 +119,9 @@ Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extend
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orga892565&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orga892565&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga892565&quot;&gt;
+&lt;div id=&quot;outline-container-orgb726ee9&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb726ee9&quot;&gt;Result&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb726ee9&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
 in mpv&lt;/li&gt;
@@ -133,9 +133,9 @@ youtube videos&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org47f6533&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org47f6533&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org47f6533&quot;&gt;
+&lt;div id=&quot;outline-container-orgba2868e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgba2868e&quot;&gt;Bonus gains 💪&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgba2868e&quot;&gt;
 &lt;p&gt;
 Recently I&apos;ve been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
@@ -166,12 +166,12 @@ extending-the-blogging-setup as well.
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>36381264-4b43-4a3b-ad0c-ccda5b3c0966</guid>
-            <pubDate>2022-09-26T22:03:10.000000+05:30</pubDate>
+            <guid>20220922T174420</guid>
+            <pubDate>2022-09-26T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>Using ELisp as an HTML templating engine</title>
-            <link>https://bitspook.in/blog/using-elisp-as-an</link>
+            <link>https://bitspook.in/blog/using-elisp-as-an/</link>
             <description>&lt;p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/p&gt;
@@ -256,12 +256,12 @@ glue code I&apos;ve written to make using ELisp as HTML templating engine easier
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>288bba3a-6385-47bf-b8ea-f832aeae28c2</guid>
+            <guid>20220408T161902</guid>
             <pubDate>2022-04-08T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>Using org-mode as an SQL playground</title>
-            <link>https://bitspook.in/blog/using-org-mode-as-an-sql-playground</link>
+            <link>https://bitspook.in/blog/using-org-mode-as-an-sql-playground/</link>
             <description>&lt;p&gt;
 Showcase video:
 &lt;/p&gt;
@@ -360,9 +360,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgf1adb02&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf1adb02&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf1adb02&quot;&gt;
+&lt;div id=&quot;outline-container-org099c06b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org099c06b&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org099c06b&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -421,9 +421,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgc3da4c1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgc3da4c1&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc3da4c1&quot;&gt;
+&lt;div id=&quot;outline-container-orgbf630f3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbf630f3&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbf630f3&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -439,12 +439,12 @@ which don&apos;t suffer from this.&lt;/li&gt;
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>803de13c-0598-49f1-979b-fa66194528e9</guid>
+            <guid>20220125T111233</guid>
             <pubDate>2022-02-03T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>Using org-roam as a CRM</title>
-            <link>https://bitspook.in/blog/using-org-roam-as-a-crm</link>
+            <link>https://bitspook.in/blog/using-org-roam-as-a-crm/</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;
 &lt;/iframe&gt;
 
@@ -484,9 +484,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org19bdade&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org19bdade&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org19bdade&quot;&gt;
+&lt;div id=&quot;outline-container-orga875abf&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga875abf&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga875abf&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -496,7 +496,7 @@ taking notes.
 &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~/Documents/org/people&quot;&lt;/span&gt;
   &lt;span style=&quot;color: #A3B09A; font-style: italic;&quot;&gt;&quot;Directory where org-roam notes related to people are kept.&quot;&lt;/span&gt;)
 
-(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #c6797e;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #DB6E8F;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
   &lt;span style=&quot;color: #A3B09A; font-style: italic;&quot;&gt;&quot;Evaluate FUNC with ARGS org-roam set for working as CRM.&quot;&lt;/span&gt;
   (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let*&lt;/span&gt; ((org-roam-directory spook--org-roam-crm-dir)
          (org-roam-db-location (concat org-roam-directory &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;/roam.db&quot;&lt;/span&gt;)))
@@ -545,9 +545,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org1940170&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org1940170&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1940170&quot;&gt;
+&lt;div id=&quot;outline-container-org591d922&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org591d922&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org591d922&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -569,9 +569,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgeb9bd40&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgeb9bd40&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgeb9bd40&quot;&gt;
+&lt;div id=&quot;outline-container-org9615411&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9615411&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9615411&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
@@ -585,12 +585,12 @@ come around to do it myself&lt;/li&gt;
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>f36bb804-0ae3-4d16-b1ce-392e489007ae</guid>
+            <guid>20220120T174152</guid>
             <pubDate>2022-01-22T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>The most beautiful tutorial</title>
-            <link>https://bitspook.in/blog/the-most-beautiful-tutorial</link>
+            <link>https://bitspook.in/blog/the-most-beautiful-tutorial/</link>
             <description>&lt;blockquote&gt;
 &lt;p&gt;
 The most beautiful tutorial I&apos;ve ever read, &quot;The Emacs-lisp Intro&quot;.

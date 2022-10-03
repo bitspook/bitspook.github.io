@@ -11,15 +11,257 @@
             <link>https://bitspook.in/</link>
         </image>
         <item>
+            <title>After 6 months of voluntary unemployment</title>
+            <link>https://bitspook.in/blog/after-6-months-of-voluntary-unemployment/</link>
+            <description>&lt;p&gt;
+For the last six months, I have been &lt;a href=&quot;https://bitspook.in/blog/i-have-quit-my-job&quot;&gt;voluntarily unemployed&lt;/a&gt;. Here&apos;s a brief
+summary of how the last six months shaped my thoughts, and an abstract plan of
+what I intend to do next.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-org366200a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org366200a&quot;&gt;Mental health&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org366200a&quot;&gt;
+&lt;p&gt;
+I needed this break a lot more than I thought I did. Being perpetually restless
+had been my state of being for too long. It felt good, to breath out.
+&lt;/p&gt;
+
+&lt;p&gt;
+When writing software, you reach a certain point where things start falling into
+place, the uncertainties are answered for and you can feel that the decisions
+you made were right. Those few seconds of invincibility spanned over several
+(not always consequent) days, because I felt it was me in control. Them I
+remember most cherishingly. It was a kind of high I intend to chase again in
+life.
+&lt;/p&gt;
+
+&lt;p&gt;
+Primary reason for which I quit my job was the curiosity about whether I can
+manage my ADHD now; or if I still need the crutches of accountability. On job, I
+could effortlessly perform well, in contrast to solo freelancing. My therapist
+had suggested it will get better with age.
+&lt;/p&gt;
+
+&lt;p&gt;
+I had more good days than bad, which is a win. Unfortunately I still don&apos;t have
+a definite answer to consider the matter resolved. More on this later (below).
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgaa1403f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgaa1403f&quot;&gt;Social work&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgaa1403f&quot;&gt;
+&lt;p&gt;
+When busy with material responsibilities, I used to fantasize that if I had more
+free time I could do so much more for people around me. When I had it, I tried
+to start with the place closest to my heart.
+&lt;/p&gt;
+
+&lt;p&gt;
+I tried to &quot;help&quot; my village by contributing to its small primary school, least
+politically charged of situations there. Well, not so much as tried to help as
+probed with a long stick to assess the willingness to be helped. I quickly found
+out that a significant involvement there is a luxury I can&apos;t afford just yet.
+Established power structures see everything new as threat, and eagerly sabotage
+what they can get away with.
+&lt;/p&gt;
+
+&lt;p&gt;
+So I chose a different avenue. One just as dear to me, but where I have more
+experience and room to maneuver. I decided to make &lt;a href=&quot;https://entropyhacker.space/&quot;&gt;another attempt&lt;/a&gt; to nurture a
+healthy tech culture in my city. It produced mixed results because I was not
+able to put in as much energy as it demanded.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org88c0d77&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org88c0d77&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org88c0d77&quot;&gt;
+&lt;p&gt;
+I was running full speed building &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;foolish&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;things&lt;/a&gt;. Then lisp came calling.
+&lt;/p&gt;
+
+&lt;video autoplay loop alt=&quot;Wile E Coyote hitting the tunnel. Tunnel hits back.&quot;&gt;
+  &lt;source src=&quot;/videos/hit-it.webm&quot; type=&quot;video/webm&quot; /&gt;
+&lt;/video&gt;
+
+&lt;p&gt;
+I was working on &lt;a href=&quot;https://github.com/bitspook/entropy&quot;&gt;Entropy&lt;/a&gt;, to build a software to help me do the leg work of
+building a tech community. Thought came that it is for hackers, so it should be
+hackable. Lisp is praised for how hackable it is. It is also praised for its
+expressiveness. Momentum is something I was finding hard to achieve with Rust,
+because of my inexperience and perhaps the nature of the language and problem I
+was trying to solve with it. At least checking lisp out seemed reasonable.
+&lt;/p&gt;
+
+&lt;p&gt;
+After 30 years of living with them, I have come to recognize desires of pivotal
+nature. In the face of these sublimely consuming whims, I can either do what
+they say, or not do anything at all (I am told it is common with ADHD, so not to
+beat myself too much about it).
+&lt;/p&gt;
+
+&lt;p&gt;
+I&apos;ve learned that it is possible to suppress these urges by feigning blindness.
+My mistake was that of indecision. It is not possible to take a sip and not
+gulp. I chose to look at it, but took too long to engage. I got thrown off the
+build-mode.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have observed that I operate in two distinct modes: build-mode and study-mode.
+Although building something is always a learning experience, and to learn
+something I gotta build something; it is efficient to treat them as separate. It
+is also easier on my mental peace.
+&lt;/p&gt;
+
+&lt;p&gt;
+This time, the transition between the two modes was not smooth. Getting
+involuntarily thrown out of the workshop left me with (mental) bruises. This
+incident is the reason I still consider the matter of my self-discipline
+unresolved. Although the fact that there were only 2 such incidents over 6
+months is a win by itself (another was when I fell in love with a &lt;a href=&quot;https://practicalguidetoevil.wordpress.com&quot;&gt;book&lt;/a&gt;, and
+spent weeks doing nothing else).
+&lt;/p&gt;
+
+&lt;p&gt;
+I filled the downtime during transition with another thing I wanted to do, and
+probably would not have done otherwise. I traveled.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org2311bb0&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2311bb0&quot;&gt;Travel&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2311bb0&quot;&gt;
+&lt;p&gt;
+I am not much of a site-seeing kind of guy. I find traveling exhausting,
+regardless of how beautiful the views or how fun the activities. Being a tourist
+is not for me. I like to stay and experience. I enjoy exploring/observing people
+(people watching?). Witnessing people go by their lives is soothing. There is a
+warm fuzzy feeling behind every smile, however mundane.
+&lt;/p&gt;
+
+&lt;p&gt;
+So I traveled the way I truly like, perhaps for the first time. For about 3
+months trotting around the mountains of Uttrakhand, visiting people in their
+homes (home stays). Observing a way of life familiar yet strange.
+&lt;/p&gt;
+
+&lt;p&gt;
+It came as a surprise how eye-opening the experience turned out to be, despite
+being quite event-less. It was like learning a new language or studying math. I
+could almost feel my brain building new connections. This is one of the few
+feelings which still stays exciting even when the rat-race and hoarding have
+stopped being as stimulating. I did not expect to find an entirely new source of
+it in an experience like this.
+&lt;/p&gt;
+
+&lt;p&gt;
+It is also the easiest methods in terms of active participation, compared to all
+the other sources (most are a variations of intellectual exercises; solving a
+challenging problem, crafting an elegant solution etc). It does have its costs,
+but I believe they do not overlap with those of other methods; so they can be
+employed at the same time.
+&lt;/p&gt;
+
+&lt;p&gt;
+I take it to mean I can have twice of what makes me feel most alive, just by
+putting myself in a place 🤯
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-orgaba7884&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgaba7884&quot;&gt;What comes next?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgaba7884&quot;&gt;
+&lt;p&gt;
+I can perhaps spend a few more months before I run out of savings, but the
+dimming safety net has already started making me anxious. I miss the tribe-like
+feeling of working in a team, so I am actually looking forward to join work for
+that.
+&lt;/p&gt;
+
+&lt;p&gt;
+Most freeing would be to start a business of my own; not because it will leave
+me with more free time, but because I can feel more like myself when working on
+something I find meaningful. But that won&apos;t be profitable right out of the door,
+so perhaps after a bit more grinding I can save up to give myself a chance.
+&lt;/p&gt;
+
+&lt;p&gt;
+The grind is decided, but I will not choose misery along with. I intend to chase
+the feeling of growth and fulfillment. With these constraints, some more
+decisions make themselves:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;I can&apos;t stay at home. Being home is extremely comfortable, but with
+comfort comes stagnation.&lt;/li&gt;
+&lt;li&gt;I need a job which leaves me with enough time I can invest in something
+demanding like math&lt;/li&gt;
+&lt;li&gt;I need to put myself in a foreign culture&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+Putting these into practice, I have decided I&apos;ll move to Berlin for a few years.
+The city makes itself a good place to be for me for a few reasons:
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Practically, it is perhaps the easiest to immigrate to for an individual
+Indian citizen, with a job in hand&lt;/li&gt;
+&lt;li&gt;It has a good hacker culture, something I&apos;ve always wanted to experience but
+have only ever read about&lt;/li&gt;
+&lt;li&gt;German culture seem like a great fit for my personal tastes&lt;/li&gt;
+&lt;li&gt;I get to learn a new language&lt;/li&gt;
+&lt;li&gt;German work culture is praised (on the Internet) for respecting boundaries and
+giving a priority to life over money&lt;/li&gt;
+&lt;li&gt;If I ever decide to seek higher education (which is likely), German education
+policies are good&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+Now that that is decided, what&apos;s left to figure out is how to go about it.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org7c208e2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7c208e2&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7c208e2&quot;&gt;
+&lt;p&gt;
+After 6 months of voluntary unemployment, I am the same man I was before it.
+Things I experienced and burdens I unburdened could be achieved by other means
+as well. Perhaps I&apos;ve sown seeds to make me a different person in future, but
+they will take time to bloom. It is a guessing game, same as what might have
+happened had I done it differently.
+&lt;/p&gt;
+
+&lt;p&gt;
+As for the journey to be where I already was, I&apos;ll do it again if I can.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>20220921T194836</guid>
+            <pubDate>2022-10-03T23:08:04.000000+05:30</pubDate>
+        </item>
+        <item>
             <title>Extending org-mode to handle youtube links</title>
-            <link>https://bitspook.in/blog/extending-org-mode-to-handle-youtube-links</link>
+            <link>https://bitspook.in/blog/extending-org-mode-to-handle-youtube-links/</link>
             <description>&lt;p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org0065723&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0065723&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0065723&quot;&gt;
+&lt;div id=&quot;outline-container-org8916123&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8916123&quot;&gt;Requirement&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org8916123&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
 browser&lt;/li&gt;
@@ -30,9 +272,9 @@ of hyperlinks&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org7180b8b&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org7180b8b&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7180b8b&quot;&gt;
+&lt;div id=&quot;outline-container-orgf9c9b6a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf9c9b6a&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf9c9b6a&quot;&gt;
 &lt;p&gt;
 Org has a concept of &apos;link types&apos;. We can add a new type of link and have it
 behave the way we want.
@@ -119,9 +361,9 @@ Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extend
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orga892565&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orga892565&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga892565&quot;&gt;
+&lt;div id=&quot;outline-container-orgb726ee9&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb726ee9&quot;&gt;Result&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb726ee9&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
 in mpv&lt;/li&gt;
@@ -133,9 +375,9 @@ youtube videos&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org47f6533&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org47f6533&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org47f6533&quot;&gt;
+&lt;div id=&quot;outline-container-orgba2868e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgba2868e&quot;&gt;Bonus gains 💪&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgba2868e&quot;&gt;
 &lt;p&gt;
 Recently I&apos;ve been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
@@ -166,17 +408,17 @@ extending-the-blogging-setup as well.
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>36381264-4b43-4a3b-ad0c-ccda5b3c0966</guid>
-            <pubDate>2022-09-26T22:03:10.000000+05:30</pubDate>
+            <guid>20220922T174420</guid>
+            <pubDate>2022-09-26T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>How I manage my passwords</title>
-            <link>https://bitspook.in/blog/how-i-manage-my-passwords</link>
+            <link>https://bitspook.in/blog/how-i-manage-my-passwords/</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;div id=&quot;outline-container-orgce66e5c&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgce66e5c&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgce66e5c&quot;&gt;
+&lt;div id=&quot;outline-container-orgd8ffc25&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgd8ffc25&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgd8ffc25&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;b&gt;No third-parties&lt;/b&gt;
@@ -208,9 +450,9 @@ should play nice with presence/absence of other tools.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org6ca2389&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org6ca2389&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org6ca2389&quot;&gt;
+&lt;div id=&quot;outline-container-org07c06ee&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org07c06ee&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org07c06ee&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
@@ -291,13 +533,13 @@ my mobile devices.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org0c94a63&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0c94a63&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0c94a63&quot;&gt;
+&lt;div id=&quot;outline-container-orgbb3b70e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbb3b70e&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbb3b70e&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgef83f62&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgef83f62&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgef83f62&quot;&gt;
+&lt;div id=&quot;outline-container-org26904f8&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org26904f8&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org26904f8&quot;&gt;
 &lt;p&gt;
 For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
@@ -319,9 +561,9 @@ password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgd49f39d&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgd49f39d&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd49f39d&quot;&gt;
+&lt;div id=&quot;outline-container-orgbf15813&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgbf15813&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgbf15813&quot;&gt;
 &lt;p&gt;
 Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
 much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
@@ -354,9 +596,9 @@ password (on the same form).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org875ff97&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org875ff97&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org875ff97&quot;&gt;
+&lt;div id=&quot;outline-container-org1e68a12&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org1e68a12&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org1e68a12&quot;&gt;
 &lt;p&gt;
 I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
@@ -391,12 +633,12 @@ private browser window.
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>28c52ee9-bd59-4c4a-af1f-13652b3612dd</guid>
+            <guid>20220912T152156</guid>
             <pubDate>2022-09-19T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>Using ELisp as an HTML templating engine</title>
-            <link>https://bitspook.in/blog/using-elisp-as-an</link>
+            <link>https://bitspook.in/blog/using-elisp-as-an/</link>
             <description>&lt;p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/p&gt;
@@ -481,12 +723,12 @@ glue code I&apos;ve written to make using ELisp as HTML templating engine easier
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>288bba3a-6385-47bf-b8ea-f832aeae28c2</guid>
+            <guid>20220408T161902</guid>
             <pubDate>2022-04-08T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>I have quit my job</title>
-            <link>https://bitspook.in/blog/i-have-quit-my-job</link>
+            <link>https://bitspook.in/blog/i-have-quit-my-job/</link>
             <description>&lt;p&gt;
 Several years ago, I decided to quit freelancing and do a day job. The
 job would pay much less but I was struggling with mental health (ADHD).
@@ -654,7 +896,7 @@ balance. I&apos;ll explore.
         </item>
         <item>
             <title>Using org-mode as an SQL playground</title>
-            <link>https://bitspook.in/blog/using-org-mode-as-an-sql-playground</link>
+            <link>https://bitspook.in/blog/using-org-mode-as-an-sql-playground/</link>
             <description>&lt;p&gt;
 Showcase video:
 &lt;/p&gt;
@@ -753,9 +995,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgf1adb02&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf1adb02&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf1adb02&quot;&gt;
+&lt;div id=&quot;outline-container-org099c06b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org099c06b&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org099c06b&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -814,9 +1056,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgc3da4c1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgc3da4c1&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc3da4c1&quot;&gt;
+&lt;div id=&quot;outline-container-orgbf630f3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbf630f3&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbf630f3&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -832,12 +1074,12 @@ which don&apos;t suffer from this.&lt;/li&gt;
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>803de13c-0598-49f1-979b-fa66194528e9</guid>
+            <guid>20220125T111233</guid>
             <pubDate>2022-02-03T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>Using org-roam as a CRM</title>
-            <link>https://bitspook.in/blog/using-org-roam-as-a-crm</link>
+            <link>https://bitspook.in/blog/using-org-roam-as-a-crm/</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;
 &lt;/iframe&gt;
 
@@ -877,9 +1119,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org19bdade&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org19bdade&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org19bdade&quot;&gt;
+&lt;div id=&quot;outline-container-orga875abf&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga875abf&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga875abf&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -889,7 +1131,7 @@ taking notes.
 &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~/Documents/org/people&quot;&lt;/span&gt;
   &lt;span style=&quot;color: #A3B09A; font-style: italic;&quot;&gt;&quot;Directory where org-roam notes related to people are kept.&quot;&lt;/span&gt;)
 
-(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #c6797e;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
+(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #DB6E8F;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
   &lt;span style=&quot;color: #A3B09A; font-style: italic;&quot;&gt;&quot;Evaluate FUNC with ARGS org-roam set for working as CRM.&quot;&lt;/span&gt;
   (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let*&lt;/span&gt; ((org-roam-directory spook--org-roam-crm-dir)
          (org-roam-db-location (concat org-roam-directory &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;/roam.db&quot;&lt;/span&gt;)))
@@ -938,9 +1180,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org1940170&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org1940170&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1940170&quot;&gt;
+&lt;div id=&quot;outline-container-org591d922&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org591d922&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org591d922&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -962,9 +1204,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgeb9bd40&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgeb9bd40&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgeb9bd40&quot;&gt;
+&lt;div id=&quot;outline-container-org9615411&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9615411&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9615411&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
@@ -978,12 +1220,12 @@ come around to do it myself&lt;/li&gt;
 </description>
             <author>Charanjit Singh</author>
             <category>blog</category>
-            <guid>f36bb804-0ae3-4d16-b1ce-392e489007ae</guid>
+            <guid>20220120T174152</guid>
             <pubDate>2022-01-22T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>Find a functional programmer for your Javascript team</title>
-            <link>https://bitspook.in/blog/find-a-functional-programmer-for-your-javascript-team</link>
+            <link>https://bitspook.in/blog/find-a-functional-programmer-for-your-javascript-team/</link>
             <description>&lt;blockquote&gt;
 &lt;p&gt;
 Written below are some opinions and rationalizations for them. I have come to
@@ -1077,7 +1319,7 @@ good people among functional programmers.
         </item>
         <item>
             <title>Quick and Pretty Docs for Software Projects</title>
-            <link>https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects</link>
+            <link>https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects/</link>
             <description>&lt;p&gt;
 I have practiced
 &lt;a href=&quot;http://tom.preston-werner.com/2010/08/23/readme-driven-development.html&quot;&gt;Readme
@@ -1123,7 +1365,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org6b64af8&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgcf5c53b&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -1141,7 +1383,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer&apos;s machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org3124ce6&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org8c71ab9&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -1180,7 +1422,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org41e631e&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orga46d553&quot;&gt;
 buildDrafts = true
 title = &quot;My Project&quot;
 
@@ -1200,7 +1442,7 @@ home = [ &quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot;]
         </item>
         <item>
             <title>Helping others to help myself</title>
-            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-help-others-to-help-yourself</link>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-help-others-to-help-yourself/</link>
             <description>&lt;p&gt;
 It is near impossible for me to get something done if I don&apos;t have 100%
 peaked interest in it at &lt;b&gt;this&lt;/b&gt; very moment. Occasionally I can hyper
@@ -1270,7 +1512,7 @@ be a good start.
         </item>
         <item>
             <title>Personal brands for software developers</title>
-            <link>https://bitspook.in/blog/personal-brands-for-software-developers</link>
+            <link>https://bitspook.in/blog/personal-brands-for-software-developers/</link>
             <description>&lt;p&gt;
 &lt;a href=&quot;file:///blog/maximize-individual-growing-in-a-software-team-2-month-report/&quot;&gt;Reflecting on the progress&lt;/a&gt; we have made in our &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;&quot;nurture a culture of individual
 growth in a software team&quot; initiative&lt;/a&gt;, I realized there is much to gain from
@@ -1408,6 +1650,3170 @@ our endeavor.
             <category>blog</category>
             <guid>personal-brands-for-software-developers</guid>
             <pubDate>2019-04-01T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Maximize individual growing in a software team (2 month report)</title>
+            <link>https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report/</link>
+            <description>&lt;p&gt;
+Couple months ago we started an &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;initiative&lt;/a&gt; in our team here at &lt;a href=&quot;http://trantorinc.com/&quot;&gt;Trantor&lt;/a&gt; with the
+focus on nurturing a culture which optimizes personal growth of an individual in
+the team. I believe it is turning out to be quite successful. We decided we&apos;ll
+focus on 4 things to achieve our goal:
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-interactive-sessions-of-tools-technologies&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;interactive-sessions-of-tools-technologies&quot;&gt;Interactive sessions of tools/technologies&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-interactive-sessions-of-tools-technologies&quot;&gt;
+&lt;p&gt;
+This is where we&apos;ve observed most success. We have had 4 sessions in
+past 2 months (we do two-week sprints), with following primary topics:
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;Up your ops game: Ansible and Vagrant &lt;i&gt;(delivered by &lt;b&gt;Charanjit Singh
+(me)&lt;/b&gt;)&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Up your ops game: Docker and Docker Compose &lt;i&gt;(delivered by &lt;b&gt;Charanjit
+Singh (me)&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Quick and Dirty Kafka &lt;i&gt;(collaboratively delivered by &lt;b&gt;Charanjit Singh
+(me), Rupinder Singh, Sheenam Narula, Krishan Saini&lt;/b&gt;)&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Getting acquainted with Elasticsearch &lt;i&gt;(delivered by &lt;b&gt;Krishan Saini&lt;/b&gt;)&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-collaboratively-studying-open-source-projects-we-use&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;collaboratively-studying-open-source-projects-we-use&quot;&gt;Collaboratively studying open source projects we use&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-collaboratively-studying-open-source-projects-we-use&quot;&gt;
+&lt;p&gt;
+We started off with &lt;code&gt;chai.js&lt;/code&gt;, but after probably spending only a few
+minutes each, the
+&lt;a href=&quot;https://docs.google.com/document/d/13dko42FS9kcnpqnrjp9QCouQO0vZHDQ0tslID3BAQBs/edit?usp=sharing&quot;&gt;google
+doc&lt;/a&gt; we created for collaboratively creating notes didn&apos;t see much
+action.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-being-active-in-trantor-forums&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;being-active-in-trantor-forums&quot;&gt;Being active in Trantor forums&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-being-active-in-trantor-forums&quot;&gt;
+&lt;p&gt;
+Plan was to use Trantor Forums as a platform for proposing
+(revolutionary) changes in our project. We started off with
+&lt;a href=&quot;https://forum.trantorinc.com/t/suggested-improvements-for-tdd-in-veriown-cloud-mutation-testing-and-running-tests-concurrently/74&quot;&gt;a
+proposal to introduce mutation testing&lt;/a&gt; in our test-coverage reports,
+but didn&apos;t move forward from that.
+&lt;/p&gt;
+
+&lt;p&gt;
+I believe this is because we don&apos;t really spend as much time exploring
+new/different things/subject-matters to be able to bring more of such
+proposals. This problem is one of many that should fix itself if we are
+successful in fostering a culture of self growth in the team.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-day-long-hackathons&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;day-long-hackathons&quot;&gt;Day long hackathons&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-day-long-hackathons&quot;&gt;
+&lt;p&gt;
+We are yet to realize this dream. Shiva proposed a neat little idea to
+solve a problem faced by Trantor employees, but turned out an official
+solution was already in the works and about to be released in couple
+weeks (it didn&apos;t). I believe we should have just gone ahead and spend a
+day to build what we wanted, just for the heck of it. That would have
+been more fruitful.
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;
+Above points are more than just steps to achieve our goal, I believe,
+they are also metrics of our success. How much engagement each of these
+get reflects on how much of a self-growth culture is prospering in the
+team. I wonder if we can somehow quantize these per-person. If nothing
+else, that&apos;ll create some cool graphs to gawk at.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>maximize-individual-growing-in-a-software-team-2-month-report</guid>
+            <pubDate>2019-03-26T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>How to maximize individual growth in a software team?</title>
+            <link>https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team/</link>
+            <description>&lt;p&gt;
+Working as a solo freelance developer, I used to have lofty ideas of how
+a group of people can grow so much more together. I imagined how a mind
+in the hive can grow at exponential rates. I made several attempts to
+build communities striving for this, a few were successful to some
+degree, most were not. Now working in a software development team at
+&lt;a href=&quot;http://trantorinc.com/&quot;&gt;Trantor&lt;/a&gt;, I am revisiting these ideas.
+&lt;/p&gt;
+
+&lt;p&gt;
+I still believe that it&apos;s a worthwhile general direction to move in. In
+this post, I am asking myself (and you) the question of &quot;how&quot;. How can
+we maximize growth of an individual developer in a software team?
+&lt;/p&gt;
+
+&lt;p&gt;
+What do I mean by growth? Software is about so much more than just
+writing code. It is also philosophy, psychology, mathematics, art and
+policy making. Growth as a software developer encompass growth in all
+these areas. Learning new tools and technologies is important, but so is
+the conceptual knowledge of software development principles, foresight
+about how decisions as trivial as naming a variable are going to impact
+the future of our code, to perceiving the perception of reader of our
+code, and also to make it elegant at many levels.
+&lt;/p&gt;
+
+&lt;p&gt;
+Why focus on an individual&apos;s growth? I believe people are selfish by
+design. We think first for ourselves, then for our family, then for our
+closest community, and so on. Growing individuals help teams (and
+companies) directly as well. A culture of growth attracts good
+developers, more good developers are good for teams/companies than
+mediocre/bad ones. Optimizing for an individual&apos;s growth seem like a
+good idea to me. I think it adds significant positive value to everyone
+involved in the process of writing software.
+&lt;/p&gt;
+
+&lt;p&gt;
+Now then, how do we optimize for an individual&apos;s growth? I had a
+discussion with the team here and we came up with some points that we
+are going to try this
+&lt;a href=&quot;https://www.atlassian.com/agile/scrum/sprints&quot;&gt;sprint&lt;/a&gt;. Plan is to
+buckle up and finish our committed work a day earlier than planned. Then
+on the extra day we earn, we sit back together, analyze two weeks of our
+code, share peer feedback, and dig into one or more of following
+activities.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-interactive-sessions-of-new-tools-technologies&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;interactive-sessions-of-new-tools-technologies&quot;&gt;Interactive sessions of new tools/technologies&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-interactive-sessions-of-new-tools-technologies&quot;&gt;
+&lt;p&gt;
+Topmost and shiniest layer of a software developer&apos;s growth is knowledge
+of new tools and technologies. Some of us explore more technologies than
+others. It was proposed that team members present a tool or technology,
+and give an interactive session of something they find cool. This can be
+very helpful for knowledge sharing in a diverse team where different
+people might have very different roles. For example, I am also handling
+the dev-ops in our current project, using tools like
+&lt;a href=&quot;https://www.ansible.com/&quot;&gt;Ansible&lt;/a&gt;,
+&lt;a href=&quot;https://www.terraform.io/&quot;&gt;Terraform&lt;/a&gt;,
+&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; and
+&lt;a href=&quot;https://kubernetes.io/&quot;&gt;Kubernetes&lt;/a&gt;. But rest of the team has no
+exposure to these tools. Me giving a session about these tools can be
+very helpful for me, rest of the team, and the company. It is also very
+much in alignment with my personal belief that every backend web
+developer should be familiar with devops.
+&lt;/p&gt;
+
+&lt;p&gt;
+I differ from the proposal by the team a bit though. I think it is cool
+to just &quot;show and tell&quot; bi-weekly, giving an interactive session is a
+good to have.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-collaboratively-studying-open-source-projects-we-use&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;collaboratively-studying-open-source-projects-we-use&quot;&gt;Collaboratively studying open source projects we use&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-collaboratively-studying-open-source-projects-we-use&quot;&gt;
+&lt;p&gt;
+Another very good suggestion was reading the source code of an open
+source project, and collaboratively make notes of the patterns that
+codebase has used, things they did right, things they did wrong etc. At
+the end of the sprint, we can all discuss the notes we took, if we can
+take something and use in our projects etc. We have picked chai.js for
+this sprint.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-put-forward-new-approaches-in-forums&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;put-forward-new-approaches-in-forums&quot;&gt;Put forward new approaches in forums&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-put-forward-new-approaches-in-forums&quot;&gt;
+&lt;p&gt;
+Often times there are disagreements in team regarding approaches that
+can be taken towards a problem. Or sometimes under the pressure of
+delivery we pick one approach on another. If the taken approach is too
+bad, a technical debt is created, but when it is &quot;good enough&quot;, we just
+move on. We don&apos;t want to let this slide. We should reconsider these
+small improvements, and keep incrementally improving and challenging our
+current practices.
+&lt;/p&gt;
+
+&lt;p&gt;
+We decided that we create posts on Trantor Forums for this, the team
+should actively explore the alternative approaches, debate, reach a
+consensus and implement the approach into our project. An example of
+this is my proposal to bring &lt;a href=&quot;https://stryker-mutator.io/&quot;&gt;mutation
+testing&lt;/a&gt; to our workflow. I raised it, and then higher priorities sent
+it so deep into the ground that I myself forgot about it. A forum post
+can be a healthy reminder in such cases, provide documented discussion
+and bring activity in our forums as well.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-day-long-hackathons&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;day-long-hackathons&quot;&gt;Day long Hackathons&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-day-long-hackathons&quot;&gt;
+&lt;p&gt;
+Another nice thing that came out of our discussion was that we can
+utilize this extra day we earn ourselves as an internal team hackathon.
+We can decide on any idea, regardless of its relevance for the
+project/work, and the entire team spends a day hacking on it. Member
+whose idea is selected can lead the team.
+&lt;/p&gt;
+
+&lt;p&gt;
+I think this can be a great way for team members to develop leadership
+skills, learn new things, have some open-source portfolio, and most
+importantly, feel that rush of starting a new project, and the bliss of
+finishing one.
+&lt;/p&gt;
+
+&lt;p&gt;
+Above are few things we are going to start doing starting this sprint.
+Please put in comments below if you have opinions and/or suggestions!
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>how-to-maximize-individual-growth-in-a-software-team</guid>
+            <pubDate>2019-01-21T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Managing Chaos</title>
+            <link>https://bitspook.in/blog/managing-chaos-org-mode-as-a-todo-list/</link>
+            <description>&lt;p&gt;
+I am thinking about doing a small series of posts on how I am managing
+the chaos that I am trying to stop fighting. I hope the chaos of an ADHD
+mind can be utilized rather than fought against. So far it has been
+working out pretty great (for past ~8 months). This post is about how I
+manage my ever exploding list of things I want to do.
+&lt;/p&gt;
+
+&lt;p&gt;
+I believe one of the most important things is to externalize your
+thoughts. Making it a habit to write them down is immensely helpful. So
+many of my problems stopped being problems as I adopted writing things
+down more and more. I have very small working memory. I forget often and
+I forget most things. Mind is always thinking of new ideas, things to
+do, things to tell people. The knowledge that I am going to forget the
+thing I am thinking right now is a big source of anxiety. The burden of
+remembering innumerable things and then failing to do so has a cognitive
+toll of its own.
+&lt;/p&gt;
+
+&lt;p&gt;
+I use org-mode as a lot of things; a TODO list is one of them. I am not
+going to get into the details of using org-mode for a beginner, but I&apos;ll
+share my flow of using org mode as a TODO list.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-capturing-things-to-do&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;capturing-things-to-do&quot;&gt;Capturing things to do&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-capturing-things-to-do&quot;&gt;
+&lt;p&gt;
+A very useful feature of org-mode is how easy it makes to &quot;capture&quot; TOOD
+items. I use Emacs as my primary text editor; being a software
+developer, most of my day time is spent in Emacs. Any time I think of
+something I [want|have] to do, I capture it with 3 keystrokes and
+usually immediately refile it under an appropriate heading. I keep 2
+TODOs.org files, one for work and one for my personal life.
+&lt;/p&gt;
+
+&lt;p&gt;
+In my personal TODOs.org file, I keep headings categorizing the kind of
+thing it is that I want to do; right now, they are =Study, Personal
+Development, Habits, Projects, Reading List, In Basket&quot;.&quot;In Basket&quot;
+heading keeps things that are quickly done in a day or few, and/or
+cannot be categorized.
+&lt;/p&gt;
+
+&lt;p&gt;
+My work TODOs.org carries all my work related tasks, including Jira
+issues, and general things I want/have to do when I am in the office. I
+have a TODO item to integrate org-jira, but right now I am manually
+copying Jira task IDs around like an imbecile.
+&lt;/p&gt;
+
+&lt;p&gt;
+This is how my org-capture-templates variable looks like right now:
+&lt;/p&gt;
+
+&lt;pre class=&quot;example&quot; id=&quot;org344be95&quot;&gt;
+(setq
+   org-capture-templates
+   &apos;((&quot;d&quot; &quot;Diary Entry&quot; plain (file+datetree org-agenda-diary-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
+     (&quot;f&quot; &quot;Feedback&quot; plain (file+datetree trantor-feedback-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
+     (&quot;i&quot; &quot;Idea&quot; entry (file org-ideas-file) &quot;* %?\n%T&quot;)
+     (&quot;t&quot; &quot;Todo&quot; entry (file+headline &quot;&quot; &quot;Todos&quot;) &quot;* TODO %?\n%U\n[[%F]]&quot;)
+     (&quot;c&quot; &quot;Contact&quot; entry (file org-contacts-file) &quot;* %^{Name}\n:PROPERTIES:\n:COMPANY %^{Company}\n:PHONE: %^{Phone}\n:END:&quot;)))
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-delegating-things-to-future&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;delegating-things-to-future&quot;&gt;Delegating things to future&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-delegating-things-to-future&quot;&gt;
+&lt;p&gt;
+Org-mode has a brilliant feature of scheduling tasks. It&apos;s rare for me
+to schedule a task for &quot;today&quot;; I delegate stuff to future me. I can
+capture and file things in any header, and then use org-mode&apos;s agenda
+views to filter out things past-me assigned for today. I try to finish
+the &quot;today&quot; tasks, and try to stay at peace when I fail to every day.
+Org-mode also display a count of for how long I&apos;ve been missing to do a
+certain task which is a handy reminder that I am falling short on my
+commitments.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-prioritizing-things&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;prioritizing-things&quot;&gt;Prioritizing things&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-prioritizing-things&quot;&gt;
+&lt;p&gt;
+Not all tasks are made equal. Although I try my best to not let my
+&quot;Today&quot; tasks list become too big, sometimes there is simply too much on
+the plate. In that case, I define priorities for the most important
+tasks, which are displayed at the top of the list in Day-agenda view.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-tagging-items&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;tagging-items&quot;&gt;Tagging items&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-tagging-items&quot;&gt;
+&lt;p&gt;
+I often tag my TODO items so I can easily filter them in the agenda view
+when I want to find things I have to do in some particular context. I
+often tag things by:
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;The person&apos;s name who I need to be with for doing something e.g when I
+want to tell someone something&lt;/li&gt;
+&lt;li&gt;The Scrum sprint in which a task need to get done. For this I don&apos;t
+tag each task but instead file my tasks in a &quot;Sprint X&quot; heading which
+is tagged, and org-mode automatically inherit tags to all the
+subheadings&lt;/li&gt;
+&lt;li&gt;Place where I need to be at for doing something&lt;/li&gt;
+&lt;li&gt;Some other task specific metadata that I think can be helpful for
+finding this task&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-finding-things-to-do&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;finding-things-to-do&quot;&gt;Finding things to do&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-finding-things-to-do&quot;&gt;
+&lt;p&gt;
+Org-mode allow me to write my todo items in any order in any manner; I
+have several files where I write a lot of stuff, some of it is things to
+do; most if it isn&apos;t. It&apos;s crucial to write things down for me, because
+I know that I am going to forget it. Org-mode is immensely helpful in
+finding things out when I need it. Org-files being just text files allow
+me to just grep stuff; which is even more powerful with
+helm-projectile-grep. But the killer feature for finding out what I am
+supposed to be doing right now is org&apos;s agenda view. It allow me to
+filter things by time and tags.
+&lt;/p&gt;
+
+&lt;p&gt;
+Org-mode require you to explicitly add files to a list of
+&lt;code&gt;org-agenda-files&lt;/code&gt;. The agenda views only pick tasks from files in this
+list. I have almost all my org files in my agenda list. It also provides
+different views for the agenda; the one I am using most these days is
+the &quot;Day-agenda&quot; view, and Week-agenda view when I want to plan things
+ahead for the week.
+&lt;/p&gt;
+
+&lt;p&gt;
+On my mobile, I use orgzly android app. I am not too happy with it, but
+it&apos;s the best I&apos;ve got for now. I&apos;ve it in my TODO list to create an app
+focused on org-mode and TODO lists the way I want it to work.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>managing-chaos-org-mode-as-a-todo-list</guid>
+            <pubDate>2019-01-05T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Coming to terms with ADHD - Part 2</title>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd-part-2/</link>
+            <description>&lt;p&gt;
+One of the important aspects of living with ADHD is getting overwhelmed
+by thoughts. This is usually a major pain in the ass. When left
+unchecked it usually leads to a lot of confusion very painfully visible
+to people around you. This made most of my school life very tormenting.
+Despite being an &quot;A&quot; student, I was always completely lost.
+&lt;/p&gt;
+
+&lt;p&gt;
+This got better when I found computers. A book I found while sitting in
+the wrong classroom turned things around for me. My thoughts got
+channeled, things started becoming a lot more clearer when I wasn&apos;t
+thinking of 10 random things at a time. I was still thinking of 10
+things at a time, but it was now manageable; it was interesting. I
+wasn&apos;t fighting the trains of thought anymore, I was enjoying the ride.
+&lt;/p&gt;
+
+&lt;p&gt;
+This was alright while it was fun and games, but it became a problem
+again when I entered software development as a profession. Now I had to
+focus on things for extended duration of time; which usually was more
+than my interest span. It was a struggle again. I got over that period
+though; my current solution is to bring more accountability for my work,
+for which right now, I am doing a day job.
+&lt;/p&gt;
+
+&lt;p&gt;
+During my period of struggle, I did a lot of fight to stay focused. I
+fought to not let distractions come in; I blocked sites, tried several
+time-boxing techniques; most things worked, but for a small duration of
+time. The fight did me more bad than good. Exploring things is what make
+me happy, when I took that away from myself, the frustration that built
+up as a result threw me in a pit of despair.
+&lt;/p&gt;
+
+&lt;p&gt;
+My recommendation to anyone finding [her|him]self in my shoes is to not
+fight it all the time. Do whatever you feel like every once in a while.
+It is very important to keep feeling happy. Trust yourself that you&apos;ll
+manage to get important things done in time. However, you need to
+build/earn this trust. Read my
+&lt;a href=&quot;file:///blog/coming-to-terms-with-adhd/&quot;&gt;previous post&lt;/a&gt; for some tips on how I do it.
+&lt;/p&gt;
+
+&lt;p&gt;
+When you find something you feel passionate about, the multiple trains
+of thought kinda all go in the same direction. They&apos;re all interesting,
+and you want to ride them all. If you fight to ride one (or few) of
+them, you&apos;re gonna give yourself a hard time. Instinct to hop on each
+one of them until another one is more interesting isn&apos;t all that evil.
+I&apos;ll be writing more posts on how I do that (i.e tools and techniques I
+use), I don&apos;t have time right now, and am losing interest in writing
+this post. Try to trust yourself that you&apos;ll come back to what you&apos;re
+pausing, have means that allow you to hop b/w different things, and try
+to be at peace with the fact that this is simply how you operate. It
+might look chaotic to others, you&apos;ll still not be &quot;normal&quot;, but you&apos;ll
+be a whole lot happy, and hopefully satisfied.
+&lt;/p&gt;
+
+&lt;p&gt;
+In my current setup I have tens of different things I am time-sharing
+on, and am still delivering satisfactory value in my work. It is
+certainly possible for you to not fight tooth and nail with your way of
+thinking and have a satisfactory career (at least in Software
+Development).
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>coming-to-terms-with-adhd-part-2</guid>
+            <pubDate>2019-01-03T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Coming to terms with ADHD</title>
+            <link>https://bitspook.in/blog/coming-to-terms-with-adhd/</link>
+            <description>&lt;p&gt;
+After my recent subscription to &lt;a href=&quot;http://reddit.com/r/adhd&quot;&gt;/r/adhd&lt;/a&gt;, I
+realized how important it can be to share experiences. Even when it is
+something very personal and seem unlikely that anyone can relate to it,
+it can be quite helpful for someone who thinks she&apos;s alone with her
+struggles. A while back I deleted most of my old blog posts feeling
+embarrassed of their suspected cringeworthiness. Now I think it was a
+mistake. I am thinking about resurrecting them from archive.org.
+&lt;/p&gt;
+
+&lt;p&gt;
+In this post I want to talk about how I came to the single instance of
+my life when I am not completely lost in self-pity for being too lazy
+and undisciplined. Perhaps it was this self-loathing that slowly turned
+to depression, and a bad event finally pushed me into the hole that I
+believe I am out of now.
+&lt;/p&gt;
+
+&lt;p&gt;
+I started my research on ADHD when my doctor pointed I might have it. At
+that time I was in limbo of a special kind. I was quite used to the
+struggle of making myself do work that wasn&apos;t interesting anymore. I was
+also used to the periods of time when I was simply incapable of doing
+any work. But what made me go to the doctor was a relatively longer
+period of true nothingness. Nothing would excite me, no matter what I
+tried. The chaos inside my head got so out of control I was often
+talking to myself in an attempt to materialize the voices and solidify
+the line of thought so I could deal with them one at a time. Nothing
+worked. I would often contemplate suicide because my mind just wouldn&apos;t
+shut up about how pathetic I was. It was then I decided to consult help
+from a professional.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have not reached a solution, perhaps there is no solution that solves
+everything. But here is a list of things that has made a huge impact in
+helping me come to terms with my ADHD.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-keep-a-daily-journal&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;keep-a-daily-journal&quot;&gt;Keep a daily journal&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-keep-a-daily-journal&quot;&gt;
+&lt;p&gt;
+Try to know yourself. Understanding why you are thinking what you are
+thinking can be immensely helpful. It will help you figure out the flaws
+in your thinking, and how to make up for them. For example, a pat
+routine has saved me so many times once I started noticing that how
+often in a single I would forget my wallet or my phone or keys. Small
+things like this add up to make life miserable, and often go unnoticed
+in the storms of thoughts we face every day.
+&lt;/p&gt;
+
+&lt;p&gt;
+So much of the overwhelmingness can just be let gone by writing it down.
+Try to be your own therapist, try to witness yourself. Not to
+participate, or engage, just analyze. It can be quite an exhausting
+thing to do, but I&apos;ve found it to be more helpful than meditation. When
+I write in my diary, I find myself to be much more in control of life
+the next day. It&apos;ll also help you figure out which of your ideas are
+actually work-able and which are just fluff that need to go in trash
+can.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-write-stuff-down&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;write-stuff-down&quot;&gt;Write stuff down&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-write-stuff-down&quot;&gt;
+&lt;p&gt;
+You don&apos;t need to wait for the night to fall before you can write in
+your diary. Writing often during the day is quite helpful too. Write
+anything and everything down. Is it something you want to do but can&apos;t
+right now? Create a todo entry. Just had a brilliant new idea? Capture
+it. Invest in a tool that can help you capture your thoughts quickly.
+Make this process a part of your life. I use Emacs&apos; Org mode which has a
+brilliant capture system, and I am very happy with it.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-delegate-to-your-future-self&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;delegate-to-your-future-self&quot;&gt;Delegate to your future self&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-delegate-to-your-future-self&quot;&gt;
+&lt;p&gt;
+You don&apos;t need to do all the hundred things you have thought of, today
+itself. Delegate them to your future self. I don&apos;t remember where I
+learned it, but it is very helpful to treat your future self as a
+different person, and just assign tasks to him that you don&apos;t have time
+to work on right now. You can schedule stuff you capture right away, or
+you can have a weekly review when you sort everything you captured in
+the week.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-review-weekly&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;review-weekly&quot;&gt;Review weekly&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-review-weekly&quot;&gt;
+&lt;p&gt;
+It is very important to review everything you capture on regular
+intervals. It&apos;ll give you confidence regarding your system, you could
+trust yourself more. When you can start trusting your future self,
+things becomes a lot very easier. You also become better at estimating
+stuff, so the commitments you give to other people bring you that much
+less anxiety.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-respect-the-decisions-made-by-your-past-self&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;respect-the-decisions-made-by-your-past-self&quot;&gt;Respect the decisions made by your past self&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-respect-the-decisions-made-by-your-past-self&quot;&gt;
+&lt;p&gt;
+Only way you can trust your future self to finish what&apos;s assigned to him
+is if you respect the decisions made by your past self. You don&apos;t have
+to beat yourself up too much about it either. Understand that it&apos;s not
+easy to estimate things. If we could predict things very reliably, we
+could open shops as psychics. Try to achieve &quot;eventual consistency&quot;. Not
+everything is equally important. Make sure that if something has been
+assigned to you, it eventually gets completed.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-find-something-you-can-attach-meaning-to&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;find-something-you-can-attach-meaning-to&quot;&gt;Find something you can attach meaning to&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-find-something-you-can-attach-meaning-to&quot;&gt;
+&lt;p&gt;
+It&apos;s helpful to have something to call home. A principle that you
+wouldn&apos;t compromise with. I have chosen to attach meaning to the quality
+of the work I do. That&apos;s where I try to find solace. That&apos;s what I use
+to bring myself to peace, when I can&apos;t control the mess in some parts of
+my life. It might be one of the cardinal sins, but this kind of pride
+helps build confidence to face life.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>coming-to-terms-with-adhd</guid>
+            <pubDate>2018-12-15T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Relationships</title>
+            <link>https://bitspook.in/blog/relationships/</link>
+            <description>&lt;p&gt;
+Romantic relationships are such amazing things. I have had moments in my
+life when I considered myself to have a certain level of control on my
+mind; in terms of that I can witness myself as an outsider. The
+introspection, the self awareness that make me think that, very rarely
+accompany me when I am in a relationship. It seem to have a liking to
+solitude.
+&lt;/p&gt;
+
+&lt;p&gt;
+Looking at it from far really brings the picture of a &quot;family man&quot; home.
+A lone man seem to have the ability to accomplish much more than a man
+bound to another person. It takes a lot of energy just to be with
+someone. It has been 220 days since I last wrote a diary entry; my
+primary medium of introspection. I&apos;ve been so lost in the everyday
+churn, I chose not to give time to my self. Not that I am complaining;
+I&apos;ve been happily lost.
+&lt;/p&gt;
+
+&lt;p&gt;
+For however many gifts solitude brings, the pain of loneliness is not
+something to fool around with. Perhaps it is the pain itself that make
+great people do great things, but it did make me realize the meaning of
+crippling in crippling depression. Perhaps this is one of the reasons
+successful people credit half their success to their partners. It must
+be possible to have partners that can assist each other unlock their
+potentials. Can you be so alone with someone? I wonder if it is a matter
+of finding someone right, or making yourself right for the one you are
+with. I am going to put all my eggs in the latter basket. We&apos;ll see how
+this gamble plays out.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>relationships</guid>
+            <pubDate>2018-11-10T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>That sounds fun!</title>
+            <link>https://bitspook.in/blog/that-sounds-fun/</link>
+            <description>&lt;p&gt;
+I got an opportunity to introspect in a conversation with a client when
+he questioned my use of the word &quot;fun&quot;. What do I mean when I say
+something is fun? I am not entirely sure. May be when I see something
+that excites me a little. People have very different interpretations of
+fun. For me it is usually applying creativity to build something.
+Activities the involve combination of these two, make me feel most
+satisfied. Balance is very important.
+&lt;/p&gt;
+
+&lt;p&gt;
+But what do I really mean when I say something is fun? I almost never
+know if it is going to be fulfilling at the time of making this
+declaration. So how do I reach the point where I can say that X is going
+to be fun?
+&lt;/p&gt;
+
+&lt;p&gt;
+It might be an opportunity to learn something new. The unknown scares me. It&apos;s a
+thrill and possibly vain feeling of growth. I have a long list of things I want
+to learn/master. When my mind sees an opportunity to check a box off of that
+list, it gets excited.
+&lt;/p&gt;
+
+&lt;p&gt;
+It might as well be pure vanity. Vanity plays important part in my mind. When my
+subconscious thinks keeping appearances is important, seeing a geeky-sounding
+statement just automatically make it blabber &quot;that sounds fun&quot;. Although I try
+to keep my narcissism in check, occasional slips are a thing.
+&lt;/p&gt;
+
+&lt;p&gt;
+Another thing that I think I consider fun is &quot;fixing&quot; something. It is quite
+possible to mark me as a control freak; although I won&apos;t voluntarily accept the
+label. I do however occasionally attain rather strong opinions about how certain
+things shall be. When I see an opportunity to &quot;fix&quot; something to my definition
+of right, that is a strong motivational force. However unreliable it might be,
+working with motivation is fun.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>that-sounds-fun</guid>
+            <pubDate>2018-09-11T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Some random thoughts</title>
+            <link>https://bitspook.in/blog/some-random-thoughts/</link>
+            <description>&lt;p&gt;
+Life can be so overwhelming sometimes. Sometime I wonder how people go
+on about living without asking questions. Or may be they do ask
+questions but get satisfied by the answers world has to offer. So much
+in the world goes around these questions after all. Religions and
+nations for example. Who&apos;d believe in such farcicality if there were
+proper answers. Purposelessness is painful. So is loneliness. I seem to
+have plenty of both of them. And then there is paranoia and laziness.
+Latter two are mostly the reasons for former two. Inability to trust
+anyone and jumping to the worst keep me away from most people. Laziness
+keep me from diving into anything engaging enough to forget that it&apos;s
+all meaningless.
+&lt;/p&gt;
+
+&lt;p&gt;
+Laziness now, may be I can do something about it. I have been practicing
+with rituals as of late. They work well 60% of the time, today however I
+failed them drastically. May be tomorrow will be a stronger day.
+&lt;/p&gt;
+
+&lt;p&gt;
+I think there is another reason for laziness as well. The work. It gets
+so stupid some times. Well, most of the times it is so damn fucking
+stupid. It is no fun writing forms all day long. But I need money right
+now, I need a lot more than this job provides, but to start generating
+more money, I need more skills. Whether I go for a better paying job or
+for my own business, both need time. We&apos;re building a house, so the need
+for money is immediate. I have to stick with this job for long enough to
+finish the house and have some savings to give myself some period to lay
+back and learn new skills, and bootstrap a business.
+&lt;/p&gt;
+
+&lt;p&gt;
+As to what business I&apos;ll do, I am thinking to have a take on content
+publishing and app building combo. I&apos;ll build apps that do something,
+and I&apos;ll start a blog for each app. Apps will have premium versions via
+in-app purchases, and blogs will have ads. For this I plan to first
+study the competition, for which I&apos;ll build an Intenet-wide crawler to
+fetch and keep information about everything that goes on in public
+Internet.
+&lt;/p&gt;
+
+&lt;p&gt;
+Another plan I have is to start an app and business for farming.
+Bio-farming and whatnot. I like to farm and I like Punjab. I&apos;ll like to
+do something for the land.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have to get on speed with studying Haskell. I intend to start building
+the Internet scanner in Haskell after I finish the 2 Haskell courses I
+plan to do. After that I&apos;ll do a series of blogs for algorithms, apps,
+games and Mathematics. Perhaps on farming and immigration out of India
+as well. Basically everything that I want to do, I&apos;ll turn it into a
+blog.
+&lt;/p&gt;
+
+&lt;p&gt;
+Sometime I want to just hit the road and live a traveler&apos;s life. I know
+it sound obscene for I hate to travel, but constant change keep me from
+falling into limbo, thinking how utterly meaningless everything is. I
+guess that&apos;s how people go about their lives. There are so many problems
+everyone have to deal with, there is no time or energy left to indulge
+in this bullshit. Specially given that there is much more juicy bullshit
+for most to indulge in; love, family, power, politics, nationality, and
+the one bullshit to rule them all, religion.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>some-random-thoughts</guid>
+            <pubDate>2016-09-30T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Losing to Nothingness</title>
+            <link>https://bitspook.in/blog/losing-to-nothingness/</link>
+            <description>&lt;p&gt;
+Couple weeks back I executed my plan to return to Chandigarh. The plan
+was to take a break from work and relax for a bit, teach myself some new
+skills. The real life butted in and I haven&apos;t started the phase 2 yet,
+but the change was big and I am feeling the affects.
+&lt;/p&gt;
+
+&lt;p&gt;
+I strive to build bubbles of order in midst of chaos that is life, but
+what&apos;s still a mystery to me is why change give me a high. Bigger the
+change higher the crest. In my final days in Bangalore I was almost at
+the deepest of the limbo; shifting almost brought me back on track. The
+crest is usually temporary, I am certain same is the case this time as
+well. Usually I meet equally deep troughs. Just thinking of it give me
+the chills.
+&lt;/p&gt;
+
+&lt;p&gt;
+However, something is different this time. I am ought to be on a high,
+yet I am feeling the pull of a trough. It feels even weirder than it
+sounds. I feel very peaceful, yet there is this unanswerable
+restlessness. I feel an insatiable hunger at all times, as if there is a
+big void in middle my stomach which is pulling my abdomen inside. The
+peace is such I could die right now and not have a single regret, not a
+thing I want to do more or different. Same time there is this alarm that
+just keep ringing for all the things I have left undone. All the
+promises to be fulfilled.
+&lt;/p&gt;
+
+&lt;p&gt;
+Duality yet has some constants, some patterns are emerging. I am living
+on 6th floor these days. It provide quite a demi-god view of the
+neighborhood; looking at automated people, day in and day out. It raise
+so many questions; so much of my own life is just acting on impulses. An
+unclear realization is rendering so much of life to nothingness. It&apos;s
+like I&apos;ve reached a conclusion, I don&apos;t know to what. I don&apos;t know what
+it is. A cluster of thoughts I can&apos;t tell apart. Perhaps this is how it
+feel like when entering the actual madness.
+&lt;/p&gt;
+
+&lt;p&gt;
+What I fear most is that I might be concluding life. It is becoming
+harder and harder to convince myself to live for gathering things. I&apos;ve
+always had a loose grip on reality, now I am fighting to hang on to
+however little I have left. Paranoia and delusions are coming back.
+&lt;/p&gt;
+
+&lt;p&gt;
+It feels like a storm is approaching, yet it&apos;s so calm. I am dreadfully
+afraid, but something in me is welcoming it. May be this is the eye of
+the storm I am in. It sure feel like somewhere there&apos;s a clock, ticking.
+There is so much going on in my silly little head, and there is this
+emptiness sucking me in.
+&lt;/p&gt;
+
+&lt;p&gt;
+I fear I might be losing to this nothingness. I am scared the peace is
+temporary, but the chaos is just getting started.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>losing-to-nothingness</guid>
+            <pubDate>2016-08-23T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>My overplanning nature and how it help me</title>
+            <link>https://bitspook.in/blog/my-overplanning-nature-and-how-it-help-me/</link>
+            <description>&lt;p&gt;
+Although I try my best to not fall in the conformist&apos;s trap, there is
+always a force lurking right beneath the conscious which want me to fit
+in. I remember my obsession for control and planning from quite early
+childhood. It used to be a major source of frustration; not that I was
+obsessive about planning things, but that everyone else was not.
+&lt;/p&gt;
+
+&lt;p&gt;
+Over time I figured it was me who was the odd one; so I subconsciously
+started suppressing this (over?)planning nature of mine.
+&lt;/p&gt;
+
+&lt;p&gt;
+And supressed it was, until I started writing software. I found that
+properly planning things out before writing the software was immensely
+helpful. Writing every unique use case, all the nuances, things to do
+and things not to do; all of them helped when writing actual code.
+Proper planning would make writing software so much more smoother.
+&lt;/p&gt;
+
+&lt;p&gt;
+But it didn&apos;t put me on the path to undo the supression I had done for
+years; it merely put a doubt. I was still in doubt if I was the odd one
+here, may be I am just wasting time writing every detail down up front.
+May be it helped me only because it would satisfy my over planning
+nature which would then let me code in peace. So I wouldn&apos;t do it every
+time. Even though the results were obvious as daylight, the doubt would
+have me not write specs in so many cases. Laziness didn&apos;t help either;
+it&apos;s far more fun to just start writing code then it is to write specs.
+As a matter of fact, thinking and writing all the small details become
+painful on times.
+&lt;/p&gt;
+
+&lt;p&gt;
+To my great surprise, all it took was a &lt;a href=&quot;https://web.archive.org/web/20161117174710/http://www.joelonsoftware.com/articles/fog0000000036.html&quot;&gt;single blog post&lt;/a&gt; (well, actually 5 blog
+posts from a single series) to pull this doubt out of me, to take away all the
+confusion and bring the clarity that I knew the right thing to do all along.
+There are still things to learn, &quot;where to draw the line?&quot; for instance. But
+that is the fun part. Hard part will be to write specs for every software I
+write, defeating the laziness; which unfortunatley has become a big part of me.
+&lt;/p&gt;
+
+&lt;p&gt;
+I wish more programmers would blog about thier learnings and experiences
+and struggles. That blog post I linked about was written in 2000, and it
+came to my attention following another post on the same blog which
+someone linked in a chat group. May be I am the odd one here; I don&apos;t
+exactly have a team of developers working together, learning together.
+But I am certain I am not alone. I hope my posts help someone realise
+they&apos;re not alone if they have struggles similar as mine.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>my-overplanning-nature-and-how-it-help-me</guid>
+            <pubDate>2016-06-23T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Debt of my rebellion</title>
+            <link>https://bitspook.in/blog/debt-of-my-rebellion/</link>
+            <description>&lt;p&gt;
+Most of my school life I was very confused, depressed perhaps. I was a &quot;good
+boy&quot;, as they call those traumatized, obedient kids. Confusion started turning
+into frustration by the end of my 10th standard. It was the &quot;board&quot; class.
+Nonsensical pressure, corporal punishment and stupid as fuck rules had started
+turning my depression into anger. So much pressure was put on by that &lt;a href=&quot;https://sasacademy.com&quot;&gt;shithole
+of a school&lt;/a&gt; that one of my classmates had a mental breakdown. A guy went
+complete nuts. That was the final nail in the coffin.
+&lt;/p&gt;
+
+&lt;p&gt;
+I felt like it was my turn next. So I rebelled. Against everything that
+didn&apos;t make sense to me. Unfortunate for me, one of the foes in my
+rebellion was Mathematics. The dull, complex subject whose applications
+I couldn&apos;t understand. My teachers failed to convince me it was ever
+going to have a practical application at all. All they could come up
+with was &quot;competitive exams need it&quot;. But that won&apos;t make the cut.
+&lt;/p&gt;
+
+&lt;p&gt;
+After a year of being a total brat, I finally pushed my parents to sell
+a cow and buy me a computer. Computers always fascinated me, even though
+I had used Computers only for a total of 10-12 hours max (occasional
+15-20 minutes sittings in IT lab). I taught myself Python from the
+ebooks I would download on my rare visits to cyber-cafe in nearest city.
+It was a revelation. I didn&apos;t need those stupid teachers anymore; there
+was no need to go through all the frustration, frowned looks and grudges
+(which often lead to physical punishment) from the teachers. I could
+teach myself better, faster. Unfortunate side effect of this
+realization: I didn&apos;t need a shiny college.
+&lt;/p&gt;
+
+&lt;p&gt;
+Not going to college however was not an option. My parents were giving me enough
+pain already for using computer too much (despite the fact that I was good at
+school AND helped at home and farm as well). So I went for admission in &lt;a href=&quot;http://dgc.edu.in/&quot;&gt;one of
+those piece of shit colleges which let anyone in for a big some of money&lt;/a&gt;.
+Another story for another day.
+&lt;/p&gt;
+
+&lt;p&gt;
+I could teach myself everything I needed. I was perhaps right about
+that. But there was nobody to tell me what to learn. By the time I got
+Internet I was making enough side money building software to pay for my
+ever growing list of re-appears. I didn&apos;t see no math used anywhere.
+When I got Internet, I started making websites. Again, no math to be
+seen anywhere. The college was as shitty as they get. They never really
+taught any of the syllabus (DS, algorithms etc). So I ignored them as
+mumbo-jumbo schools put in their books to make money. I was making more
+money than most lecturers in that college, I didn&apos;t care.
+&lt;/p&gt;
+
+&lt;p&gt;
+In 2014 I graduated, and went for full time freelancing. It took me some
+time till I reached my limit; when I felt brute forcing my way through
+problems wasn&apos;t really efficient. It was boring. It was becoming more
+and more obvious that I was plateauing. I started realizing that there
+are better ways to do things, and so many of them have already been
+discovered.
+&lt;/p&gt;
+
+&lt;p&gt;
+But now the playtime was over. I was no longer in college, I had to
+support myself; and my family (they&apos;re not very good financially). So I
+continued freelancing. It was paying much more than most approaching
+companies were offering, clients were happy, so what the hell, I
+thought. I planned to save some amount in bank, and then I was to take
+few months off to go back to square one and learn CS theory and
+Mathemetics. I reached there 3 months ago. But then life did what it
+always do. 2 big expenses came up and cleared most of my savings. So I
+continued with freelancing.
+&lt;/p&gt;
+
+&lt;p&gt;
+But I guess it&apos;s about time I put my original plan in action. I have
+started getting the good ol&apos; limbo feeling again. I used to think it was
+my indiscipline which make me feel like shit. But now I think it isn&apos;t.
+Most of the time I have to discipline myself to get away from the
+computer. When I start needing to force myself to code, it&apos;s because
+something somewhere is wrong. I think I&apos;ve hit another plateau (this
+realization (that it&apos;s not indiscipline that put me in limbo) itself was
+a load off my chest, but a story for another time).
+&lt;/p&gt;
+
+&lt;p&gt;
+I have savings to last for only a couple months without work, but I
+guess that&apos;ll have to do. It&apos;s funny deja-vu situation actually. I was
+in similar situation when I headed for Bangalore. Back to square one I
+guess. I think it&apos;s time to put a pause on freelancing, and pay the debt
+of my rebellion.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>debt-of-my-rebellion</guid>
+            <pubDate>2016-06-11T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Reality</title>
+            <link>https://bitspook.in/blog/reality/</link>
+            <description>&lt;p&gt;
+It is one of those rare times I decide to write a blog post without life
+taking a huge shit on me. Or am I just projecting success for attracting
+success? Guess bitches. Hope you&apos;re all living in reality and not losing
+yourself in your imaginary fantasy world. Guess what? You&apos;re not living
+in reality. There is no reality to live in.
+&lt;/p&gt;
+
+&lt;p&gt;
+Reality like God can not be seen, observed, or proven. Even those
+fucking scientists giving hardcore &quot;laws&quot; of physics say there can be
+other realities where our laws of physics don&apos;t apply. Hell they don&apos;t
+apply everywhere in our own dimension (hint: Quantum of Solace was a
+douchie movie ).
+&lt;/p&gt;
+
+&lt;p&gt;
+Even if there is a &lt;b&gt;reality&lt;/b&gt; (emphasis not mine, don&apos;t know who did it)
+to observe and live in, human mind (and eyes) are certainly out of their
+league to observe it for what it is. Fuck we can&apos;t even understand what
+the person in front of us is saying, we only understand what we hear.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-personal-realities&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;personal-realities&quot;&gt;Personal Realities&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-personal-realities&quot;&gt;
+&lt;p&gt;
+We all live in our own versions of personal realities, sort of like
+bubbles all our lives and thoughts and even imaginations are trapped in.
+Reality is that we can&apos;t know the reality. We&apos;ll always live in one
+bubble or other. Best you can do is choose your bubble, and switch from
+time to time. More bubbles you observe, better your chances are to not
+get locked in one.
+&lt;/p&gt;
+
+&lt;p&gt;
+Everyone is living in a bubble. Some are aware of it, most are not.
+People see through lenses they wear over time. With time the lenses get
+different shades, get thicker and thicker. At the end of it, your whole
+life is a fucking opinion.
+&lt;/p&gt;
+
+&lt;p&gt;
+People in fact, live in more than one bubbles. Bubble of &quot;ethics&quot; given
+by your parents, religion and society, the &quot;professional&quot; bubble most
+get caught in when they taste the thing they think is success for first
+time (this one is easiest to detect, look around, ask people why they&apos;re
+doing what they&apos;re doing), the &quot;love&quot; bubble you get trapped in from
+movies and fairy tales, and many more.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-probabilities&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;probabilities&quot;&gt;Probabilities&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-probabilities&quot;&gt;
+&lt;p&gt;
+You have no control over your life. Life is not yours to control, it is
+not real. Everyone around you is carrying their own reality, overlapping
+and interfering with yours. Best chance you&apos;ve got is a chance. If you
+want to make something happen, you can only increase its probability of
+happening. Doesn&apos;t mean you should lose hope and go home (if you thought
+that, you probably should give up and go home), if you wanna make
+something happen, you gotta keep increasing the probability of its
+occurrence until the probability is 1. Or spend your 80 years of misery
+trying to do so.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-people&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;people&quot;&gt;People&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-people&quot;&gt;
+&lt;p&gt;
+When I see people around, I try to think of them as different realities.
+Every single one of them is living in their own reality. You&apos;d be
+surprised to find out how easy it is to manipulate someone (read bend
+people to your will) once you can empathise with their reality.
+&lt;/p&gt;
+
+&lt;p&gt;
+The only way to observe a (wo)man&apos;s reality is to observe it from the
+outside. Like I said, it is not the reality, it is a bubble. Most people
+are hardcoded in their bubbles. Bubbles are like games (or is it my
+bubble kicking in?), bubbles have rules too. Like every game has its own
+rules of physics, bubbles have their own rules. Even if you can&apos;t live
+another person&apos;s bubble, you can read their rules. If you can do it well
+enough, you can tell exactly what other person is thinking and what he&apos;s
+going to do in next 5 minutes, or 5 years.
+&lt;/p&gt;
+
+&lt;p&gt;
+You know the couples which live together (happily) can communicate
+without talking, can tell what&apos;s up in other person&apos;s mind. My theory is
+that by being close for long enough time, their bubbles start
+overlapping. Like Van diagrams, there is that area in which they think
+exactly same things. They don&apos;t need words anymore to communicate,
+because they know what other person is feeling (and hence thinking,
+wanting to say or do or whatever, old people creep me out).
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-reading-the-bubbles&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;reading-the-bubbles&quot;&gt;Reading the bubbles&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-reading-the-bubbles&quot;&gt;
+&lt;p&gt;
+It&apos;s not confined to couples, neither you need to live with someone for
+a lifetime to be able to observe their bubbles. It is a skill, an art
+perhaps. Some people are damn good at it.
+&lt;/p&gt;
+
+&lt;p&gt;
+It is easy to observe others&apos; bubbles. The basic and most difficult
+requirement is already met. You are already outside the bubble, now all
+you have to do is study it from inside without entering it. Easy, huh?
+Look for the reflections. Make them talk, don&apos;t listen to what they say,
+look for the patterns. Patterns tell you the rules of their worlds. Try
+to imagine how it is to see through those eyes. That is a whole
+different world that person is seeing, it is, fascinating to say the
+least. (Fuck I just told you my mind reading trick, I think I should
+stop blogging)
+&lt;/p&gt;
+
+&lt;p&gt;
+You need the right set of tools to think in. Like in software it&apos;s all
+about the right abstractions. This whole &quot;bubbles&quot; thing is just that, a
+tool to think in. Ultimate goal is to be able to look at the world
+exactly as someone else, find out the patterns, and hence the rules. And
+of course ultimately play the rules for fun and profit.
+&lt;/p&gt;
+
+&lt;p&gt;
+Or you can take the script-kiddie way and jump to finding rules,
+skipping the hardest first part. But that route involves lot of trial
+and error, failure may result in bitter relations for life. Plus, you
+lose all the scope for creativity and flexibility when you take the
+latter way.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-business&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;business&quot;&gt;Business&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-business&quot;&gt;
+&lt;p&gt;
+These &quot;personal realities&quot; can (and are) actually be used for
+manipulating people to do what you want.
+&lt;/p&gt;
+
+&lt;p&gt;
+People live in many bubbles; many people live in similar bubbles.
+Bubbles have rules, similar bubbles have similar rules. The textbook
+tricks salespeople do lie in that domain. The whole range of tricks an
+Indian sales person use everyday, won&apos;t work if he move shop to US. The
+whole mutual reality his customers live in just changed. (There are of
+course certain universal rules which work with almost all humans. How
+many years of evolution was it again?)
+&lt;/p&gt;
+
+&lt;p&gt;
+That&apos;s rudimentary though. &lt;b&gt;Personal realities&lt;/b&gt; can actually be created.
+You are a sales guy, imagine if you could create a world where people
+think they need your towels although they don&apos;t ever bath or wash their
+hands (nasty people, I like &apos;em already). You can do that for one person
+at a time, or N people at a time where N is the number of people who
+watch the news you control, or (be less dramatic) people who watch your
+advertisements. Again there are different levels of sophistication with
+which this can be done. More you know about someone (that&apos;s why you make
+&apos;em talk), their habits etc, easier it is to manipulate and fabricate
+entirely new realities for them. Imagine how fun the life would be if
+you were Facebook or Google. I&apos;ve heard Facebook knows even when and how
+many times you go to poop everyday.
+&lt;/p&gt;
+
+&lt;p&gt;
+You didn&apos;t think I was all evil trying to teach you how to manipulate
+people as I do, did you? Well that&apos;s certainly a perk, but the goal is
+to be able to identify the realities from induced realities, and
+fabricated realities (there&apos;s a difference). See I was trying to save
+you all this time, you silly! I am no evil! Come on now jump in my van
+already, I have tinfoil hats too.
+&lt;/p&gt;
+
+&lt;p&gt;
+I&apos;ll probably talk about this in depth later some time, about the
+different tools I&apos;ve figured people using, some unused ones I&apos;ve
+discovered through experimentation, and other delusional shit.
+&lt;/p&gt;
+
+&lt;p&gt;
+I could write a book about it, but I gotta go watch that movie everyone
+on Reddit has started talking about all of a sudden.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>reality</guid>
+            <pubDate>2015-09-12T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Please Don’t Fuck Up the Hackathons</title>
+            <link>https://bitspook.in/blog/please-don-t-fuck-up-the-hackathons/</link>
+            <description>&lt;p&gt;
+I came to Bangalore few months back attracted by its humming tech
+culture, lots of meetups and even more so, hackathons. I work as a
+freelancer, I have no other purpose here. And I was not disappointed
+until recently. Honestly, I don&apos;t even know what definition of word
+&quot;hackathon&quot; has for Bangalore. I&apos;d quote Paul Graham here, &quot;the city
+sends you a message&quot;. Bangalore certainly doesn&apos;t give a message of
+freedom or even innovation, the message I heard when I came here was
+that of &quot;milk whatever you can&quot;. People running after money. End of
+story. But it still has a (relatively) pretty healthy tech-culture.
+&lt;/p&gt;
+
+&lt;p&gt;
+I believe hackathons are meant for open innovation. An event where
+people go and build something, anything that come to their mind. I don&apos;t
+mind themes. But giving me a &quot;problem statement&quot; to work on is
+ridiculous. It is no more a hackathon when you want everyone to climb
+the same tree to &quot;win&quot;. I don&apos;t go to hackathons for &quot;winning&quot; them. I
+don&apos;t know what kind of geek does that. Hackathons are for hackers, for
+having fun, for our happiness, for teasing the brain muscles which we
+can&apos;t utilise in our day jobs. The word &quot;hack&quot; in hackathon means
+innovation. Anything useful that comes out of a hackathon is a
+by-product, never the primary goal. It&apos;s sort of paradoxical.
+&lt;/p&gt;
+
+&lt;p&gt;
+Beauty of a hackathon is that there is no stressful competition. There
+is nothing to compare against, which lead to a very healthy kind of
+competition (which might not even be called competition). I&apos;d suggest to
+read this if you&apos;d like to better understand the
+&lt;a href=&quot;https://web.archive.org/web/20151124075842/https://medium.com/@pedramkeyani/hacking-company-culture-1daa3be1d769&quot;&gt;spirit
+of a hackathon&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+The one major piece of crap that I think is on the way to ruin
+hackathons in Bangalore (at least) is this company called
+&lt;a href=&quot;https://web.archive.org/web/20151124075842/http://www.venturesity.com/&quot;&gt;Venturesity&lt;/a&gt;.
+Their main idea is to organize hackathons for companies so they can hire
+the winners (or whomever, may be). But the way they organize the event
+is what bothers me. They give 2-3 problem statements and ask people to
+solve them. Recently they&apos;ve also made it compulsory to have a
+&lt;a href=&quot;https://web.archive.org/web/20151124075842/http://en.wikipedia.org/wiki/Software%5Fdesign%5Fdocument&quot;&gt;&quot;design
+document&quot;&lt;/a&gt; for the problem statement they send one day before the
+event.
+&lt;/p&gt;
+
+&lt;p&gt;
+If some company actually want to hire some good hackers, then this
+(venturesity) monkey-business is definitely not what they should be
+doing. You kill the spirit of the hackathon, reduce it to a mere race
+where everyone is climbing the same tree, and then you judge them to
+&quot;hire&quot; them? Is this the best Bangalore&apos;s hackers could come up with?
+There are so many things you could innovate, and you chose the same
+retarded system of master race that&apos;s ruining education in our country.
+I don&apos;t personally know the people behind venturesity, but I can bet
+there is some academic from some big-shot school pulling the strings.
+&lt;/p&gt;
+
+&lt;p&gt;
+Interviews are not perfect, may be not even good, I agree with you
+there. But this ventursity hackathon hiring shit is a step backward. It
+is a night long exam which is anything but fun. When I look at this
+situation, I don&apos;t see Venturesity solving a problem, they are milking
+an opportunity which is not theirs to milk (you are not fucking hackers,
+stay away from hackathons). They are in fact creating a problem of their
+own. Soon people will follow the suit and in worst case Indian
+hackathons will all be this bullshit Venturesity does. World is full of
+monkeys you see. We all know how everything gets an Indian version, and
+I don&apos;t want this to be Indian version of hackathons.
+&lt;/p&gt;
+
+&lt;p&gt;
+In the end, if there&apos;s someone from ventursity reading this or if
+someone can take this message to them, I&apos;d like to personally say
+something. My problem is not with companies using this strategy for
+hiring, or with Venturesity doing business. My problem is with you
+calling it a hackathon. Please stop calling your events hackathons.
+Because they are fucking not. Call them hire-e-thons or
+night-long-exams-because-we-couldnt-innovate or whatever, but please
+don&apos;t call them hackathons. It gives a very wrong message to the
+community about what a hackathon is.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;YOU ARE FUCKING RUINING HACKATHONS FOR EVERYONE.&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Once again with due respect, please don&apos;t ruin one good thing in
+Bangalore I love, it&apos;s tech culture.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-update-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;update-1&quot;&gt;UPDATE 1&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-update-1&quot;&gt;
+&lt;p&gt;
+So I got a response from Venturesity after a friend posted this post in
+their private group. This is what they said and my reply:
+&lt;/p&gt;
+
+&lt;p&gt;
+Venturesity: The problem statements are well-defined practical problems
+which our clients are trying to solve themselves. Though they may seem
+rigid at times, they leave enough room for creativity and innovation.
+Our asking for a design document ensures serious participation.
+&lt;/p&gt;
+
+&lt;p&gt;
+There will be stress when anyone tries to program/debug anywhere. But we
+try to make the event as less stressful as possible. There is always
+good food/music/dance to take the edge off.
+&lt;/p&gt;
+
+&lt;p&gt;
+We appreciate the criticism, Charanjit :)
+&lt;/p&gt;
+
+&lt;p&gt;
+Me: Putting a theme on a hackathon is the restriction which encourages
+innovation, giving a &quot;problem statement&quot; is not. I don&apos;t think it
+matters how well defined the problem statement is, you simply change the
+meaning of the word hackathon when you push a problem statement for
+everyone.
+&lt;/p&gt;
+
+&lt;p&gt;
+What do companies want to achieve with the venturesity hackathons? Good
+hackers as employees. Is racing the only way to do that? Say Stayzilla
+want employees who can work in hotels domain. They gave us problem
+statements and looked for people who demonstrated the qualities required
+to solve those specific problems, and who can race. If they had chosen
+to just theme that hackathon saying “theme is stay in hotels (or
+something more creative), and we&apos;ll judge projects by 1. data mining
+fu 2. Our API fu 3. Whatever their third problem statement was
+&lt;/p&gt;
+
+&lt;p&gt;
+Companies are putting a lot of money in there, they should be clear
+about what they want and try not to damage the culture. If they want to
+hire &quot;hackers&quot; with vision and creativity along with the ability to
+code, they should innovate and change their approach here a bit.
+&lt;/p&gt;
+
+&lt;p&gt;
+If all the companies want are code-monkeys who race all day to achieve
+goals in cubicles, then that is fine too. Just don&apos;t call it a
+hackathon. Because it is not. When you give a too restrictive (or even
+open) &quot;problem statement&quot; you killed the hack of hackathon, it&apos;s just a
+(mar)athon that is left behind.
+&lt;/p&gt;
+
+&lt;p&gt;
+I respect companies for putting the money and for showing openness for
+hiring. May be they are expecting to see innovative solutions to some of
+their problem statement (like you said) that they can use from the
+hackathon. But won&apos;t it be better if they let people truly innovate in
+aspects the company has not thought of yet? They might get something
+they haven&apos;t even imagined/envisioned yet, and they will surely get the
+most innovative minds which they can then use for solving the problem
+statements they actually need solved.
+&lt;/p&gt;
+
+&lt;p&gt;
+I don&apos;t want to be too mean, but I didn&apos;t really expect Venturesity to
+see the problem here. If they could, they would&apos;ve seen it by now.
+&lt;/p&gt;
+
+&lt;p&gt;
+Also design documents is not a solution to their problem of &quot;serious
+participation&quot;. Have you never participated in some big hack before?
+Just copy ‘em if you can&apos;t participate. Why don&apos;t you ask people to
+submit ideas, and have their github/linkedin/resumes (you already
+collect that info) and filter ‘em by hand. Design Document thing is more
+bad than problem statements.
+&lt;/p&gt;
+
+&lt;p&gt;
+PS Stress in a hackathon is a luxury. We love it. That is the prime
+motivator in a hackathon for pushing to the limit.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>please-don-t-fuck-up-the-hackathons</guid>
+            <pubDate>2015-04-13T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Making a System for Making a System for Productivity</title>
+            <link>https://bitspook.in/blog/making-a-system-for-making-a-system-for-productivity/</link>
+            <description>&lt;p&gt;
+I thought out hard last night and came up with a system that might (or
+might not) work. But I have to keep trying till I get it right. Here are
+some main points of my new system:
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-commitment-1-commitment&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;commitment-1-commitment&quot;&gt;#1 Commitment {#1-commitment}&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-commitment-1-commitment&quot;&gt;
+&lt;p&gt;
+Do 8+ hours on day&apos;s priority #1 before you can open any other
+website/video on the web. On weekdays it should be work that pay my
+bills, on weekends it can be 2 things, study/side-kick-projects to try
+new things/or whatever. I am free to just troll around on weekends, i.e
+do nothing and waste the day. This is the only commitment I make for a
+day.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-iterate-2-iterate&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;iterate-2-iterate&quot;&gt;#2 Iterate {#2-iterate}&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-iterate-2-iterate&quot;&gt;
+&lt;p&gt;
+Iterate over 3 days. Do above for 3 days, then review it and come up
+with a list of things that were tempting me to divert from my plan. Then
+replace these things with something else, or if possible get rid of
+them. Improvise and bring changes in my system to remove all the
+falsities. Also make a list of all the things that were motivating, and
+keep bringing them back in the system with #3.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-change-3-change&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;change-3-change&quot;&gt;#3 Change {#3-change}&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-change-3-change&quot;&gt;
+&lt;p&gt;
+Bring something new in my workflow every 3 days. Start using some new
+tool, make some modifications in Emacs.d, anything. If can&apos;t find
+anything, spin something from good things I got from #2 and bring it in
+the system with a flavour, or find a creative solution to get rid of
+something bad from #2
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;#x2013;
+&lt;/p&gt;
+
+&lt;p&gt;
+It&apos;s not a perfect system, but aiming for perfection has brought nothing
+but failure for me in past. I am trying to strike a balance b/w
+practicality and flexibility in the system. i.e for a system that would
+be flexible enough to improvise over time but strict enough that I won&apos;t
+get lost in managing the system itself. Idea is that I am going to get
+bored from this system in 15 days max. So before that happens, it should
+become self-sustaining and would require minimum input, while giving
+maximum satisfaction.
+&lt;/p&gt;
+
+&lt;p&gt;
+This is a system that should create another system when it dies in next
+15 days, and same should happen after than. Only constant is change.
+Keep improving, and more importantly, keep changing. Even if it is a
+step in wrong direction once in a while, just change for the sake of
+changing. If my system doesn&apos;t change, I will abandon it; so no matter
+how much good it was, it&apos;s gonna get wasted. If it doesn&apos;t change that
+is. Change is life baby!
+&lt;/p&gt;
+
+&lt;p&gt;
+By the way, today was the first day of me using this system. I
+introduced Trello as a change to my workflow. I used to plan things in
+org-mode in my Emacs, it&apos;s awesome. I changed to Trello just for the
+sake of changing, and it worked wonders for one day at least. I believe
+it can keep doing so for two more days. After that, I&apos;ll change
+something else. Not necessarily my thought/todo management system, but
+anything. I&apos;ll come back to Emacs&apos; org-mode some time later. Constant
+change doesn&apos;t mean things can&apos;t repeat. Future is what if not a
+reincarnation of past.
+&lt;/p&gt;
+
+&lt;p&gt;
+I did more tasks than I planned for today. It feels good.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>making-a-system-for-making-a-system-for-productivity</guid>
+            <pubDate>2015-04-01T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>A Mind Full of Chaos</title>
+            <link>https://bitspook.in/blog/a-mind-full-of-chaos/</link>
+            <description>&lt;p&gt;
+I need to reinvent a system for keeping myself in check. I can&apos;t think of a
+single thing I haven&apos;t tried in past; pomodoros, gtd, time boxing, what not.
+They all work for some time, and then stop working. We find flaws in systems
+pretty quickly; we find cracks, make excused to let us do the easiest thing, the
+laziest thing.
+&lt;/p&gt;
+
+&lt;p&gt;
+No matter what system I would adopt next, it all wears off soon. This is a wheel
+that has been reinvented countless times. If only world was so simple that what
+works for one would work for all. I need to build a system unique for myself;
+considering factors that might not have existed for those who predate me. Things
+that I didn&apos;t include earlier.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-change&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;change&quot;&gt;Change&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-change&quot;&gt;
+&lt;p&gt;
+I never considered change to be a part of any of my systems. I should this time.
+I believe most things work because of the new tools/techniques/whatever they
+bring on plate. A new lifestyle, a new toy, or just a different way to do
+something. As soon as the newness fades away, it becomes a chore to do. A
+cognitive load that I finally throw away with a deep breath.
+&lt;/p&gt;
+
+&lt;p&gt;
+I wonder how I&apos;ll integrate change. To make it an ultimate changing system, may
+I should adopt the actual digital nomad lifestyle. Travel around all the time. A
+month here, few weeks there, keep hopping from city to city. But then, I don&apos;t
+think I am a traveler kind of person. I like it more when there is less chaos
+outside my mind.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-hunger&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;hunger&quot;&gt;Hunger&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-hunger&quot;&gt;
+&lt;p&gt;
+Another important thing is the hunger for growth. I have an unquenchable thirst
+for growing bigger and bigger. Bigger in everything. I am not a competitive
+person though, I don&apos;t like competing with others. With just myself. I believe
+it is a good thing. Most satisfying is when I grow my skill set, learning
+something new or getting deeper into what I am already familiar with. But I
+wonder if it should be used as a carrot, or as a central piece of the system.
+Using it as carrot would be like having a 2 hour slot to study something after
+the day&apos;s work is done. For making it a central piece of the system will require
+me to find either:
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;New things to learn from within what I am currently working. Or&lt;/li&gt;
+&lt;li&gt;Find work for what I want to learn/strengthen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-race&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;race&quot;&gt;Race&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-race&quot;&gt;
+&lt;p&gt;
+I am seeing people leaving me behind, in the race I don&apos;t know I belong
+or not. A friend just got a job in a startup with very smart people. I
+envy him for the work environment and team he&apos;ll have there. May be I&apos;ll
+start looking for a job in May. Or just enter the wilds of freelancing,
+leaving the mothership of faceyspacey. I don&apos;t know. But that would be
+an easy workaround, not a solution. I might get into a team of people
+smarter than me, but not now. Not before I learn to orchestrate this
+chaos in my head.
+&lt;/p&gt;
+
+&lt;p&gt;
+These problems have been with me from the very beginning. I thought I
+solved them when we were in that pressure cooker with celebvidy. They
+seemed to be a thing of past when we were doing 18 hour days a year ago.
+But here I am facing them again, half dead. Or living dead may be (the
+problems, not me). I know I have nailed them, it just need a final push,
+the last piece of puzzle.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-specs&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;specs&quot;&gt;Specs&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-specs&quot;&gt;
+&lt;p&gt;
+I don&apos;t like it when I waste a day like I did today. I need to develop a
+real good system for myself, a system that will consume least willpower
+and provide maximum satisfaction.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-consumes-willpower&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;consumes-willpower&quot;&gt;Consumes willpower&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-consumes-willpower&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+Decision making
+&lt;/p&gt;
+
+&lt;p&gt;
+What to eat lunch, which cold drink, which snack. Fuck.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;The feeling of &quot;not enough freedom&quot; I have living in the hostel.&lt;/li&gt;
+
+&lt;li&gt;Forcing myself to do things
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;when I actually want to do something else. Oooh new shiny
+language/framework, so cool. I wanna do that, and I am stuck with
+Meteor. I can code this shit in dreams.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-boosts-willpower&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;boosts-willpower&quot;&gt;Boosts willpower&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-boosts-willpower&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+Change in my tools
+&lt;/p&gt;
+
+&lt;p&gt;
+A new cool mode in Emacs, some new sexy modification I do in
+settings, some new cool way I invent to do something that was
+repeating
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Knowing my tools better
+&lt;/p&gt;
+
+&lt;p&gt;
+Reading something new/deeper about Emacs/git/javascript/meteor is
+generally a happy/refreshing moment
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Talking to someone new in a friendly way.
+&lt;/p&gt;
+
+&lt;p&gt;
+If this backfires, it keep me drained for days though.
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-maximum-satisfaction&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;maximum-satisfaction&quot;&gt;Maximum satisfaction&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-maximum-satisfaction&quot;&gt;
+&lt;p&gt;
+Seeing 8:00+ in the hours worked today Knocking more tasks from my todo
+list than I actually plan to Exercising
+&lt;/p&gt;
+
+&lt;p&gt;
+It is funny all these things that give most satisfaction at the end of
+the day are most hard to do.
+&lt;/p&gt;
+
+&lt;p&gt;
+I am making this a blog post. Will be funny to read in future when I
+have conquered all these problems.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>a-mind-full-of-chaos</guid>
+            <pubDate>2015-03-31T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Small Things</title>
+            <link>https://bitspook.in/blog/small-things/</link>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;
+In this post I am talking about the significance of small things in
+life, some lessons I&apos;ve learned over time, and some random stuff.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+Everyday I go to bed with bigger than life dreams, promising myself
+tomorrow is the day when I&apos;ll take a giant step to drop all my bad
+habits and be a better, more productive person forever. A life full of
+satisfaction is just a night away. I&apos;ve been doing this for may be over
+2 years. Nothing changed of course. What actually mattered over time
+were the small things. All the new year resolutions, or stricter &quot;code
+of conduct&quot;s caused exhaustion at best, and dragged me into depression
+at their worst.
+&lt;/p&gt;
+
+&lt;p&gt;
+Small things keep accumulating over time, like the little bit of poison
+we eat everyday with &quot;food&quot;. Many times I&apos;d realize after it&apos;s too late,
+the little something has gotten so big that I have to cut it off
+altogether, or smother under the weight of little mistakes. A little bit
+of submission over time can make your employer feel like he own you. A
+little bit of lies, can mark you a liar for life.
+&lt;/p&gt;
+
+&lt;p&gt;
+But it&apos;s not all bad that come from little things. I have just made
+myself such that I see negative first. It is supposed to be a positive
+post, but a small step it is.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-small-wins&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;small-wins&quot;&gt;Small Wins&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-small-wins&quot;&gt;
+&lt;p&gt;
+Winning is a habit. There are many theories that&apos;ll nod in affirmation,
+I won&apos;t mention in this post. You have to get into the habit of winning
+to keep winning. No biggie, win small win frequently, and soon you&apos;ll be
+on the track of tackling any challenge with an invincible attitude, and
+you will actually score big wins.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-small-losses&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;small-losses&quot;&gt;Small Losses&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-small-losses&quot;&gt;
+&lt;p&gt;
+When I first started out with Python, it was all too easy. I was so
+super confident I can do anything with my dragon slayer. I of course
+fell on face many times, again and again. They never felt like a battle
+lost, they were small. Insignificant. But it did it&apos;s job in bringing
+down my morale for a long time. No matter with how much enthusiasm I&apos;d
+start something, something in me always kept mocking me, &quot;you&apos;ll fail&quot;,
+and I did. It still haunts me sometime, but I&apos;ve got over it pretty
+well.
+&lt;/p&gt;
+
+&lt;p&gt;
+When you are just starting with something new, be little careful and
+build a momentum with small wins, avoid losses howsoever small they
+would be.
+&lt;/p&gt;
+
+&lt;p&gt;
+I don&apos;t mean don&apos;t start something challenging. Do whatever you want, be
+prepared, you will hit walls. And when you do, remember not to
+accumulate small losses, your mind is too stupid, fool it. For every
+loss you suffer, score 3 wins. It doesn&apos;t matter how small they are,
+just win something small, minute I&apos;d say, it doesn&apos;t matter, just win.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-small-habits&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;small-habits&quot;&gt;Small Habits&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-small-habits&quot;&gt;
+&lt;p&gt;
+Habits are hard to build and leave. It&apos;s hard to get rid of bad ones,
+it&apos;s even harder to build good ones.
+&lt;/p&gt;
+
+&lt;p&gt;
+I feel it to be very expensive to force myself out of (or into)
+something new. It takes a huge chunk of my always limited will power,
+leave me drained and exhausted. Leave me with too little energy to make
+myself do anything else throughout the day.
+&lt;/p&gt;
+
+&lt;p&gt;
+Instead of building a big habit of doing regular exercise, I made some
+small ones. Like eating some of my favorite snack bars every morning,
+but only if I do 20 some push ups. It&apos;s working better than my previous
+approach so far. I have raised the bar to 50 push ups in couple of
+weeks. Yes its slow, but I win every morning, get to eat my favorite
+snacks, and am building a healthy habit.
+&lt;/p&gt;
+
+&lt;p&gt;
+So the takeaway, instead of bringing a big change in your daily routine,
+bring a small one, and if that too is too much for your puny self, bribe
+yourself with a small reward.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-write-better-code&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;write-better-code&quot;&gt;Write better code&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-write-better-code&quot;&gt;
+&lt;p&gt;
+Enough talk about stupid meaningless life, let&apos;s discus some real stuff
+now.
+&lt;/p&gt;
+
+&lt;p&gt;
+Some small things can make you better at writing code.
+&lt;/p&gt;
+
+&lt;p&gt;
+Start with the smallest, most minimal version of your program, as
+featureless as it can be without losing its meaning, and build it.
+Software in some ways is like pottery, start small, iterate till you are
+satisfied, and then bake it with intensive testing.
+&lt;/p&gt;
+
+&lt;p&gt;
+That&apos;s about tackling a problem, but how can you make your code better.
+Well, make the smallest unit of your code clean and tidy. Now that
+smallest unit can be whatever for you, I think of a file as the smallest
+unit of my code. Start small, keep classes in their own files, keep the
+file small and beautiful. At the end of the day, when you are about to
+call your software &quot;done&quot;, looking at each file of your app should fill
+your eyes with tears of joy. It should be that beautiful.
+&lt;/p&gt;
+
+&lt;p&gt;
+And I can&apos;t emphasize it enough, keep your files small.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-read-code-better&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;read-code-better&quot;&gt;Read code better&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-read-code-better&quot;&gt;
+&lt;p&gt;
+When I was just getting started with software, what would bother me a
+lot was &quot;how to read software&quot;. I struggled a lot with it, mostly
+because I always took software too big for my mind back then.
+&lt;/p&gt;
+
+&lt;p&gt;
+Well, first of all, don&apos;t bite more than you can chew. Start with small
+software, start with software you think you can write yourself and
+increase the bar from there. Again, make several small wins before you
+raise the bar for yourself.
+&lt;/p&gt;
+
+&lt;p&gt;
+If the software is written well enough, you&apos;ll find it very easy to
+understand and pleasant to read. For example, I found meteor to be a
+great read and very easy to understand. Just dive in, read the readmes,
+big picture start revealing itself and soon you&apos;re reading a novel
+written in Javascript.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-small-annoyances&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;small-annoyances&quot;&gt;Small annoyances&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-small-annoyances&quot;&gt;
+&lt;p&gt;
+And finally, small annoyances caused by the person sitting beside you
+can make you wish the flight will crash and you&apos;ll get a chance to smack
+his head into the running engine fan (or may be his feet first) before
+you can finally die in peace
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>small-things</guid>
+            <pubDate>2015-01-19T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Stalemate</title>
+            <link>https://bitspook.in/blog/stalemate/</link>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;
+I write here mostly only when things aren&apos;t going well in my life.
+Writing is a good exercise, it clear thoughts. It work better when
+others give you their opinions. So please be my guest and share your
+thoughts in comments. After a quite a roller-coaster ride for past 6-7
+months, I am finding myself caught up in a stalemate like situation.
+That&apos;s what I am writing about here.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+At the moment there&apos;s trouble going between me and my first and foremost
+mentor/employer James Gillmore. He&apos;s been paying me for past 7 months,
+and for past couple weeks, I am not working well. So what&apos;s apparent to
+me is coming end of our relationship.
+&lt;/p&gt;
+
+&lt;p&gt;
+Reasons for me not working are unknown to me. But here are my guesses:
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-no-work-place&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;no-work-place&quot;&gt;No work place&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-no-work-place&quot;&gt;
+&lt;p&gt;
+I am living in a hostel working from my bed. There is no suitable place
+to sit and work. Not much space in room that I could buy a small office
+setup (aka a chair and table; I actually bought them but had to return
+‘cause I couldn&apos;t place them anywhere). Working from bed is a disaster,
+but somehow it worked fine for 3 months or so.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-not-getting-enough-food&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;not-getting-enough-food&quot;&gt;Not getting enough food&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-not-getting-enough-food&quot;&gt;
+&lt;p&gt;
+I live in my head. Food for mind is important for me. With James, I&apos;ve
+mostly worked in Javascript and Meteor.js. When he first contacted me,
+my JavaScript was same as my French. I don&apos;t know French. It was a fun
+ride. I learned a hell lot of stuff. Besides learning JavaScript and
+meteor, I got the opportunity to manage AWS instances, tweaking npm
+modules, setting up Mongo replicas, fixing Mysql servers, RoR apps (at
+one instance) and many more. It was all super cool. But for past couple
+months, I am not getting any food. I&apos;ve been working on a very
+interesting project (a collaborative development tool that aims to make
+the web writeable). But I feel like I am not learning anything new. I am
+feeling like I am not growing. For last 3 months (since I moved to
+Bangalore) I&apos;ve been constantly working for 8 hours a day, sometimes
+working on weekends too.
+&lt;/p&gt;
+
+&lt;p&gt;
+Although I managed to teach myself Objective-C (out of foolish fear that
+it might extinct before I could learn it) and Angular.js (I learned this
+when I was teaching it to my girlfriend who wanted to make a phonegap
+app; she got a job at Intel with that), but I don&apos;t think it&apos;s worth
+even mentioning them. They were easy and I haven&apos;t mastered any of
+these. IMO mastering anything without investing substantial amount of
+time actually working in it is not possible.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-loneliness&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;loneliness&quot;&gt;Loneliness&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-loneliness&quot;&gt;
+&lt;p&gt;
+I am loner to be honest. I despise company. This is festival season in
+India, my roommates are gone to their homes. I can&apos;t be happier. But
+it&apos;s not true when I am coding. I like company there. For about a month
+I worked along with James Gillmore. He&apos;s like 10X smarter than I am. I
+loved every moment of it even though for about a week we were working
+may be 18 hours a day. I didn&apos;t exactly logged any hours, but I remember
+all I did for may be a week was eat, sleep and code. Literally. I loved
+it and still cherish the memory.
+&lt;/p&gt;
+
+&lt;p&gt;
+But for last 4 or so months, I am working all alone. I&apos;ve brought
+meteor-only version of nucleus to a level where we can start using it
+(internally), but I haven&apos;t even launched it yet.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-caught-in-a-limbo&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;caught-in-a-limbo&quot;&gt;Caught in a Limbo&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-caught-in-a-limbo&quot;&gt;
+&lt;p&gt;
+I find myself caught in a Limbo. I don&apos;t know if that&apos;s the word to use
+here, I learned it from a blog post I read couple days ago (about
+Ubisoft doing funny things with its employees). I am not working for
+reasons unknown to me, and I am not doing anything else because I have
+unfinished work to do. I have spent days just staring at my computer&apos;s
+screen, not moving a finger.
+&lt;/p&gt;
+
+&lt;p&gt;
+My gut feeling says I should stick. But probably I should quit and find
+myself work elsewhere on the interwebs. I really don&apos;t want to work in a
+shitty development shop. Big companies won&apos;t take me because I don&apos;t
+have any experience on paper. A freelancer friend (yes I made a friend
+in new place) warned me that it&apos;s not that easy for un-established
+Indian freelancers to find work. Apparently the law of averages rule the
+Internet. With the vast number of Indian developers lurking around the
+Internet and the quality of most of them, averages are certainly not in
+my favour. Personally I don&apos;t want to quit. Reasons being I want to
+finish what I&apos;ve started, for the sake of it.
+&lt;/p&gt;
+
+&lt;p&gt;
+And I don&apos;t really have any savings to survive without work for more
+than a couple weeks. But if I can&apos;t produce results.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>stalemate</guid>
+            <pubDate>2014-10-12T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Ghost Out of Shell</title>
+            <link>https://bitspook.in/blog/ghost-out-of-shell/</link>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;
+In this post are the thoughts running through my head nowadays.
+Dreams, hopes and fears. I am depicting myself to be the ghost getting
+out of my shell created by years of social isolation.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+I am going to Bangalore. Jobless and almost empty-handed. But full of
+hopes, and fears. Hope that it will be the place I imagine. Silicon
+Valley of India. Of course not as good as SF, may be more like a pirated
+version of it. I am pretty scared. There are far too many &quot;if&quot;s and a
+lot I&apos;ve put at risk, some pretty sexy opportunities I&apos;ve ditched to
+keep the commitment I made with myself a while ago, and a pile of lies I
+imagine would be too heavy to bear if any of the &quot;if&quot;s returned true.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-ghost-shell-wtf&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;ghost-shell-wtf&quot;&gt;Ghost? Shell? Wtf?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-ghost-shell-wtf&quot;&gt;
+&lt;p&gt;
+I am living in a sort of social isolation for past 4-5 years. I live
+with my family, 90% of my villagers don&apos;t know I am a resident of this
+village. They know there are two &quot;kids&quot; in my home, but most of them
+think I live in hostel or something. This is abnormal. My village is
+pretty small. Everyone knows everyone else. I&apos;ve been living a ghost
+like existence. Why? I don&apos;t know why. Standing in group of people
+bragging, teasing and sharing (almost always wrong) political wisdom
+never amused me. I rather prefer to sit in front of the light filled
+rectangle and put something amusing in my head to churn.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-why-am-i-doing-this&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;why-am-i-doing-this&quot;&gt;Why am I doing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-why-am-i-doing-this&quot;&gt;
+&lt;p&gt;
+I&apos;ve been unfortunate to never had a mentor who could understand me and
+could show me a path. A guide can mean a lot. Trust me. I consider
+myself very lucky, and even I couldn&apos;t get much out of trial and error
+methods of finding a path for myself. I am talking about guidance in
+technical realm. All I could become by 2 years of relentless pursuit on
+my computer was a lost techie.
+&lt;/p&gt;
+
+&lt;p&gt;
+I am lucky. Things always fall in the right place for me. They do
+eventually. That&apos;s why I don&apos;t usually panic when shit goes wrong. But
+it doesn&apos;t mean there is no sense of fear or anxiety. There&apos;s a hell lot
+of it. Stupid belief (and a history to back that belief) that everything
+will fall in right place eventually allow me to do crazy things and stay
+with them.
+&lt;/p&gt;
+
+&lt;p&gt;
+Why this babbling? I was to tell why I have decided to move to Bangalore
+instead of staying in the city closest to my village (Chandigarh) and
+get a job there. Or may be freelance but stay in Chandigarh. I won&apos;t get
+a job because I don&apos;t want to let James go. I got into him from a
+stupider blog post of mine which hit HN, and have worked for him for
+past 5 months. I&apos;ve learned a lot from him. But it&apos;s not finished yet.
+There is much more I have to learn from him. And he&apos;s got a vision for a
+great product we are working on, and I want to be the one who
+materializes his vision.
+&lt;/p&gt;
+
+&lt;p&gt;
+I can stay in Chandigarh and do freelancing. I&apos;ve ditched 2-3 pretty
+lucrative jobs in here. But I want to get out into a tech land. I would
+have gone out of India if I could, but unfortunately my finances won&apos;t
+allow me to. Bangalore will be good enough I think.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-go-through-hell-and-die&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;go-through-hell-and-die&quot;&gt;Go through hell and die&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-go-through-hell-and-die&quot;&gt;
+&lt;p&gt;
+James told this to me once. We were discussing about how near-death
+experience change a person&apos;s perception of life, how it fades away, and
+how James became what he is after going through hell multiple times;
+having a ridiculous debt on his head and getting out of it working every
+waking moment. James said my true potential will come to surface only
+when I am working with my life on line. I am pretty much already feeling
+like that; but this feeling might be temporary. Fear of change you say.
+This is going to be the biggest change of my life so far. I suppose
+being jobless in a (rather expensive) place so far from home will be
+ideal life on line situation. Keeping the pile of lies I&apos;ve earned is an
+added bonus. This is a drowning feeling (although I have yet to leave
+for Bangalore), but I&apos;ll have to get over it, with shear brute-force if
+nothing else.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-the-pile-of-lies&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;the-pile-of-lies&quot;&gt;The pile of lies&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-the-pile-of-lies&quot;&gt;
+&lt;p&gt;
+Indian parents don&apos;t let go their children (I am 22) that easily.
+(Financial) security is most important thing for middle-class. So I had
+to create a whole plot to make my voyage to Bangalore resistance free.
+In this plot, I&apos;ve got a job in a software development company who make
+software for Australian government. They pay me Rs. 35,000 pm, and I can
+save about Rs. 20,000 per month (send Rs. 10,000 home and Rs. 10,000 my
+personal savings). My parents have a thing about getting me immigrated
+to Australia (my cousins are Aus citizens), so it was extra sugar to
+keep them from having second thoughts. I have a (verbal) deal with James
+by which he pay me about $1250 per month and make me write whatever
+software for him. But what &quot;if&quot; something go off track and this deal is
+broken? I wonder what I could do to save RS. 20,000 a month unemployed.
+I have almost no other connections to get freelance work, and I don&apos;t
+know how hard it is to seek a well paying job in Bangalore. Given my
+meager bank balance, if James decide to ditch me, I wonder if could keep
+myself fed for a month.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-freelancing-as-a-junior-developer&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;freelancing-as-a-junior-developer&quot;&gt;Freelancing as a Junior Developer&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-freelancing-as-a-junior-developer&quot;&gt;
+&lt;p&gt;
+Freelancing I&apos;ve experienced is not as easy as it sounds for a new born
+developer, especially if you seek perfection and aim to have long
+lasting bonds with clients. There are some things which you learn only
+with experience. Even if you&apos;re successfully making a living
+freelancing, it comes with a price. Learning a craft is many times fast
+and efficient if you learn under the shadow of a master. I am depicting
+senior developers / product managers here. I am still doing this,
+because James play those two roles for me. He teaches me a lot, more
+like a personal trainer and pay me more than I think I can get on a job
+given my portfolio. So it&apos;s a win-win for me. If I had time I would
+create a place on interwebs where Senior level devs could find
+apprentices (to do stuff for less pay and more interest?), and
+(passionate?) people kickstarting their carrier could find
+mentors/employers to polish them. I would call it Internstine.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-how-am-i-feeling&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;how-am-i-feeling&quot;&gt;How am I feeling?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-am-i-feeling&quot;&gt;
+&lt;p&gt;
+Excited. Scared. More of latter. I&apos;ve never got out of Chandigarh and
+given my utter lack of sense of direction, I get lost in almost every
+place. In the title of this post, I am considering the &quot;shell&quot; I am
+leaving to be of protective nature rather than limiting. I&apos;ll have to
+worry about finding a place to live, food, clothes and all sort of stuff
+I never had to think of when at home. I imagine me getting lost on
+airport, then on taxi stand, on the place where I am supposed to get a
+hostel to live in, everywhere. I am excited I&apos;ll hopefully be in a
+community of like-minded people. I hope I&apos;ll get chances to get into
+them, I imagine tech meetups and hackathons to be a thing of daily life.
+That&apos;s one of few things I think of and not piss my pants.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>ghost-out-of-shell</guid>
+            <pubDate>2014-07-21T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>3K Later</title>
+            <link>https://bitspook.in/blog/3k-later/</link>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;
+This post is follow up to my previous unintentional rant about the
+situation I was in and the tech scene in my city in general. In this
+post I am writing the things I went through in past 3 months, joys and
+burns.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;outline-container-k-3-k&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;k-3-k&quot;&gt;3 K {#3-k}&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-k-3-k&quot;&gt;
+&lt;p&gt;
+Yes 3 K is 3000 USD. It might not be too much for 3 month time period
+(for you), but it&apos;s a huge sum if you see from my eyes. Besides, what I
+learned in past three months is worth way more than 3K. Although I spent
+almost all of it (Macbook + iPhone), but past 3 months had been bestest
+of my life so far.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-opportunities-missed&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;opportunities-missed&quot;&gt;Opportunities Missed&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-opportunities-missed&quot;&gt;
+&lt;p&gt;
+I missed a lot of what was offered to me in a plate. Offer from awesome guys at
+&lt;a href=&quot;https://web.archive.org/web/20140813170756/http://boards.coffeestrap.com/&quot;&gt;coffeestrap&lt;/a&gt;, the test project from &lt;a href=&quot;https://web.archive.org/web/20140813170756/http://www.epiphanyeyewear.com/&quot;&gt;Epiphany Eyewear&lt;/a&gt;, the awesome team we built
+for learning ML and many more. All the sudden attention I got drove me nuts. It
+was too much chaos in the days when my last post hit HN. I made many mistakes in
+that time. Not that I regret it. I didn&apos;t let it all go away (it didn&apos;t let me
+all go away). I held on to the most probably best of them.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-the-mentor&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;the-mentor&quot;&gt;The Mentor&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-the-mentor&quot;&gt;
+&lt;p&gt;
+I met a really awesome person. &lt;a href=&quot;https://web.archive.org/web/20140813170756/https://twitter.com/faceyspacey&quot;&gt;James Gillmore&lt;/a&gt;. I call him master. He was the
+first person to offer me to teach code and I couldn&apos;t stop the adrenaline rush.
+He offered to teach me Meteor.js and promised to give me real work once I know
+enough of it. I denied. I wanted to do more of Django and Python and Machine
+Learning, to get done with all I started. But I have a serious issues saying no
+to people, especially when they ask for second time. On the email he&apos;d go in
+detail explaining how Javascript is future of web and how Django and bros gonna
+be a thing of past. So James convinced me to learn Meteor. Initially I was doing
+it just to avoid saying no to him. I would do the coursera Machine learning
+course all day, and would give about 2 hours a day to little fun project he gave
+me. After about 13 hours (about a week), he said I was ready for a real project.
+I was stunned. I was new to Javascript itself. But he has a way to boost you up.
+When he want you to do something, he pumps you up with energy and you simply
+can&apos;t say no. And I am happy that happened.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-the-early-wearout&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;the-early-wearout&quot;&gt;The early wearout&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-the-early-wearout&quot;&gt;
+&lt;p&gt;
+I started out with full power on my first project. I was feeling a lot of
+pressure from inside. There were people saying &quot;I won&apos;t let such person stand in
+my office&quot; (a relative of mine who owns same kind of sweatshop as I mentioned in
+other post said that, behind my back; if you&apos;re reading this Mr, you were being
+a real bitch getting that post printed and showing it to my uncle). For the
+first week, I coded for 16 hours a day for 7-8 consecutive days. Truth to be
+told, all the progress in that project was made during that week. If I could
+keep on going for just 2-3 more days, I could save me next 3 weeks. But at a
+point it became too much for me. This was the first time I was doing real work,
+first time I was getting instructions from someone to code, first time I was
+getting paid significant money, and I wanted to nail it. I couldn&apos;t. In those 8
+days, I was literally glued to my chair. When I&apos;d get up for dinner at night,
+there I had a feeling as doped. A light spin in head and little dark in front of
+eyes. On the 8th day that spin stayed when I woke up. The dark went all around
+me I almost fell on floor. That day I opened Hacker News for first time in 8
+days. It looked like it was &quot;burn-out&quot; themed that day. Every third post was
+about burn-outs, devs going mad, and stuff. It scared the shit out of me. I
+didn&apos;t want to go mad. I talked to James. I emailed him that I gonna take a day
+off. He was cool with it. He was always cool with it. It was my stupid ass who
+was pushing me harder and harder. It took me whole next week just to recover to
+the point where I could think straight. It was a funny feeling. It was not a
+burn-out. I didn&apos;t lose my will to code. I still wanted to and was still coding.
+But I couldn&apos;t. It was a wall got built around my head and I was unable to think
+deeper. Holding just few things in mind became difficult. I realised the
+significance of thinking with holding detail in head. Something I always took
+for granted. And a strange fear followed the week next.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-on-shoulders-of-the-giant&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;on-shoulders-of-the-giant&quot;&gt;On shoulders of the giant&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-on-shoulders-of-the-giant&quot;&gt;
+&lt;p&gt;
+I gave up on the first project more than one times. That has been the
+pattern of my life for long. My fight or flight hormone almost always
+choose flight. I could finish it only because of James. He&apos;d send me
+emails to motivate me, and they worked. I would be on steroids the day
+he sent me his motivational emails. I can&apos;t express my gratitude towards
+him for picking me from the Internet, and for all the time and energy
+(and money) he invested in me. I&apos;ve been sitting on a rollercoaster
+under his mentorship.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-bad-habits-from-past&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;bad-habits-from-past&quot;&gt;Bad habits from past&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-bad-habits-from-past&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-drag-it-to-the-end&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;drag-it-to-the-end&quot;&gt;Drag it to the end&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-drag-it-to-the-end&quot;&gt;
+&lt;p&gt;
+Education system here is clunky. We have a whole year of study and exams in the
+end (there are six months exams too, and of course stupid tests anytime in b/w).
+The point is, most kids in schools find tricks to live through the schooling
+without getting much of what they call education. One is to drag it to the end.
+No need to touch the book the whole year, you can just study for a day and get
+passed. I topped my class for 10 consecutive years with half day studies. Nobody
+cares if you are learning anything or not, scores on your card is the only thing
+that matter. This is a dangerous mentality to attain. I didn&apos;t realise the
+consequences until I went through them. You naturally tend to drag tasks until
+it is absolute necessary to do them. This leads to frustration and stress. Trust
+me, once you do it enough times, the stress make a home in your head and won&apos;t
+leave you alone. Not even during coitus. I won over most part of this though.
+Trick I used is broadly known and followed by many. Just do it. Whenever James
+would add a row to the todo sheet, I would just rush for it.This takes lot of
+mental energy, but it works. I couldn&apos;t keep it on forever though, but I kept it
+for long enough to break the habit.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-hop-hop-hop&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;hop-hop-hop&quot;&gt;Hop hop hop&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-hop-hop-hop&quot;&gt;
+&lt;p&gt;
+One bad habit you acquire when you teach yourself stuff from internet
+all by yourself is hopping. You hop, from here to there to somewhere.
+There&apos;s nothing to stop you. When the primary goal is just &quot;learning&quot;,
+you don&apos;t bother about sticking with a single technology. Mind simply
+make excuses and you hop. Learning new things become analogous to
+chewing a chewing-gum. You chew until it&apos;s sweet, and when you start
+hitting the sour parts, you throw it away and put a new one in mouth. It
+would be different for different people, but it worked this way for me.
+I think thing that makes a difference is the direction. Some guys get
+motivation when they start a project of their own, some guys (like me)
+just never get the direcion. It takes real hard effort to get over the
+plateaus and taste the bitter parts of technology. Nothing is all sweet.
+You can&apos;t pass on a technology learning just the good parts, bad parts
+are where you get real lessons. You don&apos;t know a technology well enough
+if you don&apos;t know where it fails. Knowledge of failure is the real test
+of your knowledge of something.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-the-most-important-lesson-give-up-or-fight-on&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;the-most-important-lesson-give-up-or-fight-on&quot;&gt;The most important lesson: Give up, or fight on&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-the-most-important-lesson-give-up-or-fight-on&quot;&gt;
+&lt;p&gt;
+This is most important lesson only experience can teach. Experience
+doesn&apos;t necessarily means failures (although failures count for more
+valuable experience). James have been through what I am going right now.
+He can perceive a dead end, he can also see when success is just beyond
+the next wall. Me on the other hand give up when I am most close to
+success, and keep ramming the steal wall until my head opens up. That&apos;s
+where having a mentor makes a difference. Some mistakes help you grow
+up, some take you down temporarily. If you make the second kind of
+mistakes often enough, the temporary phase can get longer and longer.
+Hitting the wrong walls was the reason of my fickleness. When you keep
+hitting the wrong walls, your mind catch an (obviously wrong) pattern.
+When you start doing something, the first hurdle raise an alarm that
+&quot;this is like last time, remember how you wasted whole week trying to do
+X but failed? This is same&quot;. Even when it&apos;s not. That alarm make you
+give up early. Online courses, self-guided projects and all can do only
+so much. Having a real mentor/sensai/guru with you takes the learning
+process to another level. This is the traditional eastern way of
+learning. Accept a master, make him accept you, and learn. Online
+learning is great, but wherever I see, they are missing the most
+important ingredient of all-round education: a real teacher/guide, who
+could actively participate in student&apos;s growth. Where teacher is
+genuinly interested in student&apos;s growth. If you are making another
+Codeacademy, I&apos;d suggest aiming for Internstine instead.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-procrastination&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;procrastination&quot;&gt;Procrastination&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-procrastination&quot;&gt;
+&lt;p&gt;
+I miss it. No really. When I was working on the work all the time, I
+missed procrastinating. It&apos;s weird but I think procrastinating can be
+recreational to some level. Or may be it&apos;s just being and not doing
+anything that I am misinterpretting as procrastination. I don&apos;t have
+words to say this thought, it&apos;s kinda rough in my mind at the moment,
+but I believe it is recreational. Not just good procrastination, what I
+mean is the type A of procrastination Paul Graham talks about in
+&lt;a href=&quot;https://web.archive.org/web/20140813170756/http://paulgraham.com/procrastination.html&quot;&gt;his
+essay&lt;/a&gt;. He talks about 3 kind of procrastination: A) Doing nothing B)
+doing something less important C) doing something more important.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-changing-places&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;changing-places&quot;&gt;Changing places&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-changing-places&quot;&gt;
+&lt;p&gt;
+I&apos;ve noticed a weird thing about productivity I haven&apos;t read much about.
+I found myself more productive during first few days of working from a
+new place. Like first week in my uncle&apos;s home, first few days at my
+friend&apos;s place etc. After first few days, things become less
+interesting, more boring. I&apos;ve noticed that same work stays interesting
+if I keep switching places. Another reason I am considering staying a
+contract worker instead of doing a day job.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-smartass-jackass&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;smartass-jackass&quot;&gt;Smartass Jackass&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-smartass-jackass&quot;&gt;
+&lt;p&gt;
+I&apos;ve been proved wrong a lot lately. By many people. I was never proved
+wrong ever by anyone until before 3 months. That could simply mean that
+I&apos;ve been living with people most of whom are total idiots (I&apos;d have
+said all, but lets stay safe in case someone confront me). World is a
+big place. People are lot more smarter than I am. And I like that. That
+means the game is not over yet. I have many levels more to play. Many
+worlds to explore. I wanna explore. Want to see what this world has to
+offer. I have a long way to go. I have to get over this anti-social
+thing of mine, and be better at my craft. I really love programming; I
+have to take myself to place where it&apos;ll love me back.
+&lt;/p&gt;
+
+&lt;p&gt;
+This post is getting little too long. I wanted to write about the
+techniques and tricks I learned during this period, and also about my
+thoughts and future plans to make my city better in terms of tech, but I
+think I should write a separate post for it.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;b&gt;I wanna apologize to Sunny, Jayant, Martin and Lido. We started a team
+to start learning Machine Learning, I was the one super determined, and
+I was the one who quit first. I took more than one endeavors at a time
+and gave the other more priority. I also wanna apologize to all those
+whom I couldn&apos;t respond.&lt;/b&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>3k-later</guid>
+            <pubDate>2014-06-02T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Dear First World Dev, Have a Look at Your Nightmare. I Am Going to Live It</title>
+            <link>https://bitspook.in/blog/dear-first-world-dev-have-a-look-at-your-nightmare/</link>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;
+Tech scene in my city (Chandigarh) is daunting. There is super heavy
+exploitation of new developers and nobody seem to have any problem
+with it. In this post I am plotting the situation from my view, and
+sharing the reasons behind my decision of accepting a job where I&apos;ll
+obviously get exploited.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+For a long time, I&apos;ve been very afraid of doing a job in my locality.
+First of my concerns have been that it will hinder my growth. From
+people working in local companies, I&apos;ve heard things like &quot;they will
+suck all plasma out of your blood; you&apos;ll hate to even look at a
+computer&quot;. I don&apos;t want this to happen with me. I love computers, and I
+want to keep loving computers. I don&apos;t want to get stuck either. On job,
+I&apos;ll most likely be doing PHP projects. I don&apos;t want to do PHP for rest
+of my life. It was the second language I learned, and I hate it. Looking
+back at it after a year of Python, most of it look like mumble-jumble of
+hoola-boo.
+&lt;/p&gt;
+
+&lt;p&gt;
+I will be working 48 hours a week (excluding break; mon-sat 10 am to 7
+pm) for less than $100 per month. Pick that jaw up, I know it&apos;s
+exploitation. What they are going to do is get projects from oDesk and
+similar sites, and make developers do them, and pay like 0.01% to the
+devs. I can do it myself sitting at home, I&apos;ve done a couple projects,
+but it was not fun. I got bored and left my third project halfway. I am
+so fucking undisciplined that it frustrates even me. Here&apos;s the list of
+my reasons for diving into the situation which at the moment looks like
+a whirlpool to hell.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-my-reasons-for-doing-this-job&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;my-reasons-for-doing-this-job&quot;&gt;My reasons for doing this job&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-my-reasons-for-doing-this-job&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-indiscipline&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;indiscipline&quot;&gt;Indiscipline&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-indiscipline&quot;&gt;
+&lt;p&gt;
+I am sick of my fickleness. I get bored like after 20 minutes of playing
+with anything. I&apos;ve tried as many techniques as I could in 2 years to
+discipline myself. I am expecting my new job to discipline me more. I am
+expecting it to be one of the most suffocating environments I can
+imagine as a developer. I know the culture of most companies in my city.
+I&apos;ll have to keep my phone outside the office before I enter, only the
+time I spend in my cube will be counted as my &apos;in office&apos; time and
+similar. If nothing else, it will at least make me realize the
+significance of all the freedom I have in my room.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-team&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;team&quot;&gt;Team&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-team&quot;&gt;
+&lt;p&gt;
+I want a team of coders to work with. I&apos;ve always done coding alone, and
+I am sick of it. It&apos;s no fun. I want to work in a team. I want to show
+off my work. And most importantly I want smart people around me to look
+upto and learn from. There will probably be senior developers on job
+from whom I can learn many things.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-network&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;network&quot;&gt;Network&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-network&quot;&gt;
+&lt;p&gt;
+I&apos;ve been living in the place I am staying at present for about 8
+months, and my neighbor doesn&apos;t know I live in this house. Actually I
+met my neighbor in the new company I joined when I went there for
+interview. He work there. He accidentally read the address on my resume
+and asked me. I wasn&apos;t least bit surprised when he said &quot;I didn&apos;t know
+you live there, I thought there&apos;s only an old couple in that house&quot;. I
+have made literally 0 friends in the period of 8 months, and I hardly
+know more than 5 people in whole city (that old couple included). I am
+expecting to get to know more people from programming community. And may
+be I&apos;ll make some friends.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-i-want-these-9-months-to-change-my-life&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;i-want-these-9-months-to-change-my-life&quot;&gt;I want these 9 months to change my life&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-i-want-these-9-months-to-change-my-life&quot;&gt;
+&lt;p&gt;
+I will be doing a bond of 9 months with them. If I leave them before 9
+months, I will be paying them my 2 month salary before leaving. I want
+these 9 months to change my life. I don&apos;t mind working heavily underpaid
+if I can grow myself in same proportions as the exploitation. I will be
+working in a technology I&apos;ve always hated, more because of other&apos;s
+opinions than my own experience. From this I am expecting to learn
+something I haven&apos;t realized yet.
+&lt;/p&gt;
+
+&lt;p&gt;
+I want them to stand with a machine gun and shoot whatever they can at
+me. I am expecting to gain a lot of mental strength and sharpen my
+ability to quickly learn new things further. I&apos;ve always felt proud of
+my quick-learning ability, I want to put it through the most intense
+test.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-confidence&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;confidence&quot;&gt;Confidence&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-confidence&quot;&gt;
+&lt;p&gt;
+I know many things. I&apos;ve developed things in Django, Flask, PyQt,
+CodeIgniter, SlimPHP, Wordpress, Angularjs, ReactJs, Backbone and
+similar tools. But still I could never collect enough nerve to bid for
+any such projects on freelancing sites. I know I can do them, I do them
+for my friends or for my experiments, but I get scared when it comes to
+work for someone I don&apos;t know. On the job I&apos;ll be forced to do things.
+May be by doing things this way I&apos;ll get some confidence.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-i-want-to-study-the-environment&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;i-want-to-study-the-environment&quot;&gt;I want to study the environment&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-i-want-to-study-the-environment&quot;&gt;
+&lt;p&gt;
+This is the last thing on my mind, actually at the moment it is not even
+on my mind. I am too scared thinking of what is about to come. But
+earlier it was one my reasons for my decision of jumping in.
+&lt;/p&gt;
+
+&lt;p&gt;
+Things are very bad in my city. There is no any kind of active community
+of computer enthusiasts; be it some Linux Users Group or something
+similar. For me thinking Hackathons in my city is similar to thinking a
+Lamborghini in my garage. Developers are heavily underpaid and
+over-exploited. I want to study the environment. I have ideas for a
+self-sustaining software company that would follow an open business
+model (another idea in my ideas.org). I want to foresee if it is
+practical.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-thing-that-triggered-this-decision&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;thing-that-triggered-this-decision&quot;&gt;Thing that triggered this decision&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-thing-that-triggered-this-decision&quot;&gt;
+&lt;p&gt;
+I have been at home for about 2 months, self-learning stuff. I thought
+of continuing like this for next 4 months. Couple days back I met Jayant
+on /r/machinelearning. (We&apos;ve decided to pursue learning ml the way I
+discussed in
+&lt;a href=&quot;https://web.archive.org/web/20140814135355/http://www.reddit.com/r/datascience/comments/1y9t11/is%5Fit%5Fa%5Fgood%5Fapproach%5Fto%5Fget%5Fstarted%5Fwith%5Fmachine/&quot;&gt;this
+thread&lt;/a&gt;. If you are interested in joining the team pm me.) I talked to
+him and he turned out to be in a situation very similar to mine. He even
+called us identical twins. But he&apos;s a year ahead of me. He spent a whole
+year self-learning without doing any job. He said the experience was
+good and he learned a lot. I had a different feeling from his words
+though. Assuming that we are identical, I want to know what would have
+happened if he made the other choice. So I have decided to go for
+&quot;learning on the shitty job&quot; approach, just to make a twist in the
+timeline. It&apos;s looking like a risky decision to me, so I was postponing
+it for some time. But the thrill of doing this experiment is what
+triggered me doing it. Life is an experiment after all, and I like doing
+crazy things with it.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>dear-first-world-dev-have-a-look-at-your-nightmare</guid>
+            <pubDate>2014-02-26T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>One Reason Every Geek Should Blog For</title>
+            <link>https://bitspook.in/blog/one-reason-every-geek-should-blog-for/</link>
+            <description>&lt;p&gt;
+Right answer is the most obvious one. Learning. Blogging helps a lot
+when you are obsessed with learning and creating new things.
+&lt;/p&gt;
+
+&lt;p&gt;
+You learn a lot if you blog responsibly
+&lt;/p&gt;
+
+&lt;p&gt;
+I started my first blog in 2011 (I run two now). It was first time I got an
+Internet connection of my own. I was excited and I did some posts about few
+things I was trying those days. Some people read it, few praised it, it felt
+nice. Then I got bored. And I stopped writing slowly. There were people thanking
+me for putting my time in writing and encouraging me to write more. But I
+couldn&apos;t.
+&lt;/p&gt;
+
+&lt;p&gt;
+I was not doing it right. I am a geek, not a blogger or writer or poet (although
+I blog and &lt;a href=&quot;file:///poems/poem-pathr/&quot;&gt;write&lt;/a&gt; &lt;a href=&quot;file:///poems/poem-kaynat&quot;&gt;poems&lt;/a&gt;). Actually I recently discovered it. Writing and blogging
+become all so much fun when you stop writing what you already know. Sharing
+experience is cool. Actually it is only the experience that is worth writing
+about. But for me it was very boring to sit down and write about what I already
+knew. Then I tried writing posts as notes. Notes to remind me how to do stuff I
+know I will forget in some time. But it didn&apos;t work either.
+&lt;/p&gt;
+
+&lt;p&gt;
+And then I started blogging with a different objective. Earlier I was writing my
+experience to help people. But (un?)fortunately I am not that good a person who
+would do things for helping others and enjoy it. I am little more on the devil&apos;s
+side.
+&lt;/p&gt;
+
+&lt;p&gt;
+For about few weeks now, I am blogging for learning. Instead of writing a post I
+already know, I write about things I want to know. I choose a topic (say git),
+and think of a post I want to read about it (say, how internals of .git
+directory work?). Then I start preparing to write it.
+&lt;/p&gt;
+
+&lt;p&gt;
+No I don&apos;t Google it. It might be already written. There might be 10
+posts already crawling through reddit on the same topic. I don&apos;t give a
+fuck. What you read in blog posts is the summary. It&apos;s the juice drawn
+from sugarcane. But the real thing a geek want is knowledge. True
+knowledge can only be acquired by experience. You have to live through
+the process of putting a piece down in soil, and grow your experience
+into the sugarcane from which you can draw the juice and put in your
+post. Of course how much you learn depends all on how much work you can
+put when writing a post. I found it particularly beneficial to write
+about topics I have some experience in but want to go deeper. Like git.
+I use it everyday, but digging deeper is not a requirement.
+&lt;/p&gt;
+
+&lt;p&gt;
+In my opinion, the secret sauce which make this work is responsibility.
+When you write a post and you know people gonna read it, you can&apos;t write
+carelessly. I can&apos;t say about others, but I feel a sense of
+responsibility when I am writing about something I haven&apos;t personally
+experienced long enough. It make me work extra hard.
+&lt;/p&gt;
+
+&lt;p&gt;
+&quot;Great power brings great responsibility&quot;, right? The inverse is also
+true (in this case at least). Great responsibility can bring great power
+as well (provided you can feel it). This worked with me. It might work
+with you as well (unless you have already surpassed me in terms of
+slacking and procrastination).
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>one-reason-every-geek-should-blog-for</guid>
+            <pubDate>2014-02-24T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>My notes to help learning Javascript</title>
+            <link>https://bitspook.in/blog/my-notes-to-help-learning-javascript/</link>
+            <description>
+
+&lt;div id=&quot;outline-container-patience&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;patience&quot;&gt;Patience&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-patience&quot;&gt;
+&lt;p&gt;
+You need to keep it. Don&apos;t rush, it&apos;s alright if you are not getting it.
+Specially if you are from Python world. Javascript is to Python like
+India is to New Zeland, things are not actually as complicated as they
+appear, you just need to keep little patience.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-coffeescript-is-your-friend&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;coffeescript-is-your-friend&quot;&gt;Coffeescript is your friend&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-coffeescript-is-your-friend&quot;&gt;
+&lt;p&gt;
+Coffeescript helped me learn to think in javascript more than any book.
+I am not saying that you should use coffeescript, but use it for
+learning more about javascript. If you are unable to think something in
+javascript, do a version of it in Coffeescript, generate javascript and
+try to learn. I don&apos;t know how good is the generated javascript, but it
+was good enough for me to not get stuck. Emacs helped me a lot in this.
+I created a buffer with coffee-mode which was not visiting any file, and
+compiled coffee to see javascript in a split window for comparison. It
+really helped to avoid creating temporary files.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-don-t-rely-too-much-on-books-try-something-real&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;don-t-rely-too-much-on-books-try-something-real&quot;&gt;Don&apos;t rely too much on books, try something real&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-don-t-rely-too-much-on-books-try-something-real&quot;&gt;
+&lt;p&gt;
+Books can do only so much to help you. Elequent Javascript is great (or
+so they call it, actually I never got why it&apos;s called great), but what a
+real project can teach you is on another level. Go out in wild and try
+to do some real project, for fun of course.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-avoid-dom-and-ui&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;avoid-dom-and-ui&quot;&gt;Avoid DOM and UI&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-avoid-dom-and-ui&quot;&gt;
+&lt;p&gt;
+DOM manipulation and Javascript have their own concepts which are most
+times confusing to foreigners, specially if you are already infected by
+JQuery. Make your aim to learn Javascript, as a programming language and
+do something you do when learning a new language. Make self-contained
+scripts which don&apos;t need browser to work. Of course browser help when
+you are getting started and with &apos;console.log&apos; you can avoid all sort of
+DOM manipulation, but that&apos;s not what I mean. On the next step to
+getting started, when you &apos;think&apos; you know some javascript, try to make
+something that involve as little DOM manipulation as possible. Try
+making some simple nodeJs module, or some sort of browser extension.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-focus-on-getting-it-done-learning-is-a-bonus&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;focus-on-getting-it-done-learning-is-a-bonus&quot;&gt;Focus on getting it done, learning is a bonus&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-focus-on-getting-it-done-learning-is-a-bonus&quot;&gt;
+&lt;p&gt;
+It&apos;s better if you choose to do something you want to use, or at least
+something you find really interesting. And focus on getting it done. All
+ninja skills you want to learn come as a bonus. Remember those old
+Jackie Chan movies in which kung-fu master make him do his household
+chores? Just focus on washing clothes, you&apos;ll learn iron-fist style
+without knowing it, as a bonus.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>my-notes-to-help-learning-javascript</guid>
+            <pubDate>2014-02-12T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>I Eventually Managed to Leverage My Wave</title>
+            <link>https://bitspook.in/blog/i-eventually-managed-to-leverage-my-wave/</link>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;
+The wave I am talking about here is the period of crests and troughs
+which I have been experiencing for like always. It has always been a
+very commoving pull-back experience. Lately I have been through a
+series of change and started looking at things with a different eye.
+Here&apos;s a list of things helping me the most.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+My life is like riding a wave. When I am on the crest everything is
+easy, I am super-curious, confident and over-flowing with energy. After
+some time the energy of the crest goes away. And starts very depressing,
+negative period. I feel myself to be a weight on Earth. People call them
+`burn-outs&apos;. I have read they burn-out after doing something reckless.
+But I burn-out periodically. This very negative time come in circles in
+my life no matter what I do.
+&lt;/p&gt;
+
+&lt;p&gt;
+But now I think I&apos;ve eventually managed to leverage my wave. I am not
+just living with it, I am using it. I started looking at the world with
+a different view after I read the Theory of Positive Disintegration. I
+learned it&apos;s not bad to be super-sensitive. The sadness, the pain, they
+can be used for good.
+&lt;/p&gt;
+
+&lt;p&gt;
+Here are some of the things helping me to make something out of all the
+mess my life have become, and utilize the wave.
+&lt;/p&gt;
+
+&lt;div id=&quot;outline-container-abandoned-commitments-and-my-gtd-dot-org&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;abandoned-commitments-and-my-gtd-dot-org&quot;&gt;Abandoned commitments and my gtd.org&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-abandoned-commitments-and-my-gtd-dot-org&quot;&gt;
+&lt;p&gt;
+I once tried to utilize the `Getting Things Done&apos; system. It didn&apos;t work
+very well for me. Although it did not fail 100% either. Thanks to it now
+I am in a habit of writing down most of my thoughts (I do it in an org
+file I&apos;ve named gtd.org). I have made a list of all the commitments I
+have made to myself, things I wanted to do but didn&apos;t, and things I want
+to do in future. All the fallen dreams/commitments which have been a
+psychological weight on me. One of the problems I face in troughs is
+that I find nothing interesting. Like I don&apos;t want anything. Reading
+through my gtd.org always give me something in which some part of me is
+interested. I haven&apos;t recognized any pattern in this yet, but it
+significantly decreases the trough period. Last time I found learning
+e-lisp quite fascinating and that brought me out of the trough fast, and
+my crest now is not that chaotic.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-org3864e9d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3864e9d&quot;&gt;Inspiration from the&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3864e9d&quot;&gt;
+&lt;p&gt;
+`&lt;a href=&quot;https://blog.42floors.com/100-day-goals/&quot;&gt;100 day goals&lt;/a&gt;&apos;
+&lt;/p&gt;
+&lt;p&gt;
+I read a blog post in which an entrepreneur is talking about his system
+of applying &apos;100 day limits&apos; to do some hard projects. He also warned
+that he and his team get burnt out and need rest after that. I thought
+to myself that I am going to burn out anyways, there is no stopping to
+it, so why not give it a shot. May be it will do some good. And it is
+working. I set a limit to finish `The Emacs-lisp intro&apos; in seven days,
+and did it. It felt good. The sense of achievement was much needed.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-self-introspection&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;self-introspection&quot;&gt;Self introspection&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-self-introspection&quot;&gt;
+&lt;p&gt;
+To me self introspection appear to be a wastage of time on crests. But
+it has been a great help in darkest depths of my troughs. Would it be
+studying psychology, trying to diagnose myself for some mental disorder,
+or just digging through my zodiac and stuff, it help me not get lost.
+It&apos;s like the last line of defense for my focus, and has always worked
+till now. It give me a feel that all the chaos can be sorted out.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-video-games&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;video-games&quot;&gt;Video games&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-video-games&quot;&gt;
+&lt;p&gt;
+They have always been a source of despair actually. I waste all my time
+in them when I am going through troughs. But I actually found a way to
+utilize them. It came from another blog post I read. What I was doing
+was that I used to play a lot of video games in troughs, and none at all
+in crests. May be it created a pulling force towards troughs. Inspired
+by above mentioned blog post, I now give a little time playing some
+games everyday. And I am riding on my longest crest ever.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-a-pinch-of-success&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;a-pinch-of-success&quot;&gt;A pinch of success&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-a-pinch-of-success&quot;&gt;
+&lt;p&gt;
+I used to love my computer more than I love my girlfriend (note: my
+culture has molded my mind to make me a serious one woman man, don&apos;t
+interpret the word &apos;girlfriend&apos; as used in western-culture
+relationships). I still feel fascinated about computers and programming,
+but looking at my computer I have a feeling like a lost battle-ground.
+There are so many things I thought I could do with it, so many I started
+on it, and no one I ever finished. The wave is the one I blame.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href=&quot;file:///blog/the-most-beautiful-tutorial/&quot;&gt;My previous blog post&lt;/a&gt; was a wild success (when seen from my eyes). It earned me
+many hn and reddit points, and is still bringing traffic. It was a blow to my
+thought that I can&apos;t achieve anything. Many of the self-doubting thoughts that
+started raising heads in my head got chopped.
+&lt;/p&gt;
+
+&lt;p&gt;
+I took a lesson from it. Instead of trying to pursue my half-baked
+world-changing ideas, I will spend more time doing small things. It
+certainly doesn&apos;t mean I am not thinking big. I still have ideas that
+will turn the world around ;-) But a pinch of success is necessary.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>i-eventually-managed-to-leverage-my-wave</guid>
+            <pubDate>2013-10-20T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>The most beautiful tutorial</title>
+            <link>https://bitspook.in/blog/the-most-beautiful-tutorial/</link>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;
+The most beautiful tutorial I&apos;ve ever read, &quot;The Emacs-lisp Intro&quot;.
+Run your Emacs and press &apos;C-h-i&apos;, and select &quot; Emacs Lisp Intro&quot; to
+read it. I am a reader, and learner, I read a lot. I used to prefer
+learning from books, and have a huge collection 70% of which I haven&apos;t
+even ever opened (and 95% I have never completed). Most of my reads
+are related to programming, new languages, techniques and frameworks.
+Over time my preference for learning programming shifted from learning
+from books to learning from tutorials, documentation and by reading
+the code itself. I found myself too fickle to stick with one long book
+and keep myself interested in it. There is so much to explore in the
+world, whenever I start reading a book, half way through I find
+something more interesting. Something from the book, or hacker news,
+or reddit, or prismatic. Mind is always successful in finding some
+sort of diversion. For a week ago, I had not find any book or tutorial
+that could keep me with it till the end. And then I met &apos;the
+Emacs-lisp intro&apos;. It&apos;s the most beautiful book (or tutorial, I don&apos;t
+know what to call it) I have ever laid my eyes on.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&quot;outline-container-perfect-flow&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;perfect-flow&quot;&gt;Perfect flow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-perfect-flow&quot;&gt;
+&lt;p&gt;
+It&apos;s more like a compilation of tutorials than a book, but it is so
+beautifully organized. While reading it, it feels like it is
+orchestrated in the most perfect way possible, to get the concepts
+settle in your mind, and not letting you get bored at the same time.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-i-never-felt-like-lost-somewhere&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;i-never-felt-like-lost-somewhere&quot;&gt;I never felt like lost somewhere&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-i-never-felt-like-lost-somewhere&quot;&gt;
+&lt;p&gt;
+Being a mere mortal, many times when reading programming stuff I get
+lost in between. Some topics that just don&apos;t enter my head, some things
+I can&apos;t grasp sometime. Most tuts just get over with it leaving me in
+half despair. But this one was very well laid out. I never had a feeling
+like missing something or getting behind the author.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-it-held-my-hand-but-never-spoon-fed&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;it-held-my-hand-but-never-spoon-fed&quot;&gt;It held my hand but never spoon fed&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-it-held-my-hand-but-never-spoon-fed&quot;&gt;
+&lt;p&gt;
+Another beautiful thing. Easy tutorials most times are just too easy,
+their easiness make them boring. I was working myself when reading this
+tutorial. It was (little) challenging and very easy flow. Perfect for
+me.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-i-learned-to-praise-lisp-and-the-beauty-of-parenthesis&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;i-learned-to-praise-lisp-and-the-beauty-of-parenthesis&quot;&gt;I learned to praise lisp and the beauty of parenthesis&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-i-learned-to-praise-lisp-and-the-beauty-of-parenthesis&quot;&gt;
+&lt;p&gt;
+The perfect speed with which the things are put forward, and the clarity
+with which it&apos;s done made me respect lisp much more. I learned so much
+about how lisp works and how things are done in lisp world without even
+knowing I was learning them.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-if-you-tried-learning-a-lisp--clojure--and-found-it-too-difficult-try-reading-this-tutorial&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;if-you-tried-learning-a-lisp--clojure--and-found-it-too-difficult-try-reading-this-tutorial&quot;&gt;If you tried learning a lisp (Clojure?) and found it too difficult, try reading this tutorial&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-if-you-tried-learning-a-lisp--clojure--and-found-it-too-difficult-try-reading-this-tutorial&quot;&gt;
+&lt;p&gt;
+I tried learning Clojure few months back. I got a book and tried to
+study it. I failed. There were so many things quite foreign to me, and I
+decided to put on the shelf for future. That was the right decision.
+Reading this tutorial made many things clear, and weird things
+respectable. I think now I am ready to give Clojure another shot.
+Reading first few chapters of the same book (Programming Clojure) was so
+much easier than before.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-using-anki-alongside-perfect-combination-for-producing-some-emacs-love&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;using-anki-alongside-perfect-combination-for-producing-some-emacs-love&quot;&gt;Using Anki alongside: perfect combination for producing some Emacs love&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-using-anki-alongside-perfect-combination-for-producing-some-emacs-love&quot;&gt;
+&lt;p&gt;
+I&apos;ve been using Anki for spaced learning for a while now. I use it every
+time I am reading something, it help me a lot to avoid re-reading books
+I left half way (and then pick up later). Still it was a different
+experience using it while reading this tutorial. So many ideas of doing
+stuff with Emacs were popping up in my head while reading this tutorial,
+and thanks to Anki I reminded every e-lisp function I encountered on the
+way, and this made me feel comfortable as I knew their possible
+implementations, I knew what to use, and where to take inspiration from.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-it-made-emacs-appear-so-simple-and-easy-and-powerful&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;it-made-emacs-appear-so-simple-and-easy-and-powerful&quot;&gt;It made Emacs appear so simple and easy, and powerful&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-it-made-emacs-appear-so-simple-and-easy-and-powerful&quot;&gt;
+&lt;p&gt;
+I have been using emacs for few months now (3 or 4 may be). I thought I
+knew it just fine and that it&apos;s awesome but over-glorified. I was wrong.
+Emacs is awesome indeed, but I didn&apos;t knew shit about it. And no one can
+tell you the real glory of Emacs. It&apos;s a path one need to travel to know
+the feel. It has changed many things in me as a programmer. For one
+thing, I now feel much more controlled (and like secure in some way
+(&apos;cause of my psychotic issues may be)) when doing anything in Emacs.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-fill-your-mind-with-tons-of-ideas-things-you-want-your-editor-to-do-and-they-are-all-possible&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;fill-your-mind-with-tons-of-ideas-things-you-want-your-editor-to-do-and-they-are-all-possible&quot;&gt;Fill your mind with tons of ideas, things you want your editor to do, and they are all possible&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-fill-your-mind-with-tons-of-ideas-things-you-want-your-editor-to-do-and-they-are-all-possible&quot;&gt;
+&lt;p&gt;
+Emacs is known for its ability to customize, everyone know that. So did
+I. But no, now I feel I really didn&apos;t know that. There is a whole world
+of possibilities. There is so much one might desire from their editor
+and not even know it. Now I realize so many things are wrong with my
+current setup, so many new things I want Emacs to do. It&apos;s a very good
+feeling to have.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;outline-container-it-was-a-bliss-reading-it-inside-the-emacs&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;it-was-a-bliss-reading-it-inside-the-emacs&quot;&gt;It was a bliss reading it inside the Emacs&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-it-was-a-bliss-reading-it-inside-the-emacs&quot;&gt;
+&lt;p&gt;
+I think it is the most important thing that made me feel so great about
+this tutorial. Emacs dwarfs any awesome e-book reader I have ever tried.
+Not because of navigation or any other fancy,but because I suddenly
+realized that right way to read about programming is from inside my
+editor. Even a simple &apos;alt-tab&apos; is too much. Almost all the cases where
+I would normally copy-paste the code to check out something (I know
+copy-paste is a bad thing, but lazy me) were replaced with a &apos;ctrl-e&apos;. I
+could execute the code right there inside the tutorial, even parts of
+it. There are browser embedded consoles and stuff which do the similar,
+but they can never match the experience Emacs gave.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>the-most-beautiful-tutorial</guid>
+            <pubDate>2013-10-11T05:30:00.000000+05:30</pubDate>
+        </item>
+        <item>
+            <title>Directionless Wandering</title>
+            <link>https://bitspook.in/blog/directionless-wandering-cursed-by-dreams/</link>
+            <description>&lt;p&gt;
+It has been about five years since I first got my computer. Endless
+hours I have spent in front of the two dimensional rectangle, the third
+world. Before I got the machine, most of my time was spent in the world
+inside my head. My thoughts, feelings, sensations and so many things. I
+was never at rest. Then I got the machine. I had dreamed of it for like
+years before I got one. I was excited, fascinated. There were so many
+things in my mind to do with the computer, so many plans of changing the
+world. I couldn&apos;t harness any of them. Now it feels like every dream I
+had back then has become a burden on my shoulders, depressing me, making
+my feet heavy. Keeping me from moving forward. I am feeling powerless,
+like I am losing a bit of life with every failed dream. I&apos;m getting
+frightened from dreaming. What have it brought to me other than burden?
+&lt;/p&gt;
+
+&lt;p&gt;
+Clarity of thoughts was never my strength, but nowadays I am feeling
+much more puzzled. Lost. Like I am stuck. World is leaving me behind.
+I&apos;ve always seen the world like a witness. The third person standing on
+the shore looking at the fishes racing, the canaries flying. Something
+has happened. Making me feel as I am in the middle of the race I always
+witnessed. Just witnessed. Never participated. Not even as audience. I
+blame dreams. The fallen ones.
+&lt;/p&gt;
+
+&lt;p&gt;
+Yesterday on reddit I found a name for my madness. Existential
+Depression they call it. It made me believe I am not the only one
+feeling this. There are others. There might be others who have gone
+through the path I am on now. May be they could give me a tip or two.
+Here I am outside my diary, writing in public.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have been into computers for so long. And yet I found myself no where.
+So much time I have put into programming, operating systems, security,
+psychology and so many other things. All seem wasted. It is depressing
+to just look at all the mess I have made of me. I see people so less
+talented than me, with no knowledge of what they are doing, even doing
+it wrong, crossing me in terms of success. They are richer, happier, and
+better than me. I know I can do what they are doing 10 times better, but
+I don&apos;t. Instead of motivating me, it is drowning me even deeper. I feel
+no motivation to finish any project I start. And when the unfinished
+gets piled up, they haunt me. They make me angry and depressed. I can&apos;t
+remember how many times I swiped my hard disk to get rid of the
+unfinished &apos;awesome&apos; projects I thought will change the world. So many
+half written poems whose traces can&apos;t be found now in the burnt
+notebooks. It sucks. I feel like every single thought I had, every new
+idea I ever failed has cursed me. I have a trembling feeling just
+thinking about thinking something new.
+&lt;/p&gt;
+
+&lt;p&gt;
+So many techniques I tried. So many psychology papers, books I read.
+Still I am here. Another trough. I&apos;ve tried the GTD (Getting Things
+Done) and the concept of &apos;limited willpower&apos;. Wrote all my mess down.
+Tried to minimize the decision making. And so much more. This fucking
+wave is just not leaving me. I find myself stuck in the crests and
+troughs all the time. I am on the top of sky when on a crest. Have so
+many new ideas, start new projects. Start reading new books. New
+programming languages. New frameworks. New poets. And then it all start
+fading. Then come the phase when I try to balance things. And just when
+I feel I can do it, I find myself in middle of a trough. The disgust and
+depression of it is just killing. I do many stupid things in troughs.
+All failures. May be writing this blog post is one of them. May be after
+some hours I will start feeling ashamed of writing such a thing, and
+delete it. It just sucks to be here. I know it will pass. It always do.
+But it leave behind scars. Scars that will keep scaring me from thinking
+new ideas, from dreaming. And I think this might be the lesson. Dreams
+suck.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>directionless-wandering-cursed-by-dreams</guid>
+            <pubDate>2013-09-30T05:30:00.000000+05:30</pubDate>
         </item>
     </channel>
 </rss>

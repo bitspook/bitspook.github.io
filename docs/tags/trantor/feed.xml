@@ -12,7 +12,7 @@
         </image>
         <item>
             <title>Microservices</title>
-            <link>https://bitspook.in/talks/microservices-techblend</link>
+            <link>https://bitspook.in/talks/microservices-techblend/</link>
             <description>&lt;p&gt;
 I recently joined a Whatsapp group named &quot;Tech Blend&quot;, which conduct
 weekly online meetups. Topic for last meetup was &quot;Microservices&quot;, for
@@ -51,7 +51,7 @@ if you need me to explain some slide, or just for a chat.
         </item>
         <item>
             <title>Personal Brands for Software Developers (Talk)</title>
-            <link>https://bitspook.in/talks/personal-brands-for-software-developers-talk</link>
+            <link>https://bitspook.in/talks/personal-brands-for-software-developers-talk/</link>
             <description>&lt;p&gt;
 After long diligence, me and my old (Trantor) team decided to organize a meetup
 to showcase our efforts, and to share our ideas with the local community. &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/events/263862634/&quot;&gt;The
@@ -79,7 +79,7 @@ Here&apos;s my set of slides from the talk:
         </item>
         <item>
             <title>Quick and Pretty Docs for Software Projects</title>
-            <link>https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects</link>
+            <link>https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects/</link>
             <description>&lt;p&gt;
 I have practiced
 &lt;a href=&quot;http://tom.preston-werner.com/2010/08/23/readme-driven-development.html&quot;&gt;Readme
@@ -125,7 +125,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org6b64af8&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgcf5c53b&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -143,7 +143,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer&apos;s machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org3124ce6&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org8c71ab9&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -182,7 +182,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org41e631e&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orga46d553&quot;&gt;
 buildDrafts = true
 title = &quot;My Project&quot;
 
@@ -202,7 +202,7 @@ home = [ &quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot;]
         </item>
         <item>
             <title>Secure Software Teams Trantor</title>
-            <link>https://bitspook.in/talks/secure-software-teams-trantor</link>
+            <link>https://bitspook.in/talks/secure-software-teams-trantor/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/secure-software-teams/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 &lt;/iframe&gt;
 
@@ -221,7 +221,7 @@ exercises, rest were left for the attendees as homework. Here&apos;s the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org210ebf7&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org0fc4b52&quot;&gt;
 version: &apos;3&apos;
 services:
   webgoat:
@@ -254,7 +254,7 @@ be able to access webgoat on &lt;a href=&quot;http://localhost:8080/WebGoat&quot
         </item>
         <item>
             <title>Lessons From a Year of TDD</title>
-            <link>https://bitspook.in/talks/lessons-from-a-year-of-tdd</link>
+            <link>https://bitspook.in/talks/lessons-from-a-year-of-tdd/</link>
             <description>&lt;style&gt;img { max-width: 600px; margin: 1rem 0; }&lt;/style&gt;
 
 &lt;iframe src=&quot;///slides.com/bitspook/lessons-from-a-year-of-tdd/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
@@ -743,7 +743,7 @@ patience&quot; alt=&quot;Thank you for your patience&quot; width=&quot;100%&quot
         </item>
         <item>
             <title>Personal brands for software developers</title>
-            <link>https://bitspook.in/blog/personal-brands-for-software-developers</link>
+            <link>https://bitspook.in/blog/personal-brands-for-software-developers/</link>
             <description>&lt;p&gt;
 &lt;a href=&quot;file:///blog/maximize-individual-growing-in-a-software-team-2-month-report/&quot;&gt;Reflecting on the progress&lt;/a&gt; we have made in our &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;&quot;nurture a culture of individual
 growth in a software team&quot; initiative&lt;/a&gt;, I realized there is much to gain from
@@ -884,7 +884,7 @@ our endeavor.
         </item>
         <item>
             <title>Maximize individual growing in a software team (2 month report)</title>
-            <link>https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report</link>
+            <link>https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report/</link>
             <description>&lt;p&gt;
 Couple months ago we started an &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;initiative&lt;/a&gt; in our team here at &lt;a href=&quot;http://trantorinc.com/&quot;&gt;Trantor&lt;/a&gt; with the
 focus on nurturing a culture which optimizes personal growth of an individual in
@@ -976,7 +976,7 @@ else, that&apos;ll create some cool graphs to gawk at.
         </item>
         <item>
             <title>How to maximize individual growth in a software team?</title>
-            <link>https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team</link>
+            <link>https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team/</link>
             <description>&lt;p&gt;
 Working as a solo freelance developer, I used to have lofty ideas of how
 a group of people can grow so much more together. I imagined how a mind
@@ -1126,7 +1126,7 @@ Please put in comments below if you have opinions and/or suggestions!
         </item>
         <item>
             <title>That sounds fun!</title>
-            <link>https://bitspook.in/blog/that-sounds-fun</link>
+            <link>https://bitspook.in/blog/that-sounds-fun/</link>
             <description>&lt;p&gt;
 I got an opportunity to introspect in a conversation with a client when
 he questioned my use of the word &quot;fun&quot;. What do I mean when I say

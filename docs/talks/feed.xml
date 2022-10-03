@@ -12,7 +12,7 @@
         </image>
         <item>
             <title>Microservices</title>
-            <link>https://bitspook.in/talks/microservices-techblend</link>
+            <link>https://bitspook.in/talks/microservices-techblend/</link>
             <description>&lt;p&gt;
 I recently joined a Whatsapp group named &quot;Tech Blend&quot;, which conduct
 weekly online meetups. Topic for last meetup was &quot;Microservices&quot;, for
@@ -51,7 +51,7 @@ if you need me to explain some slide, or just for a chat.
         </item>
         <item>
             <title>Personal Brands for Software Developers (Talk)</title>
-            <link>https://bitspook.in/talks/personal-brands-for-software-developers-talk</link>
+            <link>https://bitspook.in/talks/personal-brands-for-software-developers-talk/</link>
             <description>&lt;p&gt;
 After long diligence, me and my old (Trantor) team decided to organize a meetup
 to showcase our efforts, and to share our ideas with the local community. &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/events/263862634/&quot;&gt;The
@@ -79,7 +79,7 @@ Here&apos;s my set of slides from the talk:
         </item>
         <item>
             <title>Secure Software Teams Trantor</title>
-            <link>https://bitspook.in/talks/secure-software-teams-trantor</link>
+            <link>https://bitspook.in/talks/secure-software-teams-trantor/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/secure-software-teams/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 &lt;/iframe&gt;
 
@@ -98,7 +98,7 @@ exercises, rest were left for the attendees as homework. Here&apos;s the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org210ebf7&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org0fc4b52&quot;&gt;
 version: &apos;3&apos;
 services:
   webgoat:
@@ -131,7 +131,7 @@ be able to access webgoat on &lt;a href=&quot;http://localhost:8080/WebGoat&quot
         </item>
         <item>
             <title>Lessons From a Year of TDD</title>
-            <link>https://bitspook.in/talks/lessons-from-a-year-of-tdd</link>
+            <link>https://bitspook.in/talks/lessons-from-a-year-of-tdd/</link>
             <description>&lt;style&gt;img { max-width: 600px; margin: 1rem 0; }&lt;/style&gt;
 
 &lt;iframe src=&quot;///slides.com/bitspook/lessons-from-a-year-of-tdd/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
@@ -620,7 +620,7 @@ patience&quot; alt=&quot;Thank you for your patience&quot; width=&quot;100%&quot
         </item>
         <item>
             <title>React/Redux Workshop</title>
-            <link>https://bitspook.in/talks/react-redux-workshop</link>
+            <link>https://bitspook.in/talks/react-redux-workshop/</link>
             <description>  &lt;iframe src=&quot;//slides.com/bitspook/react-redux-workshop/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 #+end_html
   &lt;/iframe&gt;
@@ -637,10 +637,10 @@ seeing community&apos;s interest in these technologies.
         </item>
         <item>
             <title>Modern day JS Apps (2017)</title>
-            <link>https://bitspook.in/talks/modern-day-js-apps-2017</link>
+            <link>https://bitspook.in/talks/modern-day-js-apps-2017/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/modern-js-apps-2017/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;org369ebf7&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;orgd2e2938&quot;&gt;
 &lt;p&gt;
 &amp;lt;/iframe&amp;gt;
 &lt;/p&gt;
@@ -660,7 +660,7 @@ group.
         </item>
         <item>
             <title>React, Redux and Reactive programming</title>
-            <link>https://bitspook.in/talks/react-redux-and-reactive-programming</link>
+            <link>https://bitspook.in/talks/react-redux-and-reactive-programming/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/react-redux-and-reactive-programming/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 &lt;/iframe&gt;
 
@@ -688,10 +688,10 @@ There is a video as well!
         </item>
         <item>
             <title>Jschannel RxJS workshop Nov 2015</title>
-            <link>https://bitspook.in/talks/jschannel-rxjs-workshop-now-2015</link>
+            <link>https://bitspook.in/talks/jschannel-rxjs-workshop-now-2015/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/jschannel-rxjs-workshop-nov-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;org2fdbc98&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;org1c95d93&quot;&gt;
 &lt;p&gt;
 &amp;lt;/iframe&amp;gt;
 &lt;/p&gt;
@@ -714,7 +714,7 @@ The &lt;a href=&quot;https://github.com/bitspook/rxjs-workshop-nov-2015&quot;&gt
         </item>
         <item>
             <title>Meteor Js Jschannel Feb 2015</title>
-            <link>https://bitspook.in/talks/meteor-js-jschannel-feb-2015</link>
+            <link>https://bitspook.in/talks/meteor-js-jschannel-feb-2015/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/meteor-jschannel-feb-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 &lt;/iframe&gt;
 
