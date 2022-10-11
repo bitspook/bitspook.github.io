@@ -1,0 +1,13 @@
+#+TITLE: spookfox
+#+URL: https://github.com/bitspook/spookfox
+#+LANGUAGES: Shell, Nix, JavaScript, Rust, Emacs Lisp, TypeScript, Makefile, 
+#+CREATED_AT: 2022-02-21T17:40:34Z
+#+PUSHED_AT: 2022-04-27T09:17:27Z
+#+IS_FORK: NIL
+#+STARS: 46
+
+#+BEGIN_EXPORT html
+<img src="https://opengraph.githubassets.com/71907f825805c1bcc7dfcea6ff9e48eb661dd23c3747beb3e598d746baf1a50b/bitspook/spookfox" alt="Github Card" />
+#+END_EXPORT
+
+Make Emacs speak with Firefox

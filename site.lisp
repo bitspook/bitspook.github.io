@@ -1,6 +1,5 @@
 (in-package :cl-user)
 
-(ql:quickload "cffi")
 (ql:quickload "cl-ownpress")
 
 (defpackage #:bitspook-in
@@ -42,6 +41,7 @@
                  :rss-max-posts 10
                  :control-tags ("blog-post" "published")
                  :exclude-tags ("draft")
+                 :published-categories '("blog" "poems")
                  :theme ,default-theme))))
-  (invoke-provider notes-provider)
-  (publish-blog "bitspook's online home"))
+  ;; (publish-blog "bitspook's online home")
+  (publish-projects))
