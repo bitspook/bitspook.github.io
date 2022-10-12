@@ -1,9 +1,12 @@
 (in-package #:bitspook-in)
 
 (import 'default-theme::navbar-dom)
+(import 'default-theme::footer-dom)
 (import 'default-theme::navbar-css)
 (import 'default-theme::top-level-css)
+(import 'default-theme::footer-css)
 (import 'default-theme::css-var)
+(import 'default-theme::css-color)
 
 (import 'spinneret:with-html)
 (import 'spinneret:with-html-string)
@@ -39,8 +42,10 @@
   (concatenate
    'list
    (navbar-css)
+   (footer-css)
    (top-level-css)
    `((.top-nav :padding 0)
+     (.postamble :padding 0)
      (.main
       :position relative
       :margin 0 auto
@@ -48,16 +53,48 @@
       :font-family ,(css-var :content-font-family)
 
       (:header :font-family ,(css-var :title-font-family))
-      (.title :font-size 2.2em)
-      (.description :font-size 1.6em)
-      (.projects-list :list-style-type none)
+      (.title :font-size 2.2rem)
+      (.description :font-size 1.4rem)
+
+      (.projects-list :list-style-type none
+                      :margin 4rem 0
+                      :min-height 40rem)
 
       (.project
-       (header :margin 2em 0)
-       (.title :font-size 2em
-               :margin none)
-       (.subtitle :font-size 1.8em)
-       (article :font-size 1.4em))))))
+       :margin 1rem 0
+       :padding 1rem
+       :border 1px solid ,(css-color :separator-light)
+       :border-radius 1rem
+
+       (header
+        :margin-bottom 2rem
+        :font-family ,(css-var :content-font-family)
+
+        (.project-title :font-size 2rem
+                        :margin 0
+                        :margin-bottom 0.4rem)
+        (.subtitle :font-size 1.2rem
+                   :color ,(css-color :dim-text))
+
+        (.languages :width 100%
+                    :margin-top 1.4rem
+                    :margin-bottom 1rem
+
+                    (.lang :display inline-flex
+                           :align-items center
+                           :margin-right 0.8rem)
+
+                    (i :border-radius 80%
+                       :width 0.8rem
+                       :height 0.8rem
+                       :margin 0 0.4rem)))
+
+       (article
+        :font-size 1.4rem
+        (p :margin 1rem 0))
+
+       (footer :color ,(css-color :dim-text)
+               :margin-top 1rem))))))
 
 (defmethod dom-of ((widget projects-widget) &key)
   (with-html
@@ -69,9 +106,25 @@ showcase, or are close to my heart. You can find a complete list of all my open
 source work on " (:a :href (conf :github) "my github profile") ".")
      (:ul.projects-list
       (:li.project
-       (:header (:h2.title "Spookfox")
-                (:p.subtitle "Hacker's bridge between Emacs and Firefox." ))
-       (:article ""))))))
+       (:header (:h2.project-title "Spookfox")
+                (:p.subtitle "Tinkerer's bridge between Emacs and Firefox.")
+                (:div.languages
+                 (:span.lang.emacs-lisp
+                  (:i :style "background: #952994")
+                  (:span.lang-name "Emacs Lisp"))
+                 (:span.lang.typescript
+                  (:i :style "background-color: #452134")
+                  (:span.lang-name "Typescript"))))
+       (:article
+        (:p "Spookfox is a Firefox extension and an Emacs package, which allow Emacs and
+Firefox to communicate with each other. Its primary goal is to offer an Emacs
+tinkerer similar (to Emacs) framework to tinker their browser.")
+        (:p "I use Spookfox as my daily driver to enable a number of workflow enhancements,
+e.g capturing articles I read and Youtube videos I watch, and also to organize
+hundreds tabs using org-mode."))
+       (:footer
+        (:div.last-update "Last updated on Oct 12, 2022")))))
+    (footer-dom)))
 
 (defmethod render ((widget projects-widget) &key)
   (call-next-method
