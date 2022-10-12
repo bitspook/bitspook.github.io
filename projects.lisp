@@ -7,6 +7,7 @@
 (import 'default-theme::footer-css)
 (import 'default-theme::css-var)
 (import 'default-theme::css-color)
+(import 'default-theme::button-css)
 
 (import 'spinneret:with-html)
 (import 'spinneret:with-html-string)
@@ -53,7 +54,7 @@
       :font-family ,(css-var :content-font-family)
 
       (:header :font-family ,(css-var :title-font-family))
-      (.title :font-size 2.2rem)
+      (.title :font-size 2.5rem)
       (.description :font-size 1.4rem)
 
       (.projects-list :list-style-type none
@@ -106,7 +107,7 @@ showcase, or are close to my heart. You can find a complete list of all my open
 source work on " (:a :href (conf :github) "my github profile") ".")
      (:ul.projects-list
       (:li.project
-       (:header (:h2.project-title "Spookfox")
+       (:header (:h2.project-title (:a :href "/projects/spookfox" "Spookfox"))
                 (:p.subtitle "Tinkerer's bridge between Emacs and Firefox.")
                 (:div.languages
                  (:span.lang.emacs-lisp
@@ -134,7 +135,103 @@ hundreds tabs using org-mode."))
      (with-html
        (:title "Mittran de project!")))))
 
-(defun publish-projects ()
+(defclass project-widget (widget)
+  ((project :initarg :project
+            :initform (error "Project is required"))))
+
+(defmethod styles-of ((widget project-widget) &key)
+  (concatenate
+   'list
+   (top-level-css)
+   (navbar-css)
+   (footer-css)
+   `((.top-nav :padding 0)
+     (.preamble :padding 0)
+     (.container
+      :max-width 1080px
+      :margin 0 auto
+      :color ,(css-color :primary-text)
+
+      ("header.main"
+       :margin 2rem 0
+
+       (.title :font-size 2.5rem
+               :margin 0
+               :margin-bottom 0.4rem)
+
+       (.subtitle :font-size 1.2rem
+                  :color ,(css-color :dim-text)))
+
+      ("article.main"
+       :min-height 40rem
+       :font-size 1.4rem
+
+       (p :margin 1rem 0))
+
+      (.elsewhere-buttons
+       :list-style-type none
+       :display flex
+       :margin-top 3rem
+
+       (li :margin-right 1.4rem))
+
+      ((:or .btn-github .btn-issues .btn-docs)
+       :padding 0 1rem
+       :font-size 1.2rem
+       :color ,(css-color :secondary)
+
+       (.icon :background-size contain
+              :display inline-block
+              :width 1.4rem
+              :height 1.4rem
+              :margin-right 0.4rem))
+
+      (.btn-github (.icon :background-image (url "/images/icons/github.svg")))
+      (.btn-issues (.icon :background-image (url "/images/icons/issues.svg")))
+      (.btn-docs (.icon :background-image (url "/images/icons/docs.svg")))))))
+
+(defmethod dom-of ((widget project-widget) &key)
+  (with-html
+    (navbar-dom)
+    (:section.container
+     (:header.main
+      (:h1.title "Spookfox")
+      (:p.subtitle "Tinkerer's bridge between Emacs to Firefox"))
+     (:article.main
+      (:p "Spookfox is a Firefox extension and an Emacs package, which allow Emacs and
+Firefox to communicate with each other. Its primary goal is to offer an Emacs
+tinkerer similar (to Emacs) framework to tinker their browser.")
+      (:p "I use Spookfox as my daily driver to enable a number of workflow enhancements,
+e.g capturing articles I read and Youtube videos I watch, and also to organize
+hundreds tabs using org-mode.")
+      (:ul.elsewhere-buttons
+       (:li (:a.btn.btn-github :href (conf :github) (:i.icon) (:span "Source Code")))
+       (:li (:a.btn.btn-issues :href (conf :github) (:i.icon) (:span "Issue tracker")))
+       (:li (:a.btn.btn-docs :href (conf :github) (:i.icon) (:span "Documentation")))))
+     (footer-dom))))
+
+(let ((*debug-transpiles* nil)
+      (*conf* (conf-merge
+               `(:db-name "./clownpress.db"
+                 :site-url "https://bitspook.in/"
+                 :author "Charanjit Singh"
+                 :avatar "/images/avatar.png"
+                 :twitter "https://twitter.com/bitspook"
+                 :linkedin "https://linked.com/in/bitspook"
+                 :github "https://github.com/bitspook"
+                 :handle "bitspook"
+                 :resume "https://docs.google.com/document/d/1HFOxl97RGtuhAX95AhGWwa808SO9qSCYLjP1Pm39la0/"
+                 :dest "./docs/"
+                 :static-dirs ("./static/")
+                 :mixpanel-token "0f28a64d9f8bce370006d36e1e2e3f61"
+                 :rss-max-posts 10
+                 :control-tags ("blog-post" "published")
+                 :exclude-tags ("draft")
+                 :published-categories '("blog" "poems")
+                 :theme ,default-theme))))
   (let* ((p-widget (make-instance 'projects-widget :projects nil))
+         (pp-widget (make-instance 'project-widget :project nil))
          (html (with-html-string (render p-widget))))
-    (clown-publishers:publish-html-file "projects/index.html" html)))
+    (mapcar #'clown-publishers:publish-static (conf :static-dirs))
+    (clown-publishers:publish-html-file "projects/index.html" html)
+    (clown-publishers:publish-html-file "projects/spookfox/index.html" (with-html-string (render pp-widget)))))
