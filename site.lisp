@@ -1,6 +1,7 @@
 (in-package :cl-user)
 
 (ql:quickload "cl-ownpress")
+(ql:quickload "parenscript")
 
 (defpackage #:bitspook-in
   (:use #:cl
