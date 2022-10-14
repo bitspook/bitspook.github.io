@@ -1,7 +1,6 @@
 (in-package :cl-user)
 
 (ql:quickload "cl-ownpress")
-(ql:quickload "parenscript")
 
 (defpackage #:bitspook-in
   (:use #:cl
@@ -44,5 +43,4 @@
                  :exclude-tags ("draft")
                  :published-categories '("blog" "poems")
                  :theme ,default-theme))))
-  ;; (publish-blog "bitspook's online home")
-  (publish-projects))
+  (publish-blog "bitspook's online home"))
