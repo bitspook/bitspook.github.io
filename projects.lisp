@@ -1,9 +1,17 @@
 (in-package #:bitspook-in)
 
-(import 'spinneret:with-html-string)
 (import 'clown-blog.theme:render)
+(import 'clown-blog.theme:with-html-string)
 (import 'clown-blog.theme.default::projects-widget)
 (import 'clown-blog.theme.default::project-widget)
+
+(defparameter projects-provider
+  (make-instance
+   'org-project-provider
+   :name "projects"
+   :content-dir "./projects"))
+
+(invoke-provider projects-provider)
 
 (let ((*debug-transpiles* t)
       (*conf* (conf-merge
@@ -28,7 +36,15 @@
 
   (clown-publishers:publish-html-file
    "projects/index.html"
-   (with-html-string (render projects-widget)))
-  (clown-publishers:publish-html-file
-   "projects/spookfox/index.html"
-   (with-html-string (render project-widget))))
+   (with-html-string
+     (render projects-widget
+             :title "Featured projects"
+             :projects (clown-blog:fetch-all-projects))))
+
+  (loop :for project
+          :in (clown-blog:fetch-all-projects)
+        :do
+           (clown-publishers:publish-html-file
+            (clown-blog:project-public-path project)
+            (with-html-string
+              (render project-widget :project project)))))

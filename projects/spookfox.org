@@ -1,13 +1,33 @@
-#+TITLE: spookfox
-#+URL: https://github.com/bitspook/spookfox
-#+LANGUAGES: Shell, Nix, JavaScript, Rust, Emacs Lisp, TypeScript, Makefile, 
-#+CREATED_AT: 2022-02-21T17:40:34Z
-#+PUSHED_AT: 2022-04-27T09:17:27Z
-#+IS_FORK: NIL
-#+STARS: 46
+#+title: Spookfox
+#+tagline: Tinkerer's bridge between Emacs and Firefox
+#+id: spookfox
+#+source_code: https://github.com/bitspook/spookfox
+#+documentation: https://bitspook.in/projects/spookfox/docs
+#+issue_tracker: https://github.com/bitspook/spookfox/issues
+#+languages: ["Emacs Lisp", "TypeScript", "Nix"]
+#+updated_at: <2022-10-17 Mon>
 
-#+BEGIN_EXPORT html
-<img src="https://opengraph.githubassets.com/71907f825805c1bcc7dfcea6ff9e48eb661dd23c3747beb3e598d746baf1a50b/bitspook/spookfox" alt="Github Card" />
-#+END_EXPORT
+#+name: oracle-spec
+#+begin_src lisp :exports none
+  (("a developer"
+    ("use Spookfox" (:show ("#use" "#outline-container-use")))
+    ("hack on Spookfox" (:show ("#contribute" "#outline-container-contribute"))))
+   ("an explorer"
+    ("know more about Spookfox" (:show ("#explore")))
+    ("see it all" (:show :all))))
+#+end_src
 
-Make Emacs speak with Firefox
+Spookfox is a Firefox extension and an Emacs package, which allow Emacs and
+Firefox to communicate with each other. Its primary goal is to offer an Emacs
+tinkerer similar (to Emacs) framework to tinker their browser.
+
+I use Spookfox as my daily driver to enable a number of workflow enhancements,
+e.g capturing articles I read and Youtube videos I watch.
+
+
+** Usage
+:PROPERTIES:
+:CUSTOM_ID: use
+:END:
+
+Yo bro!
