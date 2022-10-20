@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang=en><head><meta charset=UTF-8><title>Spookfox - @bitspook&#39;s project</title><style>@font-face{font-family:Roboto;font-style:normal;font-weight:300;src:url("/fonts/roboto-thin.woff2");}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:url("/fonts/roboto-regular.woff2");}@font-face{font-family:Roboto;font-style:normal;font-weight:bold;src:url("/fonts/roboto-bold.woff2");}@font-face{font-family:Cantarell;font-style:normal;font-weight:bold;src:url("/fonts/Cantarell-Bold.ttf");}@font-face{font-family:Cantarell;font-style:normal;font-weight:regular;src:url("/fonts/Cantarell-Regular.ttf");}*{margin:0;padding:0;box-sizing:border-box;}body{font-family:Cantarell;font-size:14px;background:#fcfcfc;color:#010400;}.title,header{font-family:Roboto;}a{text-decoration:underline;color:#010400;}h1,h2,h3,h4,h5,h6{font-family:Roboto, sans-serif;margin:4rem 0 2rem 0;}img figcaption,figure figcaption{padding:0.4em;padding-top:0;border-bottom:2px solid #465c69;font-size:0.7em;}blockquote{padding:0.01em 1em;margin:1em 0;border-left:4px solid #465c69;font-size:1.2em;}pre{overflow:auto;padding:1em;font-family:monospace;font-size:1.2rem;}code{font-family:monospace;color:#b75d69;font-size:1rem;}.title{margin:2rem 0;}.title h1{font-family:Roboto, sans-serif;font-weight:bold;font-size:1.7em;line-height:1.2;text-transform:capitalize;}video{width:100%;}col{min-width:10rem;}tr:nth-child(even){background-color:#efefef;}td{padding:.4em .8em;}.src{font-size:1rem;padding:1em;border:1px solid #6f6f6f29;border-radius:8px;box-sizing:scroll;margin:2em 0;}nav.top-nav{padding:0;}footer.postamble{padding:0;}.container{max-width:1080px;margin:0 auto;color:#010400;}.container header.main{margin:2rem 0;}.container header.main .title{font-size:2.5rem;margin:0;margin-bottom:0.4rem;}.container header.main .subtitle{font-size:1.2rem;color:#6f6f6f;}.container article.main{min-height:40rem;font-size:1.4rem;}.container article.main p{margin:1rem 0;}.container .elsewhere-buttons{list-style-type:none;display:flex;margin-top:3rem;}.container .elsewhere-buttons li{margin-right:1.4rem;}.container .btn-github,.container .btn-issues,.container .btn-docs{padding:0 1rem;font-size:1.2rem;color:#465c69;}.container .btn-github .icon,.container .btn-issues .icon,.container .btn-docs .icon{background-size:contain;display:inline-block;width:1.4rem;height:1.4rem;margin-right:0.4rem;}.container .btn-github .icon{background-image:url("/images/icons/github.svg");}.container .btn-issues .icon{background-image:url("/images/icons/issues.svg");}.container .btn-docs .icon{background-image:url("/images/icons/docs.svg");}.rss-sub{margin:2rem 0;}.rss-sub a{display:flex;align-items:center;}.rss-sub a .rss{width:24px;height:24px;margin-right:1rem;background:url("/images/icons/rss.svg");background-repeat:no-repeat;background-size:contain;}.postamble{max-width:1080px;padding:0 124px;margin:0 auto;}@media (max-width: 840px){.postamble{max-width:100%;padding:0 8%;}}@media (max-width: 480px){.postamble{max-width:100%;padding:0 4%;}}.btn{display:inline-flex;border:2px solid;border-radius:25px;padding:0 2.1rem;cursor:pointer;font-family:Roboto;font-weight:normal;line-height:2.2rem;align-items:center;text-align:center;background-color:#fcfcfc;text-decoration:none;}.btn:hover{background-color:#efefef;}.btn-cta{border-color:#b75d69;background:#b75d69;color:#fcfcfc;}.btn-cta:hover{background:#b75d69;}.btn-cta:active{background:#b75d69;}.btn-primary{border-color:#006992;color:#006992;background:#fcfcfc;}.btn-primary:hover{background:#f9f9f9;}.btn-primary:active{background:#efefef;}.btn-secondary{border-color:#465c69;color:#465c69;background:#fcfcfc;}.btn-secondary:hover{background:#f9f9f9;}.btn-secondary:active{background:#efefef;}.postamble{font-family:monospace;color:#666;margin:4rem auto;}.postamble .validation{display:none;}@media (max-width: NIL){.postamble{max-width:100%;padding:0 8%;}}@media (max-width: NIL){.postamble{max-width:100%;padding:0 4%;}}#mc_embed_signup{max-width:600px;background:transparent;margin-bottom:4rem;}.newsletter-email{border:1px solid #465c69;border-radius:25px;width:100%;margin-bottom:1rem;padding:0.4rem 0.8rem;}.listing{list-style-type:none;font-family:Cantarell, sans-serif;}.listing li{display:flex;line-height:1.3;padding:0.32rem 0;align-items:center;margin-bottom:0.6rem;}.li-icon{display:block;background-repeat:no-repeat;background-position:0 0;background-size:contain;content:"";width:88px;height:48px;flex-shrink:0;}.li-icon--blog{background-image:url(/images/icons/post.svg);}.li-icon--talks{background-image:url(/images/icons/talk.svg);}.li-icon--poems{background-image:url(/images/icons/poems.svg);}.li-title{font-size:1.5rem;}.li-meta{margin-top:0.5rem;font-size:1rem;display:flex;}.li-meta.li-meta a{font-family:Roboto, sans-serif;color:#465c69;display:flex;}.meta-item{line-height:1;padding:0;padding-right:1em;border-right:1px solid #888;}.meta-item:last-child{padding-right:0;border:none;}.tags{display:flex;flex-wrap:wrap;}.tags a{margin-left:1rem;}.rss{width:24px;height:24px;margin-right:1rem;background:url("/images/icons/rss.svg");background-repeat:no-repeat;background-size:contain;}.oracle-container{margin:2rem 0;margin-top:4rem;}.oracle-container select{border:none;background:white;margin:0 1rem;font-size:1.2rem;padding:0.4rem 0;border-bottom:2px solid #010400;min-width:10rem;}.top-nav{height:90px;display:flex;position:relative;justify-content:space-between;}.top-nav ul{list-style-type:none;display:flex;align-items:center;padding:2em 0;}.top-nav li{flex-grow:1;padding-right:2em;}.top-nav li a{text-decoration:underline;font-size:1.4em;font-family:roboto, sans-serif;color:#006992;}.top-nav li a:hover{color:#465c69;}.top-nav li:last-child{padding:0;}.top-nav .brand{width:60px;height:60px;align-self:center;flex-grow:1;}.top-nav .brand-avatar{height:100%;}@media (max-width: 480px){.top-nav{padding-right:1em;}.top-nav a{font-size:1.2em;}}.top-nav{max-width:1080px;padding:0 124px;margin:0 auto;}@media (max-width: 840px){.top-nav{max-width:100%;padding:0 8%;}}@media (max-width: 480px){.top-nav{max-width:100%;padding:0 4%;}}</style></head><body><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt="Charanjit Singh"></a></div><div><ul><li><a href=/blog>Blog</a></li><li><a href=/poems>Poems</a></li><li><a href=/projects>Projects</a></li></ul></div></nav><section class=container><header class=main><h1 class=title>Spookfox</h1><p class=subtitle>Tinkerer&#39;s bridge between Emacs and Firefox</p></header><article class=main><p>
+Spookfox is a Firefox extension and an Emacs package, which allow Emacs and
+Firefox to communicate with each other. Its primary goal is to offer an Emacs
+tinkerer similar (to Emacs) framework to tinker their browser.
+</p>
+
+<p>
+I use Spookfox as my daily driver to enable a number of <a href="https://github.com/bitspook/spookmax.d">workflow enhancements</a>,
+e.g capturing articles I read and Youtube videos I watch.
+</p>
+<ul class=elsewhere-buttons><li><a class="btn btn-github" href=https://github.com/bitspook/spookfox><i class=icon></i><span>Source Code</span></a></li><li><a class="btn btn-issues" href=https://github.com/bitspook/spookfox/issues><i class=icon></i><span>Issue tracker</span></a></li></ul><div class=oracle-container style=display:none;><span class=placeholder>I am</span><select id=roles onchange=handleSelectRole(event.target.value);><option value="an explorer">an explorer</option><option value="a developer">a developer</option></select><span class=placeholder>who wants to</span><select class=intents data-role="an explorer" onchange=handleSelectIntent(event.target.value);><option value="see it all">see it all</option><option value="know more about Spookfox">know more about Spookfox</option></select><select class=intents data-role="a developer" onchange=handleSelectIntent(event.target.value);><option value="install Spookfox">install Spookfox</option><option value="use Spookfox">use Spookfox</option><option value="hack on Spookfox">hack on Spookfox</option></select><script>function mapcar(fun) { var arrs = Array.prototype.slice.call(arguments, 1); var resultArray = new Array(); if (1 === arrs.length) { for (var element = null, _js_arrvar86 = arrs[0], _js_idx85 = 0; _js_idx85 < _js_arrvar86.length; _js_idx85 += 1) { element = _js_arrvar86[_js_idx85]; resultArray.push(fun(element)); }; } else { for (var i = 0; i < arrs[0].length; i += 1) { var argsArray = mapcar(function (a) { return a[i]; }, arrs); resultArray.push(fun.apply(fun, argsArray)); }; }; __PS_MV_REG = []; return resultArray; };
+function mapInto(fn, arr) { var idx = 0; for (var el = null, _js_idx87 = 0; _js_idx87 < arr.length; _js_idx87 += 1) { el = arr[_js_idx87]; arr[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return arr; };
+function map(fn, arr) { var idx = 0; var result = []; for (var el = null, _js_idx88 = 0; _js_idx88 < arr.length; _js_idx88 += 1) { el = arr[_js_idx88]; result[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return result; };
+function member(item, arr) { for (var el = null, _js_idx89 = 0; _js_idx89 < arr.length; _js_idx89 += 1) { el = arr[_js_idx89]; if (el === item) { return true; }; }; return false; };
+function setDifference(arr, arrToSub) { var idx = 0; var result = []; for (var el = null, _js_idx90 = 0; _js_idx90 < arr.length; _js_idx90 += 1) { el = arr[_js_idx90]; if (!member(el, arrToSub)) { result[idx] = el; idx += 1; }; }; __PS_MV_REG = []; return result; };
+function reduce(func, list, init) { var acc = null; for (var i = arguments.length === 3 ? -1 : 0, acc = arguments.length === 3 ? init : list[0]; i < list.length - 1; i += 1, acc = func(acc, list[i])) { }; __PS_MV_REG = []; return acc; };
+function nconc(arr) { var arrs = Array.prototype.slice.call(arguments, 1); if (arr && arr.length > 0) { var _js92 = arrs.length; for (var _js91 = 0; _js91 < _js92; _js91 += 1) { var other = arrs[_js91]; if (other && other.length > 0) { arr['splice']['apply'](arr, [arr.length, other.length].concat(other)); }; }; }; __PS_MV_REG = []; return arr; };var SPEC = [['an explorer', ['see it all', ['show', 'all']], ['know more about Spookfox', ['show', ['#explore']]]], ['a developer', ['install Spookfox', ['show', ['#outline-container-install']]], ['use Spookfox', ['show', ['#outline-container-use', '#outline-container-apps']]], ['hack on Spookfox', ['show', ['#outline-container-contribute']]]]];function isArray(obj) {
+    __PS_MV_REG = [];
+    return Array.isArray(obj);
+};
+function display(el) {
+    return el.style.display;
+};
+function __setf_display(val, el) {
+    return el.style.display = val;
+};
+function first(list) {
+    return list && list.length > 0 ? list[0] : null;
+};
+var car = first;
+function cdr(list) {
+    __PS_MV_REG = [];
+    return list && list.length > 1 ? list.slice(1) : null;
+};
+function cdadr(list) {
+    __PS_MV_REG = [];
+    return cdr(car(cdr(list)));
+};
+function findIf(pred, seq) {
+    __PS_MV_REG = [];
+    return seq.find(pred);
+};
+function cLog() {
+    var args = Array.prototype.slice.call(arguments, 0);
+    __PS_MV_REG = [];
+    return console.log.apply(console, args);
+};
+function arrayFrom(obj) {
+    __PS_MV_REG = [];
+    return Array.from(obj);
+};
+function roles() {
+    __PS_MV_REG = [];
+    return (function () {
+        var _js67 = SPEC.length;
+        var collect68 = [];
+        for (var _js66 = 0; _js66 < _js67; _js66 += 1) {
+            var item = SPEC[_js66];
+            collect68.push(first(item));
+        };
+        __PS_MV_REG = [];
+        return collect68;
+    })();
+};
+function roleIntents(role) {
+    var _js70 = SPEC.length;
+    for (var _js69 = 0; _js69 < _js70; _js69 += 1) {
+        var item = SPEC[_js69];
+        if (first(item) == role) {
+            __PS_MV_REG = [];
+            return cdr(item);
+        };
+    };
+};
+function activeRole() {
+    __PS_MV_REG = [];
+    return document.getElementById('roles').value;
+};
+function activateRole(role) {
+    var els = Array.from(document.querySelectorAll('.intents'));
+    for (var el = null, _js_idx71 = 0; _js_idx71 < els.length; _js_idx71 += 1) {
+        el = els[_js_idx71];
+        __setf_display('none', el);
+    };
+    var intentEls = Array.from(document.querySelectorAll('.intents[data-role=\'' + role + '\']'));
+    for (var el = null, _js_idx72 = 0; _js_idx72 < intentEls.length; _js_idx72 += 1) {
+        el = intentEls[_js_idx72];
+        __setf_display('inline-block', el);
+    };
+};
+function activateIntent(intentSpec) {
+    var realmEl = document.querySelector('#oracle-realm');
+    var realmChildren = arrayFrom(realmEl.children);
+    for (var el = null, _js_idx73 = 0; _js_idx73 < realmChildren.length; _js_idx73 += 1) {
+        el = realmChildren[_js_idx73];
+        __setf_display('none', el);
+    };
+    for (var sel = null, _js_arrvar75 = cdadr(intentSpec), _js_idx74 = 0; _js_idx74 < _js_arrvar75.length; _js_idx74 += 1) {
+        sel = _js_arrvar75[_js_idx74];
+        switch (sel) {
+        case 'all':
+            for (var el = null, _js_idx76 = 0; _js_idx76 < realmChildren.length; _js_idx76 += 1) {
+                el = realmChildren[_js_idx76];
+                __setf_display('block', el);
+            };
+            break;
+        default:
+            for (var el = null, _js_arrvar78 = Array.from(realmEl.querySelectorAll(sel)), _js_idx77 = 0; _js_idx77 < _js_arrvar78.length; _js_idx77 += 1) {
+                el = _js_arrvar78[_js_idx77];
+                __setf_display('block', el);
+            };
+        };
+    };
+};
+function handleSelectRole(role) {
+    activateRole(role);
+    __PS_MV_REG = [];
+    return domResetIntentsEl();
+};
+function handleSelectIntent(intent) {
+    var intentSpec = findIf(function (_1) {
+        __PS_MV_REG = [];
+        return car(_1) == intent;
+    }, roleIntents(activeRole()));
+    __PS_MV_REG = [];
+    return activateIntent(intentSpec);
+};
+function domResetSelectEl(selector) {
+    var el = document.querySelector(selector);
+    el.selectedIndex = 0;
+    __PS_MV_REG = [];
+    return el.dispatchEvent(new Event('change'));
+};
+function domResetIntentsEl() {
+    __PS_MV_REG = [];
+    return domResetSelectEl('.intents[data-role=\'' + activeRole() + '\']');
+};
+function init() {
+    var els = Array.from(document.querySelectorAll('.oracle-container'));
+    for (var el = null, _js_idx76 = 0; _js_idx76 < els.length; _js_idx76 += 1) {
+        el = els[_js_idx76];
+        __setf_display('flex', el);
+    };
+    __PS_MV_REG = [];
+    return setTimeout(function () {
+        domResetSelectEl('#roles');
+        __PS_MV_REG = [];
+        return domResetIntentsEl();
+    }, 0);
+};
+init();</script></div><div id=oracle-realm><div id="outline-container-install" class="outline-2">
+<h2 id="install">Installation</h2>
+<div class="outline-text-2" id="text-install">
+<p>
+There are 2 parts to install spookfox.
+</p>
+
+<ol class="org-ol">
+<li><p>
+Install the browser addon
+</p>
+
+<p>
+Download the addon (<code>.xpi</code> file) from <a href="https://github.com/bitspook/spookfox/releases/">releases page</a>. Firefox will prompt you
+to install as soon as you download it.
+</p>
+
+<p>
+<b>What is it not available on Firefox addons page?</b>
+</p>
+
+<p>
+Because it is not <a href="https://addons.mozilla.org/en-US/firefox/addon/spookfox/">approved on Firefox addons</a> yet.
+</p></li>
+
+<li>Install Emacs package
+
+<ul class="org-ul">
+<li><p>
+Using straight.el
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">use-package</span> <span style="color: #c6797e;">spookfox</span>
+  <span style="color: #DB6E8F;">:straight</span>
+  (spookfox <span style="color: #DB6E8F;">:type</span> git
+            <span style="color: #DB6E8F;">:host</span> github
+            <span style="color: #DB6E8F;">:repo</span> <span style="color: #A3B09A;">&quot;bitspook/spookfox&quot;</span>
+            <span style="color: #DB6E8F;">:files</span> (<span style="color: #A3B09A;">&quot;lisp/*.el&quot;</span> <span style="color: #A3B09A;">&quot;lisp/apps/*.el&quot;</span>))
+  <span style="color: #DB6E8F;">:config</span>
+  (spookfox-init))
+</pre>
+</div></li>
+
+<li>Manually
+
+<ul class="org-ul">
+<li><p>
+Clone this repository
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">git clone https://github.com/bitspook/spookfox &lt;path-to-spookfox&gt;
+</pre>
+</div></li>
+
+<li><p>
+Add spookfox and its apps <code>load-path</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(add-to-list 'load-path <span style="color: #A3B09A;">&quot;&lt;path-to-spookfox&gt;/lisp&quot;</span>)
+(add-to-list 'load-path <span style="color: #A3B09A;">&quot;&lt;path-to-spookfox&gt;/lisp/apps&quot;</span>)
+</pre>
+</div></li>
+</ul></li>
+</ul></li>
+</ol>
+</div>
+</div><div id="outline-container-use" class="outline-2">
+<h2 id="use">Usage</h2>
+<div class="outline-text-2" id="text-use">
+<p>
+Spookfox itself is a thin layer which provide websockets based communication
+between Emacs and Firefox. More functionality on top of it is provided with
+<a href="#apps">apps</a>. Different apps need to be configured as documented in <a href="#apps">apps</a> section below.
+</p>
+
+<ol class="org-ol">
+<li><p>
+<b>Load the apps you want to use</b>
+</p>
+
+<p>
+If you followed the <a href="#install">installation</a> instructions, all apps bundled with the
+package itself should be ready to be loaded with a call to <code>require</code>. For
+example, to load &quot;spookfox-org-tabs&quot; app, you'd write this Elisp:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">require</span> '<span style="color: #c6797e;">spookfox-org-tabs</span>)
+</pre>
+</div></li>
+
+<li><p>
+<b>Tell spookfox which apps you want to enable</b>
+</p>
+
+<p>
+Provide the list of enabled apps to <code>spookfox-enabled-apps</code> variable:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">setq</span> spookfox-enabled-apps '(spookfox-org-tabs))
+</pre>
+</div></li>
+
+<li><p>
+<b>Initialize spookfox</b>
+</p>
+
+<p>
+Changes to <code>spookfox-enabled-apps</code> take effect when <code>spookfox-init</code> function
+is called. This function also starts the websockets server.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(spookfox-init)
+</pre>
+</div></li>
+</ol>
+</div>
+</div><div id="outline-container-apps" class="outline-2">
+<h2 id="apps">Apps</h2>
+<div class="outline-text-2" id="text-apps">
+<p>
+Spookfox has a modular architecture. An &quot;app&quot; is a bundle of functionality
+isolated and opt-in. Following apps come bundled with this package.
+</p>
+</div>
+
+<div id="outline-container-org6d7ad92" class="outline-3">
+<h3 id="org6d7ad92">spookfox-tabs</h3>
+<div class="outline-text-3" id="text-org6d7ad92">
+<p>
+Basic access to browser's tabs.
+</p>
+</div>
+
+<div id="outline-container-org6d9db5b" class="outline-4">
+<h4 id="org6d9db5b">Features</h4>
+<div class="outline-text-4" id="text-org6d9db5b">
+<ol class="org-ol">
+<li><p>
+Access browser tabs in Elisp
+</p>
+
+<p>
+You can use this to enhance your Emacs usage. For example, check <a href="https://github.com/bitspook/spookmax.d">my Emacs
+config</a> to see how I use it to more easily capture notes for articles I read
+in the browser.
+</p></li>
+
+<li><p>
+Open a browser tab, or start a new search in browser
+</p>
+
+<p>
+Command: <code>open-new-tab</code>
+</p>
+
+<p>
+Open a new tab in browser, or search for something using browser's default
+search engine (opens a new tab).
+</p>
+
+<p>
+PS you can use <code>browse-url</code> to achieve the same.
+</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org72a420e" class="outline-3">
+<h3 id="org72a420e">spookfox-org-tabs</h3>
+<div class="outline-text-3" id="text-org72a420e">
+<p>
+Manage browser's tabs in an org file (separate file or as a subtree in an
+existing one).
+</p>
+</div>
+
+<div id="outline-container-org1cb0488" class="outline-4">
+<h4 id="org1cb0488">Features</h4>
+<div class="outline-text-4" id="text-org1cb0488">
+<ol class="org-ol">
+<li><p>
+Organize tabs freely in org file
+</p>
+
+<p>
+Tabs are stored as org-mode subtrees, which you are free to structure as you
+desire. You can <b>group tabs</b> by assigning org-mode tags, to manipulate tabs
+(open, close) in bulk.
+</p></li>
+
+<li><b>Chain tabs</b>, so any changes to the tab in Firefox (e.g url change) are
+synced with the org-file</li>
+
+<li>Commands for manipulating tabs
+
+<ul class="org-ul">
+<li><p>
+<code>spookfox-org-tabs-open-group</code>
+</p>
+
+<p>
+Prompt for a tab group, and open all tabs belonging to that group.
+</p></li>
+<li><p>
+<code>spookfox-org-tabs-open</code>
+</p>
+
+<p>
+Prompt user to select a tab and open it in spookfox browser.
+</p></li>
+<li><p>
+<code>spookfox-org-tabs-save-active-tab</code>
+</p>
+
+<p>
+Save active tab in browser.
+</p></li>
+<li><p>
+<code>spookfox-org-tabs-save-all-tabs</code>
+</p>
+
+<p>
+Save all currently open browser tabs at ‘spookfox-saved-tabs-target‘.
+It will open a capture buffer so user get a chance to preview and
+make changes.
+</p></li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgdeef163" class="outline-4">
+<h4 id="orgdeef163">Configuration</h4>
+<div class="outline-text-4" id="text-orgdeef163">
+<ol class="org-ol">
+<li><p>
+<code>spookfox-saved-tabs-target</code>
+</p>
+
+<p>
+<code>spookfox-saved-tabs-target</code> is an <a href="https://orgmode.org/manual/Template-elements.html">org-capture-templates target</a>, where the
+browser tabs are saved. For example:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #64727d; font-style: italic;">;; </span><span style="color: #64727d; font-style: italic;">Store tabs in a file named =spookfox.org=, under '* Tabs' heading</span>
+(<span style="color: #b18bb1; font-style: italic;">setq</span> spookfox-saved-tabs-target
+      `(file+headline
+        ,(expand-file-name <span style="color: #A3B09A;">&quot;spookfox.org&quot;</span> org-directory)
+        <span style="color: #A3B09A;">&quot;Tabs&quot;</span>))
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgadf6c38" class="outline-3">
+<h3 id="orgadf6c38">js-injection</h3>
+<div class="outline-text-3" id="text-orgadf6c38">
+<p>
+Inject Javascript into any website open in your browser, and get the results
+back. I use it to help me take notes for Youtube videos with automatically added
+timestamp links.
+</p>
+
+<ul class="org-ul">
+<li>Provided functions
+
+<ul class="org-ul">
+<li><p>
+<code>spookfox-eval-js-in-active-tab</code>
+</p>
+
+<p>
+spookfox-eval-js-in-active-tab is a Lisp closure in
+‘~/Documents/work/spookfox/lisp/apps/spookfox-js-injection.el’.
+</p>
+
+<p>
+(spookfox-eval-js-in-active-tab JS &amp;optional JUST-THE-TIP-P)
+</p>
+
+<p>
+Evaluate JS in active firefox tab.
+Return value is a list of lists. Browser can have multiple active
+tabs (one per window). Every active tab can have multiple frames.
+If JUST-THE-TIP-P is non-nil, first tab’s first frame’s return
+value from the results is returned (instead of list of lists).
+</p>
+
+<p>
+JS is subjected to limitations of browser’s ability to execute
+it. It is similar to executing js in browser’s console. So for
+example running a script which declares a variable with ‘let‘ or
+‘const‘ might cause the script to fail execution.
+</p>
+
+<p>
+Details about js execution:
+<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript</a>
+</p></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div><div id="outline-container-contribute" class="outline-2">
+<h2 id="contribute">Contribute</h2>
+<div class="outline-text-2" id="text-contribute">
+<ol class="org-ol">
+<li><p>
+Write apps
+</p>
+
+<p>
+If you want to write apps for Spookfox to handle a use-case not covered by
+existing apps, for now you need to go through <a href="https://github.com/bitspook/spookfox">the source code</a> to figure
+things out. I am still working on a web-accessible documentation for
+Spookfox. Code is allegedly well-commented and existing apps can act as good
+examples.
+</p></li>
+
+<li><p>
+Modify Spookfox
+</p>
+
+<p>
+To make changes on the Browser side of things, you'll have to modify and
+rebuild the browser addon itself. Unfortunately browsers don't allow
+injecting code into the running addon anymore (although it is possible to
+inject code into a website).
+</p>
+
+<p>
+Or you might want to fix a bug, or make the code cleaner.
+</p>
+
+<p>
+Please take a look at the <a href="https://github.com/bitspook/spookfox/blob/master/contributing.org">contributing.org</a> for setting up the development
+environment to hack Spookfox.
+</p></li>
+</ol>
+</div>
+</div><div id=explore><h2 class=title>Related content</h2><ul class=listing><div>No posts yet 😕</div></ul></div></div></article><footer class="site-footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2>Get updates via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class="btn btn-primary" type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Or Follow via RSS</a></p><p>Author: Charanjit Singh <a href=https://twitter.com/bitspook>@bitspook</a></p></footer><script type=text/javascript>(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);mixpanel.init('0f28a64d9f8bce370006d36e1e2e3f61');mixpanel.track('Page Load');</script></section></body></html>

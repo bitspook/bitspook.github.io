@@ -19,9 +19,9 @@ summary of how the last six months shaped my thoughts, and an abstract plan of
 what I intend to do next.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org366200a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org366200a&quot;&gt;Mental health&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org366200a&quot;&gt;
+&lt;div id=&quot;outline-container-org77d7540&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org77d7540&quot;&gt;Mental health&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org77d7540&quot;&gt;
 &lt;p&gt;
 I needed this break a lot more than I thought I did. Being perpetually restless
 had been my state of being for too long. It felt good, to breath out.
@@ -50,9 +50,9 @@ a definite answer to consider the matter resolved. More on this later (below).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgaa1403f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgaa1403f&quot;&gt;Social work&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgaa1403f&quot;&gt;
+&lt;div id=&quot;outline-container-org1f36ed1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org1f36ed1&quot;&gt;Social work&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1f36ed1&quot;&gt;
 &lt;p&gt;
 When busy with material responsibilities, I used to fantasize that if I had more
 free time I could do so much more for people around me. When I had it, I tried
@@ -77,9 +77,9 @@ able to put in as much energy as it demanded.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org88c0d77&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org88c0d77&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org88c0d77&quot;&gt;
+&lt;div id=&quot;outline-container-orge3fb99a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge3fb99a&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge3fb99a&quot;&gt;
 &lt;p&gt;
 I was running full speed building &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;foolish&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;things&lt;/a&gt;. Then lisp came calling.
 &lt;/p&gt;
@@ -134,9 +134,9 @@ probably would not have done otherwise. I traveled.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org2311bb0&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2311bb0&quot;&gt;Travel&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2311bb0&quot;&gt;
+&lt;div id=&quot;outline-container-org8380b66&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org8380b66&quot;&gt;Travel&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org8380b66&quot;&gt;
 &lt;p&gt;
 I am not much of a site-seeing kind of guy. I find traveling exhausting,
 regardless of how beautiful the views or how fun the activities. Being a tourist
@@ -175,9 +175,9 @@ putting myself in a place 🤯
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgaba7884&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgaba7884&quot;&gt;What comes next?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgaba7884&quot;&gt;
+&lt;div id=&quot;outline-container-org13ccf92&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org13ccf92&quot;&gt;What comes next?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org13ccf92&quot;&gt;
 &lt;p&gt;
 I can perhaps spend a few more months before I run out of savings, but the
 dimming safety net has already started making me anxious. I miss the tribe-like
@@ -230,9 +230,9 @@ Now that that is decided, what&apos;s left to figure out is how to go about it.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org7c208e2&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org7c208e2&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7c208e2&quot;&gt;
+&lt;div id=&quot;outline-container-org96af6ac&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org96af6ac&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org96af6ac&quot;&gt;
 &lt;p&gt;
 After 6 months of voluntary unemployment, I am the same man I was before it.
 Things I experienced and burdens I unburdened could be achieved by other means
@@ -250,7 +250,7 @@ As for the journey to be where I already was, I&apos;ll do it again if I can.
             <author>Charanjit Singh</author>
             <category>blog</category>
             <guid>20220921T194836</guid>
-            <pubDate>2022-10-03T23:08:04.000000+05:30</pubDate>
+            <pubDate>2022-10-03T05:30:00.000000+05:30</pubDate>
         </item>
         <item>
             <title>I have quit my job</title>
@@ -550,7 +550,7 @@ copying Jira task IDs around like an imbecile.
 This is how my org-capture-templates variable looks like right now:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org344be95&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org946ba7e&quot;&gt;
 (setq
    org-capture-templates
    &apos;((&quot;d&quot; &quot;Diary Entry&quot; plain (file+datetree org-agenda-diary-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)

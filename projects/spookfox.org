@@ -2,32 +2,253 @@
 #+tagline: Tinkerer's bridge between Emacs and Firefox
 #+id: spookfox
 #+source_code: https://github.com/bitspook/spookfox
-#+documentation: https://bitspook.in/projects/spookfox/docs
 #+issue_tracker: https://github.com/bitspook/spookfox/issues
 #+languages: ["Emacs Lisp", "TypeScript", "Nix"]
 #+updated_at: <2022-10-17 Mon>
 
 #+name: oracle-spec
 #+begin_src lisp :exports none
-  (("a developer"
-    ("use Spookfox" (:show ("#use" "#outline-container-use")))
-    ("hack on Spookfox" (:show ("#contribute" "#outline-container-contribute"))))
-   ("an explorer"
-    ("know more about Spookfox" (:show ("#explore")))
-    ("see it all" (:show :all))))
+  (("an explorer"
+    ("see it all" (:show :all))
+    ("know more about Spookfox" (:show ("#explore"))))
+   ("a developer"
+    ("install Spookfox" (:show ("#outline-container-install")))
+    ("use Spookfox" (:show ("#outline-container-use" "#outline-container-apps")))
+    ("hack on Spookfox" (:show ("#outline-container-contribute")))))
 #+end_src
+
+#+name: saunf-claims
+#+begin_src elisp :exports none
+  (defun spookfox-uses-websockets ()
+    (error "Not implemented."))
+
+  (defun spookfox-has-linked-org-tabs-app ()
+    (error "Not implemented."))
+
+  (add-to-list '*saunf-claims* #'spookfox-uses-websockets)
+  (add-to-list '*saunf-claims* #'spookfox-has-linked-org-tabs-app)
+#+end_src
+
+#+begin_src elisp :exports results :results none
+  (defun clown--command-docs (file)
+    (let  ((symbols (let ((file (expand-file-name file)))
+                      (load-file file)
+                      (alist-get file load-history nil nil 'equal)))
+           (docs))
+      (dolist (sym symbols)
+        (when-let (((consp sym))
+                   (func (cdr sym))
+                   ((commandp func)))
+          (push
+           (format "- =%s=\n\n%s" func
+                   (string-join
+                    (mapcar
+                     (lambda (s) (format "\t%s" s))
+                     (string-lines (documentation func)))
+                    "\n"))
+           docs)))
+      (string-join docs "\n")))
+#+end_src
+
 
 Spookfox is a Firefox extension and an Emacs package, which allow Emacs and
 Firefox to communicate with each other. Its primary goal is to offer an Emacs
 tinkerer similar (to Emacs) framework to tinker their browser.
 
-I use Spookfox as my daily driver to enable a number of workflow enhancements,
+I use Spookfox as my daily driver to enable a number of [[https://github.com/bitspook/spookmax.d][workflow enhancements]],
 e.g capturing articles I read and Youtube videos I watch.
 
+** Installation
+:PROPERTIES:
+:CUSTOM_ID: install
+:ID:       33c615ac-a136-4766-9fd8-481e3149b43b
+:END:
+
+There are 2 parts to install spookfox.
+
+1. Install the browser addon
+
+   Download the addon (=.xpi= file) from [[https://github.com/bitspook/spookfox/releases/][releases page]]. Firefox will prompt you
+   to install as soon as you download it.
+
+   *What is it not available on Firefox addons page?*
+
+   Because it is not [[https://addons.mozilla.org/en-US/firefox/addon/spookfox/][approved on Firefox addons]] yet.
+
+2. Install Emacs package
+
+   - Using straight.el
+
+     #+begin_src elisp :eval never-export
+       (use-package spookfox
+         :straight
+         (spookfox :type git
+                   :host github
+                   :repo "bitspook/spookfox"
+                   :files ("lisp/*.el" "lisp/apps/*.el"))
+         :config
+         (spookfox-init))
+     #+end_src
+
+   - Manually
+
+     - Clone this repository
+
+       #+begin_src sh
+         git clone https://github.com/bitspook/spookfox <path-to-spookfox>
+       #+end_src
+
+       #+RESULTS:
+
+     - Add spookfox and its apps =load-path=
+
+       #+begin_src elisp :eval never-export
+         (add-to-list 'load-path "<path-to-spookfox>/lisp")
+         (add-to-list 'load-path "<path-to-spookfox>/lisp/apps")
+       #+end_src
 
 ** Usage
 :PROPERTIES:
 :CUSTOM_ID: use
+:ID:       5242966e-58fb-4744-8349-c63773861934
 :END:
 
-Yo bro!
+Spookfox itself is a thin layer which [[saunf-claim:spookfox-uses-websockets][provide websockets based communication]]
+between Emacs and Firefox. More functionality on top of it is provided with
+[[id:7c11ffa6-701d-48a0-ac3c-b839fd210951][apps]]. Different apps need to be configured as documented in [[id:7c11ffa6-701d-48a0-ac3c-b839fd210951][apps]] section below.
+
+1. *Load the apps you want to use*
+
+   If you followed the [[#install][installation]] instructions, all apps bundled with the
+   package itself should be ready to be loaded with a call to =require=. For
+   example, to load "[[saunf-claim:spookfox-has-linked-org-tabs-app][spookfox-org-tabs]]" app, you'd write this Elisp:
+
+   #+begin_src elisp :eval never-export
+     (require 'spookfox-org-tabs)
+   #+end_src
+
+2. *Tell spookfox which apps you want to enable*
+
+   Provide the list of enabled apps to =spookfox-enabled-apps= variable:
+
+   #+begin_src elisp :eval never-export
+     (setq spookfox-enabled-apps '(spookfox-org-tabs))
+   #+end_src
+
+3. *Initialize spookfox*
+
+   Changes to =spookfox-enabled-apps= take effect when =spookfox-init= function
+   is called. This function also starts the websockets server.
+
+   #+begin_src elisp :eval never-export
+     (spookfox-init)
+   #+end_src
+
+** Apps
+:PROPERTIES:
+:ID:       7c11ffa6-701d-48a0-ac3c-b839fd210951
+:CUSTOM_ID: apps
+:END:
+
+Spookfox has a modular architecture. An "app" is a bundle of functionality
+isolated and opt-in. Following apps come bundled with this package.
+
+*** spookfox-tabs
+
+Basic access to browser's tabs.
+
+**** Features
+
+1. Access browser tabs in Elisp
+
+   You can use this to enhance your Emacs usage. For example, check [[https://github.com/bitspook/spookmax.d][my Emacs
+   config]] to see how I use it to more easily capture notes for articles I read
+   in the browser.
+
+2. Open a browser tab, or start a new search in browser
+
+   Command: =open-new-tab=
+
+   Open a new tab in browser, or search for something using browser's default
+   search engine (opens a new tab).
+
+   PS you can use =browse-url= to achieve the same.
+
+*** spookfox-org-tabs
+
+Manage browser's tabs in an org file (separate file or as a subtree in an
+existing one).
+
+**** Features
+
+1. Organize tabs freely in org file
+
+   Tabs are stored as org-mode subtrees, which you are free to structure as you
+   desire. You can *group tabs* by assigning org-mode tags, to manipulate tabs
+   (open, close) in bulk.
+
+2. *Chain tabs*, so any changes to the tab in Firefox (e.g url change) are
+   synced with the org-file
+
+3. Commands for manipulating tabs
+
+   #+name: Exported Commands
+   #+begin_src elisp :exports results :results raw
+     (clown--command-docs "~/Documents/work/spookfox/lisp/apps/spookfox-org-tabs.el")
+   #+end_src
+
+**** Configuration
+
+1. =spookfox-saved-tabs-target=
+
+   =spookfox-saved-tabs-target= is an [[https://orgmode.org/manual/Template-elements.html][org-capture-templates target]], where the
+   browser tabs are saved. For example:
+
+   #+begin_src elisp :eval never-export
+     ;; Store tabs in a file named =spookfox.org=, under '* Tabs' heading
+     (setq spookfox-saved-tabs-target
+           `(file+headline
+             ,(expand-file-name "spookfox.org" org-directory)
+             "Tabs"))
+   #+end_src
+
+*** js-injection
+
+Inject Javascript into any website open in your browser, and get the results
+back. I use it to help me take notes for Youtube videos with automatically added
+timestamp links.
+
+- Provided functions
+
+  #+begin_src elisp :exports results :results raw
+    (format "- =spookfox-eval-js-in-active-tab=\n\n%s"
+            (string-join
+             (mapcar (lambda (s) (format "\t%s" s))
+                     (string-lines (describe-function #'spookfox-eval-js-in-active-tab)))
+             "\n"))
+  #+end_src
+
+** Contribute
+:PROPERTIES:
+:CUSTOM_ID: contribute
+:END:
+
+1. Write apps
+
+   If you want to write apps for Spookfox to handle a use-case not covered by
+   existing apps, for now you need to go through [[https://github.com/bitspook/spookfox][the source code]] to figure
+   things out. I am still working on a web-accessible documentation for
+   Spookfox. Code is allegedly well-commented and existing apps can act as good
+   examples.
+
+2. Modify Spookfox
+
+   To make changes on the Browser side of things, you'll have to modify and
+   rebuild the browser addon itself. Unfortunately browsers don't allow
+   injecting code into the running addon anymore (although it is possible to
+   inject code into a website).
+
+   Or you might want to fix a bug, or make the code cleaner.
+
+   Please take a look at the [[https://github.com/bitspook/spookfox/blob/master/contributing.org][contributing.org]] for setting up the development
+   environment to hack Spookfox.

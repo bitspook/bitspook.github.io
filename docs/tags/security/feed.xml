@@ -31,7 +31,7 @@ exercises, rest were left for the attendees as homework. Here&apos;s the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org0fc4b52&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org6617cea&quot;&gt;
 version: &apos;3&apos;
 services:
   webgoat:

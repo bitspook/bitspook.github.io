@@ -52,9 +52,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-orga875abf&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orga875abf&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga875abf&quot;&gt;
+&lt;div id=&quot;outline-container-org0e472b1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0e472b1&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0e472b1&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -113,9 +113,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org591d922&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org591d922&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org591d922&quot;&gt;
+&lt;div id=&quot;outline-container-org0082e00&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0082e00&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0082e00&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -137,9 +137,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org9615411&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org9615411&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9615411&quot;&gt;
+&lt;div id=&quot;outline-container-org28632b5&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org28632b5&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org28632b5&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;

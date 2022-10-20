@@ -6,23 +6,46 @@
   (:use #:cl
         #:serapeum/bundle
         #:clown-providers
-        #:clown-publishers.blog))
+        #:clown-publishers.blog)
+  (:import-from #:clown-blog.theme render with-html-string)
+  (:import-from #:clown-blog.theme.default projects-widget project-widget))
 (in-package #:bitspook-in)
 
-(setf cffi::*foreign-library-directories*
-      (cffi::explode-path-environment-variable "CLOWN_LIBRARY_PATH"))
+(defun publish-projects ()
+  (clown-publishers:publish-html-file
+   "projects/index.html"
+   (with-html-string
+     (render projects-widget
+             :title "Featured projects"
+             :projects (clown-blog:fetch-all-projects))))
+
+  (loop :for project
+          :in (clown-blog:fetch-all-projects)
+        :do
+           (clown-publishers:publish-html-file
+            (clown-blog:project-public-path project)
+            (with-html-string
+              (render project-widget :project project)))))
 
 (defparameter content-provider
   (make-instance 'org-file-provider
                  :name "local-dir-content"
                  :content-dir "./content/"))
+
 (defparameter notes-provider
   (make-instance 'denote-provider
                  :name "personal-notes"
                  :content-dir "~/Documents/org/denotes/"))
 
+(defparameter projects-provider
+  (make-instance
+   'org-project-provider
+   :name "projects"
+   :content-dir "./projects"))
+
 (invoke-provider content-provider)
 (invoke-provider notes-provider)
+(invoke-provider projects-provider)
 
 (let ((*debug-transpiles* nil)
       (*conf* (conf-merge
@@ -43,4 +66,5 @@
                  :exclude-tags ("draft")
                  :published-categories '("blog" "poems")
                  :theme ,default-theme))))
-  (publish-blog "bitspook's online home"))
+  (publish-blog "bitspook's online home")
+  (publish-projects))
