@@ -6,26 +6,8 @@
   (:use #:cl
         #:serapeum/bundle
         #:clown-providers
-        #:clown-publishers.blog)
-  (:import-from #:clown-blog.theme render with-html-string)
-  (:import-from #:clown-blog.theme.default projects-widget project-widget))
+        #:clown-publishers.blog))
 (in-package #:bitspook-in)
-
-(defun publish-projects ()
-  (clown-publishers:publish-html-file
-   "projects/index.html"
-   (with-html-string
-     (render projects-widget
-             :title "Featured projects"
-             :projects (clown-blog:fetch-all-projects))))
-
-  (loop :for project
-          :in (clown-blog:fetch-all-projects)
-        :do
-           (clown-publishers:publish-html-file
-            (clown-blog:project-public-path project)
-            (with-html-string
-              (render project-widget :project project)))))
 
 (defparameter content-provider
   (make-instance 'org-file-provider
@@ -66,5 +48,4 @@
                  :exclude-tags ("draft")
                  :published-categories '("blog" "poems")
                  :theme ,default-theme))))
-  (publish-blog "bitspook's online home")
-  (publish-projects))
+  (publish-blog "bitspook's online home"))
