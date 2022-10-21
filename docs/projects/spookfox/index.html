@@ -9,13 +9,13 @@ tinkerer similar (to Emacs) framework to tinker their browser.
 I use Spookfox as my daily driver to enable a number of <a href="https://github.com/bitspook/spookmax.d">workflow enhancements</a>,
 e.g capturing articles I read and Youtube videos I watch.
 </p>
-<ul class=elsewhere-buttons><li><a class="btn btn-github" href=https://github.com/bitspook/spookfox><i class=icon></i><span>Source Code</span></a></li><li><a class="btn btn-issues" href=https://github.com/bitspook/spookfox/issues><i class=icon></i><span>Issue tracker</span></a></li></ul><div class=oracle-container style=display:none;><span class=placeholder>I am</span><select id=roles onchange=handleSelectRole(event.target.value);><option value="an explorer">an explorer</option><option value="a developer">a developer</option></select><span class=placeholder>who wants to</span><select class=intents data-role="an explorer" onchange=handleSelectIntent(event.target.value);><option value="see it all">see it all</option><option value="know more about Spookfox">know more about Spookfox</option></select><select class=intents data-role="a developer" onchange=handleSelectIntent(event.target.value);><option value="install Spookfox">install Spookfox</option><option value="use Spookfox">use Spookfox</option><option value="hack on Spookfox">hack on Spookfox</option></select><script>function mapcar(fun) { var arrs = Array.prototype.slice.call(arguments, 1); var resultArray = new Array(); if (1 === arrs.length) { for (var element = null, _js_arrvar86 = arrs[0], _js_idx85 = 0; _js_idx85 < _js_arrvar86.length; _js_idx85 += 1) { element = _js_arrvar86[_js_idx85]; resultArray.push(fun(element)); }; } else { for (var i = 0; i < arrs[0].length; i += 1) { var argsArray = mapcar(function (a) { return a[i]; }, arrs); resultArray.push(fun.apply(fun, argsArray)); }; }; __PS_MV_REG = []; return resultArray; };
-function mapInto(fn, arr) { var idx = 0; for (var el = null, _js_idx87 = 0; _js_idx87 < arr.length; _js_idx87 += 1) { el = arr[_js_idx87]; arr[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return arr; };
-function map(fn, arr) { var idx = 0; var result = []; for (var el = null, _js_idx88 = 0; _js_idx88 < arr.length; _js_idx88 += 1) { el = arr[_js_idx88]; result[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return result; };
-function member(item, arr) { for (var el = null, _js_idx89 = 0; _js_idx89 < arr.length; _js_idx89 += 1) { el = arr[_js_idx89]; if (el === item) { return true; }; }; return false; };
-function setDifference(arr, arrToSub) { var idx = 0; var result = []; for (var el = null, _js_idx90 = 0; _js_idx90 < arr.length; _js_idx90 += 1) { el = arr[_js_idx90]; if (!member(el, arrToSub)) { result[idx] = el; idx += 1; }; }; __PS_MV_REG = []; return result; };
+<ul class=elsewhere-buttons><li><a class="btn btn-github" href=https://github.com/bitspook/spookfox><i class=icon></i><span>Source Code</span></a></li><li><a class="btn btn-issues" href=https://github.com/bitspook/spookfox/issues><i class=icon></i><span>Issue tracker</span></a></li></ul><div class=oracle-container style=display:none;><span class=placeholder>I am</span><select id=roles onchange=handleSelectRole(event.target.value);><option value="an explorer">an explorer</option><option value="a developer">a developer</option></select><span class=placeholder>who wants to</span><select class=intents data-role="an explorer" onchange=handleSelectIntent(event.target.value);><option value="see it all">see it all</option><option value="know more about Spookfox">know more about Spookfox</option></select><select class=intents data-role="a developer" onchange=handleSelectIntent(event.target.value);><option value="install Spookfox">install Spookfox</option><option value="use Spookfox">use Spookfox</option><option value="hack on Spookfox">hack on Spookfox</option></select><script>function mapcar(fun) { var arrs = Array.prototype.slice.call(arguments, 1); var resultArray = new Array(); if (1 === arrs.length) { for (var element = null, _js_arrvar48 = arrs[0], _js_idx47 = 0; _js_idx47 < _js_arrvar48.length; _js_idx47 += 1) { element = _js_arrvar48[_js_idx47]; resultArray.push(fun(element)); }; } else { for (var i = 0; i < arrs[0].length; i += 1) { var argsArray = mapcar(function (a) { return a[i]; }, arrs); resultArray.push(fun.apply(fun, argsArray)); }; }; __PS_MV_REG = []; return resultArray; };
+function mapInto(fn, arr) { var idx = 0; for (var el = null, _js_idx49 = 0; _js_idx49 < arr.length; _js_idx49 += 1) { el = arr[_js_idx49]; arr[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return arr; };
+function map(fn, arr) { var idx = 0; var result = []; for (var el = null, _js_idx50 = 0; _js_idx50 < arr.length; _js_idx50 += 1) { el = arr[_js_idx50]; result[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return result; };
+function member(item, arr) { for (var el = null, _js_idx51 = 0; _js_idx51 < arr.length; _js_idx51 += 1) { el = arr[_js_idx51]; if (el === item) { return true; }; }; return false; };
+function setDifference(arr, arrToSub) { var idx = 0; var result = []; for (var el = null, _js_idx52 = 0; _js_idx52 < arr.length; _js_idx52 += 1) { el = arr[_js_idx52]; if (!member(el, arrToSub)) { result[idx] = el; idx += 1; }; }; __PS_MV_REG = []; return result; };
 function reduce(func, list, init) { var acc = null; for (var i = arguments.length === 3 ? -1 : 0, acc = arguments.length === 3 ? init : list[0]; i < list.length - 1; i += 1, acc = func(acc, list[i])) { }; __PS_MV_REG = []; return acc; };
-function nconc(arr) { var arrs = Array.prototype.slice.call(arguments, 1); if (arr && arr.length > 0) { var _js92 = arrs.length; for (var _js91 = 0; _js91 < _js92; _js91 += 1) { var other = arrs[_js91]; if (other && other.length > 0) { arr['splice']['apply'](arr, [arr.length, other.length].concat(other)); }; }; }; __PS_MV_REG = []; return arr; };var SPEC = [['an explorer', ['see it all', ['show', 'all']], ['know more about Spookfox', ['show', ['#explore']]]], ['a developer', ['install Spookfox', ['show', ['#outline-container-install']]], ['use Spookfox', ['show', ['#outline-container-use', '#outline-container-apps']]], ['hack on Spookfox', ['show', ['#outline-container-contribute']]]]];function isArray(obj) {
+function nconc(arr) { var arrs = Array.prototype.slice.call(arguments, 1); if (arr && arr.length > 0) { var _js54 = arrs.length; for (var _js53 = 0; _js53 < _js54; _js53 += 1) { var other = arrs[_js53]; if (other && other.length > 0) { arr['splice']['apply'](arr, [arr.length, other.length].concat(other)); }; }; }; __PS_MV_REG = []; return arr; };var SPEC = [['an explorer', ['see it all', ['show', 'all']], ['know more about Spookfox', ['show', ['#explore']]]], ['a developer', ['install Spookfox', ['show', ['#outline-container-install']]], ['use Spookfox', ['show', ['#outline-container-use', '#outline-container-apps']]], ['hack on Spookfox', ['show', ['#outline-container-contribute']]]]];function isArray(obj) {
     __PS_MV_REG = [];
     return Array.isArray(obj);
 };
@@ -53,20 +53,20 @@ function arrayFrom(obj) {
 function roles() {
     __PS_MV_REG = [];
     return (function () {
-        var _js67 = SPEC.length;
-        var collect68 = [];
-        for (var _js66 = 0; _js66 < _js67; _js66 += 1) {
-            var item = SPEC[_js66];
-            collect68.push(first(item));
+        var _js37 = SPEC.length;
+        var collect38 = [];
+        for (var _js36 = 0; _js36 < _js37; _js36 += 1) {
+            var item = SPEC[_js36];
+            collect38.push(first(item));
         };
         __PS_MV_REG = [];
-        return collect68;
+        return collect38;
     })();
 };
 function roleIntents(role) {
-    var _js70 = SPEC.length;
-    for (var _js69 = 0; _js69 < _js70; _js69 += 1) {
-        var item = SPEC[_js69];
+    var _js40 = SPEC.length;
+    for (var _js39 = 0; _js39 < _js40; _js39 += 1) {
+        var item = SPEC[_js39];
         if (first(item) == role) {
             __PS_MV_REG = [];
             return cdr(item);
@@ -79,35 +79,35 @@ function activeRole() {
 };
 function activateRole(role) {
     var els = Array.from(document.querySelectorAll('.intents'));
-    for (var el = null, _js_idx71 = 0; _js_idx71 < els.length; _js_idx71 += 1) {
-        el = els[_js_idx71];
+    for (var el = null, _js_idx41 = 0; _js_idx41 < els.length; _js_idx41 += 1) {
+        el = els[_js_idx41];
         __setf_display('none', el);
     };
     var intentEls = Array.from(document.querySelectorAll('.intents[data-role=\'' + role + '\']'));
-    for (var el = null, _js_idx72 = 0; _js_idx72 < intentEls.length; _js_idx72 += 1) {
-        el = intentEls[_js_idx72];
+    for (var el = null, _js_idx42 = 0; _js_idx42 < intentEls.length; _js_idx42 += 1) {
+        el = intentEls[_js_idx42];
         __setf_display('inline-block', el);
     };
 };
 function activateIntent(intentSpec) {
     var realmEl = document.querySelector('#oracle-realm');
     var realmChildren = arrayFrom(realmEl.children);
-    for (var el = null, _js_idx73 = 0; _js_idx73 < realmChildren.length; _js_idx73 += 1) {
-        el = realmChildren[_js_idx73];
+    for (var el = null, _js_idx43 = 0; _js_idx43 < realmChildren.length; _js_idx43 += 1) {
+        el = realmChildren[_js_idx43];
         __setf_display('none', el);
     };
-    for (var sel = null, _js_arrvar75 = cdadr(intentSpec), _js_idx74 = 0; _js_idx74 < _js_arrvar75.length; _js_idx74 += 1) {
-        sel = _js_arrvar75[_js_idx74];
+    for (var sel = null, _js_arrvar45 = cdadr(intentSpec), _js_idx44 = 0; _js_idx44 < _js_arrvar45.length; _js_idx44 += 1) {
+        sel = _js_arrvar45[_js_idx44];
         switch (sel) {
         case 'all':
-            for (var el = null, _js_idx76 = 0; _js_idx76 < realmChildren.length; _js_idx76 += 1) {
-                el = realmChildren[_js_idx76];
+            for (var el = null, _js_idx46 = 0; _js_idx46 < realmChildren.length; _js_idx46 += 1) {
+                el = realmChildren[_js_idx46];
                 __setf_display('block', el);
             };
             break;
         default:
-            for (var el = null, _js_arrvar78 = Array.from(realmEl.querySelectorAll(sel)), _js_idx77 = 0; _js_idx77 < _js_arrvar78.length; _js_idx77 += 1) {
-                el = _js_arrvar78[_js_idx77];
+            for (var el = null, _js_arrvar48 = Array.from(realmEl.querySelectorAll(sel)), _js_idx47 = 0; _js_idx47 < _js_arrvar48.length; _js_idx47 += 1) {
+                el = _js_arrvar48[_js_idx47];
                 __setf_display('block', el);
             };
         };
@@ -138,8 +138,8 @@ function domResetIntentsEl() {
 };
 function init() {
     var els = Array.from(document.querySelectorAll('.oracle-container'));
-    for (var el = null, _js_idx76 = 0; _js_idx76 < els.length; _js_idx76 += 1) {
-        el = els[_js_idx76];
+    for (var el = null, _js_idx46 = 0; _js_idx46 < els.length; _js_idx46 += 1) {
+        el = els[_js_idx46];
         __setf_display('flex', el);
     };
     __PS_MV_REG = [];
@@ -278,19 +278,38 @@ is called. This function also starts the websockets server.
 Spookfox has a modular architecture. An &quot;app&quot; is a bundle of functionality
 isolated and opt-in. Following apps come bundled with this package.
 </p>
+
+<style>[role=doc-toc] li { margin-left: 2rem; }</style>
+
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org87247a4">spookfox-tabs</a>
+<ul>
+<li><a href="#orgae3a2a1">Features</a></li>
+</ul>
+</li>
+<li><a href="#orgeab2eb1">spookfox-org-tabs</a>
+<ul>
+<li><a href="#org7893ff0">Features</a></li>
+<li><a href="#org6dca624">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#org24a81eb">js-injection</a></li>
+</ul>
+</div>
 </div>
 
-<div id="outline-container-org6d7ad92" class="outline-3">
-<h3 id="org6d7ad92">spookfox-tabs</h3>
-<div class="outline-text-3" id="text-org6d7ad92">
+<div id="outline-container-org87247a4" class="outline-3">
+<h3 id="org87247a4">spookfox-tabs</h3>
+<div class="outline-text-3" id="text-org87247a4">
 <p>
 Basic access to browser's tabs.
 </p>
 </div>
 
-<div id="outline-container-org6d9db5b" class="outline-4">
-<h4 id="org6d9db5b">Features</h4>
-<div class="outline-text-4" id="text-org6d9db5b">
+<div id="outline-container-orgae3a2a1" class="outline-4">
+<h4 id="orgae3a2a1">Features</h4>
+<div class="outline-text-4" id="text-orgae3a2a1">
 <ol class="org-ol">
 <li><p>
 Access browser tabs in Elisp
@@ -323,18 +342,18 @@ PS you can use <code>browse-url</code> to achieve the same.
 </div>
 </div>
 
-<div id="outline-container-org72a420e" class="outline-3">
-<h3 id="org72a420e">spookfox-org-tabs</h3>
-<div class="outline-text-3" id="text-org72a420e">
+<div id="outline-container-orgeab2eb1" class="outline-3">
+<h3 id="orgeab2eb1">spookfox-org-tabs</h3>
+<div class="outline-text-3" id="text-orgeab2eb1">
 <p>
 Manage browser's tabs in an org file (separate file or as a subtree in an
 existing one).
 </p>
 </div>
 
-<div id="outline-container-org1cb0488" class="outline-4">
-<h4 id="org1cb0488">Features</h4>
-<div class="outline-text-4" id="text-org1cb0488">
+<div id="outline-container-org7893ff0" class="outline-4">
+<h4 id="org7893ff0">Features</h4>
+<div class="outline-text-4" id="text-org7893ff0">
 <ol class="org-ol">
 <li><p>
 Organize tabs freely in org file
@@ -387,9 +406,9 @@ make changes.
 </div>
 </div>
 
-<div id="outline-container-orgdeef163" class="outline-4">
-<h4 id="orgdeef163">Configuration</h4>
-<div class="outline-text-4" id="text-orgdeef163">
+<div id="outline-container-org6dca624" class="outline-4">
+<h4 id="org6dca624">Configuration</h4>
+<div class="outline-text-4" id="text-org6dca624">
 <ol class="org-ol">
 <li><p>
 <code>spookfox-saved-tabs-target</code>
@@ -413,9 +432,9 @@ browser tabs are saved. For example:
 </div>
 </div>
 
-<div id="outline-container-orgadf6c38" class="outline-3">
-<h3 id="orgadf6c38">js-injection</h3>
-<div class="outline-text-3" id="text-orgadf6c38">
+<div id="outline-container-org24a81eb" class="outline-3">
+<h3 id="org24a81eb">js-injection</h3>
+<div class="outline-text-3" id="text-org24a81eb">
 <p>
 Inject Javascript into any website open in your browser, and get the results
 back. I use it to help me take notes for Youtube videos with automatically added
@@ -431,8 +450,8 @@ timestamp links.
 </p>
 
 <p>
-spookfox-eval-js-in-active-tab is a Lisp closure in
-‘~/Documents/work/spookfox/lisp/apps/spookfox-js-injection.el’.
+spookfox-eval-js-in-active-tab is a byte-compiled Lisp function in
+‘spookfox-js-injection.el’.
 </p>
 
 <p>

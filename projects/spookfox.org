@@ -50,7 +50,6 @@
       (string-join docs "\n")))
 #+end_src
 
-
 Spookfox is a Firefox extension and an Emacs package, which allow Emacs and
 Firefox to communicate with each other. Its primary goal is to offer an Emacs
 tinkerer similar (to Emacs) framework to tinker their browser.
@@ -152,6 +151,12 @@ between Emacs and Firefox. More functionality on top of it is provided with
 
 Spookfox has a modular architecture. An "app" is a bundle of functionality
 isolated and opt-in. Following apps come bundled with this package.
+
+#+begin_export html
+<style>[role=doc-toc] li { margin-left: 2rem; }</style>
+#+end_export
+
+#+TOC: headlines 2 local
 
 *** spookfox-tabs
 
