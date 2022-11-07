@@ -7,7 +7,7 @@
         <language>en-us</language>
         <image>
             <title>Posts tagged `elisp&apos;</title>
-            <url>/images/avatar.png</url>
+            <url>/images/spooky-avatar.png</url>
             <link>https://bitspook.in/</link>
         </image>
         <item>
@@ -17,9 +17,9 @@
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-orgdbad345&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgdbad345&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdbad345&quot;&gt;
+&lt;div id=&quot;outline-container-orgdf67214&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgdf67214&quot;&gt;Requirement&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdf67214&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
 browser&lt;/li&gt;
@@ -30,9 +30,9 @@ of hyperlinks&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgcf440cb&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcf440cb&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcf440cb&quot;&gt;
+&lt;div id=&quot;outline-container-orgf211d38&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf211d38&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf211d38&quot;&gt;
 &lt;p&gt;
 Org has a concept of &apos;link types&apos;. We can add a new type of link and have it
 behave the way we want.
@@ -119,9 +119,9 @@ Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extend
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgfff17e3&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgfff17e3&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfff17e3&quot;&gt;
+&lt;div id=&quot;outline-container-orgdd73841&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgdd73841&quot;&gt;Result&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdd73841&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
 in mpv&lt;/li&gt;
@@ -133,9 +133,9 @@ youtube videos&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org3dc3e61&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org3dc3e61&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3dc3e61&quot;&gt;
+&lt;div id=&quot;outline-container-org7615e4d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7615e4d&quot;&gt;Bonus gains 💪&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7615e4d&quot;&gt;
 &lt;p&gt;
 Recently I&apos;ve been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious

@@ -16,7 +16,7 @@
     ON (prov.id = proc.prov_cont_id)
   WHERE (("html" = proc.type)
     AND ((tags IS NULL) OR (NOT (tags LIKE "%draft%"))))
-    AND slug LIKE "%relationship%"
+    AND slug LIKE "%Insolent%"
   ORDER BY published_at
   DESC LIMIT 5;
 #+end_src

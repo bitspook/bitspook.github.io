@@ -7,9 +7,100 @@
         <language>en-us</language>
         <image>
             <title>Posts categorized as `blog&apos;</title>
-            <url>/images/avatar.png</url>
+            <url>/images/spooky-avatar.png</url>
             <link>https://bitspook.in/</link>
         </image>
+        <item>
+            <title>Insolent Software</title>
+            <link>https://bitspook.in/blog/insolent-software/</link>
+            <description>&lt;p&gt;
+I am used to put limits on myself. Finding reasons, some in authority, most in
+circumstance; to not solve the problems I&apos;ve judged solvable.
+&lt;/p&gt;
+
+&lt;p&gt;
+People putting limits on themselves is not something new or unique to building
+software. It is a recurring pattern in human behavior. Well meaning reasons are
+often rationalizations for fear of unknown, or that of actually putting in the
+work. Just as often, there are actual limits universe has put on us, crossing
+which come at great cost.
+&lt;/p&gt;
+
+&lt;p&gt;
+But software is &lt;b&gt;our&lt;/b&gt; domain. Things writ in stone in &quot;real&quot; world are not
+necessarily so in the wonderful world of software development. What is subjected
+to physical laws in real world is a matter of choice of constraints. Often we
+get to pick and choose, trade the expensive ones for those inconvenient, but
+still make the impossible probable.
+&lt;/p&gt;
+
+&lt;p&gt;
+When the imaginary constraints are dropped, what is left behind is curiosity and
+wonder. It is in essence, a source of joy. It is similar to re-discovering joy
+in tending to fruitless flowers after a lifetime of growing crops for commerce.
+&lt;/p&gt;
+
+&lt;p&gt;
+When I say imaginary constraints, I am speaking in the sense of Max Stirner&apos;s
+spooks. Imaginary constraints, for example those of
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;authority: am I allowed to do this?&lt;/li&gt;
+&lt;li&gt;tribalism: will my team adopt it?&lt;/li&gt;
+&lt;li&gt;economy: can I monetize it?&lt;/li&gt;
+&lt;li&gt;romance: will it scale?&lt;/li&gt;
+&lt;li&gt;vanity: is it elegant?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;
+I wanted a term to express this kind of software. Anarchism comes close to the
+meaning I want to convey, but it is too nuanced. What I mean is simpler. An
+unapologetic form of &lt;i&gt;&quot;works on my machine&quot;&lt;/i&gt;. Software which is deliberately
+insolent toward the processes which the creator believes get in their way.
+&lt;/p&gt;
+
+&lt;p&gt;
+It is a deceptively simple thing. It is not easy reaching a solution so free.
+This line of thinking is very much going against the grain of human
+civilization. Unlearning the lessons society has taught us before we knew
+learning, does not come easy.
+&lt;/p&gt;
+
+&lt;p&gt;
+What is even harder is identifying problems which can be solved with insolence.
+These problems are often invisible. Problems we accept and get used to, and
+don&apos;t see as problems at all. Until someone solves them and obviousness of it
+hit us like a brick. Perhaps recognizing and solving such problems is what
+separates inventors from the rest of us.
+&lt;/p&gt;
+
+&lt;p&gt;
+As a kid, reading of inventors of the golden age of science would fill me up
+with fantasies of becoming one myself someday. It saddens me to think that I
+have not yet become one.
+&lt;/p&gt;
+
+&lt;p&gt;
+Not all software can be written this way. Line between imaginary and real
+becomes blurry as more people believe in something. Very often we need to
+maintain the charades of make-believe, simply because we can not be alone in the
+solution.
+&lt;/p&gt;
+
+&lt;p&gt;
+There is one form of software, which almost always can be insolent. Software
+built for yourself. Not apps to sell or startups to change the world. Simple
+scripts, big and small, to solve your personal problems. Over last few months, I
+have come to associate personal computing with same feelings I have when playing
+something like Factorio or Cities Skylines. It is a joyous endeavor, we shall
+talk of on another day.
+&lt;/p&gt;
+</description>
+            <author>Charanjit Singh</author>
+            <category>blog</category>
+            <guid>20210429T070902</guid>
+            <pubDate>2022-11-07T05:30:00.000000+05:30</pubDate>
+        </item>
         <item>
             <title>After 6 months of voluntary unemployment</title>
             <link>https://bitspook.in/blog/after-6-months-of-voluntary-unemployment/</link>
@@ -19,9 +110,9 @@ summary of how the last six months shaped my thoughts, and an abstract plan of
 what I intend to do next.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org77d7540&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org77d7540&quot;&gt;Mental health&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org77d7540&quot;&gt;
+&lt;div id=&quot;outline-container-orgbb71ed5&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbb71ed5&quot;&gt;Mental health&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbb71ed5&quot;&gt;
 &lt;p&gt;
 I needed this break a lot more than I thought I did. Being perpetually restless
 had been my state of being for too long. It felt good, to breath out.
@@ -50,9 +141,9 @@ a definite answer to consider the matter resolved. More on this later (below).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org1f36ed1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org1f36ed1&quot;&gt;Social work&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1f36ed1&quot;&gt;
+&lt;div id=&quot;outline-container-org36260fe&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org36260fe&quot;&gt;Social work&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org36260fe&quot;&gt;
 &lt;p&gt;
 When busy with material responsibilities, I used to fantasize that if I had more
 free time I could do so much more for people around me. When I had it, I tried
@@ -77,9 +168,9 @@ able to put in as much energy as it demanded.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orge3fb99a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge3fb99a&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge3fb99a&quot;&gt;
+&lt;div id=&quot;outline-container-orgbc4894a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbc4894a&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbc4894a&quot;&gt;
 &lt;p&gt;
 I was running full speed building &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;foolish&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;things&lt;/a&gt;. Then lisp came calling.
 &lt;/p&gt;
@@ -134,9 +225,9 @@ probably would not have done otherwise. I traveled.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org8380b66&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org8380b66&quot;&gt;Travel&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org8380b66&quot;&gt;
+&lt;div id=&quot;outline-container-org0a8e97a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0a8e97a&quot;&gt;Travel&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0a8e97a&quot;&gt;
 &lt;p&gt;
 I am not much of a site-seeing kind of guy. I find traveling exhausting,
 regardless of how beautiful the views or how fun the activities. Being a tourist
@@ -175,9 +266,9 @@ putting myself in a place 🤯
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org13ccf92&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org13ccf92&quot;&gt;What comes next?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org13ccf92&quot;&gt;
+&lt;div id=&quot;outline-container-orgd2fa24c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgd2fa24c&quot;&gt;What comes next?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgd2fa24c&quot;&gt;
 &lt;p&gt;
 I can perhaps spend a few more months before I run out of savings, but the
 dimming safety net has already started making me anxious. I miss the tribe-like
@@ -230,9 +321,9 @@ Now that that is decided, what&apos;s left to figure out is how to go about it.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org96af6ac&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org96af6ac&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org96af6ac&quot;&gt;
+&lt;div id=&quot;outline-container-org0736198&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0736198&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0736198&quot;&gt;
 &lt;p&gt;
 After 6 months of voluntary unemployment, I am the same man I was before it.
 Things I experienced and burdens I unburdened could be achieved by other means
@@ -259,9 +350,9 @@ As for the journey to be where I already was, I&apos;ll do it again if I can.
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-orgdbad345&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgdbad345&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdbad345&quot;&gt;
+&lt;div id=&quot;outline-container-orgdf67214&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgdf67214&quot;&gt;Requirement&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdf67214&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
 browser&lt;/li&gt;
@@ -272,9 +363,9 @@ of hyperlinks&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgcf440cb&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgcf440cb&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcf440cb&quot;&gt;
+&lt;div id=&quot;outline-container-orgf211d38&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf211d38&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf211d38&quot;&gt;
 &lt;p&gt;
 Org has a concept of &apos;link types&apos;. We can add a new type of link and have it
 behave the way we want.
@@ -361,9 +452,9 @@ Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extend
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgfff17e3&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgfff17e3&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfff17e3&quot;&gt;
+&lt;div id=&quot;outline-container-orgdd73841&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgdd73841&quot;&gt;Result&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdd73841&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
 in mpv&lt;/li&gt;
@@ -375,9 +466,9 @@ youtube videos&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org3dc3e61&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org3dc3e61&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3dc3e61&quot;&gt;
+&lt;div id=&quot;outline-container-org7615e4d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7615e4d&quot;&gt;Bonus gains 💪&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7615e4d&quot;&gt;
 &lt;p&gt;
 Recently I&apos;ve been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
@@ -416,9 +507,9 @@ extending-the-blogging-setup as well.
             <link>https://bitspook.in/blog/how-i-manage-my-passwords/</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;div id=&quot;outline-container-org103859d&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org103859d&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org103859d&quot;&gt;
+&lt;div id=&quot;outline-container-orgd9ecf66&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgd9ecf66&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgd9ecf66&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;b&gt;No third-parties&lt;/b&gt;
@@ -450,9 +541,9 @@ should play nice with presence/absence of other tools.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org2563858&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2563858&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2563858&quot;&gt;
+&lt;div id=&quot;outline-container-orge10f3b0&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge10f3b0&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge10f3b0&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
@@ -533,13 +624,13 @@ my mobile devices.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org6e415c7&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org6e415c7&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org6e415c7&quot;&gt;
+&lt;div id=&quot;outline-container-org80f65b7&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org80f65b7&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org80f65b7&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org312b096&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org312b096&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org312b096&quot;&gt;
+&lt;div id=&quot;outline-container-org62ea9f1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org62ea9f1&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org62ea9f1&quot;&gt;
 &lt;p&gt;
 For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
@@ -561,9 +652,9 @@ password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgb138148&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgb138148&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgb138148&quot;&gt;
+&lt;div id=&quot;outline-container-orgf662b2e&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgf662b2e&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgf662b2e&quot;&gt;
 &lt;p&gt;
 Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
 much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
@@ -596,9 +687,9 @@ password (on the same form).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org83fe328&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org83fe328&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org83fe328&quot;&gt;
+&lt;div id=&quot;outline-container-org7b95146&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org7b95146&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org7b95146&quot;&gt;
 &lt;p&gt;
 I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
@@ -995,9 +1086,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org1f9d318&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org1f9d318&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1f9d318&quot;&gt;
+&lt;div id=&quot;outline-container-orgefff2aa&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgefff2aa&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgefff2aa&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -1056,9 +1147,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgfeff7ae&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgfeff7ae&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfeff7ae&quot;&gt;
+&lt;div id=&quot;outline-container-org93a0470&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org93a0470&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org93a0470&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -1119,9 +1210,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org0e472b1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0e472b1&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0e472b1&quot;&gt;
+&lt;div id=&quot;outline-container-orgb54420d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb54420d&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb54420d&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -1180,9 +1271,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org0082e00&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0082e00&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0082e00&quot;&gt;
+&lt;div id=&quot;outline-container-org5f42b5e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org5f42b5e&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org5f42b5e&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -1204,9 +1295,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org28632b5&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org28632b5&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org28632b5&quot;&gt;
+&lt;div id=&quot;outline-container-orgb855aad&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb855aad&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb855aad&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
@@ -1365,7 +1456,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org84adeaf&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org732c48a&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -1383,7 +1474,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer&apos;s machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org364c4ca&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org63acae1&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -1422,7 +1513,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgb0780ba&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org97ebfd0&quot;&gt;
 buildDrafts = true
 title = &quot;My Project&quot;
 
@@ -1953,7 +2044,7 @@ copying Jira task IDs around like an imbecile.
 This is how my org-capture-templates variable looks like right now:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org946ba7e&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org28bfd59&quot;&gt;
 (setq
    org-capture-templates
    &apos;((&quot;d&quot; &quot;Diary Entry&quot; plain (file+datetree org-agenda-diary-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
@@ -4497,9 +4588,9 @@ my crest now is not that chaotic.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgf5a8f22&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf5a8f22&quot;&gt;Inspiration from the&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf5a8f22&quot;&gt;
+&lt;div id=&quot;outline-container-org7847275&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7847275&quot;&gt;Inspiration from the&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7847275&quot;&gt;
 &lt;p&gt;
 `&lt;a href=&quot;https://blog.42floors.com/100-day-goals/&quot;&gt;100 day goals&lt;/a&gt;&apos;
 &lt;/p&gt;
