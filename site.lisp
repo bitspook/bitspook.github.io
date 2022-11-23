@@ -2,12 +2,12 @@
 
 (ql:quickload "cl-ownpress")
 
-(defpackage #:bitspook-in
+(defpackage #:in.bitspook
   (:use #:cl
         #:serapeum/bundle
         #:clown-providers
         #:clown-publishers.blog))
-(in-package #:bitspook-in)
+(in-package #:in.bitspook)
 
 (defparameter content-provider
   (make-instance 'org-file-provider
