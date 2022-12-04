@@ -36,7 +36,7 @@ Here&apos;s my set of slides from the talk:
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>personal-brands-for-software-developers-talk</guid>
-            <pubDate>2019-10-21T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-10-21T02:00:00.000000+02:00</pubDate>
         </item>
         <item>
             <title>Quick and Pretty Docs for Software Projects</title>
@@ -86,7 +86,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org732c48a&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orga74e3e2&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -104,7 +104,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer&apos;s machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org63acae1&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgd5ed69d&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -143,7 +143,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org97ebfd0&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgb8acb65&quot;&gt;
 buildDrafts = true
 title = &quot;My Project&quot;
 
@@ -159,7 +159,7 @@ home = [ &quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot;]
             <author>Charanjit Singh</author>
             <category>blog</category>
             <guid>quick-and-pretty-docs-for-software-projects</guid>
-            <pubDate>2019-08-28T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-08-28T02:00:00.000000+02:00</pubDate>
         </item>
         <item>
             <title>Personal brands for software developers</title>
@@ -300,7 +300,7 @@ our endeavor.
             <author>Charanjit Singh</author>
             <category>blog</category>
             <guid>personal-brands-for-software-developers</guid>
-            <pubDate>2019-04-01T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-04-01T02:00:00.000000+02:00</pubDate>
         </item>
         <item>
             <title>Maximize individual growing in a software team (2 month report)</title>
@@ -392,7 +392,7 @@ else, that&apos;ll create some cool graphs to gawk at.
             <author>Charanjit Singh</author>
             <category>blog</category>
             <guid>maximize-individual-growing-in-a-software-team-2-month-report</guid>
-            <pubDate>2019-03-26T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-03-26T01:00:00.000000+01:00</pubDate>
         </item>
         <item>
             <title>How to maximize individual growth in a software team?</title>
@@ -542,7 +542,7 @@ Please put in comments below if you have opinions and/or suggestions!
             <author>Charanjit Singh</author>
             <category>blog</category>
             <guid>how-to-maximize-individual-growth-in-a-software-team</guid>
-            <pubDate>2019-01-21T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-01-21T01:00:00.000000+01:00</pubDate>
         </item>
     </channel>
 </rss>

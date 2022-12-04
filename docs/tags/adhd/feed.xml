@@ -78,7 +78,7 @@ be a good start.
             <author>Charanjit Singh</author>
             <category>blog</category>
             <guid>coming-to-terms-with-adhd-help-others-to-help-yourself</guid>
-            <pubDate>2019-05-13T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-05-13T02:00:00.000000+02:00</pubDate>
         </item>
         <item>
             <title>Managing Chaos</title>
@@ -140,7 +140,7 @@ copying Jira task IDs around like an imbecile.
 This is how my org-capture-templates variable looks like right now:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org28bfd59&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org35fbe96&quot;&gt;
 (setq
    org-capture-templates
    &apos;((&quot;d&quot; &quot;Diary Entry&quot; plain (file+datetree org-agenda-diary-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
@@ -238,7 +238,7 @@ focused on org-mode and TODO lists the way I want it to work.
             <author>Charanjit Singh</author>
             <category>blog</category>
             <guid>managing-chaos-org-mode-as-a-todo-list</guid>
-            <pubDate>2019-01-05T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-01-05T01:00:00.000000+01:00</pubDate>
         </item>
         <item>
             <title>Coming to terms with ADHD - Part 2</title>
@@ -313,7 +313,7 @@ Development).
             <author>Charanjit Singh</author>
             <category>blog</category>
             <guid>coming-to-terms-with-adhd-part-2</guid>
-            <pubDate>2019-01-03T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-01-03T01:00:00.000000+01:00</pubDate>
         </item>
         <item>
             <title>Coming to terms with ADHD</title>
@@ -459,7 +459,7 @@ helps build confidence to face life.
             <author>Charanjit Singh</author>
             <category>blog</category>
             <guid>coming-to-terms-with-adhd</guid>
-            <pubDate>2018-12-15T05:30:00.000000+05:30</pubDate>
+            <pubDate>2018-12-15T01:00:00.000000+01:00</pubDate>
         </item>
     </channel>
 </rss>

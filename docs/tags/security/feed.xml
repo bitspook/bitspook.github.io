@@ -31,7 +31,7 @@ exercises, rest were left for the attendees as homework. Here&apos;s the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgceccab9&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgae027fa&quot;&gt;
 version: &apos;3&apos;
 services:
   webgoat:
@@ -60,7 +60,7 @@ be able to access webgoat on &lt;a href=&quot;http://localhost:8080/WebGoat&quot
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>secure-software-teams-trantor</guid>
-            <pubDate>2019-08-26T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-08-26T02:00:00.000000+02:00</pubDate>
         </item>
     </channel>
 </rss>

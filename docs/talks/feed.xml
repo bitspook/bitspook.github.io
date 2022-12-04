@@ -47,7 +47,7 @@ if you need me to explain some slide, or just for a chat.
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>microservices-techblend</guid>
-            <pubDate>2020-08-06T05:30:00.000000+05:30</pubDate>
+            <pubDate>2020-08-06T02:00:00.000000+02:00</pubDate>
         </item>
         <item>
             <title>Personal Brands for Software Developers (Talk)</title>
@@ -75,7 +75,7 @@ Here&apos;s my set of slides from the talk:
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>personal-brands-for-software-developers-talk</guid>
-            <pubDate>2019-10-21T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-10-21T02:00:00.000000+02:00</pubDate>
         </item>
         <item>
             <title>Secure Software Teams Trantor</title>
@@ -98,7 +98,7 @@ exercises, rest were left for the attendees as homework. Here&apos;s the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgceccab9&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgae027fa&quot;&gt;
 version: &apos;3&apos;
 services:
   webgoat:
@@ -127,7 +127,7 @@ be able to access webgoat on &lt;a href=&quot;http://localhost:8080/WebGoat&quot
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>secure-software-teams-trantor</guid>
-            <pubDate>2019-08-26T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-08-26T02:00:00.000000+02:00</pubDate>
         </item>
         <item>
             <title>Lessons From a Year of TDD</title>
@@ -616,7 +616,7 @@ patience&quot; alt=&quot;Thank you for your patience&quot; width=&quot;100%&quot
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>lessons-from-a-year-of-tdd</guid>
-            <pubDate>2019-06-21T05:30:00.000000+05:30</pubDate>
+            <pubDate>2019-06-21T02:00:00.000000+02:00</pubDate>
         </item>
         <item>
             <title>React/Redux Workshop</title>
@@ -633,14 +633,14 @@ seeing community&apos;s interest in these technologies.
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>react-redux-workshop</guid>
-            <pubDate>2017-02-16T05:30:00.000000+05:30</pubDate>
+            <pubDate>2017-02-16T01:00:00.000000+01:00</pubDate>
         </item>
         <item>
             <title>Modern day JS Apps (2017)</title>
             <link>https://bitspook.in/talks/modern-day-js-apps-2017/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/modern-js-apps-2017/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;org0e25512&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;org8238ab5&quot;&gt;
 &lt;p&gt;
 &amp;lt;/iframe&amp;gt;
 &lt;/p&gt;
@@ -656,7 +656,7 @@ group.
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>modern-day-js-apps-2017</guid>
-            <pubDate>2017-02-07T05:30:00.000000+05:30</pubDate>
+            <pubDate>2017-02-07T01:00:00.000000+01:00</pubDate>
         </item>
         <item>
             <title>React, Redux and Reactive programming</title>
@@ -684,14 +684,14 @@ There is a video as well!
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>react-redux-and-reactive-programming</guid>
-            <pubDate>2016-07-08T05:30:00.000000+05:30</pubDate>
+            <pubDate>2016-07-08T02:00:00.000000+02:00</pubDate>
         </item>
         <item>
             <title>Jschannel RxJS workshop Nov 2015</title>
             <link>https://bitspook.in/talks/jschannel-rxjs-workshop-now-2015/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/jschannel-rxjs-workshop-nov-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;org53cad4a&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;org8566a41&quot;&gt;
 &lt;p&gt;
 &amp;lt;/iframe&amp;gt;
 &lt;/p&gt;
@@ -710,7 +710,7 @@ The &lt;a href=&quot;https://github.com/bitspook/rxjs-workshop-nov-2015&quot;&gt
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>jschannel-rxjs-workshop-now-2015</guid>
-            <pubDate>2015-11-01T05:30:00.000000+05:30</pubDate>
+            <pubDate>2015-11-01T01:00:00.000000+01:00</pubDate>
         </item>
         <item>
             <title>Meteor Js Jschannel Feb 2015</title>
@@ -726,7 +726,7 @@ whole idea of meetup.
             <author>Charanjit Singh</author>
             <category>talks</category>
             <guid>meteor-js-jschannel-feb-2015</guid>
-            <pubDate>2015-02-07T05:30:00.000000+05:30</pubDate>
+            <pubDate>2015-02-07T01:00:00.000000+01:00</pubDate>
         </item>
     </channel>
 </rss>
