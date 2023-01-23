@@ -2,9 +2,9 @@
 <iframe width="560" height="315" src="//youtube.com/embed/eaZUZCzaIgw" title="nil" frameborder="0" allowfullscreen></iframe>
 </p>
 
-<div id="outline-container-org7cac356" class="outline-2">
-<h2 id="org7cac356">Requirement</h2>
-<div class="outline-text-2" id="text-org7cac356">
+<div id="outline-container-org0e6e5c7" class="outline-2">
+<h2 id="org0e6e5c7">Requirement</h2>
+<div class="outline-text-2" id="text-org0e6e5c7">
 <ol class="org-ol">
 <li>I want to open youtube links in my notes in <code>mpv</code> instead of opening the
 browser</li>
@@ -15,9 +15,9 @@ of hyperlinks</li>
 </div>
 </div>
 
-<div id="outline-container-org62543ad" class="outline-2">
-<h2 id="org62543ad">Implementation</h2>
-<div class="outline-text-2" id="text-org62543ad">
+<div id="outline-container-orge50163e" class="outline-2">
+<h2 id="orge50163e">Implementation</h2>
+<div class="outline-text-2" id="text-orge50163e">
 <p>
 Org has a concept of 'link types'. We can add a new type of link and have it
 behave the way we want.
@@ -50,8 +50,8 @@ For example:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">((<span style="color: #A3B09A;">"yt"</span> <span style="color: #DB6E8F;">:follow</span> spook-org--follow-yt-link <span style="color: #DB6E8F;">:export</span> spook-org--export-yt-link)
- (<span style="color: #A3B09A;">"eww"</span> <span style="color: #DB6E8F;">:follow</span> org-eww-open <span style="color: #DB6E8F;">:store</span> org-eww-store-link))
+<pre class="src src-elisp">((<span style="color: #6aaf50;">"yt"</span> <span style="color: #7f7dca;">:follow</span> spook-org--follow-yt-link <span style="color: #7f7dca;">:export</span> spook-org--export-yt-link)
+ (<span style="color: #6aaf50;">"eww"</span> <span style="color: #7f7dca;">:follow</span> org-eww-open <span style="color: #7f7dca;">:store</span> org-eww-store-link))
 </pre>
 </div></li>
 
@@ -71,24 +71,24 @@ Here's the code I've added in <a href="https://github.com/bitspook/spookmax.d">m
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">spook-org--follow-yt-link</span> (path prefix)
-  (<span style="color: #b18bb1; font-style: italic;">let*</span> ((url (format <span style="color: #A3B09A;">"https:%s"</span> path))
-         (proc-name (format <span style="color: #A3B09A;">"*yt://%s*"</span> url)))
-    (<span style="color: #b18bb1; font-style: italic;">if</span> (<span style="color: #b18bb1; font-style: italic;">and</span> prefix (executable-find <span style="color: #A3B09A;">"mpv"</span>))
+<pre class="src src-elisp">(<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">spook-org--follow-yt-link</span> (path prefix)
+  (<span style="color: #598bc1;">let*</span> ((url (format <span style="color: #6aaf50;">"https:%s"</span> path))
+         (proc-name (format <span style="color: #6aaf50;">"*yt://%s*"</span> url)))
+    (<span style="color: #598bc1;">if</span> (<span style="color: #598bc1;">and</span> prefix (executable-find <span style="color: #6aaf50;">"mpv"</span>))
         (browse-url url)
-      (make-process <span style="color: #DB6E8F;">:name</span> proc-name <span style="color: #DB6E8F;">:buffer</span> proc-name <span style="color: #DB6E8F;">:command</span> `(<span style="color: #A3B09A;">"mpv"</span> ,url))
-      (message <span style="color: #A3B09A;">"Launched mpv in buffer: %s"</span> proc-name))))
+      (make-process <span style="color: #7f7dca;">:name</span> proc-name <span style="color: #7f7dca;">:buffer</span> proc-name <span style="color: #7f7dca;">:command</span> `(<span style="color: #6aaf50;">"mpv"</span> ,url))
+      (message <span style="color: #6aaf50;">"Launched mpv in buffer: %s"</span> proc-name))))
 
-(<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">spook-org--export-yt-link</span> (path desc backend)
-  (<span style="color: #b18bb1; font-style: italic;">when</span> (eq backend 'html)
-    (<span style="color: #b18bb1; font-style: italic;">let*</span> ((video-id (cadar (url-parse-query-string path)))
-           (url (<span style="color: #b18bb1; font-style: italic;">if</span> (string-empty-p video-id) path
-                  (format <span style="color: #A3B09A;">"//youtube.com/embed/%s"</span> video-id))))
+(<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">spook-org--export-yt-link</span> (path desc backend)
+  (<span style="color: #598bc1;">when</span> (eq backend 'html)
+    (<span style="color: #598bc1;">let*</span> ((video-id (cadar (url-parse-query-string path)))
+           (url (<span style="color: #598bc1;">if</span> (string-empty-p video-id) path
+                  (format <span style="color: #6aaf50;">"//youtube.com/embed/%s"</span> video-id))))
       (format
-       <span style="color: #A3B09A;">"&lt;iframe width=\"560\" height=\"315\" src=\"%s\" title=\"%s\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;"</span>
+       <span style="color: #6aaf50;">"&lt;iframe width=\"560\" height=\"315\" src=\"%s\" title=\"%s\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;"</span>
        url desc))))
 
-(org-link-set-parameters <span style="color: #A3B09A;">"yt"</span> <span style="color: #DB6E8F;">:follow</span> #'spook-org--follow-yt-link <span style="color: #DB6E8F;">:export</span> #'spook-org--export-yt-link)
+(org-link-set-parameters <span style="color: #6aaf50;">"yt"</span> <span style="color: #7f7dca;">:follow</span> #'spook-org--follow-yt-link <span style="color: #7f7dca;">:export</span> #'spook-org--export-yt-link)
 </pre>
 </div>
 
@@ -104,9 +104,9 @@ Thanks to <a href="https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgm
 </div>
 </div>
 
-<div id="outline-container-org2d84043" class="outline-2">
-<h2 id="org2d84043">Result</h2>
-<div class="outline-text-2" id="text-org2d84043">
+<div id="outline-container-org87f3e39" class="outline-2">
+<h2 id="org87f3e39">Result</h2>
+<div class="outline-text-2" id="text-org87f3e39">
 <ol class="org-ol">
 <li><code>C-c C-o</code> (i.e <code>org-open-at-point</code>) on a <code>yt://</code> link opens the youtube video
 in mpv</li>
@@ -118,9 +118,9 @@ youtube videos</li>
 </div>
 </div>
 
-<div id="outline-container-org571f248" class="outline-2">
-<h2 id="org571f248">Bonus gains 💪</h2>
-<div class="outline-text-2" id="text-org571f248">
+<div id="outline-container-org60411dc" class="outline-2">
+<h2 id="org60411dc">Bonus gains 💪</h2>
+<div class="outline-text-2" id="text-org60411dc">
 <p>
 Recently I've been building a tool (<a href="https://github.com/bitspook/cl-ownpress">cl-ownpress</a>) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
@@ -148,6 +148,6 @@ extending-the-blogging-setup as well.
 </p>
 </div>
 </div>
-</article></section><footer class="site-footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2>Get updates via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class="btn btn-primary" type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Or Follow via RSS</a></p><p>Author: Charanjit Singh <a href=https://twitter.com/bitspook>@bitspook</a></p></footer><script type=text/javascript>(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+</article></section><footer class="site-footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2>Get updates via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class="btn btn-primary" type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Or Follow via RSS</a></p><p>Author: Charanjit Singh <a href=https://infosec.exchange/@bitspook>@bitspook</a></p></footer><script type=text/javascript>(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
 for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
 MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);mixpanel.init('0f28a64d9f8bce370006d36e1e2e3f61');mixpanel.track('Page Load');</script></div></body></html>

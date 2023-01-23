@@ -35,7 +35,7 @@
                  :site-url "https://bitspook.in/"
                  :author "Charanjit Singh"
                  :avatar "/images/spooky-avatar.png"
-                 :twitter "https://twitter.com/bitspook"
+                 :mastodon "https://infosec.exchange/@bitspook"
                  :linkedin "https://linkedin.com/in/bitspook"
                  :github "https://github.com/bitspook"
                  :handle "bitspook"

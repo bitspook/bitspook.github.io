@@ -18,7 +18,7 @@ execute SQL snippets, we need to run following elisp snippet:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">with-eval-after-load</span> 'org
+<pre class="src src-elisp">(<span style="color: #598bc1;">with-eval-after-load</span> 'org
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((sql . t))))
@@ -49,11 +49,11 @@ setup the required environment variables:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh"><span style="color: #c6797e;">PGDIR</span>=$<span style="color: #c6797e;">PWD</span>/storage/postgres
-<span style="color: #DB6E8F;">export</span> <span style="color: #c6797e;">PGDATA</span>=$<span style="color: #c6797e;">PGDIR</span>/data
-<span style="color: #DB6E8F;">export</span> <span style="color: #c6797e;">PGHOST</span>=$<span style="color: #c6797e;">PGDIR</span>/run
-<span style="color: #DB6E8F;">export</span> <span style="color: #c6797e;">PGDATABASE</span>=entropy
-<span style="color: #DB6E8F;">export</span> <span style="color: #c6797e;">DATABASE_URL</span>=<span style="color: #A3B09A;">"postgresql:///$PGDATABASE?host=$PGHOST"</span> <span style="color: #64727d; font-style: italic;"># </span><span style="color: #64727d; font-style: italic;">not required by postgres, but will be helpful</span>
+<pre class="src src-sh"><span style="color: #b6b635;">PGDIR</span>=$<span style="color: #b6b635;">PWD</span>/storage/postgres
+<span style="color: #7f7dca;">export</span> <span style="color: #b6b635;">PGDATA</span>=$<span style="color: #b6b635;">PGDIR</span>/data
+<span style="color: #7f7dca;">export</span> <span style="color: #b6b635;">PGHOST</span>=$<span style="color: #b6b635;">PGDIR</span>/run
+<span style="color: #7f7dca;">export</span> <span style="color: #b6b635;">PGDATABASE</span>=entropy
+<span style="color: #7f7dca;">export</span> <span style="color: #b6b635;">DATABASE_URL</span>=<span style="color: #6aaf50;">"postgresql:///$PGDATABASE?host=$PGHOST"</span> <span style="color: #858585; font-style: italic;"># </span><span style="color: #858585; font-style: italic;">not required by postgres, but will be helpful</span>
 </pre>
 </div>
 
@@ -66,7 +66,7 @@ sql-playground.org does the trick:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #A3B09A;">#+PROPERTY: header-args:sql  :engine postgres</span>
+<pre class="src src-org"><span style="color: #858585; font-style: italic;">#+PROPERTY: header-args:sql  :engine postgres</span>
 </pre>
 </div>
 
@@ -77,28 +77,28 @@ SQL block produces output shown below that.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #A3B09A;">#+name: events</span>
-<span style="color: #64727d; background-color: #1F2A3F;">#+begin_src sql</span>
-<span style="background-color: #1F2A3F;">  </span><span style="color: #b18bb1; background-color: #1F2A3F; font-style: italic;">SELECT</span><span style="background-color: #1F2A3F;"> events.title,</span>
-<span style="background-color: #1F2A3F;">         events.slug,</span>
-<span style="background-color: #1F2A3F;">         start_time,</span>
-<span style="background-color: #1F2A3F;">         events.id,</span>
-<span style="background-color: #1F2A3F;">         events.</span><span style="color: #b18bb1; background-color: #1F2A3F; font-style: italic;">source</span><span style="background-color: #1F2A3F;">,</span>
-<span style="background-color: #1F2A3F;">         format(</span><span style="color: #A3B09A; background-color: #1F2A3F;">'%s mins'</span><span style="background-color: #1F2A3F;">, </span><span style="color: #DB6E8F; background-color: #1F2A3F;">extract</span><span style="background-color: #1F2A3F;">(epoch </span><span style="color: #b18bb1; background-color: #1F2A3F; font-style: italic;">from</span><span style="background-color: #1F2A3F;"> (events.end_time - events.start_time))/60)</span>
-<span style="background-color: #1F2A3F;">  </span><span style="color: #b18bb1; background-color: #1F2A3F; font-style: italic;">FROM</span><span style="background-color: #1F2A3F;"> events;</span>
-<span style="color: #64727d; background-color: #1F2A3F;">#+end_src</span>
+<pre class="src src-org"><span style="color: #858585; font-style: italic;">#+name: events</span>
+<span style="color: #858585; font-style: italic; text-decoration: underline;">#+begin_src sql</span>
+<span style="color: #858585;">  </span><span style="color: #598bc1;">SELECT</span><span style="color: #858585;"> events.title,</span>
+<span style="color: #858585;">         events.slug,</span>
+<span style="color: #858585;">         start_time,</span>
+<span style="color: #858585;">         events.id,</span>
+<span style="color: #858585;">         events.</span><span style="color: #598bc1;">source</span><span style="color: #858585;">,</span>
+<span style="color: #858585;">         format(</span><span style="color: #6aaf50;">'%s mins'</span><span style="color: #858585;">, </span><span style="color: #7f7dca;">extract</span><span style="color: #858585;">(epoch </span><span style="color: #598bc1;">from</span><span style="color: #858585;"> (events.end_time - events.start_time))/60)</span>
+<span style="color: #858585;">  </span><span style="color: #598bc1;">FROM</span><span style="color: #858585;"> events;</span>
+<span style="color: #858585; font-style: italic; text-decoration: overline;">#+end_src</span>
 
-<span style="color: #A3B09A;">#+RESULTS: events</span>
-<span style="color: #5D80AE;">| title              | slug                 | start_time          | end_time            | source | format  |</span>
-<span style="color: #5D80AE;">|--------------------+----------------------+---------------------+---------------------+--------+---------|</span>
-<span style="color: #5D80AE;">| Lol bro what       | lol-rofl-lmao        | 2021-11-29 12:30:00 | 2021-11-29 13:30:00 | local  | 60 mins |</span>
-<span style="color: #5D80AE;">| Nested event title | nested-lol-rofl-lmao | 2021-10-29 12:30:00 | 2021-10-29 13:30:00 | local  | 60 mins |</span>
+<span style="color: #858585; font-style: italic;">#+RESULTS: events</span>
+<span style="color: #86b5e8;">| title              | slug                 | start_time          | end_time            | source | format  |</span>
+<span style="color: #86b5e8;">|--------------------+----------------------+---------------------+---------------------+--------+---------|</span>
+<span style="color: #86b5e8;">| Lol bro what       | lol-rofl-lmao        | 2021-11-29 12:30:00 | 2021-11-29 13:30:00 | local  | 60 mins |</span>
+<span style="color: #86b5e8;">| Nested event title | nested-lol-rofl-lmao | 2021-10-29 12:30:00 | 2021-10-29 13:30:00 | local  | 60 mins |</span>
 </pre>
 </div>
 
-<div id="outline-container-orgd91ed8e" class="outline-2">
-<h2 id="orgd91ed8e">Utilizing LSP</h2>
-<div class="outline-text-2" id="text-orgd91ed8e">
+<div id="outline-container-org6fc60e0" class="outline-2">
+<h2 id="org6fc60e0">Utilizing LSP</h2>
+<div class="outline-text-2" id="text-org6fc60e0">
 <p>
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -111,9 +111,9 @@ database.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">((nil . ((eval (<span style="color: #b18bb1; font-style: italic;">lambda</span> ()
-                 (<span style="color: #b18bb1; font-style: italic;">setq</span> lsp-sqls-connections `(((driver . <span style="color: #A3B09A;">"postgresql"</span>)
-                                               (dataSourceName . ,(getenv <span style="color: #A3B09A;">"DATABASE_URL"</span>))))))))))
+<pre class="src src-elisp">((nil . ((eval (<span style="color: #598bc1;">lambda</span> ()
+                 (<span style="color: #598bc1;">setq</span> lsp-sqls-connections `(((driver . <span style="color: #6aaf50;">"postgresql"</span>)
+                                               (dataSourceName . ,(getenv <span style="color: #6aaf50;">"DATABASE_URL"</span>))))))))))
 </pre>
 </div>
 
@@ -130,7 +130,7 @@ blocks. So I added another snippet to top of my org file.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-org"><span style="color: #A3B09A;">#+PROPERTY: header-args:sql  :tangle test.sql</span>
+<pre class="src src-org"><span style="color: #858585; font-style: italic;">#+PROPERTY: header-args:sql  :tangle test.sql</span>
 </pre>
 </div>
 
@@ -147,19 +147,19 @@ that didn't work out too well.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">defun</span> <span style="color: #F9B5AC;">org-babel-edit-prep:sql</span> (babel-info)
-  (<span style="color: #b18bb1; font-style: italic;">setq-local</span> buffer-file-name (<span style="color: #b18bb1; font-style: italic;">-&gt;&gt;</span> babel-info caddr (alist-get <span style="color: #DB6E8F;">:tangle</span>)))
-  (<span style="color: #b18bb1; font-style: italic;">setq-local</span> lsp-buffer-uri (<span style="color: #b18bb1; font-style: italic;">-&gt;&gt;</span> babel-info caddr (alist-get <span style="color: #DB6E8F;">:tangle</span>) lsp--path-to-uri))
-  (<span style="color: #b18bb1; font-style: italic;">setq-local</span> lsp-headerline-breadcrumb-enable nil)
+<pre class="src src-elisp">(<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">org-babel-edit-prep:sql</span> (babel-info)
+  (<span style="color: #598bc1;">setq-local</span> buffer-file-name (<span style="color: #598bc1;">-&gt;&gt;</span> babel-info caddr (alist-get <span style="color: #7f7dca;">:tangle</span>)))
+  (<span style="color: #598bc1;">setq-local</span> lsp-buffer-uri (<span style="color: #598bc1;">-&gt;&gt;</span> babel-info caddr (alist-get <span style="color: #7f7dca;">:tangle</span>) lsp--path-to-uri))
+  (<span style="color: #598bc1;">setq-local</span> lsp-headerline-breadcrumb-enable nil)
   (lsp))
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgb15b6e1" class="outline-2">
-<h2 id="orgb15b6e1">Problems with this setup</h2>
-<div class="outline-text-2" id="text-orgb15b6e1">
+<div id="outline-container-org16e77ca" class="outline-2">
+<h2 id="org16e77ca">Problems with this setup</h2>
+<div class="outline-text-2" id="text-org16e77ca">
 <p>
 There are 2 main problems I face during my primary use-case.
 </p>
@@ -172,6 +172,6 @@ which don't suffer from this.</li>
 </ol>
 </div>
 </div>
-</article></section><footer class="site-footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2>Get updates via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class="btn btn-primary" type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Or Follow via RSS</a></p><p>Author: Charanjit Singh <a href=https://twitter.com/bitspook>@bitspook</a></p></footer><script type=text/javascript>(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+</article></section><footer class="site-footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2>Get updates via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class="btn btn-primary" type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Or Follow via RSS</a></p><p>Author: Charanjit Singh <a href=https://infosec.exchange/@bitspook>@bitspook</a></p></footer><script type=text/javascript>(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
 for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
 MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);mixpanel.init('0f28a64d9f8bce370006d36e1e2e3f61');mixpanel.track('Page Load');</script></div></body></html>

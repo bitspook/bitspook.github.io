@@ -17,9 +17,9 @@
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org7cac356&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org7cac356&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7cac356&quot;&gt;
+&lt;div id=&quot;outline-container-org0e6e5c7&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0e6e5c7&quot;&gt;Requirement&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0e6e5c7&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
 browser&lt;/li&gt;
@@ -30,9 +30,9 @@ of hyperlinks&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org62543ad&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org62543ad&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org62543ad&quot;&gt;
+&lt;div id=&quot;outline-container-orge50163e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge50163e&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge50163e&quot;&gt;
 &lt;p&gt;
 Org has a concept of &apos;link types&apos;. We can add a new type of link and have it
 behave the way we want.
@@ -65,8 +65,8 @@ For example:
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;((&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;yt&quot;&lt;/span&gt; &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:follow&lt;/span&gt; spook-org--follow-yt-link &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:export&lt;/span&gt; spook-org--export-yt-link)
- (&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;eww&quot;&lt;/span&gt; &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:follow&lt;/span&gt; org-eww-open &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:store&lt;/span&gt; org-eww-store-link))
+&lt;pre class=&quot;src src-elisp&quot;&gt;((&lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;yt&quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; spook-org--export-yt-link)
+ (&lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;eww&quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; org-eww-open &lt;span style=&quot;color: #7f7dca;&quot;&gt;:store&lt;/span&gt; org-eww-store-link))
 &lt;/pre&gt;
 &lt;/div&gt;&lt;/li&gt;
 
@@ -86,24 +86,24 @@ Here&apos;s the code I&apos;ve added in &lt;a href=&quot;https://github.com/bits
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-org--follow-yt-link&lt;/span&gt; (path prefix)
-  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let*&lt;/span&gt; ((url (format &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https:%s&quot;&lt;/span&gt; path))
-         (proc-name (format &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;*yt://%s*&quot;&lt;/span&gt; url)))
-    (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;and&lt;/span&gt; prefix (executable-find &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;mpv&quot;&lt;/span&gt;))
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-org--follow-yt-link&lt;/span&gt; (path prefix)
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;let*&lt;/span&gt; ((url (format &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;https:%s&quot;&lt;/span&gt; path))
+         (proc-name (format &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;*yt://%s*&quot;&lt;/span&gt; url)))
+    (&lt;span style=&quot;color: #598bc1;&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color: #598bc1;&quot;&gt;and&lt;/span&gt; prefix (executable-find &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;mpv&quot;&lt;/span&gt;))
         (browse-url url)
-      (make-process &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:name&lt;/span&gt; proc-name &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:buffer&lt;/span&gt; proc-name &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:command&lt;/span&gt; `(&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;mpv&quot;&lt;/span&gt; ,url))
-      (message &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Launched mpv in buffer: %s&quot;&lt;/span&gt; proc-name))))
+      (make-process &lt;span style=&quot;color: #7f7dca;&quot;&gt;:name&lt;/span&gt; proc-name &lt;span style=&quot;color: #7f7dca;&quot;&gt;:buffer&lt;/span&gt; proc-name &lt;span style=&quot;color: #7f7dca;&quot;&gt;:command&lt;/span&gt; `(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;mpv&quot;&lt;/span&gt; ,url))
+      (message &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;Launched mpv in buffer: %s&quot;&lt;/span&gt; proc-name))))
 
-(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-org--export-yt-link&lt;/span&gt; (path desc backend)
-  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;when&lt;/span&gt; (eq backend &apos;html)
-    (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let*&lt;/span&gt; ((video-id (cadar (url-parse-query-string path)))
-           (url (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;if&lt;/span&gt; (string-empty-p video-id) path
-                  (format &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;//youtube.com/embed/%s&quot;&lt;/span&gt; video-id))))
+(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-org--export-yt-link&lt;/span&gt; (path desc backend)
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;when&lt;/span&gt; (eq backend &apos;html)
+    (&lt;span style=&quot;color: #598bc1;&quot;&gt;let*&lt;/span&gt; ((video-id (cadar (url-parse-query-string path)))
+           (url (&lt;span style=&quot;color: #598bc1;&quot;&gt;if&lt;/span&gt; (string-empty-p video-id) path
+                  (format &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;//youtube.com/embed/%s&quot;&lt;/span&gt; video-id))))
       (format
-       &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;&amp;lt;iframe width=\&quot;560\&quot; height=\&quot;315\&quot; src=\&quot;%s\&quot; title=\&quot;%s\&quot; frameborder=\&quot;0\&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&quot;&lt;/span&gt;
+       &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;&amp;lt;iframe width=\&quot;560\&quot; height=\&quot;315\&quot; src=\&quot;%s\&quot; title=\&quot;%s\&quot; frameborder=\&quot;0\&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&quot;&lt;/span&gt;
        url desc))))
 
-(org-link-set-parameters &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;yt&quot;&lt;/span&gt; &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:follow&lt;/span&gt; #&apos;spook-org--follow-yt-link &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:export&lt;/span&gt; #&apos;spook-org--export-yt-link)
+(org-link-set-parameters &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;yt&quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; #&apos;spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; #&apos;spook-org--export-yt-link)
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -119,9 +119,9 @@ Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extend
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org2d84043&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2d84043&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2d84043&quot;&gt;
+&lt;div id=&quot;outline-container-org87f3e39&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org87f3e39&quot;&gt;Result&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org87f3e39&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
 in mpv&lt;/li&gt;
@@ -133,9 +133,9 @@ youtube videos&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org571f248&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org571f248&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org571f248&quot;&gt;
+&lt;div id=&quot;outline-container-org60411dc&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org60411dc&quot;&gt;Bonus gains 💪&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org60411dc&quot;&gt;
 &lt;p&gt;
 Recently I&apos;ve been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
@@ -174,9 +174,9 @@ extending-the-blogging-setup as well.
             <link>https://bitspook.in/blog/how-i-manage-my-passwords/</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;div id=&quot;outline-container-org910b7ae&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org910b7ae&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org910b7ae&quot;&gt;
+&lt;div id=&quot;outline-container-orgebfc863&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgebfc863&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgebfc863&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;b&gt;No third-parties&lt;/b&gt;
@@ -208,9 +208,9 @@ should play nice with presence/absence of other tools.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org4067c4d&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4067c4d&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4067c4d&quot;&gt;
+&lt;div id=&quot;outline-container-org01156f8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org01156f8&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org01156f8&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
@@ -291,13 +291,13 @@ my mobile devices.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orga9f2a24&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orga9f2a24&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga9f2a24&quot;&gt;
+&lt;div id=&quot;outline-container-org7dc3472&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7dc3472&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7dc3472&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org9731d18&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org9731d18&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org9731d18&quot;&gt;
+&lt;div id=&quot;outline-container-org280c268&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org280c268&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org280c268&quot;&gt;
 &lt;p&gt;
 For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
@@ -319,9 +319,9 @@ password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgdd1c18b&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgdd1c18b&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgdd1c18b&quot;&gt;
+&lt;div id=&quot;outline-container-orgbd3f1cf&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgbd3f1cf&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgbd3f1cf&quot;&gt;
 &lt;p&gt;
 Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
 much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
@@ -354,9 +354,9 @@ password (on the same form).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgad4a4d7&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgad4a4d7&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgad4a4d7&quot;&gt;
+&lt;div id=&quot;outline-container-org02b5708&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org02b5708&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org02b5708&quot;&gt;
 &lt;p&gt;
 I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
@@ -365,14 +365,14 @@ to make it easy.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-lisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;spook/fireword-bin&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~/Documents/work/fireword/fireword&quot;&lt;/span&gt;)
+&lt;pre class=&quot;src src-lisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook/fireword-bin&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;~/Documents/work/fireword/fireword&quot;&lt;/span&gt;)
 
 (defcommand fireword (pass len)
-  ((&lt;span style=&quot;color: #DB6E8F;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Password: &quot;&lt;/span&gt;)
-   (&lt;span style=&quot;color: #DB6E8F;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Length: &quot;&lt;/span&gt;))
-  (run-shell-command (format nil  &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~a ~a ~a | xclip -sel clip&quot;&lt;/span&gt; spook/fireword-bin pass len)))
+  ((&lt;span style=&quot;color: #7f7dca;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;Password: &quot;&lt;/span&gt;)
+   (&lt;span style=&quot;color: #7f7dca;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;Length: &quot;&lt;/span&gt;))
+  (run-shell-command (format nil  &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;~a ~a ~a | xclip -sel clip&quot;&lt;/span&gt; spook/fireword-bin pass len)))
 
-(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;define-key&lt;/span&gt; *top-map* (kbd &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;s-P&quot;&lt;/span&gt;) &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;fireword&quot;&lt;/span&gt;)
+(&lt;span style=&quot;color: #598bc1;&quot;&gt;define-key&lt;/span&gt; *top-map* (kbd &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;s-P&quot;&lt;/span&gt;) &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;fireword&quot;&lt;/span&gt;)
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -428,9 +428,9 @@ Consider following HTML element
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #F9B5AC;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=&quot;color: #F9B5AC;&quot;&gt;a&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;href&lt;/span&gt;=&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;&amp;gt;Google&amp;lt;/&lt;span style=&quot;color: #F9B5AC;&quot;&gt;a&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&quot;color: #F9B5AC;&quot;&gt;div&lt;/span&gt;&amp;gt;
+&lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;container&quot;&lt;/span&gt;&amp;gt;
+  &amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;a&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;href&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;&amp;gt;Google&amp;lt;/&lt;span style=&quot;color: #1d9a79;&quot;&gt;a&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt;&amp;gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -439,9 +439,9 @@ We can write it as a lisp form like this:
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;&apos;(div ((class . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;))
-      (a ((href . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;))
-         &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Google&quot;&lt;/span&gt;))
+&lt;pre class=&quot;src src-elisp&quot;&gt;&apos;(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;container&quot;&lt;/span&gt;))
+      (a ((href . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;))
+         &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;Google&quot;&lt;/span&gt;))
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -456,11 +456,11 @@ there, and it is treated as a DOM node.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;))
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;))
   (shr-dom-to-xml
-   `(div ((class . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;container&quot;&lt;/span&gt;))
+   `(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;container&quot;&lt;/span&gt;))
          (a ((href . ,my-url))
-            &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;Google&quot;&lt;/span&gt;))))
+            &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;Google&quot;&lt;/span&gt;))))
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -507,7 +507,7 @@ execute SQL snippets, we need to run following elisp snippet:
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;with-eval-after-load&lt;/span&gt; &apos;org
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;with-eval-after-load&lt;/span&gt; &apos;org
 (org-babel-do-load-languages
  &apos;org-babel-load-languages
  &apos;((sql . t))))
@@ -538,11 +538,11 @@ setup the required environment variables:
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-sh&quot;&gt;&lt;span style=&quot;color: #c6797e;&quot;&gt;PGDIR&lt;/span&gt;=$&lt;span style=&quot;color: #c6797e;&quot;&gt;PWD&lt;/span&gt;/storage/postgres
-&lt;span style=&quot;color: #DB6E8F;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;PGDATA&lt;/span&gt;=$&lt;span style=&quot;color: #c6797e;&quot;&gt;PGDIR&lt;/span&gt;/data
-&lt;span style=&quot;color: #DB6E8F;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;PGHOST&lt;/span&gt;=$&lt;span style=&quot;color: #c6797e;&quot;&gt;PGDIR&lt;/span&gt;/run
-&lt;span style=&quot;color: #DB6E8F;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;PGDATABASE&lt;/span&gt;=entropy
-&lt;span style=&quot;color: #DB6E8F;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;DATABASE_URL&lt;/span&gt;=&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;postgresql:///$PGDATABASE?host=$PGHOST&quot;&lt;/span&gt; &lt;span style=&quot;color: #64727d; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #64727d; font-style: italic;&quot;&gt;not required by postgres, but will be helpful&lt;/span&gt;
+&lt;pre class=&quot;src src-sh&quot;&gt;&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PWD&lt;/span&gt;/storage/postgres
+&lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;PGDATA&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;/data
+&lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;PGHOST&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;/run
+&lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;PGDATABASE&lt;/span&gt;=entropy
+&lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;DATABASE_URL&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;postgresql:///$PGDATABASE?host=$PGHOST&quot;&lt;/span&gt; &lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;not required by postgres, but will be helpful&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -555,7 +555,7 @@ sql-playground.org does the trick:
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #A3B09A;&quot;&gt;#+PROPERTY: header-args:sql  :engine postgres&lt;/span&gt;
+&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+PROPERTY: header-args:sql  :engine postgres&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -566,28 +566,28 @@ SQL block produces output shown below that.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #A3B09A;&quot;&gt;#+name: events&lt;/span&gt;
-&lt;span style=&quot;color: #64727d; background-color: #1F2A3F;&quot;&gt;#+begin_src sql&lt;/span&gt;
-&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot;color: #b18bb1; background-color: #1F2A3F; font-style: italic;&quot;&gt;SELECT&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt; events.title,&lt;/span&gt;
-&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;         events.slug,&lt;/span&gt;
-&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;         start_time,&lt;/span&gt;
-&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;         events.id,&lt;/span&gt;
-&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;         events.&lt;/span&gt;&lt;span style=&quot;color: #b18bb1; background-color: #1F2A3F; font-style: italic;&quot;&gt;source&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;,&lt;/span&gt;
-&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;         format(&lt;/span&gt;&lt;span style=&quot;color: #A3B09A; background-color: #1F2A3F;&quot;&gt;&apos;%s mins&apos;&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color: #DB6E8F; background-color: #1F2A3F;&quot;&gt;extract&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;(epoch &lt;/span&gt;&lt;span style=&quot;color: #b18bb1; background-color: #1F2A3F; font-style: italic;&quot;&gt;from&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt; (events.end_time - events.start_time))/60)&lt;/span&gt;
-&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot;color: #b18bb1; background-color: #1F2A3F; font-style: italic;&quot;&gt;FROM&lt;/span&gt;&lt;span style=&quot;background-color: #1F2A3F;&quot;&gt; events;&lt;/span&gt;
-&lt;span style=&quot;color: #64727d; background-color: #1F2A3F;&quot;&gt;#+end_src&lt;/span&gt;
+&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+name: events&lt;/span&gt;
+&lt;span style=&quot;color: #858585; font-style: italic; text-decoration: underline;&quot;&gt;#+begin_src sql&lt;/span&gt;
+&lt;span style=&quot;color: #858585;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot;color: #598bc1;&quot;&gt;SELECT&lt;/span&gt;&lt;span style=&quot;color: #858585;&quot;&gt; events.title,&lt;/span&gt;
+&lt;span style=&quot;color: #858585;&quot;&gt;         events.slug,&lt;/span&gt;
+&lt;span style=&quot;color: #858585;&quot;&gt;         start_time,&lt;/span&gt;
+&lt;span style=&quot;color: #858585;&quot;&gt;         events.id,&lt;/span&gt;
+&lt;span style=&quot;color: #858585;&quot;&gt;         events.&lt;/span&gt;&lt;span style=&quot;color: #598bc1;&quot;&gt;source&lt;/span&gt;&lt;span style=&quot;color: #858585;&quot;&gt;,&lt;/span&gt;
+&lt;span style=&quot;color: #858585;&quot;&gt;         format(&lt;/span&gt;&lt;span style=&quot;color: #6aaf50;&quot;&gt;&apos;%s mins&apos;&lt;/span&gt;&lt;span style=&quot;color: #858585;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color: #7f7dca;&quot;&gt;extract&lt;/span&gt;&lt;span style=&quot;color: #858585;&quot;&gt;(epoch &lt;/span&gt;&lt;span style=&quot;color: #598bc1;&quot;&gt;from&lt;/span&gt;&lt;span style=&quot;color: #858585;&quot;&gt; (events.end_time - events.start_time))/60)&lt;/span&gt;
+&lt;span style=&quot;color: #858585;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot;color: #598bc1;&quot;&gt;FROM&lt;/span&gt;&lt;span style=&quot;color: #858585;&quot;&gt; events;&lt;/span&gt;
+&lt;span style=&quot;color: #858585; font-style: italic; text-decoration: overline;&quot;&gt;#+end_src&lt;/span&gt;
 
-&lt;span style=&quot;color: #A3B09A;&quot;&gt;#+RESULTS: events&lt;/span&gt;
-&lt;span style=&quot;color: #5D80AE;&quot;&gt;| title              | slug                 | start_time          | end_time            | source | format  |&lt;/span&gt;
-&lt;span style=&quot;color: #5D80AE;&quot;&gt;|--------------------+----------------------+---------------------+---------------------+--------+---------|&lt;/span&gt;
-&lt;span style=&quot;color: #5D80AE;&quot;&gt;| Lol bro what       | lol-rofl-lmao        | 2021-11-29 12:30:00 | 2021-11-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
-&lt;span style=&quot;color: #5D80AE;&quot;&gt;| Nested event title | nested-lol-rofl-lmao | 2021-10-29 12:30:00 | 2021-10-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
+&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+RESULTS: events&lt;/span&gt;
+&lt;span style=&quot;color: #86b5e8;&quot;&gt;| title              | slug                 | start_time          | end_time            | source | format  |&lt;/span&gt;
+&lt;span style=&quot;color: #86b5e8;&quot;&gt;|--------------------+----------------------+---------------------+---------------------+--------+---------|&lt;/span&gt;
+&lt;span style=&quot;color: #86b5e8;&quot;&gt;| Lol bro what       | lol-rofl-lmao        | 2021-11-29 12:30:00 | 2021-11-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
+&lt;span style=&quot;color: #86b5e8;&quot;&gt;| Nested event title | nested-lol-rofl-lmao | 2021-10-29 12:30:00 | 2021-10-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgd91ed8e&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgd91ed8e&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgd91ed8e&quot;&gt;
+&lt;div id=&quot;outline-container-org6fc60e0&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org6fc60e0&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org6fc60e0&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -600,9 +600,9 @@ database.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;((nil . ((eval (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;lambda&lt;/span&gt; ()
-                 (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;setq&lt;/span&gt; lsp-sqls-connections `(((driver . &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;postgresql&quot;&lt;/span&gt;)
-                                               (dataSourceName . ,(getenv &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;DATABASE_URL&quot;&lt;/span&gt;))))))))))
+&lt;pre class=&quot;src src-elisp&quot;&gt;((nil . ((eval (&lt;span style=&quot;color: #598bc1;&quot;&gt;lambda&lt;/span&gt; ()
+                 (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq&lt;/span&gt; lsp-sqls-connections `(((driver . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;postgresql&quot;&lt;/span&gt;)
+                                               (dataSourceName . ,(getenv &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;DATABASE_URL&quot;&lt;/span&gt;))))))))))
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -619,7 +619,7 @@ blocks. So I added another snippet to top of my org file.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #A3B09A;&quot;&gt;#+PROPERTY: header-args:sql  :tangle test.sql&lt;/span&gt;
+&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+PROPERTY: header-args:sql  :tangle test.sql&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -636,19 +636,19 @@ that didn&apos;t work out too well.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;org-babel-edit-prep:sql&lt;/span&gt; (babel-info)
-  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;setq-local&lt;/span&gt; buffer-file-name (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt; babel-info caddr (alist-get &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:tangle&lt;/span&gt;)))
-  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;setq-local&lt;/span&gt; lsp-buffer-uri (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt; babel-info caddr (alist-get &lt;span style=&quot;color: #DB6E8F;&quot;&gt;:tangle&lt;/span&gt;) lsp--path-to-uri))
-  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;setq-local&lt;/span&gt; lsp-headerline-breadcrumb-enable nil)
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;org-babel-edit-prep:sql&lt;/span&gt; (babel-info)
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq-local&lt;/span&gt; buffer-file-name (&lt;span style=&quot;color: #598bc1;&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt; babel-info caddr (alist-get &lt;span style=&quot;color: #7f7dca;&quot;&gt;:tangle&lt;/span&gt;)))
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq-local&lt;/span&gt; lsp-buffer-uri (&lt;span style=&quot;color: #598bc1;&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt; babel-info caddr (alist-get &lt;span style=&quot;color: #7f7dca;&quot;&gt;:tangle&lt;/span&gt;) lsp--path-to-uri))
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq-local&lt;/span&gt; lsp-headerline-breadcrumb-enable nil)
   (lsp))
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgb15b6e1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb15b6e1&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb15b6e1&quot;&gt;
+&lt;div id=&quot;outline-container-org16e77ca&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org16e77ca&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org16e77ca&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -709,34 +709,34 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org91c3e95&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org91c3e95&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org91c3e95&quot;&gt;
+&lt;div id=&quot;outline-container-org646f0a2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org646f0a2&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org646f0a2&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #c6797e;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;~/Documents/org/people&quot;&lt;/span&gt;
-  &lt;span style=&quot;color: #A3B09A; font-style: italic;&quot;&gt;&quot;Directory where org-roam notes related to people are kept.&quot;&lt;/span&gt;)
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;~/Documents/org/people&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #987654;&quot;&gt;&quot;Directory where org-roam notes related to people are kept.&quot;&lt;/span&gt;)
 
-(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #c6797e;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
-  &lt;span style=&quot;color: #A3B09A; font-style: italic;&quot;&gt;&quot;Evaluate FUNC with ARGS org-roam set for working as CRM.&quot;&lt;/span&gt;
-  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;let*&lt;/span&gt; ((org-roam-directory spook--org-roam-crm-dir)
-         (org-roam-db-location (concat org-roam-directory &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;/roam.db&quot;&lt;/span&gt;)))
+(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #d65946;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
+  &lt;span style=&quot;color: #987654;&quot;&gt;&quot;Evaluate FUNC with ARGS org-roam set for working as CRM.&quot;&lt;/span&gt;
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;let*&lt;/span&gt; ((org-roam-directory spook--org-roam-crm-dir)
+         (org-roam-db-location (concat org-roam-directory &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;/roam.db&quot;&lt;/span&gt;)))
     (apply func args)))
 
-(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-crm--db-sync&lt;/span&gt; ()
-  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;interactive&lt;/span&gt;)
+(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--db-sync&lt;/span&gt; ()
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
   (spook--with-org-roam-crm #&apos;org-roam-db-sync))
 
-(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-crm--find-person&lt;/span&gt; ()
-  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;interactive&lt;/span&gt;)
+(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--find-person&lt;/span&gt; ()
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
   (spook--with-org-roam-crm #&apos;org-roam-node-find))
 
-(&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #F9B5AC;&quot;&gt;spook-crm--insert-person&lt;/span&gt; ()
-  (&lt;span style=&quot;color: #b18bb1; font-style: italic;&quot;&gt;interactive&lt;/span&gt;)
+(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--insert-person&lt;/span&gt; ()
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
   (spook--with-org-roam-crm #&apos;org-roam-node-insert))
 &lt;/pre&gt;
 &lt;/div&gt;
@@ -754,9 +754,9 @@ Here&apos;s how I add the keybindings:
 
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;pre class=&quot;src src-elisp&quot;&gt;(spook-defkeymap
- &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;spook-people&quot;&lt;/span&gt; &lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;C-c P&quot;&lt;/span&gt;
- &apos;(&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;f&quot;&lt;/span&gt; . spook-crm--find-person)
- &apos;(&lt;span style=&quot;color: #A3B09A;&quot;&gt;&quot;i&quot;&lt;/span&gt; . spook-crm--insert-person))
+ &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;spook-people&quot;&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;C-c P&quot;&lt;/span&gt;
+ &apos;(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;f&quot;&lt;/span&gt; . spook-crm--find-person)
+ &apos;(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;i&quot;&lt;/span&gt; . spook-crm--insert-person))
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -770,9 +770,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org4601908&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4601908&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4601908&quot;&gt;
+&lt;div id=&quot;outline-container-orgf13ed23&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf13ed23&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf13ed23&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -794,9 +794,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org18be13e&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org18be13e&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org18be13e&quot;&gt;
+&lt;div id=&quot;outline-container-orgcbcfca3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcbcfca3&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcbcfca3&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;

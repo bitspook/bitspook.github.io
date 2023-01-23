@@ -9,8 +9,12 @@
    'journey
    :name "infosec"
    :tagline "Information security from attackers pov"
-   :html-description "<p>I have desired for long to explore infosec in depth. Finally, I have decided to commit and invest in it. </p>"
-   :html-content "<p>I am going to continue down the infosec road, learn needs learning, solve what need solving, break what needs breaking.</p><p>As a landmark and quantifiable goal, I am reaching for earning an OSCP certification."))
+   :notes-with-tags '("infosec" "cryptography" "ctf" "wargame" "xss" "pwned")
+   :html-description
+   `(:p "I have desired for long to explore infosec in depth. Finally, I have decided to commit and invest in it.")
+   :html-content
+   `((:p "I am going to continue down the infosec road, learn needs learning, solve what need solving, break what needs breaking.")
+     (:p "As a landmark and quantifiable goal, I am reaching for earning an OSCP certification."))))
 
 (let ((*debug-transpiles* t)
       (*conf* (conf-merge

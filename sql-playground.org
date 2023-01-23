@@ -1,10 +1,18 @@
+#+name: smoke-test
 #+begin_src sqlite :db ./clownpress.db
+  SELECT count(*) FROM provided_content;
+#+end_src
+
+#+RESULTS: smoke-test
+: 0
+
+#+name: clear
+#+begin_src sqlite :db ./clownpress.db :results none
   DELETE FROM processed_content;
   DELETE FROM provided_content;
 #+end_src
 
-#+RESULTS:
-
+#+name: top-5-posts
 #+begin_src sqlite :db ./clownpress.db
   SELECT
     (json_extract(prov.metadata, "$.slug")) AS slug,
@@ -16,38 +24,14 @@
     ON (prov.id = proc.prov_cont_id)
   WHERE (("html" = proc.type)
     AND ((tags IS NULL) OR (NOT (tags LIKE "%draft%"))))
-    AND slug LIKE "%Insolent%"
+    AND slug LIKE "%%"
   ORDER BY published_at
   DESC LIMIT 5;
 #+end_src
 
-#+RESULTS:
+#+RESULTS: top-5-posts
 
-#+begin_src sqlite :db ./clownpress.db
-  SELECT
-    (json_extract(prov.metadata, "$.title")) AS name,
-    (json_extract(prov.metadata, "$.languages")) AS languages,
-    (json_extract(prov.metadata, "$.category")) AS category,
-    (json_extract(prov.metadata, "$.source_code")) AS source_code,
-    (json_extract(prov.metadata, "$.documentation")) AS documentation,
-    (json_extract(prov.metadata, "$.issue_tracker")) AS issue_tracker,
-  FROM provided_content AS prov
-    LEFT JOIN processed_content AS proc
-    ON (prov.id = proc.prov_cont_id)
-  WHERE (
-    prov.provider = "projects"
-  )
-#+end_src
-
-#+RESULTS:
-: 0
-
-#+begin_src sqlite :db ./clownpress.db
-    DELETE FROM provided_content WHERE (json_extract(metadata, "$.category")) = "project";
-#+end_src
-
-#+RESULTS:
-
+#+name: oracle-spec
 #+begin_src sqlite :db ./clownpress.db
   SELECT
     prov.id,
@@ -68,10 +52,4 @@
      ((tags IS NULL) OR (NOT (tags LIKE 'draft'))))
 #+end_src
 
-#+RESULTS:
-| spookfox                                                                            | Spookfox | project |   | '(("a developer"" |
-| (""use Spookfox"" (:show (""#use"" ""#outline-container-use"")))                    |          |         |   |                   |
-| (""hack on Spookfox"" (:show (""#contribute"" ""#outline-container-contribute"")))) |          |         |   |                   |
-| (""an explorer""                                                                    |          |         |   |                   |
-| (""know more about Spookfox"" (:show (""#explore"")))                               |          |         |   |                   |
-| (""see it all"" (:show :all))))"                                                    |          |         |   |                   |
+#+RESULTS: oracle-spec

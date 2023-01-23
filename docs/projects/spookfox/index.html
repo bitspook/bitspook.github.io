@@ -9,13 +9,13 @@ tinkerer similar (to Emacs) framework to tinker their browser.
 I use Spookfox as my daily driver to enable a number of <a href="https://github.com/bitspook/spookmax.d">workflow enhancements</a>,
 e.g capturing articles I read and Youtube videos I watch.
 </p>
-<ul class=elsewhere-buttons><li><a class="btn btn-github" href=https://github.com/bitspook/spookfox><i class=icon></i><span>Source Code</span></a></li><li><a class="btn btn-issues" href=https://github.com/bitspook/spookfox/issues><i class=icon></i><span>Issue tracker</span></a></li></ul><div class=oracle-container style=display:none;><span class=placeholder>I am</span><select id=roles onchange=handleSelectRole(event.target.value);><option value="an explorer">an explorer</option><option value="a developer">a developer</option></select><span class=placeholder>who wants to</span><select class=intents data-role="an explorer" onchange=handleSelectIntent(event.target.value);><option value="see it all">see it all</option><option value="know more about Spookfox">know more about Spookfox</option></select><select class=intents data-role="a developer" onchange=handleSelectIntent(event.target.value);><option value="install Spookfox">install Spookfox</option><option value="use Spookfox">use Spookfox</option><option value="hack on Spookfox">hack on Spookfox</option></select><script>function mapcar(fun) { var arrs = Array.prototype.slice.call(arguments, 1); var resultArray = new Array(); if (1 === arrs.length) { for (var element = null, _js_arrvar2 = arrs[0], _js_idx1 = 0; _js_idx1 < _js_arrvar2.length; _js_idx1 += 1) { element = _js_arrvar2[_js_idx1]; resultArray.push(fun(element)); }; } else { for (var i = 0; i < arrs[0].length; i += 1) { var argsArray = mapcar(function (a) { return a[i]; }, arrs); resultArray.push(fun.apply(fun, argsArray)); }; }; __PS_MV_REG = []; return resultArray; };
-function mapInto(fn, arr) { var idx = 0; for (var el = null, _js_idx3 = 0; _js_idx3 < arr.length; _js_idx3 += 1) { el = arr[_js_idx3]; arr[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return arr; };
-function map(fn, arr) { var idx = 0; var result = []; for (var el = null, _js_idx4 = 0; _js_idx4 < arr.length; _js_idx4 += 1) { el = arr[_js_idx4]; result[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return result; };
-function member(item, arr) { for (var el = null, _js_idx5 = 0; _js_idx5 < arr.length; _js_idx5 += 1) { el = arr[_js_idx5]; if (el === item) { return true; }; }; return false; };
-function setDifference(arr, arrToSub) { var idx = 0; var result = []; for (var el = null, _js_idx6 = 0; _js_idx6 < arr.length; _js_idx6 += 1) { el = arr[_js_idx6]; if (!member(el, arrToSub)) { result[idx] = el; idx += 1; }; }; __PS_MV_REG = []; return result; };
+<ul class=elsewhere-buttons><li><a class="btn btn-github" href=https://github.com/bitspook/spookfox><i class=icon></i><span>Source Code</span></a></li><li><a class="btn btn-issues" href=https://github.com/bitspook/spookfox/issues><i class=icon></i><span>Issue tracker</span></a></li></ul><div class=oracle-container style=display:none;><span class=placeholder>I am</span><select id=roles onchange=handleSelectRole(event.target.value);><option value="an explorer">an explorer</option><option value="a developer">a developer</option></select><span class=placeholder>who wants to</span><select class=intents data-role="an explorer" onchange=handleSelectIntent(event.target.value);><option value="see it all">see it all</option><option value="know more about Spookfox">know more about Spookfox</option></select><select class=intents data-role="a developer" onchange=handleSelectIntent(event.target.value);><option value="install Spookfox">install Spookfox</option><option value="use Spookfox">use Spookfox</option><option value="hack on Spookfox">hack on Spookfox</option></select><script>function mapcar(fun) { var arrs = Array.prototype.slice.call(arguments, 1); var resultArray = new Array(); if (1 === arrs.length) { for (var element = null, _js_arrvar552 = arrs[0], _js_idx551 = 0; _js_idx551 < _js_arrvar552.length; _js_idx551 += 1) { element = _js_arrvar552[_js_idx551]; resultArray.push(fun(element)); }; } else { for (var i = 0; i < arrs[0].length; i += 1) { var argsArray = mapcar(function (a) { return a[i]; }, arrs); resultArray.push(fun.apply(fun, argsArray)); }; }; __PS_MV_REG = []; return resultArray; };
+function mapInto(fn, arr) { var idx = 0; for (var el = null, _js_idx553 = 0; _js_idx553 < arr.length; _js_idx553 += 1) { el = arr[_js_idx553]; arr[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return arr; };
+function map(fn, arr) { var idx = 0; var result = []; for (var el = null, _js_idx554 = 0; _js_idx554 < arr.length; _js_idx554 += 1) { el = arr[_js_idx554]; result[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return result; };
+function member(item, arr) { for (var el = null, _js_idx555 = 0; _js_idx555 < arr.length; _js_idx555 += 1) { el = arr[_js_idx555]; if (el === item) { return true; }; }; return false; };
+function setDifference(arr, arrToSub) { var idx = 0; var result = []; for (var el = null, _js_idx556 = 0; _js_idx556 < arr.length; _js_idx556 += 1) { el = arr[_js_idx556]; if (!member(el, arrToSub)) { result[idx] = el; idx += 1; }; }; __PS_MV_REG = []; return result; };
 function reduce(func, list, init) { var acc = null; for (var i = arguments.length === 3 ? -1 : 0, acc = arguments.length === 3 ? init : list[0]; i < list.length - 1; i += 1, acc = func(acc, list[i])) { }; __PS_MV_REG = []; return acc; };
-function nconc(arr) { var arrs = Array.prototype.slice.call(arguments, 1); if (arr && arr.length > 0) { var _js8 = arrs.length; for (var _js7 = 0; _js7 < _js8; _js7 += 1) { var other = arrs[_js7]; if (other && other.length > 0) { arr['splice']['apply'](arr, [arr.length, other.length].concat(other)); }; }; }; __PS_MV_REG = []; return arr; };var SPEC = [['an explorer', ['see it all', ['show', 'all']], ['know more about Spookfox', ['show', ['#explore']]]], ['a developer', ['install Spookfox', ['show', ['#outline-container-install']]], ['use Spookfox', ['show', ['#outline-container-use', '#outline-container-apps']]], ['hack on Spookfox', ['show', ['#outline-container-contribute']]]]];function isArray(obj) {
+function nconc(arr) { var arrs = Array.prototype.slice.call(arguments, 1); if (arr && arr.length > 0) { var _js558 = arrs.length; for (var _js557 = 0; _js557 < _js558; _js557 += 1) { var other = arrs[_js557]; if (other && other.length > 0) { arr['splice']['apply'](arr, [arr.length, other.length].concat(other)); }; }; }; __PS_MV_REG = []; return arr; };var SPEC = [['an explorer', ['see it all', ['show', 'all']], ['know more about Spookfox', ['show', ['#explore']]]], ['a developer', ['install Spookfox', ['show', ['#outline-container-install']]], ['use Spookfox', ['show', ['#outline-container-use', '#outline-container-apps']]], ['hack on Spookfox', ['show', ['#outline-container-contribute']]]]];function isArray(obj) {
     __PS_MV_REG = [];
     return Array.isArray(obj);
 };
@@ -53,20 +53,20 @@ function arrayFrom(obj) {
 function roles() {
     __PS_MV_REG = [];
     return (function () {
-        var _js17 = SPEC.length;
-        var collect18 = [];
-        for (var _js16 = 0; _js16 < _js17; _js16 += 1) {
-            var item = SPEC[_js16];
-            collect18.push(first(item));
+        var _js125 = SPEC.length;
+        var collect126 = [];
+        for (var _js124 = 0; _js124 < _js125; _js124 += 1) {
+            var item = SPEC[_js124];
+            collect126.push(first(item));
         };
         __PS_MV_REG = [];
-        return collect18;
+        return collect126;
     })();
 };
 function roleIntents(role) {
-    var _js20 = SPEC.length;
-    for (var _js19 = 0; _js19 < _js20; _js19 += 1) {
-        var item = SPEC[_js19];
+    var _js128 = SPEC.length;
+    for (var _js127 = 0; _js127 < _js128; _js127 += 1) {
+        var item = SPEC[_js127];
         if (first(item) == role) {
             __PS_MV_REG = [];
             return cdr(item);
@@ -79,35 +79,35 @@ function activeRole() {
 };
 function activateRole(role) {
     var els = Array.from(document.querySelectorAll('.intents'));
-    for (var el = null, _js_idx21 = 0; _js_idx21 < els.length; _js_idx21 += 1) {
-        el = els[_js_idx21];
+    for (var el = null, _js_idx129 = 0; _js_idx129 < els.length; _js_idx129 += 1) {
+        el = els[_js_idx129];
         __setf_display('none', el);
     };
     var intentEls = Array.from(document.querySelectorAll('.intents[data-role=\'' + role + '\']'));
-    for (var el = null, _js_idx22 = 0; _js_idx22 < intentEls.length; _js_idx22 += 1) {
-        el = intentEls[_js_idx22];
+    for (var el = null, _js_idx130 = 0; _js_idx130 < intentEls.length; _js_idx130 += 1) {
+        el = intentEls[_js_idx130];
         __setf_display('inline-block', el);
     };
 };
 function activateIntent(intentSpec) {
     var realmEl = document.querySelector('#oracle-realm');
     var realmChildren = arrayFrom(realmEl.children);
-    for (var el = null, _js_idx23 = 0; _js_idx23 < realmChildren.length; _js_idx23 += 1) {
-        el = realmChildren[_js_idx23];
+    for (var el = null, _js_idx131 = 0; _js_idx131 < realmChildren.length; _js_idx131 += 1) {
+        el = realmChildren[_js_idx131];
         __setf_display('none', el);
     };
-    for (var sel = null, _js_arrvar25 = cdadr(intentSpec), _js_idx24 = 0; _js_idx24 < _js_arrvar25.length; _js_idx24 += 1) {
-        sel = _js_arrvar25[_js_idx24];
+    for (var sel = null, _js_arrvar133 = cdadr(intentSpec), _js_idx132 = 0; _js_idx132 < _js_arrvar133.length; _js_idx132 += 1) {
+        sel = _js_arrvar133[_js_idx132];
         switch (sel) {
         case 'all':
-            for (var el = null, _js_idx26 = 0; _js_idx26 < realmChildren.length; _js_idx26 += 1) {
-                el = realmChildren[_js_idx26];
+            for (var el = null, _js_idx134 = 0; _js_idx134 < realmChildren.length; _js_idx134 += 1) {
+                el = realmChildren[_js_idx134];
                 __setf_display('block', el);
             };
             break;
         default:
-            for (var el = null, _js_arrvar28 = Array.from(realmEl.querySelectorAll(sel)), _js_idx27 = 0; _js_idx27 < _js_arrvar28.length; _js_idx27 += 1) {
-                el = _js_arrvar28[_js_idx27];
+            for (var el = null, _js_arrvar136 = Array.from(realmEl.querySelectorAll(sel)), _js_idx135 = 0; _js_idx135 < _js_arrvar136.length; _js_idx135 += 1) {
+                el = _js_arrvar136[_js_idx135];
                 __setf_display('block', el);
             };
         };
@@ -119,7 +119,10 @@ function handleSelectRole(role) {
     return domResetIntentsEl();
 };
 function handleSelectIntent(intent) {
-    var intentSpec = findIf(op(car(_) == intent), roleIntents(activeRole()));
+    var intentSpec = findIf(function (_1) {
+        __PS_MV_REG = [];
+        return car(_1) == intent;
+    }, roleIntents(activeRole()));
     __PS_MV_REG = [];
     return activateIntent(intentSpec);
 };
@@ -135,12 +138,16 @@ function domResetIntentsEl() {
 };
 function init() {
     var els = Array.from(document.querySelectorAll('.oracle-container'));
-    for (var el = null, _js_idx26 = 0; _js_idx26 < els.length; _js_idx26 += 1) {
-        el = els[_js_idx26];
+    for (var el = null, _js_idx134 = 0; _js_idx134 < els.length; _js_idx134 += 1) {
+        el = els[_js_idx134];
         __setf_display('flex', el);
     };
     __PS_MV_REG = [];
-    return setTimeout(op(domResetSelectEl('#roles'), domResetIntentsEl()), 0);
+    return setTimeout(function () {
+        domResetSelectEl('#roles');
+        __PS_MV_REG = [];
+        return domResetIntentsEl();
+    }, 0);
 };
 init();</script></div><div id=oracle-realm><div id="outline-container-install" class="outline-2">
 <h2 id="install">Installation</h2>
@@ -175,13 +182,13 @@ Using straight.el
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">use-package</span> <span style="color: #c6797e;">spookfox</span>
-  <span style="color: #DB6E8F;">:straight</span>
-  (spookfox <span style="color: #DB6E8F;">:type</span> git
-            <span style="color: #DB6E8F;">:host</span> github
-            <span style="color: #DB6E8F;">:repo</span> <span style="color: #A3B09A;">&quot;bitspook/spookfox&quot;</span>
-            <span style="color: #DB6E8F;">:files</span> (<span style="color: #A3B09A;">&quot;lisp/*.el&quot;</span> <span style="color: #A3B09A;">&quot;lisp/apps/*.el&quot;</span>))
-  <span style="color: #DB6E8F;">:config</span>
+<pre class="src src-elisp">(<span style="color: #598bc1;">use-package</span> <span style="color: #ab75c3;">spookfox</span>
+  <span style="color: #7f7dca;">:straight</span>
+  (spookfox <span style="color: #7f7dca;">:type</span> git
+            <span style="color: #7f7dca;">:host</span> github
+            <span style="color: #7f7dca;">:repo</span> <span style="color: #6aaf50;">&quot;bitspook/spookfox&quot;</span>
+            <span style="color: #7f7dca;">:files</span> (<span style="color: #6aaf50;">&quot;lisp/*.el&quot;</span> <span style="color: #6aaf50;">&quot;lisp/apps/*.el&quot;</span>))
+  <span style="color: #7f7dca;">:config</span>
   (spookfox-init))
 </pre>
 </div></li>
@@ -203,8 +210,8 @@ Add spookfox and its apps <code>load-path</code>
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(add-to-list 'load-path <span style="color: #A3B09A;">&quot;&lt;path-to-spookfox&gt;/lisp&quot;</span>)
-(add-to-list 'load-path <span style="color: #A3B09A;">&quot;&lt;path-to-spookfox&gt;/lisp/apps&quot;</span>)
+<pre class="src src-elisp">(add-to-list 'load-path <span style="color: #6aaf50;">&quot;&lt;path-to-spookfox&gt;/lisp&quot;</span>)
+(add-to-list 'load-path <span style="color: #6aaf50;">&quot;&lt;path-to-spookfox&gt;/lisp/apps&quot;</span>)
 </pre>
 </div></li>
 </ul></li>
@@ -232,7 +239,7 @@ example, to load &quot;&quot; app, you'd write this Elisp:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">require</span> '<span style="color: #c6797e;">spookfox-org-tabs</span>)
+<pre class="src src-elisp">(<span style="color: #598bc1;">require</span> '<span style="color: #ab75c3;">spookfox-org-tabs</span>)
 </pre>
 </div></li>
 
@@ -245,7 +252,7 @@ Provide the list of enabled apps to <code>spookfox-enabled-apps</code> variable:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b18bb1; font-style: italic;">setq</span> spookfox-enabled-apps '(spookfox-org-tabs))
+<pre class="src src-elisp">(<span style="color: #598bc1;">setq</span> spookfox-enabled-apps '(spookfox-org-tabs))
 </pre>
 </div></li>
 
@@ -276,33 +283,33 @@ isolated and opt-in. Following apps come bundled with this package.
 
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgee96929">spookfox-tabs</a>
+<li><a href="#orgf153c6d">spookfox-tabs</a>
 <ul>
-<li><a href="#org039837a">Features</a></li>
+<li><a href="#org9fd8f73">Features</a></li>
 </ul>
 </li>
-<li><a href="#org5d74ebf">spookfox-org-tabs</a>
+<li><a href="#org25c4894">spookfox-org-tabs</a>
 <ul>
-<li><a href="#org7e31cc9">Features</a></li>
-<li><a href="#org1ebf155">Configuration</a></li>
+<li><a href="#org1e987ec">Features</a></li>
+<li><a href="#org1110cb0">Configuration</a></li>
 </ul>
 </li>
-<li><a href="#orgeebfa14">js-injection</a></li>
+<li><a href="#org7d02e4b">js-injection</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgee96929" class="outline-3">
-<h3 id="orgee96929">spookfox-tabs</h3>
-<div class="outline-text-3" id="text-orgee96929">
+<div id="outline-container-orgf153c6d" class="outline-3">
+<h3 id="orgf153c6d">spookfox-tabs</h3>
+<div class="outline-text-3" id="text-orgf153c6d">
 <p>
 Basic access to browser's tabs.
 </p>
 </div>
 
-<div id="outline-container-org039837a" class="outline-4">
-<h4 id="org039837a">Features</h4>
-<div class="outline-text-4" id="text-org039837a">
+<div id="outline-container-org9fd8f73" class="outline-4">
+<h4 id="org9fd8f73">Features</h4>
+<div class="outline-text-4" id="text-org9fd8f73">
 <ol class="org-ol">
 <li><p>
 Access browser tabs in Elisp
@@ -335,18 +342,18 @@ PS you can use <code>browse-url</code> to achieve the same.
 </div>
 </div>
 
-<div id="outline-container-org5d74ebf" class="outline-3">
-<h3 id="org5d74ebf">spookfox-org-tabs</h3>
-<div class="outline-text-3" id="text-org5d74ebf">
+<div id="outline-container-org25c4894" class="outline-3">
+<h3 id="org25c4894">spookfox-org-tabs</h3>
+<div class="outline-text-3" id="text-org25c4894">
 <p>
 Manage browser's tabs in an org file (separate file or as a subtree in an
 existing one).
 </p>
 </div>
 
-<div id="outline-container-org7e31cc9" class="outline-4">
-<h4 id="org7e31cc9">Features</h4>
-<div class="outline-text-4" id="text-org7e31cc9">
+<div id="outline-container-org1e987ec" class="outline-4">
+<h4 id="org1e987ec">Features</h4>
+<div class="outline-text-4" id="text-org1e987ec">
 <ol class="org-ol">
 <li><p>
 Organize tabs freely in org file
@@ -399,9 +406,9 @@ make changes.
 </div>
 </div>
 
-<div id="outline-container-org1ebf155" class="outline-4">
-<h4 id="org1ebf155">Configuration</h4>
-<div class="outline-text-4" id="text-org1ebf155">
+<div id="outline-container-org1110cb0" class="outline-4">
+<h4 id="org1110cb0">Configuration</h4>
+<div class="outline-text-4" id="text-org1110cb0">
 <ol class="org-ol">
 <li><p>
 <code>spookfox-saved-tabs-target</code>
@@ -413,11 +420,11 @@ browser tabs are saved. For example:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp"><span style="color: #64727d; font-style: italic;">;; </span><span style="color: #64727d; font-style: italic;">Store tabs in a file named =spookfox.org=, under '* Tabs' heading</span>
-(<span style="color: #b18bb1; font-style: italic;">setq</span> spookfox-saved-tabs-target
+<pre class="src src-elisp"><span style="color: #858585; font-style: italic;">;; </span><span style="color: #858585; font-style: italic;">Store tabs in a file named =spookfox.org=, under '* Tabs' heading</span>
+(<span style="color: #598bc1;">setq</span> spookfox-saved-tabs-target
       `(file+headline
-        ,(expand-file-name <span style="color: #A3B09A;">&quot;spookfox.org&quot;</span> org-directory)
-        <span style="color: #A3B09A;">&quot;Tabs&quot;</span>))
+        ,(expand-file-name <span style="color: #6aaf50;">&quot;spookfox.org&quot;</span> org-directory)
+        <span style="color: #6aaf50;">&quot;Tabs&quot;</span>))
 </pre>
 </div></li>
 </ol>
@@ -425,9 +432,9 @@ browser tabs are saved. For example:
 </div>
 </div>
 
-<div id="outline-container-orgeebfa14" class="outline-3">
-<h3 id="orgeebfa14">js-injection</h3>
-<div class="outline-text-3" id="text-orgeebfa14">
+<div id="outline-container-org7d02e4b" class="outline-3">
+<h3 id="org7d02e4b">js-injection</h3>
+<div class="outline-text-3" id="text-org7d02e4b">
 <p>
 Inject Javascript into any website open in your browser, and get the results
 back. I use it to help me take notes for Youtube videos with automatically added
@@ -511,6 +518,6 @@ environment to hack Spookfox.
 </p></li>
 </ol>
 </div>
-</div><div id=explore><h2 class=title>Related content</h2><ul class=listing><div>No posts yet 😕</div></ul></div></div></article><footer class="site-footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2>Get updates via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class="btn btn-primary" type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Or Follow via RSS</a></p><p>Author: Charanjit Singh <a href=https://twitter.com/bitspook>@bitspook</a></p></footer><script type=text/javascript>(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+</div><div id=explore><h2 class=title>Related content</h2><ul class=listing><div>No posts yet 😕</div></ul></div></div></article><footer class="site-footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2>Get updates via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class="btn btn-primary" type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Or Follow via RSS</a></p><p>Author: Charanjit Singh <a href=https://infosec.exchange/@bitspook>@bitspook</a></p></footer><script type=text/javascript>(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
 for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
 MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);mixpanel.init('0f28a64d9f8bce370006d36e1e2e3f61');mixpanel.track('Page Load');</script></section></body></html>
