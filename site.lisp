@@ -32,7 +32,7 @@
 (defun about-me-short (resume)
   `(:p
     (:p "I enjoy playing with software, electronics and video games. My favorites are
-Factorio, Cities Skylines and Rimworld. I also enjoy reading, writing, people
+Factorio, Cities Skylines and Terraria. I also enjoy reading, writing, people
 watching and discussing computers, security and politics.")
     (:p "This website has things I am willing to share publicly. You can go through my "
         (:a :href "/blog/" "blog") ", "
