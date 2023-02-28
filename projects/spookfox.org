@@ -143,6 +143,39 @@ between Emacs and Firefox. More functionality on top of it is provided with
      (spookfox-init)
    #+end_src
 
+4. Register custom request handlers
+
+   It is possible to send custom events from browser (e.g using a JavaScript
+   bookmarklet), and run elisp code to handle them. For this you need to do 2
+   things:
+
+   1. Add a handle for request in Emacs
+
+      Here is some example code for registering a request handler:
+
+      #+begin_src elisp
+        (defun my--capture-the-flag (url)
+          (message "CAPTURING THE FLAG: %s" url))
+
+        (spookfox--register-req-handler "CAPTURE_THE_FLAG" #'my--capture-the-flag)
+      #+end_src
+
+   2. Send a request from browser
+
+      #+begin_src js
+        postMessage({
+          type: 'SPOOKFOX_RELAY_TO_EMACS',
+          action: {
+            name: 'CAPTURE_THE_FLAG',
+            payload: { url: window.location.href }
+          }
+        })
+      #+end_src
+
+      =action= part here decides which request handler will execute. Elisp
+      version of =payload= will be provided to your request-handler as an
+      argument.
+
 ** Apps
 :PROPERTIES:
 :ID:       7c11ffa6-701d-48a0-ac3c-b839fd210951
