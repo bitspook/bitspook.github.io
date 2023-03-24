@@ -40,14 +40,14 @@
   (clown-publishers:publish-html-file
    "journeys"
    (clown-theme:with-html-string
-     (clown-theme:render
-      journeys-listing-page
-      :journeys nil
-      :title "My Journeys")))
+       (clown-theme:render
+        journeys-listing-page
+        :journeys nil
+        :title "My Journeys")))
 
   (clown-publishers:publish-html-file
    "journeys/infosec"
    (clown-theme:with-html-string
-     (clown-theme:render
-      journey-page
-      :journey infosec-journey))))
+       (clown-theme:render
+        journey-page
+        :journey infosec-journey))))

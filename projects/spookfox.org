@@ -30,7 +30,9 @@
 #+end_src
 
 #+begin_src elisp :exports results :results none
-  (defun clown--command-docs (file)
+  (defun spook--command-docs (file)
+    "Return documentaiton for commands exported in FILE.
+  A command is an `interactive' emacs-lisp function."
     (let  ((symbols (let ((file (expand-file-name file)))
                       (load-file file)
                       (alist-get file load-history nil nil 'equal)))
@@ -48,6 +50,18 @@
                     "\n"))
            docs)))
       (string-join docs "\n")))
+
+  (defmacro spook--func-doc (function-name)
+    "Return documentation for FUNCTION-NAME.
+    Returned string contain the function's name."
+    `(format "- =%s=\n\n%s"
+             (quote ,function-name)
+             (string-replace
+              "~/Documents/work/" ""
+              (string-join
+               (mapcar (lambda (s) (format "\t%s" s))
+                       (string-lines (describe-function (function ,function-name))))
+               "\n"))))
 #+end_src
 
 Spookfox is a Firefox extension and an Emacs package, which allow Emacs and
@@ -203,16 +217,68 @@ Basic access to browser's tabs.
    config]] to see how I use it to more easily capture notes for articles I read
    in the browser.
 
-2. Open a browser tab, or start a new search in browser
+2. Commands for manipulating tabs
 
-   Command: =open-new-tab=
+   #+name: Exported Commands
+   #+begin_src elisp :exports results :results raw
+     (spook--command-docs "~/Documents/work/spookfox/lisp/apps/spookfox-tabs.el")
+   #+end_src
 
-   Open a new tab in browser, or search for something using browser's default
-   search engine (opens a new tab).
+*** js-injection
 
-   PS you can use =browse-url= to achieve the same.
+Inject Javascript into the browser. From a web extension's pov, there are three
+places to inject JS in:
+
+1. The [[https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts][background script]]; which can be considered *the addon* itself.
+2. The [[https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts][content script]]; which runs inside a web-page e.g on youtube.com
+3. The [[https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups][popup]]; which runs in addon's popup-ui page. This is the popup you see
+   when you click the addon's icon in top browser bar.
+
+This app provide following functions:
+
+#+begin_src elisp :exports results :results raw
+  (spook--func-doc spookfox-eval-js-in-active-tab)
+#+end_src
+
+  Inject Javascript into any website open in your browser's active tab, and get
+  the results back. I use it to help me take notes for Youtube videos with
+  automatically added timestamp links.
+
+#+begin_src elisp :exports results :results raw
+  (spook--func-doc spookfox-js-injection-eval)
+#+end_src
+
+*** jscl
+
+Spookfox ships [[https://github.com/jscl-project/jscl][JSCL]] compiler, which can be used to run a subset of common-lisp
+in the browser. For example:
+
+#+begin_src emacs-lisp :exports code
+  (sfcl-eval
+     `(progn
+        (js:browser:tabs:update ,tab-id ,(sfcl-js-obj '(("active" . t))))
+        (js:browser:windows:update ,window-id ,(sfcl-js-obj '(("focused" . t))))
+        t))
+#+end_src
+
+[[https://github.com/bitspook/spookfox/blob/fde29fcb95e1f7cfba52bcfa31417d3b2f6dbfb0/lisp/apps/spookfox-tabs.el#L66-L70][spookfox-tabs.el use jscl]] for [[https://github.com/bitspook/spookfox/blob/fde29fcb95e1f7cfba52bcfa31417d3b2f6dbfb0/lisp/apps/spookfox-tabs.el#L49][spookfox-switch-tab]]
+
+Following functions are available:
+
+#+begin_src elisp :exports results :results raw
+  (spook--func-doc spookfox-jscl-eval)
+#+end_src
+
+To make it a little easier to work with JS from CL, following utility functions
+can be used:
+
+#+begin_src elisp :exports results :results raw
+  (spook--func-doc spookfox-jscl-js-obj)
+#+end_src
 
 *** spookfox-org-tabs
+
+/Note:/ I am not using this anymore. It is the most buggy of 'em all.
 
 Manage browser's tabs in an org file (separate file or as a subtree in an
 existing one).
@@ -232,7 +298,7 @@ existing one).
 
    #+name: Exported Commands
    #+begin_src elisp :exports results :results raw
-     (clown--command-docs "~/Documents/work/spookfox/lisp/apps/spookfox-org-tabs.el")
+     (spook--command-docs "~/Documents/work/spookfox/lisp/apps/spookfox-org-tabs.el")
    #+end_src
 
 **** Configuration
@@ -249,22 +315,6 @@ existing one).
              ,(expand-file-name "spookfox.org" org-directory)
              "Tabs"))
    #+end_src
-
-*** js-injection
-
-Inject Javascript into any website open in your browser, and get the results
-back. I use it to help me take notes for Youtube videos with automatically added
-timestamp links.
-
-- Provided functions
-
-  #+begin_src elisp :exports results :results raw
-    (format "- =spookfox-eval-js-in-active-tab=\n\n%s"
-            (string-join
-             (mapcar (lambda (s) (format "\t%s" s))
-                     (string-lines (describe-function #'spookfox-eval-js-in-active-tab)))
-             "\n"))
-  #+end_src
 
 ** Contribute
 :PROPERTIES:
