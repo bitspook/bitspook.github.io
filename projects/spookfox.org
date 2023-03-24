@@ -157,7 +157,7 @@ between Emacs and Firefox. More functionality on top of it is provided with
      (spookfox-init)
    #+end_src
 
-4. Register custom request handlers
+4. *Register custom request handlers*
 
    It is possible to send custom events from browser (e.g using a JavaScript
    bookmarklet), and run elisp code to handle them. For this you need to do 2

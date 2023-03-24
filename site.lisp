@@ -42,29 +42,27 @@ watching and discussing computers, security and politics.")
         (:a :href ,resume :target "_blank" "resume")
         " as well.")))
 
-(progn
-  (asdf:load-system :cl-ownpress)
-  (let* ((*debug-transpiles* nil)
-         (dest "./docs/")
-         (resume "https://docs.google.com/document/d/1HFOxl97RGtuhAX95AhGWwa808SO9qSCYLjP1Pm39la0/")
-         (*conf* (conf-merge
-                  `(:db-name "./clownpress.db"
-                    :site-url "https://bitspook.in/"
-                    :author "Charanjit Singh"
-                    :avatar "/images/spooky-avatar.png"
-                    :mastodon "https://infosec.exchange/@bitspook"
-                    :linkedin "https://linkedin.com/in/bitspook"
-                    :github "https://github.com/bitspook"
-                    :handle "bitspook"
-                    :resume ,resume
-                    :about-me-short ,(about-me-short resume)
-                    :about-me ,(about-me-short resume)
-                    :dest ,dest
-                    :static-dirs ("./static/")
-                    :mixpanel-token "0f28a64d9f8bce370006d36e1e2e3f61"
-                    :rss-max-posts 10
-                    :control-tags ("blog-post" "published")
-                    :exclude-tags ("draft")
-                    :published-categories '("blog" "poems")
-                    :theme ,default-theme))))
-    (publish-blog "bitspook's online home")))
+(let* ((*debug-transpiles* nil)
+       (dest "./docs/")
+       (resume "https://docs.google.com/document/d/1HFOxl97RGtuhAX95AhGWwa808SO9qSCYLjP1Pm39la0/")
+       (*conf* (conf-merge
+                `(:db-name "./clownpress.db"
+                  :site-url "https://bitspook.in/"
+                  :author "Charanjit Singh"
+                  :avatar "/images/spooky-avatar.png"
+                  :mastodon "https://infosec.exchange/@bitspook"
+                  :linkedin "https://linkedin.com/in/bitspook"
+                  :github "https://github.com/bitspook"
+                  :handle "bitspook"
+                  :resume ,resume
+                  :about-me-short ,(about-me-short resume)
+                  :about-me ,(about-me-short resume)
+                  :dest ,dest
+                  :static-dirs ("./static/")
+                  :mixpanel-token "0f28a64d9f8bce370006d36e1e2e3f61"
+                  :rss-max-posts 10
+                  :control-tags ("blog-post" "published")
+                  :exclude-tags ("draft")
+                  :published-categories '("blog" "poems")
+                  :theme ,default-theme))))
+  (publish-blog "bitspook's online home"))
