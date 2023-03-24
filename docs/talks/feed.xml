@@ -98,7 +98,7 @@ exercises, rest were left for the attendees as homework. Here&apos;s the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org6dadf30&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgbb500fb&quot;&gt;
 version: &apos;3&apos;
 services:
   webgoat:
@@ -640,7 +640,7 @@ seeing community&apos;s interest in these technologies.
             <link>https://bitspook.in/talks/modern-day-js-apps-2017/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/modern-js-apps-2017/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;orge1872d8&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;orgc250be9&quot;&gt;
 &lt;p&gt;
 &amp;lt;/iframe&amp;gt;
 &lt;/p&gt;
@@ -691,7 +691,7 @@ There is a video as well!
             <link>https://bitspook.in/talks/jschannel-rxjs-workshop-now-2015/</link>
             <description>&lt;iframe src=&quot;//slides.com/bitspook/jschannel-rxjs-workshop-nov-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;orgc83824b&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;orgb6dab73&quot;&gt;
 &lt;p&gt;
 &amp;lt;/iframe&amp;gt;
 &lt;/p&gt;

@@ -14,9 +14,9 @@
             <title>Reading, and not forgetting</title>
             <link>https://bitspook.in/blog/reading-and-not-forgetting/</link>
             <description>
-&lt;div id=&quot;outline-container-org0c59ff6&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0c59ff6&quot;&gt;Problem&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0c59ff6&quot;&gt;
+&lt;div id=&quot;outline-container-org995d458&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org995d458&quot;&gt;Problem&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org995d458&quot;&gt;
 &lt;p&gt;
 I forget everything I read, as soon as I am done reading (a sentence). Over
 time, reading turned from leisure to labor. Pressure of having to remember
@@ -26,9 +26,9 @@ distracted made it even worse.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org4eabe67&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4eabe67&quot;&gt;Solution&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4eabe67&quot;&gt;
+&lt;div id=&quot;outline-container-org13195eb&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org13195eb&quot;&gt;Solution&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org13195eb&quot;&gt;
 &lt;p&gt;
 Take notes to outsource remembering, and make reading more engaging.
 &lt;/p&gt;
@@ -40,9 +40,9 @@ taking notes keep my attention tethered.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org1b2835a&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org1b2835a&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1b2835a&quot;&gt;
+&lt;div id=&quot;outline-container-orgbc26e54&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgbc26e54&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgbc26e54&quot;&gt;
 &lt;p&gt;
 Note taking process need to be designed to reduce the burden that note-taking
 itself can become. Key here is not taking notes, it is crafting a smooth
@@ -50,9 +50,9 @@ note-taking workflow.
 &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org180ceae&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org180ceae&quot;&gt;Components&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org180ceae&quot;&gt;
+&lt;div id=&quot;outline-container-orgf054585&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgf054585&quot;&gt;Components&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgf054585&quot;&gt;
 &lt;p&gt;
 My reading workflow involves 3 major components
 &lt;/p&gt;
@@ -64,9 +64,9 @@ My reading workflow involves 3 major components
 &lt;/ol&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org06b4d42&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org06b4d42&quot;&gt;Emacs&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org06b4d42&quot;&gt;
+&lt;div id=&quot;outline-container-org5ebcb20&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org5ebcb20&quot;&gt;Emacs&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org5ebcb20&quot;&gt;
 &lt;p&gt;
 Emacs is the center stage on which everything else plays. I chose Emacs, because
 &lt;/p&gt;
@@ -81,9 +81,9 @@ decade now.&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org6da1b27&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org6da1b27&quot;&gt;Denote&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org6da1b27&quot;&gt;
+&lt;div id=&quot;outline-container-orgfb82235&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgfb82235&quot;&gt;Denote&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgfb82235&quot;&gt;
 &lt;p&gt;
 &lt;a href=&quot;https://github.com/protesilaos/denote&quot;&gt;Denote&lt;/a&gt; is my present choice of note-taking Emacs package. It provide structure
 to my notes, and thin tooling to navigate this structure. Notes are kept in
@@ -93,9 +93,9 @@ keywords and tags even from outside Emacs.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org50bcf5f&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org50bcf5f&quot;&gt;Spookfox&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org50bcf5f&quot;&gt;
+&lt;div id=&quot;outline-container-org517ca46&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org517ca46&quot;&gt;Spookfox&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org517ca46&quot;&gt;
 &lt;p&gt;
 &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;Spookfox&lt;/a&gt; is my answer to &quot;but what about when you need to leave Emacs?&quot;.
 &lt;/p&gt;
@@ -115,9 +115,9 @@ getting information about current browser tab, video being played etc.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org54bf55f&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org54bf55f&quot;&gt;The workflow&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org54bf55f&quot;&gt;
+&lt;div id=&quot;outline-container-org47fae26&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org47fae26&quot;&gt;The workflow&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org47fae26&quot;&gt;
 &lt;p&gt;
 It boils down to a single key-combo: &lt;code&gt;C-c n r&lt;/code&gt; open a &quot;reading note&quot; in my
 scratchpad. &lt;code&gt;C-c n r&lt;/code&gt; opens the same note regardless of when I open it; i.e it
@@ -187,9 +187,9 @@ come super handy recently in my German language study.
             <title>I am moving to Berlin</title>
             <link>https://bitspook.in/blog/i-am-moving-to-berlin/</link>
             <description>
-&lt;div id=&quot;outline-container-org0a739fe&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0a739fe&quot;&gt;Why&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0a739fe&quot;&gt;
+&lt;div id=&quot;outline-container-org2453a9b&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2453a9b&quot;&gt;Why&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2453a9b&quot;&gt;
 &lt;p&gt;
 There are several reasons I stated in my &lt;a href=&quot;https://bitspook.in/blog/after-6-months-of-voluntary-unemployment/&quot;&gt;previous blog post&lt;/a&gt;. Other than those,
 here are a few more:
@@ -243,9 +243,9 @@ following them.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orge38a1b3&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge38a1b3&quot;&gt;How I am feeling&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge38a1b3&quot;&gt;
+&lt;div id=&quot;outline-container-org02b1baf&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org02b1baf&quot;&gt;How I am feeling&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org02b1baf&quot;&gt;
 &lt;p&gt;
 I am scared shitless. I am full of stress and anxiety, I can barely sleep and
 can&apos;t focus on anything. I have stopped drinking coffee because I no longer need
@@ -268,9 +268,9 @@ almost all my remaining funds to book housing, tickets and stuff.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgfb3f383&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgfb3f383&quot;&gt;What lies ahead&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfb3f383&quot;&gt;
+&lt;div id=&quot;outline-container-orga3e0fff&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga3e0fff&quot;&gt;What lies ahead&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga3e0fff&quot;&gt;
 &lt;p&gt;
 I intend to come back to India after at most 2 years and at least 1 year.
 &lt;/p&gt;
@@ -412,9 +412,9 @@ summary of how the last six months shaped my thoughts, and an abstract plan of
 what I intend to do next.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-orgaaffce2&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgaaffce2&quot;&gt;Mental health&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgaaffce2&quot;&gt;
+&lt;div id=&quot;outline-container-org420112d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org420112d&quot;&gt;Mental health&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org420112d&quot;&gt;
 &lt;p&gt;
 I needed this break a lot more than I thought I did. Being perpetually restless
 had been my state of being for too long. It felt good, to breath out.
@@ -443,9 +443,9 @@ a definite answer to consider the matter resolved. More on this later (below).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgb5756fc&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb5756fc&quot;&gt;Social work&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb5756fc&quot;&gt;
+&lt;div id=&quot;outline-container-orgcdaa8ba&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgcdaa8ba&quot;&gt;Social work&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgcdaa8ba&quot;&gt;
 &lt;p&gt;
 When busy with material responsibilities, I used to fantasize that if I had more
 free time I could do so much more for people around me. When I had it, I tried
@@ -470,9 +470,9 @@ able to put in as much energy as it demanded.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org400a956&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org400a956&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org400a956&quot;&gt;
+&lt;div id=&quot;outline-container-org4d9a812&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4d9a812&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4d9a812&quot;&gt;
 &lt;p&gt;
 I was running full speed building &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;foolish&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;things&lt;/a&gt;. Then lisp came calling.
 &lt;/p&gt;
@@ -527,9 +527,9 @@ probably would not have done otherwise. I traveled.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org4b515ea&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org4b515ea&quot;&gt;Travel&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4b515ea&quot;&gt;
+&lt;div id=&quot;outline-container-org845b5fd&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org845b5fd&quot;&gt;Travel&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org845b5fd&quot;&gt;
 &lt;p&gt;
 I am not much of a site-seeing kind of guy. I find traveling exhausting,
 regardless of how beautiful the views or how fun the activities. Being a tourist
@@ -568,9 +568,9 @@ putting myself in a place 🤯
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org458387f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org458387f&quot;&gt;What comes next?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org458387f&quot;&gt;
+&lt;div id=&quot;outline-container-org0e70fc3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0e70fc3&quot;&gt;What comes next?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0e70fc3&quot;&gt;
 &lt;p&gt;
 I can perhaps spend a few more months before I run out of savings, but the
 dimming safety net has already started making me anxious. I miss the tribe-like
@@ -623,9 +623,9 @@ Now that that is decided, what&apos;s left to figure out is how to go about it.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgee5fc11&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgee5fc11&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgee5fc11&quot;&gt;
+&lt;div id=&quot;outline-container-org36f7892&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org36f7892&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org36f7892&quot;&gt;
 &lt;p&gt;
 After 6 months of voluntary unemployment, I am the same man I was before it.
 Things I experienced and burdens I unburdened could be achieved by other means
@@ -652,9 +652,9 @@ As for the journey to be where I already was, I&apos;ll do it again if I can.
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org73719e2&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org73719e2&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org73719e2&quot;&gt;
+&lt;div id=&quot;outline-container-org0ab6936&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0ab6936&quot;&gt;Requirement&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0ab6936&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
 browser&lt;/li&gt;
@@ -665,9 +665,9 @@ of hyperlinks&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org6ff7963&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org6ff7963&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org6ff7963&quot;&gt;
+&lt;div id=&quot;outline-container-org0afd1f0&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org0afd1f0&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0afd1f0&quot;&gt;
 &lt;p&gt;
 Org has a concept of &apos;link types&apos;. We can add a new type of link and have it
 behave the way we want.
@@ -754,9 +754,9 @@ Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extend
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org508e06b&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org508e06b&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org508e06b&quot;&gt;
+&lt;div id=&quot;outline-container-org230b86e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org230b86e&quot;&gt;Result&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org230b86e&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
 in mpv&lt;/li&gt;
@@ -768,9 +768,9 @@ youtube videos&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgb5b17f6&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb5b17f6&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb5b17f6&quot;&gt;
+&lt;div id=&quot;outline-container-orgeacc189&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgeacc189&quot;&gt;Bonus gains 💪&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgeacc189&quot;&gt;
 &lt;p&gt;
 Recently I&apos;ve been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
@@ -809,9 +809,9 @@ extending-the-blogging-setup as well.
             <link>https://bitspook.in/blog/how-i-manage-my-passwords/</link>
             <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;div id=&quot;outline-container-orgc1d977b&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgc1d977b&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc1d977b&quot;&gt;
+&lt;div id=&quot;outline-container-orgab3d5e4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgab3d5e4&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgab3d5e4&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;b&gt;No third-parties&lt;/b&gt;
@@ -843,9 +843,9 @@ should play nice with presence/absence of other tools.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgf432e7b&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf432e7b&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf432e7b&quot;&gt;
+&lt;div id=&quot;outline-container-orgf86c4e6&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgf86c4e6&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf86c4e6&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
@@ -926,13 +926,13 @@ my mobile devices.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org12671e8&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org12671e8&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org12671e8&quot;&gt;
+&lt;div id=&quot;outline-container-org7019302&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7019302&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7019302&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgb56e9ba&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgb56e9ba&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgb56e9ba&quot;&gt;
+&lt;div id=&quot;outline-container-orgd03f5ba&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgd03f5ba&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgd03f5ba&quot;&gt;
 &lt;p&gt;
 For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
@@ -954,9 +954,9 @@ password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-orgf7810a9&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgf7810a9&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgf7810a9&quot;&gt;
+&lt;div id=&quot;outline-container-org7164bee&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org7164bee&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org7164bee&quot;&gt;
 &lt;p&gt;
 Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
 much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
@@ -989,9 +989,9 @@ password (on the same form).
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org9b044bc&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org9b044bc&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org9b044bc&quot;&gt;
+&lt;div id=&quot;outline-container-org5f0d480&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org5f0d480&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org5f0d480&quot;&gt;
 &lt;p&gt;
 I don&apos;t &quot;install&quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
@@ -1388,9 +1388,9 @@ SQL block produces output shown below that.
 &lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org0b6f9e8&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0b6f9e8&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0b6f9e8&quot;&gt;
+&lt;div id=&quot;outline-container-org2717c0f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2717c0f&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2717c0f&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -1449,9 +1449,9 @@ that didn&apos;t work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org1508ecd&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org1508ecd&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1508ecd&quot;&gt;
+&lt;div id=&quot;outline-container-org7403b43&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7403b43&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7403b43&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -1512,9 +1512,9 @@ i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings
 consistent UI.
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org2292995&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2292995&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2292995&quot;&gt;
+&lt;div id=&quot;outline-container-org2ba6367&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2ba6367&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2ba6367&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
 taking notes.
@@ -1573,9 +1573,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/div&gt;
 
 
-&lt;div id=&quot;outline-container-org28b223d&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org28b223d&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org28b223d&quot;&gt;
+&lt;div id=&quot;outline-container-org166d541&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org166d541&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org166d541&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -1597,9 +1597,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org58dee24&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org58dee24&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org58dee24&quot;&gt;
+&lt;div id=&quot;outline-container-org11993b8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org11993b8&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org11993b8&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
@@ -1758,7 +1758,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org22114f1&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orga5a224d&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -1776,7 +1776,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer&apos;s machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org1ca6211&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org2cfe7c3&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -1815,7 +1815,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgdebcf04&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org484a2fe&quot;&gt;
 buildDrafts = true
 title = &quot;My Project&quot;
 
@@ -2346,7 +2346,7 @@ copying Jira task IDs around like an imbecile.
 This is how my org-capture-templates variable looks like right now:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgf815885&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org1bfe45c&quot;&gt;
 (setq
    org-capture-templates
    &apos;((&quot;d&quot; &quot;Diary Entry&quot; plain (file+datetree org-agenda-diary-file) &quot;\n&amp;lt;%&amp;lt;%I:%M %p&amp;gt;&amp;gt;\n%?\n&quot;)
@@ -4890,9 +4890,9 @@ my crest now is not that chaotic.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div id=&quot;outline-container-org5a866ba&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org5a866ba&quot;&gt;Inspiration from the&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org5a866ba&quot;&gt;
+&lt;div id=&quot;outline-container-org95c00f9&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org95c00f9&quot;&gt;Inspiration from the&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org95c00f9&quot;&gt;
 &lt;p&gt;
 `&lt;a href=&quot;https://blog.42floors.com/100-day-goals/&quot;&gt;100 day goals&lt;/a&gt;&apos;
 &lt;/p&gt;

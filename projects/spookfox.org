@@ -213,13 +213,12 @@ Basic access to browser's tabs.
 
 1. Access browser tabs in Elisp
 
-   You can use this to enhance your Emacs usage. For example, check [[https://github.com/bitspook/spookmax.d][my Emacs
-   config]] to see how I use it to more easily capture notes for articles I read
-   in the browser.
+   You can use this to enhance your Emacs usage. For example, check [[https://github.com/bitspook/spookmax.d/blob/aae6c47e5def0f2bc113f22931ec27c62b5365b6/readme.org?plain=1#L1647-L1664][my Emacs config]] to
+   see how I use it to more easily capture notes for articles I read in the browser.
 
 2. Commands for manipulating tabs
 
-   #+name: Exported Commands
+   #+name: Commands exported by spookfox-tabs
    #+begin_src elisp :exports results :results raw
      (spook--command-docs "~/Documents/work/spookfox/lisp/apps/spookfox-tabs.el")
    #+end_src
@@ -278,7 +277,11 @@ can be used:
 
 *** spookfox-org-tabs
 
-/Note:/ I am not using this anymore. It is the most buggy of 'em all.
+#+begin_quote
+⚠️ I am not using this app myself anymore. It is the most buggy of 'em all. I am
+keeping it around because list of my open tabs is increasing again, and I might
+once again need this.
+#+end_quote
 
 Manage browser's tabs in an org file (separate file or as a subtree in an
 existing one).
