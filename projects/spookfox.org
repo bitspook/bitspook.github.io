@@ -1,5 +1,5 @@
 #+title: Spookfox
-#+tagline: Tinkerer's bridge between Emacs and Firefox
+#+tagline: Tinkerer's bridge between Emacs and Web Browsers
 #+id: spookfox
 #+source_code: https://github.com/bitspook/spookfox
 #+issue_tracker: https://github.com/bitspook/spookfox/issues
@@ -64,12 +64,17 @@
                "\n"))))
 #+end_src
 
-Spookfox is a Firefox extension and an Emacs package, which allow Emacs and
-Firefox to communicate with each other. Its primary goal is to offer an Emacs
+Spookfox is a Browser extension and an Emacs package, which allow Emacs and
+Browser to communicate with each other. Its primary goal is to offer an Emacs
 tinkerer similar (to Emacs) framework to tinker their browser.
 
 I use Spookfox as my daily driver to enable a number of [[https://github.com/bitspook/spookmax.d][workflow enhancements]],
 e.g capturing articles I read and Youtube videos I watch.
+
+**Supported browsers**
+1. Firefox
+2. Chromium (thanks to [[https://github.com/kajalelohai][@kajalelohai]]) (but can you run it? Check [[#install][installation]]
+   below)
 
 ** Installation
 :PROPERTIES:
@@ -81,12 +86,20 @@ There are 2 parts to install spookfox.
 
 1. Install the browser addon
 
-   Download the addon (=.xpi= file) from [[https://github.com/bitspook/spookfox/releases/][releases page]]. Firefox will prompt you
-   to install as soon as you download it.
+   Download the addon (=.xpi= file for Firefox) from [[https://github.com/bitspook/spookfox/releases/][releases page]]. Browser will
+   prompt you to install as soon as you download it.
 
-   *What is it not available on Firefox addons page?*
+   *What is it not available on Browser addons page?*
 
    Because it is not [[https://addons.mozilla.org/en-US/firefox/addon/spookfox/][approved on Firefox addons]] yet.
+
+   #+begin_quote
+   ⚠️ Caution: Although Chromium is supported and a .crx file is generated in the
+   releases, Chrome won't let you install and use it. Stop using Chrome. PS
+   You'll have to drag-n-drop the downloaded crx file to Chrome to even install
+   it, because Google. You will probably need to clone this repo, run =yarn
+   build=, and [[https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked][load unpacked extension]] to run Spookfox in Chrome.
+   #+end_quote
 
 2. Install Emacs package
 
@@ -127,7 +140,7 @@ There are 2 parts to install spookfox.
 :END:
 
 Spookfox itself is a thin layer which [[saunf-claim:spookfox-uses-websockets][provide websockets based communication]]
-between Emacs and Firefox. More functionality on top of it is provided with
+between Emacs and Browser. More functionality on top of it is provided with
 [[id:7c11ffa6-701d-48a0-ac3c-b839fd210951][apps]]. Different apps need to be configured as documented in [[id:7c11ffa6-701d-48a0-ac3c-b839fd210951][apps]] section below.
 
 1. *Load the apps you want to use*
@@ -137,7 +150,7 @@ between Emacs and Firefox. More functionality on top of it is provided with
    example, to load "[[saunf-claim:spookfox-has-linked-org-tabs-app][spookfox-org-tabs]]" app, you'd write this Elisp:
 
    #+begin_src elisp :eval never-export
-     (require 'spookfox-org-tabs)
+     (require 'spookfox-tabs)
    #+end_src
 
 2. *Tell spookfox which apps you want to enable*
@@ -206,10 +219,16 @@ isolated and opt-in. Following apps come bundled with this package.
 #+TOC: headlines 2 local
 
 *** spookfox-tabs
+:PROPERTIES:
+:CUSTOM_ID: spookfox-tabs-app
+:END:
 
 Basic access to browser's tabs.
 
 **** Features
+:PROPERTIES:
+:CUSTOM_ID: spookfox-tabs-features
+:END:
 
 1. Access browser tabs in Elisp
 
@@ -224,6 +243,9 @@ Basic access to browser's tabs.
    #+end_src
 
 *** js-injection
+:PROPERTIES:
+:CUSTOM_ID: js-injection-app
+:END:
 
 Inject Javascript into the browser. From a web extension's pov, there are three
 places to inject JS in:
@@ -248,6 +270,9 @@ This app provide following functions:
 #+end_src
 
 *** jscl
+:PROPERTIES:
+:CUSTOM_ID: jscl-app
+:END:
 
 Spookfox ships [[https://github.com/jscl-project/jscl][JSCL]] compiler, which can be used to run a subset of common-lisp
 in the browser. For example:
@@ -276,6 +301,9 @@ can be used:
 #+end_src
 
 *** spookfox-org-tabs
+:PROPERTIES:
+:CUSTOM_ID: spookfox-org-tabs-app
+:END:
 
 #+begin_quote
 ⚠️ I am not using this app myself anymore. It is the most buggy of 'em all. I am
@@ -287,6 +315,9 @@ Manage browser's tabs in an org file (separate file or as a subtree in an
 existing one).
 
 **** Features
+:PROPERTIES:
+:CUSTOM_ID: spookfox-org-tabs-features
+:END:
 
 1. Organize tabs freely in org file
 
@@ -294,7 +325,7 @@ existing one).
    desire. You can *group tabs* by assigning org-mode tags, to manipulate tabs
    (open, close) in bulk.
 
-2. *Chain tabs*, so any changes to the tab in Firefox (e.g url change) are
+2. *Chain tabs*, so any changes to the tab in Browser (e.g url change) are
    synced with the org-file
 
 3. Commands for manipulating tabs
@@ -305,6 +336,9 @@ existing one).
    #+end_src
 
 **** Configuration
+:PROPERTIES:
+:CUSTOM_ID: spookfox-org-tabs-config
+:END:
 
 1. =spookfox-saved-tabs-target=
 
