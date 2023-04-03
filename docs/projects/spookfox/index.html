@@ -9,13 +9,13 @@ tinkerer similar (to Emacs) framework to tinker their browser.
 I use Spookfox as my daily driver to enable a number of <a href="https://github.com/bitspook/spookmax.d">workflow enhancements</a>,
 e.g capturing articles I read and Youtube videos I watch.
 </p>
-<ul class=elsewhere-buttons><li><a class="btn btn-github" href=https://github.com/bitspook/spookfox><i class=icon></i><span>Source Code</span></a></li><li><a class="btn btn-issues" href=https://github.com/bitspook/spookfox/issues><i class=icon></i><span>Issue tracker</span></a></li></ul><div class=oracle-container style=display:none;><span class=placeholder>I am</span><select id=roles onchange=handleSelectRole(event.target.value);><option value="an explorer">an explorer</option><option value="a developer">a developer</option></select><span class=placeholder>who wants to</span><select class=intents data-role="an explorer" onchange=handleSelectIntent(event.target.value);><option value="see it all">see it all</option><option value="know more about Spookfox">know more about Spookfox</option></select><select class=intents data-role="a developer" onchange=handleSelectIntent(event.target.value);><option value="install Spookfox">install Spookfox</option><option value="use Spookfox">use Spookfox</option><option value="hack on Spookfox">hack on Spookfox</option></select><script>function mapcar(fun) { var arrs = Array.prototype.slice.call(arguments, 1); var resultArray = new Array(); if (1 === arrs.length) { for (var element = null, _js_arrvar18 = arrs[0], _js_idx17 = 0; _js_idx17 < _js_arrvar18.length; _js_idx17 += 1) { element = _js_arrvar18[_js_idx17]; resultArray.push(fun(element)); }; } else { for (var i = 0; i < arrs[0].length; i += 1) { var argsArray = mapcar(function (a) { return a[i]; }, arrs); resultArray.push(fun.apply(fun, argsArray)); }; }; __PS_MV_REG = []; return resultArray; };
-function mapInto(fn, arr) { var idx = 0; for (var el = null, _js_idx19 = 0; _js_idx19 < arr.length; _js_idx19 += 1) { el = arr[_js_idx19]; arr[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return arr; };
-function map(fn, arr) { var idx = 0; var result = []; for (var el = null, _js_idx20 = 0; _js_idx20 < arr.length; _js_idx20 += 1) { el = arr[_js_idx20]; result[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return result; };
-function member(item, arr) { for (var el = null, _js_idx21 = 0; _js_idx21 < arr.length; _js_idx21 += 1) { el = arr[_js_idx21]; if (el === item) { return true; }; }; return false; };
-function setDifference(arr, arrToSub) { var idx = 0; var result = []; for (var el = null, _js_idx22 = 0; _js_idx22 < arr.length; _js_idx22 += 1) { el = arr[_js_idx22]; if (!member(el, arrToSub)) { result[idx] = el; idx += 1; }; }; __PS_MV_REG = []; return result; };
+<ul class=elsewhere-buttons><li><a class="btn btn-github" href=https://github.com/bitspook/spookfox><i class=icon></i><span>Source Code</span></a></li><li><a class="btn btn-issues" href=https://github.com/bitspook/spookfox/issues><i class=icon></i><span>Issue tracker</span></a></li></ul><div class=oracle-container style=display:none;><span class=placeholder>I am</span><select id=roles onchange=handleSelectRole(event.target.value);><option value="an explorer">an explorer</option><option value="a developer">a developer</option></select><span class=placeholder>who wants to</span><select class=intents data-role="an explorer" onchange=handleSelectIntent(event.target.value);><option value="see it all">see it all</option><option value="know more about Spookfox">know more about Spookfox</option></select><select class=intents data-role="a developer" onchange=handleSelectIntent(event.target.value);><option value="install Spookfox">install Spookfox</option><option value="use Spookfox">use Spookfox</option><option value="hack on Spookfox">hack on Spookfox</option></select><script>function mapcar(fun) { var arrs = Array.prototype.slice.call(arguments, 1); var resultArray = new Array(); if (1 === arrs.length) { for (var element = null, _js_arrvar112 = arrs[0], _js_idx111 = 0; _js_idx111 < _js_arrvar112.length; _js_idx111 += 1) { element = _js_arrvar112[_js_idx111]; resultArray.push(fun(element)); }; } else { for (var i = 0; i < arrs[0].length; i += 1) { var argsArray = mapcar(function (a) { return a[i]; }, arrs); resultArray.push(fun.apply(fun, argsArray)); }; }; __PS_MV_REG = []; return resultArray; };
+function mapInto(fn, arr) { var idx = 0; for (var el = null, _js_idx113 = 0; _js_idx113 < arr.length; _js_idx113 += 1) { el = arr[_js_idx113]; arr[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return arr; };
+function map(fn, arr) { var idx = 0; var result = []; for (var el = null, _js_idx114 = 0; _js_idx114 < arr.length; _js_idx114 += 1) { el = arr[_js_idx114]; result[idx] = fn(el); idx += 1; }; __PS_MV_REG = []; return result; };
+function member(item, arr) { for (var el = null, _js_idx115 = 0; _js_idx115 < arr.length; _js_idx115 += 1) { el = arr[_js_idx115]; if (el === item) { return true; }; }; return false; };
+function setDifference(arr, arrToSub) { var idx = 0; var result = []; for (var el = null, _js_idx116 = 0; _js_idx116 < arr.length; _js_idx116 += 1) { el = arr[_js_idx116]; if (!member(el, arrToSub)) { result[idx] = el; idx += 1; }; }; __PS_MV_REG = []; return result; };
 function reduce(func, list, init) { var acc = null; for (var i = arguments.length === 3 ? -1 : 0, acc = arguments.length === 3 ? init : list[0]; i < list.length - 1; i += 1, acc = func(acc, list[i])) { }; __PS_MV_REG = []; return acc; };
-function nconc(arr) { var arrs = Array.prototype.slice.call(arguments, 1); if (arr && arr.length > 0) { var _js24 = arrs.length; for (var _js23 = 0; _js23 < _js24; _js23 += 1) { var other = arrs[_js23]; if (other && other.length > 0) { arr['splice']['apply'](arr, [arr.length, other.length].concat(other)); }; }; }; __PS_MV_REG = []; return arr; };var SPEC = [['an explorer', ['see it all', ['show', 'all']], ['know more about Spookfox', ['show', ['#explore']]]], ['a developer', ['install Spookfox', ['show', ['#outline-container-install']]], ['use Spookfox', ['show', ['#outline-container-use', '#outline-container-apps']]], ['hack on Spookfox', ['show', ['#outline-container-contribute']]]]];function isArray(obj) {
+function nconc(arr) { var arrs = Array.prototype.slice.call(arguments, 1); if (arr && arr.length > 0) { var _js118 = arrs.length; for (var _js117 = 0; _js117 < _js118; _js117 += 1) { var other = arrs[_js117]; if (other && other.length > 0) { arr['splice']['apply'](arr, [arr.length, other.length].concat(other)); }; }; }; __PS_MV_REG = []; return arr; };var SPEC = [['an explorer', ['see it all', ['show', 'all']], ['know more about Spookfox', ['show', ['#explore']]]], ['a developer', ['install Spookfox', ['show', ['#outline-container-install']]], ['use Spookfox', ['show', ['#outline-container-use', '#outline-container-apps']]], ['hack on Spookfox', ['show', ['#outline-container-contribute']]]]];function isArray(obj) {
     __PS_MV_REG = [];
     return Array.isArray(obj);
 };
@@ -53,20 +53,20 @@ function arrayFrom(obj) {
 function roles() {
     __PS_MV_REG = [];
     return (function () {
-        var _js13 = SPEC.length;
-        var collect14 = [];
-        for (var _js12 = 0; _js12 < _js13; _js12 += 1) {
-            var item = SPEC[_js12];
-            collect14.push(first(item));
+        var _js101 = SPEC.length;
+        var collect102 = [];
+        for (var _js100 = 0; _js100 < _js101; _js100 += 1) {
+            var item = SPEC[_js100];
+            collect102.push(first(item));
         };
         __PS_MV_REG = [];
-        return collect14;
+        return collect102;
     })();
 };
 function roleIntents(role) {
-    var _js16 = SPEC.length;
-    for (var _js15 = 0; _js15 < _js16; _js15 += 1) {
-        var item = SPEC[_js15];
+    var _js104 = SPEC.length;
+    for (var _js103 = 0; _js103 < _js104; _js103 += 1) {
+        var item = SPEC[_js103];
         if (first(item) == role) {
             __PS_MV_REG = [];
             return cdr(item);
@@ -79,35 +79,35 @@ function activeRole() {
 };
 function activateRole(role) {
     var els = Array.from(document.querySelectorAll('.intents'));
-    for (var el = null, _js_idx17 = 0; _js_idx17 < els.length; _js_idx17 += 1) {
-        el = els[_js_idx17];
+    for (var el = null, _js_idx105 = 0; _js_idx105 < els.length; _js_idx105 += 1) {
+        el = els[_js_idx105];
         __setf_display('none', el);
     };
     var intentEls = Array.from(document.querySelectorAll('.intents[data-role=\'' + role + '\']'));
-    for (var el = null, _js_idx18 = 0; _js_idx18 < intentEls.length; _js_idx18 += 1) {
-        el = intentEls[_js_idx18];
+    for (var el = null, _js_idx106 = 0; _js_idx106 < intentEls.length; _js_idx106 += 1) {
+        el = intentEls[_js_idx106];
         __setf_display('inline-block', el);
     };
 };
 function activateIntent(intentSpec) {
     var realmEl = document.querySelector('#oracle-realm');
     var realmChildren = arrayFrom(realmEl.children);
-    for (var el = null, _js_idx19 = 0; _js_idx19 < realmChildren.length; _js_idx19 += 1) {
-        el = realmChildren[_js_idx19];
+    for (var el = null, _js_idx107 = 0; _js_idx107 < realmChildren.length; _js_idx107 += 1) {
+        el = realmChildren[_js_idx107];
         __setf_display('none', el);
     };
-    for (var sel = null, _js_arrvar21 = cdadr(intentSpec), _js_idx20 = 0; _js_idx20 < _js_arrvar21.length; _js_idx20 += 1) {
-        sel = _js_arrvar21[_js_idx20];
+    for (var sel = null, _js_arrvar109 = cdadr(intentSpec), _js_idx108 = 0; _js_idx108 < _js_arrvar109.length; _js_idx108 += 1) {
+        sel = _js_arrvar109[_js_idx108];
         switch (sel) {
         case 'all':
-            for (var el = null, _js_idx22 = 0; _js_idx22 < realmChildren.length; _js_idx22 += 1) {
-                el = realmChildren[_js_idx22];
+            for (var el = null, _js_idx110 = 0; _js_idx110 < realmChildren.length; _js_idx110 += 1) {
+                el = realmChildren[_js_idx110];
                 __setf_display('block', el);
             };
             break;
         default:
-            for (var el = null, _js_arrvar24 = Array.from(realmEl.querySelectorAll(sel)), _js_idx23 = 0; _js_idx23 < _js_arrvar24.length; _js_idx23 += 1) {
-                el = _js_arrvar24[_js_idx23];
+            for (var el = null, _js_arrvar112 = Array.from(realmEl.querySelectorAll(sel)), _js_idx111 = 0; _js_idx111 < _js_arrvar112.length; _js_idx111 += 1) {
+                el = _js_arrvar112[_js_idx111];
                 __setf_display('block', el);
             };
         };
@@ -119,7 +119,10 @@ function handleSelectRole(role) {
     return domResetIntentsEl();
 };
 function handleSelectIntent(intent) {
-    var intentSpec = findIf(op(car(_) == intent), roleIntents(activeRole()));
+    var intentSpec = findIf(function (_1) {
+        __PS_MV_REG = [];
+        return car(_1) == intent;
+    }, roleIntents(activeRole()));
     __PS_MV_REG = [];
     return activateIntent(intentSpec);
 };
@@ -135,14 +138,34 @@ function domResetIntentsEl() {
 };
 function init() {
     var els = Array.from(document.querySelectorAll('.oracle-container'));
-    for (var el = null, _js_idx22 = 0; _js_idx22 < els.length; _js_idx22 += 1) {
-        el = els[_js_idx22];
+    for (var el = null, _js_idx110 = 0; _js_idx110 < els.length; _js_idx110 += 1) {
+        el = els[_js_idx110];
         __setf_display('flex', el);
     };
     __PS_MV_REG = [];
-    return setTimeout(op(domResetSelectEl('#roles'), domResetIntentsEl()), 0);
+    return setTimeout(function () {
+        domResetSelectEl('#roles');
+        __PS_MV_REG = [];
+        return domResetIntentsEl();
+    }, 0);
 };
-init();</script></div><div id=oracle-realm><div id="outline-container-install" class="outline-2">
+init();</script></div><div id=oracle-realm><div id="outline-container-orgf15c17b" class="outline-2">
+<h2 id="orgf15c17b">Supported browsers:</h2>
+<div class="outline-text-2" id="text-orgf15c17b">
+<ol class="org-ol">
+<li>Firefox</li>
+<li><p>
+Chrome (thanks to <a href="https://github.com/kajalelohai">@kajalelohai</a>)
+</p>
+
+<p>
+But can you run it? Although Chrome is supported and a <code>.crx</code> file is
+generated in the <a href="https://github.com/bitspook/spookfox/releases/">releases</a>, Chrome won't let you install and use it. Stop
+using Chrome. PS Check <a href="#install">installation</a> below.
+</p></li>
+</ol>
+</div>
+</div><div id="outline-container-install" class="outline-2">
 <h2 id="install">Installation</h2>
 <div class="outline-text-2" id="text-install">
 <p>
@@ -169,11 +192,9 @@ Because it is not <a href="https://addons.mozilla.org/en-US/firefox/addon/spookf
 
 <blockquote>
 <p>
-⚠️ Caution: Although Chromium is supported and a .crx file is generated in the
-releases, Chrome won't let you install and use it. Stop using Chrome. PS
-You'll have to drag-n-drop the downloaded crx file to Chrome to even install
-it, because Google. You will probably need to clone this repo, run <code>yarn
-   build</code>, and <a href="https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked">load unpacked extension</a> to run Spookfox in Chrome.
+⚠️ You'll have to drag-n-drop the downloaded crx file to Chrome to even
+install it, because Google. You will probably need to clone this repo, run
+<code>yarn build</code>, and <a href="https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked">load unpacked extension</a> to run Spookfox in Chrome.
 </p>
 </blockquote></li>
 

@@ -71,10 +71,14 @@ tinkerer similar (to Emacs) framework to tinker their browser.
 I use Spookfox as my daily driver to enable a number of [[https://github.com/bitspook/spookmax.d][workflow enhancements]],
 e.g capturing articles I read and Youtube videos I watch.
 
-**Supported browsers**
+** Supported browsers:
+
 1. Firefox
-2. Chromium (thanks to [[https://github.com/kajalelohai][@kajalelohai]]) (but can you run it? Check [[#install][installation]]
-   below)
+2. Chrome (thanks to [[https://github.com/kajalelohai][@kajalelohai]])
+
+   But can you run it? Although Chrome is supported and a =.crx= file is
+   generated in the [[https://github.com/bitspook/spookfox/releases/][releases]], Chrome won't let you install and use it. Stop
+   using Chrome. PS Check [[#install][installation]] below.
 
 ** Installation
 :PROPERTIES:
@@ -94,11 +98,9 @@ There are 2 parts to install spookfox.
    Because it is not [[https://addons.mozilla.org/en-US/firefox/addon/spookfox/][approved on Firefox addons]] yet.
 
    #+begin_quote
-   ⚠️ Caution: Although Chromium is supported and a .crx file is generated in the
-   releases, Chrome won't let you install and use it. Stop using Chrome. PS
-   You'll have to drag-n-drop the downloaded crx file to Chrome to even install
-   it, because Google. You will probably need to clone this repo, run =yarn
-   build=, and [[https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked][load unpacked extension]] to run Spookfox in Chrome.
+   ⚠️ You'll have to drag-n-drop the downloaded crx file to Chrome to even
+   install it, because Google. You will probably need to clone this repo, run
+   =yarn build=, and [[https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked][load unpacked extension]] to run Spookfox in Chrome.
    #+end_quote
 
 2. Install Emacs package
