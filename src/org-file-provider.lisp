@@ -26,16 +26,17 @@
    (body-html :initarg :body-html :accessor org-file-body-html))
   (:documentation "A Org file as provided by org-file.el emacs-lisp script."))
 
-(defmethod from ((obj org-file) (to (eql 'blog-post)))
+(defmethod from ((obj org-file) (to (eql 'blog-post)) &key author)
   (with-accessors ((id org-file-id)
                    (metadata org-file-metadata)
                    (body org-file-body-html))
       obj
     (make 'blog-post
           :title (@ metadata "title")
+          :slug (@ metadata "slug")
           :tags (@ metadata "tags")
           :created-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
           :updated-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
           :body body
           :description ""
-          :author (make 'persona :name "Unknown"))))
+          :author (or author (make 'persona :name "Unknown")))))

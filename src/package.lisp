@@ -5,5 +5,5 @@
 
 (in-package #:in.bitspook.website)
 
-(defgeneric from (obj to)
+(defgeneric from (obj to &key)
   (:documentation "Convert OBJ object to instance of class represented symbol TO"))

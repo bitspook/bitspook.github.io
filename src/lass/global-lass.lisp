@@ -73,7 +73,8 @@
       :letter-spacing 2px)
 
      ((:or blockquote dl figure form ol p pre table ul)
-      :margin-bottom (var --scale-2))
+      :margin-bottom (var --scale-2)
+      :overflow auto)
 
      ((:or td th)
       :padding 12px 15px

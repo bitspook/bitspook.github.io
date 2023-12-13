@@ -11,38 +11,87 @@
 
 (defparameter *notes*
   (let ((notes-provider (make-instance 'denote-provider)))
-    (provide-all notes-provider "blog-post")))
+    (mapcar
+     (op (from _ 'blog-post :author *author*))
+     (provide-all notes-provider "blog-post"))))
 
 (defparameter *local-org-files*
   (let ((org-provider (make 'org-file-provider)))
     (provide-all org-provider (path-join *base-dir* "content/"))))
 
+(defun local-org-file-to-post (file)
+  (let ((post (from file 'blog-post :author *author*)))
+    ;; Set filename as slug if no slug is explicitly provided
+    (when (not (@ (org-file-metadata file) "slug"))
+      (setf (post-slug post)
+            (first (str:split "." (file-namestring (org-file-filepath file))))))
+    post))
+
+(defparameter *local-posts*
+  (mapcar
+   #'local-org-file-to-post
+   (remove-if-not
+    (op (str:containsp "/blog/" (org-file-filepath _)))
+    *local-org-files*)))
+
+(defparameter *poems*
+  (mapcar
+   #'local-org-file-to-post
+   (remove-if-not
+    (op (str:containsp "/poems/" (org-file-filepath _)))
+    *local-org-files*)))
+
+(defparameter *talks*
+  (mapcar
+   #'local-org-file-to-post
+   (remove-if-not
+    (op (str:containsp "/talks/" (org-file-filepath _)))
+    *local-org-files*)))
+
+(defparameter *about-me*
+  (org-file-to-blog-post
+   (find-if (op (str:containsp "/about.org" (org-file-filepath _)))
+            *local-org-files*)))
+
 (defparameter *blog-posts*
-  (let* ((all-posts
-           (mapcar
-            (lambda (note)
-              (let ((post (from note 'blog-post)))
-                (setf (post-author post) *author*)
-                post))
-            (append *local-org-files* *notes*)))
+  (let* ((all-posts (append *local-posts* *notes*))
          (no-drafts (remove-if
-                     (op (find "draft" (post-tags _) :test #'equal))
+                     (op (or (find "draft" (post-tags _1) :test #'equal)
+                             (find "micro" (post-tags _1) :test #'equal)))
                      all-posts)))
     no-drafts))
 
 (defun build ()
   (let* ((www (path-join *base-dir* "docs/"))
          (static (path-join *base-dir* "src/static/"))
-         (asset-pub (make-instance 'asset-publisher :dest www))
-         (post-pub (make-instance 'blog-post-publisher
-                                  :asset-pub asset-pub
-                                  :dest (path-join www "blog/"))))
+         (*print-pretty* nil)
+         (asset-pub (make 'asset-publisher :dest www))
+         (blog-pub (make 'blog-post-publisher
+                         :asset-pub asset-pub
+                         :dest (path-join www "blog/")))
+         (poems-pub (make 'blog-post-publisher
+                          :asset-pub asset-pub
+                          :dest (path-join www "poems/")))
+         (talks-pub (make 'blog-post-publisher
+                          :asset-pub asset-pub
+                          :dest (path-join www "talks/")))
+         (page-pub (make 'blog-post-publisher
+                         :asset-pub asset-pub
+                         :dest www)))
 
     (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
+
     (publish asset-pub :content static)
-    (loop :for post :in *blog-posts*
-          :do (let ((root-w (make 'blog-post-w :post post))) 
-                (publish post-pub :post post :layout root-w)))))
+
+    (publish page-pub :post *about-me* :layout (make 'blog-post-w :post *about-me*))
+
+    (loop
+      :for (publisher posts) :in `((,blog-pub ,*blog-posts*)
+                                   (,poems-pub ,*poems*)
+                                   (,talks-pub ,*talks*))
+      :do (loop :for post :in posts
+                :do (let ((layout-w (make 'blog-post-w :post post)))
+                      (publish publisher :post post :layout layout-w))))))
 
 (build)
 
