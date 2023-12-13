@@ -7,6 +7,4 @@
 *.x86f
 *~
 .#*
-/clownpress.db
-/clownpress.db-shm
-/clownpress.db-wal
+.DS_Store
