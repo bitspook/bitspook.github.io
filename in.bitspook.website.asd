@@ -9,6 +9,9 @@
                                            (:file "pollen")
                                            (:file "global-lass")))
                              (:file "blog-post")
+                             (:file "org-file-provider")
+                             (:file "denote-provider")
+
                              (:module "widgets"
                               :components ((:file "navbar")
                                            (:file "footer")
