@@ -65,6 +65,7 @@
 
     (publish asset-pub :content static)
 
+    ;; Publish *categorized-posts*
     (do-hash-table (category posts *categorized-posts*)
       (let ((publisher (make 'blog-post-publisher
                              :asset-pub asset-pub
@@ -73,7 +74,16 @@
         (loop :for post :in posts
               :do (publish publisher
                            :post post
-                           :layout (make 'blog-post-w :post post)))))))
+                           :layout (make 'blog-post-w :post post)))))
+
+    ;; Publish *projects*
+    (loop :for project :in *projects*
+          :for publisher := (make 'software-project-publisher
+                                   :asset-pub asset-pub
+                                   :dest (base-path-join www "projects/"))
+          :do (publish publisher
+                       :project project
+                       :layout (make 'software-project-w :project project)))))
 
 (build)
 

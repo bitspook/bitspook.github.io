@@ -41,3 +41,33 @@
   (declare (ignorable initargs))
   (when (not (project-slug project))
     (setf (project-slug project) (slugify (project-name project)))))
+
+(defclass software-project-publisher (html-publisher)
+  ((asset-pub
+    :initarg :asset-pub
+    :initform (error "asset-publisher is required")
+    :documentation "A PUBLISHER to use for publishing assets (e.g Css, Js, images)."))
+  (:documentation "Publish a software-project."))
+
+(defun software-project-page-builder (project)
+  "Create HTML page for a software-project"
+  (with-slots (name) project
+      (lambda (&key css-file html)
+        (spinneret:with-html
+          (:html
+           (:head (:title name)
+                  (:meta :name "viewport" :content "width=device-width, initial-scale=1")
+                  (:link :rel "stylesheet" :href (str:concat "/" css-file))
+                  (:script :src "/js/app.js"))
+           (:body (:raw html)))))))
+
+(defmethod publish ((pub software-project-publisher)
+                    &key project layout)
+  "Publish PROJECT using LAYOUT widget
+LAYOUT must be a WIDGET which accepts the PROJECT as an argument."
+  (with-slots (name slug) project
+    (let* ((html-path (path-join (str:concat slug "/") "index.html")))
+      (call-next-method pub
+                        :page-builder (software-project-page-builder project)
+                        :root-widget layout
+                        :path html-path))))

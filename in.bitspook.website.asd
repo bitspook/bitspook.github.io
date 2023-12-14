@@ -18,5 +18,6 @@
                              (:module "widgets"
                               :components ((:file "navbar")
                                            (:file "footer")
-                                           (:file "blog-post"))))))
+                                           (:file "blog-post")
+                                           (:file "software-project"))))))
   :description "A blog implemented using cl-ownpress")

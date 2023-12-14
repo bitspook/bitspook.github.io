@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defun bp-lass ()
+(defun sp-lass ()
   (tagged-lass
    base-lass
 
@@ -34,9 +34,9 @@
    :lg `((.content :max-width (var --width-lg)
                    :margin 0 auto))))
 
-(defwidget blog-post-w (post)
-    (bp-lass)
-  (with-slots (title created-at author tags body) post
+(defwidget software-project-w (project)
+    (sp-lass)
+  (with-slots (name created-at author tags body) project
     (:div
      (render 'navbar-w :links '(("Home" "/")
                                 ("Blog" "/blog")
@@ -47,12 +47,12 @@
       :class "content"
       (:header
        :class "header"
-       (:h1 title)
+       (:h1 name)
        (:div
         :class "meta"
         (:time :class "meta-item date" (local-time:format-timestring
-                              nil created-at
-                              :format '(:long-month " " :day ", " :year)))
+                                        nil created-at
+                                        :format '(:long-month " " :day ", " :year)))
 
         (when-let ((tags tags))
           (:ul
