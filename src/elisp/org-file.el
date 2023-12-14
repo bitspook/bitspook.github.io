@@ -58,7 +58,6 @@
 
 (defun main (content-dir)
   "Send all org-files from CONTENT-DIR."
-  (message "CONTENT DIR: %s" content-dir)
   (let ((conn (clown-rpc-server))
         (files (directory-files-recursively content-dir "")))
     (cl-dolist (file files)

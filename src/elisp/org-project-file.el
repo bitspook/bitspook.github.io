@@ -51,7 +51,13 @@
             (val (cdr pcell)))
         (pcase key
           ("date" (push (cons 'date (format-time-string "%Y-%m-%d %H:%M:%S" (org-time-string-to-time val))) props))
-          ("filetags" (push (cons 'tags (split-string val " " t "[ \t]")) props))
+          ("updated_at"
+           (setf props (cl-remove-if (lambda (cell) (equal (car cell) "updated_at")) props))
+           (push (cons 'updated_at (format-time-string "%Y-%m-%d %H:%M:%S" (org-time-string-to-time val))) props))
+          ("filetags" (push (cons 'tags (split-string val "[ :]" t "[ \t]")) props))
+          ("languages"
+           (setf props (cl-remove-if (lambda (cell) (equal (car cell) "languages")) props))
+           (push (cons 'languages (json-parse-string val)) props))
           ("description"
            (push
             (cons 'description_html (clown-org-to-html val))
@@ -90,13 +96,14 @@
      :body_raw org-content
      :body_html (clown-org-to-html org-content))))
 
-(defun clown-main (files)
-  "Main function called by cl-ownpress with FILES."
-  (let ((conn (clown-rpc-server)))
+(defun main (content-dir)
+  "Send all org-files from CONTENT-DIR."
+  (let ((conn (clown-rpc-server))
+        (files (directory-files-recursively content-dir "")))
     (cl-dolist (file files)
-      (jsonrpc-notify conn 'new-org-file (clown-org-file-to-msg file)))
+      (jsonrpc-notify conn :event (clown-org-file-to-msg file)))
 
-    (jsonrpc-notify conn 'close-connection nil)))
+    (jsonrpc-notify conn :done nil)))
 
 ;;; org-project-file.el ends here
 ;; Local Variables:

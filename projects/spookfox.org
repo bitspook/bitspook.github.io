@@ -4,7 +4,8 @@
 #+source_code: https://github.com/bitspook/spookfox
 #+issue_tracker: https://github.com/bitspook/spookfox/issues
 #+languages: ["Emacs Lisp", "TypeScript", "Nix"]
-#+updated_at: [2023-02-28 Tue]
+#+updated_at: <2023-02-28>
+#+filetags: :firefox:emacs:
 
 #+name: oracle-spec
 #+begin_src lisp :exports none

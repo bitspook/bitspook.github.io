@@ -19,6 +19,12 @@
 (defparameter *local-org-files*
   (let ((org-provider (make 'org-file-provider)))
     (provide-all org-provider (path-join *base-dir* "content/"))))
+
+(defparameter *projects*
+  (let ((project-provider (make 'org-project-provider)))
+    (mapcar
+     (op (from _ 'software-project :author *author*))
+     (provide-all project-provider (path-join *base-dir* "projects/")))))
 ;; end expensive operations
 
 (defparameter *categorized-posts*

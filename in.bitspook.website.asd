@@ -9,8 +9,11 @@
                                            (:file "pollen")
                                            (:file "global-lass")))
                              (:file "blog-post")
+                             (:file "software-project")
+
                              (:file "org-file-provider")
                              (:file "denote-provider")
+                             (:file "org-project-provider")
 
                              (:module "widgets"
                               :components ((:file "navbar")

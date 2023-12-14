@@ -16,7 +16,7 @@
    (slug :initarg :slug
          :accessor post-slug
          :initform nil
-         :documentation "Url-fragment for this blob post. Defaults to `(slugify title)`")
+         :documentation "Url-fragment for this blog post. Defaults to `(slugify title)`")
    (description :initarg :description
                 :initform (error "Post `description` is required")
                 :accessor post-description)
