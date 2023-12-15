@@ -31,7 +31,7 @@
                  :font-size (var --scale-1)
                  :line-height (var --line-md)))
 
-   :lg `((.content :max-width (var --width-lg)
+   :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
 (defwidget blog-post-w (post)
@@ -45,8 +45,7 @@
                                 ("About me" "/about")))
      (:article
       :class "content"
-      (:header
-       :class "header"
+      (:header.header
        (:h1 title)
        (:div
         :class "meta"

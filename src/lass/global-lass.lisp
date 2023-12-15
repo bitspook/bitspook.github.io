@@ -89,7 +89,7 @@
 
      (h6 :font-size (var --scale-0))
 
-     (a :color (var --color-grey-800))
+     (a :color inherit)
 
      (img :width 100%)
 
@@ -106,10 +106,8 @@
       :border 1px solid (var --color-grey-300)
       :border-radius (var --radius-xs)))
 
-   :dark `((body :color (var --color-grey-300)
+   :dark `((body :color (var --color-grey-400)
                  :background (var --color-grey-900))
-
-           (a :color (var --color-grey-300))
 
            ((:or code kbd samp pre)
             :background-color (var --color-grey-800)

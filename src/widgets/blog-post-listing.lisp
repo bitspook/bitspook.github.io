@@ -1,48 +1,51 @@
 (in-package #:in.bitspook.website)
 
 (defwidget blog-post-listing-item-w (post)
-    `((li :display flex
-          :line-height 1.3
-          :padding 0.32rem 0
-          :align-items center
-          :list-style-type none
-          :margin-bottom 0.6rem)
+    (tagged-lass
+     `((li :display flex
+           :line-height 1.3
+           :padding 0.32rem 0
+           :align-items center
+           :list-style-type none
+           :margin-bottom 0.6rem)
 
-      (.li-icon :display block
-                :background-repeat no-repeat
-                :background-position 0 0
-                :background-size contain
-                :content ""
-                :width 88px
-                :height 48px
-                :flex-shrink 0)
+       (.li-icon :display block
+                 :background-repeat no-repeat
+                 :background-position 0 0
+                 :background-size contain
+                 :content ""
+                 :width 88px
+                 :height 48px
+                 :flex-shrink 0)
 
-      (.li-icon--blog :background-image "url(/images/icons/post.svg)")
+       (.li-icon--blog :background-image "url(/images/icons/post.svg)")
 
-      (.li-icon--talks :background-image "url(/images/icons/talk.svg)")
+       (.li-icon--talks :background-image "url(/images/icons/talk.svg)")
 
-      (.li-icon--poems :background-image "url(/images/icons/poems.svg)")
-      (.li-title :font-size 2rem)
+       (.li-icon--poems :background-image "url(/images/icons/poems.svg)")
+       (.li-title :font-size (var --size-5))
 
-      (.li-meta :margin-top 0.5rem
-                :font-size 1.2rem
-                :display flex)
+       (.li-meta :margin-top (var --size-1)
+                 :font-size (var --size-3)
+                 :color (var --color-grey-500)
+                 :display flex)
 
-      ((:and .li-meta (.li-meta a)) :font-family "Roboto, sans-serif"
-                                    :color (var --color-grey-300)
-                                    :display flex)
+       ((:and .li-meta (.li-meta a)) :font-family "Roboto, sans-serif"
+                                     :display flex)
 
-      (.meta-item :line-height 1
-                  :padding 0
-                  :padding-right 1em
-                  :border-right 1px solid (var --color-grey-300))
+       (.meta-item :line-height 1
+                   :padding 0
+                   :padding-right 1em
+                   :border-right 1px solid (var --color-grey-500))
 
-      ((:and .meta-item :last-child) :padding-right 0
-                                     :border none)
-      (.tags :display flex
-             :flex-wrap wrap
+       ((:and .meta-item :last-child) :padding-right 0
+                                      :border none)
+       (.tags :display flex
+              :flex-wrap wrap
 
-             (a :margin-left 1rem)))
+              (a :margin-left 1rem)))
+
+     :dark `((.li-meta :color (var --color-grey-600))))
   (:li
    (:span :class (format nil "li-icon li-icon--~a" (post-category post)))
    (:div.li-content
@@ -61,34 +64,18 @@
   (tagged-lass
    base-lass
 
-   `((.content
-      (.header
-       :padding (var --size-4)
-       :margin (var --scale-2) 0
+   `((.header
+      :padding (var --size-4)
+      :margin (var --scale-2) 0)
 
-       (h1 :font-family (var --font-title)
-           :font-size (var --scale-6)
-           :margin-bottom (var --scale-0))
+     (.title :font-family (var --font-title)
+             :font-size (var --size-10)
+             :padding-bottom (var --scale-0)
+             :border-bottom 1px solid (var --color-grey-400)))
 
-       (.meta :color (var --color-grey-500)
-              :font-size (var --scale-0))
+   :dark `((.title :border-bottom-color (var --color-grey-800)))
 
-       (.meta-item :display inline)
-
-       (.tags :list-style-type none
-              :margin 0
-              :padding 0
-              :margin-left (var --size-4)
-
-              (.tag
-               :display inline-block
-               :padding-right (var --size-3)))))
-
-     (.post-body :padding 0 (var --size-4)
-                 :font-size (var --scale-1)
-                 :line-height (var --line-md)))
-
-   :lg `((.content :max-width (var --width-lg)
+   :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
 (defwidget blog-post-listing-w (posts title author)
@@ -99,8 +86,13 @@
                               ("Poems" "/poems")
                               ("Projects" "https://github.com/bitspook")
                               ("About me" "/about")))
-   (:ul
-    (dolist (post posts)
-      (render 'blog-post-listing-item-w :post post)))
+   (:article.content
+    (:header.header
+     (:h1.title title))
+
+    (:main
+     (:ul
+      (dolist (post posts)
+        (render 'blog-post-listing-item-w :post post)))))
 
    (render 'footer-w :author author)))
