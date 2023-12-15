@@ -9,6 +9,7 @@
                                            (:file "pollen")
                                            (:file "global-lass")))
                              (:file "blog-post")
+                             (:file "blog-post-listing")
                              (:file "software-project")
 
                              (:file "org-file-provider")
@@ -19,5 +20,6 @@
                               :components ((:file "navbar")
                                            (:file "footer")
                                            (:file "blog-post")
+                                           (:file "blog-post-listing")
                                            (:file "software-project"))))))
   :description "A blog implemented using cl-ownpress")

@@ -29,7 +29,8 @@
 (defmethod from ((obj org-file) (to (eql 'blog-post)) &key author)
   (with-accessors ((id org-file-id)
                    (metadata org-file-metadata)
-                   (body org-file-body-html))
+                   (body org-file-body-html)
+                   (filepath org-file-filepath))
       obj
     (make 'blog-post
           :title (@ metadata "title")

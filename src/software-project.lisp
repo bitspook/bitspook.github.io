@@ -61,12 +61,10 @@
                   (:script :src "/js/app.js"))
            (:body (:raw html)))))))
 
-(defmethod publish ((pub software-project-publisher)
-                    &key project layout)
-  "Publish PROJECT using LAYOUT widget
-LAYOUT must be a WIDGET which accepts the PROJECT as an argument."
+(defmethod publish ((pub software-project-publisher) &key project )
   (with-slots (name slug) project
-    (let* ((html-path (path-join (str:concat slug "/") "index.html")))
+    (let* ((html-path (path-join (str:concat slug "/") "index.html"))
+           (layout (make 'software-project-w :project project)))
       (call-next-method pub
                         :page-builder (software-project-page-builder project)
                         :root-widget layout

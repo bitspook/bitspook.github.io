@@ -20,6 +20,8 @@
    (description :initarg :description
                 :initform (error "Post `description` is required")
                 :accessor post-description)
+   (category :initarg :category
+             :accessor post-category)
    (tags :initarg :tags
          :initform '()
          :accessor post-tags)
@@ -28,7 +30,7 @@
                :accessor post-created-at)
    (updated-at :initarg :updated-at
                :initform (error "Post `updated-at' is required")
-               )
+               :accessor post-updated-at)
    (body :initarg :body
          :initform (error "Post `body` is required")
          :accessor post-body)
@@ -41,6 +43,10 @@
   (declare (ignorable initargs))
   (when (not (post-slug post))
     (setf (post-slug post) (slugify (post-title post)))))
+
+(defmethod print-object ((post blog-post) out)
+  (print-unreadable-object (post out :type t)
+    (princ (post-title post) out)))
 
 (export-always 'blog-post-publisher)
 (defclass blog-post-publisher (html-publisher)
@@ -62,12 +68,12 @@
                   (:script :src "/js/app.js"))
            (:body (:raw html)))))))
 
-(defmethod publish ((pub blog-post-publisher)
-                    &key post layout)
+(defmethod publish ((pub blog-post-publisher) &key post)
   "Publish blog POST using LAYOUT widget
 LAYOUT must be a WIDGET which accepts the POST as an argument."
   (with-slots (title slug) post
-    (let* ((html-path (path-join (str:concat slug "/") "index.html")))
+    (let* ((html-path (path-join (str:concat slug "/") "index.html"))
+           (layout (make 'blog-post-w :post post)))
       (call-next-method pub
                         :page-builder (blog-post-page-builder post)
                         :root-widget layout
