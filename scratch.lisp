@@ -56,13 +56,14 @@
         (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2))))
   "Chronologically ordered blog posts.")
 
-(defparameter *categorized-posts*
+(defparameter *posts-by-category*
   (loop
     :for post :in *published-blog-posts*
     :with table := (dict)
     :do (setf (@ table (post-category post))
               (append1 (href-default nil table (post-category post)) post))
     :finally (return table)))
+
 
 (defun build ()
   (let* ((www (path-join *base-dir* "docs/"))
@@ -74,8 +75,8 @@
 
     (publish asset-pub :content static)
 
-    ;; Publish *categorized-posts*
-    (do-hash-table (category posts *categorized-posts*)
+    ;; Publish *posts-by-category*
+    (do-hash-table (category posts *posts-by-category*)
       (unless (str:emptyp category)
         (let* ((cat-dest (base-path-join www (if (str:emptyp category) ""
                                                  (str:concat category "/"))))
@@ -83,21 +84,33 @@
                               :asset-pub asset-pub
                               :dest cat-dest))
                (listing-pub (make 'blog-post-listing-publisher
-                                :dest cat-dest
-                                :asset-pub asset-pub)))
+                                  :dest cat-dest
+                                  :asset-pub asset-pub)))
           (loop :for post :in posts
                 :do (publish cat-pub :post post))
 
           (publish listing-pub
-                   :posts (@ *categorized-posts* category)
+                   :posts (@ *posts-by-category* category)
                    :title (str:capitalize category)
                    :author *author*))))
 
-    (let ((pages (@ *categorized-posts* "")))
+    (let ((pages (@ *posts-by-category* "")))
       (loop :for post :in pages
             :with publisher := (make 'blog-post-publisher :asset-pub asset-pub :dest www)
             :do (publish publisher :post post)))
 
+    ;; Publish tag listings
+    (loop :for tag :in (reduce
+                        (op (union _1 (post-tags _2) :test #'equal))
+                        *published-blog-posts* :initial-value nil)
+          :do (let ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
+                                          *published-blog-posts*))
+                    (tag-pub (make 'blog-post-listing-publisher
+                                   :asset-pub asset-pub
+                                   :dest (base-path-join www (str:concat "tags/" tag "/")))))
+                (publish tag-pub :posts posts
+                                 :title (str:capitalize tag)
+                                 :author *author*)))
     ;; Publish *projects*
     (loop :for project :in *projects*
           :for publisher := (make 'software-project-publisher
