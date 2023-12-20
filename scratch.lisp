@@ -82,16 +82,16 @@
                (cat-pub (make 'blog-post-publisher
                               :asset-pub asset-pub
                               :dest cat-dest))
-               (index-pub (make 'blog-post-listing-publisher
+               (listing-pub (make 'blog-post-listing-publisher
                                 :dest cat-dest
                                 :asset-pub asset-pub)))
           (loop :for post :in posts
                 :do (publish cat-pub :post post))
 
-          (publish index-pub :posts (@ *categorized-posts* category)
-                             :title (str:capitalize category)
-                             :slug ""
-                             :author *author*))))
+          (publish listing-pub
+                   :posts (@ *categorized-posts* category)
+                   :title (str:capitalize category)
+                   :author *author*))))
 
     (let ((pages (@ *categorized-posts* "")))
       (loop :for post :in pages
@@ -107,7 +107,7 @@
 
     ;; Publish archive of all blog-posts
     (let ((archive-pub (make 'blog-post-listing-publisher
-                             :dest (path-join *base-dir* www)
+                             :dest (path-join *base-dir* www "archive/")
                              :asset-pub asset-pub)))
       (publish archive-pub :posts *published-blog-posts*
                            :title "Archive"

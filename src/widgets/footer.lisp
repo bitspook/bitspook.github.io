@@ -46,4 +46,4 @@
            ".newsletter-email::-webkit-input-placeholder")
       :color "#aaa"))
 
-   :lg `((.footer :max-width (var --width-lg)))))
+   :lg `((.footer :max-width (var --width-md)))))

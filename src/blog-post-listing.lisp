@@ -17,11 +17,29 @@
        (:body (:raw html))))))
 
 (defmethod publish ((pub blog-post-listing-publisher)
-                    &key posts author title (slug nil)) 
-  (let* ((slug (or slug (str:concat (slugify title) "/")))
-         (html-path (path-join (publisher-dest pub) slug  "index.html"))
-         (layout (make 'blog-post-listing-w :posts posts :title title :author author)))
-    (call-next-method pub
-                      :page-builder (blog-post-listing-page-builder title)
-                      :root-widget layout
-                      :path html-path)))
+                    &key posts author title (page-size 10))
+  (let* ((page-size (or page-size (length posts)))
+         (pages (batches posts page-size)))
+    (loop
+      :for page-posts :in pages
+      :with index := 0
+      :do (progn (call-next-method
+                  pub
+                  :root-widget (make 'blog-post-listing-w
+                                     :posts page-posts
+                                     :title title
+                                     :author author
+                                     :next-page
+                                     (when (> index 0)
+                                       `("Newer posts" . ,(if (zerop (1- index))
+                                                              "../"
+                                                              (format nil "../~a" (1- index)))))
+                                     :previous-page
+                                     (when (< index (1- (length pages)))
+                                       `("Older posts" . ,(str:concat
+                                                           (unless (zerop index) "../")
+                                                           (format nil "~a" (1+ index))))))
+                  :page-builder (blog-post-listing-page-builder title)
+                  :path (str:concat (unless (eql index 0) (format nil "~a/" index)) "index.html"))
+                 (incf index)))))
+
