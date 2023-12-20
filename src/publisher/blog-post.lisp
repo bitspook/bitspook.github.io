@@ -9,7 +9,7 @@
   (:documentation "An online persona that can be embedded in blog pages."))
 
 (export-always 'blog-post)
-(defclass blog-post ()
+(defclass blog-post (publishable)
   ((title :initarg :title
           :initform (error "Post `title` is required")
           :accessor post-title)
@@ -46,7 +46,10 @@
 
 (defmethod print-object ((post blog-post) out)
   (print-unreadable-object (post out :type t)
-    (princ (post-title post) out)))
+    (format out "~s" (published-uri post))))
+
+(defmethod published-uri ((post blog-post))
+  (str:concat (post-category post) "/" (post-slug post)))
 
 (export-always 'blog-post-publisher)
 (defclass blog-post-publisher (html-publisher)
@@ -72,7 +75,7 @@
   "Publish blog POST using LAYOUT widget
 LAYOUT must be a WIDGET which accepts the POST as an argument."
   (with-slots (title slug) post
-    (let* ((html-path (path-join (str:concat slug "/") "index.html"))
+    (let* ((html-path (base-path-join (str:concat (published-uri post) "/") "index.html"))
            (layout (make 'blog-post-w :post post)))
       (call-next-method pub
                         :page-builder (blog-post-page-builder post)
