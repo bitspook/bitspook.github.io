@@ -36,7 +36,7 @@
 
 (defwidget blog-post-w (post)
     (bp-lass)
-  (with-slots (title created-at author tags body) post
+  (with-slots (title published-at author tags body) post
     (:div
      (render 'navbar-w :links '(("Home" "/")
                                 ("Blog" "/blog")
@@ -50,7 +50,7 @@
        (:div
         :class "meta"
         (:time :class "meta-item date" (local-time:format-timestring
-                              nil created-at
+                              nil published-at
                               :format '(:long-month " " :day ", " :year)))
 
         (when-let ((tags tags))

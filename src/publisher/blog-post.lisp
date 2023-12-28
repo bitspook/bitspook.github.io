@@ -17,9 +17,9 @@
          :accessor post-slug
          :initform nil
          :documentation "Url-fragment for this blog post. Defaults to `(slugify title)`")
-   (description :initarg :description
-                :initform (error "Post `description` is required")
-                :accessor post-description)
+   (summary :initarg :summary
+            :initform (error "Post `summary` is required")
+            :accessor post-summary)
    (category :initarg :category
              :accessor post-category)
    (tags :initarg :tags
@@ -28,6 +28,9 @@
    (created-at :initarg :created-at
                :initform (error "Post `created-at' is required")
                :accessor post-created-at)
+   (published-at :initarg :published-at
+                 :initform (error "Post `published-at' is required")
+                 :accessor post-published-at)
    (updated-at :initarg :updated-at
                :initform (error "Post `updated-at' is required")
                :accessor post-updated-at)
@@ -46,10 +49,14 @@
 
 (defmethod print-object ((post blog-post) out)
   (print-unreadable-object (post out :type t)
-    (format out "~s" (published-uri post))))
+    (format out "~s/~s" (post-category post) (post-slug post))))
 
-(defmethod published-uri ((post blog-post))
-  (str:concat (post-category post) "/" (post-slug post)))
+(defmethod published-path ((post blog-post) &key) 
+  (str:concat "/" (post-category post) "/" (post-slug post)))
+
+(defmethod published-path ((pub blog-post-publisher) &key post)
+  (declare (ignore pub))
+  (published-path post))
 
 (export-always 'blog-post-publisher)
 (defclass blog-post-publisher (html-publisher)
@@ -75,7 +82,7 @@
   "Publish blog POST using LAYOUT widget
 LAYOUT must be a WIDGET which accepts the POST as an argument."
   (with-slots (title slug) post
-    (let* ((html-path (base-path-join (str:concat (published-uri post) "/") "index.html"))
+    (let* ((html-path (base-path-join (str:concat (published-path pub :post post) "/") "index.html"))
            (layout (make 'blog-post-w :post post)))
       (call-next-method pub
                         :page-builder (blog-post-page-builder post)

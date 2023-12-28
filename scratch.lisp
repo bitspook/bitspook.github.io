@@ -2,6 +2,9 @@
 
 (in-package #:in.bitspook.website)
 
+;; (defparameter *base-url* "https://bitspook.in")
+(defparameter *base-url* "http://localhost:8080")
+
 (defparameter *author*
   (make 'persona
         :name "Charanjit Singh"
@@ -59,8 +62,9 @@
 (defun build ()
   (let* ((www (path-join *base-dir* "docs/"))
          (static (path-join *base-dir* "src/static/"))
-         (*print-pretty* nil)
+         (*print-pretty* t)
          (asset-pub (make 'asset-publisher :dest www))
+         (base-url *base-url*)
          (post-pub (make 'blog-post-publisher
                          :asset-pub asset-pub
                          :dest www)))
@@ -79,8 +83,10 @@
           :unless (or (null category) (str:emptyp category))
             :do (let ((posts (remove-if-not (op (string= (post-category _) category)) *published-blog-posts*))
                       (cat-pub (make 'blog-post-listing-publisher
-                                     :dest (base-path-join www (str:concat category "/"))
-                                     :asset-pub asset-pub)))
+                                     :dest (base-path-join www)
+                                     :slug category
+                                     :asset-pub asset-pub
+                                     :base-url base-url)))
                   (publish cat-pub
                            :posts posts
                            :title (str:capitalize category)
@@ -94,7 +100,9 @@
                                           *published-blog-posts*))
                     (tag-pub (make 'blog-post-listing-publisher
                                    :asset-pub asset-pub
-                                   :dest (base-path-join www (str:concat "tags/" tag "/")))))
+                                   :dest (base-path-join www)
+                                   :slug (str:concat "tags/" tag)
+                                   :base-url base-url)))
                 (publish tag-pub :posts posts
                                  :title (str:capitalize tag)
                                  :author *author*)))
@@ -102,17 +110,20 @@
     (loop :for project :in *projects*
           :for publisher := (make 'software-project-publisher
                                   :asset-pub asset-pub
-                                  :dest (base-path-join www "projects/"))
+                                  :dest (base-path-join www "projects"))
           :do (publish publisher :project project))
 
     ;; Publish archive of all blog-posts
     (let ((archive-pub (make 'blog-post-listing-publisher
-                             :dest (path-join *base-dir* www "archive/")
-                             :asset-pub asset-pub)))
+                             :dest (path-join www)
+                             :slug "archive"
+                             :asset-pub asset-pub
+                             :base-url base-url)))
       (publish archive-pub :posts *published-blog-posts*
                            :title "Archive"
                            :page-size 10
-                           :author *author*))))
+                           :author *author*)))
+  t)
 
 (build)
 

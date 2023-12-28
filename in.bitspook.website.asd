@@ -1,7 +1,9 @@
 (defsystem "in.bitspook.website"
   :author "Charanjit Singh"
   :license "AGPL-3.0-only"
-  :depends-on (:in.bitspook.cl-ownpress :local-time :feeder)
+  :depends-on (:in.bitspook.cl-ownpress
+               :local-time
+               :feeder :plump)
   :components ((:module "src"
                 :components ((:file "package")
                              (:module "lass"
@@ -12,6 +14,7 @@
                              (:module "publisher"
                               :components ((:file "blog-post")
                                            (:file "blog-post-listing")
+                                           (:file "atom-feed")
                                            (:file "software-project")))
 
                              (:module "provider"

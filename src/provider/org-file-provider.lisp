@@ -38,8 +38,9 @@
           :tags (@ metadata "tags")
           :created-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
           :updated-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
+          :published-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
           :body body
-          :description ""
+          :summary ""
           :author (or author (make 'persona :name "Unknown")))))
 
 (defmethod from ((obj org-file) (to (eql 'software-project)) &key author)
