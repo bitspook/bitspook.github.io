@@ -3,7 +3,7 @@
   :license "AGPL-3.0-only"
   :depends-on (:in.bitspook.cl-ownpress
                :local-time
-               :feeder :plump)
+               :feeder :plump :quri)
   :components ((:module "src"
                 :components ((:file "package")
                              (:module "lass"
@@ -16,6 +16,7 @@
                                            (:file "blog-post-listing")
                                            (:file "atom-feed")
                                            (:file "software-project")
+                                           (:file "software-project-listing")
                                            (:file "page")))
 
                              (:module "provider"
@@ -29,6 +30,8 @@
                                            (:file "post-listing-item")
                                            (:file "blog-post")
                                            (:file "blog-post-listing")
+                                           (:file "software-project-listing-item")
                                            (:file "software-project")
+                                           (:file "software-project-listing")
                                            (:file "home-page"))))))
   :description "A blog implemented using cl-ownpress")

@@ -43,11 +43,7 @@
 (defwidget blog-post-listing-w (posts title author next-page previous-page)
     (bp-listing-lass)
   (:div
-   (render 'navbar-w :links '(("Home" "/")
-                              ("Blog" "/blog")
-                              ("Poems" "/poems")
-                              ("Projects" "https://github.com/bitspook")
-                              ("About me" "/about")))
+   (render 'navbar-w :links nil)
    (:article.content
     (:header.header
      (:h1.title title)
@@ -65,4 +61,4 @@
 
         (when next-page
           (:a.next :href (cdr next-page) (car next-page)))))))
-   (render 'footer-w :author author)))
+   (render 'footer-w :author author :feed-path "feed.xml")))

@@ -1,19 +1,15 @@
 (in-package #:in.bitspook.website)
 
-(defwidget footer-w (author) nil
+(defwidget footer-w (author feed-path) nil
   (with-slots ((author-name name) handles) author
-    (let ((handle (car handles)))
-      (:footer.footer.postamble
+    (:footer.footer.postamble
+     (when feed-path
        (:p.rss-sub
-        (:a :href "/archive/feed.xml"
+        (:a :href feed-path
             :title "Follow via RSS"
             :target "blank"
-            (:span.rss) "Follow via RSS"))
-       (:p ("Author: ~a " author-name)
-           (when handle
-             (:a :href (third handle)
-                 :title (format nil "~a on ~a" author-name (first handle))
-                 ("@~a" (second handle)))))))))
+            (:span.rss) "Follow via RSS")))
+     (:p ("Author: ~a " author-name)))))
 
 (defmethod lass-of ((w footer-w))
   (tagged-lass

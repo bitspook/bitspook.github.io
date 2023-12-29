@@ -117,18 +117,23 @@ computers, security and politics.")
                                           *published-blog-posts*))
                     (tag-pub (make 'blog-post-listing-publisher
                                    :asset-pub asset-pub
-                                   :dest (base-path-join www)
+                                   :dest www
                                    :slug (str:concat "tags/" tag)
                                    :base-url base-url)))
                 (publish tag-pub :posts posts
                                  :title (str:capitalize tag)
                                  :author *author*)))
-    ;; Publish *projects*
-    (loop :for project :in *projects*
-          :for publisher := (make 'software-project-publisher
-                                  :asset-pub asset-pub
-                                  :dest (base-path-join www "projects"))
-          :do (publish publisher :project project))
+
+    ;; Publish project listing
+    (let ((project-listing-pub (make 'software-project-listing-publisher
+                                     :asset-pub asset-pub
+                                     :dest www
+                                     :slug "projects"
+                                     :base-url base-url)))
+      (publish project-listing-pub
+               :projects *projects*
+               :author *author*
+               :title "Projects"))
 
     ;; Publish archive of all blog-posts
     (let ((archive-pub (make 'blog-post-listing-publisher

@@ -28,7 +28,8 @@
                :initform (error "Project `created-at' is required")
                :accessor project-created-at)
    (updated-at :initarg :updated-at
-               :initform (error "Project `updated-at' is required"))
+               :initform (error "Project `updated-at' is required")
+               :accessor project-updated-at)
    (body :initarg :body
          :initform (error "Project `body` is required")
          :accessor project-body)
@@ -43,27 +44,32 @@
     (setf (project-slug project) (slugify (project-name project)))))
 
 (defclass software-project-publisher (html-publisher)
-  ((asset-pub
-    :initarg :asset-pub
-    :initform (error "asset-publisher is required")
-    :documentation "A PUBLISHER to use for publishing assets (e.g Css, Js, images)."))
+  ((asset-pub :initarg :asset-pub
+              :initform (error "asset-publisher is required")
+              :documentation "A PUBLISHER to use for publishing assets (e.g Css, Js, images).")
+   (slug :initarg :slug
+         :initform (error "Missing argument :slug")
+         :documentation "Slug used to locate and publish created artifacts."))
   (:documentation "Publish a software-project."))
+
+(defmethod published-path ((pub software-project-publisher) &key project)
+  (base-path-join "/" (slot-value pub 'slug) "/" (project-slug project)))
 
 (defun software-project-page-builder (project)
   "Create HTML page for a software-project"
   (with-slots (name) project
-      (lambda (&key css-file html)
-        (spinneret:with-html
-          (:html
-           (:head (:title name)
-                  (:meta :name "viewport" :content "width=device-width, initial-scale=1")
-                  (:link :rel "stylesheet" :href (str:concat "/" css-file))
-                  (:script :src "/js/app.js"))
-           (:body (:raw html)))))))
+    (lambda (&key css-file html)
+      (spinneret:with-html
+        (:html
+         (:head (:title name)
+                (:meta :name "viewport" :content "width=device-width, initial-scale=1")
+                (:link :rel "stylesheet" :href (str:concat "/" css-file))
+                (:script :src "/js/app.js"))
+         (:body (:raw html)))))))
 
 (defmethod publish ((pub software-project-publisher) &key project )
   (with-slots (name slug) project
-    (let* ((html-path (path-join (str:concat slug "/") "index.html"))
+    (let* ((html-path (base-path-join (published-path pub :project project) "/index.html"))
            (layout (make 'software-project-w :project project)))
       (call-next-method pub
                         :page-builder (software-project-page-builder project)

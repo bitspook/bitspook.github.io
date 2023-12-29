@@ -31,18 +31,14 @@
                  :font-size (var --scale-1)
                  :line-height (var --line-md)))
 
-   :lg `((.content :max-width (var --width-lg)
+   :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
 (defwidget software-project-w (project)
     (sp-lass)
   (with-slots (name created-at author tags body) project
     (:div
-     (render 'navbar-w :links '(("Home" "/")
-                                ("Blog" "/blog")
-                                ("Poems" "/poems")
-                                ("Projects" "https://github.com/bitspook")
-                                ("About me" "/about")))
+     (render 'navbar-w :links nil)
      (:article
       :class "content"
       (:header
@@ -52,15 +48,6 @@
         :class "meta"
         (:time :class "meta-item date" (local-time:format-timestring
                                         nil created-at
-                                        :format '(:long-month " " :day ", " :year)))
-
-        (when-let ((tags tags))
-          (:ul
-           :class "meta-item tags"
-           (dolist (tag tags)
-             (:li.tag
-              (:a :href
-                  (str:concat "/tags/" tag)
-                  (str:concat "#" (str:downcase tag)))))))))
+                                        :format '(:long-month " " :day ", " :year)))))
       (:main :class "post-body" (:raw body)))
-     (render 'footer-w :author author))))
+     (render 'footer-w :author author :feed-path nil))))

@@ -39,12 +39,16 @@
            (ul.nav (li :padding 0 (var --size-4)))))))
 
 (defwidget navbar-w (links) navbar-lass
-  (:nav :class "top-nav"
-        (:div :class "brand"
-              (:a :href "/"
-                  (:img :class "brand-avatar"
-                        :src "/images/avatar.png"
-                        :alt "Brand")))
-        (:ul :class "nav"
-             (loop :for link :in links
-                   :do (:li (:a :href (second link) (first link)))))))
+  (let ((links (or links '(("Home" "/")
+                           ("Blog" "/blog")
+                           ("Projects" "/projects")
+                           ("About me" "/about")))))
+    (:nav :class "top-nav"
+          (:div :class "brand"
+                (:a :href "/"
+                    (:img :class "brand-avatar"
+                          :src "/images/avatar.png"
+                          :alt "Brand")))
+          (:ul :class "nav"
+               (loop :for link :in links
+                     :do (:li (:a :href (second link) (first link))))))))

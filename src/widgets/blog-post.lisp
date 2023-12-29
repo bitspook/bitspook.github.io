@@ -38,11 +38,7 @@
     (bp-lass)
   (with-slots (title published-at author tags body) post
     (:div
-     (render 'navbar-w :links '(("Home" "/")
-                                ("Blog" "/blog")
-                                ("Poems" "/poems")
-                                ("Projects" "https://github.com/bitspook")
-                                ("About me" "/about")))
+     (render 'navbar-w :links nil)
      (:article
       :class "content"
       (:header.header
@@ -62,4 +58,4 @@
                   (str:concat "/tags/" tag)
                   (str:concat "#" (str:downcase tag)))))))))
       (:main :class "post-body" (:raw body)))
-     (render 'footer-w :author author))))
+     (render 'footer-w :author author :feed-path "feed.xml"))))

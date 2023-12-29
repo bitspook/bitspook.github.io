@@ -56,10 +56,6 @@
 (defmethod published-path ((post blog-post) &key) 
   (str:concat "/" (post-category post) "/" (post-slug post)))
 
-(defmethod published-path ((pub blog-post-publisher) &key post)
-  (declare (ignore pub))
-  (published-path post))
-
 (export-always 'blog-post-publisher)
 (defclass blog-post-publisher (html-publisher)
   ((asset-pub
@@ -67,6 +63,10 @@
     :initform (error "asset-publisher is required")
     :documentation "A PUBLISHER to use for publishing assets (e.g Css, Js, images)."))
   (:documentation "Publish a blog post."))
+
+(defmethod published-path ((pub blog-post-publisher) &key post)
+  (declare (ignore pub))
+  (published-path post))
 
 (defun blog-post-page-builder (post)
   "Create HTML page for a blog-post"
