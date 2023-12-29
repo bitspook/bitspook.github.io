@@ -8,7 +8,11 @@
 (defparameter *author*
   (make 'persona
         :name "Charanjit Singh"
-        :handles '(("Mastodon" "bitspook" "https://infosec.exchange/@bitspook"))))
+        :avatar "/images/avatar.png"
+        :handles '(("Github" "bitspook" "https://github.com/bitspook")
+                   ("Mastodon" "bitspook" "https://infosec.exchange/@bitspook")
+                   ("LinkedIn" "bitspook" "https://www.linkedin.com/in/bitspook/")
+                   ("RSS" "bitspook.in" "https://bitspook.in/archive/feed.xml"))))
 
 (defparameter *base-dir* (asdf:system-relative-pathname :in.bitspook.website ""))
 
@@ -18,6 +22,7 @@
     (mapcar
      (op (let ((post (from _ 'blog-post :author *author*)))
            (setf (post-category post) "blog")
+           (setf (post-tags post) (remove-if (op (equal "blog-post" _)) (post-tags post)))
            post))
      (provide-all notes-provider "blog-post"))))
 
@@ -122,8 +127,22 @@
       (publish archive-pub :posts *published-blog-posts*
                            :title "Archive"
                            :page-size 10
-                           :author *author*)))
-  t)
+                           :author *author*))
+
+    ;; Publish home-page
+    (let* ((title "@bitspook's personal website")
+           (page-pub (make 'page-publisher
+                           :dest www
+                           :asset-pub asset-pub))
+           (root (make 'home-page-w
+                       :posts (take 5 *published-blog-posts*)
+                       :title title
+                       :author *author*)))
+      (publish page-pub
+               :title title
+               :slug ""
+               :root-widget root))
+    t))
 
 (build)
 

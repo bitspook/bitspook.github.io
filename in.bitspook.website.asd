@@ -15,7 +15,8 @@
                               :components ((:file "blog-post")
                                            (:file "blog-post-listing")
                                            (:file "atom-feed")
-                                           (:file "software-project")))
+                                           (:file "software-project")
+                                           (:file "page")))
 
                              (:module "provider"
                               :components ((:file "org-file-provider")
@@ -25,7 +26,9 @@
                              (:module "widgets"
                               :components ((:file "navbar")
                                            (:file "footer")
+                                           (:file "post-listing-item")
                                            (:file "blog-post")
                                            (:file "blog-post-listing")
-                                           (:file "software-project"))))))
+                                           (:file "software-project")
+                                           (:file "home-page"))))))
   :description "A blog implemented using cl-ownpress")

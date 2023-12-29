@@ -50,7 +50,7 @@
      :font-style normal)))
 
 (defparameter global-css-vars
-  '(:--font-sans "Fira Sans"
+  '(:--font-text "Fira Sans"
     :--font-title "Alfa Slab One"))
 
 (defparameter base-lass
@@ -62,7 +62,7 @@
    font-lass
 
    `((body :font-size 16px
-           :font-family (var --font-sans) sans-serif
+           :font-family (var --font-text) sans-serif
            :color (var --color-grey-900))
 
      ((:or h1 h2 h3 h4 h5 h6)

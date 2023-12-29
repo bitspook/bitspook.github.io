@@ -5,7 +5,9 @@
   ((name :initarg :name
          :initform (error "Persona `name` is required"))
    (handles :initarg :handles
-            :documentation "Social media handles of the form `(social-media-name username link)'"))
+            :documentation "Social media handles of the form `(social-media-name username link)'")
+   (avatar :initarg :avatar
+           :documentation "Path to an persona's avatar image"))
   (:documentation "An online persona that can be embedded in blog pages."))
 
 (export-always 'blog-post)
@@ -69,14 +71,14 @@
 (defun blog-post-page-builder (post)
   "Create HTML page for a blog-post"
   (with-slots (title) post
-      (lambda (&key css-file html)
-        (spinneret:with-html
-          (:html
-           (:head (:title title)
-                  (:meta :name "viewport" :content "width=device-width, initial-scale=1")
-                  (:link :rel "stylesheet" :href (str:concat "/" css-file))
-                  (:script :src "/js/app.js"))
-           (:body (:raw html)))))))
+    (lambda (&key css-file html)
+      (spinneret:with-html
+        (:html
+         (:head (:title title)
+                (:meta :name "viewport" :content "width=device-width, initial-scale=1")
+                (:link :rel "stylesheet" :href (str:concat "/" css-file))
+                (:script :src "/js/app.js"))
+         (:body (:raw html)))))))
 
 (defmethod publish ((pub blog-post-publisher) &key post)
   "Publish blog POST using LAYOUT widget

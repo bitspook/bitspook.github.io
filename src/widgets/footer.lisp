@@ -18,10 +18,11 @@
 (defmethod lass-of ((w footer-w))
   (tagged-lass
    `((.footer
-      :font-family monospace
-      :color "#666"
+      :color (var --color-grey-600)
       :margin (var --size-24) auto
       :margin-bottom (var --size-12)
+
+      (p :margin (var --size-2) 0)
 
       (.validation :display none))
      (:media ,(format nil "(max-width: ~a)" "840px")
