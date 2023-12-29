@@ -5,13 +5,23 @@
    base-lass
 
    `((.header
-      :padding (var --size-4)
-      :margin (var --scale-2) 0)
+      :padding (var --size-4) :margin (var --scale-2) 0
+      :display flex
+      :align-items center
+      :border-bottom 1px solid (var --color-grey-200))
 
      (.title :font-family (var --font-title)
-             :font-size (var --size-10)
-             :padding-bottom (var --scale-0)
-             :border-bottom 1px solid (var --color-grey-200))
+             :font-size (var --size-10))
+
+     (.rss-sub
+      :margin 0 2rem
+
+      (.rss :display block
+            :width 24px
+            :height 24px
+            :background (url "/images/icons/rss.svg")
+            :background-repeat no-repeat
+            :background-size contain))
 
      (.listing :margin-bottom 0
                :padding 0 (var --scale-0))
@@ -39,7 +49,9 @@
                               ("About me" "/about")))
    (:article.content
     (:header.header
-     (:h1.title title))
+     (:h1.title title)
+     (:a.rss-sub :title "ATOM feed" :target "_blank" :href "feed.xml"
+                 (:span.rss)))
 
     (:main
      (:ul.listing

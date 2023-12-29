@@ -24,6 +24,9 @@
 
       (p :margin (var --size-2) 0)
 
+      (.rss-sub (a :display flex :align-items center)
+                (.rss :margin-right (var --size-2)))
+
       (.validation :display none))
      (:media ,(format nil "(max-width: ~a)" "840px")
              (.postamble
