@@ -50,7 +50,7 @@
   (:li
    (:span :class (format nil "li-icon li-icon--~a" (post-category post)))
    (:div.li-content
-    (:a.li-title :href "#" (post-title post))
+    (:a.li-title :href (published-path post) (post-title post))
     (:span.li-meta
      (:span :class "meta-item date"
             (local-time:format-timestring

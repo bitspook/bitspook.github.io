@@ -79,6 +79,7 @@
          (a :text-decoration none)
 
          (h2 :font-family (var --font-title)
+             :margin (var --scale-6) 0 (var --scale-4) 0
              :font-weight normal)
 
          (.about-me-snippet
@@ -116,7 +117,10 @@
         (.next :flex-grow 1
                :text-align right)))
 
-     :dark `((.title :border-bottom-color (var --color-grey-800)))
+     :dark `((.home
+              (.title :border-bottom-color (var --color-grey-800))
+              (.sidebar
+               :border-color (var --color-grey-800))))
 
      :md `((.home :width (var --width-sm)
                   :margin 0 auto))
@@ -127,7 +131,7 @@
 
             (.sidebar
              :width (var --size-96) :height fit-content
-             :border-right 1px solid (var --color-grey-800))
+             :border-right 1px solid (var --color-grey-200))
 
             (.main :width "calc(100% - 450px)"
                    :max-width 872px

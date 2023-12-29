@@ -11,7 +11,7 @@
      (.title :font-family (var --font-title)
              :font-size (var --size-10)
              :padding-bottom (var --scale-0)
-             :border-bottom 1px solid (var --color-grey-400))
+             :border-bottom 1px solid (var --color-grey-200))
 
      (.listing :margin-bottom 0
                :padding 0 (var --scale-0))
