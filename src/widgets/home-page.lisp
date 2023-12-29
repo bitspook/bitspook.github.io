@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget home-page-w (title posts author)
+(defwidget home-page-w (title posts author about-summary)
     (tagged-lass
      base-lass
 
@@ -88,6 +88,8 @@
           :margin (var --scale-4) 0
           :font-weight 500
 
+          (h2 :margin-bottom 0)
+
           (a :text-decoration underline
              :font-weight normal)))
 
@@ -162,8 +164,7 @@
      :class "about-me-snippet"
      (:header
       (:h2 "About Me"))
-     "I am a disco dancer."
-     (:footer "More " (:a :href "/about" "about me.")))
+     (spinneret:interpret-html-tree about-summary))
 
     (:section.recent-content
      (:header (:h2.heading "Recent content"))

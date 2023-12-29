@@ -64,6 +64,18 @@
         (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2))))
   "Chronologically ordered blog posts.")
 
+(defparameter about-me-summary
+  '(:p
+    (:p "I am a software engineer. I enjoy playing with software, electronics and video games. My favorites
+are Factorio, Rimworld and Terraria. I also enjoy reading, writing, people watching and discussing
+computers, security and politics.")
+    (:p "This website has things I am willing to share publicly. You can go through my "
+     (:a :href "/blog/" "blog") ", "
+     (:a :href "/poems" "poems") ", "
+     (:a :href "/projects" "projects") " and also some "
+     (:a :href "/talks" "talks") "I gave .")
+    (:p "You can read more about me" (:a :href "/about" "here."))))
+
 (defun build ()
   (let* ((www (path-join *base-dir* "docs/"))
          (static (path-join *base-dir* "src/static/"))
@@ -137,7 +149,8 @@
            (root (make 'home-page-w
                        :posts (take 5 *published-blog-posts*)
                        :title title
-                       :author *author*)))
+                       :author *author*
+                       :about-summary about-me-summary)))
       (publish page-pub
                :title title
                :slug ""

@@ -34,7 +34,8 @@
      (.next :flex-grow 1
             :text-align right))
 
-   :dark `((.title :border-bottom-color (var --color-grey-800)))
+   :dark `((.title :border-color (var --color-grey-800))
+           (.header :border-color (var --color-grey-800)))
 
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))

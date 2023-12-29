@@ -24,8 +24,15 @@
 
       (p :margin (var --size-2) 0)
 
-      (.rss-sub (a :display flex :align-items center)
-                (.rss :margin-right (var --size-2)))
+      (.rss-sub
+       (a :display flex :align-items center)
+       (.rss :margin-right (var --size-2)
+             :display block
+             :width 24px
+             :height 24px
+             :background (url "/images/icons/rss.svg")
+             :background-repeat no-repeat
+             :background-size contain))
 
       (.validation :display none))
      (:media ,(format nil "(max-width: ~a)" "840px")
