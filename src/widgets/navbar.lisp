@@ -4,6 +4,8 @@
   (tagged-lass
    `((.top-nav
       :min-height (var --size-16)
+      :max-width (var --width-lg)
+      :margin 0 auto
       :display flex
       :padding (var --size-2)
       :flex-direction column
