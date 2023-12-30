@@ -92,7 +92,7 @@ computers, security and politics.")
 
     ;; Publish all posts
     (loop :for post :in *published-blog-posts*
-          :do (publish post-pub :post post))
+          :do (publish post-pub :post post :feed-link "/archive/feed.xml"))
 
     ;; Publish a listing for each category
     (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
@@ -159,6 +159,7 @@ computers, security and politics.")
       (publish page-pub
                :title title
                :slug ""
+               :feed-link "/archive/feed.xml"
                :root-widget root))
     t))
 
