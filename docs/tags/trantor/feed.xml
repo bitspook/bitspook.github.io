@@ -1,21 +1,6 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<rss version="2.0">
-    <channel>
-        <title>Posts tagged `trantor&apos;</title>
-        <link>https://bitspook.in/</link>
-        <generator>cl-ownpress</generator>
-        <language>en-us</language>
-        <image>
-            <title>Posts tagged `trantor&apos;</title>
-            <url>/images/spooky-avatar.png</url>
-            <link>https://bitspook.in/</link>
-        </image>
-        <item>
-            <title>Microservices</title>
-            <link>https://bitspook.in/talks/microservices-techblend/</link>
-            <description>&lt;p&gt;
-I recently joined a Whatsapp group named &quot;Tech Blend&quot;, which conduct
-weekly online meetups. Topic for last meetup was &quot;Microservices&quot;, for
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Trantor - bitspook.in</title><id>https://bitspook.in/tags/trantor/feed.xml</id><updated>2023-12-30T16:29:28.208842Z</updated><link href="https://bitspook.in/tags/trantor/feed.xml" rel="self" title="Trantor"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Microservices</title><id>https://bitspook.in/talks/microservices-techblend</id><updated>2020-08-06T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/microservices-techblend" title="Microservices"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2020-08-06T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+I recently joined a Whatsapp group named &amp;quot;Tech Blend&amp;quot;, which conduct
+weekly online meetups. Topic for last meetup was &amp;quot;Microservices&amp;quot;, for
 which I volunteered. Since I was working for around 2 years on a
 microservices based project of decent complexity, I thought it would be
 fun to talk about my experience.
@@ -24,7 +9,7 @@ fun to talk about my experience.
 &lt;p&gt;
 The meetup was fun. I ran out of time. The meetup is quite well managed.
 Manpreet, the guy who organizes the meetup does a very good job
-respecting everyone&apos;s time while managing to have meaningful discussions
+respecting everyone's time while managing to have meaningful discussions
 at the same time. Their topics/talks are usually quite shallow, but this
 event management is something I can learn from participating in this
 group.
@@ -32,7 +17,7 @@ group.
 
 &lt;p&gt;
 Here are the slides for I created for the meetup. I was holding on to
-them hoping I&apos;ll create a video, but that&apos;s not happening. So I am just
+them hoping I'll create a video, but that's not happening. So I am just
 putting the slides over here.
 &lt;/p&gt;
 
@@ -41,18 +26,9 @@ Feel free to hit me up if you need some help regarding microservices, or
 if you need me to explain some slide, or just for a chat.
 &lt;/p&gt;
 
-&lt;iframe src=&quot;//slides.com/bitspook/microservices/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;iframe src=&quot;//slides.com/bitspook/microservices/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>microservices-techblend</guid>
-            <pubDate>2020-08-06T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Personal Brands for Software Developers (Talk)</title>
-            <link>https://bitspook.in/talks/personal-brands-for-software-developers-talk/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">Personal Brands for Software Developers (Talk)</title><id>https://bitspook.in/talks/personal-brands-for-software-developers-talk</id><updated>2019-10-21T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/personal-brands-for-software-developers-talk" title="Personal Brands for Software Developers (Talk)"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-10-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 After long diligence, me and my old (Trantor) team decided to organize a meetup
 to showcase our efforts, and to share our ideas with the local community. &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/events/263862634/&quot;&gt;The
 meetup&lt;/a&gt; was organized in Trantor on September 18, 2019.
@@ -60,27 +36,18 @@ meetup&lt;/a&gt; was organized in Trantor on September 18, 2019.
 
 &lt;p&gt;
 It was a collaborative talk given in 3 parts be me, Ayush Sharma, and
-Sheenam Narula. Attendance was very low, but that&apos;s usually how it is in
+Sheenam Narula. Attendance was very low, but that's usually how it is in
 Tricity. Overall it was a fun session with lengthy, and mostly fruitful
 discussions.
 &lt;/p&gt;
 
 &lt;p&gt;
-Here&apos;s my set of slides from the talk:
+Here's my set of slides from the talk:
 &lt;/p&gt;
 
-&lt;iframe src=&quot;//slides.com/bitspook/personal-brands-for-software-developers/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;iframe src=&quot;//slides.com/bitspook/personal-brands-for-software-developers/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>personal-brands-for-software-developers-talk</guid>
-            <pubDate>2019-10-21T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Quick and Pretty Docs for Software Projects</title>
-            <link>https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">Quick and Pretty Docs for Software Projects</title><id>https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects</id><updated>2019-08-28T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects" title="Quick and Pretty Docs for Software Projects"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-08-28T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 I have practiced
 &lt;a href=&quot;http://tom.preston-werner.com/2010/08/23/readme-driven-development.html&quot;&gt;Readme
 Driven Development&lt;/a&gt; on a number of my projects with varying milage. I
@@ -91,7 +58,7 @@ have often found myself wishing for a few things:
 &lt;li&gt;&lt;b&gt;More structure&lt;/b&gt; When writing the documentation, and even more so
 when reading it. A single markdown file starts getting out of hand
 really quickly. On my presonal projects I go for org-mode, which keep
-me satisfied. But when working on a professional gig, it don&apos;t feel
+me satisfied. But when working on a professional gig, it don't feel
 right to force other developers into org-mode/emacs.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;Prettiness&lt;/b&gt; Markdown is a quite reasonably readable format, but
 there is always room for prettyness.&lt;/li&gt;
@@ -106,7 +73,7 @@ generate site.
 To minimize the added complexity to our dev setup, and since I am
 already using docker to run dev-environments for almost all of my
 projects, I chose to leverage it for building my readme as a local
-&quot;service&quot;. i.e I chose to structure my documentation with filesystem,
+&amp;quot;service&amp;quot;. i.e I chose to structure my documentation with filesystem,
 and use docker to abstract the complexity of setting up the static site
 generator.
 &lt;/p&gt;
@@ -125,7 +92,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orga5a224d&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgb2ea8f2&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -140,10 +107,10 @@ documentation.
 &lt;p&gt;
 Here is the Dockerfile I have used to create the docs container. It
 downloads and sets up hugo with the theme in a single command without
-anything other than docker installed on a developer&apos;s machine.
+anything other than docker installed on a developer's machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org2cfe7c3&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgfca4ea5&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -153,8 +120,8 @@ ENV HOST=0.0.0.0
 
 RUN apk update &amp;amp;&amp;amp; apk add hugo git
 
-ENV HUGO_THEME_URL=&apos;https://github.com/matcornic/hugo-theme-learn&apos;
-ENV HUGO_THEME_COMMIT=&apos;2.4.0&apos;
+ENV HUGO_THEME_URL='https://github.com/matcornic/hugo-theme-learn'
+ENV HUGO_THEME_COMMIT='2.4.0'
 
 RUN mkdir -p /themes/current \
   &amp;amp;&amp;amp; cd /themes/current \
@@ -163,11 +130,11 @@ RUN mkdir -p /themes/current \
   &amp;amp;&amp;amp; git fetch --depth 1 origin $HUGO_THEME_COMMIT \
   &amp;amp;&amp;amp; git checkout FETCH_HEAD \
   &amp;amp;&amp;amp; cd /app
-RUN echo &quot;alias hugo=&apos;hugo --themesDir /themes --theme current&apos;&quot; &amp;gt; ~/.profile
+RUN echo &amp;quot;alias hugo='hugo --themesDir /themes --theme current'&amp;quot; &amp;gt; ~/.profile
 
 COPY . /app
 
-CMD hugo serve --port 3000 --bind=&apos;0.0.0.0&apos; --themesDir /themes --theme current
+CMD hugo serve --port 3000 --bind='0.0.0.0' --themesDir /themes --theme current
 &lt;/pre&gt;
 
 &lt;p&gt;
@@ -178,32 +145,23 @@ when building the docker image.
 &lt;/p&gt;
 
 &lt;p&gt;
-Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code&gt;docs&lt;/code&gt;, which allow me to
+Here is &lt;code&gt;config.toml&lt;/code&gt; file I've used for my &lt;code&gt;docs&lt;/code&gt;, which allow me to
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org484a2fe&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org087b2c3&quot;&gt;
 buildDrafts = true
-title = &quot;My Project&quot;
+title = &amp;quot;My Project&amp;quot;
 
 # For search functionality
 [outputs]
-home = [ &quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot;]
+home = [ &amp;quot;HTML&amp;quot;, &amp;quot;RSS&amp;quot;, &amp;quot;JSON&amp;quot;]
 
 [params]
-  author = &quot;My team&quot;
-  description = &quot;My project&apos;s cloud&quot;
+  author = &amp;quot;My team&amp;quot;
+  description = &amp;quot;My project's cloud&amp;quot;
 &lt;/pre&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>quick-and-pretty-docs-for-software-projects</guid>
-            <pubDate>2019-08-28T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Secure Software Teams Trantor</title>
-            <link>https://bitspook.in/talks/secure-software-teams-trantor/</link>
-            <description>&lt;iframe src=&quot;//slides.com/bitspook/secure-software-teams/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+</content></entry><entry><title type="text">Secure Software Teams Trantor</title><id>https://bitspook.in/talks/secure-software-teams-trantor</id><updated>2019-08-26T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/secure-software-teams-trantor" title="Secure Software Teams Trantor"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-08-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe src=&quot;//slides.com/bitspook/secure-software-teams/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
 
 &lt;p&gt;
@@ -217,12 +175,12 @@ propose setting up a Red Team in Trantor.
 &lt;p&gt;
 As practical part of this session, I created a docker based virtual lab
 with webgoat set up. During the session we went through some of the
-exercises, rest were left for the attendees as homework. Here&apos;s the
+exercises, rest were left for the attendees as homework. Here's the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgbb500fb&quot;&gt;
-version: &apos;3&apos;
+&lt;pre class=&quot;example&quot; id=&quot;org1b9b624&quot;&gt;
+version: '3'
 services:
   webgoat:
     image: webgoat/webgoat-8.0
@@ -230,14 +188,14 @@ services:
       - WEBWOLF_HOST=webwolf
       - WEBWOLF_PORT=9090
     ports:
-      - &quot;8080:8080&quot;
-      - &quot;9001:9001&quot;
+      - &amp;quot;8080:8080&amp;quot;
+      - &amp;quot;9001:9001&amp;quot;
     volumes:
       - ./docker-volumes/webgoat-home:/home/webgoat/.webgoat
   webwolf:
     image: webgoat/webwolf
     ports:
-      - &quot;9090:9090&quot;
+      - &amp;quot;9090:9090&amp;quot;
     command: --spring.datasource.url=jdbc:hsqldb:hsql://webgoat:9001/webgoat --server.address=0.0.0.0
 &lt;/pre&gt;
 
@@ -246,18 +204,9 @@ To start the lab, simply create a directory, save above snippet as
 &lt;code&gt;docker-compose.yml&lt;/code&gt;, and run &lt;code&gt;docker-compose up&lt;/code&gt; in it. You will then
 be able to access webgoat on &lt;a href=&quot;http://localhost:8080/WebGoat&quot;&gt;http://localhost:8080/WebGoat&lt;/a&gt;
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>secure-software-teams-trantor</guid>
-            <pubDate>2019-08-26T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Lessons From a Year of TDD</title>
-            <link>https://bitspook.in/talks/lessons-from-a-year-of-tdd/</link>
-            <description>&lt;style&gt;img { max-width: 600px; margin: 1rem 0; }&lt;/style&gt;
+</content></entry><entry><title type="text">Lessons From a Year of TDD</title><id>https://bitspook.in/talks/lessons-from-a-year-of-tdd</id><updated>2019-06-21T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/lessons-from-a-year-of-tdd" title="Lessons From a Year of TDD"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-06-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;style&gt;img { max-width: 600px; margin: 1rem 0; }&lt;/style&gt;
 
-&lt;iframe src=&quot;///slides.com/bitspook/lessons-from-a-year-of-tdd/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;iframe src=&quot;///slides.com/bitspook/lessons-from-a-year-of-tdd/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
 
 &lt;blockquote&gt;
@@ -265,7 +214,6 @@ be able to access webgoat on &lt;a href=&quot;http://localhost:8080/WebGoat&quot
 This talk was delivered in &lt;a href=&quot;https://agilenetworkindia.com/events/technical-agility-day-chandigarh/&quot;&gt;Technical Agility Day, Chandigarh (June 15, 2019)&lt;/a&gt;.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;div id=&quot;outline-container-transcript&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;transcript&quot;&gt;Transcript&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-transcript&quot;&gt;
@@ -275,14 +223,10 @@ but the transcript I prepared for the talk should sufficiently convey
 what I meant to say in the talk.
 &lt;/p&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-introduction&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-introduction&quot;&gt;
-&lt;img
-  src=&quot;/lfyot-slides/01--introduction-to-tdd-talk.png&quot;
-  title=&quot;Experience from a year of TDD by Charanjit Singh&quot;
-  alt=&quot;Experience from a year of TDD by Charanjit Singh&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;/lfyot-slides/01--introduction-to-tdd-talk.png&quot; title=&quot;Experience from a year of TDD by Charanjit Singh&quot; alt=&quot;Experience from a year of TDD by Charanjit Singh&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Hello everyone, my name is Charanjit. I am working as a technical lead
@@ -290,10 +234,10 @@ at Trantor.
 &lt;/p&gt;
 
 &lt;p&gt;
-I joined Trantor a year ago, in one of Trantor&apos;s projects where I was
+I joined Trantor a year ago, in one of Trantor's projects where I was
 fortunate enough to see people willing to apply test driven development
 on what was going to become a rather complex project. I am leading one
-part of this project under a team named &quot;The cloud team&quot;. This talk is
+part of this project under a team named &amp;quot;The cloud team&amp;quot;. This talk is
 the story of things we learned while practicing test driven development
 to build a micro-services based cloud with several third-party
 integrations.
@@ -302,7 +246,7 @@ integrations.
 &lt;p&gt;
 Our cloud is built primarily with Node.js (express.js), uses GraphQL to
 communicate with clients as well as for inter-service communication,
-backed by Azure&apos;s CosmosDB (with its Mongo API), has Kafka for messaging
+backed by Azure's CosmosDB (with its Mongo API), has Kafka for messaging
 queue, and Elasticsearch for complex search solutions. We have about 9
 services till today, and 3 third party integrations. We are building an
 IOT-ish solution, and our cloud primarily serves the android application
@@ -312,21 +256,20 @@ running on our custom hardware, along with some companion applications
 
 &lt;p&gt;
 Before we get into the details of how we did TDD in our project, or of
-TDD itself, let&apos;s take a step back and work out some abstract thoughts.
+TDD itself, let's take a step back and work out some abstract thoughts.
 Abstract thoughts about what we are trying to accomplish with techniques
-like TDD. Actually, let&apos;s take all the steps back and go to the very
+like TDD. Actually, let's take all the steps back and go to the very
 beginning.
 &lt;/p&gt;
 
 &lt;p&gt;
-In the beginning, there were myths. Humans weren&apos;t always recording
+In the beginning, there were myths. Humans weren't always recording
 history. The myths were used to fill the plot holes in stories told by
 one generation to next. A common and very fascinating theme among the
 myths of different cultures is that of magic.
 &lt;/p&gt;
 
-&lt;img src=&quot;/lfyot-slides/02--the-wizard.png&quot; title=&quot;The Wizard&quot; alt=&quot;The
-Wizard&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;/lfyot-slides/02--the-wizard.png&quot; title=&quot;The Wizard&quot; alt=&quot;The&amp;#xA;Wizard&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Allegedly there used to be some very special people who could use the
@@ -339,8 +282,7 @@ reality itself to their will.
 But those were of course myths. What we have now are developers.
 &lt;/p&gt;
 
-&lt;img src=&quot;/lfyot-slides/03--the-stallman.png&quot; title=&quot;The Stallman&quot;
-alt=&quot;The Stallman&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;/lfyot-slides/03--the-stallman.png&quot; title=&quot;The Stallman&quot; alt=&quot;The Stallman&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Well, I argue that developers are in fact the wizards of the information
@@ -356,8 +298,7 @@ computer)&lt;/li&gt;
 you want it to be)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;img src=&quot;/lfyot-slides/04--the-stallzard.png&quot; title=&quot;The Stallzard&quot;
-alt=&quot;The Stallzard&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;/lfyot-slides/04--the-stallzard.png&quot; title=&quot;The Stallzard&quot; alt=&quot;The Stallzard&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Raw materials for the products a software developer creates are the
@@ -365,12 +306,10 @@ thoughts. The third point here is the focus of this talk.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-software-as-universe&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;software-as-universe&quot;&gt;Software as Universe&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-software-as-universe&quot;&gt;
-  &lt;img src=&quot;/lfyot-slides/05--the-universe.png&quot; title=&quot;The Universe&quot;
-alt=&quot;The Universe&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/05--the-universe.png&quot; title=&quot;The Universe&quot; alt=&quot;The Universe&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 I am not kidding. I believe it is fair to say that every software is a
@@ -388,8 +327,7 @@ Do anyone here watches Rick and Morty? It is a good show about a
 rockstar and a junior software developer. Try it sometime.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/06--the-microverse.png&quot; title=&quot;The Microverse&quot;
-alt=&quot;The Microverse&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/06--the-microverse.png&quot; title=&quot;The Microverse&quot; alt=&quot;The Microverse&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 One of the episodes are about the microverse battery. The rockstar
@@ -403,9 +341,7 @@ battery does the exact same thing. Creates a universe whose sole purpose
 is to power its host.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/07--many-layers-of-microverse.png&quot; title=&quot;Many
-layers of the Microverse&quot; alt=&quot;Many layers of the Microverse&quot;
-width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/07--many-layers-of-microverse.png&quot; title=&quot;Many&amp;#xA;layers of the Microverse&quot; alt=&quot;Many layers of the Microverse&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Software we write are not very different. We create entire universe to
@@ -413,30 +349,26 @@ serve our needs, and it is rarely created in isolation. Usually our
 universe has a bunch of other, more complex universes wrapped around it.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/08--realm-of-tux.png&quot; title=&quot;The realm of Tux&quot;
-alt=&quot;The realm of Tux&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/08--realm-of-tux.png&quot; title=&quot;The realm of Tux&quot; alt=&quot;The realm of Tux&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 We often start with a base universe of Operating system. The platform,
 programming language, the frameworks, they all make up for our initial
-&quot;empty&quot; worlds. They set up their layers of rules, on which then we
+&amp;quot;empty&amp;quot; worlds. They set up their layers of rules, on which then we
 write our own. Layers and layers of worlds.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/11--layers-of-software-universe.png&quot; title=&quot;Many
-layered of software universe&quot; alt=&quot;Many layered of software universe&quot;
-width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/11--layers-of-software-universe.png&quot; title=&quot;Many&amp;#xA;layered of software universe&quot; alt=&quot;Many layered of software universe&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Now, how do we populate this empty universe with the inhabitants which
 would do our bidding? Well, with our thoughts and prayers of course.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/13--pray-to-the-machine.png&quot; title=&quot;Pray to the
-machine&quot; alt=&quot;Pray to the machine&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/13--pray-to-the-machine.png&quot; title=&quot;Pray to the&amp;#xA;machine&quot; alt=&quot;Pray to the machine&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
-I am not kidding. But you get it, you aren&apos;t laughing. We literally send
+I am not kidding. But you get it, you aren't laughing. We literally send
 our thoughts, often prayers as well, formulated in some special form
 governed by some programming language to a compiler (or interpreter),
 which then inhabit and basically forms the universe of our software.
@@ -444,23 +376,20 @@ which then inhabit and basically forms the universe of our software.
 
 &lt;blockquote&gt;
 &lt;p&gt;
-Asgard isn&apos;t a place. Asgard is its people.
+Asgard isn't a place. Asgard is its people.
 &lt;/p&gt;
 &lt;/blockquote&gt;
 
-  &lt;img src=&quot;/lfyot-slides/14--pray-to-the-compiler.png&quot; title=&quot;Pray to the
-compiler&quot; alt=&quot;Pray to the compiler&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/14--pray-to-the-compiler.png&quot; title=&quot;Pray to the&amp;#xA;compiler&quot; alt=&quot;Pray to the compiler&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 That brings us to the corollary which takes us in the general direction
 of practices like Test Driven Development.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/15--bugs-are-thoughts-gone-wrong.png&quot; title=&quot;Bugs
-are thoughts too&quot; alt=&quot;Bugs are thoughts too&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/15--bugs-are-thoughts-gone-wrong.png&quot; title=&quot;Bugs&amp;#xA;are thoughts too&quot; alt=&quot;Bugs are thoughts too&quot; width=&quot;100%&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-bugs-are-thoughts-gone-wrong&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;bugs-are-thoughts-gone-wrong&quot;&gt;Bugs are thoughts, gone wrong&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-bugs-are-thoughts-gone-wrong&quot;&gt;
@@ -490,12 +419,11 @@ subsequently.
 This is what TDD essentially do.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/16--tdd-validates-thoughts.png&quot; title=&quot;Bugs are
-thoughts too&quot; alt=&quot;Bugs are thoughts too&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/16--tdd-validates-thoughts.png&quot; title=&quot;Bugs are&amp;#xA;thoughts too&quot; alt=&quot;Bugs are thoughts too&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 The first point points to the red-green-refactor cycle. When doing TDD,
-you write down the &quot;what&quot; aspect of the unit/module/function you are
+you write down the &amp;quot;what&amp;quot; aspect of the unit/module/function you are
 going to write. It essentially allow you to pause, sit back, and think
 about what you are going to implement. How it should behave.
 &lt;/p&gt;
@@ -506,7 +434,6 @@ when we have to then make changes in our.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-busting-some-myths&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;busting-some-myths&quot;&gt;Busting some Myths&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-busting-some-myths&quot;&gt;
@@ -522,17 +449,15 @@ involved. Disregarding the learning curve, developing same features took
 us roughly 30% longer to develop new features in our project.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/17--myth-tdd-is-time-consuming.png&quot; title=&quot;Myth
-#1: TDD is time consuming&quot; alt=&quot;Myth #1: TDD is time consuming&quot;
-width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/17--myth-tdd-is-time-consuming.png&quot; title=&quot;Myth&amp;#xA;#1: TDD is time consuming&quot; alt=&quot;Myth #1: TDD is time consuming&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 But this time is an investment you are making into your software, as
 well as your developers. When the project started off, we did start off
-slow. Other teams (there are 3 including us) were delivering more &quot;story
-points&quot;. After about 3-4 months however, both other teams had dedicated
+slow. Other teams (there are 3 including us) were delivering more &amp;quot;story
+points&amp;quot;. After about 3-4 months however, both other teams had dedicated
 processes set up to tackle bugs, to prioritize and decide which bugs to
-quash and which ones to live with. We still don&apos;t have any process
+quash and which ones to live with. We still don't have any process
 explicitly for bugs.
 &lt;/p&gt;
 
@@ -542,7 +467,7 @@ and pivots throughout the year. While other teams were struggling with
 new bugs after every such change, we were delivering at pretty much the
 same pace. Every bug that occurred in cloud got test(s) for it too, so
 no mistakes were repeated. Till now, we have been able to keep the list
-of bugs small enough that we don&apos;t pay particular attention to it.
+of bugs small enough that we don't pay particular attention to it.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -552,9 +477,7 @@ amount of effort to make the tests our live documentation for
 developers, and it paid dividends.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/24--tdd-gave-us-free-time.png&quot; title=&quot;TDD gave us
-time to invest elsewhere&quot; alt=&quot;TDD gave us time to invest elsewhere&quot;
-width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/24--tdd-gave-us-free-time.png&quot; title=&quot;TDD gave us&amp;#xA;time to invest elsewhere&quot; alt=&quot;TDD gave us time to invest elsewhere&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Not just that, TDD actually gave our team to do more than just our
@@ -568,52 +491,47 @@ aggregation, Elasticsearch, Kibana and Kafka) running on new machine.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-myth-2-tdd-is-about-tests&quot; class=&quot;outline-4&quot;&gt;
 &lt;h4 id=&quot;myth-2-tdd-is-about-tests&quot;&gt;Myth #2 : TDD is about tests&lt;/h4&gt;
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-myth-2-tdd-is-about-tests&quot;&gt;
 &lt;p&gt;
-It is not. &quot;DD&quot; in &quot;TDD&quot; is more important than &quot;T&quot;. We learned this the
+It is not. &amp;quot;DD&amp;quot; in &amp;quot;TDD&amp;quot; is more important than &amp;quot;T&amp;quot;. We learned this the
 hard way because of lack of experience with TDD. When you are applying
 TDD on a new project, &lt;b&gt;your tests should be driving the development&lt;/b&gt;.
-Tests by themselves aren&apos;t the goal. The essential thing you must do to
+Tests by themselves aren't the goal. The essential thing you must do to
 ensure this, is to ensure that you write tests first.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/24--myth-tdd-is-about-tests.png&quot; title=&quot;Myth #2:
-TDD is about Tests&quot; alt=&quot;Myth #2: TDD is about Tests&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/24--myth-tdd-is-about-tests.png&quot; title=&quot;Myth #2:&amp;#xA;TDD is about Tests&quot; alt=&quot;Myth #2: TDD is about Tests&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Tests written after the fact are practically handicapped. No matter how
 good a developer you are, when you are writing tests after you have
-written the feature/code, the &quot;how&quot; aspect of your code will creep in,
+written the feature/code, the &amp;quot;how&amp;quot; aspect of your code will creep in,
 and your tests will never be as effective as they could have been. Same
 goes for the feature you are writing.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-myth-3-tdd-means-no-bugs&quot; class=&quot;outline-4&quot;&gt;
 &lt;h4 id=&quot;myth-3-tdd-means-no-bugs&quot;&gt;Myth #3 : TDD means no bugs&lt;/h4&gt;
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-myth-3-tdd-means-no-bugs&quot;&gt;
 &lt;p&gt;
-This is what I&apos;ve been advertising so far, ain&apos;t I! Well, it is not a
+This is what I've been advertising so far, ain't I! Well, it is not a
 100% truth. Even if we ignore the fact that your tests will almost never
 be 100% complete, TDD will not guarantee a fully correct software.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/29--myth-tdd-means-no-bugs.png&quot; title=&quot;Myth #3:
-TDD means no bugs&quot; alt=&quot;Myth #3: TDD means no bugs&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/29--myth-tdd-means-no-bugs.png&quot; title=&quot;Myth #3:&amp;#xA;TDD means no bugs&quot; alt=&quot;Myth #3: TDD means no bugs&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 TDD is your last line of defense. By the time you have sat down to
 judiciously implement TDD, the thoughts that are going to populate your
-software&apos;s universe have already been set. All you are going to do is
+software's universe have already been set. All you are going to do is
 verify that they behave as it has been decided.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/32--protect-yourself-from-your-po.png&quot;
-title=&quot;Adopt BDD&quot; alt=&quot;Adopt BDD&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/32--protect-yourself-from-your-po.png&quot; title=&quot;Adopt BDD&quot; alt=&quot;Adopt BDD&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 BDD operates at a much higher layer than TDD. At the layer where
@@ -625,13 +543,10 @@ to have, I can see how much time and confusion it could have saved us.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-grow-as-a-developer&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;grow-as-a-developer&quot;&gt;Grow as a developer&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-grow-as-a-developer&quot;&gt;
-  &lt;img src=&quot;/lfyot-slides/33--tdd-guides-you-in-right-direction.png&quot;
-title=&quot;TDD Guides you in right direction&quot; alt=&quot;TDD Guides you in right
-direction&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/33--tdd-guides-you-in-right-direction.png&quot; title=&quot;TDD Guides you in right direction&quot; alt=&quot;TDD Guides you in right&amp;#xA;direction&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 It was an interesting observation. Team seem to have a much higher
@@ -642,24 +557,21 @@ more fruitful brought a cultural shift in the team.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-when-adding-tdd-to-a-new-team&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;when-adding-tdd-to-a-new-team&quot;&gt;When adding TDD to a new team&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-when-adding-tdd-to-a-new-team&quot;&gt;
-  &lt;img src=&quot;/lfyot-slides/38--brace-yourself.png&quot; title=&quot;When adding TDD to
-a new team&quot; alt=&quot;When adding TDD to a new team&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/38--brace-yourself.png&quot; title=&quot;When adding TDD to&amp;#xA;a new team&quot; alt=&quot;When adding TDD to a new team&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
-Biggest resistance we faced was convincing developers that it&apos;s worth
+Biggest resistance we faced was convincing developers that it's worth
 their while to write tests &lt;b&gt;before&lt;/b&gt; they write code for their code. We
 ended up introducing an extra step in our PR review checklist: &lt;i&gt;ensure
-there is a &quot;test:&quot; commit which only has test descriptions&lt;/i&gt;. This helped
+there is a &amp;quot;test:&amp;quot; commit which only has test descriptions&lt;/i&gt;. This helped
 somewhat, but it took some time (and a lot of pair programming) till
 developers realized the benefits of this process.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-things-i-wish-we-did&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;things-i-wish-we-did&quot;&gt;Things I wish we did&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-things-i-wish-we-did&quot;&gt;
@@ -667,11 +579,10 @@ developers realized the benefits of this process.
 &lt;div id=&quot;outline-container-mutation-testing&quot; class=&quot;outline-4&quot;&gt;
 &lt;h4 id=&quot;mutation-testing&quot;&gt;Mutation Testing&lt;/h4&gt;
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-mutation-testing&quot;&gt;
-  &lt;img src=&quot;/lfyot-slides/41--mutation-testing.png&quot; title=&quot;I wish we did:
-Mutation Testing&quot; alt=&quot;I wish we did: Mutation Testing&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/41--mutation-testing.png&quot; title=&quot;I wish we did:&amp;#xA;Mutation Testing&quot; alt=&quot;I wish we did: Mutation Testing&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
-So, coverage reports are big fat liars. They don&apos;t tell you how your
+So, coverage reports are big fat liars. They don't tell you how your
 tests are doing. In my opinion, they are more like the Velocity Charts
 our Scrum Master loves so much. They tell you if you are going in the
 correct general direction, and it is very easy to make them lie.
@@ -688,23 +599,20 @@ gives a lot better insight into the strength of your tests.
 &lt;p&gt;
 We experimented with mutation testing for a while. But I suppose because
 of lack of integration of a platform for our CI (Bamboo) to present
-thorough coverage reports, we haven&apos;t yet made mutation testing a part
+thorough coverage reports, we haven't yet made mutation testing a part
 of our test process.
 &lt;/p&gt;
 
 &lt;p&gt;
 I can see how it can make PR reviews a lot more effective though. I hope
-we can take some time out of our everlasting &quot;churn mode&quot; for this.
+we can take some time out of our everlasting &amp;quot;churn mode&amp;quot; for this.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-bdd&quot; class=&quot;outline-4&quot;&gt;
 &lt;h4 id=&quot;bdd&quot;&gt;BDD&lt;/h4&gt;
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-bdd&quot;&gt;
-  &lt;img src=&quot;/lfyot-slides/42--bdd.png&quot; title=&quot;I wish we did: Behavior
-Driven Development&quot; alt=&quot;I wish we did: Behavior Driven Development&quot;
-width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/42--bdd.png&quot; title=&quot;I wish we did: Behavior&amp;#xA;Driven Development&quot; alt=&quot;I wish we did: Behavior Driven Development&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 We implemented BDD a bit late (just a couple months ago) when we had
@@ -720,7 +628,7 @@ make the communication between product people and developers much more
 correct.
 &lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;hr&gt;
 
 &lt;p&gt;
 I apologize for rushing the transcript a bit in last few headlines
@@ -729,25 +637,15 @@ talk again at some occasion, I will revisit and will probably add some
 velocity/burndown charts from Jira as well.
 &lt;/p&gt;
 
-&lt;img src=&quot;/lfyot-slides/47--thank-you.png&quot; title=&quot;Thank you for your
-patience&quot; alt=&quot;Thank you for your patience&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;/lfyot-slides/47--thank-you.png&quot; title=&quot;Thank you for your&amp;#xA;patience&quot; alt=&quot;Thank you for your patience&quot; width=&quot;100%&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>lessons-from-a-year-of-tdd</guid>
-            <pubDate>2019-06-21T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Personal brands for software developers</title>
-            <link>https://bitspook.in/blog/personal-brands-for-software-developers/</link>
-            <description>&lt;p&gt;
-&lt;a href=&quot;file:///blog/maximize-individual-growing-in-a-software-team-2-month-report/&quot;&gt;Reflecting on the progress&lt;/a&gt; we have made in our &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;&quot;nurture a culture of individual
-growth in a software team&quot; initiative&lt;/a&gt;, I realized there is much to gain from
-candy wrapping our efforts. As per our plan, we&apos;ll be (and are) giving talks,
+</content></entry><entry><title type="text">Personal brands for software developers</title><id>https://bitspook.in/blog/personal-brands-for-software-developers</id><updated>2019-04-01T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/personal-brands-for-software-developers" title="Personal brands for software developers"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-04-01T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+&lt;a href=&quot;file:///blog/maximize-individual-growing-in-a-software-team-2-month-report/&quot;&gt;Reflecting on the progress&lt;/a&gt; we have made in our &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;&amp;quot;nurture a culture of individual
+growth in a software team&amp;quot; initiative&lt;/a&gt;, I realized there is much to gain from
+candy wrapping our efforts. As per our plan, we'll be (and are) giving talks,
 doing research, and writing itch-scratching code. Coming out of shadows and
 presenting our efforts in a nice frame present many fold benefits.
 &lt;/p&gt;
@@ -756,7 +654,6 @@ presenting our efforts in a nice frame present many fold benefits.
 My proposal is to invest energy in making our efforts more visible. To
 focus this emotion on a more concrete goal, I have chosen
 &lt;/p&gt;
-
 &lt;div id=&quot;outline-container-establishing-a-personal-brand&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;establishing-a-personal-brand&quot;&gt;Establishing a personal brand&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-establishing-a-personal-brand&quot;&gt;
@@ -774,11 +671,10 @@ our team(s), and I believe visibility of this growth is important for
 its sustenance. The organization we work for, if it can see us growing
 new skills, will be able to leverage them, hence contributing more to
 our growth. Before I start fantasizing about all the good this can bring
-to us, let&apos;s brainstorm on
+to us, let's brainstorm on
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-how-can-we-establish-ourselves-as-brands&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;how-can-we-establish-ourselves-as-brands&quot;&gt;How can we establish ourselves as brands?&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-can-we-establish-ourselves-as-brands&quot;&gt;
@@ -804,7 +700,7 @@ incorporating all the steps we have chosen in our personal websites:
 
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;b&gt;Talks/Presentations section&lt;/b&gt; for the talks we deliver. Perhaps we
-can have &quot;Review&quot; section for the talks we attend&lt;/li&gt;
+can have &amp;quot;Review&amp;quot; section for the talks we attend&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;A blog&lt;/b&gt; for sharing the discussions we have on
 &lt;a href=&quot;http://forum.trantorinc.com/&quot;&gt;Trantor forum&lt;/a&gt;, our research notes,
 thoughts, opinions and just about anything. Blogs are great for
@@ -833,7 +729,7 @@ the internet to get noticed organically. Once we have the bare minimum
 content creation pipeline, we can then focus on polishing things like
 how it looks, SEO, automatic sharing across social media platforms,
 analytic and data gathering, automatic updates for new content. I
-wouldn&apos;t delve too deep into this right now.
+wouldn't delve too deep into this right now.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -850,23 +746,23 @@ hackathons etc.
 &lt;/p&gt;
 
 &lt;p&gt;
-We are in a unique position in this regard, the tech &quot;culture&quot; in our city
+We are in a unique position in this regard, the tech &amp;quot;culture&amp;quot; in our city
 (Chandigarh) is yet barely blossoming. It used to be a &lt;a href=&quot;file:///blog/dear-first-world-dev-have-a-look-at-your-nightmare/&quot;&gt;rather gloomy picture&lt;/a&gt;
 around here, but I believe people have now started seeing the exploitation going
 around in the tech scene of the city for what it is. &lt;a href=&quot;https://www.meetup.com/find/events/?allMeetups=true&amp;amp;radius=10&amp;amp;userFreeform=Chandigarh%252C+India&amp;amp;mcId=z1018132&amp;amp;mcName=Chandigarh%252C+IN&amp;amp;eventFilter=mysugg&quot;&gt;More and more meetup groups&lt;/a&gt;
 are blossoming for the good. Participating in these groups can be a great source
 of content for our online presence. Before I start day-dreaming about how we can
-hack for Chandigarh, I&apos;ll shut up about it : )
+hack for Chandigarh, I'll shut up about it : )
 &lt;/p&gt;
 
 &lt;p&gt;
 For this, I suppose the next course of action is to open the sessions we
 have been doing for public to attend. Trantor is one of the few
 companies I have seen being quite open for organizing meetups in
-Tricity, so this shouldn&apos;t be a problem from that front.
+Tricity, so this shouldn't be a problem from that front.
 &lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;hr&gt;
 
 &lt;p&gt;
 Here is what I am imagining for our next goal is to attain our grand
@@ -876,27 +772,17 @@ our endeavor.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>personal-brands-for-software-developers</guid>
-            <pubDate>2019-04-01T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Maximize individual growing in a software team (2 month report)</title>
-            <link>https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">Maximize individual growing in a software team (2 month report)</title><id>https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report</id><updated>2019-03-26T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report" title="Maximize individual growing in a software team (2 month report)"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-03-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 Couple months ago we started an &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;initiative&lt;/a&gt; in our team here at &lt;a href=&quot;http://trantorinc.com/&quot;&gt;Trantor&lt;/a&gt; with the
 focus on nurturing a culture which optimizes personal growth of an individual in
-the team. I believe it is turning out to be quite successful. We decided we&apos;ll
+the team. I believe it is turning out to be quite successful. We decided we'll
 focus on 4 things to achieve our goal:
 &lt;/p&gt;
-
 &lt;div id=&quot;outline-container-interactive-sessions-of-tools-technologies&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;interactive-sessions-of-tools-technologies&quot;&gt;Interactive sessions of tools/technologies&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-interactive-sessions-of-tools-technologies&quot;&gt;
 &lt;p&gt;
-This is where we&apos;ve observed most success. We have had 4 sessions in
+This is where we've observed most success. We have had 4 sessions in
 past 2 months (we do two-week sprints), with following primary topics:
 &lt;/p&gt;
 
@@ -911,7 +797,6 @@ Singh (me)&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-collaboratively-studying-open-source-projects-we-use&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;collaboratively-studying-open-source-projects-we-use&quot;&gt;Collaboratively studying open source projects we use&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-collaboratively-studying-open-source-projects-we-use&quot;&gt;
@@ -919,12 +804,11 @@ Singh (me)&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
 We started off with &lt;code&gt;chai.js&lt;/code&gt;, but after probably spending only a few
 minutes each, the
 &lt;a href=&quot;https://docs.google.com/document/d/13dko42FS9kcnpqnrjp9QCouQO0vZHDQ0tslID3BAQBs/edit?usp=sharing&quot;&gt;google
-doc&lt;/a&gt; we created for collaboratively creating notes didn&apos;t see much
+doc&lt;/a&gt; we created for collaboratively creating notes didn't see much
 action.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-being-active-in-trantor-forums&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;being-active-in-trantor-forums&quot;&gt;Being active in Trantor forums&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-being-active-in-trantor-forums&quot;&gt;
@@ -933,18 +817,17 @@ Plan was to use Trantor Forums as a platform for proposing
 (revolutionary) changes in our project. We started off with
 &lt;a href=&quot;https://forum.trantorinc.com/t/suggested-improvements-for-tdd-in-veriown-cloud-mutation-testing-and-running-tests-concurrently/74&quot;&gt;a
 proposal to introduce mutation testing&lt;/a&gt; in our test-coverage reports,
-but didn&apos;t move forward from that.
+but didn't move forward from that.
 &lt;/p&gt;
 
 &lt;p&gt;
-I believe this is because we don&apos;t really spend as much time exploring
+I believe this is because we don't really spend as much time exploring
 new/different things/subject-matters to be able to bring more of such
 proposals. This problem is one of many that should fix itself if we are
 successful in fostering a culture of self growth in the team.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-day-long-hackathons&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;day-long-hackathons&quot;&gt;Day long hackathons&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-day-long-hackathons&quot;&gt;
@@ -952,32 +835,23 @@ successful in fostering a culture of self growth in the team.
 We are yet to realize this dream. Shiva proposed a neat little idea to
 solve a problem faced by Trantor employees, but turned out an official
 solution was already in the works and about to be released in couple
-weeks (it didn&apos;t). I believe we should have just gone ahead and spend a
+weeks (it didn't). I believe we should have just gone ahead and spend a
 day to build what we wanted, just for the heck of it. That would have
 been more fruitful.
 &lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;hr&gt;
 
 &lt;p&gt;
 Above points are more than just steps to achieve our goal, I believe,
 they are also metrics of our success. How much engagement each of these
 get reflects on how much of a self-growth culture is prospering in the
 team. I wonder if we can somehow quantize these per-person. If nothing
-else, that&apos;ll create some cool graphs to gawk at.
+else, that'll create some cool graphs to gawk at.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>maximize-individual-growing-in-a-software-team-2-month-report</guid>
-            <pubDate>2019-03-26T01:00:00.000000+01:00</pubDate>
-        </item>
-        <item>
-            <title>How to maximize individual growth in a software team?</title>
-            <link>https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">How to maximize individual growth in a software team?</title><id>https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team</id><updated>2019-01-21T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team" title="How to maximize individual growth in a software team?"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-01-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 Working as a solo freelance developer, I used to have lofty ideas of how
 a group of people can grow so much more together. I imagined how a mind
 in the hive can grow at exponential rates. I made several attempts to
@@ -987,8 +861,8 @@ degree, most were not. Now working in a software development team at
 &lt;/p&gt;
 
 &lt;p&gt;
-I still believe that it&apos;s a worthwhile general direction to move in. In
-this post, I am asking myself (and you) the question of &quot;how&quot;. How can
+I still believe that it's a worthwhile general direction to move in. In
+this post, I am asking myself (and you) the question of &amp;quot;how&amp;quot;. How can
 we maximize growth of an individual developer in a software team?
 &lt;/p&gt;
 
@@ -1004,18 +878,18 @@ code, and also to make it elegant at many levels.
 &lt;/p&gt;
 
 &lt;p&gt;
-Why focus on an individual&apos;s growth? I believe people are selfish by
+Why focus on an individual's growth? I believe people are selfish by
 design. We think first for ourselves, then for our family, then for our
 closest community, and so on. Growing individuals help teams (and
 companies) directly as well. A culture of growth attracts good
 developers, more good developers are good for teams/companies than
-mediocre/bad ones. Optimizing for an individual&apos;s growth seem like a
+mediocre/bad ones. Optimizing for an individual's growth seem like a
 good idea to me. I think it adds significant positive value to everyone
 involved in the process of writing software.
 &lt;/p&gt;
 
 &lt;p&gt;
-Now then, how do we optimize for an individual&apos;s growth? I had a
+Now then, how do we optimize for an individual's growth? I had a
 discussion with the team here and we came up with some points that we
 are going to try this
 &lt;a href=&quot;https://www.atlassian.com/agile/scrum/sprints&quot;&gt;sprint&lt;/a&gt;. Plan is to
@@ -1024,12 +898,11 @@ on the extra day we earn, we sit back together, analyze two weeks of our
 code, share peer feedback, and dig into one or more of following
 activities.
 &lt;/p&gt;
-
 &lt;div id=&quot;outline-container-interactive-sessions-of-new-tools-technologies&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;interactive-sessions-of-new-tools-technologies&quot;&gt;Interactive sessions of new tools/technologies&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-interactive-sessions-of-new-tools-technologies&quot;&gt;
 &lt;p&gt;
-Topmost and shiniest layer of a software developer&apos;s growth is knowledge
+Topmost and shiniest layer of a software developer's growth is knowledge
 of new tools and technologies. Some of us explore more technologies than
 others. It was proposed that team members present a tool or technology,
 and give an interactive session of something they find cool. This can be
@@ -1048,12 +921,11 @@ developer should be familiar with devops.
 
 &lt;p&gt;
 I differ from the proposal by the team a bit though. I think it is cool
-to just &quot;show and tell&quot; bi-weekly, giving an interactive session is a
+to just &amp;quot;show and tell&amp;quot; bi-weekly, giving an interactive session is a
 good to have.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-collaboratively-studying-open-source-projects-we-use&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;collaboratively-studying-open-source-projects-we-use&quot;&gt;Collaboratively studying open source projects we use&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-collaboratively-studying-open-source-projects-we-use&quot;&gt;
@@ -1067,7 +939,6 @@ this sprint.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-put-forward-new-approaches-in-forums&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;put-forward-new-approaches-in-forums&quot;&gt;Put forward new approaches in forums&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-put-forward-new-approaches-in-forums&quot;&gt;
@@ -1075,8 +946,8 @@ this sprint.
 Often times there are disagreements in team regarding approaches that
 can be taken towards a problem. Or sometimes under the pressure of
 delivery we pick one approach on another. If the taken approach is too
-bad, a technical debt is created, but when it is &quot;good enough&quot;, we just
-move on. We don&apos;t want to let this slide. We should reconsider these
+bad, a technical debt is created, but when it is &amp;quot;good enough&amp;quot;, we just
+move on. We don't want to let this slide. We should reconsider these
 small improvements, and keep incrementally improving and challenging our
 current practices.
 &lt;/p&gt;
@@ -1093,7 +964,6 @@ and bring activity in our forums as well.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-day-long-hackathons&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;day-long-hackathons&quot;&gt;Day long Hackathons&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-day-long-hackathons&quot;&gt;
@@ -1118,18 +988,9 @@ Please put in comments below if you have opinions and/or suggestions!
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>how-to-maximize-individual-growth-in-a-software-team</guid>
-            <pubDate>2019-01-21T01:00:00.000000+01:00</pubDate>
-        </item>
-        <item>
-            <title>That sounds fun!</title>
-            <link>https://bitspook.in/blog/that-sounds-fun/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">That sounds fun!</title><id>https://bitspook.in/blog/that-sounds-fun</id><updated>2018-09-11T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/that-sounds-fun" title="That sounds fun!"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2018-09-11T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 I got an opportunity to introspect in a conversation with a client when
-he questioned my use of the word &quot;fun&quot;. What do I mean when I say
+he questioned my use of the word &amp;quot;fun&amp;quot;. What do I mean when I say
 something is fun? I am not entirely sure. May be when I see something
 that excites me a little. People have very different interpretations of
 fun. For me it is usually applying creativity to build something.
@@ -1145,7 +1006,7 @@ to be fun?
 &lt;/p&gt;
 
 &lt;p&gt;
-It might be an opportunity to learn something new. The unknown scares me. It&apos;s a
+It might be an opportunity to learn something new. The unknown scares me. It's a
 thrill and possibly vain feeling of growth. I have a long list of things I want
 to learn/master. When my mind sees an opportunity to check a box off of that
 list, it gets excited.
@@ -1154,23 +1015,16 @@ list, it gets excited.
 &lt;p&gt;
 It might as well be pure vanity. Vanity plays important part in my mind. When my
 subconscious thinks keeping appearances is important, seeing a geeky-sounding
-statement just automatically make it blabber &quot;that sounds fun&quot;. Although I try
+statement just automatically make it blabber &amp;quot;that sounds fun&amp;quot;. Although I try
 to keep my narcissism in check, occasional slips are a thing.
 &lt;/p&gt;
 
 &lt;p&gt;
-Another thing that I think I consider fun is &quot;fixing&quot; something. It is quite
-possible to mark me as a control freak; although I won&apos;t voluntarily accept the
+Another thing that I think I consider fun is &amp;quot;fixing&amp;quot; something. It is quite
+possible to mark me as a control freak; although I won't voluntarily accept the
 label. I do however occasionally attain rather strong opinions about how certain
-things shall be. When I see an opportunity to &quot;fix&quot; something to my definition
+things shall be. When I see an opportunity to &amp;quot;fix&amp;quot; something to my definition
 of right, that is a strong motivational force. However unreliable it might be,
 working with motivation is fun.
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>that-sounds-fun</guid>
-            <pubDate>2018-09-11T02:00:00.000000+02:00</pubDate>
-        </item>
-    </channel>
-</rss>
+</content></entry><base href="https://bitspook.in"/></feed>

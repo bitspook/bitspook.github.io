@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<rss version="2.0">
-    <channel>
-        <title>Posts tagged `org-roam&apos;</title>
-        <link>https://bitspook.in/</link>
-        <generator>cl-ownpress</generator>
-        <language>en-us</language>
-        <image>
-            <title>Posts tagged `org-roam&apos;</title>
-            <url>/images/spooky-avatar.png</url>
-            <link>https://bitspook.in/</link>
-        </image>
-        <item>
-            <title>Using org-roam as a CRM</title>
-            <link>https://bitspook.in/blog/using-org-roam-as-a-crm/</link>
-            <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Org-Roam - bitspook.in</title><id>https://bitspook.in/tags/org-roam/feed.xml</id><updated>2023-12-30T16:29:28.219769Z</updated><link href="https://bitspook.in/tags/org-roam/feed.xml" rel="self" title="Org-Roam"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Using org-roam as a CRM</title><id>https://bitspook.in/blog/using-org-roam-as-a-crm</id><updated>2022-01-22T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/using-org-roam-as-a-crm" title="Using org-roam as a CRM"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-01-22T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
 
 &lt;p&gt;
@@ -51,36 +36,35 @@ I have similar keybindings for taking (&lt;code&gt;SPC n f&lt;/code&gt;) and ins
 i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings and
 consistent UI.
 &lt;/p&gt;
-
-&lt;div id=&quot;outline-container-org2ba6367&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2ba6367&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2ba6367&quot;&gt;
+&lt;div id=&quot;outline-container-org817fa6c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org817fa6c&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org817fa6c&quot;&gt;
 &lt;p&gt;
-Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
+Elisp I use org-roam as a CRM, while keeping &amp;quot;normal&amp;quot; org-roam available for
 taking notes.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;~/Documents/org/people&quot;&lt;/span&gt;
-  &lt;span style=&quot;color: #987654;&quot;&gt;&quot;Directory where org-roam notes related to people are kept.&quot;&lt;/span&gt;)
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~/Documents/org/people&amp;quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #987654;&quot;&gt;&amp;quot;Directory where org-roam notes related to people are kept.&amp;quot;&lt;/span&gt;)
 
 (&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #d65946;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
-  &lt;span style=&quot;color: #987654;&quot;&gt;&quot;Evaluate FUNC with ARGS org-roam set for working as CRM.&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #987654;&quot;&gt;&amp;quot;Evaluate FUNC with ARGS org-roam set for working as CRM.&amp;quot;&lt;/span&gt;
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;let*&lt;/span&gt; ((org-roam-directory spook--org-roam-crm-dir)
-         (org-roam-db-location (concat org-roam-directory &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;/roam.db&quot;&lt;/span&gt;)))
+         (org-roam-db-location (concat org-roam-directory &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;/roam.db&amp;quot;&lt;/span&gt;)))
     (apply func args)))
 
 (&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--db-sync&lt;/span&gt; ()
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
-  (spook--with-org-roam-crm #&apos;org-roam-db-sync))
+  (spook--with-org-roam-crm #'org-roam-db-sync))
 
 (&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--find-person&lt;/span&gt; ()
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
-  (spook--with-org-roam-crm #&apos;org-roam-node-find))
+  (spook--with-org-roam-crm #'org-roam-node-find))
 
 (&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--insert-person&lt;/span&gt; ()
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
-  (spook--with-org-roam-crm #&apos;org-roam-node-insert))
+  (spook--with-org-roam-crm #'org-roam-node-insert))
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -92,14 +76,14 @@ meeting notes and in my diary.
 &lt;/p&gt;
 
 &lt;p&gt;
-Here&apos;s how I add the keybindings:
+Here's how I add the keybindings:
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;pre class=&quot;src src-elisp&quot;&gt;(spook-defkeymap
- &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;spook-people&quot;&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;C-c P&quot;&lt;/span&gt;
- &apos;(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;f&quot;&lt;/span&gt; . spook-crm--find-person)
- &apos;(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&quot;i&quot;&lt;/span&gt; . spook-crm--insert-person))
+ &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;spook-people&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;C-c P&amp;quot;&lt;/span&gt;
+ '(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;f&amp;quot;&lt;/span&gt; . spook-crm--find-person)
+ '(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;i&amp;quot;&lt;/span&gt; . spook-crm--insert-person))
 &lt;/pre&gt;
 &lt;/div&gt;
 
@@ -111,24 +95,22 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-
-&lt;div id=&quot;outline-container-org166d541&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org166d541&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org166d541&quot;&gt;
+&lt;div id=&quot;outline-container-orge495b4d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge495b4d&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge495b4d&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
-sometimes, and there are a bunch of things I might like but don&apos;t need right
+sometimes, and there are a bunch of things I might like but don't need right
 now. e.g
 &lt;/p&gt;
 
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;More structured way of capturing specific kind of information. e.g contact
 details. Structure of data kept in org files is upto me, which works for now&lt;/li&gt;
-&lt;li&gt;Searching by something which isn&apos;t title or tags. This is solved by doing grep
+&lt;li&gt;Searching by something which isn't title or tags. This is solved by doing grep
 over&lt;/li&gt;
-&lt;li&gt;Visualize the people and events I participate in. &lt;a href=&quot;https://github.com/org-roam/org-roam-ui&quot;&gt;org-roam-ui&lt;/a&gt; didn&apos;t work on
+&lt;li&gt;Visualize the people and events I participate in. &lt;a href=&quot;https://github.com/org-roam/org-roam-ui&quot;&gt;org-roam-ui&lt;/a&gt; didn't work on
 first shot.&lt;/li&gt;
 &lt;li&gt;Contacts/details on the go i.e a mobile app&lt;/li&gt;
 &lt;li&gt;Psychoanalyze people I meet; building, tracking and concluding experiments.
@@ -136,10 +118,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id=&quot;outline-container-org11993b8&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org11993b8&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org11993b8&quot;&gt;
+&lt;div id=&quot;outline-container-org2195e23&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2195e23&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2195e23&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
@@ -150,11 +131,4 @@ come around to do it myself&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>20220120T174152</guid>
-            <pubDate>2022-01-22T01:00:00.000000+01:00</pubDate>
-        </item>
-    </channel>
-</rss>
+</content></entry><base href="https://bitspook.in"/></feed>

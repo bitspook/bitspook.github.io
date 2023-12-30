@@ -1,21 +1,6 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<rss version="2.0">
-    <channel>
-        <title>Posts categorized as `talks&apos;</title>
-        <link>https://bitspook.in/</link>
-        <generator>cl-ownpress</generator>
-        <language>en-us</language>
-        <image>
-            <title>Posts categorized as `talks&apos;</title>
-            <url>/images/spooky-avatar.png</url>
-            <link>https://bitspook.in/</link>
-        </image>
-        <item>
-            <title>Microservices</title>
-            <link>https://bitspook.in/talks/microservices-techblend/</link>
-            <description>&lt;p&gt;
-I recently joined a Whatsapp group named &quot;Tech Blend&quot;, which conduct
-weekly online meetups. Topic for last meetup was &quot;Microservices&quot;, for
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Talks - bitspook.in</title><id>https://bitspook.in/talks/feed.xml</id><updated>2023-12-30T16:29:28.190909Z</updated><link href="https://bitspook.in/talks/feed.xml" rel="self" title="Talks"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Microservices</title><id>https://bitspook.in/talks/microservices-techblend</id><updated>2020-08-06T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/microservices-techblend" title="Microservices"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2020-08-06T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+I recently joined a Whatsapp group named &amp;quot;Tech Blend&amp;quot;, which conduct
+weekly online meetups. Topic for last meetup was &amp;quot;Microservices&amp;quot;, for
 which I volunteered. Since I was working for around 2 years on a
 microservices based project of decent complexity, I thought it would be
 fun to talk about my experience.
@@ -24,7 +9,7 @@ fun to talk about my experience.
 &lt;p&gt;
 The meetup was fun. I ran out of time. The meetup is quite well managed.
 Manpreet, the guy who organizes the meetup does a very good job
-respecting everyone&apos;s time while managing to have meaningful discussions
+respecting everyone's time while managing to have meaningful discussions
 at the same time. Their topics/talks are usually quite shallow, but this
 event management is something I can learn from participating in this
 group.
@@ -32,7 +17,7 @@ group.
 
 &lt;p&gt;
 Here are the slides for I created for the meetup. I was holding on to
-them hoping I&apos;ll create a video, but that&apos;s not happening. So I am just
+them hoping I'll create a video, but that's not happening. So I am just
 putting the slides over here.
 &lt;/p&gt;
 
@@ -41,18 +26,9 @@ Feel free to hit me up if you need some help regarding microservices, or
 if you need me to explain some slide, or just for a chat.
 &lt;/p&gt;
 
-&lt;iframe src=&quot;//slides.com/bitspook/microservices/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;iframe src=&quot;//slides.com/bitspook/microservices/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>microservices-techblend</guid>
-            <pubDate>2020-08-06T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Personal Brands for Software Developers (Talk)</title>
-            <link>https://bitspook.in/talks/personal-brands-for-software-developers-talk/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">Personal Brands for Software Developers (Talk)</title><id>https://bitspook.in/talks/personal-brands-for-software-developers-talk</id><updated>2019-10-21T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/personal-brands-for-software-developers-talk" title="Personal Brands for Software Developers (Talk)"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-10-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 After long diligence, me and my old (Trantor) team decided to organize a meetup
 to showcase our efforts, and to share our ideas with the local community. &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/events/263862634/&quot;&gt;The
 meetup&lt;/a&gt; was organized in Trantor on September 18, 2019.
@@ -60,27 +36,18 @@ meetup&lt;/a&gt; was organized in Trantor on September 18, 2019.
 
 &lt;p&gt;
 It was a collaborative talk given in 3 parts be me, Ayush Sharma, and
-Sheenam Narula. Attendance was very low, but that&apos;s usually how it is in
+Sheenam Narula. Attendance was very low, but that's usually how it is in
 Tricity. Overall it was a fun session with lengthy, and mostly fruitful
 discussions.
 &lt;/p&gt;
 
 &lt;p&gt;
-Here&apos;s my set of slides from the talk:
+Here's my set of slides from the talk:
 &lt;/p&gt;
 
-&lt;iframe src=&quot;//slides.com/bitspook/personal-brands-for-software-developers/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;iframe src=&quot;//slides.com/bitspook/personal-brands-for-software-developers/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>personal-brands-for-software-developers-talk</guid>
-            <pubDate>2019-10-21T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Secure Software Teams Trantor</title>
-            <link>https://bitspook.in/talks/secure-software-teams-trantor/</link>
-            <description>&lt;iframe src=&quot;//slides.com/bitspook/secure-software-teams/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+</content></entry><entry><title type="text">Secure Software Teams Trantor</title><id>https://bitspook.in/talks/secure-software-teams-trantor</id><updated>2019-08-26T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/secure-software-teams-trantor" title="Secure Software Teams Trantor"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-08-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe src=&quot;//slides.com/bitspook/secure-software-teams/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
 
 &lt;p&gt;
@@ -94,12 +61,12 @@ propose setting up a Red Team in Trantor.
 &lt;p&gt;
 As practical part of this session, I created a docker based virtual lab
 with webgoat set up. During the session we went through some of the
-exercises, rest were left for the attendees as homework. Here&apos;s the
+exercises, rest were left for the attendees as homework. Here's the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgbb500fb&quot;&gt;
-version: &apos;3&apos;
+&lt;pre class=&quot;example&quot; id=&quot;org1b9b624&quot;&gt;
+version: '3'
 services:
   webgoat:
     image: webgoat/webgoat-8.0
@@ -107,14 +74,14 @@ services:
       - WEBWOLF_HOST=webwolf
       - WEBWOLF_PORT=9090
     ports:
-      - &quot;8080:8080&quot;
-      - &quot;9001:9001&quot;
+      - &amp;quot;8080:8080&amp;quot;
+      - &amp;quot;9001:9001&amp;quot;
     volumes:
       - ./docker-volumes/webgoat-home:/home/webgoat/.webgoat
   webwolf:
     image: webgoat/webwolf
     ports:
-      - &quot;9090:9090&quot;
+      - &amp;quot;9090:9090&amp;quot;
     command: --spring.datasource.url=jdbc:hsqldb:hsql://webgoat:9001/webgoat --server.address=0.0.0.0
 &lt;/pre&gt;
 
@@ -123,18 +90,9 @@ To start the lab, simply create a directory, save above snippet as
 &lt;code&gt;docker-compose.yml&lt;/code&gt;, and run &lt;code&gt;docker-compose up&lt;/code&gt; in it. You will then
 be able to access webgoat on &lt;a href=&quot;http://localhost:8080/WebGoat&quot;&gt;http://localhost:8080/WebGoat&lt;/a&gt;
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>secure-software-teams-trantor</guid>
-            <pubDate>2019-08-26T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Lessons From a Year of TDD</title>
-            <link>https://bitspook.in/talks/lessons-from-a-year-of-tdd/</link>
-            <description>&lt;style&gt;img { max-width: 600px; margin: 1rem 0; }&lt;/style&gt;
+</content></entry><entry><title type="text">Lessons From a Year of TDD</title><id>https://bitspook.in/talks/lessons-from-a-year-of-tdd</id><updated>2019-06-21T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/lessons-from-a-year-of-tdd" title="Lessons From a Year of TDD"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-06-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;style&gt;img { max-width: 600px; margin: 1rem 0; }&lt;/style&gt;
 
-&lt;iframe src=&quot;///slides.com/bitspook/lessons-from-a-year-of-tdd/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;iframe src=&quot;///slides.com/bitspook/lessons-from-a-year-of-tdd/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
 
 &lt;blockquote&gt;
@@ -142,7 +100,6 @@ be able to access webgoat on &lt;a href=&quot;http://localhost:8080/WebGoat&quot
 This talk was delivered in &lt;a href=&quot;https://agilenetworkindia.com/events/technical-agility-day-chandigarh/&quot;&gt;Technical Agility Day, Chandigarh (June 15, 2019)&lt;/a&gt;.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;div id=&quot;outline-container-transcript&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;transcript&quot;&gt;Transcript&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-transcript&quot;&gt;
@@ -152,14 +109,10 @@ but the transcript I prepared for the talk should sufficiently convey
 what I meant to say in the talk.
 &lt;/p&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-introduction&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-introduction&quot;&gt;
-&lt;img
-  src=&quot;/lfyot-slides/01--introduction-to-tdd-talk.png&quot;
-  title=&quot;Experience from a year of TDD by Charanjit Singh&quot;
-  alt=&quot;Experience from a year of TDD by Charanjit Singh&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;/lfyot-slides/01--introduction-to-tdd-talk.png&quot; title=&quot;Experience from a year of TDD by Charanjit Singh&quot; alt=&quot;Experience from a year of TDD by Charanjit Singh&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Hello everyone, my name is Charanjit. I am working as a technical lead
@@ -167,10 +120,10 @@ at Trantor.
 &lt;/p&gt;
 
 &lt;p&gt;
-I joined Trantor a year ago, in one of Trantor&apos;s projects where I was
+I joined Trantor a year ago, in one of Trantor's projects where I was
 fortunate enough to see people willing to apply test driven development
 on what was going to become a rather complex project. I am leading one
-part of this project under a team named &quot;The cloud team&quot;. This talk is
+part of this project under a team named &amp;quot;The cloud team&amp;quot;. This talk is
 the story of things we learned while practicing test driven development
 to build a micro-services based cloud with several third-party
 integrations.
@@ -179,7 +132,7 @@ integrations.
 &lt;p&gt;
 Our cloud is built primarily with Node.js (express.js), uses GraphQL to
 communicate with clients as well as for inter-service communication,
-backed by Azure&apos;s CosmosDB (with its Mongo API), has Kafka for messaging
+backed by Azure's CosmosDB (with its Mongo API), has Kafka for messaging
 queue, and Elasticsearch for complex search solutions. We have about 9
 services till today, and 3 third party integrations. We are building an
 IOT-ish solution, and our cloud primarily serves the android application
@@ -189,21 +142,20 @@ running on our custom hardware, along with some companion applications
 
 &lt;p&gt;
 Before we get into the details of how we did TDD in our project, or of
-TDD itself, let&apos;s take a step back and work out some abstract thoughts.
+TDD itself, let's take a step back and work out some abstract thoughts.
 Abstract thoughts about what we are trying to accomplish with techniques
-like TDD. Actually, let&apos;s take all the steps back and go to the very
+like TDD. Actually, let's take all the steps back and go to the very
 beginning.
 &lt;/p&gt;
 
 &lt;p&gt;
-In the beginning, there were myths. Humans weren&apos;t always recording
+In the beginning, there were myths. Humans weren't always recording
 history. The myths were used to fill the plot holes in stories told by
 one generation to next. A common and very fascinating theme among the
 myths of different cultures is that of magic.
 &lt;/p&gt;
 
-&lt;img src=&quot;/lfyot-slides/02--the-wizard.png&quot; title=&quot;The Wizard&quot; alt=&quot;The
-Wizard&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;/lfyot-slides/02--the-wizard.png&quot; title=&quot;The Wizard&quot; alt=&quot;The&amp;#xA;Wizard&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Allegedly there used to be some very special people who could use the
@@ -216,8 +168,7 @@ reality itself to their will.
 But those were of course myths. What we have now are developers.
 &lt;/p&gt;
 
-&lt;img src=&quot;/lfyot-slides/03--the-stallman.png&quot; title=&quot;The Stallman&quot;
-alt=&quot;The Stallman&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;/lfyot-slides/03--the-stallman.png&quot; title=&quot;The Stallman&quot; alt=&quot;The Stallman&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Well, I argue that developers are in fact the wizards of the information
@@ -233,8 +184,7 @@ computer)&lt;/li&gt;
 you want it to be)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;img src=&quot;/lfyot-slides/04--the-stallzard.png&quot; title=&quot;The Stallzard&quot;
-alt=&quot;The Stallzard&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;/lfyot-slides/04--the-stallzard.png&quot; title=&quot;The Stallzard&quot; alt=&quot;The Stallzard&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Raw materials for the products a software developer creates are the
@@ -242,12 +192,10 @@ thoughts. The third point here is the focus of this talk.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-software-as-universe&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;software-as-universe&quot;&gt;Software as Universe&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-software-as-universe&quot;&gt;
-  &lt;img src=&quot;/lfyot-slides/05--the-universe.png&quot; title=&quot;The Universe&quot;
-alt=&quot;The Universe&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/05--the-universe.png&quot; title=&quot;The Universe&quot; alt=&quot;The Universe&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 I am not kidding. I believe it is fair to say that every software is a
@@ -265,8 +213,7 @@ Do anyone here watches Rick and Morty? It is a good show about a
 rockstar and a junior software developer. Try it sometime.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/06--the-microverse.png&quot; title=&quot;The Microverse&quot;
-alt=&quot;The Microverse&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/06--the-microverse.png&quot; title=&quot;The Microverse&quot; alt=&quot;The Microverse&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 One of the episodes are about the microverse battery. The rockstar
@@ -280,9 +227,7 @@ battery does the exact same thing. Creates a universe whose sole purpose
 is to power its host.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/07--many-layers-of-microverse.png&quot; title=&quot;Many
-layers of the Microverse&quot; alt=&quot;Many layers of the Microverse&quot;
-width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/07--many-layers-of-microverse.png&quot; title=&quot;Many&amp;#xA;layers of the Microverse&quot; alt=&quot;Many layers of the Microverse&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Software we write are not very different. We create entire universe to
@@ -290,30 +235,26 @@ serve our needs, and it is rarely created in isolation. Usually our
 universe has a bunch of other, more complex universes wrapped around it.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/08--realm-of-tux.png&quot; title=&quot;The realm of Tux&quot;
-alt=&quot;The realm of Tux&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/08--realm-of-tux.png&quot; title=&quot;The realm of Tux&quot; alt=&quot;The realm of Tux&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 We often start with a base universe of Operating system. The platform,
 programming language, the frameworks, they all make up for our initial
-&quot;empty&quot; worlds. They set up their layers of rules, on which then we
+&amp;quot;empty&amp;quot; worlds. They set up their layers of rules, on which then we
 write our own. Layers and layers of worlds.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/11--layers-of-software-universe.png&quot; title=&quot;Many
-layered of software universe&quot; alt=&quot;Many layered of software universe&quot;
-width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/11--layers-of-software-universe.png&quot; title=&quot;Many&amp;#xA;layered of software universe&quot; alt=&quot;Many layered of software universe&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Now, how do we populate this empty universe with the inhabitants which
 would do our bidding? Well, with our thoughts and prayers of course.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/13--pray-to-the-machine.png&quot; title=&quot;Pray to the
-machine&quot; alt=&quot;Pray to the machine&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/13--pray-to-the-machine.png&quot; title=&quot;Pray to the&amp;#xA;machine&quot; alt=&quot;Pray to the machine&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
-I am not kidding. But you get it, you aren&apos;t laughing. We literally send
+I am not kidding. But you get it, you aren't laughing. We literally send
 our thoughts, often prayers as well, formulated in some special form
 governed by some programming language to a compiler (or interpreter),
 which then inhabit and basically forms the universe of our software.
@@ -321,23 +262,20 @@ which then inhabit and basically forms the universe of our software.
 
 &lt;blockquote&gt;
 &lt;p&gt;
-Asgard isn&apos;t a place. Asgard is its people.
+Asgard isn't a place. Asgard is its people.
 &lt;/p&gt;
 &lt;/blockquote&gt;
 
-  &lt;img src=&quot;/lfyot-slides/14--pray-to-the-compiler.png&quot; title=&quot;Pray to the
-compiler&quot; alt=&quot;Pray to the compiler&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/14--pray-to-the-compiler.png&quot; title=&quot;Pray to the&amp;#xA;compiler&quot; alt=&quot;Pray to the compiler&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 That brings us to the corollary which takes us in the general direction
 of practices like Test Driven Development.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/15--bugs-are-thoughts-gone-wrong.png&quot; title=&quot;Bugs
-are thoughts too&quot; alt=&quot;Bugs are thoughts too&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/15--bugs-are-thoughts-gone-wrong.png&quot; title=&quot;Bugs&amp;#xA;are thoughts too&quot; alt=&quot;Bugs are thoughts too&quot; width=&quot;100%&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-bugs-are-thoughts-gone-wrong&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;bugs-are-thoughts-gone-wrong&quot;&gt;Bugs are thoughts, gone wrong&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-bugs-are-thoughts-gone-wrong&quot;&gt;
@@ -367,12 +305,11 @@ subsequently.
 This is what TDD essentially do.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/16--tdd-validates-thoughts.png&quot; title=&quot;Bugs are
-thoughts too&quot; alt=&quot;Bugs are thoughts too&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/16--tdd-validates-thoughts.png&quot; title=&quot;Bugs are&amp;#xA;thoughts too&quot; alt=&quot;Bugs are thoughts too&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 The first point points to the red-green-refactor cycle. When doing TDD,
-you write down the &quot;what&quot; aspect of the unit/module/function you are
+you write down the &amp;quot;what&amp;quot; aspect of the unit/module/function you are
 going to write. It essentially allow you to pause, sit back, and think
 about what you are going to implement. How it should behave.
 &lt;/p&gt;
@@ -383,7 +320,6 @@ when we have to then make changes in our.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-busting-some-myths&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;busting-some-myths&quot;&gt;Busting some Myths&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-busting-some-myths&quot;&gt;
@@ -399,17 +335,15 @@ involved. Disregarding the learning curve, developing same features took
 us roughly 30% longer to develop new features in our project.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/17--myth-tdd-is-time-consuming.png&quot; title=&quot;Myth
-#1: TDD is time consuming&quot; alt=&quot;Myth #1: TDD is time consuming&quot;
-width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/17--myth-tdd-is-time-consuming.png&quot; title=&quot;Myth&amp;#xA;#1: TDD is time consuming&quot; alt=&quot;Myth #1: TDD is time consuming&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 But this time is an investment you are making into your software, as
 well as your developers. When the project started off, we did start off
-slow. Other teams (there are 3 including us) were delivering more &quot;story
-points&quot;. After about 3-4 months however, both other teams had dedicated
+slow. Other teams (there are 3 including us) were delivering more &amp;quot;story
+points&amp;quot;. After about 3-4 months however, both other teams had dedicated
 processes set up to tackle bugs, to prioritize and decide which bugs to
-quash and which ones to live with. We still don&apos;t have any process
+quash and which ones to live with. We still don't have any process
 explicitly for bugs.
 &lt;/p&gt;
 
@@ -419,7 +353,7 @@ and pivots throughout the year. While other teams were struggling with
 new bugs after every such change, we were delivering at pretty much the
 same pace. Every bug that occurred in cloud got test(s) for it too, so
 no mistakes were repeated. Till now, we have been able to keep the list
-of bugs small enough that we don&apos;t pay particular attention to it.
+of bugs small enough that we don't pay particular attention to it.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -429,9 +363,7 @@ amount of effort to make the tests our live documentation for
 developers, and it paid dividends.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/24--tdd-gave-us-free-time.png&quot; title=&quot;TDD gave us
-time to invest elsewhere&quot; alt=&quot;TDD gave us time to invest elsewhere&quot;
-width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/24--tdd-gave-us-free-time.png&quot; title=&quot;TDD gave us&amp;#xA;time to invest elsewhere&quot; alt=&quot;TDD gave us time to invest elsewhere&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Not just that, TDD actually gave our team to do more than just our
@@ -445,52 +377,47 @@ aggregation, Elasticsearch, Kibana and Kafka) running on new machine.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-myth-2-tdd-is-about-tests&quot; class=&quot;outline-4&quot;&gt;
 &lt;h4 id=&quot;myth-2-tdd-is-about-tests&quot;&gt;Myth #2 : TDD is about tests&lt;/h4&gt;
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-myth-2-tdd-is-about-tests&quot;&gt;
 &lt;p&gt;
-It is not. &quot;DD&quot; in &quot;TDD&quot; is more important than &quot;T&quot;. We learned this the
+It is not. &amp;quot;DD&amp;quot; in &amp;quot;TDD&amp;quot; is more important than &amp;quot;T&amp;quot;. We learned this the
 hard way because of lack of experience with TDD. When you are applying
 TDD on a new project, &lt;b&gt;your tests should be driving the development&lt;/b&gt;.
-Tests by themselves aren&apos;t the goal. The essential thing you must do to
+Tests by themselves aren't the goal. The essential thing you must do to
 ensure this, is to ensure that you write tests first.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/24--myth-tdd-is-about-tests.png&quot; title=&quot;Myth #2:
-TDD is about Tests&quot; alt=&quot;Myth #2: TDD is about Tests&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/24--myth-tdd-is-about-tests.png&quot; title=&quot;Myth #2:&amp;#xA;TDD is about Tests&quot; alt=&quot;Myth #2: TDD is about Tests&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 Tests written after the fact are practically handicapped. No matter how
 good a developer you are, when you are writing tests after you have
-written the feature/code, the &quot;how&quot; aspect of your code will creep in,
+written the feature/code, the &amp;quot;how&amp;quot; aspect of your code will creep in,
 and your tests will never be as effective as they could have been. Same
 goes for the feature you are writing.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-myth-3-tdd-means-no-bugs&quot; class=&quot;outline-4&quot;&gt;
 &lt;h4 id=&quot;myth-3-tdd-means-no-bugs&quot;&gt;Myth #3 : TDD means no bugs&lt;/h4&gt;
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-myth-3-tdd-means-no-bugs&quot;&gt;
 &lt;p&gt;
-This is what I&apos;ve been advertising so far, ain&apos;t I! Well, it is not a
+This is what I've been advertising so far, ain't I! Well, it is not a
 100% truth. Even if we ignore the fact that your tests will almost never
 be 100% complete, TDD will not guarantee a fully correct software.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/29--myth-tdd-means-no-bugs.png&quot; title=&quot;Myth #3:
-TDD means no bugs&quot; alt=&quot;Myth #3: TDD means no bugs&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/29--myth-tdd-means-no-bugs.png&quot; title=&quot;Myth #3:&amp;#xA;TDD means no bugs&quot; alt=&quot;Myth #3: TDD means no bugs&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 TDD is your last line of defense. By the time you have sat down to
 judiciously implement TDD, the thoughts that are going to populate your
-software&apos;s universe have already been set. All you are going to do is
+software's universe have already been set. All you are going to do is
 verify that they behave as it has been decided.
 &lt;/p&gt;
 
-  &lt;img src=&quot;/lfyot-slides/32--protect-yourself-from-your-po.png&quot;
-title=&quot;Adopt BDD&quot; alt=&quot;Adopt BDD&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/32--protect-yourself-from-your-po.png&quot; title=&quot;Adopt BDD&quot; alt=&quot;Adopt BDD&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 BDD operates at a much higher layer than TDD. At the layer where
@@ -502,13 +429,10 @@ to have, I can see how much time and confusion it could have saved us.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-grow-as-a-developer&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;grow-as-a-developer&quot;&gt;Grow as a developer&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-grow-as-a-developer&quot;&gt;
-  &lt;img src=&quot;/lfyot-slides/33--tdd-guides-you-in-right-direction.png&quot;
-title=&quot;TDD Guides you in right direction&quot; alt=&quot;TDD Guides you in right
-direction&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/33--tdd-guides-you-in-right-direction.png&quot; title=&quot;TDD Guides you in right direction&quot; alt=&quot;TDD Guides you in right&amp;#xA;direction&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 It was an interesting observation. Team seem to have a much higher
@@ -519,24 +443,21 @@ more fruitful brought a cultural shift in the team.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-when-adding-tdd-to-a-new-team&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;when-adding-tdd-to-a-new-team&quot;&gt;When adding TDD to a new team&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-when-adding-tdd-to-a-new-team&quot;&gt;
-  &lt;img src=&quot;/lfyot-slides/38--brace-yourself.png&quot; title=&quot;When adding TDD to
-a new team&quot; alt=&quot;When adding TDD to a new team&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/38--brace-yourself.png&quot; title=&quot;When adding TDD to&amp;#xA;a new team&quot; alt=&quot;When adding TDD to a new team&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
-Biggest resistance we faced was convincing developers that it&apos;s worth
+Biggest resistance we faced was convincing developers that it's worth
 their while to write tests &lt;b&gt;before&lt;/b&gt; they write code for their code. We
 ended up introducing an extra step in our PR review checklist: &lt;i&gt;ensure
-there is a &quot;test:&quot; commit which only has test descriptions&lt;/i&gt;. This helped
+there is a &amp;quot;test:&amp;quot; commit which only has test descriptions&lt;/i&gt;. This helped
 somewhat, but it took some time (and a lot of pair programming) till
 developers realized the benefits of this process.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-things-i-wish-we-did&quot; class=&quot;outline-3&quot;&gt;
 &lt;h3 id=&quot;things-i-wish-we-did&quot;&gt;Things I wish we did&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-things-i-wish-we-did&quot;&gt;
@@ -544,11 +465,10 @@ developers realized the benefits of this process.
 &lt;div id=&quot;outline-container-mutation-testing&quot; class=&quot;outline-4&quot;&gt;
 &lt;h4 id=&quot;mutation-testing&quot;&gt;Mutation Testing&lt;/h4&gt;
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-mutation-testing&quot;&gt;
-  &lt;img src=&quot;/lfyot-slides/41--mutation-testing.png&quot; title=&quot;I wish we did:
-Mutation Testing&quot; alt=&quot;I wish we did: Mutation Testing&quot; width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/41--mutation-testing.png&quot; title=&quot;I wish we did:&amp;#xA;Mutation Testing&quot; alt=&quot;I wish we did: Mutation Testing&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
-So, coverage reports are big fat liars. They don&apos;t tell you how your
+So, coverage reports are big fat liars. They don't tell you how your
 tests are doing. In my opinion, they are more like the Velocity Charts
 our Scrum Master loves so much. They tell you if you are going in the
 correct general direction, and it is very easy to make them lie.
@@ -565,23 +485,20 @@ gives a lot better insight into the strength of your tests.
 &lt;p&gt;
 We experimented with mutation testing for a while. But I suppose because
 of lack of integration of a platform for our CI (Bamboo) to present
-thorough coverage reports, we haven&apos;t yet made mutation testing a part
+thorough coverage reports, we haven't yet made mutation testing a part
 of our test process.
 &lt;/p&gt;
 
 &lt;p&gt;
 I can see how it can make PR reviews a lot more effective though. I hope
-we can take some time out of our everlasting &quot;churn mode&quot; for this.
+we can take some time out of our everlasting &amp;quot;churn mode&amp;quot; for this.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-bdd&quot; class=&quot;outline-4&quot;&gt;
 &lt;h4 id=&quot;bdd&quot;&gt;BDD&lt;/h4&gt;
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-bdd&quot;&gt;
-  &lt;img src=&quot;/lfyot-slides/42--bdd.png&quot; title=&quot;I wish we did: Behavior
-Driven Development&quot; alt=&quot;I wish we did: Behavior Driven Development&quot;
-width=&quot;100%&quot; /&gt;
+  &lt;img src=&quot;/lfyot-slides/42--bdd.png&quot; title=&quot;I wish we did: Behavior&amp;#xA;Driven Development&quot; alt=&quot;I wish we did: Behavior Driven Development&quot; width=&quot;100%&quot;&gt;
 
 &lt;p&gt;
 We implemented BDD a bit late (just a couple months ago) when we had
@@ -597,7 +514,7 @@ make the communication between product people and developers much more
 correct.
 &lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;hr&gt;
 
 &lt;p&gt;
 I apologize for rushing the transcript a bit in last few headlines
@@ -606,41 +523,22 @@ talk again at some occasion, I will revisit and will probably add some
 velocity/burndown charts from Jira as well.
 &lt;/p&gt;
 
-&lt;img src=&quot;/lfyot-slides/47--thank-you.png&quot; title=&quot;Thank you for your
-patience&quot; alt=&quot;Thank you for your patience&quot; width=&quot;100%&quot; /&gt;
+&lt;img src=&quot;/lfyot-slides/47--thank-you.png&quot; title=&quot;Thank you for your&amp;#xA;patience&quot; alt=&quot;Thank you for your patience&quot; width=&quot;100%&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>lessons-from-a-year-of-tdd</guid>
-            <pubDate>2019-06-21T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>React/Redux Workshop</title>
-            <link>https://bitspook.in/talks/react-redux-workshop/</link>
-            <description>  &lt;iframe src=&quot;//slides.com/bitspook/react-redux-workshop/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+</content></entry><entry><title type="text">React/Redux Workshop</title><id>https://bitspook.in/talks/react-redux-workshop</id><updated>2017-02-16T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/react-redux-workshop" title="React/Redux Workshop"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2017-02-16T00:00:00.000000Z</published><summary type="text"></summary><content type="html">  &lt;iframe src=&quot;//slides.com/bitspook/react-redux-workshop/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 #+end_html
   &lt;/iframe&gt;
 
 &lt;p&gt;
-React/Redux workshop I gave with &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/&quot;&gt;Programmers&apos; Club Chandigarh&lt;/a&gt; meetup group after
-seeing community&apos;s interest in these technologies.
+React/Redux workshop I gave with &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/&quot;&gt;Programmers' Club Chandigarh&lt;/a&gt; meetup group after
+seeing community's interest in these technologies.
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>react-redux-workshop</guid>
-            <pubDate>2017-02-16T01:00:00.000000+01:00</pubDate>
-        </item>
-        <item>
-            <title>Modern day JS Apps (2017)</title>
-            <link>https://bitspook.in/talks/modern-day-js-apps-2017/</link>
-            <description>&lt;iframe src=&quot;//slides.com/bitspook/modern-js-apps-2017/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+</content></entry><entry><title type="text">Modern day JS Apps (2017)</title><id>https://bitspook.in/talks/modern-day-js-apps-2017</id><updated>2017-02-07T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/modern-day-js-apps-2017" title="Modern day JS Apps (2017)"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2017-02-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe src=&quot;//slides.com/bitspook/modern-js-apps-2017/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;orgc250be9&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;org3509ef8&quot;&gt;
 &lt;p&gt;
 &amp;lt;/iframe&amp;gt;
 &lt;/p&gt;
@@ -649,19 +547,10 @@ seeing community&apos;s interest in these technologies.
 
 &lt;p&gt;
 I think this was the second meetup I organized after I came back from Bangalore
-(to Chandigarh). It was organized with &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/&quot;&gt;Programmers&apos; Club Chandigarh&lt;/a&gt; meetup
+(to Chandigarh). It was organized with &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/&quot;&gt;Programmers' Club Chandigarh&lt;/a&gt; meetup
 group.
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>modern-day-js-apps-2017</guid>
-            <pubDate>2017-02-07T01:00:00.000000+01:00</pubDate>
-        </item>
-        <item>
-            <title>React, Redux and Reactive programming</title>
-            <link>https://bitspook.in/talks/react-redux-and-reactive-programming/</link>
-            <description>&lt;iframe src=&quot;//slides.com/bitspook/react-redux-and-reactive-programming/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;/iframe&gt;</content></entry><entry><title type="text">React, Redux and Reactive programming</title><id>https://bitspook.in/talks/react-redux-and-reactive-programming</id><updated>2016-07-08T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/react-redux-and-reactive-programming" title="React, Redux and Reactive programming"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2016-07-08T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe src=&quot;//slides.com/bitspook/react-redux-and-reactive-programming/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
 
 &lt;blockquote&gt;
@@ -675,23 +564,14 @@ My first time speaking at a big conference! It was a great experience.
 There is a video as well!
 &lt;/p&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SFPF56BB1Cs&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SFPF56BB1Cs&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;
 &lt;a href=&quot;https://github.com/bitspook/frp-with-rxjs-jschannel-conf&quot;&gt;Transcript for this talk&lt;/a&gt; is available in its Github repository.
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>react-redux-and-reactive-programming</guid>
-            <pubDate>2016-07-08T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Jschannel RxJS workshop Nov 2015</title>
-            <link>https://bitspook.in/talks/jschannel-rxjs-workshop-now-2015/</link>
-            <description>&lt;iframe src=&quot;//slides.com/bitspook/jschannel-rxjs-workshop-nov-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+</content></entry><entry><title type="text">Jschannel RxJS workshop Nov 2015</title><id>https://bitspook.in/talks/jschannel-rxjs-workshop-now-2015</id><updated>2015-11-01T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/jschannel-rxjs-workshop-now-2015" title="Jschannel RxJS workshop Nov 2015"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2015-11-01T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe src=&quot;//slides.com/bitspook/jschannel-rxjs-workshop-nov-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;orgb6dab73&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;orgd5dd840&quot;&gt;
 &lt;p&gt;
 &amp;lt;/iframe&amp;gt;
 &lt;/p&gt;
@@ -706,27 +586,11 @@ talks in &lt;a href=&quot;https://www.meetup.com/jslovers-bengaluru/&quot;&gt;Js
 &lt;p&gt;
 The &lt;a href=&quot;https://github.com/bitspook/rxjs-workshop-nov-2015&quot;&gt;code used in this workshop&lt;/a&gt; can be found in my Github.
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>jschannel-rxjs-workshop-now-2015</guid>
-            <pubDate>2015-11-01T01:00:00.000000+01:00</pubDate>
-        </item>
-        <item>
-            <title>Meteor Js Jschannel Feb 2015</title>
-            <link>https://bitspook.in/talks/meteor-js-jschannel-feb-2015/</link>
-            <description>&lt;iframe src=&quot;//slides.com/bitspook/meteor-jschannel-feb-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;/iframe&gt;</content></entry><entry><title type="text">Meteor Js Jschannel Feb 2015</title><id>https://bitspook.in/talks/meteor-js-jschannel-feb-2015</id><updated>2015-02-07T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/meteor-js-jschannel-feb-2015" title="Meteor Js Jschannel Feb 2015"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2015-02-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe src=&quot;//slides.com/bitspook/meteor-jschannel-feb-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
 
 &lt;p&gt;
 First talk I ever gave. I was new to Bangalore and all excited about the
 whole idea of meetup.
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>meteor-js-jschannel-feb-2015</guid>
-            <pubDate>2015-02-07T01:00:00.000000+01:00</pubDate>
-        </item>
-    </channel>
-</rss>
+</content></entry><base href="https://bitspook.in"/></feed>

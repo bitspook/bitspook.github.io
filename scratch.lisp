@@ -2,8 +2,8 @@
 
 (in-package #:in.bitspook.website)
 
-;; (defparameter *base-url* "https://bitspook.in")
-(defparameter *base-url* "http://localhost:8080")
+(defparameter *base-url* "https://bitspook.in")
+;; (defparameter *base-url* "http://localhost:8080")
 
 (defparameter *author*
   (make 'persona

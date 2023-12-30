@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<rss version="2.0">
-    <channel>
-        <title>Posts tagged `functional-programming&apos;</title>
-        <link>https://bitspook.in/</link>
-        <generator>cl-ownpress</generator>
-        <language>en-us</language>
-        <image>
-            <title>Posts tagged `functional-programming&apos;</title>
-            <url>/images/spooky-avatar.png</url>
-            <link>https://bitspook.in/</link>
-        </image>
-        <item>
-            <title>Find a functional programmer for your Javascript team</title>
-            <link>https://bitspook.in/blog/find-a-functional-programmer-for-your-javascript-team/</link>
-            <description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Functional-Programming - bitspook.in</title><id>https://bitspook.in/tags/functional-programming/feed.xml</id><updated>2023-12-30T16:29:28.215256Z</updated><link href="https://bitspook.in/tags/functional-programming/feed.xml" rel="self" title="Functional-Programming"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Find a functional programmer for your Javascript team</title><id>https://bitspook.in/blog/find-a-functional-programmer-for-your-javascript-team</id><updated>2020-11-07T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/find-a-functional-programmer-for-your-javascript-team" title="Find a functional programmer for your Javascript team"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2020-11-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;
 Written below are some opinions and rationalizations for them. I have come to
 these opinions by interviewing and working with people for years. However
@@ -24,7 +9,7 @@ very much appreciated.
 &lt;/blockquote&gt;
 
 &lt;p&gt;
-From &quot;Functional programmer&quot; I mean a programmer familiar with concepts of
+From &amp;quot;Functional programmer&amp;quot; I mean a programmer familiar with concepts of
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;.
 &lt;/p&gt;
 
@@ -61,21 +46,21 @@ FP is steadily gaining popularity, but it is still not popular enough to
 breach the talent pool I get to interview from. Familiarity with FP is a
 very good indication that the person invest in themselves. And they do
 that in a manner which goes beyond just increasing the number of
-&quot;frameworks&quot; they have built a Todo App in.
+&amp;quot;frameworks&amp;quot; they have built a Todo App in.
 &lt;/p&gt;
 
 &lt;p&gt;
 Developer empathy is surprisingly rare. In almost a decade of writing
 code, I have met so few developers who really give a fuck that someone
 else will also read their abomination. Most software is written in
-vacuum. Familiarity with FP don&apos;t fix that magically.
+vacuum. Familiarity with FP don't fix that magically.
 &lt;/p&gt;
 
 &lt;p&gt;
 However there is another factor at play here. Ironically, as a
 side-effect of FP, code written in a functional manner is often a lot
 more readable than its imperative and OOP equivalents (Impromptu quiz:
-What&apos;s so ironic about this statement?). Not only is functional code
+What's so ironic about this statement?). Not only is functional code
 itself naturally declarative, an FP person is more likely to wtf when
 they see unreadable code in PR reviews.
 &lt;/p&gt;
@@ -85,7 +70,7 @@ Basic principles of FP also make for great advice for inexperienced
 developers. Good software architecture is hard to learn, it is a lot
 harder to teach. You need a mind capable of holding large amounts of
 complex code before the fancy design patterns even start making sense.
-In comparison, &quot;pure functions + composition&quot; and you are good to go.
+In comparison, &amp;quot;pure functions + composition&amp;quot; and you are good to go.
 That is it. That is all you need to know to get started with writing
 modular, testable, simple code; which is easy to write and easier to
 maintain. As a mere side effect of avoiding side effects, you write
@@ -98,11 +83,4 @@ FP is not a silver bullet, but looking for functional programmers skew
 the universe in your favor a little. You are a lot more likely to get
 good people among functional programmers.
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>find-a-functional-programmer-for-your-javascript-team</guid>
-            <pubDate>2020-11-07T01:00:00.000000+01:00</pubDate>
-        </item>
-    </channel>
-</rss>
+</content></entry><base href="https://bitspook.in"/></feed>

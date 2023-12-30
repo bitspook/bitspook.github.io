@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<rss version="2.0">
-    <channel>
-        <title>Posts tagged `javascript&apos;</title>
-        <link>https://bitspook.in/</link>
-        <generator>cl-ownpress</generator>
-        <language>en-us</language>
-        <image>
-            <title>Posts tagged `javascript&apos;</title>
-            <url>/images/spooky-avatar.png</url>
-            <link>https://bitspook.in/</link>
-        </image>
-        <item>
-            <title>Find a functional programmer for your Javascript team</title>
-            <link>https://bitspook.in/blog/find-a-functional-programmer-for-your-javascript-team/</link>
-            <description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Javascript - bitspook.in</title><id>https://bitspook.in/tags/javascript/feed.xml</id><updated>2023-12-30T16:29:28.234267Z</updated><link href="https://bitspook.in/tags/javascript/feed.xml" rel="self" title="Javascript"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Find a functional programmer for your Javascript team</title><id>https://bitspook.in/blog/find-a-functional-programmer-for-your-javascript-team</id><updated>2020-11-07T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/find-a-functional-programmer-for-your-javascript-team" title="Find a functional programmer for your Javascript team"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2020-11-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;blockquote&gt;
 &lt;p&gt;
 Written below are some opinions and rationalizations for them. I have come to
 these opinions by interviewing and working with people for years. However
@@ -24,7 +9,7 @@ very much appreciated.
 &lt;/blockquote&gt;
 
 &lt;p&gt;
-From &quot;Functional programmer&quot; I mean a programmer familiar with concepts of
+From &amp;quot;Functional programmer&amp;quot; I mean a programmer familiar with concepts of
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;.
 &lt;/p&gt;
 
@@ -61,21 +46,21 @@ FP is steadily gaining popularity, but it is still not popular enough to
 breach the talent pool I get to interview from. Familiarity with FP is a
 very good indication that the person invest in themselves. And they do
 that in a manner which goes beyond just increasing the number of
-&quot;frameworks&quot; they have built a Todo App in.
+&amp;quot;frameworks&amp;quot; they have built a Todo App in.
 &lt;/p&gt;
 
 &lt;p&gt;
 Developer empathy is surprisingly rare. In almost a decade of writing
 code, I have met so few developers who really give a fuck that someone
 else will also read their abomination. Most software is written in
-vacuum. Familiarity with FP don&apos;t fix that magically.
+vacuum. Familiarity with FP don't fix that magically.
 &lt;/p&gt;
 
 &lt;p&gt;
 However there is another factor at play here. Ironically, as a
 side-effect of FP, code written in a functional manner is often a lot
 more readable than its imperative and OOP equivalents (Impromptu quiz:
-What&apos;s so ironic about this statement?). Not only is functional code
+What's so ironic about this statement?). Not only is functional code
 itself naturally declarative, an FP person is more likely to wtf when
 they see unreadable code in PR reviews.
 &lt;/p&gt;
@@ -85,7 +70,7 @@ Basic principles of FP also make for great advice for inexperienced
 developers. Good software architecture is hard to learn, it is a lot
 harder to teach. You need a mind capable of holding large amounts of
 complex code before the fancy design patterns even start making sense.
-In comparison, &quot;pure functions + composition&quot; and you are good to go.
+In comparison, &amp;quot;pure functions + composition&amp;quot; and you are good to go.
 That is it. That is all you need to know to get started with writing
 modular, testable, simple code; which is easy to write and easier to
 maintain. As a mere side effect of avoiding side effects, you write
@@ -98,29 +83,17 @@ FP is not a silver bullet, but looking for functional programmers skew
 the universe in your favor a little. You are a lot more likely to get
 good people among functional programmers.
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>find-a-functional-programmer-for-your-javascript-team</guid>
-            <pubDate>2020-11-07T01:00:00.000000+01:00</pubDate>
-        </item>
-        <item>
-            <title>My notes to help learning Javascript</title>
-            <link>https://bitspook.in/blog/my-notes-to-help-learning-javascript/</link>
-            <description>
-
-&lt;div id=&quot;outline-container-patience&quot; class=&quot;outline-2&quot;&gt;
+</content></entry><entry><title type="text">My notes to help learning Javascript</title><id>https://bitspook.in/blog/my-notes-to-help-learning-javascript</id><updated>2014-02-12T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/my-notes-to-help-learning-javascript" title="My notes to help learning Javascript"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2014-02-12T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-patience&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;patience&quot;&gt;Patience&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-patience&quot;&gt;
 &lt;p&gt;
-You need to keep it. Don&apos;t rush, it&apos;s alright if you are not getting it.
+You need to keep it. Don't rush, it's alright if you are not getting it.
 Specially if you are from Python world. Javascript is to Python like
 India is to New Zeland, things are not actually as complicated as they
 appear, you just need to keep little patience.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-coffeescript-is-your-friend&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;coffeescript-is-your-friend&quot;&gt;Coffeescript is your friend&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-coffeescript-is-your-friend&quot;&gt;
@@ -129,7 +102,7 @@ Coffeescript helped me learn to think in javascript more than any book.
 I am not saying that you should use coffeescript, but use it for
 learning more about javascript. If you are unable to think something in
 javascript, do a version of it in Coffeescript, generate javascript and
-try to learn. I don&apos;t know how good is the generated javascript, but it
+try to learn. I don't know how good is the generated javascript, but it
 was good enough for me to not get stuck. Emacs helped me a lot in this.
 I created a buffer with coffee-mode which was not visiting any file, and
 compiled coffee to see javascript in a split window for comparison. It
@@ -137,19 +110,17 @@ really helped to avoid creating temporary files.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-don-t-rely-too-much-on-books-try-something-real&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;don-t-rely-too-much-on-books-try-something-real&quot;&gt;Don&apos;t rely too much on books, try something real&lt;/h2&gt;
+&lt;h2 id=&quot;don-t-rely-too-much-on-books-try-something-real&quot;&gt;Don't rely too much on books, try something real&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-don-t-rely-too-much-on-books-try-something-real&quot;&gt;
 &lt;p&gt;
 Books can do only so much to help you. Elequent Javascript is great (or
-so they call it, actually I never got why it&apos;s called great), but what a
+so they call it, actually I never got why it's called great), but what a
 real project can teach you is on another level. Go out in wild and try
 to do some real project, for fun of course.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-avoid-dom-and-ui&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;avoid-dom-and-ui&quot;&gt;Avoid DOM and UI&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-avoid-dom-and-ui&quot;&gt;
@@ -158,34 +129,26 @@ DOM manipulation and Javascript have their own concepts which are most
 times confusing to foreigners, specially if you are already infected by
 JQuery. Make your aim to learn Javascript, as a programming language and
 do something you do when learning a new language. Make self-contained
-scripts which don&apos;t need browser to work. Of course browser help when
-you are getting started and with &apos;console.log&apos; you can avoid all sort of
-DOM manipulation, but that&apos;s not what I mean. On the next step to
-getting started, when you &apos;think&apos; you know some javascript, try to make
+scripts which don't need browser to work. Of course browser help when
+you are getting started and with 'console.log' you can avoid all sort of
+DOM manipulation, but that's not what I mean. On the next step to
+getting started, when you 'think' you know some javascript, try to make
 something that involve as little DOM manipulation as possible. Try
 making some simple nodeJs module, or some sort of browser extension.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-focus-on-getting-it-done-learning-is-a-bonus&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;focus-on-getting-it-done-learning-is-a-bonus&quot;&gt;Focus on getting it done, learning is a bonus&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-focus-on-getting-it-done-learning-is-a-bonus&quot;&gt;
 &lt;p&gt;
-It&apos;s better if you choose to do something you want to use, or at least
+It's better if you choose to do something you want to use, or at least
 something you find really interesting. And focus on getting it done. All
 ninja skills you want to learn come as a bonus. Remember those old
 Jackie Chan movies in which kung-fu master make him do his household
-chores? Just focus on washing clothes, you&apos;ll learn iron-fist style
+chores? Just focus on washing clothes, you'll learn iron-fist style
 without knowing it, as a bonus.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>my-notes-to-help-learning-javascript</guid>
-            <pubDate>2014-02-12T01:00:00.000000+01:00</pubDate>
-        </item>
-    </channel>
-</rss>
+</content></entry><base href="https://bitspook.in"/></feed>

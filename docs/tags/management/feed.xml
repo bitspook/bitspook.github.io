@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<rss version="2.0">
-    <channel>
-        <title>Posts tagged `management&apos;</title>
-        <link>https://bitspook.in/</link>
-        <generator>cl-ownpress</generator>
-        <language>en-us</language>
-        <image>
-            <title>Posts tagged `management&apos;</title>
-            <url>/images/spooky-avatar.png</url>
-            <link>https://bitspook.in/</link>
-        </image>
-        <item>
-            <title>Personal Brands for Software Developers (Talk)</title>
-            <link>https://bitspook.in/talks/personal-brands-for-software-developers-talk/</link>
-            <description>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Management - bitspook.in</title><id>https://bitspook.in/tags/management/feed.xml</id><updated>2023-12-30T16:29:28.232091Z</updated><link href="https://bitspook.in/tags/management/feed.xml" rel="self" title="Management"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Personal Brands for Software Developers (Talk)</title><id>https://bitspook.in/talks/personal-brands-for-software-developers-talk</id><updated>2019-10-21T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/personal-brands-for-software-developers-talk" title="Personal Brands for Software Developers (Talk)"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-10-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 After long diligence, me and my old (Trantor) team decided to organize a meetup
 to showcase our efforts, and to share our ideas with the local community. &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/events/263862634/&quot;&gt;The
 meetup&lt;/a&gt; was organized in Trantor on September 18, 2019.
@@ -21,27 +6,18 @@ meetup&lt;/a&gt; was organized in Trantor on September 18, 2019.
 
 &lt;p&gt;
 It was a collaborative talk given in 3 parts be me, Ayush Sharma, and
-Sheenam Narula. Attendance was very low, but that&apos;s usually how it is in
+Sheenam Narula. Attendance was very low, but that's usually how it is in
 Tricity. Overall it was a fun session with lengthy, and mostly fruitful
 discussions.
 &lt;/p&gt;
 
 &lt;p&gt;
-Here&apos;s my set of slides from the talk:
+Here's my set of slides from the talk:
 &lt;/p&gt;
 
-&lt;iframe src=&quot;//slides.com/bitspook/personal-brands-for-software-developers/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+&lt;iframe src=&quot;//slides.com/bitspook/personal-brands-for-software-developers/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>talks</category>
-            <guid>personal-brands-for-software-developers-talk</guid>
-            <pubDate>2019-10-21T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Quick and Pretty Docs for Software Projects</title>
-            <link>https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">Quick and Pretty Docs for Software Projects</title><id>https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects</id><updated>2019-08-28T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects" title="Quick and Pretty Docs for Software Projects"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-08-28T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 I have practiced
 &lt;a href=&quot;http://tom.preston-werner.com/2010/08/23/readme-driven-development.html&quot;&gt;Readme
 Driven Development&lt;/a&gt; on a number of my projects with varying milage. I
@@ -52,7 +28,7 @@ have often found myself wishing for a few things:
 &lt;li&gt;&lt;b&gt;More structure&lt;/b&gt; When writing the documentation, and even more so
 when reading it. A single markdown file starts getting out of hand
 really quickly. On my presonal projects I go for org-mode, which keep
-me satisfied. But when working on a professional gig, it don&apos;t feel
+me satisfied. But when working on a professional gig, it don't feel
 right to force other developers into org-mode/emacs.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;Prettiness&lt;/b&gt; Markdown is a quite reasonably readable format, but
 there is always room for prettyness.&lt;/li&gt;
@@ -67,7 +43,7 @@ generate site.
 To minimize the added complexity to our dev setup, and since I am
 already using docker to run dev-environments for almost all of my
 projects, I chose to leverage it for building my readme as a local
-&quot;service&quot;. i.e I chose to structure my documentation with filesystem,
+&amp;quot;service&amp;quot;. i.e I chose to structure my documentation with filesystem,
 and use docker to abstract the complexity of setting up the static site
 generator.
 &lt;/p&gt;
@@ -86,7 +62,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orga5a224d&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgb2ea8f2&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -101,10 +77,10 @@ documentation.
 &lt;p&gt;
 Here is the Dockerfile I have used to create the docs container. It
 downloads and sets up hugo with the theme in a single command without
-anything other than docker installed on a developer&apos;s machine.
+anything other than docker installed on a developer's machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org2cfe7c3&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgfca4ea5&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -114,8 +90,8 @@ ENV HOST=0.0.0.0
 
 RUN apk update &amp;amp;&amp;amp; apk add hugo git
 
-ENV HUGO_THEME_URL=&apos;https://github.com/matcornic/hugo-theme-learn&apos;
-ENV HUGO_THEME_COMMIT=&apos;2.4.0&apos;
+ENV HUGO_THEME_URL='https://github.com/matcornic/hugo-theme-learn'
+ENV HUGO_THEME_COMMIT='2.4.0'
 
 RUN mkdir -p /themes/current \
   &amp;amp;&amp;amp; cd /themes/current \
@@ -124,11 +100,11 @@ RUN mkdir -p /themes/current \
   &amp;amp;&amp;amp; git fetch --depth 1 origin $HUGO_THEME_COMMIT \
   &amp;amp;&amp;amp; git checkout FETCH_HEAD \
   &amp;amp;&amp;amp; cd /app
-RUN echo &quot;alias hugo=&apos;hugo --themesDir /themes --theme current&apos;&quot; &amp;gt; ~/.profile
+RUN echo &amp;quot;alias hugo='hugo --themesDir /themes --theme current'&amp;quot; &amp;gt; ~/.profile
 
 COPY . /app
 
-CMD hugo serve --port 3000 --bind=&apos;0.0.0.0&apos; --themesDir /themes --theme current
+CMD hugo serve --port 3000 --bind='0.0.0.0' --themesDir /themes --theme current
 &lt;/pre&gt;
 
 &lt;p&gt;
@@ -139,35 +115,26 @@ when building the docker image.
 &lt;/p&gt;
 
 &lt;p&gt;
-Here is &lt;code&gt;config.toml&lt;/code&gt; file I&apos;ve used for my &lt;code&gt;docs&lt;/code&gt;, which allow me to
+Here is &lt;code&gt;config.toml&lt;/code&gt; file I've used for my &lt;code&gt;docs&lt;/code&gt;, which allow me to
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org484a2fe&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org087b2c3&quot;&gt;
 buildDrafts = true
-title = &quot;My Project&quot;
+title = &amp;quot;My Project&amp;quot;
 
 # For search functionality
 [outputs]
-home = [ &quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot;]
+home = [ &amp;quot;HTML&amp;quot;, &amp;quot;RSS&amp;quot;, &amp;quot;JSON&amp;quot;]
 
 [params]
-  author = &quot;My team&quot;
-  description = &quot;My project&apos;s cloud&quot;
+  author = &amp;quot;My team&amp;quot;
+  description = &amp;quot;My project's cloud&amp;quot;
 &lt;/pre&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>quick-and-pretty-docs-for-software-projects</guid>
-            <pubDate>2019-08-28T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Personal brands for software developers</title>
-            <link>https://bitspook.in/blog/personal-brands-for-software-developers/</link>
-            <description>&lt;p&gt;
-&lt;a href=&quot;file:///blog/maximize-individual-growing-in-a-software-team-2-month-report/&quot;&gt;Reflecting on the progress&lt;/a&gt; we have made in our &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;&quot;nurture a culture of individual
-growth in a software team&quot; initiative&lt;/a&gt;, I realized there is much to gain from
-candy wrapping our efforts. As per our plan, we&apos;ll be (and are) giving talks,
+</content></entry><entry><title type="text">Personal brands for software developers</title><id>https://bitspook.in/blog/personal-brands-for-software-developers</id><updated>2019-04-01T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/personal-brands-for-software-developers" title="Personal brands for software developers"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-04-01T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+&lt;a href=&quot;file:///blog/maximize-individual-growing-in-a-software-team-2-month-report/&quot;&gt;Reflecting on the progress&lt;/a&gt; we have made in our &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;&amp;quot;nurture a culture of individual
+growth in a software team&amp;quot; initiative&lt;/a&gt;, I realized there is much to gain from
+candy wrapping our efforts. As per our plan, we'll be (and are) giving talks,
 doing research, and writing itch-scratching code. Coming out of shadows and
 presenting our efforts in a nice frame present many fold benefits.
 &lt;/p&gt;
@@ -176,7 +143,6 @@ presenting our efforts in a nice frame present many fold benefits.
 My proposal is to invest energy in making our efforts more visible. To
 focus this emotion on a more concrete goal, I have chosen
 &lt;/p&gt;
-
 &lt;div id=&quot;outline-container-establishing-a-personal-brand&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;establishing-a-personal-brand&quot;&gt;Establishing a personal brand&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-establishing-a-personal-brand&quot;&gt;
@@ -194,11 +160,10 @@ our team(s), and I believe visibility of this growth is important for
 its sustenance. The organization we work for, if it can see us growing
 new skills, will be able to leverage them, hence contributing more to
 our growth. Before I start fantasizing about all the good this can bring
-to us, let&apos;s brainstorm on
+to us, let's brainstorm on
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-how-can-we-establish-ourselves-as-brands&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;how-can-we-establish-ourselves-as-brands&quot;&gt;How can we establish ourselves as brands?&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-can-we-establish-ourselves-as-brands&quot;&gt;
@@ -224,7 +189,7 @@ incorporating all the steps we have chosen in our personal websites:
 
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;b&gt;Talks/Presentations section&lt;/b&gt; for the talks we deliver. Perhaps we
-can have &quot;Review&quot; section for the talks we attend&lt;/li&gt;
+can have &amp;quot;Review&amp;quot; section for the talks we attend&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;A blog&lt;/b&gt; for sharing the discussions we have on
 &lt;a href=&quot;http://forum.trantorinc.com/&quot;&gt;Trantor forum&lt;/a&gt;, our research notes,
 thoughts, opinions and just about anything. Blogs are great for
@@ -253,7 +218,7 @@ the internet to get noticed organically. Once we have the bare minimum
 content creation pipeline, we can then focus on polishing things like
 how it looks, SEO, automatic sharing across social media platforms,
 analytic and data gathering, automatic updates for new content. I
-wouldn&apos;t delve too deep into this right now.
+wouldn't delve too deep into this right now.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -270,23 +235,23 @@ hackathons etc.
 &lt;/p&gt;
 
 &lt;p&gt;
-We are in a unique position in this regard, the tech &quot;culture&quot; in our city
+We are in a unique position in this regard, the tech &amp;quot;culture&amp;quot; in our city
 (Chandigarh) is yet barely blossoming. It used to be a &lt;a href=&quot;file:///blog/dear-first-world-dev-have-a-look-at-your-nightmare/&quot;&gt;rather gloomy picture&lt;/a&gt;
 around here, but I believe people have now started seeing the exploitation going
 around in the tech scene of the city for what it is. &lt;a href=&quot;https://www.meetup.com/find/events/?allMeetups=true&amp;amp;radius=10&amp;amp;userFreeform=Chandigarh%252C+India&amp;amp;mcId=z1018132&amp;amp;mcName=Chandigarh%252C+IN&amp;amp;eventFilter=mysugg&quot;&gt;More and more meetup groups&lt;/a&gt;
 are blossoming for the good. Participating in these groups can be a great source
 of content for our online presence. Before I start day-dreaming about how we can
-hack for Chandigarh, I&apos;ll shut up about it : )
+hack for Chandigarh, I'll shut up about it : )
 &lt;/p&gt;
 
 &lt;p&gt;
 For this, I suppose the next course of action is to open the sessions we
 have been doing for public to attend. Trantor is one of the few
 companies I have seen being quite open for organizing meetups in
-Tricity, so this shouldn&apos;t be a problem from that front.
+Tricity, so this shouldn't be a problem from that front.
 &lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;hr&gt;
 
 &lt;p&gt;
 Here is what I am imagining for our next goal is to attain our grand
@@ -296,27 +261,17 @@ our endeavor.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>personal-brands-for-software-developers</guid>
-            <pubDate>2019-04-01T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>Maximize individual growing in a software team (2 month report)</title>
-            <link>https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">Maximize individual growing in a software team (2 month report)</title><id>https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report</id><updated>2019-03-26T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report" title="Maximize individual growing in a software team (2 month report)"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-03-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 Couple months ago we started an &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;initiative&lt;/a&gt; in our team here at &lt;a href=&quot;http://trantorinc.com/&quot;&gt;Trantor&lt;/a&gt; with the
 focus on nurturing a culture which optimizes personal growth of an individual in
-the team. I believe it is turning out to be quite successful. We decided we&apos;ll
+the team. I believe it is turning out to be quite successful. We decided we'll
 focus on 4 things to achieve our goal:
 &lt;/p&gt;
-
 &lt;div id=&quot;outline-container-interactive-sessions-of-tools-technologies&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;interactive-sessions-of-tools-technologies&quot;&gt;Interactive sessions of tools/technologies&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-interactive-sessions-of-tools-technologies&quot;&gt;
 &lt;p&gt;
-This is where we&apos;ve observed most success. We have had 4 sessions in
+This is where we've observed most success. We have had 4 sessions in
 past 2 months (we do two-week sprints), with following primary topics:
 &lt;/p&gt;
 
@@ -331,7 +286,6 @@ Singh (me)&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-collaboratively-studying-open-source-projects-we-use&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;collaboratively-studying-open-source-projects-we-use&quot;&gt;Collaboratively studying open source projects we use&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-collaboratively-studying-open-source-projects-we-use&quot;&gt;
@@ -339,12 +293,11 @@ Singh (me)&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;
 We started off with &lt;code&gt;chai.js&lt;/code&gt;, but after probably spending only a few
 minutes each, the
 &lt;a href=&quot;https://docs.google.com/document/d/13dko42FS9kcnpqnrjp9QCouQO0vZHDQ0tslID3BAQBs/edit?usp=sharing&quot;&gt;google
-doc&lt;/a&gt; we created for collaboratively creating notes didn&apos;t see much
+doc&lt;/a&gt; we created for collaboratively creating notes didn't see much
 action.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-being-active-in-trantor-forums&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;being-active-in-trantor-forums&quot;&gt;Being active in Trantor forums&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-being-active-in-trantor-forums&quot;&gt;
@@ -353,18 +306,17 @@ Plan was to use Trantor Forums as a platform for proposing
 (revolutionary) changes in our project. We started off with
 &lt;a href=&quot;https://forum.trantorinc.com/t/suggested-improvements-for-tdd-in-veriown-cloud-mutation-testing-and-running-tests-concurrently/74&quot;&gt;a
 proposal to introduce mutation testing&lt;/a&gt; in our test-coverage reports,
-but didn&apos;t move forward from that.
+but didn't move forward from that.
 &lt;/p&gt;
 
 &lt;p&gt;
-I believe this is because we don&apos;t really spend as much time exploring
+I believe this is because we don't really spend as much time exploring
 new/different things/subject-matters to be able to bring more of such
 proposals. This problem is one of many that should fix itself if we are
 successful in fostering a culture of self growth in the team.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-day-long-hackathons&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;day-long-hackathons&quot;&gt;Day long hackathons&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-day-long-hackathons&quot;&gt;
@@ -372,32 +324,23 @@ successful in fostering a culture of self growth in the team.
 We are yet to realize this dream. Shiva proposed a neat little idea to
 solve a problem faced by Trantor employees, but turned out an official
 solution was already in the works and about to be released in couple
-weeks (it didn&apos;t). I believe we should have just gone ahead and spend a
+weeks (it didn't). I believe we should have just gone ahead and spend a
 day to build what we wanted, just for the heck of it. That would have
 been more fruitful.
 &lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;hr&gt;
 
 &lt;p&gt;
 Above points are more than just steps to achieve our goal, I believe,
 they are also metrics of our success. How much engagement each of these
 get reflects on how much of a self-growth culture is prospering in the
 team. I wonder if we can somehow quantize these per-person. If nothing
-else, that&apos;ll create some cool graphs to gawk at.
+else, that'll create some cool graphs to gawk at.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>maximize-individual-growing-in-a-software-team-2-month-report</guid>
-            <pubDate>2019-03-26T01:00:00.000000+01:00</pubDate>
-        </item>
-        <item>
-            <title>How to maximize individual growth in a software team?</title>
-            <link>https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">How to maximize individual growth in a software team?</title><id>https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team</id><updated>2019-01-21T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team" title="How to maximize individual growth in a software team?"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-01-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 Working as a solo freelance developer, I used to have lofty ideas of how
 a group of people can grow so much more together. I imagined how a mind
 in the hive can grow at exponential rates. I made several attempts to
@@ -407,8 +350,8 @@ degree, most were not. Now working in a software development team at
 &lt;/p&gt;
 
 &lt;p&gt;
-I still believe that it&apos;s a worthwhile general direction to move in. In
-this post, I am asking myself (and you) the question of &quot;how&quot;. How can
+I still believe that it's a worthwhile general direction to move in. In
+this post, I am asking myself (and you) the question of &amp;quot;how&amp;quot;. How can
 we maximize growth of an individual developer in a software team?
 &lt;/p&gt;
 
@@ -424,18 +367,18 @@ code, and also to make it elegant at many levels.
 &lt;/p&gt;
 
 &lt;p&gt;
-Why focus on an individual&apos;s growth? I believe people are selfish by
+Why focus on an individual's growth? I believe people are selfish by
 design. We think first for ourselves, then for our family, then for our
 closest community, and so on. Growing individuals help teams (and
 companies) directly as well. A culture of growth attracts good
 developers, more good developers are good for teams/companies than
-mediocre/bad ones. Optimizing for an individual&apos;s growth seem like a
+mediocre/bad ones. Optimizing for an individual's growth seem like a
 good idea to me. I think it adds significant positive value to everyone
 involved in the process of writing software.
 &lt;/p&gt;
 
 &lt;p&gt;
-Now then, how do we optimize for an individual&apos;s growth? I had a
+Now then, how do we optimize for an individual's growth? I had a
 discussion with the team here and we came up with some points that we
 are going to try this
 &lt;a href=&quot;https://www.atlassian.com/agile/scrum/sprints&quot;&gt;sprint&lt;/a&gt;. Plan is to
@@ -444,12 +387,11 @@ on the extra day we earn, we sit back together, analyze two weeks of our
 code, share peer feedback, and dig into one or more of following
 activities.
 &lt;/p&gt;
-
 &lt;div id=&quot;outline-container-interactive-sessions-of-new-tools-technologies&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;interactive-sessions-of-new-tools-technologies&quot;&gt;Interactive sessions of new tools/technologies&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-interactive-sessions-of-new-tools-technologies&quot;&gt;
 &lt;p&gt;
-Topmost and shiniest layer of a software developer&apos;s growth is knowledge
+Topmost and shiniest layer of a software developer's growth is knowledge
 of new tools and technologies. Some of us explore more technologies than
 others. It was proposed that team members present a tool or technology,
 and give an interactive session of something they find cool. This can be
@@ -468,12 +410,11 @@ developer should be familiar with devops.
 
 &lt;p&gt;
 I differ from the proposal by the team a bit though. I think it is cool
-to just &quot;show and tell&quot; bi-weekly, giving an interactive session is a
+to just &amp;quot;show and tell&amp;quot; bi-weekly, giving an interactive session is a
 good to have.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-collaboratively-studying-open-source-projects-we-use&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;collaboratively-studying-open-source-projects-we-use&quot;&gt;Collaboratively studying open source projects we use&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-collaboratively-studying-open-source-projects-we-use&quot;&gt;
@@ -487,7 +428,6 @@ this sprint.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-put-forward-new-approaches-in-forums&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;put-forward-new-approaches-in-forums&quot;&gt;Put forward new approaches in forums&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-put-forward-new-approaches-in-forums&quot;&gt;
@@ -495,8 +435,8 @@ this sprint.
 Often times there are disagreements in team regarding approaches that
 can be taken towards a problem. Or sometimes under the pressure of
 delivery we pick one approach on another. If the taken approach is too
-bad, a technical debt is created, but when it is &quot;good enough&quot;, we just
-move on. We don&apos;t want to let this slide. We should reconsider these
+bad, a technical debt is created, but when it is &amp;quot;good enough&amp;quot;, we just
+move on. We don't want to let this slide. We should reconsider these
 small improvements, and keep incrementally improving and challenging our
 current practices.
 &lt;/p&gt;
@@ -513,7 +453,6 @@ and bring activity in our forums as well.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;div id=&quot;outline-container-day-long-hackathons&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;day-long-hackathons&quot;&gt;Day long Hackathons&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-day-long-hackathons&quot;&gt;
@@ -538,11 +477,4 @@ Please put in comments below if you have opinions and/or suggestions!
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>blog</category>
-            <guid>how-to-maximize-individual-growth-in-a-software-team</guid>
-            <pubDate>2019-01-21T01:00:00.000000+01:00</pubDate>
-        </item>
-    </channel>
-</rss>
+</content></entry><base href="https://bitspook.in"/></feed>

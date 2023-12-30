@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<rss version="2.0">
-    <channel>
-        <title>Posts categorized as `poems&apos;</title>
-        <link>https://bitspook.in/</link>
-        <generator>cl-ownpress</generator>
-        <language>en-us</language>
-        <image>
-            <title>Posts categorized as `poems&apos;</title>
-            <url>/images/spooky-avatar.png</url>
-            <link>https://bitspook.in/</link>
-        </image>
-        <item>
-            <title>ਨਸ਼ੇੜੀ</title>
-            <link>https://bitspook.in/poems/poem-nashedi/</link>
-            <description>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Poems - bitspook.in</title><id>https://bitspook.in/poems/feed.xml</id><updated>2023-12-30T16:29:28.193600Z</updated><link href="https://bitspook.in/poems/feed.xml" rel="self" title="Poems"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">ਨਸ਼ੇੜੀ</title><id>https://bitspook.in/poems/poem-nashedi</id><updated>2022-03-30T00:00:00.000000Z</updated><link href="https://bitspook.in/poems/poem-nashedi" title="ਨਸ਼ੇੜੀ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2022-03-30T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 ਮੇਰੇ ਪਿੰਡ ਦਾ ਨਸ਼ੇੜੀ ਜਦ ਨਿੱਕਾ ਸੀ,
 &lt;/p&gt;
 
@@ -77,10 +62,10 @@
 ਆਪਣੀ ਹੱਡੀਆਂ ਦੀ ਪੰਡ ਪਾਲ਼ ਰਿਹਾ ਏ।
 &lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;hr&gt;
 
 &lt;p&gt;
-Drug problem in Punjab is real. But it isn&apos;t always the addict&apos;s own
+Drug problem in Punjab is real. But it isn't always the addict's own
 doing. Sometimes, the society which love to hate them, is itself
 responsible for the demise of entire families.
 &lt;/p&gt;
@@ -91,16 +76,7 @@ of passionate hate from almost everyone in his village. From people who
 saw his slow death over &lt;b&gt;years&lt;/b&gt;, who are now angry that his &lt;i&gt;existence&lt;/i&gt;
 is corrupting their children.
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>poems</category>
-            <guid>poem-nashedi</guid>
-            <pubDate>2022-03-30T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>ਗੀਤ</title>
-            <link>https://bitspook.in/poems/poem-geet/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">ਗੀਤ</title><id>https://bitspook.in/poems/poem-geet</id><updated>2021-03-31T00:00:00.000000Z</updated><link href="https://bitspook.in/poems/poem-geet" title="ਗੀਤ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2021-03-31T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 ਕਿਉਂ ਮੈਂ ਗਾਵਾਂ ਅੱਜ ਕਰਮ ਦਾ ਗੀਤ,
 &lt;/p&gt;
 
@@ -113,7 +89,7 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਤਿੰਨ ਰੰਗਾਂ &apos;ਚ ਘਰ ਆਇਆ, ਸਰਹੱਦਾਂ ਦਾ ਵੀਰ।
+ਤਿੰਨ ਰੰਗਾਂ 'ਚ ਘਰ ਆਇਆ, ਸਰਹੱਦਾਂ ਦਾ ਵੀਰ।
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -163,16 +139,7 @@ is corrupting their children.
 &lt;p&gt;
 ਅਗਲਾ ਹੁਕਮ ਹੈ ਸਾਡੇ ਪੀਰ ਦਾ, ਹੱਥ ਲੈ ਲੈਣੀ ਸ਼ਮਸ਼ੀਰ।
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>poems</category>
-            <guid>poem-geet</guid>
-            <pubDate>2021-03-31T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>ਚਿਹਰੇ</title>
-            <link>https://bitspook.in/poems/poems-chehre/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">ਚਿਹਰੇ</title><id>https://bitspook.in/poems/poems-chehre</id><updated>2016-07-01T00:00:00.000000Z</updated><link href="https://bitspook.in/poems/poems-chehre" title="ਚਿਹਰੇ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2016-07-01T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 ਹਸਦੇ, ਖੇਡ੍ਹਦੇ, ਗਿਰਦੇ ਰੋ ਪੈਂਦੇ,
 &lt;/p&gt;
 
@@ -203,21 +170,12 @@ is corrupting their children.
 &lt;p&gt;
 ਭੁੱਲ ਜਾਂਦੇ, ਗੁਮਾਨ ਕਰਦੇ, ਆਪਣਾ ਅਕਸ ਨਾ ਪਛਾਣ ਪਾਂਦੇ
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>poems</category>
-            <guid>poems-chehre</guid>
-            <pubDate>2016-07-01T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>ਜਾਗਦੀਆਂ ਲਾਸ਼ਾਂ</title>
-            <link>https://bitspook.in/poems/poem-jagdian-lashan/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">ਜਾਗਦੀਆਂ ਲਾਸ਼ਾਂ</title><id>https://bitspook.in/poems/poem-jagdian-lashan</id><updated>2015-04-29T00:00:00.000000Z</updated><link href="https://bitspook.in/poems/poem-jagdian-lashan" title="ਜਾਗਦੀਆਂ ਲਾਸ਼ਾਂ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2015-04-29T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 ਚਿਰ ਪਿੱਛੋਂ ਅੱਖਾਂ ਖੋਲ੍ਹ ਕੇ ਚੱਲਿਆ ਤਾਂ
 &lt;/p&gt;
 
 &lt;p&gt;
-ਭੀੜ &apos;ਚ ਰੁੜ੍ਹੇ ਜਾਂਦੇ ਕੁਝ ਚਿਹਰੇ ਮਿਲੇ,
+ਭੀੜ 'ਚ ਰੁੜ੍ਹੇ ਜਾਂਦੇ ਕੁਝ ਚਿਹਰੇ ਮਿਲੇ,
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -245,7 +203,7 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਬੋਲੀ &apos;ਤੇ ਲਗ ਚੁੱਕਾ ਸੀ ਸ਼ਾਯਦ, ਪਰ ਵਿਕ ਹੀ ਨੀ ਰਿਹਾ ਸੀ
+ਬੋਲੀ 'ਤੇ ਲਗ ਚੁੱਕਾ ਸੀ ਸ਼ਾਯਦ, ਪਰ ਵਿਕ ਹੀ ਨੀ ਰਿਹਾ ਸੀ
 &lt;/p&gt;
 
 &lt;ul class=&quot;org-ul&quot;&gt;
@@ -281,7 +239,7 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਖਾਲੀ ਜਿਹੇ ਬਸਤੇ &apos;ਚ ਜਦ ਇੱਟਾਂ ਭਰਨ ਲਗੀ,
+ਖਾਲੀ ਜਿਹੇ ਬਸਤੇ 'ਚ ਜਦ ਇੱਟਾਂ ਭਰਨ ਲਗੀ,
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -307,21 +265,12 @@ is corrupting their children.
 &lt;p&gt;
 ਜਾਗਦੀਆਂ ਲਾਸ਼ਾਂ ਵਿੱਚ ਤੱਕ ਕੇ, ਐਨਾ ਡਰ ਗਿਆ ਸੀ
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>poems</category>
-            <guid>poem-jagdian-lashan</guid>
-            <pubDate>2015-04-29T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>ਮਾਯੂਸ ਸਵੇਰ</title>
-            <link>https://bitspook.in/poems/poem-mayoos-saver/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">ਮਾਯੂਸ ਸਵੇਰ</title><id>https://bitspook.in/poems/poem-mayoos-saver</id><updated>2015-01-23T00:00:00.000000Z</updated><link href="https://bitspook.in/poems/poem-mayoos-saver" title="ਮਾਯੂਸ ਸਵੇਰ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2015-01-23T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 ਕਿਉਂ ਉੱਠਾ ਹਾਂ ਅੱਜ ਮੈਂ ਮਾਯੂਸ ਸਵੇਰ ਲਈ,
 &lt;/p&gt;
 
 &lt;p&gt;
-ਨਮ ਅੱਖਾਂ ਦੇ ਪਰਛਾਵੇਂ ਮੇਨੂੰ ਖਾ ਕਿਉਂ ਨਾ ਗਏ&amp;#x2026;
+ਨਮ ਅੱਖਾਂ ਦੇ ਪਰਛਾਵੇਂ ਮੇਨੂੰ ਖਾ ਕਿਉਂ ਨਾ ਗਏ…
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -341,7 +290,7 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਝਰੋਖਿਆਂ ਦੇ ਵਿੱਚੋਂ ਚਿਹਰਾ ਦਿਸਦਾ ਕਿਉਂ ਨਹੀਂ&amp;#x2026;
+ਝਰੋਖਿਆਂ ਦੇ ਵਿੱਚੋਂ ਚਿਹਰਾ ਦਿਸਦਾ ਕਿਉਂ ਨਹੀਂ…
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -351,16 +300,7 @@ is corrupting their children.
 &lt;p&gt;
 ਦਿਲ ਉੱਤੇ ਲੱਗੇ ਜੋ, ਨਕਾਬ ਵਿਕਦਾ ਕਿਉਂ ਨਹੀਂ।
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>poems</category>
-            <guid>poem-mayoos-saver</guid>
-            <pubDate>2015-01-23T01:00:00.000000+01:00</pubDate>
-        </item>
-        <item>
-            <title>ਕਾਯਨਾਤ</title>
-            <link>https://bitspook.in/poems/poem-kaynat/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">ਕਾਯਨਾਤ</title><id>https://bitspook.in/poems/poem-kaynat</id><updated>2014-07-27T00:00:00.000000Z</updated><link href="https://bitspook.in/poems/poem-kaynat" title="ਕਾਯਨਾਤ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2014-07-27T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 ਹੁਣ ਪਰਵਾਨਾ ਜਲੇ ਕਿਉਂ ਸ਼ਮਾ ਦੇ ਲਈ,
 &lt;/p&gt;
 
@@ -373,7 +313,7 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਰੱਬ ਵਿੱਚ ਵੀ ਕੋਈ ਸੱਚੀ ਬਾਤ ਨਾ ਰਹੀ&amp;#x2026;
+ਰੱਬ ਵਿੱਚ ਵੀ ਕੋਈ ਸੱਚੀ ਬਾਤ ਨਾ ਰਹੀ…
 &lt;/p&gt;
 
 &lt;ul class=&quot;org-ul&quot;&gt;
@@ -393,7 +333,7 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਕਿਸੀ ਦੁਆ ਵਿਚ ਕੋਈ ਕਰਾਮਾਤ ਨਾ ਰਹੀ&amp;#x2026;
+ਕਿਸੀ ਦੁਆ ਵਿਚ ਕੋਈ ਕਰਾਮਾਤ ਨਾ ਰਹੀ…
 &lt;/p&gt;
 
 &lt;ul class=&quot;org-ul&quot;&gt;
@@ -413,18 +353,9 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਵਸਦੀ ਇਨਸਾਨਾਂ ਦੀ ਓਹ ਕਾਯਨਾਤ ਨਾ ਰਹੀ&amp;#x2026;
+ਵਸਦੀ ਇਨਸਾਨਾਂ ਦੀ ਓਹ ਕਾਯਨਾਤ ਨਾ ਰਹੀ…
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>poems</category>
-            <guid>poem-kaynat</guid>
-            <pubDate>2014-07-27T02:00:00.000000+02:00</pubDate>
-        </item>
-        <item>
-            <title>ਪੱਥਰ</title>
-            <link>https://bitspook.in/poems/poem-pathr/</link>
-            <description>&lt;p&gt;
+</content></entry><entry><title type="text">ਪੱਥਰ</title><id>https://bitspook.in/poems/poem-pathr</id><updated>2014-02-26T00:00:00.000000Z</updated><link href="https://bitspook.in/poems/poem-pathr" title="ਪੱਥਰ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2014-02-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 ਪੱਥਰਾਂ ਦੇ ਸ਼ਿਹਰ ਵਿਚ, ਇਸ਼ਕ਼ ਦਾ ਵਪਾਰ ਕੀਤਾ,
 &lt;/p&gt;
 
@@ -437,7 +368,7 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਪੱਥਰ ਬਣਦਾ ਜਾ ਰਿਹਾ ਹਾਂ ਮੈਂ&amp;#x2026;.,
+ਪੱਥਰ ਬਣਦਾ ਜਾ ਰਿਹਾ ਹਾਂ ਮੈਂ….,
 &lt;/p&gt;
 
 &lt;ul class=&quot;org-ul&quot;&gt;
@@ -461,7 +392,7 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਪੱਥਰ ਬਣਦਾ ਜਾ ਰਿਹਾ ਹਾਂ ਮੈਂ&amp;#x2026;.
+ਪੱਥਰ ਬਣਦਾ ਜਾ ਰਿਹਾ ਹਾਂ ਮੈਂ….
 &lt;/p&gt;
 
 &lt;ul class=&quot;org-ul&quot;&gt;
@@ -493,7 +424,7 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਪੱਥਰ ਬਣਦਾ ਜਾ ਰਿਹਾ ਹਾਂ ਮੈਂ&amp;#x2026;
+ਪੱਥਰ ਬਣਦਾ ਜਾ ਰਿਹਾ ਹਾਂ ਮੈਂ…
 &lt;/p&gt;
 
 &lt;ul class=&quot;org-ul&quot;&gt;
@@ -529,13 +460,6 @@ is corrupting their children.
 &lt;/p&gt;
 
 &lt;p&gt;
-ਪੱਥਰ ਬਣਦਾ ਜਾ ਰਿਹਾ ਹਾਂ ਮੈਂ&amp;#x2026;.
+ਪੱਥਰ ਬਣਦਾ ਜਾ ਰਿਹਾ ਹਾਂ ਮੈਂ….
 &lt;/p&gt;
-</description>
-            <author>Charanjit Singh</author>
-            <category>poems</category>
-            <guid>poem-pathr</guid>
-            <pubDate>2014-02-26T01:00:00.000000+01:00</pubDate>
-        </item>
-    </channel>
-</rss>
+</content></entry><base href="https://bitspook.in"/></feed>
