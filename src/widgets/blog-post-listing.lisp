@@ -29,7 +29,7 @@
      (.pagination :display flex
                   :padding (var --size-4)
                   :justify-content space-between
-                  :margin-top (var --scale-8))
+                  :margin-top (var --scale-0))
 
      (.next :flex-grow 1
             :text-align right))

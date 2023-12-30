@@ -79,7 +79,7 @@ computers, security and politics.")
 (defun build ()
   (let* ((www (path-join *base-dir* "docs/"))
          (static (path-join *base-dir* "src/static/"))
-         (*print-pretty* t)
+         (*print-pretty* nil)
          (asset-pub (make 'asset-publisher :dest www))
          (base-url *base-url*)
          (post-pub (make 'blog-post-publisher
