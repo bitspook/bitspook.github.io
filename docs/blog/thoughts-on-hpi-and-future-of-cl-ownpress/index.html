@@ -1,0 +1,79 @@
+<html lang=en><head><meta charset=UTF-8><title>Thoughts on HPI and future of cl-ownpress</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=/styles-DC23DB.css><link rel=alternate type=application/atom+xml href=/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Thoughts on HPI and future of cl-ownpress</h1><div class=meta><time class="meta-item date">January 1, 2024</time><ul class="meta-item tags"><li class=tag><a href=/tags/clownpress>#clownpress</a></ul></div></header><main class=post-body><blockquote id="org89bc37c">
+<p>
+Reflecting on similarities and differences b/w HPI and what I want cl-ownpress to build into.
+Thinking out loud.
+</p>
+</blockquote>
+
+<p>
+Recently I came across <a href="https://github.com/karlicoss/HPI">HPI</a> again. HPI has a lot of similarities to what I want cl-ownpress to be.
+Its goal seem to be enabling a user to take ownership of their own data that's locked in online
+platforms. This is exactly what I want cl-ownpress to do for me. This realization gave me pause, and
+here I am rationalizing continued existence of cl-ownpress.
+</p>
+
+<p>
+cl-ownpress is supposed to be a part of a bigger ecosystem for personal computing. By personal
+computing I mean hooking into every aspect of my personal life. My thoughts (daily journal, captured
+ideas), finances, things I own, people I interact with, work I do and everything else. In my ideal
+personal computing ecosystem, different independent pieces interact with and build upon each other.
+</p>
+
+<p>
+<i>For example</i>, I want to have a CRM to manage people and my relationships with them. I want the
+ability to mention people from my CRM in my daily journal, and then be able to make queries like
+"all interactions with person &lt;X&gt;". Similarly, I want to utilize my CRM to also mention people in my
+blog-posts. These mentions however should get intelligently published. e.g on my personal website,
+mention of a person should become a link to their own personal website. When publishing to mastodon,
+it should become a mastodon mention.
+</p>
+
+<p>
+<i>Another example</i>, I'd like to maintain an accounting ledger of all the money I spend. I want to
+utilize this to also maintain a list of things I own. I'd like to utilize this in turn to review
+things I use, and publish my reviews to my personal website and/or where I purchased it from.
+</p>
+
+<p>
+Publishing a subset of all the data in my personal computing ecosystem is where cl-ownpress comes
+in.
+</p>
+
+<p>
+At present, cl-ownpress happens to be the most complete component of my ecosystem. I have a <a href="https://github.com/bitspook/brandi">few</a>
+<a href="https://github.com/bitspook/saunf">other</a> <a href="https://github.com/bitspook/kharcha">pieces</a> in pretty-much abandoned state while I have replaced them with some untracked lisp code
+(mostly in my Emacs setup).
+</p>
+
+<p>
+HPI seems to provide same functionality as cl-ownpress's <a href="https://github.com/bitspook/cl-ownpress/blob/master/src/provider/package.lisp#L1-L4">providers</a>. So why not replace <code>provider</code>-s
+with HPI and build on already done work? Well, things I wanted so far (converting my denote notes to
+blog posts while using my Emacs configuration to do the conversion from org to html) don't have a
+replacement in HPI. In future, when I want to deal with an external data source and there is an HPI
+module available for it, perhaps I'll create an <code>hpi-provider</code>.
+</p>
+
+<p>
+That settles one aspect of relationship of cl-ownpress and HPI. They're complimentary instead of
+contradictory. HPI is essentially a set of cl-ownpress <code>provider</code>-s. But I believe there is a
+philosophical difference in how both these projects approach gaining ownership over user's data.
+</p>
+
+<p>
+HPI <b>accepts</b> that data is going to be produced on walled platforms, while cl-ownpress establishes
+user's own platform where data is originally published. Cl-ownpress then uses the walled platforms
+for interacting with people these platforms have managed to hold hostage.
+</p>
+
+<p>
+Admittedly HPI has a broader scope, it deals with more than just getting data back from walled
+platforms, but in the aspect of 'publishing', I believe this holds true. With cl-ownpress, I want to
+invert the relationship. Instead of "the platform &lt;X&gt; uses me and locks in <b>my</b> content", I want it
+to be "<b>I</b> own my content, and use the walled garden to interact with its hostages".
+</p>
+
+<p>
+The subtle difference is important to me. This is an attitude I'd like to have towards life, and
+what is my personal computing ecosystem if not its reflection.
+</p>
+</main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/blog/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=https://bitspook.in/archive/feed.xml></a></div></footer></div></body></html>

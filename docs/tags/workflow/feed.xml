@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Workflow - bitspook.in</title><id>https://bitspook.in/tags/workflow/feed.xml</id><updated>2023-12-30T16:29:28.225165Z</updated><link href="https://bitspook.in/tags/workflow/feed.xml" rel="self" title="Workflow"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Reading, and not forgetting</title><id>https://bitspook.in/blog/reading-and-not-forgetting</id><updated>2023-01-15T19:46:00.000000Z</updated><link href="https://bitspook.in/blog/reading-and-not-forgetting" title="Reading, and not forgetting"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2023-01-15T19:46:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-org51a5646&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org51a5646&quot;&gt;Problem&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org51a5646&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Workflow - bitspook.in</title><id>https://bitspook.in/tags/workflow/feed.xml</id><updated>2024-01-04T08:18:20.176395Z</updated><link href="https://bitspook.in/tags/workflow/feed.xml" rel="self" title="Workflow"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Reading, and not forgetting</title><id>https://bitspook.in/blog/reading-and-not-forgetting</id><updated>2023-01-15T19:46:00.000000Z</updated><link href="https://bitspook.in/blog/reading-and-not-forgetting" title="Reading, and not forgetting"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2023-01-15T19:46:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-org3d2189f&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3d2189f&quot;&gt;Problem&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3d2189f&quot;&gt;
 &lt;p&gt;
 I forget everything I read, as soon as I am done reading (a sentence). Over
 time, reading turned from leisure to labor. Pressure of having to remember
@@ -9,9 +9,9 @@ distracted made it even worse.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org43762c1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org43762c1&quot;&gt;Solution&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org43762c1&quot;&gt;
+&lt;div id=&quot;outline-container-org57dd7ea&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org57dd7ea&quot;&gt;Solution&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org57dd7ea&quot;&gt;
 &lt;p&gt;
 Take notes to outsource remembering, and make reading more engaging.
 &lt;/p&gt;
@@ -22,18 +22,18 @@ taking notes keep my attention tethered.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgddab57f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgddab57f&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgddab57f&quot;&gt;
+&lt;div id=&quot;outline-container-orge853137&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge853137&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge853137&quot;&gt;
 &lt;p&gt;
 Note taking process need to be designed to reduce the burden that note-taking
 itself can become. Key here is not taking notes, it is crafting a smooth
 note-taking workflow.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org8e0b554&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org8e0b554&quot;&gt;Components&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org8e0b554&quot;&gt;
+&lt;div id=&quot;outline-container-org3472d81&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org3472d81&quot;&gt;Components&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org3472d81&quot;&gt;
 &lt;p&gt;
 My reading workflow involves 3 major components
 &lt;/p&gt;
@@ -44,9 +44,9 @@ My reading workflow involves 3 major components
 &lt;li&gt;Spookfox: An Emacs package for controlling Firefox from Emacs&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org4dafec0&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org4dafec0&quot;&gt;Emacs&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org4dafec0&quot;&gt;
+&lt;div id=&quot;outline-container-orgd51d73c&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgd51d73c&quot;&gt;Emacs&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgd51d73c&quot;&gt;
 &lt;p&gt;
 Emacs is the center stage on which everything else plays. I chose Emacs, because
 &lt;/p&gt;
@@ -60,9 +60,9 @@ decade now.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org64a1cb5&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org64a1cb5&quot;&gt;Denote&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org64a1cb5&quot;&gt;
+&lt;div id=&quot;outline-container-org7b85c12&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org7b85c12&quot;&gt;Denote&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org7b85c12&quot;&gt;
 &lt;p&gt;
 &lt;a href=&quot;https://github.com/protesilaos/denote&quot;&gt;Denote&lt;/a&gt; is my present choice of note-taking Emacs package. It provide structure
 to my notes, and thin tooling to navigate this structure. Notes are kept in
@@ -71,9 +71,9 @@ keywords and tags even from outside Emacs.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgf3f9d8e&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgf3f9d8e&quot;&gt;Spookfox&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgf3f9d8e&quot;&gt;
+&lt;div id=&quot;outline-container-org3d871f6&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org3d871f6&quot;&gt;Spookfox&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org3d871f6&quot;&gt;
 &lt;p&gt;
 &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;Spookfox&lt;/a&gt; is my answer to &amp;quot;but what about when you need to leave Emacs?&amp;quot;.
 &lt;/p&gt;
@@ -92,9 +92,9 @@ getting information about current browser tab, video being played etc.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgf83c717&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgf83c717&quot;&gt;The workflow&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgf83c717&quot;&gt;
+&lt;div id=&quot;outline-container-org34c82d8&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org34c82d8&quot;&gt;The workflow&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org34c82d8&quot;&gt;
 &lt;p&gt;
 It boils down to a single key-combo: &lt;code&gt;C-c n r&lt;/code&gt; open a &amp;quot;reading note&amp;quot; in my
 scratchpad. &lt;code&gt;C-c n r&lt;/code&gt; opens the same note regardless of when I open it; i.e it
@@ -155,9 +155,9 @@ come super handy recently in my German language study.
 &lt;/div&gt;
 &lt;/div&gt;
 </content></entry><entry><title type="text">How I manage my passwords</title><id>https://bitspook.in/blog/how-i-manage-my-passwords</id><updated>2022-09-19T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/how-i-manage-my-passwords" title="How I manage my passwords"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-19T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;div id=&quot;outline-container-org0081edc&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0081edc&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0081edc&quot;&gt;
+&lt;div id=&quot;outline-container-orgc4540cd&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgc4540cd&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc4540cd&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;b&gt;No third-parties&lt;/b&gt;
@@ -188,9 +188,9 @@ should play nice with presence/absence of other tools.
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org999b18b&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org999b18b&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org999b18b&quot;&gt;
+&lt;div id=&quot;outline-container-org30b3ee1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org30b3ee1&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org30b3ee1&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
@@ -270,13 +270,13 @@ my mobile devices.
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org806b57e&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org806b57e&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org806b57e&quot;&gt;
+&lt;div id=&quot;outline-container-org885f2bb&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org885f2bb&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org885f2bb&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgfb9ae9d&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgfb9ae9d&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgfb9ae9d&quot;&gt;
+&lt;div id=&quot;outline-container-org97db652&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org97db652&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org97db652&quot;&gt;
 &lt;p&gt;
 For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
@@ -297,9 +297,9 @@ password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org8de46db&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org8de46db&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org8de46db&quot;&gt;
+&lt;div id=&quot;outline-container-orgeae3d6f&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgeae3d6f&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgeae3d6f&quot;&gt;
 &lt;p&gt;
 Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
 much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
@@ -331,9 +331,9 @@ password (on the same form).
 &lt;/video&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org93830a7&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org93830a7&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org93830a7&quot;&gt;
+&lt;div id=&quot;outline-container-org2f20c29&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org2f20c29&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2f20c29&quot;&gt;
 &lt;p&gt;
 I don't &amp;quot;install&amp;quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
@@ -462,9 +462,9 @@ SQL block produces output shown below that.
 &lt;span style=&quot;color: #86b5e8;&quot;&gt;| Nested event title | nested-lol-rofl-lmao | 2021-10-29 12:30:00 | 2021-10-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgb2d14b8&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb2d14b8&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb2d14b8&quot;&gt;
+&lt;div id=&quot;outline-container-org2fa9f58&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org2fa9f58&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2fa9f58&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -522,9 +522,9 @@ that didn't work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org137345d&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org137345d&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org137345d&quot;&gt;
+&lt;div id=&quot;outline-container-orga0ce9d6&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga0ce9d6&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga0ce9d6&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -575,9 +575,9 @@ I have similar keybindings for taking (&lt;code&gt;SPC n f&lt;/code&gt;) and ins
 i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings and
 consistent UI.
 &lt;/p&gt;
-&lt;div id=&quot;outline-container-org817fa6c&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org817fa6c&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org817fa6c&quot;&gt;
+&lt;div id=&quot;outline-container-orgfd8c3cb&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfd8c3cb&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfd8c3cb&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &amp;quot;normal&amp;quot; org-roam available for
 taking notes.
@@ -634,9 +634,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orge495b4d&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge495b4d&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge495b4d&quot;&gt;
+&lt;div id=&quot;outline-container-orga08556e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga08556e&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga08556e&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -657,9 +657,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org2195e23&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2195e23&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2195e23&quot;&gt;
+&lt;div id=&quot;outline-container-org4f8a0e9&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4f8a0e9&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4f8a0e9&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;

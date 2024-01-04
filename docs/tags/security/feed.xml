@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Security - bitspook.in</title><id>https://bitspook.in/tags/security/feed.xml</id><updated>2023-12-30T16:29:28.214134Z</updated><link href="https://bitspook.in/tags/security/feed.xml" rel="self" title="Security"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Secure Software Teams Trantor</title><id>https://bitspook.in/talks/secure-software-teams-trantor</id><updated>2019-08-26T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/secure-software-teams-trantor" title="Secure Software Teams Trantor"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-08-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe src=&quot;//slides.com/bitspook/secure-software-teams/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Security - bitspook.in</title><id>https://bitspook.in/tags/security/feed.xml</id><updated>2024-01-04T08:18:20.164060Z</updated><link href="https://bitspook.in/tags/security/feed.xml" rel="self" title="Security"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Secure Software Teams Trantor</title><id>https://bitspook.in/talks/secure-software-teams-trantor</id><updated>2019-08-26T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/secure-software-teams-trantor" title="Secure Software Teams Trantor"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-08-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe src=&quot;//slides.com/bitspook/secure-software-teams/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
 
 &lt;p&gt;
@@ -16,7 +16,7 @@ exercises, rest were left for the attendees as homework. Here's the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org1b9b624&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org322f1ff&quot;&gt;
 version: '3'
 services:
   webgoat:

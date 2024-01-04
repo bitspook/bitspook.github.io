@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Org-Roam - bitspook.in</title><id>https://bitspook.in/tags/org-roam/feed.xml</id><updated>2023-12-30T16:29:28.219769Z</updated><link href="https://bitspook.in/tags/org-roam/feed.xml" rel="self" title="Org-Roam"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Using org-roam as a CRM</title><id>https://bitspook.in/blog/using-org-roam-as-a-crm</id><updated>2022-01-22T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/using-org-roam-as-a-crm" title="Using org-roam as a CRM"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-01-22T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Org-Roam - bitspook.in</title><id>https://bitspook.in/tags/org-roam/feed.xml</id><updated>2024-01-04T08:18:20.171058Z</updated><link href="https://bitspook.in/tags/org-roam/feed.xml" rel="self" title="Org-Roam"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Using org-roam as a CRM</title><id>https://bitspook.in/blog/using-org-roam-as-a-crm</id><updated>2022-01-22T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/using-org-roam-as-a-crm" title="Using org-roam as a CRM"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-01-22T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
 
 &lt;p&gt;
@@ -36,9 +36,9 @@ I have similar keybindings for taking (&lt;code&gt;SPC n f&lt;/code&gt;) and ins
 i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings and
 consistent UI.
 &lt;/p&gt;
-&lt;div id=&quot;outline-container-org817fa6c&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org817fa6c&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org817fa6c&quot;&gt;
+&lt;div id=&quot;outline-container-orgfd8c3cb&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgfd8c3cb&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgfd8c3cb&quot;&gt;
 &lt;p&gt;
 Elisp I use org-roam as a CRM, while keeping &amp;quot;normal&amp;quot; org-roam available for
 taking notes.
@@ -95,9 +95,9 @@ i&lt;/code&gt; to insert a link to a person/event.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orge495b4d&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge495b4d&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge495b4d&quot;&gt;
+&lt;div id=&quot;outline-container-orga08556e&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orga08556e&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga08556e&quot;&gt;
 &lt;p&gt;
 No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
@@ -118,9 +118,9 @@ But it is perhaps too much to ask without making effort&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org2195e23&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2195e23&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2195e23&quot;&gt;
+&lt;div id=&quot;outline-container-org4f8a0e9&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4f8a0e9&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4f8a0e9&quot;&gt;
 &lt;ul class=&quot;org-ul&quot;&gt;
 &lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
 &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;

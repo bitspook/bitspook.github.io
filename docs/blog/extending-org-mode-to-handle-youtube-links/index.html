@@ -1,9 +1,9 @@
 <html lang=en><head><meta charset=UTF-8><title>Extending org-mode to handle youtube links</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=/styles-DC23DB.css><link rel=alternate type=application/atom+xml href=/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Extending org-mode to handle youtube links</h1><div class=meta><time class="meta-item date">September 26, 2022</time><ul class="meta-item tags"><li class=tag><a href=/tags/emacs>#emacs</a><li class=tag><a href=/tags/elisp>#elisp</a><li class=tag><a href=/tags/org-mode>#org-mode</a><li class=tag><a href=/tags/video>#video</a></ul></div></header><main class=post-body><p>
 <iframe width="560" height="315" src="//youtube.com/embed/eaZUZCzaIgw" title="nil" frameborder="0" allowfullscreen></iframe>
 </p>
-<div id="outline-container-org0636793" class="outline-2">
-<h2 id="org0636793">Requirement</h2>
-<div class="outline-text-2" id="text-org0636793">
+<div id="outline-container-org8622c33" class="outline-2">
+<h2 id="org8622c33">Requirement</h2>
+<div class="outline-text-2" id="text-org8622c33">
 <ol class="org-ol">
 <li>I want to open youtube links in my notes in <code>mpv</code> instead of opening the
 browser</li>
@@ -13,9 +13,9 @@ of hyperlinks</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orge3baf2f" class="outline-2">
-<h2 id="orge3baf2f">Implementation</h2>
-<div class="outline-text-2" id="text-orge3baf2f">
+<div id="outline-container-org7ad6279" class="outline-2">
+<h2 id="org7ad6279">Implementation</h2>
+<div class="outline-text-2" id="text-org7ad6279">
 <p>
 Org has a concept of 'link types'. We can add a new type of link and have it
 behave the way we want.
@@ -101,9 +101,9 @@ Thanks to <a href="https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgm
 </p>
 </div>
 </div>
-<div id="outline-container-org22c1f64" class="outline-2">
-<h2 id="org22c1f64">Result</h2>
-<div class="outline-text-2" id="text-org22c1f64">
+<div id="outline-container-org3d90883" class="outline-2">
+<h2 id="org3d90883">Result</h2>
+<div class="outline-text-2" id="text-org3d90883">
 <ol class="org-ol">
 <li><code>C-c C-o</code> (i.e <code>org-open-at-point</code>) on a <code>yt://</code> link opens the youtube video
 in mpv</li>
@@ -114,9 +114,9 @@ youtube videos</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org4bf2c64" class="outline-2">
-<h2 id="org4bf2c64">Bonus gains 💪</h2>
-<div class="outline-text-2" id="text-org4bf2c64">
+<div id="outline-container-org7236c92" class="outline-2">
+<h2 id="org7236c92">Bonus gains 💪</h2>
+<div class="outline-text-2" id="text-org7236c92">
 <p>
 Recently I've been building a tool (<a href="https://github.com/bitspook/cl-ownpress">cl-ownpress</a>) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
@@ -144,4 +144,4 @@ extending-the-blogging-setup as well.
 </p>
 </div>
 </div>
-</main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=https://bitspook.in/archive/feed.xml></a></div></footer></div></body></html>
+</main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/blog/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=https://bitspook.in/archive/feed.xml></a></div></footer></div></body></html>

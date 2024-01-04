@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Clownpress - bitspook.in</title><id>https://bitspook.in/tags/clownpress/feed.xml</id><updated>2024-01-04T08:18:20.169658Z</updated><link href="https://bitspook.in/tags/clownpress/feed.xml" rel="self" title="Clownpress"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Thoughts on HPI and future of cl-ownpress</title><id>https://bitspook.in/blog/thoughts-on-hpi-and-future-of-cl-ownpress</id><updated>2024-01-01T10:54:00.000000Z</updated><link href="https://bitspook.in/blog/thoughts-on-hpi-and-future-of-cl-ownpress" title="Thoughts on HPI and future of cl-ownpress"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2024-01-01T10:54:00.000000Z</published><summary type="text"></summary><content type="html">&lt;blockquote id=&quot;org89bc37c&quot;&gt;
+&lt;p&gt;
+Reflecting on similarities and differences b/w HPI and what I want cl-ownpress to build into.
+Thinking out loud.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+Recently I came across &lt;a href=&quot;https://github.com/karlicoss/HPI&quot;&gt;HPI&lt;/a&gt; again. HPI has a lot of similarities to what I want cl-ownpress to be.
+Its goal seem to be enabling a user to take ownership of their own data that's locked in online
+platforms. This is exactly what I want cl-ownpress to do for me. This realization gave me pause, and
+here I am rationalizing continued existence of cl-ownpress.
+&lt;/p&gt;
+
+&lt;p&gt;
+cl-ownpress is supposed to be a part of a bigger ecosystem for personal computing. By personal
+computing I mean hooking into every aspect of my personal life. My thoughts (daily journal, captured
+ideas), finances, things I own, people I interact with, work I do and everything else. In my ideal
+personal computing ecosystem, different independent pieces interact with and build upon each other.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;i&gt;For example&lt;/i&gt;, I want to have a CRM to manage people and my relationships with them. I want the
+ability to mention people from my CRM in my daily journal, and then be able to make queries like
+&amp;quot;all interactions with person &amp;lt;X&amp;gt;&amp;quot;. Similarly, I want to utilize my CRM to also mention people in my
+blog-posts. These mentions however should get intelligently published. e.g on my personal website,
+mention of a person should become a link to their own personal website. When publishing to mastodon,
+it should become a mastodon mention.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;i&gt;Another example&lt;/i&gt;, I'd like to maintain an accounting ledger of all the money I spend. I want to
+utilize this to also maintain a list of things I own. I'd like to utilize this in turn to review
+things I use, and publish my reviews to my personal website and/or where I purchased it from.
+&lt;/p&gt;
+
+&lt;p&gt;
+Publishing a subset of all the data in my personal computing ecosystem is where cl-ownpress comes
+in.
+&lt;/p&gt;
+
+&lt;p&gt;
+At present, cl-ownpress happens to be the most complete component of my ecosystem. I have a &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;few&lt;/a&gt;
+&lt;a href=&quot;https://github.com/bitspook/saunf&quot;&gt;other&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/kharcha&quot;&gt;pieces&lt;/a&gt; in pretty-much abandoned state while I have replaced them with some untracked lisp code
+(mostly in my Emacs setup).
+&lt;/p&gt;
+
+&lt;p&gt;
+HPI seems to provide same functionality as cl-ownpress's &lt;a href=&quot;https://github.com/bitspook/cl-ownpress/blob/master/src/provider/package.lisp#L1-L4&quot;&gt;providers&lt;/a&gt;. So why not replace &lt;code&gt;provider&lt;/code&gt;-s
+with HPI and build on already done work? Well, things I wanted so far (converting my denote notes to
+blog posts while using my Emacs configuration to do the conversion from org to html) don't have a
+replacement in HPI. In future, when I want to deal with an external data source and there is an HPI
+module available for it, perhaps I'll create an &lt;code&gt;hpi-provider&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+That settles one aspect of relationship of cl-ownpress and HPI. They're complimentary instead of
+contradictory. HPI is essentially a set of cl-ownpress &lt;code&gt;provider&lt;/code&gt;-s. But I believe there is a
+philosophical difference in how both these projects approach gaining ownership over user's data.
+&lt;/p&gt;
+
+&lt;p&gt;
+HPI &lt;b&gt;accepts&lt;/b&gt; that data is going to be produced on walled platforms, while cl-ownpress establishes
+user's own platform where data is originally published. Cl-ownpress then uses the walled platforms
+for interacting with people these platforms have managed to hold hostage.
+&lt;/p&gt;
+
+&lt;p&gt;
+Admittedly HPI has a broader scope, it deals with more than just getting data back from walled
+platforms, but in the aspect of 'publishing', I believe this holds true. With cl-ownpress, I want to
+invert the relationship. Instead of &amp;quot;the platform &amp;lt;X&amp;gt; uses me and locks in &lt;b&gt;my&lt;/b&gt; content&amp;quot;, I want it
+to be &amp;quot;&lt;b&gt;I&lt;/b&gt; own my content, and use the walled garden to interact with its hostages&amp;quot;.
+&lt;/p&gt;
+
+&lt;p&gt;
+The subtle difference is important to me. This is an attitude I'd like to have towards life, and
+what is my personal computing ecosystem if not its reflection.
+&lt;/p&gt;
+</content></entry><base href="https://bitspook.in"/></feed>

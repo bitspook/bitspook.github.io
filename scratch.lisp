@@ -56,14 +56,6 @@
      (provide-all project-provider (path-join *base-dir* "projects/")))))
 ;; end expensive operations
 
-(defparameter *published-blog-posts*
-  (sort (remove-if
-         (op (or (find "draft" (post-tags _1) :test #'equal)
-                 (find "micro" (post-tags _1) :test #'equal)))
-         (append *local-blog-posts* *denote-posts*))
-        (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2))))
-  "Chronologically ordered blog posts.")
-
 (defparameter about-me-summary
   '(:p
     (:p "I am a software engineer. I enjoy playing with software, electronics and video games. My favorites
@@ -80,6 +72,12 @@ computers, security and politics.")
   (let* ((www (path-join *base-dir* "docs/"))
          (static (path-join *base-dir* "src/static/"))
          (*print-pretty* nil)
+         (published-blog-posts
+           (sort (remove-if
+                  (op (or (find "draft" (post-tags _1) :test #'equal)
+                          (find "micro" (post-tags _1) :test #'equal)))
+                  (append *local-blog-posts* *denote-posts*))
+                 (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2)))))
          (asset-pub (make 'asset-publisher :dest www))
          (base-url *base-url*)
          (post-pub (make 'blog-post-publisher
@@ -91,14 +89,14 @@ computers, security and politics.")
     (publish asset-pub :content static)
 
     ;; Publish all posts
-    (loop :for post :in *published-blog-posts*
+    (loop :for post :in published-blog-posts
           :do (publish post-pub :post post :feed-link "/archive/feed.xml"))
 
     ;; Publish a listing for each category
     (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
-                                    *published-blog-posts* :initial-value nil)
+                                    published-blog-posts :initial-value nil)
           :unless (or (null category) (str:emptyp category))
-            :do (let ((posts (remove-if-not (op (string= (post-category _) category)) *published-blog-posts*))
+            :do (let ((posts (remove-if-not (op (string= (post-category _) category)) published-blog-posts))
                       (cat-pub (make 'blog-post-listing-publisher
                                      :dest (base-path-join www)
                                      :slug category
@@ -112,9 +110,9 @@ computers, security and politics.")
     ;; Publish a listing for each tag
     (loop :for tag :in (reduce
                         (op (union _1 (post-tags _2) :test #'equal))
-                        *published-blog-posts* :initial-value nil)
+                        published-blog-posts :initial-value nil)
           :do (let ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
-                                          *published-blog-posts*))
+                                          published-blog-posts))
                     (tag-pub (make 'blog-post-listing-publisher
                                    :asset-pub asset-pub
                                    :dest www
@@ -141,7 +139,7 @@ computers, security and politics.")
                              :slug "archive"
                              :asset-pub asset-pub
                              :base-url base-url)))
-      (publish archive-pub :posts *published-blog-posts*
+      (publish archive-pub :posts published-blog-posts
                            :title "Archive"
                            :page-size 10
                            :author *author*))
@@ -152,7 +150,7 @@ computers, security and politics.")
                            :dest www
                            :asset-pub asset-pub))
            (root (make 'home-page-w
-                       :posts (take 5 *published-blog-posts*)
+                       :posts (take 5 published-blog-posts)
                        :title title
                        :author *author*
                        :about-summary about-me-summary)))

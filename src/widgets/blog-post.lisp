@@ -36,7 +36,7 @@
 
 (defwidget blog-post-w (post)
     (bp-lass)
-  (with-slots (title published-at author tags body) post
+  (with-slots (title published-at author tags body category) post
     (:div
      (render 'navbar-w :links nil)
      (:article
@@ -58,4 +58,4 @@
                   (str:concat "/tags/" tag)
                   (str:concat "#" (str:downcase tag)))))))))
       (:main :class "post-body" (:raw body)))
-     (render 'footer-w :author author :feed-path "feed.xml"))))
+     (render 'footer-w :author author :feed-path (unless (str:emptyp category) (base-path-join "/" category "/feed.xml"))))))

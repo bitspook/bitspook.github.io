@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Talks - bitspook.in</title><id>https://bitspook.in/talks/feed.xml</id><updated>2023-12-30T16:29:28.190909Z</updated><link href="https://bitspook.in/talks/feed.xml" rel="self" title="Talks"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Microservices</title><id>https://bitspook.in/talks/microservices-techblend</id><updated>2020-08-06T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/microservices-techblend" title="Microservices"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2020-08-06T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Talks - bitspook.in</title><id>https://bitspook.in/talks/feed.xml</id><updated>2024-01-04T08:18:20.140416Z</updated><link href="https://bitspook.in/talks/feed.xml" rel="self" title="Talks"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Microservices</title><id>https://bitspook.in/talks/microservices-techblend</id><updated>2020-08-06T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/microservices-techblend" title="Microservices"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2020-08-06T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 I recently joined a Whatsapp group named &amp;quot;Tech Blend&amp;quot;, which conduct
 weekly online meetups. Topic for last meetup was &amp;quot;Microservices&amp;quot;, for
 which I volunteered. Since I was working for around 2 years on a
@@ -65,7 +65,7 @@ exercises, rest were left for the attendees as homework. Here's the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org1b9b624&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org322f1ff&quot;&gt;
 version: '3'
 services:
   webgoat:
@@ -538,7 +538,7 @@ seeing community's interest in these technologies.
 &lt;/p&gt;
 </content></entry><entry><title type="text">Modern day JS Apps (2017)</title><id>https://bitspook.in/talks/modern-day-js-apps-2017</id><updated>2017-02-07T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/modern-day-js-apps-2017" title="Modern day JS Apps (2017)"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2017-02-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe src=&quot;//slides.com/bitspook/modern-js-apps-2017/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;org3509ef8&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;orgd6e5478&quot;&gt;
 &lt;p&gt;
 &amp;lt;/iframe&amp;gt;
 &lt;/p&gt;
@@ -571,7 +571,7 @@ There is a video as well!
 &lt;/p&gt;
 </content></entry><entry><title type="text">Jschannel RxJS workshop Nov 2015</title><id>https://bitspook.in/talks/jschannel-rxjs-workshop-now-2015</id><updated>2015-11-01T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/jschannel-rxjs-workshop-now-2015" title="Jschannel RxJS workshop Nov 2015"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2015-11-01T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe src=&quot;//slides.com/bitspook/jschannel-rxjs-workshop-nov-2015/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 
-&lt;div class=&quot;html&quot; id=&quot;orgd5dd840&quot;&gt;
+&lt;div class=&quot;html&quot; id=&quot;org465500b&quot;&gt;
 &lt;p&gt;
 &amp;lt;/iframe&amp;gt;
 &lt;/p&gt;
