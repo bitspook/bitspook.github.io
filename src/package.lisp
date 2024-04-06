@@ -1,11 +1,19 @@
-(uiop:define-package #:in.bitspook.website
-  (:use #:cl #:serapeum/bundle
-        #:in.bitspook.cl-ownpress #:in.bitspook.cl-ownpress/publisher #:in.bitspook.cl-ownpress/provider)
+(defpackage in.bitspook.website
+  (:use #:cl #:serapeum/bundle)
+  (:import-from #:in.bitspook.cl-ownpress
+   :make-font-artifact :embed-artifact-as :link :tagged-lass
+   :defwidget :render :make-html-page-artifact :emacs-provider :script
+   :provide-all :publish-static :publish-artifact :font-face :*base-url*)
   (:import-from #:slug :slugify)
   (:import-from #:spinneret :with-html)
-  (:import-from #:org.shirakumo.feeder entry feed link serialize-feed))
+  (:local-nicknames
+   (:feeder #:org.shirakumo.feeder)  ;; entry feed link serialize-feed
+   (:clown #:in.bitspook.cl-ownpress)))
 
 (in-package #:in.bitspook.website)
 
 (defgeneric from (obj to &key)
   (:documentation "Convert OBJ object to instance of class represented symbol TO"))
+
+(defparameter *fonts-dir*
+  (asdf:system-relative-pathname "in.bitspook.website" "src/fonts/"))

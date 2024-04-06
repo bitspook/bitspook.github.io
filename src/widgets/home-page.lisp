@@ -2,7 +2,7 @@
 
 (defwidget home-page-w (title posts author about-summary)
     (tagged-lass
-     base-lass
+     (base-lass)
 
      `((.home
         :display flex

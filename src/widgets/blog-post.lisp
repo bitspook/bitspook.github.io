@@ -2,7 +2,7 @@
 
 (defun bp-lass ()
   (tagged-lass
-   base-lass
+   (base-lass)
 
    `((.content
       (.header

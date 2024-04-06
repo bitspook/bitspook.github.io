@@ -2,8 +2,8 @@
 
 (in-package #:in.bitspook.website)
 
-(defparameter *base-url* "https://bitspook.in")
-;; (defparameter *base-url* "http://localhost:8080")
+;; (defparameter *base-url* "https://bitspook.in")
+(defparameter *base-url* "/")
 
 (defparameter *author*
   (make 'persona
@@ -69,7 +69,7 @@ computers, security and politics.")
     (:p "You can read more about me" (:a :href "/about" "here."))))
 
 (defun build ()
-  (let* ((www (path-join *base-dir* "docs/"))
+  (let* ((www (path-join *base-dir* "build/"))
          (static (path-join *base-dir* "src/static/"))
          (*print-pretty* nil)
          (published-blog-posts
@@ -77,88 +77,83 @@ computers, security and politics.")
                   (op (or (find "draft" (post-tags _1) :test #'equal)
                           (find "micro" (post-tags _1) :test #'equal)))
                   (append *local-blog-posts* *denote-posts*))
-                 (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2)))))
-         (asset-pub (make 'asset-publisher :dest www))
-         (base-url *base-url*)
-         (post-pub (make 'blog-post-publisher
-                         :asset-pub asset-pub
-                         :dest www)))
+                 (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2))))))
 
     (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
 
-    (publish asset-pub :content static)
+    (publish-static :content static :dest-dir www)
+
+    (publish-artifact (first published-blog-posts) www)
 
     ;; Publish all posts
-    (loop :for post :in published-blog-posts
-          :do (publish post-pub :post post :feed-link "/archive/feed.xml"))
+    ;; (loop :for post :in published-blog-posts
+    ;;       :for post-artifact := (make-blog-post-page post :feed-link "/archive/feed.xml")
+    ;;       :do (publish-artifact post-artifact www))
 
     ;; Publish a listing for each category
-    (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
-                                    published-blog-posts :initial-value nil)
-          :unless (or (null category) (str:emptyp category))
-            :do (let ((posts (remove-if-not (op (string= (post-category _) category)) published-blog-posts))
-                      (cat-pub (make 'blog-post-listing-publisher
-                                     :dest (base-path-join www)
-                                     :slug category
-                                     :asset-pub asset-pub
-                                     :base-url base-url)))
-                  (publish cat-pub
-                           :posts posts
-                           :title (str:capitalize category)
-                           :author *author*)))
+    ;; (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
+    ;;                                 published-blog-posts :initial-value nil)
+    ;;       :unless (or (null category) (str:emptyp category))
+    ;;         :do (let* ((posts (remove-if-not (op (string= (post-category _) category)) published-blog-posts))
+    ;;                    (cat-art (make-blog-post-listing-page
+    ;;                              :dest-dir (base-path-join www category)
+    ;;                              :posts posts
+    ;;                              :title (str:capitalize category)
+    ;;                              :author *author*)))
+    ;;               (publish-artifact cat-art www)))
 
     ;; Publish a listing for each tag
-    (loop :for tag :in (reduce
-                        (op (union _1 (post-tags _2) :test #'equal))
-                        published-blog-posts :initial-value nil)
-          :do (let ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
-                                          published-blog-posts))
-                    (tag-pub (make 'blog-post-listing-publisher
-                                   :asset-pub asset-pub
-                                   :dest www
-                                   :slug (str:concat "tags/" tag)
-                                   :base-url base-url)))
-                (publish tag-pub :posts posts
-                                 :title (str:capitalize tag)
-                                 :author *author*)))
+    ;; (loop :for tag :in (reduce
+    ;;                     (op (union _1 (post-tags _2) :test #'equal))
+    ;;                     published-blog-posts :initial-value nil)
+    ;;       :do (let ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
+    ;;                                       published-blog-posts))
+    ;;                 (tag-pub (make 'blog-post-listing-publisher
+    ;;                                :asset-pub asset-pub
+    ;;                                :dest www
+    ;;                                :slug (str:concat "tags/" tag)
+    ;;                                :base-url base-url)))
+    ;;             (publish tag-pub :posts posts
+    ;;                              :title (str:capitalize tag)
+    ;;                              :author *author*)))
 
     ;; Publish project listing
-    (let ((project-listing-pub (make 'software-project-listing-publisher
-                                     :asset-pub asset-pub
-                                     :dest www
-                                     :slug "projects"
-                                     :base-url base-url)))
-      (publish project-listing-pub
-               :projects *projects*
-               :author *author*
-               :title "Projects"))
+    ;; (let ((project-listing-pub (make 'software-project-listing-publisher
+    ;;                                  :asset-pub asset-pub
+    ;;                                  :dest www
+    ;;                                  :slug "projects"
+    ;;                                  :base-url base-url)))
+    ;;   (publish project-listing-pub
+    ;;            :projects *projects*
+    ;;            :author *author*
+    ;;            :title "Projects"))
 
     ;; Publish archive of all blog-posts
-    (let ((archive-pub (make 'blog-post-listing-publisher
-                             :dest (path-join www)
-                             :slug "archive"
-                             :asset-pub asset-pub
-                             :base-url base-url)))
-      (publish archive-pub :posts published-blog-posts
-                           :title "Archive"
-                           :page-size 10
-                           :author *author*))
+    ;; (let ((archive-pub (make 'blog-post-listing-publisher
+    ;;                          :dest (path-join www)
+    ;;                          :slug "archive"
+    ;;                          :asset-pub asset-pub
+    ;;                          :base-url base-url)))
+    ;;   (publish archive-pub :posts published-blog-posts
+    ;;                        :title "Archive"
+    ;;                        :page-size 10
+    ;;                        :author *author*))
 
     ;; Publish home-page
-    (let* ((title "@bitspook's personal website")
-           (page-pub (make 'page-publisher
-                           :dest www
-                           :asset-pub asset-pub))
-           (root (make 'home-page-w
-                       :posts (take 5 published-blog-posts)
-                       :title title
-                       :author *author*
-                       :about-summary about-me-summary)))
-      (publish page-pub
-               :title title
-               :slug ""
-               :feed-link "/archive/feed.xml"
-               :root-widget root))
+    ;; (let* ((title "@bitspook's personal website")
+    ;;        (page-pub (make 'page-publisher
+    ;;                        :dest www
+    ;;                        :asset-pub asset-pub))
+    ;;        (root (make 'home-page-w
+    ;;                    :posts (take 5 published-blog-posts)
+    ;;                    :title title
+    ;;                    :author *author*
+    ;;                    :about-summary about-me-summary)))
+    ;;   (publish page-pub
+    ;;            :title title
+    ;;            :slug ""
+    ;;            :feed-link "/archive/feed.xml"
+    ;;            :root-widget root))
     t))
 
 (build)

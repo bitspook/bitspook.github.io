@@ -14,10 +14,11 @@
                              (:module "publisher"
                               :components ((:file "blog-post")
                                            (:file "blog-post-listing")
-                                           (:file "atom-feed")
-                                           (:file "software-project")
-                                           (:file "software-project-listing")
-                                           (:file "page")))
+                                           ;; (:file "atom-feed")
+                                           ;; (:file "software-project")
+                                           ;; (:file "software-project-listing")
+                                           ;; (:file "page")
+                                           ))
 
                              (:module "provider"
                               :components ((:file "org-file-provider")

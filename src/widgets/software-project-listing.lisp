@@ -2,7 +2,7 @@
 
 (defwidget software-project-listing-w (projects project-publisher title author next-page previous-page)
     (tagged-lass
-     base-lass
+     (base-lass)
 
      `((.header
         :padding (var --size-4) :margin (var --scale-2) 0

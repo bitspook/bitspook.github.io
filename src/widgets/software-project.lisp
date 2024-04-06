@@ -2,7 +2,7 @@
 
 (defun sp-lass ()
   (tagged-lass
-   base-lass
+   (base-lass)
 
    `((.content
       (.header
