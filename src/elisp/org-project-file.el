@@ -98,12 +98,11 @@
 
 (defun main (content-dir)
   "Send all org-files from CONTENT-DIR."
-  (let ((conn (clown-rpc-server))
-        (files (directory-files-recursively content-dir "")))
+  (let ((files (directory-files-recursively content-dir "")))
     (cl-dolist (file files)
-      (jsonrpc-notify conn :event (clown-org-file-to-msg file)))
+      (clown-rpc-send :event (clown-org-file-to-msg file)))
 
-    (jsonrpc-notify conn :done nil)))
+    (clown-rpc-send :done nil)))
 
 ;;; org-project-file.el ends here
 ;; Local Variables:

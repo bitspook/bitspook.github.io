@@ -16,15 +16,18 @@
 
 (defparameter *base-dir* (asdf:system-relative-pathname :in.bitspook.website ""))
 
-;; expensive operations stored in top-level variables for caching
+(defparameter *rpc-server* (start-rpc-server 1337))
+(stop-rpc-server *rpc-server*)
+
 (defparameter *denote-posts*
-  (let ((notes-provider (make-instance 'denote-provider)))
+  (let ((notes-provider (make 'denote-provider)))
     (mapcar
      (op (let ((post (from _ 'blog-post :author *author*)))
            (setf (post-category post) "blog")
            (setf (post-tags post) (remove-if (op (equal "blog-post" _)) (post-tags post)))
            post))
      (provide-all notes-provider "blog-post"))))
+ ;; expensive operations stored in top-level variables for caching
 
 (defparameter *local-blog-posts*
   (labels ((local-org-file-to-post (file)
@@ -83,24 +86,17 @@ computers, security and politics.")
 
     (publish-static :content static :dest-dir www)
 
-    (publish-artifact (first published-blog-posts) www)
-
-    ;; Publish all posts
-    ;; (loop :for post :in published-blog-posts
-    ;;       :for post-artifact := (make-blog-post-page post :feed-link "/archive/feed.xml")
-    ;;       :do (publish-artifact post-artifact www))
-
     ;; Publish a listing for each category
-    ;; (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
-    ;;                                 published-blog-posts :initial-value nil)
-    ;;       :unless (or (null category) (str:emptyp category))
-    ;;         :do (let* ((posts (remove-if-not (op (string= (post-category _) category)) published-blog-posts))
-    ;;                    (cat-art (make-blog-post-listing-page
-    ;;                              :dest-dir (base-path-join www category)
-    ;;                              :posts posts
-    ;;                              :title (str:capitalize category)
-    ;;                              :author *author*)))
-    ;;               (publish-artifact cat-art www)))
+    (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
+                                    published-blog-posts :initial-value nil)
+          :unless (or (null category) (str:emptyp category))
+            :do (let* ((posts (remove-if-not (op (string= (post-category _) category)) published-blog-posts))
+                       (cat-art (make-blog-post-listing-page
+                                 :path category
+                                 :posts posts
+                                 :title (str:capitalize category)
+                                 :author *author*)))
+                  (publish-artifact cat-art www)))
 
     ;; Publish a listing for each tag
     ;; (loop :for tag :in (reduce

@@ -52,9 +52,6 @@
   (print-unreadable-object (post out :type t)
     (format out "~a/~a" (post-category post) (post-slug post))))
 
-(defmethod published-path ((post blog-post) &key) 
-  (str:concat "/" (post-category post) "/" (post-slug post)))
-
 (defun blog-post-page-builder (post &optional feed-link)
   "Create HTML page for a blog-post"
   (with-slots (title) post
@@ -68,11 +65,30 @@
                 (:script :src "/js/app.js"))
          (:body (:raw body-html)))))))
 
-(defun make-blog-post-page (post &key (feed-link nil))
+(defclass blog-post-page (html-page-artifact blog-post) nil)
+
+(defun make-blog-post-page (post &key location (feed-link nil) (css-location "/css/styles.css"))
   (with-slots (title slug) post
-    (let* ((html-path (base-path-join slug "/index.html"))
-           (root-w (make 'blog-post-w :post post)))
-      (make-html-page-artifact
-       html-path
-       (blog-post-page-builder post feed-link)
-       root-w))))
+    (let* ((html-path (base-path-join location "/" slug "/index.html"))
+           (root-widget (make 'blog-post-w :post post))
+           (css-art (make 'css-file-artifact :location css-location :root-widget root-widget)))
+      (make 'blog-post-page
+            ;; blog-post
+            :title (post-title post)
+            :slug (post-slug post)
+            :summary (post-summary post)
+            :category (post-category post)
+            :tags (post-tags post)
+            :created-at (post-created-at post)
+            :published-at (post-published-at post)
+            :updated-at (post-updated-at post)
+            :body (post-body post)
+            :author (post-author post)
+
+            ;; html-page-artifact
+            :location html-path
+            :builder (blog-post-page-builder post feed-link)
+            :root-widget root-widget
+            :deps (list css-art)))))
+
+

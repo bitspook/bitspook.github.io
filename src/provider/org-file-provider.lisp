@@ -1,9 +1,7 @@
 (in-package #:in.bitspook.website)
 
 (defclass org-file-provider (emacs-provider)
-  ((script
-    :initform (asdf:system-relative-pathname
-               :in.bitspook.website "src/elisp/org-file.el"))))
+  ((script :initform (asdf:system-relative-pathname :in.bitspook.website "src/elisp/org-file.el"))))
 
 (defmethod provide-all ((provider org-file-provider) &rest script-args)
   (let ((notes (apply #'call-next-method `(,provider ,@script-args))))

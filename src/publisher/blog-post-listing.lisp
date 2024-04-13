@@ -13,7 +13,7 @@
        (:body (:raw body-html))))))
 
 
-(defun make-blog-post-listing-page (&key dest-dir posts author title (page-size 10))
+(defun make-blog-post-listing-page (&key path posts author title (page-size 10))
   (let* ((page-size (or page-size (length posts)))
          (post-pages (batches posts page-size))
          (pages
@@ -21,10 +21,13 @@
              :for curr-page-posts :in post-pages
              :for page :from 0 :to (length post-pages)
              :collect (make-html-page-artifact
-                       (base-path-join dest-dir (format nil "./~a" page) "/index.html")
+                       (base-path-join path (if (zerop page) "" (format nil "./~a" page)) "/index.html")
                        (blog-post-listing-page-builder title)
                        (make 'blog-post-listing-w
-                             :posts curr-page-posts
+                             :posts (mapcar
+                                     (lambda (post)
+                                       (make-blog-post-page post :location path :feed-link "/archive/feed.xml"))
+                                     curr-page-posts)
                              :title title
                              :author author
                              :next-page
