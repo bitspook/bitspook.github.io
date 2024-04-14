@@ -99,19 +99,18 @@ computers, security and politics.")
                   (publish-artifact cat-art www)))
 
     ;; Publish a listing for each tag
-    ;; (loop :for tag :in (reduce
-    ;;                     (op (union _1 (post-tags _2) :test #'equal))
-    ;;                     published-blog-posts :initial-value nil)
-    ;;       :do (let ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
-    ;;                                       published-blog-posts))
-    ;;                 (tag-pub (make 'blog-post-listing-publisher
-    ;;                                :asset-pub asset-pub
-    ;;                                :dest www
-    ;;                                :slug (str:concat "tags/" tag)
-    ;;                                :base-url base-url)))
-    ;;             (publish tag-pub :posts posts
-    ;;                              :title (str:capitalize tag)
-    ;;                              :author *author*)))
+    (loop :for tag :in (reduce
+                        (op (union _1 (post-tags _2) :test #'equal))
+                        published-blog-posts :initial-value nil)
+          :do (let* ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
+                                           published-blog-posts))
+                     (tag-art (make-blog-post-listing-page
+                               :path (base-path-join "tags/" tag)
+                               :posts posts
+                               :title (str:capitalize tag)
+                               :author *author*)))
+                (handler-bind ((file-already-exists #'skip-existing))
+                  (publish-artifact tag-art www)) ))
 
     ;; Publish project listing
     ;; (let ((project-listing-pub (make 'software-project-listing-publisher
@@ -125,15 +124,13 @@ computers, security and politics.")
     ;;            :title "Projects"))
 
     ;; Publish archive of all blog-posts
-    ;; (let ((archive-pub (make 'blog-post-listing-publisher
-    ;;                          :dest (path-join www)
-    ;;                          :slug "archive"
-    ;;                          :asset-pub asset-pub
-    ;;                          :base-url base-url)))
-    ;;   (publish archive-pub :posts published-blog-posts
-    ;;                        :title "Archive"
-    ;;                        :page-size 10
-    ;;                        :author *author*))
+    (let ((archive-art (make-blog-post-listing-page
+                        :path "archive"
+                        :title "Archive"
+                        :author *author*
+                        :posts published-blog-posts)))
+      (handler-bind ((file-already-exists #'skip-existing))
+        (publish-artifact archive-art www)))
 
     ;; Publish home-page
     ;; (let* ((title "@bitspook's personal website")
