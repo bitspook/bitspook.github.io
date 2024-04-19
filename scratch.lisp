@@ -59,58 +59,64 @@
      (provide-all project-provider (path-join *base-dir* "projects/")))))
 ;; end expensive operations
 
-(defparameter about-me-summary
-  '(:p
-    (:p "I am a software engineer. I enjoy playing with software, electronics and video games. My favorites
+(defwidget about-me-summary (categories) nil
+  (:p
+   (:p "I am a software engineer. I enjoy playing with software, electronics and video games. My favorites
 are Factorio, Rimworld and Terraria. I also enjoy reading, writing, people watching and discussing
 computers, security and politics.")
-    (:p "This website has things I am willing to share publicly. You can go through my "
-     (:a :href "/blog/" "blog") ", "
-     (:a :href "/poems" "poems") ", "
-     (:a :href "/projects" "projects") " and also some "
-     (:a :href "/talks" "talks") "I gave .")
-    (:p "You can read more about me" (:a :href "/about" "here."))))
+   (:p "This website has things I am willing to share publicly. You can go through my "
+       (:a :href (embed-artifact-as (@ categories "blog") 'link) "blog") ", "
+       (:a :href (embed-artifact-as (@ categories "poems") 'link) "poems") ", "
+       (:a :href "/projects" "projects") " and also some "
+       (:a :href (embed-artifact-as (@ categories "talks") 'link) "talks") "I gave .")
+   (:p "You can read more about me" (:a :href "/about" "here."))))
 
 (defun build ()
   (let* ((www (path-join *base-dir* "build/"))
          (static (path-join *base-dir* "src/static/"))
          (*print-pretty* nil)
-         (published-blog-posts
+         (blog-posts
            (sort (remove-if
                   (op (or (find "draft" (post-tags _1) :test #'equal)
                           (find "micro" (post-tags _1) :test #'equal)))
                   (append *local-blog-posts* *denote-posts*))
-                 (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2))))))
+                 (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2)))))
+         (blog-post-pages (mapcar (op (make-blog-post-page _1 :location (base-path-join "/" (post-category _1))))
+                                  blog-posts))
+         (category-pages (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
+                                                         blog-post-pages :initial-value nil)
+                               :with categories := (dict)
+                               :unless (or (null category) (str:emptyp category))
+                                 :do (let* ((posts (remove-if-not (op (string= (post-category _) category)) blog-post-pages))
+                                            (cat-art (make-blog-post-listing-page
+                                                      :path category
+                                                      :posts posts
+                                                      :title (str:capitalize category)
+                                                      :author *author*)))
+                                       (setf (@ categories category) cat-art))
+                               :finally (return categories)))
+         (tag-pages (loop :for tag :in (reduce
+                                        (op (union _1 (post-tags _2) :test #'equal))
+                                        blog-post-pages :initial-value nil)
+                          :with tags := (dict)
+                          :do (let* ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
+                                                           blog-post-pages))
+                                     (tag-art (make-blog-post-listing-page
+                                               :path (base-path-join "tags/" tag)
+                                               :posts posts
+                                               :title (str:capitalize tag)
+                                               :author *author*)))
+                                (setf (@ tags tag) tag-art))
+                          :finally (return tags)))
+         (archive-page (make-blog-post-listing-page
+                        :path "/archive"
+                        :title "Archive"
+                        :author *author*
+                        :posts blog-post-pages)))
 
     (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
 
     (publish-static :content static :dest-dir www)
-
-    ;; Publish a listing for each category
-    (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
-                                    published-blog-posts :initial-value nil)
-          :unless (or (null category) (str:emptyp category))
-            :do (let* ((posts (remove-if-not (op (string= (post-category _) category)) published-blog-posts))
-                       (cat-art (make-blog-post-listing-page
-                                 :path category
-                                 :posts posts
-                                 :title (str:capitalize category)
-                                 :author *author*)))
-                  (publish-artifact cat-art www)))
-
-    ;; Publish a listing for each tag
-    (loop :for tag :in (reduce
-                        (op (union _1 (post-tags _2) :test #'equal))
-                        published-blog-posts :initial-value nil)
-          :do (let* ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
-                                           published-blog-posts))
-                     (tag-art (make-blog-post-listing-page
-                               :path (base-path-join "tags/" tag)
-                               :posts posts
-                               :title (str:capitalize tag)
-                               :author *author*)))
-                (handler-bind ((file-already-exists #'skip-existing))
-                  (publish-artifact tag-art www)) ))
 
     ;; Publish project listing
     ;; (let ((project-listing-pub (make 'software-project-listing-publisher
@@ -124,29 +130,18 @@ computers, security and politics.")
     ;;            :title "Projects"))
 
     ;; Publish archive of all blog-posts
-    (let ((archive-art (make-blog-post-listing-page
-                        :path "archive"
-                        :title "Archive"
-                        :author *author*
-                        :posts published-blog-posts)))
-      (handler-bind ((file-already-exists #'skip-existing))
-        (publish-artifact archive-art www)))
+
+
 
     ;; Publish home-page
-    ;; (let* ((title "@bitspook's personal website")
-    ;;        (page-pub (make 'page-publisher
-    ;;                        :dest www
-    ;;                        :asset-pub asset-pub))
-    ;;        (root (make 'home-page-w
-    ;;                    :posts (take 5 published-blog-posts)
-    ;;                    :title title
-    ;;                    :author *author*
-    ;;                    :about-summary about-me-summary)))
-    ;;   (publish page-pub
-    ;;            :title title
-    ;;            :slug ""
-    ;;            :feed-link "/archive/feed.xml"
-    ;;            :root-widget root))
+    (handler-bind ((file-already-exists #'skip-existing))
+      (publish-artifact
+       (make-home-page :title "@bitspook's personal website"
+                       :all-posts blog-post-pages
+                       :author *author*
+                       :about-me-summary (make 'about-me-summary :categories category-pages))
+       www))
+
     t))
 
 (build)

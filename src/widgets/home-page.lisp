@@ -164,7 +164,7 @@
      :class "about-me-snippet"
      (:header
       (:h2 "About Me"))
-     (spinneret:interpret-html-tree about-summary))
+     (render about-summary))
 
     (:section.recent-content
      (:header (:h2.heading "Recent content"))

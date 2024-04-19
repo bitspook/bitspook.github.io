@@ -21,25 +21,22 @@
              :for curr-page-posts :in post-pages
              :for page :from 0 :to (length post-pages)
              :collect (make-html-page-artifact
-                       (base-path-join path (if (zerop page) "" (format nil "./~a" page)) "/index.html")
-                       (blog-post-listing-page-builder title)
-                       (make 'blog-post-listing-w
-                             :posts (mapcar
-                                     (lambda (post)
-                                       (make-blog-post-page post :location path :feed-link "/archive/feed.xml"))
-                                     curr-page-posts)
-                             :title title
-                             :author author
-                             :next-page
-                             (when (> page 0)
-                               `("Newer posts" . ,(if (zerop (1- page))
-                                                      "../"
-                                                      (format nil "../~a" (1- page)))))
-                             :previous-page
-                             (when (< page (1- (length post-pages)))
-                               `("Older posts" . ,(str:concat
-                                                   (unless (zerop page) "../")
-                                                   (format nil "~a" (1+ page)))))))))
+                       :location (base-path-join path (if (zerop page) "" (format nil "./~a" page)) "/index.html")
+                       :builder (blog-post-listing-page-builder title)
+                       :root-widget (make 'blog-post-listing-w
+                                          :posts curr-page-posts
+                                          :title title
+                                          :author author
+                                          :next-page
+                                          (when (> page 0)
+                                            `("Newer posts" . ,(if (zerop (1- page))
+                                                                   "../"
+                                                                   (format nil "../~a" (1- page)))))
+                                          :previous-page
+                                          (when (< page (1- (length post-pages)))
+                                            `("Older posts" . ,(str:concat
+                                                                (unless (zerop page) "../")
+                                                                (format nil "~a" (1+ page)))))))))
          (first-page (car pages))
          (rest-pages (cdr pages)))
     (dolist (page rest-pages)
