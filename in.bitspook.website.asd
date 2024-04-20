@@ -17,8 +17,7 @@
                                            ;; (:file "atom-feed")
                                            ;; (:file "software-project")
                                            ;; (:file "software-project-listing")
-                                           ;; (:file "page")
-                                           ))
+                                           (:file "page")))
 
                              (:module "provider"
                               :components ((:file "org-file-provider")

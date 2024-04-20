@@ -55,7 +55,7 @@
            (dolist (tag tags)
              (:li.tag
               (:a :href
-                  (str:concat "/tags/" tag)
+                  (link-page 'tag-index tag)
                   (str:concat "#" (str:downcase tag)))))))))
       (:main :class "post-body" (:raw body)))
      (render 'footer-w :author author :feed-path (unless (str:emptyp category) (base-path-join "/" category "/feed.xml"))))))

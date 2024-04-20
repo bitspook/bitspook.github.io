@@ -59,17 +59,41 @@
      (provide-all project-provider (path-join *base-dir* "projects/")))))
 ;; end expensive operations
 
+(defparameter *category-indices* (dict)
+  "Index pages for categories.")
+
+(defparameter *tag-indices* (dict)
+  "Index pages for tags.")
+
+(defparameter *pages* (dict)
+  "Independent pages by slug.")
+
+(defun find-page (id-type id)
+  "Find a html-page-artifact of ID-TYPE which can be identified by ID.
+Possible values for ID-TYPE:
+1. category-index
+2. tag-index
+3. slug"
+  (ecase id-type
+    (category-index (@ *category-indices* id))
+    (tag-index (@ *tag-indices* id))
+    (slug (@ *pages* id))))
+
+(defun link-page (id-type id)
+  "Embed page find with FIND-PAGE as LINK."
+  (embed-artifact-as (find-page id-type id) 'link))
+
 (defwidget about-me-summary (categories) nil
   (:p
    (:p "I am a software engineer. I enjoy playing with software, electronics and video games. My favorites
 are Factorio, Rimworld and Terraria. I also enjoy reading, writing, people watching and discussing
 computers, security and politics.")
    (:p "This website has things I am willing to share publicly. You can go through my "
-       (:a :href (embed-artifact-as (@ categories "blog") 'link) "blog") ", "
-       (:a :href (embed-artifact-as (@ categories "poems") 'link) "poems") ", "
+       (:a :href (link-page 'category-index "blog")  "blog") ", "
+       (:a :href (link-page 'category-index "poems")  "poems") ", "
        (:a :href "/projects" "projects") " and also some "
-       (:a :href (embed-artifact-as (@ categories "talks") 'link) "talks") "I gave .")
-   (:p "You can read more about me" (:a :href "/about" "here."))))
+       (:a :href (link-page 'category-index "talks") "talks") "I gave .")
+   (:p "You can read more about me " (:a :href (link-page 'slug "about") "here."))))
 
 (defun build ()
   (let* ((www (path-join *base-dir* "build/"))
@@ -83,36 +107,49 @@ computers, security and politics.")
                  (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2)))))
          (blog-post-pages (mapcar (op (make-blog-post-page _1 :location (base-path-join "/" (post-category _1))))
                                   blog-posts))
-         (category-pages (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
-                                                         blog-post-pages :initial-value nil)
-                               :with categories := (dict)
-                               :unless (or (null category) (str:emptyp category))
-                                 :do (let* ((posts (remove-if-not (op (string= (post-category _) category)) blog-post-pages))
-                                            (cat-art (make-blog-post-listing-page
-                                                      :path category
-                                                      :posts posts
-                                                      :title (str:capitalize category)
-                                                      :author *author*)))
-                                       (setf (@ categories category) cat-art))
-                               :finally (return categories)))
-         (tag-pages (loop :for tag :in (reduce
-                                        (op (union _1 (post-tags _2) :test #'equal))
-                                        blog-post-pages :initial-value nil)
-                          :with tags := (dict)
-                          :do (let* ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
-                                                           blog-post-pages))
-                                     (tag-art (make-blog-post-listing-page
-                                               :path (base-path-join "tags/" tag)
-                                               :posts posts
-                                               :title (str:capitalize tag)
-                                               :author *author*)))
-                                (setf (@ tags tag) tag-art))
-                          :finally (return tags)))
          (archive-page (make-blog-post-listing-page
                         :path "/archive"
                         :title "Archive"
                         :author *author*
                         :posts blog-post-pages)))
+
+    (setf *pages* (loop :for page :in blog-post-pages
+                        :with pages := (dict)
+                        :for category := (post-category page)
+                        :when (or (null category) (str:emptyp category))
+                          :do (setf (@ pages (post-slug page)) page)
+                        :finally
+                           (setf (@ pages "archive") archive-page)
+                           (return pages)))
+
+    (setf *category-indices*
+          (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
+                                          blog-post-pages :initial-value nil)
+                :with categories := (dict)
+                :unless (or (null category) (str:emptyp category))
+                  :do (let* ((posts (remove-if-not (op (string= (post-category _) category)) blog-post-pages))
+                             (cat-art (make-blog-post-listing-page
+                                       :path category
+                                       :posts posts
+                                       :title (str:capitalize category)
+                                       :author *author*)))
+                        (setf (@ categories category) cat-art))
+                :finally (return categories)))
+
+    (setf *tag-indices*
+          (loop :for tag :in (reduce
+                              (op (union _1 (post-tags _2) :test #'equal))
+                              blog-post-pages :initial-value nil)
+                :with tags := (dict)
+                :do (let* ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
+                                                 blog-post-pages))
+                           (tag-art (make-blog-post-listing-page
+                                     :path (base-path-join "tags/" tag)
+                                     :posts posts
+                                     :title (str:capitalize tag)
+                                     :author *author*)))
+                      (setf (@ tags tag) tag-art))
+                :finally (return tags)))
 
     (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
 
@@ -129,18 +166,15 @@ computers, security and politics.")
     ;;            :author *author*
     ;;            :title "Projects"))
 
-    ;; Publish archive of all blog-posts
-
-
-
-    ;; Publish home-page
-    (handler-bind ((file-already-exists #'skip-existing))
-      (publish-artifact
-       (make-home-page :title "@bitspook's personal website"
-                       :all-posts blog-post-pages
-                       :author *author*
-                       :about-me-summary (make 'about-me-summary :categories category-pages))
-       www))
+    ;; Publish home-page and all its dependencies
+    (let ((*already-published-artifacts* nil))
+      (handler-bind ((file-already-exists #'skip-existing))
+        (publish-artifact
+         (make-home-page :title "@bitspook's personal website"
+                         :all-posts blog-post-pages
+                         :author *author*
+                         :about-me-summary (make 'about-me-summary))
+         www)))
 
     t))
 

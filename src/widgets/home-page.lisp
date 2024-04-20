@@ -171,4 +171,4 @@
      (:ul.listing
       (dolist (post posts)
         (render 'blog-post-listing-item-w :post post)))
-     (:footer (:a.read-more-btn :href "/archive" "View all"))))))
+     (:footer (:a.read-more-btn :href (link-page 'slug "archive") "View all"))))))

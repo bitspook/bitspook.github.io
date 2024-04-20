@@ -6,7 +6,7 @@
    :make-font-artifact :embed-artifact-as :link :tagged-lass
    :defwidget :render :make-html-page-artifact :emacs-provider :script
    :provide-all :publish-static :publish-artifact :font-face :*base-url*
-   :skip-existing :file-already-exists)
+   :skip-existing :file-already-exists :*already-published-artifacts*)
   (:import-from #:slug :slugify)
   (:import-from #:spinneret :with-html)
   (:local-nicknames
