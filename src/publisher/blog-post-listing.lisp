@@ -12,7 +12,6 @@
               (:script :src "/js/app.js"))
        (:body (:raw body-html))))))
 
-
 (defun make-blog-post-listing-page (&key path posts author title (page-size 10))
   (let* ((page-size (or page-size (length posts)))
          (post-pages (batches posts page-size))
@@ -22,21 +21,25 @@
              :for page :from 0 :to (length post-pages)
              :collect (make-html-page-artifact
                        :location (base-path-join path (if (zerop page) "" (format nil "./~a" page)) "/index.html")
-                       :builder (blog-post-listing-page-builder title)
-                       :root-widget (make 'blog-post-listing-w
-                                          :posts curr-page-posts
-                                          :title title
-                                          :author author
-                                          :next-page
-                                          (when (> page 0)
-                                            `("Newer posts" . ,(if (zerop (1- page))
-                                                                   "../"
-                                                                   (format nil "../~a" (1- page)))))
-                                          :previous-page
-                                          (when (< page (1- (length post-pages)))
-                                            `("Older posts" . ,(str:concat
-                                                                (unless (zerop page) "../")
-                                                                (format nil "~a" (1+ page)))))))))
+                       :css-location "/css/listing.css"
+                       :root (lambda (&key css)
+                               (let ((self (make 'blog-post-listing-w
+                                                 :css css
+                                                 :posts curr-page-posts
+                                                 :title title
+                                                 :author author
+                                                 :next-page
+                                                 (when (> page 0)
+                                                   `("Newer posts" . ,(if (zerop (1- page))
+                                                                          "../"
+                                                                          (format nil "../~a" (1- page)))))
+                                                 :previous-page
+                                                 (when (< page (1- (length post-pages)))
+                                                   `("Older posts" . ,(str:concat
+                                                                       (unless (zerop page) "../")
+                                                                       (format nil "~a" (1+ page))))))))
+                                 (values self (lambda (&key css)
+                                                (setf (slot-value self 'css) css))))))))
          (first-page (car pages))
          (rest-pages (cdr pages)))
     (dolist (page rest-pages)

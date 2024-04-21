@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defmethod from ((post blog-post) (to (eql 'entry)) &key base-url)
+(defmethod from ((post blog-post) (to (eql 'feeder:entry)) &key)
   (with-accessors ((category post-category)
                    (slug post-slug)
                    (author post-author)
@@ -11,9 +11,9 @@
                    (body post-body))
       post
     (let* ((title (concatenate 'simple-string title))
-           (link (make 'link :url (str:concat base-url (published-path post))
-                             :title title)))
-      (make 'entry
+           (link (make 'feeder:link :url (namestring (artifact-location post))
+                                    :title title)))
+      (make 'feeder:entry
             :id link
             :categories (list category)
             :authors (list (slot-value author 'name))
@@ -24,34 +24,54 @@
             :summary (concatenate 'simple-string summary)
             :content (plump:parse body)))))
 
-(defclass feed-publisher (blog-post-listing-publisher) nil)
+(defclass atom-feed-artifact (artifact)
+  ((location :initarg :location :accessor artifact-location)
+   (title :initarg :title)
+   (author :initarg :author)
+   (posts :initarg :posts)
+   (summary :initarg :summary)))
 
-(defmethod published-path ((pub feed-publisher) &key (feed-file-name "feed.xml"))
-  (str:concat (call-next-method pub) feed-file-name))
-
-(defmethod publish ((pub feed-publisher)
-                    &key posts author title feed-file-name
-                      (summary "") (feed-format 'org.shirakumo.feeder:atom))
+(defun make-atom-feed-artifact (&key posts author title location (summary ""))
   "Create an RSS feed in FEED-FORMAT for POSTS."
-  (let* ((base-url (slot-value pub 'base-url))
-         (link (make 'link :url (str:concat base-url (published-path pub :feed-file-name feed-file-name))
-                           :relation "self" :title title))
-         (entries (mapcar (op (from _ 'entry :base-url base-url)) posts))
-         (plump:*tag-dispatchers* plump:*xml-tags*)
-         (feed-dom (serialize-feed
-                    (make 'feed
-                          :id link
-                          :logo (str:concat base-url "/images/avatar.png")
-                          :authors (list (slot-value author 'name))
-                          :published-on (local-time:now)
-                          :link link
-                          :title (str:concat title " - " (nth-value 2 (quri:parse-uri base-url)))
-                          :summary summary
-                          :content entries)
-                    feed-format)))
-    (str:to-file
-     (base-path-join (publisher-dest pub) (published-path pub :feed-file-name feed-file-name))
-     (with-output-to-string (str)
-       (plump:make-element (plump:first-element feed-dom)
-           "base" :attributes (dict "href" base-url))
-       (plump:serialize feed-dom str)))))
+  (make 'atom-feed-artifact
+        :title title
+        :posts posts
+        :author author
+        :summary summary
+        :location location))
+
+(defmethod artifact-content ((art atom-feed-artifact))
+  (with-slots (title location author posts summary) art
+    (let* ((base-url *base-url*)
+           (feed-format 'feeder:atom)
+           (link (make 'feeder:link :url (str:concat base-url (namestring location))
+                                    :relation "self" :title title))
+           (entries (mapcar (op (from _ 'feeder:entry)) posts))
+           (plump:*tag-dispatchers* plump:*xml-tags*)
+           (feed-dom (feeder:serialize-feed
+                      (make 'feeder:feed
+                            :id link
+                            :logo (str:concat base-url "/images/avatar.png")
+                            :authors (list (slot-value author 'name))
+                            :published-on (local-time:now)
+                            :link link
+                            :title (str:concat title " - " (nth-value 2 (quri:parse-uri base-url)))
+                            :summary summary
+                            :content entries)
+                      feed-format)))
+
+      (with-output-to-string (str)
+        (plump:make-element (plump:first-element feed-dom)
+            "base" :attributes (dict "href" base-url))
+        (plump:serialize feed-dom str)))))
+
+(defmethod publish-artifact ((art atom-feed-artifact) dest-dir)
+  (setf *already-published-artifacts* (concatenate 'list *already-published-artifacts* (list art)))
+  (let ((content (artifact-content art)))
+    (dolist (dep (artifact-deps art))
+      (publish-artifact dep dest-dir))
+
+    (publish-static
+     :dest-dir dest-dir
+     :content content
+     :path (artifact-location art))))

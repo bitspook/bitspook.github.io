@@ -52,26 +52,14 @@
   (print-unreadable-object (post out :type t)
     (format out "~a/~a" (post-category post) (post-slug post))))
 
-(defun blog-post-page-builder (post &optional feed-link)
-  "Create HTML page for a blog-post"
-  (with-slots (title) post
-    (lambda (&key css body-html)
-      (spinneret:with-html
-        (:html
-         (:head (:title title)
-                (:meta :name "viewport" :content "width=device-width, initial-scale=1")
-                (:link :rel "stylesheet" :href (embed-artifact-as css 'link))
-                (when feed-link (:link :rel "alternate" :type "application/atom+xml" :href feed-link))
-                (:script :src "/js/app.js"))
-         (:body (:raw body-html)))))))
-
 (defclass blog-post-page (html-page-artifact blog-post) nil)
 
-(defun make-blog-post-page (post &key location (feed-link nil) (css-location "/css/styles.css"))
+(defun make-blog-post-page (post &key location (css-location "/css/post.css"))
   (with-slots (title slug) post
     (let* ((html-path (base-path-join location "/" slug "/index.html"))
-           (root-widget (make 'blog-post-w :post post))
+           (root-widget (make 'blog-post-w :post post :css nil))
            (css-art (make 'css-file-artifact :location css-location :root-widget root-widget)))
+      (setf (slot-value root-widget 'css) css-art)
       (make 'blog-post-page
             ;; blog-post
             :title (post-title post)
@@ -87,7 +75,6 @@
 
             ;; html-page-artifact
             :location html-path
-            :builder (blog-post-page-builder post feed-link)
             :root-widget root-widget
             :deps (list css-art)))))
 

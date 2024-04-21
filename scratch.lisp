@@ -68,16 +68,21 @@
 (defparameter *pages* (dict)
   "Independent pages by slug.")
 
+(defparameter *atom-feeds* (dict)
+  "Hashtable of atom feeds by name.")
+
 (defun find-page (id-type id)
   "Find a html-page-artifact of ID-TYPE which can be identified by ID.
 Possible values for ID-TYPE:
 1. category-index
 2. tag-index
-3. slug"
+3. slug
+4. atom-feed"
   (ecase id-type
     (category-index (@ *category-indices* id))
     (tag-index (@ *tag-indices* id))
-    (slug (@ *pages* id))))
+    (slug (@ *pages* id))
+    (atom-feed (@ *atom-feeds* id))))
 
 (defun link-page (id-type id)
   "Embed page find with FIND-PAGE as LINK."
@@ -96,7 +101,8 @@ computers, security and politics.")
    (:p "You can read more about me " (:a :href (link-page 'slug "about") "here."))))
 
 (defun build ()
-  (let* ((www (path-join *base-dir* "build/"))
+  (let* ((site-title "@bitspook's personal website")
+         (www (path-join *base-dir* "build/"))
          (static (path-join *base-dir* "src/static/"))
          (*print-pretty* nil)
          (blog-posts
@@ -122,34 +128,52 @@ computers, security and politics.")
                            (setf (@ pages "archive") archive-page)
                            (return pages)))
 
-    (setf *category-indices*
-          (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
-                                          blog-post-pages :initial-value nil)
-                :with categories := (dict)
-                :unless (or (null category) (str:emptyp category))
-                  :do (let* ((posts (remove-if-not (op (string= (post-category _) category)) blog-post-pages))
-                             (cat-art (make-blog-post-listing-page
-                                       :path category
-                                       :posts posts
-                                       :title (str:capitalize category)
-                                       :author *author*)))
-                        (setf (@ categories category) cat-art))
-                :finally (return categories)))
+    (match (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
+                                           blog-post-pages :initial-value nil)
+                 :with categories := (dict)
+                 :with feeds := (dict)
+                 :unless (or (null category) (str:emptyp category))
+                   :do (let* ((posts (remove-if-not (op (string= (post-category _) category)) blog-post-pages))
+                              (cat-art (make-blog-post-listing-page
+                                        :path category
+                                        :posts posts
+                                        :title (str:capitalize category)
+                                        :author *author*))
+                              (feed-art (make-atom-feed-artifact
+                                         :location (base-path-join category "/feed.xml")
+                                         :posts (take 15 posts)
+                                         :title (str:capitalize category)
+                                         :author *author*)))
+                         (setf (@ categories category) cat-art)
+                         (setf (@ feeds category) feed-art))
+                 :finally (return (list categories feeds)))
+      ((list cats feeds)
+       (setf *category-indices* cats)
+       (setf *atom-feeds* feeds)))
 
-    (setf *tag-indices*
-          (loop :for tag :in (reduce
-                              (op (union _1 (post-tags _2) :test #'equal))
-                              blog-post-pages :initial-value nil)
-                :with tags := (dict)
-                :do (let* ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
-                                                 blog-post-pages))
-                           (tag-art (make-blog-post-listing-page
-                                     :path (base-path-join "tags/" tag)
-                                     :posts posts
-                                     :title (str:capitalize tag)
-                                     :author *author*)))
-                      (setf (@ tags tag) tag-art))
-                :finally (return tags)))
+    (match (loop :for tag :in (reduce
+                               (op (union _1 (post-tags _2) :test #'equal))
+                               blog-post-pages :initial-value nil)
+                 :with tags := (dict)
+                 :with feeds := (dict)
+                 :do (let* ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
+                                                  blog-post-pages))
+                            (tag-art (make-blog-post-listing-page
+                                      :path (base-path-join "tags/" tag)
+                                      :posts posts
+                                      :title (str:capitalize tag)
+                                      :author *author*))
+                            (feed-art (make-atom-feed-artifact
+                                       :location (base-path-join tag "/feed.xml")
+                                       :posts (take 15 posts)
+                                       :title (str:capitalize tag)
+                                       :author *author*)))
+                       (setf (@ tags tag) tag-art)
+                       (setf (@ feeds tag) feed-art))
+                 :finally (return (list tags feeds)))
+      ((list tags feeds)
+       (setf *tag-indices* tags)
+       (setf *atom-feeds* (merge-tables *atom-feeds* feeds))))
 
     (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
 
@@ -166,11 +190,17 @@ computers, security and politics.")
     ;;            :author *author*
     ;;            :title "Projects"))
 
+    (setf (@ *atom-feeds* "archive")
+          (make-atom-feed-artifact :title site-title
+                                   :posts (take 15 blog-post-pages)
+                                   :author *author*
+                                   :location "/feed.xml"))
+
     ;; Publish home-page and all its dependencies
     (let ((*already-published-artifacts* nil))
       (handler-bind ((file-already-exists #'skip-existing))
         (publish-artifact
-         (make-home-page :title "@bitspook's personal website"
+         (make-home-page :title site-title
                          :all-posts blog-post-pages
                          :author *author*
                          :about-me-summary (make 'about-me-summary))
