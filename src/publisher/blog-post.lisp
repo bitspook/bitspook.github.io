@@ -57,9 +57,9 @@
 (defun make-blog-post-page (post &key location (css-location "/css/post.css"))
   (with-slots (title slug) post
     (let* ((html-path (base-path-join location "/" slug "/index.html"))
-           (root-widget (make 'blog-post-w :post post :css nil))
+           (root-widget (make 'blog-post-w :post post))
            (css-art (make 'css-file-artifact :location css-location :root-widget root-widget)))
-      (setf (slot-value root-widget 'css) css-art)
+      (setf (slot-value root-widget 'css-file-artifact) css-art)
       (make 'blog-post-page
             ;; blog-post
             :title (post-title post)

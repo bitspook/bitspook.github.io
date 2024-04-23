@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget home-page-w (title posts author about-summary css)
+(defwidget home-page-w (title posts author about-summary css-file-artifact)
     (tagged-lass
      (base-lass)
 
@@ -141,7 +141,7 @@
   (:html
    (:head (:title title)
           (:meta :name "viewport" :content "width=device-width, initial-scale=1")
-          (when css (:link :rel "stylesheet" :href (embed-artifact-as css 'link)))
+          (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
           (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
           (:script :src "/js/app.js"))
    (:body

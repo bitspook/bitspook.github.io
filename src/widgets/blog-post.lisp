@@ -34,13 +34,13 @@
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
-(defwidget blog-post-w (post css)
+(defwidget blog-post-w (post css-file-artifact)
     (bp-lass)
   (with-slots (title published-at author tags body category) post
     (:html
      (:head (:title title)
             (:meta :name "viewport" :content "width=device-width, initial-scale=1")
-            (when css (:link :rel "stylesheet" :href (embed-artifact-as css 'link)))
+            (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
             (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
             (:script :src "/js/app.js"))
      (:body

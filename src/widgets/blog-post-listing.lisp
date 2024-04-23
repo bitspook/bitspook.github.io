@@ -40,12 +40,12 @@
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
-(defwidget blog-post-listing-w (posts title author next-page previous-page css)
+(defwidget blog-post-listing-w (posts title author next-page previous-page css-file-artifact)
     (bp-listing-lass)
   (:html
    (:head (:title title)
           (:meta :name "viewport" :content "width=device-width, initial-scale=1")
-          (when css (:link :rel "stylesheet" :href (embed-artifact-as css 'link)))
+          (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
           (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
           (:script :src "/js/app.js"))
    (:body

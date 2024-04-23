@@ -215,3 +215,8 @@ computers, security and politics.")
 ;; (defun build-website (successp notes buffer loadp)
 ;;   (sly-eval '(in.bitspook.website::build)))
 ;; (add-hook 'sly-compilation-finished-hook #'build-website)
+
+
+;; (defparameter *test* (make 'clown:artifact))
+
+;; (with-slots ( *test*) a)
