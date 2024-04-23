@@ -54,7 +54,7 @@
      (:article.content
       (:header.header
        (:h1.title title)
-       (:a.rss-sub :title "ATOM feed" :target "_blank" :href "feed.xml"
+       (:a.rss-sub :title "ATOM feed" :target "_blank" :href (link-page 'atom-feed (str:downcase title))
                    (:span.rss)))
 
       (:main

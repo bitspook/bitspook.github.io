@@ -12,7 +12,7 @@
         :handles '(("Github" "bitspook" "https://github.com/bitspook")
                    ("Mastodon" "bitspook" "https://infosec.exchange/@bitspook")
                    ("LinkedIn" "bitspook" "https://www.linkedin.com/in/bitspook/")
-                   ("RSS" "bitspook.in" "https://bitspook.in/archive/feed.xml"))))
+                   ("RSS" "bitspook.in" (base-path-join *base-url* "/feed.xml")))))
 
 (defparameter *base-dir* (asdf:system-relative-pathname :in.bitspook.website ""))
 
