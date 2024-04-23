@@ -9,10 +9,10 @@
   (make 'persona
         :name "Charanjit Singh"
         :avatar "/images/avatar.png"
-        :handles '(("Github" "bitspook" "https://github.com/bitspook")
+        :handles `(("Github" "bitspook" "https://github.com/bitspook")
                    ("Mastodon" "bitspook" "https://infosec.exchange/@bitspook")
                    ("LinkedIn" "bitspook" "https://www.linkedin.com/in/bitspook/")
-                   ("RSS" "bitspook.in" (base-path-join *base-url* "/feed.xml")))))
+                   ("RSS" "bitspook.in" ,(base-path-join *base-url* "/archive/feed.xml")))))
 
 (defparameter *base-dir* (asdf:system-relative-pathname :in.bitspook.website ""))
 
@@ -194,7 +194,7 @@ computers, security and politics.")
           (make-atom-feed-artifact :title site-title
                                    :posts (take 15 blog-post-pages)
                                    :author *author*
-                                   :location "/feed.xml"))
+                                   :location "/archive/feed.xml"))
 
     ;; Publish home-page and all its dependencies
     (let ((*already-published-artifacts* nil))
