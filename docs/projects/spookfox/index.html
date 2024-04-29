@@ -1,4 +1,4 @@
-<html lang=en><head><meta charset=UTF-8><title>Spookfox</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=/styles-DC23DB.css><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Spookfox</h1><div class=meta><time class="meta-item date">January 4, 2024</time></div></header><main class=post-body><p>
+<html lang=en><head><meta charset=UTF-8><title>Spookfox</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=https:/bitspook.in/css/software-project.css><link rel=alternate type=application/atom+xml href=https:/bitspook.in/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Spookfox</h1><div class=meta><time class="meta-item date">April 29, 2024</time></div></header><main class=post-body><p>
 Spookfox is a Browser extension and an Emacs package, which allow Emacs and
 Browser to communicate with each other. Its primary goal is to offer an Emacs
 tinkerer similar (to Emacs) framework to tinker their browser.
@@ -8,9 +8,9 @@ tinkerer similar (to Emacs) framework to tinker their browser.
 I use Spookfox as my daily driver to enable a number of <a href="https://github.com/bitspook/spookmax.d">workflow enhancements</a>,
 e.g capturing articles I read and Youtube videos I watch.
 </p>
-<div id="outline-container-orge54913a" class="outline-2">
-<h2 id="orge54913a">Supported browsers:</h2>
-<div class="outline-text-2" id="text-orge54913a">
+<div id="outline-container-orgb9bf8f0" class="outline-2">
+<h2 id="orgb9bf8f0">Supported browsers:</h2>
+<div class="outline-text-2" id="text-orgb9bf8f0">
 <ol class="org-ol">
 <li>Firefox</li>
 <li><p>
@@ -66,7 +66,7 @@ Using straight.el
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #598bc1;">use-package</span> <span style="color: #ab75c3;">spookfox</span>
+<pre class="src src-elisp">(<span style="color: #598bc1;">use-package</span> spookfox
   <span style="color: #7f7dca;">:straight</span>
   (spookfox <span style="color: #7f7dca;">:type</span> git
             <span style="color: #7f7dca;">:host</span> github
@@ -107,9 +107,9 @@ Add spookfox and its apps <code>load-path</code>
 <h2 id="use">Usage</h2>
 <div class="outline-text-2" id="text-use">
 <p>
-Spookfox itself is a thin layer which 
-between Emacs and Browser. More functionality on top of it is provided with
-<a href="#apps">apps</a>. Different apps need to be configured as documented in <a href="#apps">apps</a> section below.
+Spookfox itself is a thin layer which provide websockets based communication between Emacs and
+Browser. More functionality on top of it is provided with <a href="#apps">apps</a>. Different apps need to be configured
+as documented in <a href="#apps">apps</a> section below.
 </p>
 
 <ol class="org-ol">
@@ -118,9 +118,9 @@ between Emacs and Browser. More functionality on top of it is provided with
 </p>
 
 <p>
-If you followed the <a href="#install">installation</a> instructions, all apps bundled with the
-package itself should be ready to be loaded with a call to <code>require</code>. For
-example, to load "" app, you'd write this Elisp:
+If you followed the <a href="#install">installation</a> instructions, all apps bundled with the package itself should be
+ready to be loaded with a call to <code>require</code>. For example, to load <code>spookfox-org-tabs</code> app, you'd
+write this Elisp:
 </p>
 
 <div class="org-src-container">
@@ -257,6 +257,36 @@ see how I use it to more easily capture notes for articles I read in the browser
 <li>Commands for manipulating tabs
 
 <ul class="org-ul">
+<li><code>spookfox-itabs</code></li>
+</ul></li>
+</ol>
+
+
+<ul class="org-ul">
+<li><p>
+<code>spookfox-itabs-mode</code>
+</p>
+
+<p>
+Major mode derived from ‘special-mode’ by ‘define-derived-mode’.
+It inherits all of the parent’s attributes, but has its own keymap,
+abbrev table and syntax table:
+</p>
+
+<p>
+  ‘spookfox-itabs-mode-map’, ‘spookfox-itabs-mode-abbrev-table’ and
+‘spookfox-itabs-mode-syntax-table’
+</p>
+
+<p>
+which more-or-less shadow special-mode’s corresponding tables.
+</p>
+
+<p>
+In addition to any hooks its parent mode might have run, this mode runs the hook
+‘spookfox-itabs-mode-hook’, as the final or penultimate step during initialization.
+</p></li>
+
 <li><p>
 <code>spookfox-switch-tab</code>
 </p>
@@ -272,8 +302,7 @@ Note that this do not bring the browser window to focus.
 Depending on the kind of system, user have to do it by themselves.
 <a href="https://github.com/bitspook/spookmax.d/blob/aae6c47e5def0f2bc113f22931ec27c62b5365b6/readme.org?plain=1#L1757-L1764">Example</a>
 </p></li>
-</ul></li>
-</ol>
+</ul>
 </div>
 </div>
 </div>
@@ -348,7 +377,7 @@ automatically added timestamp links.
 </p>
 
 <p>
-spookfox-js-injection-eval is a byte-compiled Lisp function in ‘spookfox-js-injection.el’.
+spookfox-js-injection-eval is a compiled-function in ‘spookfox-js-injection.el’.
 </p>
 
 <p>
@@ -401,7 +430,7 @@ Following functions are available:
 </p>
 
 <p>
-spookfox-jscl-eval is a byte-compiled Lisp function in ‘spookfox-jscl.el’.
+spookfox-jscl-eval is a compiled-function in ‘spookfox-jscl.el’.
 </p>
 
 <p>
@@ -410,7 +439,7 @@ spookfox-jscl-eval is a byte-compiled Lisp function in ‘spookfox-jscl.el’.
 
 <p>
 Evaluate LISP FORM in background script in CONTEXT.
-CONTEXT can be one of ’(background ).
+CONTEXT can be one of (background).
 </p>
 
 <p>
@@ -432,7 +461,7 @@ can be used:
 </p>
 
 <p>
-spookfox-jscl-js-obj is a byte-compiled Lisp function in ‘spookfox-jscl.el’.
+spookfox-jscl-js-obj is a compiled-function in ‘spookfox-jscl.el’.
 </p>
 
 <p>
@@ -579,4 +608,4 @@ environment to hack Spookfox.
 </ol>
 </div>
 </div>
-</main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=https://bitspook.in/archive/feed.xml></a></div></footer></div></body></html>
+</main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=https:/bitspook.in/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>

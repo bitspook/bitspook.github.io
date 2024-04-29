@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Blog - bitspook.in</title><id>https://bitspook.in/blog/feed.xml</id><updated>2024-01-04T08:18:20.149663Z</updated><link href="https://bitspook.in/blog/feed.xml" rel="self" title="Blog"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Thoughts on HPI and future of cl-ownpress</title><id>https://bitspook.in/blog/thoughts-on-hpi-and-future-of-cl-ownpress</id><updated>2024-01-01T10:54:00.000000Z</updated><link href="https://bitspook.in/blog/thoughts-on-hpi-and-future-of-cl-ownpress" title="Thoughts on HPI and future of cl-ownpress"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2024-01-01T10:54:00.000000Z</published><summary type="text"></summary><content type="html">&lt;blockquote id=&quot;org89bc37c&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Blog - bitspook.in</title><id>https://bitspook.in/blog/feed.xml</id><updated>2024-04-29T14:14:50.251501Z</updated><link href="https://bitspook.in/blog/feed.xml" rel="self" title="Blog"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in//images/avatar.png</logo><entry><title type="text">Thoughts on HPI and future of cl-ownpress</title><id>/blog/thoughts-on-hpi-and-future-of-cl-ownpress/index.html</id><updated>2024-01-01T10:54:00.000000Z</updated><link href="/blog/thoughts-on-hpi-and-future-of-cl-ownpress/index.html" title="Thoughts on HPI and future of cl-ownpress"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2024-01-01T10:54:00.000000Z</published><summary type="text"></summary><content type="html">&lt;blockquote id=&quot;org9539612&quot;&gt;
 &lt;p&gt;
 Reflecting on similarities and differences b/w HPI and what I want cl-ownpress to build into.
 Thinking out loud.
@@ -76,9 +76,9 @@ to be &amp;quot;&lt;b&gt;I&lt;/b&gt; own my content, and use the walled garden t
 The subtle difference is important to me. This is an attitude I'd like to have towards life, and
 what is my personal computing ecosystem if not its reflection.
 &lt;/p&gt;
-</content></entry><entry><title type="text">Reading, and not forgetting</title><id>https://bitspook.in/blog/reading-and-not-forgetting</id><updated>2023-01-15T19:46:00.000000Z</updated><link href="https://bitspook.in/blog/reading-and-not-forgetting" title="Reading, and not forgetting"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2023-01-15T19:46:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-org3d2189f&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org3d2189f&quot;&gt;Problem&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3d2189f&quot;&gt;
+</content></entry><entry><title type="text">Reading, and not forgetting</title><id>/blog/reading-and-not-forgetting/index.html</id><updated>2023-01-15T19:46:00.000000Z</updated><link href="/blog/reading-and-not-forgetting/index.html" title="Reading, and not forgetting"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2023-01-15T19:46:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-orgb70be07&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgb70be07&quot;&gt;Problem&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb70be07&quot;&gt;
 &lt;p&gt;
 I forget everything I read, as soon as I am done reading (a sentence). Over
 time, reading turned from leisure to labor. Pressure of having to remember
@@ -87,9 +87,9 @@ distracted made it even worse.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org57dd7ea&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org57dd7ea&quot;&gt;Solution&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org57dd7ea&quot;&gt;
+&lt;div id=&quot;outline-container-org9d894ef&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9d894ef&quot;&gt;Solution&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9d894ef&quot;&gt;
 &lt;p&gt;
 Take notes to outsource remembering, and make reading more engaging.
 &lt;/p&gt;
@@ -100,18 +100,18 @@ taking notes keep my attention tethered.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orge853137&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orge853137&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orge853137&quot;&gt;
+&lt;div id=&quot;outline-container-org021f077&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org021f077&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org021f077&quot;&gt;
 &lt;p&gt;
 Note taking process need to be designed to reduce the burden that note-taking
 itself can become. Key here is not taking notes, it is crafting a smooth
 note-taking workflow.
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org3472d81&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org3472d81&quot;&gt;Components&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org3472d81&quot;&gt;
+&lt;div id=&quot;outline-container-orgae559f2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgae559f2&quot;&gt;Components&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgae559f2&quot;&gt;
 &lt;p&gt;
 My reading workflow involves 3 major components
 &lt;/p&gt;
@@ -122,9 +122,9 @@ My reading workflow involves 3 major components
 &lt;li&gt;Spookfox: An Emacs package for controlling Firefox from Emacs&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgd51d73c&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgd51d73c&quot;&gt;Emacs&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgd51d73c&quot;&gt;
+&lt;div id=&quot;outline-container-orgd6b432c&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgd6b432c&quot;&gt;Emacs&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgd6b432c&quot;&gt;
 &lt;p&gt;
 Emacs is the center stage on which everything else plays. I chose Emacs, because
 &lt;/p&gt;
@@ -138,9 +138,9 @@ decade now.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org7b85c12&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org7b85c12&quot;&gt;Denote&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org7b85c12&quot;&gt;
+&lt;div id=&quot;outline-container-org6b73e49&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org6b73e49&quot;&gt;Denote&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org6b73e49&quot;&gt;
 &lt;p&gt;
 &lt;a href=&quot;https://github.com/protesilaos/denote&quot;&gt;Denote&lt;/a&gt; is my present choice of note-taking Emacs package. It provide structure
 to my notes, and thin tooling to navigate this structure. Notes are kept in
@@ -149,9 +149,9 @@ keywords and tags even from outside Emacs.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org3d871f6&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org3d871f6&quot;&gt;Spookfox&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org3d871f6&quot;&gt;
+&lt;div id=&quot;outline-container-org85d4d8c&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org85d4d8c&quot;&gt;Spookfox&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-org85d4d8c&quot;&gt;
 &lt;p&gt;
 &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;Spookfox&lt;/a&gt; is my answer to &amp;quot;but what about when you need to leave Emacs?&amp;quot;.
 &lt;/p&gt;
@@ -170,9 +170,9 @@ getting information about current browser tab, video being played etc.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org34c82d8&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org34c82d8&quot;&gt;The workflow&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org34c82d8&quot;&gt;
+&lt;div id=&quot;outline-container-org099842a&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org099842a&quot;&gt;The workflow&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org099842a&quot;&gt;
 &lt;p&gt;
 It boils down to a single key-combo: &lt;code&gt;C-c n r&lt;/code&gt; open a &amp;quot;reading note&amp;quot; in my
 scratchpad. &lt;code&gt;C-c n r&lt;/code&gt; opens the same note regardless of when I open it; i.e it
@@ -232,9 +232,9 @@ come super handy recently in my German language study.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title type="text">I am moving to Berlin</title><id>https://bitspook.in/blog/i-am-moving-to-berlin</id><updated>2022-11-22T15:12:00.000000Z</updated><link href="https://bitspook.in/blog/i-am-moving-to-berlin" title="I am moving to Berlin"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-11-22T15:12:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-org9f40b28&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org9f40b28&quot;&gt;Why&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9f40b28&quot;&gt;
+</content></entry><entry><title type="text">I am moving to Berlin</title><id>/blog/i-am-moving-to-berlin/index.html</id><updated>2022-11-22T15:12:00.000000Z</updated><link href="/blog/i-am-moving-to-berlin/index.html" title="I am moving to Berlin"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-11-22T15:12:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-org378a441&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org378a441&quot;&gt;Why&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org378a441&quot;&gt;
 &lt;p&gt;
 There are several reasons I stated in my &lt;a href=&quot;https://bitspook.in/blog/after-6-months-of-voluntary-unemployment/&quot;&gt;previous blog post&lt;/a&gt;. Other than those,
 here are a few more:
@@ -287,9 +287,9 @@ following them.
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orga1f5c65&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orga1f5c65&quot;&gt;How I am feeling&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga1f5c65&quot;&gt;
+&lt;div id=&quot;outline-container-org07566c5&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org07566c5&quot;&gt;How I am feeling&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org07566c5&quot;&gt;
 &lt;p&gt;
 I am scared shitless. I am full of stress and anxiety, I can barely sleep and
 can't focus on anything. I have stopped drinking coffee because I no longer need
@@ -311,9 +311,9 @@ almost all my remaining funds to book housing, tickets and stuff.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org86c9ad4&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org86c9ad4&quot;&gt;What lies ahead&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org86c9ad4&quot;&gt;
+&lt;div id=&quot;outline-container-org787f184&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org787f184&quot;&gt;What lies ahead&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org787f184&quot;&gt;
 &lt;p&gt;
 I intend to come back to India after at most 2 years and at least 1 year.
 &lt;/p&gt;
@@ -349,7 +349,7 @@ India and participate somehow in public administration.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title type="text">Insolent Software</title><id>https://bitspook.in/blog/insolent-software</id><updated>2022-11-07T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/insolent-software" title="Insolent Software"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-11-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+</content></entry><entry><title type="text">Insolent Software</title><id>/blog/insolent-software/index.html</id><updated>2022-11-07T00:00:00.000000Z</updated><link href="/blog/insolent-software/index.html" title="Insolent Software"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-11-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 I am used to put limits on myself. Finding reasons, some in authority, most in
 circumstance; to not solve the problems I've judged solvable.
 &lt;/p&gt;
@@ -431,14 +431,14 @@ have come to associate personal computing with same feelings I have when playing
 something like Factorio or Cities Skylines. It is a joyous endeavor, we shall
 talk of on another day.
 &lt;/p&gt;
-</content></entry><entry><title type="text">After 6 months of voluntary unemployment</title><id>https://bitspook.in/blog/after-6-months-of-voluntary-unemployment</id><updated>2022-10-03T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/after-6-months-of-voluntary-unemployment" title="After 6 months of voluntary unemployment"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-10-03T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+</content></entry><entry><title type="text">After 6 months of voluntary unemployment</title><id>/blog/after-6-months-of-voluntary-unemployment/index.html</id><updated>2022-10-03T00:00:00.000000Z</updated><link href="/blog/after-6-months-of-voluntary-unemployment/index.html" title="After 6 months of voluntary unemployment"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-10-03T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 For the last six months, I have been &lt;a href=&quot;https://bitspook.in/blog/i-have-quit-my-job&quot;&gt;voluntarily unemployed&lt;/a&gt;. Here's a brief
 summary of how the last six months shaped my thoughts, and an abstract plan of
 what I intend to do next.
 &lt;/p&gt;
-&lt;div id=&quot;outline-container-orgb08ea39&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgb08ea39&quot;&gt;Mental health&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgb08ea39&quot;&gt;
+&lt;div id=&quot;outline-container-org55f17a7&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org55f17a7&quot;&gt;Mental health&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org55f17a7&quot;&gt;
 &lt;p&gt;
 I needed this break a lot more than I thought I did. Being perpetually restless
 had been my state of being for too long. It felt good, to breath out.
@@ -466,9 +466,9 @@ a definite answer to consider the matter resolved. More on this later (below).
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org1e3a7ad&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org1e3a7ad&quot;&gt;Social work&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org1e3a7ad&quot;&gt;
+&lt;div id=&quot;outline-container-org9f8264c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org9f8264c&quot;&gt;Social work&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org9f8264c&quot;&gt;
 &lt;p&gt;
 When busy with material responsibilities, I used to fantasize that if I had more
 free time I could do so much more for people around me. When I had it, I tried
@@ -492,9 +492,9 @@ able to put in as much energy as it demanded.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org688bd53&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org688bd53&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org688bd53&quot;&gt;
+&lt;div id=&quot;outline-container-orgd5d61fc&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgd5d61fc&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgd5d61fc&quot;&gt;
 &lt;p&gt;
 I was running full speed building &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;foolish&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;things&lt;/a&gt;. Then lisp came calling.
 &lt;/p&gt;
@@ -548,9 +548,9 @@ probably would not have done otherwise. I traveled.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgf8e4ea0&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgf8e4ea0&quot;&gt;Travel&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgf8e4ea0&quot;&gt;
+&lt;div id=&quot;outline-container-orgca34b25&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgca34b25&quot;&gt;Travel&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgca34b25&quot;&gt;
 &lt;p&gt;
 I am not much of a site-seeing kind of guy. I find traveling exhausting,
 regardless of how beautiful the views or how fun the activities. Being a tourist
@@ -588,9 +588,9 @@ putting myself in a place 🤯
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org6b8b81b&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org6b8b81b&quot;&gt;What comes next?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org6b8b81b&quot;&gt;
+&lt;div id=&quot;outline-container-org68c9471&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org68c9471&quot;&gt;What comes next?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org68c9471&quot;&gt;
 &lt;p&gt;
 I can perhaps spend a few more months before I run out of savings, but the
 dimming safety net has already started making me anxious. I miss the tribe-like
@@ -642,9 +642,9 @@ Now that that is decided, what's left to figure out is how to go about it.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org0d1ca57&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org0d1ca57&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org0d1ca57&quot;&gt;
+&lt;div id=&quot;outline-container-orgdff927a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgdff927a&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdff927a&quot;&gt;
 &lt;p&gt;
 After 6 months of voluntary unemployment, I am the same man I was before it.
 Things I experienced and burdens I unburdened could be achieved by other means
@@ -658,12 +658,12 @@ As for the journey to be where I already was, I'll do it again if I can.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title type="text">Extending org-mode to handle youtube links</title><id>https://bitspook.in/blog/extending-org-mode-to-handle-youtube-links</id><updated>2022-09-26T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/extending-org-mode-to-handle-youtube-links" title="Extending org-mode to handle youtube links"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+</content></entry><entry><title type="text">Extending org-mode to handle youtube links</title><id>/blog/extending-org-mode-to-handle-youtube-links/index.html</id><updated>2022-09-26T00:00:00.000000Z</updated><link href="/blog/extending-org-mode-to-handle-youtube-links/index.html" title="Extending org-mode to handle youtube links"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;/p&gt;
-&lt;div id=&quot;outline-container-org8622c33&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org8622c33&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org8622c33&quot;&gt;
+&lt;div id=&quot;outline-container-orgdfa2707&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgdfa2707&quot;&gt;Requirement&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgdfa2707&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
 browser&lt;/li&gt;
@@ -673,9 +673,9 @@ of hyperlinks&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org7ad6279&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org7ad6279&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7ad6279&quot;&gt;
+&lt;div id=&quot;outline-container-org3b214e1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org3b214e1&quot;&gt;Implementation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3b214e1&quot;&gt;
 &lt;p&gt;
 Org has a concept of 'link types'. We can add a new type of link and have it
 behave the way we want.
@@ -761,9 +761,9 @@ Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extend
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org3d90883&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org3d90883&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org3d90883&quot;&gt;
+&lt;div id=&quot;outline-container-org62b4269&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org62b4269&quot;&gt;Result&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org62b4269&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
 in mpv&lt;/li&gt;
@@ -774,9 +774,9 @@ youtube videos&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org7236c92&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org7236c92&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7236c92&quot;&gt;
+&lt;div id=&quot;outline-container-orgd1ba2f8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgd1ba2f8&quot;&gt;Bonus gains 💪&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgd1ba2f8&quot;&gt;
 &lt;p&gt;
 Recently I've been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
@@ -804,10 +804,10 @@ extending-the-blogging-setup as well.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title type="text">How I manage my passwords</title><id>https://bitspook.in/blog/how-i-manage-my-passwords</id><updated>2022-09-19T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/how-i-manage-my-passwords" title="How I manage my passwords"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-19T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;div id=&quot;outline-container-orgc4540cd&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgc4540cd&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgc4540cd&quot;&gt;
+</content></entry><entry><title type="text">How I manage my passwords</title><id>/blog/how-i-manage-my-passwords/index.html</id><updated>2022-09-19T00:00:00.000000Z</updated><link href="/blog/how-i-manage-my-passwords/index.html" title="How I manage my passwords"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-19T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;div id=&quot;outline-container-org90b775c&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org90b775c&quot;&gt;My requirements&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org90b775c&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;b&gt;No third-parties&lt;/b&gt;
@@ -838,9 +838,9 @@ should play nice with presence/absence of other tools.
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org30b3ee1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org30b3ee1&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org30b3ee1&quot;&gt;
+&lt;div id=&quot;outline-container-org46a00c8&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org46a00c8&quot;&gt;Tools I chose&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org46a00c8&quot;&gt;
 &lt;ol class=&quot;org-ol&quot;&gt;
 &lt;li&gt;&lt;p&gt;
 &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
@@ -920,13 +920,13 @@ my mobile devices.
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org885f2bb&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org885f2bb&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org885f2bb&quot;&gt;
+&lt;div id=&quot;outline-container-org5178c67&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org5178c67&quot;&gt;Workflow&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org5178c67&quot;&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org97db652&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org97db652&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org97db652&quot;&gt;
+&lt;div id=&quot;outline-container-org37a2d48&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org37a2d48&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org37a2d48&quot;&gt;
 &lt;p&gt;
 For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
@@ -947,9 +947,9 @@ password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgeae3d6f&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgeae3d6f&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgeae3d6f&quot;&gt;
+&lt;div id=&quot;outline-container-org6e5b1e4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org6e5b1e4&quot;&gt;Using a password&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org6e5b1e4&quot;&gt;
 &lt;p&gt;
 Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
 much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
@@ -981,9 +981,9 @@ password (on the same form).
 &lt;/video&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org2f20c29&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;org2f20c29&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org2f20c29&quot;&gt;
+&lt;div id=&quot;outline-container-org20334e7&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org20334e7&quot;&gt;Throwaway passwords&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-org20334e7&quot;&gt;
 &lt;p&gt;
 I don't &amp;quot;install&amp;quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
@@ -1015,7 +1015,7 @@ private browser window.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title type="text">Using ELisp as an HTML templating engine</title><id>https://bitspook.in/blog/using-elisp-as-an</id><updated>2022-04-08T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/using-elisp-as-an" title="Using ELisp as an HTML templating engine"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-04-08T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+</content></entry><entry><title type="text">Using ELisp as an HTML templating engine</title><id>/blog/using-elisp-as-an/index.html</id><updated>2022-04-08T00:00:00.000000Z</updated><link href="/blog/using-elisp-as-an/index.html" title="Using ELisp as an HTML templating engine"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-04-08T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;/p&gt;
 
@@ -1096,7 +1096,7 @@ lisp forms in our DOM to weave data into it.
 You can check &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;my wip ELisp blogging setup&lt;/a&gt; for more complex examples, and some
 glue code I've written to make using ELisp as HTML templating engine easier.
 &lt;/p&gt;
-</content></entry><entry><title type="text">I have quit my job</title><id>https://bitspook.in/blog/i-have-quit-my-job</id><updated>2022-03-24T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/i-have-quit-my-job" title="I have quit my job"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-03-24T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+</content></entry><entry><title type="text">I have quit my job</title><id>/blog/i-have-quit-my-job/index.html</id><updated>2022-03-24T00:00:00.000000Z</updated><link href="/blog/i-have-quit-my-job/index.html" title="I have quit my job"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-03-24T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 Several years ago, I decided to quit freelancing and do a day job. The
 job would pay much less but I was struggling with mental health (ADHD).
 On my therapist's suggestion, I decided to give the job thing a try. It
@@ -1249,7 +1249,7 @@ balance. I'll explore.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title type="text">Using org-mode as an SQL playground</title><id>https://bitspook.in/blog/using-org-mode-as-an-sql-playground</id><updated>2022-02-03T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/using-org-mode-as-an-sql-playground" title="Using org-mode as an SQL playground"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-02-03T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+</content></entry><entry><title type="text">Using org-mode as an SQL playground</title><id>/blog/using-org-mode-as-an-sql-playground/index.html</id><updated>2022-02-03T00:00:00.000000Z</updated><link href="/blog/using-org-mode-as-an-sql-playground/index.html" title="Using org-mode as an SQL playground"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-02-03T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 Showcase video:
 &lt;/p&gt;
 
@@ -1346,9 +1346,9 @@ SQL block produces output shown below that.
 &lt;span style=&quot;color: #86b5e8;&quot;&gt;| Nested event title | nested-lol-rofl-lmao | 2021-10-29 12:30:00 | 2021-10-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org2fa9f58&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org2fa9f58&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org2fa9f58&quot;&gt;
+&lt;div id=&quot;outline-container-org7dbb42a&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org7dbb42a&quot;&gt;Utilizing LSP&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org7dbb42a&quot;&gt;
 &lt;p&gt;
 Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
@@ -1406,9 +1406,9 @@ that didn't work out too well.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orga0ce9d6&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orga0ce9d6&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orga0ce9d6&quot;&gt;
+&lt;div id=&quot;outline-container-org4a0954d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org4a0954d&quot;&gt;Problems with this setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org4a0954d&quot;&gt;
 &lt;p&gt;
 There are 2 main problems I face during my primary use-case.
 &lt;/p&gt;
@@ -1421,4 +1421,527 @@ which don't suffer from this.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><base href="https://bitspook.in"/></feed>
+</content></entry><entry><title type="text">Using org-roam as a CRM</title><id>/blog/using-org-roam-as-a-crm/index.html</id><updated>2022-01-22T00:00:00.000000Z</updated><link href="/blog/using-org-roam-as-a-crm/index.html" title="Using org-roam as a CRM"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-01-22T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;
+&lt;/iframe&gt;
+
+&lt;p&gt;
+org-roam is an Emacs application which makes efficiently capturing and finding
+notes easy. It does so a good job at that, I decided to use it as a makeshift
+personal CRM. With a few lines of Elisp, I get to:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+Take notes about people and events. I usually capture their contact
+information, important dates, how they made me feel during our interactions.
+Documenting meetings and calls has proven to be very helpful on more than one
+occasion.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;SPC P f&lt;/code&gt; to very quickly find or create a person/event.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Link events and people to build a graph of relationships, which provide
+context and help me remember our meetings vividly. It is valuable for me
+because it save me from anxiety about forgetting people and things I discuss
+with them.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;code&gt;SPC P i&lt;/code&gt; to insert link to a person/event in an org file (mostly my diary).
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+I have similar keybindings for taking (&lt;code&gt;SPC n f&lt;/code&gt;) and inserting notes (&lt;code&gt;SPC n
+i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings and
+consistent UI.
+&lt;/p&gt;
+&lt;div id=&quot;outline-container-org948cd67&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org948cd67&quot;&gt;Setup&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org948cd67&quot;&gt;
+&lt;p&gt;
+Elisp I use org-roam as a CRM, while keeping &amp;quot;normal&amp;quot; org-roam available for
+taking notes.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~/Documents/org/people&amp;quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #987654;&quot;&gt;&amp;quot;Directory where org-roam notes related to people are kept.&amp;quot;&lt;/span&gt;)
+
+(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #d65946;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
+  &lt;span style=&quot;color: #987654;&quot;&gt;&amp;quot;Evaluate FUNC with ARGS org-roam set for working as CRM.&amp;quot;&lt;/span&gt;
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;let*&lt;/span&gt; ((org-roam-directory spook--org-roam-crm-dir)
+         (org-roam-db-location (concat org-roam-directory &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;/roam.db&amp;quot;&lt;/span&gt;)))
+    (apply func args)))
+
+(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--db-sync&lt;/span&gt; ()
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
+  (spook--with-org-roam-crm #'org-roam-db-sync))
+
+(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--find-person&lt;/span&gt; ()
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
+  (spook--with-org-roam-crm #'org-roam-node-find))
+
+(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--insert-person&lt;/span&gt; ()
+  (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
+  (spook--with-org-roam-crm #'org-roam-node-insert))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Setup keybindings for calling &lt;code&gt;spook-crm--find-person&lt;/code&gt; to quickly search for
+(and/or add) a person or event, and &lt;code&gt;spook-crm--insert-person&lt;/code&gt; to add a link to
+a person or event in any org-mode buffer. I frequently use it when adding
+meeting notes and in my diary.
+&lt;/p&gt;
+
+&lt;p&gt;
+Here's how I add the keybindings:
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-elisp&quot;&gt;(spook-defkeymap
+ &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;spook-people&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;C-c P&amp;quot;&lt;/span&gt;
+ '(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;f&amp;quot;&lt;/span&gt; . spook-crm--find-person)
+ '(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;i&amp;quot;&lt;/span&gt; . spook-crm--insert-person))
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+You can find source of my very naive &lt;code&gt;spook-defkeymap&lt;/code&gt; macro in my &lt;a href=&quot;https://github.com/bitspook/spookmax.d/blob/master/readme.org#helper-utilities&quot;&gt;Emacs
+configuration&lt;/a&gt;. In addition to this, I assign the &lt;code&gt;spook-people&lt;/code&gt; keymap to my
+&lt;a href=&quot;https://github.com/meow-edit/meow/&quot;&gt;meow&lt;/a&gt; leader key, means I can press &lt;code&gt;SPC P f&lt;/code&gt; to find a person/event, and &lt;code&gt;SPC P
+i&lt;/code&gt; to insert a link to a person/event.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org65a9fd3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org65a9fd3&quot;&gt;Does it solve everything?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org65a9fd3&quot;&gt;
+&lt;p&gt;
+No. But it is the quickest solution which achieves satisfactory result and free
+me up to focus on other things. I feel org-roam itself to be over-engineered
+sometimes, and there are a bunch of things I might like but don't need right
+now. e.g
+&lt;/p&gt;
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;More structured way of capturing specific kind of information. e.g contact
+details. Structure of data kept in org files is upto me, which works for now&lt;/li&gt;
+&lt;li&gt;Searching by something which isn't title or tags. This is solved by doing grep
+over&lt;/li&gt;
+&lt;li&gt;Visualize the people and events I participate in. &lt;a href=&quot;https://github.com/org-roam/org-roam-ui&quot;&gt;org-roam-ui&lt;/a&gt; didn't work on
+first shot.&lt;/li&gt;
+&lt;li&gt;Contacts/details on the go i.e a mobile app&lt;/li&gt;
+&lt;li&gt;Psychoanalyze people I meet; building, tracking and concluding experiments.
+But it is perhaps too much to ask without making effort&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org46fdd81&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org46fdd81&quot;&gt;Why am I sharing this?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-org46fdd81&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
+&lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
+&lt;li&gt;Hoping someone will solve some problems with this snippet, build on it until I
+come around to do it myself&lt;/li&gt;
+&lt;li&gt;To spread the cult of Emacs/org-mode (my precious-es)&lt;/li&gt;
+&lt;li&gt;To have some activity on my blog. It is too quiet here&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content></entry><entry><title type="text">Find a functional programmer for your Javascript team</title><id>/blog/find-a-functional-programmer-for-your-javascript-team/index.html</id><updated>2020-11-07T00:00:00.000000Z</updated><link href="/blog/find-a-functional-programmer-for-your-javascript-team/index.html" title="Find a functional programmer for your Javascript team"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2020-11-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;
+Written below are some opinions and rationalizations for them. I have come to
+these opinions by interviewing and working with people for years. However
+strongly I feel about them, they can still be wrong. If you have feedback for
+these, please do contact me on &lt;a href=&quot;https://www.linkedin.com/in/bitspook&quot;&gt;LinkedIn&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/bitspook&quot;&gt;Twitter&lt;/a&gt;. All kind of feedback is
+very much appreciated.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+From &amp;quot;Functional programmer&amp;quot; I mean a programmer familiar with concepts of
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+A good teammate is someone:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;b&gt;Who takes care of themselves&lt;/b&gt;. They invest in themselves. They care
+about their software as a craft, as something more than just cramming
+a whole bunch of frameworks and libraries.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Who take care of their teammates&lt;/b&gt;.
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;They help their teammates grow, by mentoring and/or by serving as
+an example&lt;/li&gt;
+&lt;li&gt;They are empathetic towards other developers. This is most visible
+in kind of code a person writes. An empathetic developer writes
+code for other people.
+
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;They give preference to readability of code over
+micro-optimizations that make them feel clever&lt;/li&gt;
+&lt;li&gt;They write modular code with independent modules each of which do
+one thing well. And are easily composed to build more complex
+functionality.&lt;/li&gt;
+&lt;li&gt;They write clean, predictable and intuitive APIs&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+FP is steadily gaining popularity, but it is still not popular enough to
+breach the talent pool I get to interview from. Familiarity with FP is a
+very good indication that the person invest in themselves. And they do
+that in a manner which goes beyond just increasing the number of
+&amp;quot;frameworks&amp;quot; they have built a Todo App in.
+&lt;/p&gt;
+
+&lt;p&gt;
+Developer empathy is surprisingly rare. In almost a decade of writing
+code, I have met so few developers who really give a fuck that someone
+else will also read their abomination. Most software is written in
+vacuum. Familiarity with FP don't fix that magically.
+&lt;/p&gt;
+
+&lt;p&gt;
+However there is another factor at play here. Ironically, as a
+side-effect of FP, code written in a functional manner is often a lot
+more readable than its imperative and OOP equivalents (Impromptu quiz:
+What's so ironic about this statement?). Not only is functional code
+itself naturally declarative, an FP person is more likely to wtf when
+they see unreadable code in PR reviews.
+&lt;/p&gt;
+
+&lt;p&gt;
+Basic principles of FP also make for great advice for inexperienced
+developers. Good software architecture is hard to learn, it is a lot
+harder to teach. You need a mind capable of holding large amounts of
+complex code before the fancy design patterns even start making sense.
+In comparison, &amp;quot;pure functions + composition&amp;quot; and you are good to go.
+That is it. That is all you need to know to get started with writing
+modular, testable, simple code; which is easy to write and easier to
+maintain. As a mere side effect of avoiding side effects, you write
+naturally &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID&quot;&gt;SOLID&lt;/a&gt; (in spirit)
+code.
+&lt;/p&gt;
+
+&lt;p&gt;
+FP is not a silver bullet, but looking for functional programmers skew
+the universe in your favor a little. You are a lot more likely to get
+good people among functional programmers.
+&lt;/p&gt;
+</content></entry><entry><title type="text">Quick and Pretty Docs for Software Projects</title><id>/blog/quick-and-pretty-docs-for-software-projects/index.html</id><updated>2019-08-28T00:00:00.000000Z</updated><link href="/blog/quick-and-pretty-docs-for-software-projects/index.html" title="Quick and Pretty Docs for Software Projects"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-08-28T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+I have practiced
+&lt;a href=&quot;http://tom.preston-werner.com/2010/08/23/readme-driven-development.html&quot;&gt;Readme
+Driven Development&lt;/a&gt; on a number of my projects with varying milage. I
+have often found myself wishing for a few things:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;b&gt;More structure&lt;/b&gt; When writing the documentation, and even more so
+when reading it. A single markdown file starts getting out of hand
+really quickly. On my presonal projects I go for org-mode, which keep
+me satisfied. But when working on a professional gig, it don't feel
+right to force other developers into org-mode/emacs.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Prettiness&lt;/b&gt; Markdown is a quite reasonably readable format, but
+there is always room for prettyness.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+Basically I wish for github-pages with more structure; so, a statically
+generate site.
+&lt;/p&gt;
+
+&lt;p&gt;
+To minimize the added complexity to our dev setup, and since I am
+already using docker to run dev-environments for almost all of my
+projects, I chose to leverage it for building my readme as a local
+&amp;quot;service&amp;quot;. i.e I chose to structure my documentation with filesystem,
+and use docker to abstract the complexity of setting up the static site
+generator.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have chosen hugo because of its simplicity. Its intuitive content
+management means near-zero learning curve for my teammates to start
+contributing documentation. I chose
+&lt;a href=&quot;https://github.com/matcornic/hugo-theme-learn&quot;&gt;hugo-theme-learn&lt;/a&gt;
+because of its simplicity, &lt;a href=&quot;https://mermaidjs.github.io/&quot;&gt;mermaid.js&lt;/a&gt;
+support for UML diagrams, and well, prettiness.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with following
+general structure:
+&lt;/p&gt;
+
+&lt;pre class=&quot;example&quot; id=&quot;org986d5c9&quot;&gt;
+.
+├── config.toml
+├── content
+└── Dockerfile
+&lt;/pre&gt;
+
+&lt;p&gt;
+Every markdown file in &lt;code&gt;content&lt;/code&gt; directory adds to the generated
+documentation.
+&lt;/p&gt;
+
+&lt;p&gt;
+Here is the Dockerfile I have used to create the docs container. It
+downloads and sets up hugo with the theme in a single command without
+anything other than docker installed on a developer's machine.
+&lt;/p&gt;
+
+&lt;pre class=&quot;example&quot; id=&quot;org1cd8d8b&quot;&gt;
+FROM alpine:latest
+
+WORKDIR /app
+
+EXPOSE 80
+ENV HOST=0.0.0.0
+
+RUN apk update &amp;amp;&amp;amp; apk add hugo git
+
+ENV HUGO_THEME_URL='https://github.com/matcornic/hugo-theme-learn'
+ENV HUGO_THEME_COMMIT='2.4.0'
+
+RUN mkdir -p /themes/current \
+  &amp;amp;&amp;amp; cd /themes/current \
+  &amp;amp;&amp;amp; git init \
+  &amp;amp;&amp;amp; git remote add origin $HUGO_THEME_URL \
+  &amp;amp;&amp;amp; git fetch --depth 1 origin $HUGO_THEME_COMMIT \
+  &amp;amp;&amp;amp; git checkout FETCH_HEAD \
+  &amp;amp;&amp;amp; cd /app
+RUN echo &amp;quot;alias hugo='hugo --themesDir /themes --theme current'&amp;quot; &amp;gt; ~/.profile
+
+COPY . /app
+
+CMD hugo serve --port 3000 --bind='0.0.0.0' --themesDir /themes --theme current
+&lt;/pre&gt;
+
+&lt;p&gt;
+When exposed on port &lt;code&gt;3000&lt;/code&gt;, it allows live-reloading of docs and search
+in docs as well. It is possible to change the theme and theme version by
+setting environment variables &lt;code&gt;HUGO_THEME_URL&lt;/code&gt; and &lt;code&gt;HUGO_THEME_COMMIT&lt;/code&gt;
+when building the docker image.
+&lt;/p&gt;
+
+&lt;p&gt;
+Here is &lt;code&gt;config.toml&lt;/code&gt; file I've used for my &lt;code&gt;docs&lt;/code&gt;, which allow me to
+configure the hugo theme with above mentioned environment variable only:
+&lt;/p&gt;
+
+&lt;pre class=&quot;example&quot; id=&quot;org46a0cf3&quot;&gt;
+buildDrafts = true
+title = &amp;quot;My Project&amp;quot;
+
+# For search functionality
+[outputs]
+home = [ &amp;quot;HTML&amp;quot;, &amp;quot;RSS&amp;quot;, &amp;quot;JSON&amp;quot;]
+
+[params]
+  author = &amp;quot;My team&amp;quot;
+  description = &amp;quot;My project's cloud&amp;quot;
+&lt;/pre&gt;
+</content></entry><entry><title type="text">Helping others to help myself</title><id>/blog/coming-to-terms-with-adhd-help-others-to-help-yourself/index.html</id><updated>2019-05-13T00:00:00.000000Z</updated><link href="/blog/coming-to-terms-with-adhd-help-others-to-help-yourself/index.html" title="Helping others to help myself"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-05-13T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+It is near impossible for me to get something done if I don't have 100%
+peaked interest in it at &lt;b&gt;this&lt;/b&gt; very moment. Occasionally I can hyper
+focus on things, but that hyper focus rarely finish things. Hyper focus
+is like eating all the desert, leaving behind a plate full of broccoli.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have noticed however that most of the times when I have actually
+finished something, I was, in my mind, helping someone else.
+&lt;/p&gt;
+
+&lt;p&gt;
+Reviewing the judicious documentation of my life, that is my journal, I
+can say it for near about 100% of the things that I actually finished.
+The force behind crossing the finishing line was either accountability,
+or my belief that someone else is relying on me.
+&lt;/p&gt;
+
+&lt;p&gt;
+None of my own &amp;quot;side projects&amp;quot; have ever seen a ray of light, but most
+things I started for others were finished. Mostly that was
+presentations, processes, and very personally tailored learning
+materials.
+&lt;/p&gt;
+
+&lt;p&gt;
+Reviewing my journal, I noticed a pattern developing over the course of
+last year. Whenever I had an idea that I wanted to see done, I tried to
+frame it in somebody else' canvas. If I could do that, I shared the idea
+with the person and got them involved as a partner. Chances of success
+I've observed were directly proportional to how much I care for the
+person. Some of the things I started that I couldn't fit in to help
+someone else are still in &amp;quot;TODO&amp;quot; state, despite the long and clear
+road-maps I created for them.
+&lt;/p&gt;
+
+&lt;p&gt;
+This discovery of transforming emotions that come easily to me, into
+what I believe I severely lack has sown seeds of new hope. Perhaps I
+will be able to replace my need of accountability to get things done
+with this. I don't know if it is vain need of acknowledgment, or
+goodness of heart, but it works.
+&lt;/p&gt;
+
+&lt;p&gt;
+I have started taking actions to optimize this. I am as anti-social as
+they come, and that, now I believe, is a problem to be solved if I want
+to increase my happiness.
+&lt;/p&gt;
+
+&lt;p&gt;
+Most of my activities with other people don't register to my brain as
+something it should remember. My mind is often meeting people for first
+time despite several previous encounters. That is the first thing I am
+going to tackle. Concrete step I am taking for this, is to start using
+&lt;a href=&quot;https://github.com/monicahq/monica/&quot;&gt;Monica&lt;/a&gt; to keep track of my
+social life. Next step would be to actually start making effort to
+socialize. I suppose saying &amp;quot;hello&amp;quot; to my colleagues every morning could
+be a good start.
+&lt;/p&gt;
+</content></entry><entry><title type="text">Personal brands for software developers</title><id>/blog/personal-brands-for-software-developers/index.html</id><updated>2019-04-01T00:00:00.000000Z</updated><link href="/blog/personal-brands-for-software-developers/index.html" title="Personal brands for software developers"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-04-01T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+&lt;a href=&quot;file:///blog/maximize-individual-growing-in-a-software-team-2-month-report/&quot;&gt;Reflecting on the progress&lt;/a&gt; we have made in our &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;&amp;quot;nurture a culture of individual
+growth in a software team&amp;quot; initiative&lt;/a&gt;, I realized there is much to gain from
+candy wrapping our efforts. As per our plan, we'll be (and are) giving talks,
+doing research, and writing itch-scratching code. Coming out of shadows and
+presenting our efforts in a nice frame present many fold benefits.
+&lt;/p&gt;
+
+&lt;p&gt;
+My proposal is to invest energy in making our efforts more visible. To
+focus this emotion on a more concrete goal, I have chosen
+&lt;/p&gt;
+&lt;div id=&quot;outline-container-establishing-a-personal-brand&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;establishing-a-personal-brand&quot;&gt;Establishing a personal brand&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-establishing-a-personal-brand&quot;&gt;
+&lt;p&gt;
+I believe a person is a brand when (s)he is recognizable for the value
+(s)he carry and can contribute, without fresh proof. Building a genuine
+brand need genuine efforts. Efforts we are already making, and which can
+gain a boost if we focus on this short term goal.
+&lt;/p&gt;
+
+&lt;p&gt;
+Doing so will also incentivize us to engage more in our chosen
+activities. Our objective is personal growth of individuals involved in
+our team(s), and I believe visibility of this growth is important for
+its sustenance. The organization we work for, if it can see us growing
+new skills, will be able to leverage them, hence contributing more to
+our growth. Before I start fantasizing about all the good this can bring
+to us, let's brainstorm on
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-how-can-we-establish-ourselves-as-brands&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;how-can-we-establish-ourselves-as-brands&quot;&gt;How can we establish ourselves as brands?&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-how-can-we-establish-ourselves-as-brands&quot;&gt;
+&lt;p&gt;
+Being a brand is a completely dependent value. Unlike our technical
+skills, it is not something that can independently stand on its own. It
+is almost entirely dependent on other people. People decide how valuable
+you are as a brand. Thinking along these lines, I suppose the first
+natural step turns out to be
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;span class=&quot;underline&quot;&gt;Step 1&lt;/span&gt;: &lt;b&gt;Building an online presence&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+It boils down to having a home to showcase all the value we are
+delivering right now. For starters, this can be a personal website which
+can showcase the talks we are giving (since that is where we are
+investing most of our time). Eventually, I imagine at least
+incorporating all the steps we have chosen in our personal websites:
+&lt;/p&gt;
+
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;b&gt;Talks/Presentations section&lt;/b&gt; for the talks we deliver. Perhaps we
+can have &amp;quot;Review&amp;quot; section for the talks we attend&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;A blog&lt;/b&gt; for sharing the discussions we have on
+&lt;a href=&quot;http://forum.trantorinc.com/&quot;&gt;Trantor forum&lt;/a&gt;, our research notes,
+thoughts, opinions and just about anything. Blogs are great for
+making noise and gather attention to yourself.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;A Portfolio&lt;/b&gt; for showcasing the open source(?) work we do, as a
+demonstration of our growing skills&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+Even though there are platforms for creating and sharing content, I
+firmly believe in having complete ownership of the content we generate.
+&lt;/p&gt;
+
+&lt;p&gt;
+Once we have a platform where we are creating and sharing content, then
+we can focus on
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;span class=&quot;underline&quot;&gt;Step 2&lt;/span&gt;: &lt;b&gt;Creating online visibility&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Just creating content is not enough, there is too much noise all over
+the internet to get noticed organically. Once we have the bare minimum
+content creation pipeline, we can then focus on polishing things like
+how it looks, SEO, automatic sharing across social media platforms,
+analytic and data gathering, automatic updates for new content. I
+wouldn't delve too deep into this right now.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;span class=&quot;underline&quot;&gt;Step 1&lt;/span&gt;: &lt;b&gt;Building an offline presence&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Another great first step along with aiming to build an online presence
+is to build an offline presence. Local brands are very valuable,
+probably more valuable than internet celebrities to local communities
+and organizations employing us. Building offline presence require
+engagement in local community, organizing and attending meetups,
+hackathons etc.
+&lt;/p&gt;
+
+&lt;p&gt;
+We are in a unique position in this regard, the tech &amp;quot;culture&amp;quot; in our city
+(Chandigarh) is yet barely blossoming. It used to be a &lt;a href=&quot;file:///blog/dear-first-world-dev-have-a-look-at-your-nightmare/&quot;&gt;rather gloomy picture&lt;/a&gt;
+around here, but I believe people have now started seeing the exploitation going
+around in the tech scene of the city for what it is. &lt;a href=&quot;https://www.meetup.com/find/events/?allMeetups=true&amp;amp;radius=10&amp;amp;userFreeform=Chandigarh%252C+India&amp;amp;mcId=z1018132&amp;amp;mcName=Chandigarh%252C+IN&amp;amp;eventFilter=mysugg&quot;&gt;More and more meetup groups&lt;/a&gt;
+are blossoming for the good. Participating in these groups can be a great source
+of content for our online presence. Before I start day-dreaming about how we can
+hack for Chandigarh, I'll shut up about it : )
+&lt;/p&gt;
+
+&lt;p&gt;
+For this, I suppose the next course of action is to open the sessions we
+have been doing for public to attend. Trantor is one of the few
+companies I have seen being quite open for organizing meetups in
+Tricity, so this shouldn't be a problem from that front.
+&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;
+Here is what I am imagining for our next goal is to attain our grand
+objective of nurturing the culture of growth. Please do share your
+ideas, opinions and thoughts. You are also always welcome to join us in
+our endeavor.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content></entry><base href="https://bitspook.in/"/></feed>

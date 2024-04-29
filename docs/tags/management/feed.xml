@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Management - bitspook.in</title><id>https://bitspook.in/tags/management/feed.xml</id><updated>2024-01-04T08:18:20.187671Z</updated><link href="https://bitspook.in/tags/management/feed.xml" rel="self" title="Management"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in/images/avatar.png</logo><entry><title type="text">Personal Brands for Software Developers (Talk)</title><id>https://bitspook.in/talks/personal-brands-for-software-developers-talk</id><updated>2019-10-21T00:00:00.000000Z</updated><link href="https://bitspook.in/talks/personal-brands-for-software-developers-talk" title="Personal Brands for Software Developers (Talk)"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-10-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Management - bitspook.in</title><id>https://bitspook.in//tags/management/feed.xml</id><updated>2024-04-29T14:14:47.617668Z</updated><link href="https://bitspook.in//tags/management/feed.xml" rel="self" title="Management"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in//images/avatar.png</logo><entry><title type="text">Personal Brands for Software Developers (Talk)</title><id>/talks/personal-brands-for-software-developers-talk/index.html</id><updated>2019-10-21T00:00:00.000000Z</updated><link href="/talks/personal-brands-for-software-developers-talk/index.html" title="Personal Brands for Software Developers (Talk)"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-10-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 After long diligence, me and my old (Trantor) team decided to organize a meetup
 to showcase our efforts, and to share our ideas with the local community. &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/events/263862634/&quot;&gt;The
 meetup&lt;/a&gt; was organized in Trantor on September 18, 2019.
@@ -17,7 +17,7 @@ Here's my set of slides from the talk:
 
 &lt;iframe src=&quot;//slides.com/bitspook/personal-brands-for-software-developers/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
 &lt;/iframe&gt;
-</content></entry><entry><title type="text">Quick and Pretty Docs for Software Projects</title><id>https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects</id><updated>2019-08-28T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/quick-and-pretty-docs-for-software-projects" title="Quick and Pretty Docs for Software Projects"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-08-28T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+</content></entry><entry><title type="text">Quick and Pretty Docs for Software Projects</title><id>/blog/quick-and-pretty-docs-for-software-projects/index.html</id><updated>2019-08-28T00:00:00.000000Z</updated><link href="/blog/quick-and-pretty-docs-for-software-projects/index.html" title="Quick and Pretty Docs for Software Projects"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-08-28T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 I have practiced
 &lt;a href=&quot;http://tom.preston-werner.com/2010/08/23/readme-driven-development.html&quot;&gt;Readme
 Driven Development&lt;/a&gt; on a number of my projects with varying milage. I
@@ -62,7 +62,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orgbe4bebd&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org986d5c9&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -80,7 +80,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer's machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org66a12a9&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org1cd8d8b&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -119,7 +119,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I've used for my &lt;code&gt;d
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;orge9d1785&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org46a0cf3&quot;&gt;
 buildDrafts = true
 title = &amp;quot;My Project&amp;quot;
 
@@ -131,7 +131,7 @@ home = [ &amp;quot;HTML&amp;quot;, &amp;quot;RSS&amp;quot;, &amp;quot;JSON&amp;q
   author = &amp;quot;My team&amp;quot;
   description = &amp;quot;My project's cloud&amp;quot;
 &lt;/pre&gt;
-</content></entry><entry><title type="text">Personal brands for software developers</title><id>https://bitspook.in/blog/personal-brands-for-software-developers</id><updated>2019-04-01T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/personal-brands-for-software-developers" title="Personal brands for software developers"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-04-01T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+</content></entry><entry><title type="text">Personal brands for software developers</title><id>/blog/personal-brands-for-software-developers/index.html</id><updated>2019-04-01T00:00:00.000000Z</updated><link href="/blog/personal-brands-for-software-developers/index.html" title="Personal brands for software developers"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-04-01T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 &lt;a href=&quot;file:///blog/maximize-individual-growing-in-a-software-team-2-month-report/&quot;&gt;Reflecting on the progress&lt;/a&gt; we have made in our &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;&amp;quot;nurture a culture of individual
 growth in a software team&amp;quot; initiative&lt;/a&gt;, I realized there is much to gain from
 candy wrapping our efforts. As per our plan, we'll be (and are) giving talks,
@@ -261,7 +261,7 @@ our endeavor.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title type="text">Maximize individual growing in a software team (2 month report)</title><id>https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report</id><updated>2019-03-26T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/maximize-individual-growing-in-a-software-team-2-month-report" title="Maximize individual growing in a software team (2 month report)"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-03-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+</content></entry><entry><title type="text">Maximize individual growing in a software team (2 month report)</title><id>/blog/maximize-individual-growing-in-a-software-team-2-month-report/index.html</id><updated>2019-03-26T00:00:00.000000Z</updated><link href="/blog/maximize-individual-growing-in-a-software-team-2-month-report/index.html" title="Maximize individual growing in a software team (2 month report)"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-03-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 Couple months ago we started an &lt;a href=&quot;file:///blog/how-to-maximize-individual-growth-in-a-software-team/&quot;&gt;initiative&lt;/a&gt; in our team here at &lt;a href=&quot;http://trantorinc.com/&quot;&gt;Trantor&lt;/a&gt; with the
 focus on nurturing a culture which optimizes personal growth of an individual in
 the team. I believe it is turning out to be quite successful. We decided we'll
@@ -340,7 +340,7 @@ else, that'll create some cool graphs to gawk at.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title type="text">How to maximize individual growth in a software team?</title><id>https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team</id><updated>2019-01-21T00:00:00.000000Z</updated><link href="https://bitspook.in/blog/how-to-maximize-individual-growth-in-a-software-team" title="How to maximize individual growth in a software team?"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-01-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+</content></entry><entry><title type="text">How to maximize individual growth in a software team?</title><id>/blog/how-to-maximize-individual-growth-in-a-software-team/index.html</id><updated>2019-01-21T00:00:00.000000Z</updated><link href="/blog/how-to-maximize-individual-growth-in-a-software-team/index.html" title="How to maximize individual growth in a software team?"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2019-01-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 Working as a solo freelance developer, I used to have lofty ideas of how
 a group of people can grow so much more together. I imagined how a mind
 in the hive can grow at exponential rates. I made several attempts to
@@ -477,4 +477,4 @@ Please put in comments below if you have opinions and/or suggestions!
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><base href="https://bitspook.in"/></feed>
+</content></entry><base href="https://bitspook.in/"/></feed>
