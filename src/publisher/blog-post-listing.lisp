@@ -1,17 +1,5 @@
 (in-package #:in.bitspook.website)
 
-(defun blog-post-listing-page-builder (title &optional feed-link)
-  "Create HTML page for a blog-posts listing with TITLE."
-  (lambda (&key css body-html)
-    (spinneret:with-html
-      (:html
-       (:head (:title title)
-              (:meta :name "viewport" :content "width=device-width, initial-scale=1")
-              (:link :rel "stylesheet" :href (embed-artifact-as css 'link))
-              (when feed-link (:link :rel "alternate" :type "application/atom+xml" :href feed-link))
-              (:script :src "/js/app.js"))
-       (:body (:raw body-html))))))
-
 (defun make-blog-post-listing-page (&key path posts author title (page-size 10))
   (let* ((page-size (or page-size (length posts)))
          (post-pages (batches posts page-size))

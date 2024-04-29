@@ -96,7 +96,7 @@ computers, security and politics.")
    (:p "This website has things I am willing to share publicly. You can go through my "
        (:a :href (link-page 'category-index "blog")  "blog") ", "
        (:a :href (link-page 'category-index "poems")  "poems") ", "
-       (:a :href "/projects" "projects") " and also some "
+       (:a :href (link-page 'category-index "projects") "projects") " and also some "
        (:a :href (link-page 'category-index "talks") "talks") "I gave .")
    (:p "You can read more about me " (:a :href (link-page 'slug "about") "here."))))
 
@@ -113,6 +113,7 @@ computers, security and politics.")
                  (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2)))))
          (blog-post-pages (mapcar (op (make-blog-post-page _1 :location (base-path-join "/" (post-category _1))))
                                   blog-posts))
+         (project-pages (mapcar (op (make-software-project-page _1 :location "/projects/")) *projects*))
          (archive-page (make-blog-post-listing-page
                         :path "/archive"
                         :title "Archive"
@@ -179,22 +180,18 @@ computers, security and politics.")
 
     (publish-static :content static :dest-dir www)
 
-    ;; Publish project listing
-    ;; (let ((project-listing-pub (make 'software-project-listing-publisher
-    ;;                                  :asset-pub asset-pub
-    ;;                                  :dest www
-    ;;                                  :slug "projects"
-    ;;                                  :base-url base-url)))
-    ;;   (publish project-listing-pub
-    ;;            :projects *projects*
-    ;;            :author *author*
-    ;;            :title "Projects"))
-
     (setf (@ *atom-feeds* "archive")
           (make-atom-feed-artifact :title site-title
                                    :posts (take 15 blog-post-pages)
                                    :author *author*
                                    :location "/archive/feed.xml"))
+
+    (setf (@ *category-indices* "projects")
+           (make-software-project-listing-page
+            :path "/projects"
+            :projects project-pages
+            :author *author*
+            :title "Projects"))
 
     ;; Publish home-page and all its dependencies
     (let ((*already-published-artifacts* nil))

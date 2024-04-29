@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget software-project-listing-w (projects project-publisher title author next-page previous-page)
+(defwidget software-project-listing-w (css-file-artifact projects project-publisher title author next-page previous-page)
     (tagged-lass
      (base-lass)
 
@@ -29,21 +29,28 @@
 
      :lg `((.content :max-width (var --width-md)
                      :margin 0 auto)))
-  (:div
-   (render 'navbar-w :links nil)
-   (:article.content
-    (:header.header
-     (:h1.title title))
+  (:html
+   (:head (:title title)
+          (:meta :name "viewport" :content "width=device-width, initial-scale=1")
+          (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
+          (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
+          (:script :src "/js/app.js"))
+   (:body
+    (:div
+     (render 'navbar-w :links nil)
+     (:article.content
+      (:header.header
+       (:h1.title title))
 
-    (:main
-     (:ul.listing
-      (dolist (project projects)
-        (render 'software-project-listing-item-w :project project :publisher project-publisher)))
-     (when (or previous-page next-page)
-       (:nav.pagination
-        (when previous-page
-          (:a.prev :href (cdr previous-page) (car previous-page)))
+      (:main
+       (:ul.listing
+        (dolist (project projects)
+          (render 'software-project-listing-item-w :project project)))
+       (when (or previous-page next-page)
+         (:nav.pagination
+          (when previous-page
+            (:a.prev :href (cdr previous-page) (car previous-page)))
 
-        (when next-page
-          (:a.next :href (cdr next-page) (car next-page)))))))
-   (render 'footer-w :author author :feed-path nil)))
+          (when next-page
+            (:a.next :href (cdr next-page) (car next-page)))))))
+     (render 'footer-w :author author :feed-path nil)))))

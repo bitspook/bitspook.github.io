@@ -7,29 +7,6 @@
 #+updated_at: <2023-02-28>
 #+filetags: :firefox:emacs:
 
-#+name: oracle-spec
-#+begin_src lisp :exports none
-  (("an explorer"
-    ("see it all" (:show :all))
-    ("know more about Spookfox" (:show ("#explore"))))
-   ("a developer"
-    ("install Spookfox" (:show ("#outline-container-install")))
-    ("use Spookfox" (:show ("#outline-container-use" "#outline-container-apps")))
-    ("hack on Spookfox" (:show ("#outline-container-contribute")))))
-#+end_src
-
-#+name: saunf-claims
-#+begin_src elisp :exports none
-  (defun spookfox-uses-websockets ()
-    (error "Not implemented."))
-
-  (defun spookfox-has-linked-org-tabs-app ()
-    (error "Not implemented."))
-
-  (add-to-list '*saunf-claims* #'spookfox-uses-websockets)
-  (add-to-list '*saunf-claims* #'spookfox-has-linked-org-tabs-app)
-#+end_src
-
 #+begin_src elisp :exports results :results none
   (defun spook--command-docs (file)
     "Return documentaiton for commands exported in FILE.
@@ -142,15 +119,15 @@ There are 2 parts to install spookfox.
 :ID:       5242966e-58fb-4744-8349-c63773861934
 :END:
 
-Spookfox itself is a thin layer which [[saunf-claim:spookfox-uses-websockets][provide websockets based communication]]
-between Emacs and Browser. More functionality on top of it is provided with
-[[id:7c11ffa6-701d-48a0-ac3c-b839fd210951][apps]]. Different apps need to be configured as documented in [[id:7c11ffa6-701d-48a0-ac3c-b839fd210951][apps]] section below.
+Spookfox itself is a thin layer which provide websockets based communication between Emacs and
+Browser. More functionality on top of it is provided with [[id:7c11ffa6-701d-48a0-ac3c-b839fd210951][apps]]. Different apps need to be configured
+as documented in [[id:7c11ffa6-701d-48a0-ac3c-b839fd210951][apps]] section below.
 
 1. *Load the apps you want to use*
 
-   If you followed the [[#install][installation]] instructions, all apps bundled with the
-   package itself should be ready to be loaded with a call to =require=. For
-   example, to load "[[saunf-claim:spookfox-has-linked-org-tabs-app][spookfox-org-tabs]]" app, you'd write this Elisp:
+   If you followed the [[#install][installation]] instructions, all apps bundled with the package itself should be
+   ready to be loaded with a call to =require=. For example, to load =spookfox-org-tabs= app, you'd
+   write this Elisp:
 
    #+begin_src elisp :eval never-export
      (require 'spookfox-tabs)

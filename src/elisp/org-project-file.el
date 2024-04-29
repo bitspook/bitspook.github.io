@@ -23,13 +23,8 @@
                      (let ((data (cadr kwd)))
                        (cons (downcase (plist-get data :key))
                              (plist-get data :value))))))
-          (description (clown-org-buffer-description))
-          (oracle-spec (progn
-                         (org-babel-goto-named-src-block "oracle-spec")
-                         (string-trim (org-element-property :value (org-element-at-point))))))
+          (description (clown-org-buffer-description)))
       (push (cons "description" description) props)
-      (when (and oracle-spec (not (string-empty-p oracle-spec)))
-        (push (cons "oracle_spec" oracle-spec) props))
 
       props)))
 

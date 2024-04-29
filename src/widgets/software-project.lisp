@@ -34,20 +34,27 @@
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
-(defwidget software-project-w (project)
+(defwidget software-project-w (css-file-artifact project)
     (sp-lass)
   (with-slots (name created-at author tags body) project
-    (:div
-     (render 'navbar-w :links nil)
-     (:article
-      :class "content"
-      (:header
-       :class "header"
-       (:h1 name)
-       (:div
-        :class "meta"
-        (:time :class "meta-item date" (local-time:format-timestring
-                                        nil created-at
-                                        :format '(:long-month " " :day ", " :year)))))
-      (:main :class "post-body" (:raw body)))
-     (render 'footer-w :author author :feed-path nil))))
+    (:html
+     (:head (:title name)
+            (:meta :name "viewport" :content "width=device-width, initial-scale=1")
+            (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
+            (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
+            (:script :src "/js/app.js"))
+     (:body
+      (:div
+       (render 'navbar-w :links nil)
+       (:article
+        :class "content"
+        (:header
+         :class "header"
+         (:h1 name)
+         (:div
+          :class "meta"
+          (:time :class "meta-item date" (local-time:format-timestring
+                                          nil created-at
+                                          :format '(:long-month " " :day ", " :year)))))
+        (:main :class "post-body" (:raw body)))
+       (render 'footer-w :author author :feed-path nil))))))

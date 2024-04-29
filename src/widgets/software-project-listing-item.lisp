@@ -35,7 +35,7 @@
              (.meta-item :border-color (var --color-grey-800))))
   (:li
    (:div.li-content
-    (:a.li-title :href (published-path publisher :project project) (project-name project))
+    (:a.li-title :href (embed-artifact-as project 'link) (project-name project))
     (:span.li-meta
      (:span :class "meta-item date"
             (local-time:format-timestring

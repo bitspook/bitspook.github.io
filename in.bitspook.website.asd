@@ -15,8 +15,8 @@
                               :components ((:file "blog-post")
                                            (:file "blog-post-listing")
                                            (:file "atom-feed")
-                                           ;; (:file "software-project")
-                                           ;; (:file "software-project-listing")
+                                           (:file "software-project")
+                                           (:file "software-project-listing")
                                            (:file "page")))
 
                              (:module "provider"
