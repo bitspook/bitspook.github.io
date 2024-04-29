@@ -2,7 +2,7 @@
 
 (in-package #:in.bitspook.website)
 
-;; (defparameter *base-url* "https://bitspook.in")
+;; (defparameter *base-url* "https://bitspook.in/")
 (defparameter *base-url* "/")
 
 (defparameter *author*
@@ -102,7 +102,7 @@ computers, security and politics.")
 
 (defun build ()
   (let* ((site-title "@bitspook's personal website")
-         (www (path-join *base-dir* "build/"))
+         (www (path-join *base-dir* "docs/"))
          (static (path-join *base-dir* "src/static/"))
          (*print-pretty* nil)
          (blog-posts
@@ -165,7 +165,7 @@ computers, security and politics.")
                                       :title (str:capitalize tag)
                                       :author *author*))
                             (feed-art (make-atom-feed-artifact
-                                       :location (base-path-join tag "/feed.xml")
+                                       :location (base-path-join "/tags/" tag "/feed.xml")
                                        :posts (take 15 posts)
                                        :title (str:capitalize tag)
                                        :author *author*)))
