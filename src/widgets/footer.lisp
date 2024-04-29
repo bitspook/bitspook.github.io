@@ -72,62 +72,57 @@
                                  :class "btn"))))))))
 
 
-(defwidget footer-w (author feed-path) nil nil)
+(defwidget footer-w (author)
+    (tagged-lass
+     `((.footer
+        :color (var --color-grey-600)
+        :margin (var --size-12) auto
+        :padding (var --scale-1)
 
-(defmethod dom-of ((w footer-w))
-  (with-slots (author feed-path) w
-    (with-slots ((author-name name) handles) author
-      (with-html
-        (:footer.footer.postamble
-         (render 'newsletter-form-w)
-         (when feed-path
-           (:p.rss-sub
-            (:a :href feed-path
-                :title "Follow via RSS"
-                :target "blank"
-                (:span.rss) "Follow via RSS")))
-         (:div.author
-          ("Author: ~a " author-name)
-          (dolist (handle handles)
-            (:a :class (format nil "handle ~a" (str:downcase (first handle)))
-                :title (format nil "Follow ~a via ~a" author-name (first handle))
-                :href (third handle)))))))))
+        (p :margin (var --size-2) 0)
 
-(defmethod lass-of ((w footer-w))
-  (tagged-lass
-   `((.footer
-      :color (var --color-grey-600)
-      :margin (var --size-12) auto
-      :padding (var --scale-1)
+        (.rss-sub
+         (a :display flex :align-items center)
+         (.rss :margin-right (var --size-2)
+               :display block
+               :width 24px
+               :height 24px
+               :background (url "/images/icons/rss.svg")
+               :background-repeat no-repeat
+               :background-size contain)))
 
-      (p :margin (var --size-2) 0)
+       (.author
+        :display flex
+        :align-items center
 
-      (.rss-sub
-       (a :display flex :align-items center)
-       (.rss :margin-right (var --size-2)
-             :display block
-             :width 24px
-             :height 24px
-             :background (url "/images/icons/rss.svg")
-             :background-repeat no-repeat
-             :background-size contain)))
+        (.handle
+         :display block
+         :cursor pointer
+         :width (var --size-4)
+         :height (var --size-4)
+         :margin 0 (var --size-1)
+         :background-repeat no-repeat
+         :background-size contain)
 
-     (.author
-      :display flex
-      :align-items center
+        (.github :background-image (url "/images/icons/github.svg"))
+        (.mastodon :background-image (url "/images/icons/mastodon.svg"))
+        (.rss :background-image (url "/images/icons/rss.svg"))
+        (.linkedin :background-image (url "/images/icons/linkedin.svg"))))
 
-      (.handle
-       :display block
-       :cursor pointer
-       :width (var --size-4)
-       :height (var --size-4)
-       :margin 0 (var --size-1)
-       :background-repeat no-repeat
-       :background-size contain)
+     :lg `((.footer :max-width (var --width-md))))
 
-      (.github :background-image (url "/images/icons/github.svg"))
-      (.mastodon :background-image (url "/images/icons/mastodon.svg"))
-      (.rss :background-image (url "/images/icons/rss.svg"))
-      (.linkedin :background-image (url "/images/icons/linkedin.svg"))))
-
-   :lg `((.footer :max-width (var --width-md)))))
+  (with-slots ((author-name name) handles) author
+    (with-html
+      (:footer.footer.postamble
+       (render 'newsletter-form-w)
+       (:p.rss-sub
+        (:a :href (link-page 'atom-feed "archive")
+            :title "Follow via RSS"
+            :target "blank"
+            (:span.rss) "Follow via RSS"))
+       (:div.author
+        ("Author: ~a " author-name)
+        (dolist (handle handles)
+          (:a :class (format nil "handle ~a" (str:downcase (first handle)))
+              :title (format nil "Follow ~a via ~a" author-name (first handle))
+              :href (third handle))))))))

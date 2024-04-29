@@ -68,4 +68,5 @@
 
           (when next-page
             (:a.next :href (cdr next-page) (car next-page)))))))
-     (render 'footer-w :author author :feed-path "feed.xml")))))
+
+     (render 'footer-w :author author)))))

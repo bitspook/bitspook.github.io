@@ -4,7 +4,8 @@
     (tagged-lass
      (base-lass)
 
-     `((.header
+     `((.content :min-height 50vh)
+       (.header
         :padding (var --size-4) :margin (var --scale-2) 0
         :display flex
         :align-items center
@@ -53,4 +54,4 @@
 
           (when next-page
             (:a.next :href (cdr next-page) (car next-page)))))))
-     (render 'footer-w :author author :feed-path nil)))))
+     (render 'footer-w :author author)))))

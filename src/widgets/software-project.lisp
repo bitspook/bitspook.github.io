@@ -57,4 +57,4 @@
                                           nil created-at
                                           :format '(:long-month " " :day ", " :year)))))
         (:main :class "post-body" (:raw body)))
-       (render 'footer-w :author author :feed-path nil))))))
+       (render 'footer-w :author author))))))
