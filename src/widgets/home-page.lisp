@@ -1,8 +1,8 @@
 (in-package #:in.bitspook.website)
 
-(defwidget home-page-w (title posts author about-summary)
+(defwidget home-page-w (title posts author about-summary css-file-artifact)
     (tagged-lass
-     base-lass
+     (base-lass)
 
      `((.home
         :display flex
@@ -138,37 +138,44 @@
             (.main :width "calc(100% - 450px)"
                    :max-width 872px
                    :padding-left (var --scale-4)))))
-  (:article.home
-   (with-slots (avatar name handles) author
+  (:html
+   (:head (:title title)
+          (:meta :name "viewport" :content "width=device-width, initial-scale=1")
+          (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
+          (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
+          (:script :src "/js/app.js"))
+   (:body
+    (:article.home
+     (with-slots (avatar name handles) author
+       (:div
+        :class "sidebar"
+        (:div
+         :class "author"
+         (:img :class "avatar" :src avatar :alt ())
+         (:h2.name name)
+         (:div.handle (str:concat "@" (second (car handles)))))
+        (:div :class "quote" "Math is the new sexy")
+        (:div
+         :class "social"
+         (dolist (handle handles)
+           (:a :href (nth 2 handle)
+               :title  (str:concat name " on " (nth 0 handle))
+               :target "_blank"
+               (:span :class (str:downcase (nth 0 handle))))))
+        (:img :class "pub-key-qr"
+              :alt (format nil "~a's Public GPG Key" name)
+              :src "/images/public-key-qr.svg")))
      (:div
-      :class "sidebar"
-      (:div
-       :class "author"
-       (:img :class "avatar" :src avatar :alt ())
-       (:h2.name name)
-       (:div.handle (str:concat "@" (second (car handles)))))
-      (:div :class "quote" "Math is the new sexy")
-      (:div
-       :class "social"
-       (dolist (handle handles)
-         (:a :href (nth 2 handle)
-             :title  (str:concat name " on " (nth 0 handle))
-             :target "_blank"
-             (:span :class (str:downcase (nth 0 handle))))))
-      (:img :class "pub-key-qr"
-            :alt (format nil "~a's Public GPG Key" name)
-            :src "/images/public-key-qr.svg")))
-   (:div
-    :class "main"
-    (:section
-     :class "about-me-snippet"
-     (:header
-      (:h2 "About Me"))
-     (spinneret:interpret-html-tree about-summary))
+      :class "main"
+      (:section
+       :class "about-me-snippet"
+       (:header
+        (:h2 "About Me"))
+       (render about-summary))
 
-    (:section.recent-content
-     (:header (:h2.heading "Recent content"))
-     (:ul.listing
-      (dolist (post posts)
-        (render 'blog-post-listing-item-w :post post)))
-     (:footer (:a.read-more-btn :href "/archive" "View all"))))))
+      (:section.recent-content
+       (:header (:h2.heading "Recent content"))
+       (:ul.listing
+        (dolist (post posts)
+          (render 'blog-post-listing-item-w :post post)))
+       (:footer (:a.read-more-btn :href (link-page 'slug "archive") "View all"))))))))

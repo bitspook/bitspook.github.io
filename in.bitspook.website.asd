@@ -2,7 +2,7 @@
   :author "Charanjit Singh"
   :license "AGPL-3.0-only"
   :depends-on (:in.bitspook.cl-ownpress
-               :local-time
+               :local-time :serapeum :trivia
                :feeder :plump :quri)
   :components ((:module "src"
                 :components ((:file "package")

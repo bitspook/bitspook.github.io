@@ -2,7 +2,7 @@
 
 (defun bp-lass ()
   (tagged-lass
-   base-lass
+   (base-lass)
 
    `((.content
       (.header
@@ -34,28 +34,35 @@
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
-(defwidget blog-post-w (post)
+(defwidget blog-post-w (post css-file-artifact)
     (bp-lass)
   (with-slots (title published-at author tags body category) post
-    (:div
-     (render 'navbar-w :links nil)
-     (:article
-      :class "content"
-      (:header.header
-       (:h1 title)
-       (:div
-        :class "meta"
-        (:time :class "meta-item date" (local-time:format-timestring
-                              nil published-at
-                              :format '(:long-month " " :day ", " :year)))
+    (:html
+     (:head (:title title)
+            (:meta :name "viewport" :content "width=device-width, initial-scale=1")
+            (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
+            (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
+            (:script :src "/js/app.js"))
+     (:body
+      (:div
+       (render 'navbar-w :links nil)
+       (:article
+        :class "content"
+        (:header.header
+         (:h1 title)
+         (:div
+          :class "meta"
+          (:time :class "meta-item date" (local-time:format-timestring
+                                          nil published-at
+                                          :format '(:long-month " " :day ", " :year)))
 
-        (when-let ((tags tags))
-          (:ul
-           :class "meta-item tags"
-           (dolist (tag tags)
-             (:li.tag
-              (:a :href
-                  (str:concat "/tags/" tag)
-                  (str:concat "#" (str:downcase tag)))))))))
-      (:main :class "post-body" (:raw body)))
-     (render 'footer-w :author author :feed-path (unless (str:emptyp category) (base-path-join "/" category "/feed.xml"))))))
+          (when-let ((tags tags))
+            (:ul
+             :class "meta-item tags"
+             (dolist (tag tags)
+               (:li.tag
+                (:a :href
+                    (link-page 'tag-index tag)
+                    (str:concat "#" (str:downcase tag)))))))))
+        (:main :class "post-body" (:raw body)))
+       (render 'footer-w :author author))))))

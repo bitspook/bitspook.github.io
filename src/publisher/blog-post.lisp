@@ -1,6 +1,5 @@
 (in-package #:in.bitspook.website)
 
-(export-always 'persona)
 (defclass persona ()
   ((name :initarg :name
          :initform (error "Persona `name` is required"))
@@ -10,8 +9,7 @@
            :documentation "Path to an persona's avatar image"))
   (:documentation "An online persona that can be embedded in blog pages."))
 
-(export-always 'blog-post)
-(defclass blog-post (publishable)
+(defclass blog-post ()
   ((title :initarg :title
           :initform (error "Post `title` is required")
           :accessor post-title)
@@ -23,6 +21,7 @@
             :initform (error "Post `summary` is required")
             :accessor post-summary)
    (category :initarg :category
+             :initform nil
              :accessor post-category)
    (tags :initarg :tags
          :initform '()
@@ -51,44 +50,31 @@
 
 (defmethod print-object ((post blog-post) out)
   (print-unreadable-object (post out :type t)
-    (format out "~s/~s" (post-category post) (post-slug post))))
+    (format out "~a/~a" (post-category post) (post-slug post))))
 
-(defmethod published-path ((post blog-post) &key) 
-  (str:concat "/" (post-category post) "/" (post-slug post)))
+(defclass blog-post-page (html-page-artifact blog-post) nil)
 
-(export-always 'blog-post-publisher)
-(defclass blog-post-publisher (html-publisher)
-  ((asset-pub
-    :initarg :asset-pub
-    :initform (error "asset-publisher is required")
-    :documentation "A PUBLISHER to use for publishing assets (e.g Css, Js, images)."))
-  (:documentation "Publish a blog post."))
+(defun make-blog-post-page (post &key location (css-location "/css/post.css"))
+  (let* ((html-path (base-path-join location "/" (post-slug post) "/index.html"))
+         (root-widget (make 'blog-post-w :post post))
+         (css-art (make 'css-file-artifact :location css-location :root-widget root-widget)))
+    (setf (slot-value root-widget 'css-file-artifact) css-art)
+    (make 'blog-post-page
+          ;; blog-post
+          :title (post-title post)
+          :slug (post-slug post)
+          :summary (post-summary post)
+          :category (post-category post)
+          :tags (post-tags post)
+          :created-at (post-created-at post)
+          :published-at (post-published-at post)
+          :updated-at (post-updated-at post)
+          :body (post-body post)
+          :author (post-author post)
 
-(defmethod published-path ((pub blog-post-publisher) &key post)
-  (declare (ignore pub))
-  (published-path post))
+          ;; html-page-artifact
+          :location html-path
+          :root-widget root-widget
+          :deps (list css-art))))
 
-(defun blog-post-page-builder (post &optional feed-link)
-  "Create HTML page for a blog-post"
-  (with-slots (title) post
-    (lambda (&key css-file html)
-      (spinneret:with-html
-        (:html
-         (:head (:title title)
-                (:meta :name "viewport" :content "width=device-width, initial-scale=1")
-                (:link :rel "stylesheet" :href (str:concat "/" css-file))
-                (when feed-link (:link :rel "alternate" :type "application/atom+xml" :href feed-link))
-                (:script :src "/js/app.js"))
-         (:body (:raw html)))))))
-
-(defmethod publish ((pub blog-post-publisher) &key post (feed-link nil))
-  "Publish blog POST using LAYOUT widget
-LAYOUT must be a WIDGET which accepts the POST as an argument."
-  (with-slots (title slug) post
-    (let* ((html-path (base-path-join (str:concat (published-path pub :post post) "/") "index.html"))
-           (layout (make 'blog-post-w :post post)))
-      (call-next-method pub
-                        :page-builder (blog-post-page-builder post feed-link)
-                        :root-widget layout
-                        :path html-path))))
 

@@ -43,35 +43,33 @@
   (when (not (project-slug project))
     (setf (project-slug project) (slugify (project-name project)))))
 
-(defclass software-project-publisher (html-publisher)
-  ((asset-pub :initarg :asset-pub
-              :initform (error "asset-publisher is required")
-              :documentation "A PUBLISHER to use for publishing assets (e.g Css, Js, images).")
-   (slug :initarg :slug
-         :initform (error "Missing argument :slug")
-         :documentation "Slug used to locate and publish created artifacts."))
-  (:documentation "Publish a software-project."))
+(defmethod print-object ((project software-project) out)
+  (print-unreadable-object (project out :type t)
+    (format out "~a" (project-slug project))))
 
-(defmethod published-path ((pub software-project-publisher) &key project)
-  (base-path-join "/" (slot-value pub 'slug) "/" (project-slug project)))
+(defclass software-project-page (html-page-artifact software-project) nil)
 
-(defun software-project-page-builder (project)
-  "Create HTML page for a software-project"
-  (with-slots (name) project
-    (lambda (&key css-file html)
-      (spinneret:with-html
-        (:html
-         (:head (:title name)
-                (:meta :name "viewport" :content "width=device-width, initial-scale=1")
-                (:link :rel "stylesheet" :href (str:concat "/" css-file))
-                (:script :src "/js/app.js"))
-         (:body (:raw html)))))))
+(defun make-software-project-page (project &key location (css-location "/css/software-project.css"))
+  (with-slots (slug name description tagline issue-tracker source-code tags languages created-at updated-at body author) project
+    (let* ((html-path (base-path-join location "/" slug "/index.html"))
+           (root-widget (make 'software-project-w :project project))
+           (css-art (make 'css-file-artifact :location css-location :root-widget root-widget)))
+      (setf (slot-value root-widget 'css-file-artifact) css-art)
+      (make 'software-project-page
+            ;; software project
+            :name name
+            :description description
+            :tagline tagline
+            :issue-tracker issue-tracker
+            :source-code source-code
+            :tags tags
+            :languages languages
+            :created-at created-at
+            :updated-at updated-at
+            :body body
+            :author author
 
-(defmethod publish ((pub software-project-publisher) &key project )
-  (with-slots (name slug) project
-    (let* ((html-path (base-path-join (published-path pub :project project) "/index.html"))
-           (layout (make 'software-project-w :project project)))
-      (call-next-method pub
-                        :page-builder (software-project-page-builder project)
-                        :root-widget layout
-                        :path html-path))))
+            ;; html-page-artifact
+            :location html-path
+            :root-widget root-widget
+            :deps (list css-art)))))

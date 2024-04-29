@@ -50,7 +50,7 @@
   (:li
    (:span :class (format nil "li-icon li-icon--~a" (post-category post)))
    (:div.li-content
-    (:a.li-title :href (published-path post) (post-title post))
+    (:a.li-title :href (embed-artifact-as post 'link) (post-title post))
     (:span.li-meta
      (:span :class "meta-item date"
             (local-time:format-timestring
@@ -59,4 +59,4 @@
      (when-let ((tags (post-tags post)))
        (:span :class "meta-item tags"
               (dolist (tag tags)
-                (:a :href (str:concat "/tags/" tag) (str:concat "#" (str:downcase tag))))))))))
+                (:a :href (link-page 'tag-index tag) (str:concat "#" (str:downcase tag))))))))))

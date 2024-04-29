@@ -23,13 +23,8 @@
                      (let ((data (cadr kwd)))
                        (cons (downcase (plist-get data :key))
                              (plist-get data :value))))))
-          (description (clown-org-buffer-description))
-          (oracle-spec (progn
-                         (org-babel-goto-named-src-block "oracle-spec")
-                         (string-trim (org-element-property :value (org-element-at-point))))))
+          (description (clown-org-buffer-description)))
       (push (cons "description" description) props)
-      (when (and oracle-spec (not (string-empty-p oracle-spec)))
-        (push (cons "oracle_spec" oracle-spec) props))
 
       props)))
 
@@ -98,12 +93,11 @@
 
 (defun main (content-dir)
   "Send all org-files from CONTENT-DIR."
-  (let ((conn (clown-rpc-server))
-        (files (directory-files-recursively content-dir "")))
+  (let ((files (directory-files-recursively content-dir "")))
     (cl-dolist (file files)
-      (jsonrpc-notify conn :event (clown-org-file-to-msg file)))
+      (clown-rpc-send :event (clown-org-file-to-msg file)))
 
-    (jsonrpc-notify conn :done nil)))
+    (clown-rpc-send :done nil)))
 
 ;;; org-project-file.el ends here
 ;; Local Variables:

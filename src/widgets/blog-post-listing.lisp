@@ -2,7 +2,7 @@
 
 (defun bp-listing-lass ()
   (tagged-lass
-   base-lass
+   (base-lass)
 
    `((.header
       :padding (var --size-4) :margin (var --scale-2) 0
@@ -40,25 +40,33 @@
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
-(defwidget blog-post-listing-w (posts title author next-page previous-page)
+(defwidget blog-post-listing-w (posts title author next-page previous-page css-file-artifact)
     (bp-listing-lass)
-  (:div
-   (render 'navbar-w :links nil)
-   (:article.content
-    (:header.header
-     (:h1.title title)
-     (:a.rss-sub :title "ATOM feed" :target "_blank" :href "feed.xml"
-                 (:span.rss)))
+  (:html
+   (:head (:title title)
+          (:meta :name "viewport" :content "width=device-width, initial-scale=1")
+          (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
+          (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
+          (:script :src "/js/app.js"))
+   (:body
+    (:div
+     (render 'navbar-w :links nil)
+     (:article.content
+      (:header.header
+       (:h1.title title)
+       (:a.rss-sub :title "ATOM feed" :target "_blank" :href (link-page 'atom-feed (str:downcase title))
+                   (:span.rss)))
 
-    (:main
-     (:ul.listing
-      (dolist (post posts)
-        (render 'blog-post-listing-item-w :post post)))
-     (when (or previous-page next-page)
-       (:nav.pagination
-        (when previous-page
-          (:a.prev :href (cdr previous-page) (car previous-page)))
+      (:main
+       (:ul.listing
+        (dolist (post posts)
+          (render 'blog-post-listing-item-w :post post)))
+       (when (or previous-page next-page)
+         (:nav.pagination
+          (when previous-page
+            (:a.prev :href (cdr previous-page) (car previous-page)))
 
-        (when next-page
-          (:a.next :href (cdr next-page) (car next-page)))))))
-   (render 'footer-w :author author :feed-path "feed.xml")))
+          (when next-page
+            (:a.next :href (cdr next-page) (car next-page)))))))
+
+     (render 'footer-w :author author)))))
