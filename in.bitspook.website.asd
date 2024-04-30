@@ -6,23 +6,17 @@
                :feeder :plump :quri)
   :components ((:module "src"
                 :components ((:file "package")
-                             (:module "lass"
-                              :components ((:file "modern-normalize")
-                                           (:file "pollen")
-                                           (:file "global-lass")))
-
-                             (:module "publisher"
-                              :components ((:file "blog-post")
-                                           (:file "blog-post-listing")
-                                           (:file "atom-feed")
-                                           (:file "software-project")
-                                           (:file "software-project-listing")
-                                           (:file "page")))
+                             (:file "models")
 
                              (:module "provider"
                               :components ((:file "org-file-provider")
                                            (:file "denote-provider")
                                            (:file "org-project-provider")))
+
+                             (:module "lass"
+                              :components ((:file "modern-normalize")
+                                           (:file "pollen")
+                                           (:file "global-lass")))
 
                              (:module "widgets"
                               :components ((:file "navbar")
@@ -31,6 +25,14 @@
                                            (:file "blog-post")
                                            (:file "blog-post-listing")
                                            (:file "software-project-listing-item")
+                                           (:file "software-project")
+                                           (:file "software-project-listing")
+                                           (:file "home-page")))
+
+                             (:module "artifacts"
+                              :components ((:file "blog-post")
+                                           (:file "blog-post-listing")
+                                           (:file "atom-feed")
                                            (:file "software-project")
                                            (:file "software-project-listing")
                                            (:file "home-page"))))))

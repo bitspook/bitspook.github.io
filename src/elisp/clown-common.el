@@ -14,8 +14,6 @@
 (require 'htmlize)
 (require 's)
 
-(use-package plz)
-
 (defvar clown-rpc-url "http://localhost:1337")
 
 (defun clown-rpc-send (name body-forms)
