@@ -43,6 +43,7 @@
     (with-temp-buffer
       (insert org-content)
       (org-mode)
+      (unpackaged/org-export-html-with-useful-ids-mode)
       (org-export-as 'html nil nil t))))
 
 (defun clown-org-file-to-msg (file)

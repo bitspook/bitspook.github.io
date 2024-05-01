@@ -17,6 +17,7 @@
   (with-temp-buffer
     (insert-file-contents filename)
     (org-mode)
+    (unpackaged/org-export-html-with-useful-ids-mode)
     (let ((props (org-element-map (org-element-parse-buffer 'greater-element)
                      '(keyword)
                    (lambda (kwd)
