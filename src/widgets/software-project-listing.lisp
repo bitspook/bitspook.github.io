@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget software-project-listing-w (css-file-artifact projects project-publisher title author next-page previous-page)
+(defwidget software-project-listing-w (css-file-artifact items project-publisher title author next-page previous-page)
     (tagged-lass
      (base-lass)
 
@@ -45,7 +45,7 @@
 
       (:main
        (:ul.listing
-        (dolist (project projects)
+        (dolist (project items)
           (render 'software-project-listing-item-w :project project)))
        (when (or previous-page next-page)
          (:nav.pagination

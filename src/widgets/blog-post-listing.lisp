@@ -40,7 +40,7 @@
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
-(defwidget blog-post-listing-w (posts title author next-page previous-page css-file-artifact)
+(defwidget blog-post-listing-w (items title author next-page previous-page css-file-artifact)
     (bp-listing-lass)
   (:html
    (:head (:title title)
@@ -59,7 +59,7 @@
 
       (:main
        (:ul.listing
-        (dolist (post posts)
+        (dolist (post items)
           (render 'blog-post-listing-item-w :post post)))
        (when (or previous-page next-page)
          (:nav.pagination

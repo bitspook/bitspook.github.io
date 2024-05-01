@@ -31,9 +31,8 @@
 
                              (:module "artifacts"
                               :components ((:file "blog-post")
-                                           (:file "blog-post-listing")
                                            (:file "atom-feed")
                                            (:file "software-project")
-                                           (:file "software-project-listing")
+                                           (:file "listings")
                                            (:file "home-page"))))))
   :description "A blog implemented using cl-ownpress")

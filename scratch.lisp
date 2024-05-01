@@ -118,63 +118,59 @@ computers, security and politics.")
                         :path "/archive"
                         :title "Archive"
                         :author *author*
-                        :posts blog-post-pages)))
+                        :posts blog-post-pages))
+         (posts-by-category (group-by blog-post-pages #'post-category))
+         (posts-by-tags (group-by blog-post-pages #'post-tags)))
 
-    (setf *pages* (loop :for page :in blog-post-pages
-                        :with pages := (dict)
-                        :for category := (post-category page)
-                        :when (or (null category) (str:emptyp category))
-                          :do (setf (@ pages (post-slug page)) page)
-                        :finally
-                           (setf (@ pages "archive") archive-page)
-                           (return pages)))
+    (setf *pages* (loop
+                    :with pages := (dict)
+                    :for page :in (@ posts-by-category "")
+                    :do (setf (@ pages (post-slug page)) page)
+                    :finally
+                       (setf (@ pages "archive") archive-page)
+                       (return pages)))
 
-    (match (loop :for category :in (reduce (op (adjoin (post-category _2) _1 :test #'string=))
-                                           blog-post-pages :initial-value nil)
-                 :with categories := (dict)
-                 :with feeds := (dict)
-                 :unless (or (null category) (str:emptyp category))
-                   :do (let* ((posts (remove-if-not (op (string= (post-category _) category)) blog-post-pages))
-                              (cat-art (make-blog-post-listing-page
-                                        :path category
-                                        :posts posts
-                                        :title (str:capitalize category)
-                                        :author *author*))
-                              (feed-art (make-atom-feed-artifact
-                                         :location (base-path-join category "/feed.xml")
-                                         :posts (take 15 posts)
-                                         :title (str:capitalize category)
-                                         :author *author*)))
-                         (setf (@ categories category) cat-art)
-                         (setf (@ feeds category) feed-art))
-                 :finally (return (list categories feeds)))
-      ((list cats feeds)
-       (setf *category-indices* cats)
-       (setf *atom-feeds* feeds)))
+    (loop :for category :being :the :hash-keys :in posts-by-category
+          :for posts := (@ posts-by-category category)
+          :with cats := (dict)
+          :with feeds := (dict)
+          :unless (or (null category) (str:emptyp category))
+            :do (let* ((cat-art (make-blog-post-listing-page
+                                 :path category
+                                 :posts posts
+                                 :title (str:capitalize category)
+                                 :author *author*))
+                       (feed-art (make-atom-feed-artifact
+                                  :location (base-path-join category "/feed.xml")
+                                  :posts (take 15 posts)
+                                  :title (str:capitalize category)
+                                  :author *author*)))
+                  (setf (@ cats category) cat-art)
+                  (setf (@ feeds category) feed-art))
+          :finally
+             (setf *category-indices* cats)
+             (setf *atom-feeds* feeds))
 
-    (match (loop :for tag :in (reduce
-                               (op (union _1 (post-tags _2) :test #'equal))
-                               blog-post-pages :initial-value nil)
-                 :with tags := (dict)
-                 :with feeds := (dict)
-                 :do (let* ((posts (remove-if-not (op (find tag (post-tags _) :test #'equal))
-                                                  blog-post-pages))
-                            (tag-art (make-blog-post-listing-page
-                                      :path (base-path-join "tags/" tag)
-                                      :posts posts
-                                      :title (str:capitalize tag)
-                                      :author *author*))
-                            (feed-art (make-atom-feed-artifact
-                                       :location (base-path-join "/tags/" tag "/feed.xml")
-                                       :posts (take 15 posts)
-                                       :title (str:capitalize tag)
-                                       :author *author*)))
-                       (setf (@ tags tag) tag-art)
-                       (setf (@ feeds tag) feed-art))
-                 :finally (return (list tags feeds)))
-      ((list tags feeds)
-       (setf *tag-indices* tags)
-       (setf *atom-feeds* (merge-tables *atom-feeds* feeds))))
+    (loop :for tag :being :the :hash-keys :in posts-by-tags
+          :for posts := (@ posts-by-tags tag)
+          :with tag-pages := (dict)
+          :with feeds := (dict)
+          :do
+             (let* ((tag-art (make-blog-post-listing-page
+                              :path (base-path-join "tags/" tag)
+                              :posts posts
+                              :title (str:capitalize tag)
+                              :author *author*))
+                    (feed-art (make-atom-feed-artifact
+                               :location (base-path-join "/tags/" tag "/feed.xml")
+                               :posts (take 15 posts)
+                               :title (str:capitalize tag)
+                               :author *author*)))
+               (setf (@ tag-pages tag) tag-art)
+               (setf (@ feeds tag) feed-art))
+          :finally
+             (setf *tag-indices* tag-pages)
+             (setf *atom-feeds* (merge-tables *atom-feeds* feeds)))
 
     (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
 
@@ -187,11 +183,11 @@ computers, security and politics.")
                                    :location "/archive/feed.xml"))
 
     (setf (@ *category-indices* "projects")
-           (make-software-project-listing-page
-            :path "/projects"
-            :projects project-pages
-            :author *author*
-            :title "Projects"))
+          (make-software-project-listing-page
+           :path "/projects"
+           :projects project-pages
+           :author *author*
+           :title "Projects"))
 
     ;; Publish home-page and all its dependencies
     (let ((*already-published-artifacts* nil))
