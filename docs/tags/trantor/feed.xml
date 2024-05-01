@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Trantor - </title><id>//tags/trantor/feed.xml</id><updated>2024-04-29T15:48:44.366970Z</updated><link href="//tags/trantor/feed.xml" rel="self" title="Trantor"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>//images/avatar.png</logo><entry><title type="text">Microservices</title><id>/talks/microservices-techblend/index.html</id><updated>2020-08-06T00:00:00.000000Z</updated><link href="/talks/microservices-techblend/index.html" title="Microservices"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2020-08-06T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Trantor - </title><id>//tags/trantor/feed.xml</id><updated>2024-05-01T12:10:42.937983Z</updated><link href="//tags/trantor/feed.xml" rel="self" title="Trantor"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>//images/avatar.png</logo><entry><title type="text">Microservices</title><id>/talks/microservices-techblend/index.html</id><updated>2020-08-06T00:00:00.000000Z</updated><link href="/talks/microservices-techblend/index.html" title="Microservices"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2020-08-06T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 I recently joined a Whatsapp group named &amp;quot;Tech Blend&amp;quot;, which conduct
 weekly online meetups. Topic for last meetup was &amp;quot;Microservices&amp;quot;, for
 which I volunteered. Since I was working for around 2 years on a
@@ -92,7 +92,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org986d5c9&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org09e2503&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -110,7 +110,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer's machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org1cd8d8b&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org5738dc6&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -149,7 +149,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I've used for my &lt;code&gt;d
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org46a0cf3&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgb96f4d9&quot;&gt;
 buildDrafts = true
 title = &amp;quot;My Project&amp;quot;
 
@@ -179,7 +179,7 @@ exercises, rest were left for the attendees as homework. Here's the
 &lt;code&gt;docker-compose.yml&lt;/code&gt; file that was used in the session.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org6106f35&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org8a7ad2f&quot;&gt;
 version: '3'
 services:
   webgoat:

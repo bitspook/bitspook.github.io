@@ -1,9 +1,9 @@
 <html lang=en><head><meta charset=UTF-8><title>Extending org-mode to handle youtube links</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=/css/post.css><link rel=alternate type=application/atom+xml href=/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Extending org-mode to handle youtube links</h1><div class=meta><time class="meta-item date">September 26, 2022</time><ul class="meta-item tags"><li class=tag><a href=/tags/emacs>#emacs</a><li class=tag><a href=/tags/elisp>#elisp</a><li class=tag><a href=/tags/org-mode>#org-mode</a><li class=tag><a href=/tags/video>#video</a></ul></div></header><main class=post-body><p>
 <iframe width="560" height="315" src="//youtube.com/embed/eaZUZCzaIgw" title="nil" frameborder="0" allowfullscreen></iframe>
 </p>
-<div id="outline-container-orgdfa2707" class="outline-2">
-<h2 id="orgdfa2707">Requirement</h2>
-<div class="outline-text-2" id="text-orgdfa2707">
+<div id="outline-container-Requirement" class="outline-2">
+<h2 id="Requirement">Requirement</h2>
+<div class="outline-text-2" id="text-Requirement">
 <ol class="org-ol">
 <li>I want to open youtube links in my notes in <code>mpv</code> instead of opening the
 browser</li>
@@ -13,9 +13,9 @@ of hyperlinks</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org3b214e1" class="outline-2">
-<h2 id="org3b214e1">Implementation</h2>
-<div class="outline-text-2" id="text-org3b214e1">
+<div id="outline-container-Implementation" class="outline-2">
+<h2 id="Implementation">Implementation</h2>
+<div class="outline-text-2" id="text-Implementation">
 <p>
 Org has a concept of 'link types'. We can add a new type of link and have it
 behave the way we want.
@@ -101,9 +101,9 @@ Thanks to <a href="https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgm
 </p>
 </div>
 </div>
-<div id="outline-container-org62b4269" class="outline-2">
-<h2 id="org62b4269">Result</h2>
-<div class="outline-text-2" id="text-org62b4269">
+<div id="outline-container-Result" class="outline-2">
+<h2 id="Result">Result</h2>
+<div class="outline-text-2" id="text-Result">
 <ol class="org-ol">
 <li><code>C-c C-o</code> (i.e <code>org-open-at-point</code>) on a <code>yt://</code> link opens the youtube video
 in mpv</li>
@@ -114,9 +114,9 @@ youtube videos</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgd1ba2f8" class="outline-2">
-<h2 id="orgd1ba2f8">Bonus gains 💪</h2>
-<div class="outline-text-2" id="text-orgd1ba2f8">
+<div id="outline-container-Bonus%20gains%20%F0%9F%92%AA" class="outline-2">
+<h2 id="Bonus%20gains%20%F0%9F%92%AA">Bonus gains 💪</h2>
+<div class="outline-text-2" id="text-Bonus%20gains%20%F0%9F%92%AA">
 <p>
 Recently I've been building a tool (<a href="https://github.com/bitspook/cl-ownpress">cl-ownpress</a>) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious

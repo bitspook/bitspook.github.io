@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Management - </title><id>//tags/management/feed.xml</id><updated>2024-04-29T15:48:44.396833Z</updated><link href="//tags/management/feed.xml" rel="self" title="Management"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>//images/avatar.png</logo><entry><title type="text">Personal Brands for Software Developers (Talk)</title><id>/talks/personal-brands-for-software-developers-talk/index.html</id><updated>2019-10-21T00:00:00.000000Z</updated><link href="/talks/personal-brands-for-software-developers-talk/index.html" title="Personal Brands for Software Developers (Talk)"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-10-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Management - </title><id>//tags/management/feed.xml</id><updated>2024-05-01T12:10:42.988202Z</updated><link href="//tags/management/feed.xml" rel="self" title="Management"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>//images/avatar.png</logo><entry><title type="text">Personal Brands for Software Developers (Talk)</title><id>/talks/personal-brands-for-software-developers-talk/index.html</id><updated>2019-10-21T00:00:00.000000Z</updated><link href="/talks/personal-brands-for-software-developers-talk/index.html" title="Personal Brands for Software Developers (Talk)"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-10-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
 After long diligence, me and my old (Trantor) team decided to organize a meetup
 to showcase our efforts, and to share our ideas with the local community. &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/events/263862634/&quot;&gt;The
 meetup&lt;/a&gt; was organized in Trantor on September 18, 2019.
@@ -62,7 +62,7 @@ I have a directory named &lt;code&gt;docs&lt;/code&gt; in our repository, with f
 general structure:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org986d5c9&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org09e2503&quot;&gt;
 .
 ├── config.toml
 ├── content
@@ -80,7 +80,7 @@ downloads and sets up hugo with the theme in a single command without
 anything other than docker installed on a developer's machine.
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org1cd8d8b&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;org5738dc6&quot;&gt;
 FROM alpine:latest
 
 WORKDIR /app
@@ -119,7 +119,7 @@ Here is &lt;code&gt;config.toml&lt;/code&gt; file I've used for my &lt;code&gt;d
 configure the hugo theme with above mentioned environment variable only:
 &lt;/p&gt;
 
-&lt;pre class=&quot;example&quot; id=&quot;org46a0cf3&quot;&gt;
+&lt;pre class=&quot;example&quot; id=&quot;orgb96f4d9&quot;&gt;
 buildDrafts = true
 title = &amp;quot;My Project&amp;quot;
 
