@@ -1,3 +1,5 @@
+(push :HUNCHENTOOT-NO-SSL *features*)
+
 (defsystem "in.bitspook.website"
   :author "Charanjit Singh"
   :license "AGPL-3.0-only"
