@@ -36,3 +36,34 @@ of ITEMs as value."
            (dolist (k key) (appendf (href group k) (list item)))
            (appendf (href group key) (list item)))
     :finally (return group)))
+
+;; ---
+
+(defparameter *category-indices* (dict)
+  "Index pages for categories.")
+
+(defparameter *tag-indices* (dict)
+  "Index pages for tags.")
+
+(defparameter *pages* (dict)
+  "Independent pages by slug.")
+
+(defparameter *atom-feeds* (dict)
+  "Hashtable of atom feeds by name.")
+
+(defun find-page (id-type id)
+  "Find a html-page-artifact of ID-TYPE which can be identified by ID.
+Possible values for ID-TYPE:
+1. category-index
+2. tag-index
+3. slug
+4. atom-feed"
+  (ecase id-type
+    (category-index (@ *category-indices* id))
+    (tag-index (@ *tag-indices* id))
+    (slug (@ *pages* id))
+    (atom-feed (@ *atom-feeds* id))))
+
+(defun link-page (id-type id)
+  "Embed page find with FIND-PAGE as LINK."
+  (embed-artifact-as (find-page id-type id) 'link))
