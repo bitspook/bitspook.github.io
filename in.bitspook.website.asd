@@ -8,7 +8,13 @@
                :feeder :plump :quri)
   :components ((:module "src"
                 :components ((:file "package")
-                             (:file "models")
+
+                             (:module "models"
+                              :components ((:file "persona")
+                                           (:file "blog-post")
+                                           (:file "software-project")
+                                           (:file "adventure")
+                                           (:file "note")))
 
                              (:module "provider"
                               :components ((:file "org-file-provider")
