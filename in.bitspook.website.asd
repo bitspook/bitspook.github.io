@@ -23,13 +23,15 @@
                              (:module "widgets"
                               :components ((:file "navbar")
                                            (:file "footer")
+                                           (:file "notebook-btn")
                                            (:file "post-listing-item")
                                            (:file "blog-post")
                                            (:file "blog-post-listing")
                                            (:file "software-project-listing-item")
                                            (:file "software-project")
                                            (:file "software-project-listing")
-                                           (:file "home-page")))
+                                           (:file "home-page")
+                                           (:file "adventure")))
 
                              (:module "artifacts"
                               :components ((:file "blog-post")
