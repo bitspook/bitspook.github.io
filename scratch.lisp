@@ -71,6 +71,21 @@ computers, security and politics.")
        (:a :href (link-page 'category-index "talks") "talks") "I gave .")
    (:p "You can read more about me " (:a :href (link-page 'slug "about") "here."))))
 
+
+(defparameter *deutsch-notes*
+  (let ((notes-provider (make 'denote-provider)))
+    (mapcar
+     (op (make-note-page (from _ 'note :author *author*) :location "/notes"))
+     (provide-all notes-provider "german"))))
+
+(defparameter deutsch-adventure
+  (make-instance
+   'adventure
+   :name "Deutsch Lernen"
+   :summary "<p>After moving to Germany for work, I have decided to take up the task of teaching myself German.</p>"
+   :content "<p></p>"
+   :notes *deutsch-notes*))
+
 (defun build ()
   (let* ((site-title "@bitspook's personal website")
          (www (path-join *base-dir* "docs/"))
@@ -159,6 +174,10 @@ computers, security and politics.")
            :projects project-pages
            :author *author*
            :title "Projects"))
+
+    (publish-artifact
+     (make-adventure-page deutsch-adventure :location "/adventures/" :author *author*)
+     www)
 
     ;; Publish home-page and all its dependencies
     (let ((*already-published-artifacts* nil))

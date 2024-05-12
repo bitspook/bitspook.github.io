@@ -4,7 +4,8 @@
   ((slug :initarg :slug :initform nil :accessor adventure-slug)
    (name :initarg :name :accessor adventure-name)
    (summary :initarg :summary :accessor adventure-summary)
-   (content :initarg :content :accessor adventure-content)))
+   (content :initarg :content :accessor adventure-content)
+   (notes :initarg :notes :accessor adventure-notes)))
 
 (defmethod initialize-instance :after ((adv adventure) &rest initargs &key)
   "Set default value for adventure-slug."

@@ -1,9 +1,10 @@
 (in-package #:in.bitspook.website)
 
-(defwidget notebook-btn-w (tags)
+(defwidget notebook-btn-w (notes)
     (tagged-lass
      `((.icon-nb :background-image (url "/images/icons/nb.svg"))))
-  (let* ((tag-count (length tags))
+  (let* ((tags '("test1" "test2"))
+         (tag-count (length tags))
          (description (cond ((eq tag-count 1) (format nil "tagged ~{#~a~}" tags))
                             ((eq tag-count 2)
                              (format nil "tagged #~a and #~a"
@@ -18,5 +19,5 @@
      (:div.title
       (:h2 "Notebook")
       (:div.meta
-       (:span.count "20 notes")
+       (:span.count ("~a notes" (length notes)))
        (:span description))))))

@@ -17,4 +17,4 @@
           ;; html-page-artifact
           :location html-path
           :root-widget root-widget
-          :deps (list css-art))))
+          :deps (append (list css-art) (adventure-notes adv)))))

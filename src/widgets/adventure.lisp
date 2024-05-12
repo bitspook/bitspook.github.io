@@ -150,17 +150,18 @@
     (render 'navbar-w :links nil)
     (with-accessors
           ((name adventure-name)
-           (html-description adventure-summary)
-           (html-content adventure-content))
+           (html-summary adventure-summary)
+           (html-content adventure-content)
+           (notes adventure-notes))
         adventure
       (:section.container
        (:header.main
         (:h1.title name))
        (:article.main
-        (:raw html-description)
+        (:raw html-summary)
 
         (:div.insight-btns
-         (render 'notebook-btn-w :tags '("test1" "test2"))
+         (render 'notebook-btn-w :notes notes)
          (:button.btn
           (:i.icon.icon-friends)
           (:div.title

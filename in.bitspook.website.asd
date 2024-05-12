@@ -9,17 +9,17 @@
   :components ((:module "src"
                 :components ((:file "package")
 
+                             (:module "provider"
+                              :components ((:file "org-file-provider")
+                                           (:file "denote-provider")
+                                           (:file "org-project-provider")))
+
                              (:module "models"
                               :components ((:file "persona")
                                            (:file "blog-post")
                                            (:file "software-project")
                                            (:file "adventure")
                                            (:file "note")))
-
-                             (:module "provider"
-                              :components ((:file "org-file-provider")
-                                           (:file "denote-provider")
-                                           (:file "org-project-provider")))
 
                              (:module "lass"
                               :components ((:file "modern-normalize")
@@ -37,12 +37,14 @@
                                            (:file "software-project")
                                            (:file "software-project-listing")
                                            (:file "home-page")
-                                           (:file "adventure")))
+                                           (:file "adventure")
+                                           (:file "note")))
 
                              (:module "artifacts"
                               :components ((:file "blog-post")
                                            (:file "atom-feed")
                                            (:file "software-project")
                                            (:file "listings")
+                                           (:file "note")
                                            (:file "home-page"))))))
   :description "A blog implemented using cl-ownpress")
