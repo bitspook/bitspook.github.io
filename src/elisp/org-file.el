@@ -46,12 +46,15 @@
       (unpackaged/org-export-html-with-useful-ids-mode)
       (org-export-as 'html nil nil t))))
 
-(defun clown-org-file-to-msg (file)
-  "Convert org FILE to msg to be send to cl-ownpress."
+(defun clown-org-file-to-msg (file &optional id)
+  "Convert org FILE (with optional ID) to msg to be send to cl-ownpress."
   (let ((meta (clown-get-post-meta file))
         (org-content (org-file-contents file)))
     (list
-     :id (alist-get 'slug meta)
+     :id (or
+          id
+          (alist-get 'id meta)
+          (alist-get 'slug meta))
      :filepath file
      :metadata (json-encode-alist meta)
      :body_raw org-content

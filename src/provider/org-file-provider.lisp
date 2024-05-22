@@ -4,18 +4,18 @@
   ((script :initform (asdf:system-relative-pathname :in.bitspook.website "src/elisp/org-file.el"))))
 
 (defmethod provide-all ((provider org-file-provider) &rest script-args)
-  (let ((notes (apply #'call-next-method `(,provider ,@script-args))))
+  (let ((files (apply #'call-next-method `(,provider ,@script-args))))
     (mapcar
-     (lambda (note)
+     (lambda (file)
        (make-instance
         'org-file
-        :id (@ note "id")
-        :filepath (@ note "filepath")
-        :metadata (when (@ note "metadata")
-                    (yason:parse (@ note "metadata")))
-        :body-raw (@ note "body_raw")
-        :body-html (@ note "body_html")))
-     notes)))
+        :id (@ file "id")
+        :filepath (@ file "filepath")
+        :metadata (when (@ file "metadata")
+                    (yason:parse (@ file "metadata")))
+        :body-raw (@ file "body_raw")
+        :body-html (@ file "body_html")))
+     files)))
 
 (defclass org-file ()
   ((id :initarg :id :accessor org-file-id)

@@ -5,7 +5,7 @@
   :license "AGPL-3.0-only"
   :depends-on (:in.bitspook.cl-ownpress
                :local-time :serapeum :trivia
-               :feeder :plump :quri)
+               :feeder :plump :quri :lquery)
   :components ((:module "src"
                 :components ((:file "package")
 
