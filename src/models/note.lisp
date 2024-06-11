@@ -5,6 +5,7 @@
    (id :initarg :id :initform nil :accessor note-id)
    (title :initarg :title :accessor note-title)
    (tags :initarg :tags :accessor note-tags)
+   (metadata :initarg :metadata :accessor note-metadata)
    (body-dom :initarg :body-dom
              :initform (error "Note `body-dom` is required")
              :accessor note-body-dom
@@ -37,6 +38,12 @@
   (print-unreadable-object (nt out :type t)
     (format out "~a" (note-slug nt))))
 
+(defmethod note-body ((note note))
+  (plump-smart-serialize
+   (resolve-linked-denotes
+    (note-body-dom note)
+    *registry*)))
+
 (defmethod from ((obj org-file) (to (eql 'note)) &key author)
   (with-accessors ((id org-file-id)
                    (metadata org-file-metadata)
@@ -48,11 +55,35 @@
           :title (@ metadata "title")
           :slug (@ metadata "slug")
           :tags (@ metadata "tags")
+          :metadata metadata
           :created-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
           :updated-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
           :body-dom (plump:parse body)
           :author (or author (make 'persona :name "Unknown")))))
 
+(defun denote-links (node)
+  (declare (plump:node node))
+  (clss:select "a[data-denote-id]" node))
+
+(defun linked-denote-id (node)
+  (plump:get-attribute node "data-denote-id"))
+
+(defun linked-denote-ids (node)
+  (map 'list #'linked-denote-id (denote-links node)))
+
 (defun note-eq (note1 note2)
   (equal (note-slug note1)
          (note-slug note2)))
+
+(defun resolve-linked-denotes (node registry)
+  "Convert denotes linked in plump NODE to artifacts from REGISTRY."
+  (declare (plump:node node))
+
+  (labels ((resolve-denote (link-node)
+             (let* ((id (linked-denote-id link-node))
+                    (artifact (registry-query registry id)))
+               (plump:set-attribute
+                link-node "href" (embed-artifact-as artifact 'link)))))
+    (loop :for link-node :across (denote-links node)
+          :do (resolve-denote link-node))
+    node))

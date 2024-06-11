@@ -144,87 +144,82 @@
    (:head (:title (adventure-name adventure))
           (:meta :name "viewport" :content "width=device-width, initial-scale=1")
           (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
-          (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
+          (:link :rel "alternate" :type "application/atom+xml" :href (link-artifact 'atom-feed :feed "archive"))
           (:script :src "/js/app.js"))
    (:body
     (render 'navbar-w :links nil)
-    (with-accessors
-          ((name adventure-name)
-           (html-summary adventure-summary)
-           (html-content adventure-content)
-           (notes adventure-notes))
-        adventure
-      (:section.container
-       (:header.main
-        (:h1.title name))
-       (:article.main
-        (:raw html-summary)
 
-        (:div.insight-btns
-         (render 'notebook-btn-w :notes notes)
-         (:button.btn
-          (:i.icon.icon-friends)
-          (:div.title
-           (:h2 "Companions")
-           (:div.meta
-            (:span "We are a team of ")
-            (:span.count "3"))))
-         (:button.btn
-          :disabled t
-          (:i.icon.icon-flame)
-          (:div.title
-           (:h2 "Streak")
-           (:div.meta
-            (:span.count "3")
-            (:span "days of daily progress!")))))
+    (:section.container
+     (:header.main
+      (:h1.title (adventure-name adventure)))
+     (:article.main
+      ;; (:raw (adventure-summary adventure))
 
-        (:section.activity
-         (:header.title (:span "Activity log for") (:select.log-time
-                                                    (:option :value "last-week" "last week")
-                                                    (:option :value "this-month" "this month")))
-         (:article
-          (:div.activity-graph
-           (:div.graph-placeholder
-            (:p "TODO Add data visualization here")))
+      (:div.insight-btns
+       (render 'notebook-btn-w :notes (adventure-notes adventure))
+       (:button.btn
+        (:i.icon.icon-friends)
+        (:div.title
+         (:h2 "Companions")
+         (:div.meta
+          (:span "We are a team of ")
+          (:span.count "3"))))
+       (:button.btn
+        :disabled t
+        (:i.icon.icon-flame)
+        (:div.title
+         (:h2 "Streak")
+         (:div.meta
+          (:span.count "3")
+          (:span "days of daily progress!")))))
 
-          (:div.activity-log
-           (:div.activity-item
-            (:span.icon.icon-simple-cal)
-            (:div.activity-body
-             (:div.date "Wednesday 15 Nov, 2022")
-             (:ul.events
-              (:li
-               (:a :href "#" "1 commit")
-               " made to project "
-               (:a :href "#" "slurp"))
-              (:li
-               "Created "
-               (:a :href "#" "1 new note")))))
-           (:div.activity-item
-            (:span.icon.icon-simple-cal)
-            (:div.activity-body
-             (:div.date "Wednesday 16 Nov, 2022")
-             (:ul.events
-              (:li
-               (:a :href "#" "2 commits")
-               " made to project "
-               (:a :href "#" "cl-ownpress"))
-              (:li
-               "Modified "
-               (:a :href "#" "4 notes"))
-              (:li
-               "Created "
-               (:a :href "#" "2 new notes"))
-              (:li
-               "Pwned "
-               (:a :href "#" "Supermo")
-               " box on "
-               (:a :href "#" "HackTheBox"))))))))
+      (:section.activity
+       (:header.title (:span "Activity log for") (:select.log-time
+                                                  (:option :value "last-week" "last week")
+                                                  (:option :value "this-month" "this month")))
+       (:article
+        (:div.activity-graph
+         (:div.graph-placeholder
+          (:p "TODO Add data visualization here")))
 
-        (:raw html-content)
+        (:div.activity-log
+         (:div.activity-item
+          (:span.icon.icon-simple-cal)
+          (:div.activity-body
+           (:div.date "Wednesday 15 Nov, 2022")
+           (:ul.events
+            (:li
+             (:a :href "#" "1 commit")
+             " made to project "
+             (:a :href "#" "slurp"))
+            (:li
+             "Created "
+             (:a :href "#" "1 new note")))))
+         (:div.activity-item
+          (:span.icon.icon-simple-cal)
+          (:div.activity-body
+           (:div.date "Wednesday 16 Nov, 2022")
+           (:ul.events
+            (:li
+             (:a :href "#" "2 commits")
+             " made to project "
+             (:a :href "#" "cl-ownpress"))
+            (:li
+             "Modified "
+             (:a :href "#" "4 notes"))
+            (:li
+             "Created "
+             (:a :href "#" "2 new notes"))
+            (:li
+             "Pwned "
+             (:a :href "#" "Supermo")
+             " box on "
+             (:a :href "#" "HackTheBox"))))))))
 
-        (:div#explore
-         (:h2.title "Related content")
-         ;; (render 'posts-listing-widget :posts nil)
-         ))
-       (render 'footer-w :author author))))))
+      (:raw (adventure-content adventure))
+
+      (:div#explore
+       (:h2.title "Related content")
+       ;; (render 'posts-listing-widget :posts nil)
+       ))
+     (render 'footer-w :author author)))))

@@ -19,15 +19,31 @@
 (defparameter *rpc-server* (start-rpc-server 1337))
 (stop-rpc-server *rpc-server*)
 
-(defparameter *denote-posts*
-  (let ((notes-provider (make 'denote-provider)))
-    (mapcar
-     (op (let ((post (from _ 'blog-post :author *author*)))
-           (setf (post-category post) "blog")
-           (setf (post-tags post) (remove-if (op (equal "blog-post" _)) (post-tags post)))
-           post))
-     (provide-all notes-provider "blog-post"))))
- ;; expensive operations stored in top-level variables for caching
+(defparameter *denotes*
+  (let ((provider (make 'denote-provider)))
+    (union
+     (apply #'union (multiple-value-list (provide-all provider :tags '("blog-post"))))
+     (apply #'union (multiple-value-list (provide-all provider :tags '("german")))))))
+
+(defun blog-note-p (note)
+  (declare (note note))
+  (or (find "blog-post" (note-tags note) :test #'equal)
+      (find "blogpost" (note-tags note) :test #'equal)))
+
+(defun adventure-note-p (note)
+  (declare (note note))
+  (find "adventure" (note-tags note) :test #'equal))
+
+(loop :for note :in *denotes*
+      :do (register-artifact
+           *registry*
+           (cond
+             ((adventure-note-p note)
+              (from (from note 'adventure)
+                    'html-page-artifact :location "/adventures" :author *author*))
+             ((blog-note-p note) (from (from note 'blog-post)
+                                       'html-page-artifact :location "/"))
+             (t (from note 'html-page-artifact :location "/notes")))))
 
 (defparameter *local-blog-posts*
   (labels ((local-org-file-to-post (file)
@@ -51,12 +67,16 @@
                               (namestring content-base-dir) ""
                               (directory-namestring (org-file-filepath file))))))
         :collect post))))
+(loop :for post :in *local-blog-posts*
+      :for page := (from post 'html-page-artifact :location "/")
+      :do (register-artifact *registry* page))
 
 (defparameter *projects*
   (let ((project-provider (make 'org-project-provider)))
     (mapcar
      (op (from _ 'software-project :author *author*))
      (provide-all project-provider (path-join *base-dir* "projects/")))))
+
 ;; end expensive operations
 
 (defwidget about-me-summary (categories) nil
@@ -65,26 +85,11 @@
 are Factorio, Rimworld and Terraria. I also enjoy reading, writing, people watching and discussing
 computers, security and politics.")
    (:p "This website has things I am willing to share publicly. You can go through my "
-       (:a :href (link-page 'category-index "blog")  "blog") ", "
-       (:a :href (link-page 'category-index "poems")  "poems") ", "
-       (:a :href (link-page 'category-index "projects") "projects") " and also some "
-       (:a :href (link-page 'category-index "talks") "talks") "I gave .")
-   (:p "You can read more about me " (:a :href (link-page 'slug "about") "here."))))
-
-
-(defparameter *deutsch-notes*
-  (let ((notes-provider (make 'denote-provider)))
-    (mapcar
-     (op (make-note-page (from _ 'note :author *author*) :location "/notes"))
-     (provide-all notes-provider "german"))))
-
-(defparameter deutsch-adventure
-  (make-instance
-   'adventure
-   :name "Deutsch Lernen"
-   :summary "<p>After moving to Germany for work, I have decided to take up the task of teaching myself German.</p>"
-   :content "<p></p>"
-   :notes *deutsch-notes*))
+       (:a :href (link-artifact 'categorized :category "blog")  "blog") ", "
+       (:a :href (link-artifact 'categorized :category "poems")  "poems") ", "
+       (:a :href (link-artifact 'categorized :category "projects") "projects") " and also some "
+       (:a :href (link-artifact 'categorized :category "talks") "talks") "I gave .")
+   (:p "You can read more about me " (:a :href (link-artifact "about") "here."))))
 
 (defun build ()
   (let* ((site-title "@bitspook's personal website")
@@ -175,13 +180,12 @@ computers, security and politics.")
            :author *author*
            :title "Projects"))
 
-    (publish-artifact
-     (make-adventure-page deutsch-adventure :location "/adventures/" :author *author*)
-     www)
-
     ;; Publish home-page and all its dependencies
     (let ((*already-published-artifacts* nil))
       (handler-bind ((file-already-exists #'skip-existing))
+        (publish-artifact
+         (make-adventure-page deutsch-adventure :location "/adventures/" :author *author*)
+         www)
         (publish-artifact
          (make-home-page :title site-title
                          :all-posts blog-post-pages
@@ -191,15 +195,23 @@ computers, security and politics.")
 
     t))
 
-(build)
+(defun test-build ()
+  (let* ((www (path-join *base-dir* "docs/"))
+         (static (path-join *base-dir* "src/static/"))
+         (*print-pretty* t))
+
+    (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
+    (publish-static :content static :dest-dir www)
+
+    (let ((*test* (@ (registry-store *registry*) "20240120T133035")))
+      (publish-artifact *test* (path-join *base-dir* "docs/")))
+
+    t))
+
+(test-build)
 
 ;; quick hack to auto-build
 ;; elisp
 ;; (defun build-website (successp notes buffer loadp)
 ;;   (sly-eval '(in.bitspook.website::build)))
 ;; (add-hook 'sly-compilation-finished-hook #'build-website)
-
-
-;; (defparameter *test* (make 'clown:artifact))
-
-;; (with-slots ( *test*) a)

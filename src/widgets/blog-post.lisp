@@ -36,12 +36,12 @@
 
 (defwidget blog-post-w (post css-file-artifact)
     (bp-lass)
-  (with-slots (title published-at author tags body category) post
+  (with-slots (title published-at author tags category) post
     (:html
      (:head (:title title)
             (:meta :name "viewport" :content "width=device-width, initial-scale=1")
             (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
-            (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
+            (:link :rel "alternate" :type "application/atom+xml" :href (link-artifact 'atom-feed :feed "archive"))
             (:script :src "/js/app.js"))
      (:body
       (:div
@@ -62,7 +62,7 @@
              (dolist (tag tags)
                (:li.tag
                 (:a :href
-                    (link-page 'tag-index tag)
+                    (link-artifact 'tagged :tag tag)
                     (str:concat "#" (str:downcase tag)))))))))
-        (:main :class "post-body" (:raw body)))
+        (:main :class "post-body" (:raw (post-body post))))
        (render 'footer-w :author author))))))

@@ -7,9 +7,11 @@
    :start-rpc-server :stop-rpc-server
    :artifact :css-file-artifact :html-page-artifact :artifact-deps
    :make-font-artifact :embed-artifact-as :link :tagged-lass
-   :defwidget :render :make-html-page-artifact :emacs-provider :script
-   :provide-all :publish-static :publish-artifact :font-face :*base-url*
-   :skip-existing :file-already-exists :*already-published-artifacts* :artifact-location)
+   :defwidget :render :make-html-page-artifact :emacs-provider :script :provide-all
+   :publish-static :publish-artifact :font-face :*base-url*
+   :skip-existing :file-already-exists :*already-published-artifacts* :artifact-location
+   :artifact-id :artifact-registry :registry-indices :registry-on-index-artifact
+   :registry-add-index :registry-query)
   (:local-nicknames
    (:feeder #:org.shirakumo.feeder) ;; entry feed link serialize-feed
    (:clown #:in.bitspook.cl-ownpress)))
@@ -22,6 +24,7 @@
 (defparameter *fonts-dir*
   (asdf:system-relative-pathname "in.bitspook.website" "src/fonts/"))
 
+;; Utilities
 (defun group-by (items key-fn)
   "Group ITEMS into a hashmap by KEY-FN.
 KEY-FN is a getter function which when given an ITEM as argument can return a string/symbol or list
@@ -39,11 +42,49 @@ of ITEMs as value."
 
 ;; ---
 
-(defparameter *category-indices* (dict)
-  "Index pages for categories.")
+;; Registry
+(defparameter *registry* (make 'artifact-registry))
 
-(defparameter *tag-indices* (dict)
-  "Index pages for tags.")
+(registry-add-index *registry* 'tagged)
+(defmethod registry-on-index-artifact ((reg artifact-registry)
+                                       (post blog-post-page)
+                                       (idx (eql 'tagged)) &key)
+  (call-next-method reg post idx :keys (post-tags post)))
+
+(defmethod registry-query ((reg artifact-registry)
+                           (key (eql 'tagged))
+                           &key tag)
+  (let ((ids (@ (registry-indices reg) 'tagged tag)))
+    (mapcar (op (@ (registry-store reg) _)) ids)))
+
+(registry-add-index *registry* 'categorized)
+(defmethod registry-on-index-artifact ((reg artifact-registry)
+                                       (post blog-post-page)
+                                       (idx (eql 'categorized)) &key)
+  (call-next-method reg post idx :keys (list (post-category post))))
+
+(defmethod registry-query ((reg artifact-registry)
+                           (key (eql 'categorized))
+                           &key category)
+  (let ((ids (@ (registry-indices reg) 'categorized category)))
+    (mapcar (op (@ (registry-store reg) _)) ids)))
+
+(registry-add-index *registry* 'atom-feed)
+(defmethod registry-query ((reg artifact-registry)
+                           (key (eql 'atom-feed))
+                           &key feed)
+  nil)
+
+(registry-add-index *registry* 'listing)
+(defmethod registry-query ((reg artifact-registry)
+                           (key (eql 'listing))
+                           &key type name)
+  (make-blog-post-listing-page))
+
+;; TODO populate these
+(registry-add-index *registry* 'adventure)
+
+;; ---
 
 (defparameter *pages* (dict)
   "Independent pages by slug.")
@@ -51,19 +92,29 @@ of ITEMs as value."
 (defparameter *atom-feeds* (dict)
   "Hashtable of atom feeds by name.")
 
-(defun find-page (id-type id)
-  "Find a html-page-artifact of ID-TYPE which can be identified by ID.
-Possible values for ID-TYPE:
-1. category-index
-2. tag-index
-3. slug
-4. atom-feed"
-  (ecase id-type
-    (category-index (@ *category-indices* id))
-    (tag-index (@ *tag-indices* id))
-    (slug (@ *pages* id))
-    (atom-feed (@ *atom-feeds* id))))
+(defun link-artifact (&rest query)
+  "Embed artifact found in *REGISTRY* as LINK."
+  (let ((artifact (apply #'registry-query *registry* query)))
+    (if artifact
+        (embed-artifact-as artifact 'link)
+        (warn "Failed to find artifact [query=~a]" query))))
 
-(defun link-page (id-type id)
-  "Embed page find with FIND-PAGE as LINK."
-  (embed-artifact-as (find-page id-type id) 'link))
+(defun plump-minify (node)
+  (typecase node
+    (plump:text-node
+     (setf (plump:text node) (cl-ppcre:regex-replace-all "(^\\s+)|(\\s+$)" (plump:text node) " ")))
+    (plump:element
+     (unless (string-equal "pre" (plump:tag-name node))
+       (loop for child across (plump:children node)
+             do (plump-minify child))))
+    (plump:nesting-node
+     (loop for child across (plump:children node)
+           do (plump-minify child))))
+  node)
+
+(defun plump-smart-serialize (node)
+  (plump:serialize
+   (if *print-pretty*
+       node
+       (plump-minify node))
+   nil))

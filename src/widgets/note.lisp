@@ -33,12 +33,12 @@
 
      :lg `((.content :max-width (var --width-md)
                      :margin 0 auto)))
-  (with-slots (title updated-at author tags body category) note
+  (with-slots (title updated-at author tags category) note
     (:html
      (:head (:title title)
             (:meta :name "viewport" :content "width=device-width, initial-scale=1")
             (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
-            (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
+            (:link :rel "alternate" :type "application/atom+xml" :href (link-artifact 'atom-feed :feed "archive"))
             (:script :src "/js/app.js"))
      (:body
       (:div
@@ -51,15 +51,6 @@
           :class "meta"
           (:time :class "meta-item date" (local-time:format-timestring
                                           nil updated-at
-                                          :format '(:long-month " " :day ", " :year)))
-
-          (when-let ((tags tags))
-            (:ul
-             :class "meta-item tags"
-             (dolist (tag tags)
-               (:li.tag
-                (:a :href
-                    (link-page 'tag-index tag)
-                    (str:concat "#" (str:downcase tag)))))))))
-        (:main :class "note-body" (:raw body)))
+                                          :format '(:long-month " " :day ", " :year)))))
+        (:main :class "note-body" (:raw (note-body note))))
        (render 'footer-w :author author))))))

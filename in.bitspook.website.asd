@@ -5,7 +5,7 @@
   :license "AGPL-3.0-only"
   :depends-on (:in.bitspook.cl-ownpress
                :local-time :serapeum :trivia
-               :feeder :plump :quri :lquery)
+               :feeder :plump :quri :clss :lquery)
   :components ((:module "src"
                 :components ((:file "package")
 
@@ -16,10 +16,10 @@
 
                              (:module "models"
                               :components ((:file "persona")
+                                           (:file "note")
                                            (:file "blog-post")
                                            (:file "software-project")
-                                           (:file "adventure")
-                                           (:file "note")))
+                                           (:file "adventure")))
 
                              (:module "lass"
                               :components ((:file "modern-normalize")
@@ -46,5 +46,6 @@
                                            (:file "software-project")
                                            (:file "listings")
                                            (:file "note")
+                                           (:file "adventure")
                                            (:file "home-page"))))))
   :description "A blog implemented using cl-ownpress")

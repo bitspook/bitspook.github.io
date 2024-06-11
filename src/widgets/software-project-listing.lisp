@@ -1,40 +1,40 @@
 (in-package #:in.bitspook.website)
 
 (defwidget software-project-listing-w (css-file-artifact items project-publisher title author next-page previous-page)
-  (tagged-lass
-   (base-lass)
+    (tagged-lass
+     (base-lass)
 
-   `((.content :min-height 50vh)
-     (.header
-      :padding (var --size-4) :margin (var --scale-2) 0
-      :display flex
-      :align-items center
-      :border-bottom 1px solid (var --color-grey-200))
+     `((.content :min-height 50vh)
+       (.header
+        :padding (var --size-4) :margin (var --scale-2) 0
+        :display flex
+        :align-items center
+        :border-bottom 1px solid (var --color-grey-200))
 
-     (.title :font-family (var --font-title)
-             :font-size (var --size-10))
+       (.title :font-family (var --font-title)
+               :font-size (var --size-10))
 
-     (.listing :margin-bottom 0
-               :padding 0 (var --scale-0))
+       (.listing :margin-bottom 0
+                 :padding 0 (var --scale-0))
 
-     (.pagination :display flex
-                  :padding (var --size-4)
-                  :justify-content space-between
-                  :margin-top (var --scale-0))
+       (.pagination :display flex
+                    :padding (var --size-4)
+                    :justify-content space-between
+                    :margin-top (var --scale-0))
 
-     (.next :flex-grow 1
-            :text-align right))
+       (.next :flex-grow 1
+              :text-align right))
 
-   :dark `((.title :border-color (var --color-grey-800))
-           (.header :border-color (var --color-grey-800)))
+     :dark `((.title :border-color (var --color-grey-800))
+             (.header :border-color (var --color-grey-800)))
 
-   :lg `((.content :max-width (var --width-md)
-                   :margin 0 auto)))
+     :lg `((.content :max-width (var --width-md)
+                     :margin 0 auto)))
   (:html
    (:head (:title title)
           (:meta :name "viewport" :content "width=device-width, initial-scale=1")
           (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
-          (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
+          (:link :rel "alternate" :type "application/atom+xml" :href (link-artifact 'atom-feed :feed "archive"))
           (:script :src "/js/app.js"))
    (:body
     (:div

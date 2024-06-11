@@ -66,7 +66,7 @@
    (:head (:title title)
           (:meta :name "viewport" :content "width=device-width, initial-scale=1")
           (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
-          (:link :rel "alternate" :type "application/atom+xml" :href (link-page 'atom-feed "archive"))
+          (:link :rel "alternate" :type "application/atom+xml" :href (link-artifact 'atom-feed :feed "archive"))
           (:script :src "/js/app.js"))
    (:body
     (:div

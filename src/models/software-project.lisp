@@ -1,7 +1,8 @@
 (in-package #:in.bitspook.website)
 
 (defclass software-project ()
-  ((name :initarg :name
+  ((id :initarg :id :initform nil :accessor project-id)
+   (name :initarg :name
          :initform (error "Project `name` is required")
          :accessor project-name)
    (slug :initarg :slug
