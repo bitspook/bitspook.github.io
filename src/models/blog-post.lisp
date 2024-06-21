@@ -53,10 +53,9 @@
     *registry*)))
 
 (defmethod post-summary ((post blog-post))
-  (plump-smart-serialize
-   (resolve-linked-denotes
-    (post-summary-dom post)
-    *registry*)))
+  (when-let ((summary-dom (post-summary-dom post)))
+    (plump-smart-serialize
+     (resolve-linked-denotes summary-dom *registry*))))
 
 (defmethod from ((note note) (to (eql 'blog-post)) &key author)
   (with-accessors ((id note-id)

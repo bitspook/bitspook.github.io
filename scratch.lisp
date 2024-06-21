@@ -2,190 +2,45 @@
 
 (in-package #:in.bitspook.website)
 
-;; (defparameter *base-url* "https://bitspook.in/")
-(defparameter *base-url* "/")
-
-(defparameter *author*
-  (make 'persona
-        :name "Charanjit Singh"
-        :avatar "/images/avatar.png"
-        :handles `(("Github" "bitspook" "https://github.com/bitspook")
-                   ("Mastodon" "bitspook" "https://infosec.exchange/@bitspook")
-                   ("LinkedIn" "bitspook" "https://www.linkedin.com/in/bitspook/")
-                   ("RSS" "bitspook.in" "/archive/feed.xml"))))
-
-(defparameter *base-dir* (asdf:system-relative-pathname :in.bitspook.website ""))
-
 (defparameter *rpc-server* (start-rpc-server 1337))
-(stop-rpc-server *rpc-server*)
+;; (stop-rpc-server *rpc-server*)
 
-(defparameter *denotes*
-  (let ((provider (make 'denote-provider)))
-    (union
-     (apply #'union (multiple-value-list (provide-all provider :tags '("blog-post"))))
-     (apply #'union (multiple-value-list (provide-all provider :tags '("german")))))))
-
-(defun blog-note-p (note)
-  (declare (note note))
-  (or (find "blog-post" (note-tags note) :test #'equal)
-      (find "blogpost" (note-tags note) :test #'equal)))
-
-(defun adventure-note-p (note)
-  (declare (note note))
-  (find "adventure" (note-tags note) :test #'equal))
-
-(loop :for note :in *denotes*
-      :do (register-artifact
-           *registry*
-           (cond
-             ((adventure-note-p note)
-              (from (from note 'adventure)
-                    'html-page-artifact :location "/adventures" :author *author*))
-             ((blog-note-p note) (from (from note 'blog-post)
-                                       'html-page-artifact :location "/"))
-             (t (from note 'html-page-artifact :location "/notes")))))
-
-(defparameter *local-blog-posts*
-  (labels ((local-org-file-to-post (file)
-             "Set filename as slug if no slug is explicitly provided"
-             (let ((post (from file 'blog-post :author *author*)))
-
-               (when (not (@ (org-file-metadata file) "slug"))
-                 (setf (post-slug post)
-                       (first (str:split "." (file-namestring (org-file-filepath file))))))
-               post)))
-    (let* ((content-base-dir (path-join *base-dir* "content/"))
-           (org-provider (make 'org-file-provider))
-           (local-org-files (provide-all org-provider content-base-dir)))
-      (loop
-        :for file :in local-org-files
-        :for post := (local-org-file-to-post file)
-        :do (setf
-             (post-category post)
-             (first-elt (str:split
-                         "/" (str:replace-all
-                              (namestring content-base-dir) ""
-                              (directory-namestring (org-file-filepath file))))))
-        :collect post))))
-(loop :for post :in *local-blog-posts*
-      :for page := (from post 'html-page-artifact :location "/")
-      :do (register-artifact *registry* page))
-
-(defparameter *projects*
-  (let ((project-provider (make 'org-project-provider)))
-    (mapcar
-     (op (from _ 'software-project :author *author*))
-     (provide-all project-provider (path-join *base-dir* "projects/")))))
-
+;; expensive operations
+(load-local-content *registry*)
+(load-denotes *registry*)
 ;; end expensive operations
 
-(defwidget about-me-summary (categories) nil
-  (:p
-   (:p "I am a software engineer. I enjoy playing with software, electronics and video games. My favorites
-are Factorio, Rimworld and Terraria. I also enjoy reading, writing, people watching and discussing
-computers, security and politics.")
-   (:p "This website has things I am willing to share publicly. You can go through my "
-       (:a :href (link-artifact 'categorized :category "blog")  "blog") ", "
-       (:a :href (link-artifact 'categorized :category "poems")  "poems") ", "
-       (:a :href (link-artifact 'categorized :category "projects") "projects") " and also some "
-       (:a :href (link-artifact 'categorized :category "talks") "talks") "I gave .")
-   (:p "You can read more about me " (:a :href (link-artifact "about") "here."))))
-
 (defun build ()
-  (let* ((site-title "@bitspook's personal website")
-         (www (path-join *base-dir* "docs/"))
+  (let* ((site-title *site-title*)
+         (www (path-join *base-dir* "bubu/"))
          (static (path-join *base-dir* "src/static/"))
          (*print-pretty* nil)
-         (blog-posts
-           (sort (remove-if
-                  (op (or (find "draft" (post-tags _1) :test #'equal)
-                          (find "micro" (post-tags _1) :test #'equal)))
-                  (append *local-blog-posts* *denote-posts*))
-                 (op (local-time:timestamp> (post-updated-at _1) (post-updated-at _2)))))
-         (blog-post-pages (mapcar (op (make-blog-post-page _1 :location (base-path-join "/" (post-category _1))))
-                                  blog-posts))
-         (project-pages (mapcar (op (make-software-project-page _1 :location "/projects/")) *projects*))
-         (archive-page (make-blog-post-listing-page
-                        :path "/archive"
-                        :title "Archive"
-                        :author *author*
-                        :posts blog-post-pages))
-         (posts-by-category (group-by blog-post-pages #'post-category))
-         (posts-by-tags (group-by blog-post-pages #'post-tags)))
+         (blog-post-pages (remove-if-not (op (eq (class-name-of _) 'blog-post-page))
+                                         (hash-table-values (registry-store *registry*)))))
 
-    (setf *pages* (loop
-                    :with pages := (dict)
-                    :for page :in (@ posts-by-category "")
-                    :do (setf (@ pages (post-slug page)) page)
-                    :finally
-                       (setf (@ pages "archive") archive-page)
-                       (return pages)))
-
-    (loop :for category :being :the :hash-keys :in posts-by-category
-          :for posts := (@ posts-by-category category)
-          :with cats := (dict)
-          :with feeds := (dict)
-          :unless (or (null category) (str:emptyp category))
-            :do (let* ((cat-art (make-blog-post-listing-page
-                                 :path category
-                                 :posts posts
-                                 :title (str:capitalize category)
-                                 :author *author*))
-                       (feed-art (make-atom-feed-artifact
-                                  :location (base-path-join category "/feed.xml")
-                                  :posts (take 15 posts)
-                                  :title (str:capitalize category)
-                                  :author *author*)))
-                  (setf (@ cats category) cat-art)
-                  (setf (@ feeds category) feed-art))
-          :finally
-             (setf *category-indices* cats)
-             (setf *atom-feeds* feeds))
-
-    (loop :for tag :being :the :hash-keys :in posts-by-tags
-          :for posts := (@ posts-by-tags tag)
-          :with tag-pages := (dict)
-          :with feeds := (dict)
-          :do
-             (let* ((tag-art (make-blog-post-listing-page
-                              :path (base-path-join "tags/" tag)
-                              :posts posts
-                              :title (str:capitalize tag)
-                              :author *author*))
-                    (feed-art (make-atom-feed-artifact
-                               :location (base-path-join "/tags/" tag "/feed.xml")
-                               :posts (take 15 posts)
-                               :title (str:capitalize tag)
-                               :author *author*)))
-               (setf (@ tag-pages tag) tag-art)
-               (setf (@ feeds tag) feed-art))
-          :finally
-             (setf *tag-indices* tag-pages)
-             (setf *atom-feeds* (merge-tables *atom-feeds* feeds)))
+    (registry-add-artifact
+     *registry*
+     (make-blog-post-listing-page
+      :path "/archive"
+      :id "archive"
+      :title "Archive"
+      :author *author*
+      :posts blog-post-pages))
 
     (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
 
     (publish-static :content static :dest-dir www)
 
-    (setf (@ *atom-feeds* "archive")
-          (make-atom-feed-artifact :title site-title
-                                   :posts (take 15 blog-post-pages)
-                                   :author *author*
-                                   :location "/archive/feed.xml"))
-
-    (setf (@ *category-indices* "projects")
-          (make-software-project-listing-page
-           :path "/projects"
-           :projects project-pages
-           :author *author*
-           :title "Projects"))
+    ;; TODO remove draft and micro posts
+    ;; TODO add projects
+    ;; TODO add atom-feeds for every listing
 
     ;; Publish home-page and all its dependencies
     (let ((*already-published-artifacts* nil))
       (handler-bind ((file-already-exists #'skip-existing))
-        (publish-artifact
-         (make-adventure-page deutsch-adventure :location "/adventures/" :author *author*)
-         www)
+        ;; (publish-artifact
+        ;;  (make-adventure-page deutsch-adventure :location "/adventures/" :author *author*)
+        ;;  www)
         (publish-artifact
          (make-home-page :title site-title
                          :all-posts blog-post-pages
@@ -195,20 +50,7 @@ computers, security and politics.")
 
     t))
 
-(defun test-build ()
-  (let* ((www (path-join *base-dir* "docs/"))
-         (static (path-join *base-dir* "src/static/"))
-         (*print-pretty* t))
-
-    (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
-    (publish-static :content static :dest-dir www)
-
-    (let ((*test* (@ (registry-store *registry*) "20240120T133035")))
-      (publish-artifact *test* (path-join *base-dir* "docs/")))
-
-    t))
-
-(test-build)
+(build)
 
 ;; quick hack to auto-build
 ;; elisp

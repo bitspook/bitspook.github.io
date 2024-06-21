@@ -8,11 +8,7 @@
                :feeder :plump :quri :clss :lquery)
   :components ((:module "src"
                 :components ((:file "package")
-
-                             (:module "provider"
-                              :components ((:file "org-file-provider")
-                                           (:file "denote-provider")
-                                           (:file "org-project-provider")))
+                             (:file "utils")
 
                              (:module "models"
                               :components ((:file "persona")
@@ -20,6 +16,11 @@
                                            (:file "blog-post")
                                            (:file "software-project")
                                            (:file "adventure")))
+
+                             (:module "provider"
+                              :components ((:file "org-file-provider")
+                                           (:file "denote-provider")
+                                           (:file "org-project-provider")))
 
                              (:module "lass"
                               :components ((:file "modern-normalize")
@@ -47,5 +48,8 @@
                                            (:file "listings")
                                            (:file "note")
                                            (:file "adventure")
-                                           (:file "home-page"))))))
+                                           (:file "home-page")))
+
+                             (:file "registry")
+                             (:file "content"))))
   :description "A blog implemented using cl-ownpress")
