@@ -27,18 +27,13 @@
   (let ((ids (@ (registry-indices reg) 'categorized category)))
     (mapcar (op (@ (registry-store reg) _)) ids)))
 
-(registry-add-index *registry* 'atom-feed)
+;; Query an Atom feed
 (defmethod registry-query ((reg artifact-registry)
                            (key (eql 'atom-feed))
-                           &key feed)
-  (let ((blog-posts (remove-if-not
-                     (op (eq (class-name-of _) 'blog-post-page))
-                     (hash-table-values (registry-store *registry*)))))
-    (make-atom-feed-artifact
-     :title *site-title*
-     :posts (take 15 blog-posts)
-     :author *author*
-     :location "/archive/feed.xml")))
+                           &key type name)
+  (let* ((listing-id (str:downcase
+                      (format nil "feed-~a-~a" type name))))
+    (registry-query reg listing-id)))
 
 ;; Query a listing page
 (defmethod registry-query ((reg artifact-registry)

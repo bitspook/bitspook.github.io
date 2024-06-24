@@ -3,7 +3,7 @@
 (defclass listing-page (html-page-artifact)
   ((id :initform nil :initarg :id :accessor artifact-id)))
 
-(defun make-listing-page (&key path items author title (page-size 10) widget css-location (id nil))
+(defun make-listing-page (&key path items author title type name (page-size 10) widget css-location (id nil))
   (let* ((page-size (or page-size (length items)))
          (item-batches (batches items page-size))
          (pages (loop
@@ -13,6 +13,8 @@
                                             :items batch
                                             :title title
                                             :author author
+                                            :name name
+                                            :type type
                                             :next-page (when (> batch-num 0)
                                                          `("Newer" . ,(if (zerop (1- batch-num))
                                                                           "../"
@@ -52,7 +54,7 @@
    :widget 'software-project-listing-w
    :css-location "/css/software-projects.css"))
 
-(defun make-blog-post-listing-page (&key path posts author title (page-size 10) (id nil))
+(defun make-blog-post-listing-page (&key path posts author title type name (page-size 10) (id nil))
   (make-listing-page
    :path path
    :items posts
@@ -60,5 +62,7 @@
    :title title
    :page-size page-size
    :widget 'blog-post-listing-w
+   :name name
+   :type type
    :id id
    :css-location "/css/blog-posts.css"))

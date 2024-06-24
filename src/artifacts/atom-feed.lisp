@@ -31,9 +31,10 @@
    (posts :initarg :posts)
    (summary :initarg :summary)))
 
-(defun make-atom-feed-artifact (&key posts author title location (summary ""))
+(defun make-atom-feed-artifact (&key posts author title location (id nil) (summary ""))
   "Create an RSS feed in FEED-FORMAT for POSTS."
   (make 'atom-feed-artifact
+        :id id
         :title title
         :posts posts
         :author author

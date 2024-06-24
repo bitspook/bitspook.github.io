@@ -89,12 +89,25 @@
     (dolist (tag tags)
       (let* ((posts (registry-query registry 'tagged :tag tag))
              (listing-id (format nil "listing-tag-~a" tag))
-             (listing (make-blog-post-listing-page :path (format nil "/tags/~a" tag)
-                                                   :posts posts
-                                                   :author *author*
-                                                   :id listing-id
-                                                   :title (str:capitalize tag))))
-        (registry-add-artifact registry listing)))))
+             (feed-id (format nil "feed-tag-~a" tag))
+             (title (str:capitalize tag))
+             (path (format nil "/tags/~a" tag))
+             (listing (make-blog-post-listing-page
+                       :path path
+                       :posts posts
+                       :author *author*
+                       :id listing-id
+                       :type 'tag
+                       :name tag
+                       :title title))
+             (feed (make-atom-feed-artifact
+                    :title (str:concat *site-title* ": " title)
+                    :posts (take 15 posts)
+                    :author *author*
+                    :id feed-id
+                    :location (base-path-join path "/feed.xml"))))
+        (registry-add-artifact registry listing)
+        (registry-add-artifact registry feed)))))
 
 (defun load-category-listings (registry)
   (let ((cats (hash-table-keys (@ (registry-indices registry) 'categorized))))
@@ -102,12 +115,25 @@
       (when cat
         (let* ((posts (registry-query registry 'categorized :category cat))
                (listing-id (format nil "listing-category-~a" cat))
-               (listing (make-blog-post-listing-page :path (format nil "/~a" cat)
-                                                     :posts posts
-                                                     :author *author*
-                                                     :id listing-id
-                                                     :title (str:capitalize cat))))
-          (registry-add-artifact registry listing))))))
+               (feed-id (format nil "feed-category-~a" cat))
+               (path (format nil "/~a" cat))
+               (title (str:capitalize cat))
+               (listing (make-blog-post-listing-page
+                         :path path
+                         :posts posts
+                         :author *author*
+                         :id listing-id
+                         :type 'category
+                         :name cat
+                         :title title))
+               (feed (make-atom-feed-artifact
+                      :title (str:concat *site-title* ": " title)
+                      :posts (take 15 posts)
+                      :author *author*
+                      :id feed-id
+                      :location (base-path-join path "/feed.xml"))))
+          (registry-add-artifact registry listing)
+          (registry-add-artifact registry feed))))))
 
 (defun load-listing-pages (registry)
   (load-tag-listings registry)
@@ -120,12 +146,21 @@
                   :path "/archive"
                   :id "archive"
                   :title "Archive"
+                  :name 'all
+                  :type 'all
                   :author *author*
                   :posts blog-posts))
+        (archive-feed (make-atom-feed-artifact
+                       :title (str:concat *site-title* " : All content")
+                       :posts (take 15 blog-posts)
+                       :author *author*
+                       :id "feed-all-all"
+                       :location "/archive/feed.xml"))
         (home (make-home-page :title site-title
                               :all-posts blog-posts
                               :author *author*
                               :about-me-summary (make 'about-me-summary-w))))
-    (registry-add-artifact registry archive)
     (registry-add-artifact registry home)
+    (registry-add-artifact registry archive)
+    (registry-add-artifact registry archive-feed)
     home))

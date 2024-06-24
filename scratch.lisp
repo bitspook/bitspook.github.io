@@ -13,7 +13,7 @@
 
 (defun build ()
   (let* ((site-title *site-title*)
-         (www (path-join *base-dir* "bubu/"))
+         (www (path-join *base-dir* "build/"))
          (static (path-join *base-dir* "src/static/"))
          (*print-pretty* nil)
          (blog-post-pages (remove-if-not (op (eq (class-name-of _) 'blog-post-page))

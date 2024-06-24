@@ -116,7 +116,7 @@
       (:footer.footer.postamble
        (render 'newsletter-form-w)
        (:p.rss-sub
-        (:a :href (link-artifact 'atom-feed :feed "archive")
+        (:a :href (link-artifact 'atom-feed :type 'all :name 'all)
             :title "Follow via RSS"
             :target "blank"
             (:span.rss) "Follow via RSS"))

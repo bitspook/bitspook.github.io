@@ -40,13 +40,17 @@
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
-(defwidget blog-post-listing-w (items title author next-page previous-page css-file-artifact)
+(defwidget blog-post-listing-w (items title author next-page name type
+                                      previous-page css-file-artifact)
     (bp-listing-lass)
   (:html
    (:head (:title title)
           (:meta :name "viewport" :content "width=device-width, initial-scale=1")
           (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
-          (:link :rel "alternate" :type "application/atom+xml" :href (link-artifact 'atom-feed :feed "archive"))
+          (:link :rel "alternate" :type "application/atom+xml" :title "All content"
+                 :href (link-artifact 'atom-feed :type 'all :name 'all))
+          (:link :rel "alternate" :type "application/atom+xml" :title title
+                 :href (link-artifact 'atom-feed :type type :name name))
           (:script :src "/js/app.js"))
    (:body
     (:div
@@ -54,8 +58,8 @@
      (:article.content
       (:header.header
        (:h1.title title)
-       (:a.rss-sub :title "ATOM feed" :target "_blank" :href (link-artifact 'atom-feed :feed (str:downcase title))
-                   (:span.rss)))
+       (:a.rss-sub :title "ATOM feed" :target "_blank"
+                   :href (link-artifact 'atom-feed :type type :name name) (:span.rss)))
 
       (:main
        (:ul.listing
