@@ -44,23 +44,6 @@
     (note-body-dom note)
     *registry*)))
 
-(defmethod from ((obj org-file) (to (eql 'note)) &key author)
-  (with-accessors ((id org-file-id)
-                   (metadata org-file-metadata)
-                   (body org-file-body-html)
-                   (filepath org-file-filepath))
-      obj
-    (make 'note
-          :id id
-          :title (@ metadata "title")
-          :slug (@ metadata "slug")
-          :tags (@ metadata "tags")
-          :metadata metadata
-          :created-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
-          :updated-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
-          :body-dom (plump:parse body)
-          :author (or author (make 'persona :name "Unknown")))))
-
 (defun denote-links (node)
   (declare (plump:node node))
   (clss:select "a[data-denote-id]" node))

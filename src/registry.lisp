@@ -40,20 +40,13 @@
      :author *author*
      :location "/archive/feed.xml")))
 
+;; Query a listing page
 (defmethod registry-query ((reg artifact-registry)
                            (key (eql 'listing))
                            &key type name)
-  (let ((artifacts (ecase type
-                     (category (registry-query reg 'categorized :category name))
-                     (tag (registry-query reg 'tagged :tag name))))
-        (location (ecase type
-                    (category name)
-                    (tag (format nil "tags/~a" name)))))
-    (make-blog-post-listing-page
-     :path location
-     :posts artifacts
-     :author *author*
-     :title (str:capitalize name))))
+  (let* ((listing-id (str:downcase
+                      (format nil "listing-~a-~a" type name))))
+    (registry-query reg listing-id)))
 
 ;; TODO populate these
 (registry-add-index *registry* 'adventure)

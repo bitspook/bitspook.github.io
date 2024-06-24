@@ -8,6 +8,7 @@
 ;; expensive operations
 (load-local-content *registry*)
 (load-denotes *registry*)
+(load-listing-pages *registry*)
 ;; end expensive operations
 
 (defun build ()
@@ -16,16 +17,8 @@
          (static (path-join *base-dir* "src/static/"))
          (*print-pretty* nil)
          (blog-post-pages (remove-if-not (op (eq (class-name-of _) 'blog-post-page))
-                                         (hash-table-values (registry-store *registry*)))))
-
-    (registry-add-artifact
-     *registry*
-     (make-blog-post-listing-page
-      :path "/archive"
-      :id "archive"
-      :title "Archive"
-      :author *author*
-      :posts blog-post-pages))
+                                         (hash-table-values (registry-store *registry*))))
+         (published-posts (remove-if (op (find "draft" (post-tags _) :test #'equal)) blog-post-pages)))
 
     (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
 
@@ -36,21 +29,18 @@
     ;; TODO add atom-feeds for every listing
 
     ;; Publish home-page and all its dependencies
-    (let ((*already-published-artifacts* nil))
+    (let ((*already-published-artifacts* nil)
+          (home (load-home-page
+                 *registry*
+                 :blog-posts published-posts
+                 :site-title site-title)))
       (handler-bind ((file-already-exists #'skip-existing))
         ;; (publish-artifact
         ;;  (make-adventure-page deutsch-adventure :location "/adventures/" :author *author*)
         ;;  www)
-        (publish-artifact
-         (make-home-page :title site-title
-                         :all-posts blog-post-pages
-                         :author *author*
-                         :about-me-summary (make 'about-me-summary))
-         www)))
+        (publish-artifact home www)))
 
     t))
-
-(build)
 
 ;; quick hack to auto-build
 ;; elisp

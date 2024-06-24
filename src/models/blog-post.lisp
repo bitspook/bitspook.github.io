@@ -57,11 +57,12 @@
     (plump-smart-serialize
      (resolve-linked-denotes summary-dom *registry*))))
 
-(defmethod from ((note note) (to (eql 'blog-post)) &key author)
+(defmethod from ((note note) (to (eql 'blog-post)) &key)
   (with-accessors ((id note-id)
                    (body-dom note-body-dom)
                    (metadata note-metadata)
                    (title note-title)
+                   (author note-author)
                    (created-at note-created-at)
                    (updated-at note-updated-at))
       note
@@ -75,22 +76,4 @@
           :published-at updated-at
           :body-dom body-dom
           :summary-dom nil
-          :author (or author (make 'persona :name "Unknown")))))
-
-(defmethod from ((obj org-file) (to (eql 'blog-post)) &key author)
-  (with-accessors ((id org-file-id)
-                   (metadata org-file-metadata)
-                   (body org-file-body-html)
-                   (filepath org-file-filepath))
-      obj
-    (make 'blog-post
-          :id id
-          :title (@ metadata "title")
-          :slug (@ metadata "slug")
-          :tags (@ metadata "tags")
-          :created-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
-          :updated-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
-          :published-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
-          :body-dom (plump:parse body)
-          :summary-dom nil
-          :author (or author (make 'persona :name "Unknown")))))
+          :author author)))

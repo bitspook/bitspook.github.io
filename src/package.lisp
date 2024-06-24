@@ -11,7 +11,7 @@
    :publish-static :publish-artifact :font-face :*base-url*
    :skip-existing :file-already-exists :*already-published-artifacts* :artifact-location
    :artifact-id :artifact-registry :registry-indices :registry-on-index-artifact
-   :registry-add-artifact :registry-add-index :registry-query)
+   :registry-add-artifact :registry-add-index :registry-query :registry-store)
   (:local-nicknames
    (:feeder #:org.shirakumo.feeder) ;; entry feed link serialize-feed
    (:clown #:in.bitspook.cl-ownpress)))
@@ -23,15 +23,6 @@
 
 ;; (defparameter *base-url* "https://bitspook.in/")
 (defparameter *base-url* "/")
-
-(defparameter *author*
-  (make 'persona
-        :name "Charanjit Singh"
-        :avatar "/images/avatar.png"
-        :handles `(("Github" "bitspook" "https://github.com/bitspook")
-                   ("Mastodon" "bitspook" "https://infosec.exchange/@bitspook")
-                   ("LinkedIn" "bitspook" "https://www.linkedin.com/in/bitspook/")
-                   ("RSS" "bitspook.in" "/archive/feed.xml"))))
 
 (defparameter *base-dir* (asdf:system-relative-pathname :in.bitspook.website ""))
 

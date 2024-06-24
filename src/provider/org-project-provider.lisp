@@ -21,4 +21,4 @@
           :created-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
           :updated-at (local-time:parse-timestring (@ metadata "updated_at") :date-time-separator #\Space)
           :body body
-          :author (or author (make 'persona :name "Unknown")))))
+          :author author)))

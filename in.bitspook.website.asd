@@ -39,7 +39,8 @@
                                            (:file "software-project-listing")
                                            (:file "home-page")
                                            (:file "adventure")
-                                           (:file "note")))
+                                           (:file "note")
+                                           (:file "about-me")))
 
                              (:module "artifacts"
                               :components ((:file "blog-post")

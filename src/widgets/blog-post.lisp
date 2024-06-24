@@ -62,7 +62,7 @@
              (dolist (tag tags)
                (:li.tag
                 (:a :href
-                    (link-artifact 'tagged :tag tag)
+                    (link-artifact 'listing :type 'tag :name tag)
                     (str:concat "#" (str:downcase tag)))))))))
         (:main :class "post-body" (:raw (post-body post))))
        (render 'footer-w :author author))))))

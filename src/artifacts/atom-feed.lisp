@@ -66,7 +66,12 @@
         (plump:serialize feed-dom str)))))
 
 (defmethod publish-artifact ((art atom-feed-artifact) dest-dir)
-  (setf *already-published-artifacts* (concatenate 'list *already-published-artifacts* (list art)))
+  (when (find (artifact-location art) *already-published-artifacts*)
+    (return-from publish-artifact))
+  (appendf *already-published-artifacts* (list (artifact-location art)))
+
+  (setf *already-published-artifacts*
+        (concatenate 'list *already-published-artifacts* (list art)))
   (let ((content (artifact-content art)))
     (dolist (dep (artifact-deps art))
       (publish-artifact dep dest-dir))

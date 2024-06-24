@@ -4,6 +4,16 @@
 (defparameter *local-blog-posts* nil)
 (defparameter *projects* nil)
 
+;; Author
+(defparameter *author*
+  (make 'persona
+        :name "Charanjit Singh"
+        :avatar "/images/avatar.png"
+        :handles `(("Github" "bitspook" "https://github.com/bitspook")
+                   ("Mastodon" "bitspook" "https://infosec.exchange/@bitspook")
+                   ("LinkedIn" "bitspook" "https://www.linkedin.com/in/bitspook/")
+                   ("RSS" "bitspook.in" "/archive/feed.xml"))))
+
 ;; Denotes
 (defun blog-note-p (note)
   (declare (note note))
@@ -70,3 +80,52 @@
     (mapcar
      (op (from _ 'software-project :author *author*))
      (provide-all project-provider (path-join *base-dir* "projects/")))))
+
+;; ---
+
+;; Listings
+(defun load-tag-listings (registry)
+  (let ((tags (hash-table-keys (@ (registry-indices registry) 'tagged))))
+    (dolist (tag tags)
+      (let* ((posts (registry-query registry 'tagged :tag tag))
+             (listing-id (format nil "listing-tag-~a" tag))
+             (listing (make-blog-post-listing-page :path (format nil "/tags/~a" tag)
+                                                   :posts posts
+                                                   :author *author*
+                                                   :id listing-id
+                                                   :title (str:capitalize tag))))
+        (registry-add-artifact registry listing)))))
+
+(defun load-category-listings (registry)
+  (let ((cats (hash-table-keys (@ (registry-indices registry) 'categorized))))
+    (dolist (cat cats)
+      (when cat
+        (let* ((posts (registry-query registry 'categorized :category cat))
+               (listing-id (format nil "listing-category-~a" cat))
+               (listing (make-blog-post-listing-page :path (format nil "/~a" cat)
+                                                     :posts posts
+                                                     :author *author*
+                                                     :id listing-id
+                                                     :title (str:capitalize cat))))
+          (registry-add-artifact registry listing))))))
+
+(defun load-listing-pages (registry)
+  (load-tag-listings registry)
+  (load-category-listings registry))
+;; ---
+
+;;; Home page
+(defun load-home-page (registry &key blog-posts site-title)
+  (let ((archive (make-blog-post-listing-page
+                  :path "/archive"
+                  :id "archive"
+                  :title "Archive"
+                  :author *author*
+                  :posts blog-posts))
+        (home (make-home-page :title site-title
+                              :all-posts blog-posts
+                              :author *author*
+                              :about-me-summary (make 'about-me-summary-w))))
+    (registry-add-artifact registry archive)
+    (registry-add-artifact registry home)
+    home))
