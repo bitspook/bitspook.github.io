@@ -141,26 +141,34 @@
 ;; ---
 
 ;;; Home page
-(defun load-home-page (registry &key blog-posts site-title)
-  (let ((archive (make-blog-post-listing-page
-                  :path "/archive"
-                  :id "archive"
-                  :title "Archive"
-                  :name 'all
-                  :type 'all
-                  :author *author*
-                  :posts blog-posts))
-        (archive-feed (make-atom-feed-artifact
-                       :title (str:concat *site-title* " : All content")
-                       :posts (take 15 blog-posts)
-                       :author *author*
-                       :id "feed-all-all"
-                       :location "/archive/feed.xml"))
-        (home (make-home-page :title site-title
-                              :all-posts blog-posts
-                              :author *author*
-                              :about-me-summary (make 'about-me-summary-w))))
+(defun load-home-page (registry)
+  (let* ((blog-posts (remove-if-not (op (eq (class-name-of _) 'blog-post-page))
+                                    (hash-table-values (registry-store *registry*))))
+         (archive (make-blog-post-listing-page
+                   :path "/archive"
+                   :id "archive"
+                   :title "Archive"
+                   :name 'all
+                   :type 'all
+                   :author *author*
+                   :posts blog-posts))
+         (archive-feed (make-atom-feed-artifact
+                        :title (str:concat *site-title* " : All content")
+                        :posts (take 15 blog-posts)
+                        :author *author*
+                        :id "feed-all-all"
+                        :location "/archive/feed.xml"))
+         (home (make-home-page :title *site-title*
+                               :all-posts blog-posts
+                               :author *author*
+                               :about-me-summary (make 'about-me-summary-w))))
     (registry-add-artifact registry home)
     (registry-add-artifact registry archive)
     (registry-add-artifact registry archive-feed)
     home))
+
+(defun load-all-content (registry)
+  (load-local-content registry)
+  (load-denotes registry)
+  (load-listing-pages registry)
+  (load-home-page registry))

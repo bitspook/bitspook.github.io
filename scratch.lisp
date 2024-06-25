@@ -6,19 +6,13 @@
 ;; (stop-rpc-server *rpc-server*)
 
 ;; expensive operations
-(load-local-content *registry*)
-(load-denotes *registry*)
-(load-listing-pages *registry*)
+(load-all-content *registry*)
 ;; end expensive operations
 
 (defun build ()
-  (let* ((site-title *site-title*)
-         (www (path-join *base-dir* "build/"))
+  (let* ((www (path-join *base-dir* "build/"))
          (static (path-join *base-dir* "src/static/"))
-         (*print-pretty* nil)
-         (blog-post-pages (remove-if-not (op (eq (class-name-of _) 'blog-post-page))
-                                         (hash-table-values (registry-store *registry*))))
-         (published-posts (remove-if (op (find "draft" (post-tags _) :test #'equal)) blog-post-pages)))
+         (*print-pretty* nil))
 
     (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
 
@@ -30,10 +24,7 @@
 
     ;; Publish home-page and all its dependencies
     (let ((*already-published-artifacts* nil)
-          (home (load-home-page
-                 *registry*
-                 :blog-posts published-posts
-                 :site-title site-title)))
+          (home (registry-query *registry* "home")))
       (handler-bind ((file-already-exists #'skip-existing))
         ;; (publish-artifact
         ;;  (make-adventure-page deutsch-adventure :location "/adventures/" :author *author*)
