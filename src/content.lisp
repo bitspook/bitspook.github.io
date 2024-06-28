@@ -142,7 +142,8 @@
 
 ;;; Home page
 (defun load-home-page (registry)
-  (let* ((blog-posts (remove-if-not (op (eq (class-name-of _) 'blog-post-page))
+  (let* ((blog-posts (remove-if-not (op (and (eq (class-name-of _1) 'blog-post-page)
+                                             (publish-artifact-p _1)))
                                     (hash-table-values (registry-store *registry*))))
          (archive (make-blog-post-listing-page
                    :path "/archive"

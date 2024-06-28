@@ -42,3 +42,14 @@ of ITEMs as value."
     (if artifact
         (embed-artifact-as artifact 'link)
         (warn "Failed to find artifact [query=~a]" query))))
+
+(defun publish-artifact-p (artifact)
+  "Can this artifact be published?"
+  (and
+   (not (some (op (find _ *blacklisted-tags* :test #'equal))
+              (artifact-tags artifact)))
+
+   (not (let ((loc (namestring (artifact-location artifact))))
+          (and (string-contains-p "/tags/" loc)
+               (some (op (string-contains-p _ loc))
+                     *unpublished-tags*))))))

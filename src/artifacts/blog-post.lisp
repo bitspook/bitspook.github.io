@@ -26,4 +26,5 @@
           :root-widget root-widget
           :deps (list css-art))))
 
-
+(defmethod artifact-tags ((obj blog-post-page))
+  (post-tags obj))

@@ -23,3 +23,6 @@
           :location html-path
           :root-widget root-widget
           :deps (list css-art))))
+
+(defmethod artifact-tags ((obj note-page))
+  (note-tags obj))

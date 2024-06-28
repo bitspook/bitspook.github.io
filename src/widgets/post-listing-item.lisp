@@ -59,4 +59,5 @@
      (when-let ((tags (post-tags post)))
        (:span :class "meta-item tags"
               (dolist (tag tags)
-                (:a :href (link-artifact 'listing :type 'tag :name tag) (str:concat "#" (str:downcase tag))))))))))
+                (when-let ((link (link-artifact 'listing :type 'tag :name tag)))
+                  (:a :href link (str:concat "#" (str:downcase tag)))))))))))

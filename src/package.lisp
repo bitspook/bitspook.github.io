@@ -27,3 +27,16 @@
 (defparameter *base-dir* (asdf:system-relative-pathname :in.bitspook.website ""))
 
 (defparameter *site-title* "@bitspook's personal website")
+
+(defparameter *blacklisted-tags* '("draft" "micro")
+  "Artifact with these tags will not get published.")
+
+(defparameter *unpublished-tags* (append *blacklisted-tags* '("blog-post" "blogpost"))
+  "These tags will not get published.")
+
+(defgeneric artifact-tags (artifact)
+  (:method ((artifact artifact)) nil))
+
+(defmethod embed-artifact-as ((artifact html-page-artifact) (as (eql 'link)) &key)
+  (when (publish-artifact-p artifact)
+    (call-next-method artifact 'link)))
