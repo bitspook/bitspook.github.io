@@ -87,7 +87,7 @@
 (defun load-tag-listings (registry)
   (let ((tags (hash-table-keys (@ (registry-indices registry) 'tagged))))
     (dolist (tag tags)
-      (let* ((posts (registry-query registry 'tagged :tag tag))
+      (let* ((posts (get-sorted-posts (registry-query registry 'tagged :tag tag)))
              (listing-id (format nil "listing-tag-~a" tag))
              (feed-id (format nil "feed-tag-~a" tag))
              (title (str:capitalize tag))
@@ -106,14 +106,15 @@
                     :author *author*
                     :id feed-id
                     :location (base-path-join path "/feed.xml"))))
-        (registry-add-artifact registry listing)
-        (registry-add-artifact registry feed)))))
+        (when listing
+          (registry-add-artifact registry listing)
+          (registry-add-artifact registry feed))))))
 
 (defun load-category-listings (registry)
   (let ((cats (hash-table-keys (@ (registry-indices registry) 'categorized))))
     (dolist (cat cats)
       (when cat
-        (let* ((posts (registry-query registry 'categorized :category cat))
+        (let* ((posts (get-sorted-posts (registry-query registry 'categorized :category cat)))
                (listing-id (format nil "listing-category-~a" cat))
                (feed-id (format nil "feed-category-~a" cat))
                (path (format nil "/~a" cat))
@@ -142,9 +143,7 @@
 
 ;;; Home page
 (defun load-home-page (registry)
-  (let* ((blog-posts (remove-if-not (op (and (eq (class-name-of _1) 'blog-post-page)
-                                             (publish-artifact-p _1)))
-                                    (hash-table-values (registry-store *registry*))))
+  (let* ((blog-posts (get-sorted-posts (hash-table-values (registry-store *registry*))))
          (archive (make-blog-post-listing-page
                    :path "/archive"
                    :id "archive"
@@ -168,8 +167,8 @@
     (registry-add-artifact registry archive-feed)
     home))
 
-(defun load-all-content (registry)
-  (load-local-content registry)
-  (load-denotes registry)
-  (load-listing-pages registry)
-  (load-home-page registry))
+(defun load-all-content ()
+  (load-local-content *registry*)
+  (load-denotes *registry*)
+  (load-listing-pages *registry*)
+  (load-home-page *registry*))

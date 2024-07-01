@@ -6,7 +6,7 @@
 ;; (stop-rpc-server *rpc-server*)
 
 ;; expensive operations
-(load-all-content *registry*)
+(load-all-content)
 ;; end expensive operations
 
 (defun build ()

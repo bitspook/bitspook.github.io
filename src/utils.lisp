@@ -53,3 +53,11 @@ of ITEMs as value."
           (and (string-contains-p "/tags/" loc)
                (some (op (string-contains-p _ loc))
                      *unpublished-tags*))))))
+
+(defun get-sorted-posts (artifacts)
+  (sort (remove-if-not (op (and (eq (class-name-of _1) 'blog-post-page)
+                                (publish-artifact-p _1)))
+                       artifacts)
+        (lambda (a b)
+          (local-time:timestamp>
+           (post-published-at a) (post-published-at b)))))
