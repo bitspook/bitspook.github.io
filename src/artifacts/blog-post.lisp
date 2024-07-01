@@ -2,7 +2,8 @@
 
 (defclass blog-post-page (html-page-artifact blog-post) nil)
 
-(defmethod from ((post blog-post) (to (eql 'html-page-artifact)) &key location (css-location "/css/post.css"))
+(defmethod from ((post blog-post) (to (eql 'html-page-artifact))
+                 &key location (css-location "/css/post.css"))
   (let* ((html-path (base-path-join location "/" (post-category post) "/" (post-slug post) "/index.html"))
          (root-widget (make 'blog-post-w :post post))
          (css-art (make 'css-file-artifact :location css-location :root-widget root-widget)))

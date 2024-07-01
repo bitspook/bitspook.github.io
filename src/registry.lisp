@@ -27,6 +27,12 @@
   (let ((ids (@ (registry-indices reg) 'categorized category)))
     (mapcar (op (@ (registry-store reg) _)) ids)))
 
+;; Projects
+(defmethod registry-on-index-artifact ((reg artifact-registry)
+                                       (post software-project-page)
+                                       (idx (eql 'categorized)) &key)
+  (call-next-method reg post idx :keys '("projects")))
+
 ;; Query an Atom feed
 (defmethod registry-query ((reg artifact-registry)
                            (key (eql 'atom-feed))

@@ -2,7 +2,8 @@
 
 (defclass software-project-page (html-page-artifact software-project) nil)
 
-(defun make-software-project-page (project &key location (css-location "/css/software-project.css"))
+(defmethod from ((project software-project) (to (eql 'html-page-artifact))
+                 &key location (css-location "/css/software-project.css"))
   (with-slots (slug name description tagline issue-tracker source-code tags languages created-at updated-at body author) project
     (let* ((html-path (base-path-join location "/" slug "/index.html"))
            (root-widget (make 'software-project-w :project project))
@@ -23,6 +24,10 @@
             :author author
 
             ;; html-page-artifact
+            :id (format nil "project-~a" name)
             :location html-path
             :root-widget root-widget
             :deps (list css-art)))))
+
+(defmethod artifact-tags ((obj software-project-page))
+  (project-tags obj))

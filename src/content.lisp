@@ -24,7 +24,7 @@
   (declare (note note))
   (find "adventure" (note-tags note) :test #'equal))
 
-(defun load-denotes (registry)
+(defun load-denotes ()
   (let ((provider (make 'denote-provider)))
     (setf *denotes*
           (union
@@ -33,7 +33,7 @@
 
   (loop :for note :in *denotes*
         :do (registry-add-artifact
-             registry
+             *registry*
              (cond
                ((adventure-note-p note)
                 (from (from note 'adventure)
@@ -45,7 +45,7 @@
 ;; ---
 
 ;; Local content
-(defun load-local-content (registry)
+(defun load-local-content ()
   (labels ((local-org-file-to-post (file)
              "Set filename as slug if no slug is explicitly provided"
              (let ((post (from file 'blog-post :author *author*)))
@@ -70,24 +70,27 @@
 
   (loop :for post :in *local-blog-posts*
         :for page := (from post 'html-page-artifact :location "/")
-        :do (registry-add-artifact registry page)))
+        :do (registry-add-artifact *registry* page)))
 
 ;; ---
 ;; Projects
 (defun load-projects ()
   ;; TODO This ain't complete.
-  (let ((project-provider (make 'org-project-provider)))
-    (mapcar
-     (op (from _ 'software-project :author *author*))
-     (provide-all project-provider (path-join *base-dir* "projects/")))))
-
+  (let* ((project-provider (make 'org-project-provider))
+         (projects (mapcar
+                    (op (from _ 'software-project :author *author*))
+                    (provide-all project-provider (path-join *base-dir* "projects/"))))
+         (project-pages (mapcar (op (from _ 'html-page-artifact :location "/"))
+                                projects)))
+    (dolist (page project-pages)
+      (registry-add-artifact *registry* page))))
 ;; ---
 
 ;; Listings
-(defun load-tag-listings (registry)
-  (let ((tags (hash-table-keys (@ (registry-indices registry) 'tagged))))
+(defun load-tag-listings ()
+  (let ((tags (hash-table-keys (@ (registry-indices *registry*) 'tagged))))
     (dolist (tag tags)
-      (let* ((posts (get-sorted-posts (registry-query registry 'tagged :tag tag)))
+      (let* ((posts (get-sorted-posts (registry-query *registry* 'tagged :tag tag)))
              (listing-id (format nil "listing-tag-~a" tag))
              (feed-id (format nil "feed-tag-~a" tag))
              (title (str:capitalize tag))
@@ -107,14 +110,14 @@
                     :id feed-id
                     :location (base-path-join path "/feed.xml"))))
         (when listing
-          (registry-add-artifact registry listing)
-          (registry-add-artifact registry feed))))))
+          (registry-add-artifact *registry* listing)
+          (registry-add-artifact *registry* feed))))))
 
-(defun load-category-listings (registry)
-  (let ((cats (hash-table-keys (@ (registry-indices registry) 'categorized))))
+(defun load-category-listings ()
+  (let ((cats (hash-table-keys (@ (registry-indices *registry*) 'categorized))))
     (dolist (cat cats)
-      (when cat
-        (let* ((posts (get-sorted-posts (registry-query registry 'categorized :category cat)))
+      (unless (equal cat "projects")
+        (let* ((posts (get-sorted-posts (registry-query *registry* 'categorized :category cat)))
                (listing-id (format nil "listing-category-~a" cat))
                (feed-id (format nil "feed-category-~a" cat))
                (path (format nil "/~a" cat))
@@ -133,16 +136,41 @@
                       :author *author*
                       :id feed-id
                       :location (base-path-join path "/feed.xml"))))
-          (registry-add-artifact registry listing)
-          (registry-add-artifact registry feed))))))
+          (when listing
+            (registry-add-artifact *registry* listing)
+            (registry-add-artifact *registry* feed)))))
 
-(defun load-listing-pages (registry)
-  (load-tag-listings registry)
-  (load-category-listings registry))
+    (let* ((cat "projects")
+           (projects (registry-query *registry* 'categorized :category cat))
+           (listing-id (format nil "listing-category-~a" cat))
+           (feed-id (format nil "feed-category-~a" cat))
+           (path (format nil "/~a" cat))
+           (title (str:capitalize cat))
+           (listing (make-software-project-listing-page
+                     :path path
+                     :projects projects
+                     :author *author*
+                     :id listing-id
+                     :type 'category
+                     :name cat
+                     :title title))
+           (feed (make-atom-feed-artifact
+                  :title (str:concat *site-title* ": " title)
+                  :posts (take 15 projects)
+                  :author *author*
+                  :id feed-id
+                  :location (base-path-join path "/feed.xml"))))
+      (when listing
+        (registry-add-artifact *registry* listing)
+        (registry-add-artifact *registry* feed)))))
+
+(defun load-listing-pages ()
+  (load-tag-listings)
+  (load-category-listings))
 ;; ---
 
 ;;; Home page
-(defun load-home-page (registry)
+(defun load-home-page ()
   (let* ((blog-posts (get-sorted-posts (hash-table-values (registry-store *registry*))))
          (archive (make-blog-post-listing-page
                    :path "/archive"
@@ -162,13 +190,14 @@
                                :all-posts blog-posts
                                :author *author*
                                :about-me-summary (make 'about-me-summary-w))))
-    (registry-add-artifact registry home)
-    (registry-add-artifact registry archive)
-    (registry-add-artifact registry archive-feed)
+    (registry-add-artifact *registry* home)
+    (registry-add-artifact *registry* archive)
+    (registry-add-artifact *registry* archive-feed)
     home))
 
 (defun load-all-content ()
-  (load-local-content *registry*)
-  (load-denotes *registry*)
-  (load-listing-pages *registry*)
-  (load-home-page *registry*))
+  (load-local-content)
+  (load-denotes)
+  (load-projects)
+  (load-listing-pages)
+  (load-home-page))

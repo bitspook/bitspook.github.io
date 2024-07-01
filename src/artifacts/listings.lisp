@@ -44,11 +44,14 @@
 
     first-page))
 
-(defun make-software-project-listing-page (&key path projects author title (page-size 10))
+(defun make-software-project-listing-page (&key path projects author name title type (page-size 10) (id nil))
   (make-listing-page
+   :id id
    :path path
    :items projects
    :author author
+   :type type
+   :name name
    :title title
    :page-size page-size
    :widget 'software-project-listing-w
