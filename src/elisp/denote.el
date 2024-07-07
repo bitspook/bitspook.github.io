@@ -22,7 +22,7 @@
 
 (cl-defun main (&key tags ids)
   "Provide all denotes which have all TAGS."
-  (let* ((all-files (denote-all-files))
+  (let* ((all-files (denote--directory-get-files))
          (files-with-id (if ids (cl-remove-if-not
                                  (lambda (fname)
                                    (let ((file-id (denote-extract-id-from-string fname)))

@@ -37,6 +37,7 @@
                                            (:file "software-project-listing-item")
                                            (:file "software-project")
                                            (:file "software-project-listing")
+                                           (:file "home-sidebar")
                                            (:file "home-page")
                                            (:file "adventure")
                                            (:file "note")

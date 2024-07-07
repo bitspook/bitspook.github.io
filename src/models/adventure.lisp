@@ -33,13 +33,13 @@
 (defmethod from ((note note) (to (eql 'adventure)) &key)
   (let* ((body-dom (note-body-dom note))
          (summary-selector "#description")
-         (summary (when-let* ((nodes (null-if-empty (clss:select summary-selector body-dom)))
-                              (node (plump:remove-child (elt nodes 0))))
-                    (plump-smart-serialize node))))
+         (summary-dom (when-let* ((nodes (null-if-empty (clss:select summary-selector body-dom)))
+                                  (node (plump:remove-child (elt nodes 0))))
+                        node)))
     (make 'adventure
           :id (note-id note)
           :name (note-title note)
           :slug (note-slug note)
-          :summary-dom summary
+          :summary-dom summary-dom
           :content-dom body-dom
           :notes (note-linked-notes note))))

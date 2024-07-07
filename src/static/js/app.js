@@ -3,7 +3,7 @@ function preferedColorScheme() {
 }
 
 function run() {
-  document.getRootNode().firstChild.classList.add(preferedColorScheme())
+  document.querySelector('html').classList.add(preferedColorScheme())
 }
 
 run()

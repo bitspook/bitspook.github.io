@@ -45,9 +45,20 @@
 (defmethod registry-query ((reg artifact-registry)
                            (key (eql 'listing))
                            &key type name)
-  (let* ((listing-id (str:downcase
-                      (format nil "listing-~a-~a" type name))))
+  (let* ((listing-id (str:downcase (format nil "listing-~a-~a" type name))))
     (registry-query reg listing-id)))
 
-;; TODO populate these
+;; Query adventures
 (registry-add-index *registry* 'adventure)
+(defmethod registry-on-index-artifact ((reg artifact-registry)
+                                       (adv adventure-page)
+                                       (idx (eql 'adventure)) &key)
+  (call-next-method reg adv idx :keys '("all")))
+
+(defmethod registry-query ((reg artifact-registry)
+                           (key (eql 'adventure)) &key)
+  (let ((adventure-ids (@ (registry-indices reg) 'adventure "all")))
+    (mapcar (op (@ (registry-store reg) _))
+            adventure-ids)))
+
+(registry-query *registry* 'adventure)

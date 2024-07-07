@@ -22,9 +22,10 @@
                 :padding-bottom (var --scale-0)
                 :border-bottom 1px solid (var --color-grey-400))
 
-        (.blog-posts
-         :margin-bottom 0
+        ((:or .blog-posts .journeys)
+         :margin (var --scale-8) 0)
 
+        (.blog-posts
          (a :text-decoration none)
 
          (header :display flex)
@@ -56,6 +57,7 @@
             (.main :width "calc(100% - 450px)"
                    :max-width 872px
                    :padding-left (var --scale-4)))))
+  (:doctype)
   (:html
    (:head (:title title)
           (:meta :name "viewport" :content "width=device-width, initial-scale=1")
@@ -69,6 +71,16 @@
       :class "main"
 
       (render about-summary)
+
+      (:section.journeys
+       (:header (:h2.heading "Journeys")
+                (:p "A Journey is a long term commitment with or without a clear end."))
+       (:ul.listing
+        (dolist (adv (registry-query *registry* 'adventure))
+          (:li
+           (:a :href (embed-artifact-as adv 'link)
+               (adventure-name adv))
+           (:p (:raw (plump:text (adventure-summary-dom adv))))))))
 
       (:section.blog-posts
        (:header (:h2.heading "Blog"))

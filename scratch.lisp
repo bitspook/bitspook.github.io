@@ -22,6 +22,8 @@
     ;; TODO add projects
     ;; TODO add atom-feeds for every listing
 
+    (load-home-page)
+
     ;; Publish home-page and all its dependencies
     (let ((*already-published-artifacts* nil)
           (home (registry-query *registry* "home")))
