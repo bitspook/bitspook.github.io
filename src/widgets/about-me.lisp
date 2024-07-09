@@ -9,7 +9,7 @@
         :font-weight 500
 
         (.heading :font-family (var --font-title)
-                  :margin (var --scale-4) 0 (var --scale-2) 0
+                  :margin (var --scale-2) 0
                   :font-weight normal))))
   (:section
    :class "about-me-snippet"
@@ -21,4 +21,4 @@ You can go through my "
         (:a :href (link-artifact 'listing :type 'category :name "poems")  "poems") ", "
         (:a :href (link-artifact 'listing :type 'category :name "projects") "projects") " and also some "
         (:a :href (link-artifact 'listing :type 'category :name "talks") "talks") "I gave .")
-    (:p "If you want to know more about me, please go " (:a :href (link-artifact "about") "here.")))))
+    (:p "If you want to know more about me,  you can read " (:a :href (link-artifact "about") " the short bio.")))))

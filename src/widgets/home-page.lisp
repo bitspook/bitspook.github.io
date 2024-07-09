@@ -23,12 +23,14 @@
                 :border-bottom 1px solid (var --color-grey-400))
 
         ((:or .blog-posts .journeys)
-         :margin (var --scale-8) 0)
+         :margin (var --scale-6) 0)
+
+        (.journeys
+         (.listing :display flex
+                   :flex-wrap wrap))
 
         (.blog-posts
          (a :text-decoration none)
-
-         (header :display flex)
 
          (.read-more-btn :font-size (var --scale-1)
                          :margin 0.7rem 0
@@ -74,17 +76,41 @@
 
       (:section.journeys
        (:header (:h2.heading "Journeys")
-                (:p "A Journey is a long term commitment with or without a clear end."))
-       (:ul.listing
+                (:p "A Journey is a long term commitment with or without a clear end. Here's a list of journeys I've put
+myself on. On these web pages are footprints I've left as I am going through them."))
+       (:div.listing
         (dolist (adv (registry-query *registry* 'adventure))
-          (:li
-           (:a :href (embed-artifact-as adv 'link)
-               (adventure-name adv))
-           (:p (:raw (plump:text (adventure-summary-dom adv))))))))
+          (render 'journey-listing-item :journey adv))))
 
       (:section.blog-posts
-       (:header (:h2.heading "Blog"))
+       (:header (:h2.heading "Blog")
+                (:p "My blog is an open journal of sorts. Usually, I write here when I want to give my thoughts more
+                    structure than my personal journal approves, or to share my thoughts with the
+                    world. Mostly, it is just me shouting in the void."))
        (:ul.listing
         (dolist (post posts)
           (render 'blog-post-listing-item-w :post post)))
        (:footer (:a.read-more-btn :href (link-artifact "archive") "View all"))))))))
+
+(defwidget journey-listing-item (journey)
+    (tagged-lass
+     `((.journey-listing-item
+        :display flex
+        :flex-direction column
+        :border 1px solid (var --color-grey-200)
+        :border-radius (var --size-2)
+        :padding (var --size-4)
+        :max-width (var --size-96)
+        :margin (var --scale-1) (var --scale-1)0 0
+
+        (.title
+         :font-family (var --font-text)
+         :font-size (var --scale-1)
+         :text-decoration none)))
+     :dark `((.journey-listing-item
+              :border-color (var --color-grey-800))))
+  (:div.journey-listing-item
+   (:h3.title
+    (:a :href (embed-artifact-as journey 'link)
+        (adventure-name journey)))
+   (:p (:raw (plump:text (adventure-summary-dom journey))))))
