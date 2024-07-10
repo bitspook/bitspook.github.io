@@ -15,7 +15,7 @@
                                            (:file "note")
                                            (:file "blog-post")
                                            (:file "software-project")
-                                           (:file "adventure")))
+                                           (:file "journey")))
 
                              (:module "provider"
                               :components ((:file "org-file-provider")
@@ -39,7 +39,7 @@
                                            (:file "software-project-listing")
                                            (:file "home-sidebar")
                                            (:file "home-page")
-                                           (:file "adventure")
+                                           (:file "journey")
                                            (:file "note")
                                            (:file "about-me")))
 
@@ -49,7 +49,7 @@
                                            (:file "software-project")
                                            (:file "listings")
                                            (:file "note")
-                                           (:file "adventure")
+                                           (:file "journey")
                                            (:file "home-page")))
 
                              (:file "registry")

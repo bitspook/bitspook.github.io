@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget adventure-w (adventure related-posts css-file-artifact author)
+(defwidget journey-w (journey related-posts css-file-artifact author)
     (tagged-lass
      (base-lass)
 
@@ -141,7 +141,7 @@
                             :color (var --color-grey-300)))))
 
   (:html
-   (:head (:title (adventure-name adventure))
+   (:head (:title (journey-name journey))
           (:meta :name "viewport" :content "width=device-width, initial-scale=1")
           (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
           (:link :rel "alternate" :type "application/atom+xml" :href (link-artifact 'atom-feed :type 'all :name 'all))
@@ -151,12 +151,13 @@
 
     (:section.container
      (:header.main
-      (:h1.title (adventure-name adventure)))
+      (:h1.title (journey-name journey))
+      (:p (journey-summary journey)))
      (:article.main
-      ;; (:raw (adventure-summary adventure))
+      ;; (:raw (journey-summary journey))
 
       (:div.insight-btns
-       (render 'notebook-btn-w :notes (adventure-notes adventure))
+       (render 'notebook-btn-w :notes (journey-notes journey))
        (:button.btn
         (:i.icon.icon-friends)
         (:div.title
@@ -216,7 +217,7 @@
              " box on "
              (:a :href "#" "HackTheBox"))))))))
 
-      (:raw (adventure-content adventure))
+      (:raw (journey-content journey))
 
       (:div#explore
        (:h2.title "Related content")

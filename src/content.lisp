@@ -20,9 +20,9 @@
   (or (find "blog-post" (note-tags note) :test #'equal)
       (find "blogpost" (note-tags note) :test #'equal)))
 
-(defun adventure-note-p (note)
+(defun journey-note-p (note)
   (declare (note note))
-  (find "adventure" (note-tags note) :test #'equal))
+  (find "journey" (note-tags note) :test #'equal))
 
 (defun load-denotes ()
   (let ((provider (make 'denote-provider)))
@@ -35,9 +35,9 @@
         :do (registry-add-artifact
              *registry*
              (cond
-               ((adventure-note-p note)
-                (from (from note 'adventure)
-                      'html-page-artifact :location "/adventures" :author *author*))
+               ((journey-note-p note)
+                (from (from note 'journey)
+                      'html-page-artifact :location "/journeys" :author *author*))
                ((blog-note-p note) (from (from note 'blog-post)
                                          'html-page-artifact :location "/"))
                (t (from note 'html-page-artifact :location "/notes"))))))

@@ -28,9 +28,6 @@
     (let ((*already-published-artifacts* nil)
           (home (registry-query *registry* "home")))
       (handler-bind ((file-already-exists #'skip-existing))
-        ;; (publish-artifact
-        ;;  (make-adventure-page deutsch-adventure :location "/adventures/" :author *author*)
-        ;;  www)
         (publish-artifact home www)))
 
     t))

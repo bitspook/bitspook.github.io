@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget adventures-listing-w (adventures title description css-file-artifact)
+(defwidget journeys-listing-w (journeys title description css-file-artifact)
     (tagged-lass
      (base-lass)
 
@@ -20,7 +20,7 @@
         (.main-list :list-style-type none
                     :margin 4rem 0)
 
-        (.adventure
+        (.journey
          :margin 1rem 0
          :padding 1rem
          :border 1px solid (var --color-grey-800)
@@ -73,13 +73,13 @@
      (render 'navbar-w)
      (:article.main
       (:h1.title title)
-      (:p "A adventure is a commitment to move forward. Sometimes to reach a destination/goal, and sometimes
+      (:p "A journey is a commitment to move forward. Sometimes to reach a destination/goal, and sometimes
 just for the sake of movement.")
 
       (:ul.main-list
-       (:li.adventure
+       (:li.journey
         (:section.primary
-         (:header (:h2.title (:a :href "/adventures/infosec" "Infosec"))
+         (:header (:h2.title (:a :href "/journeys/infosec" "Infosec"))
                   (:p.subtitle "Information security from attacker's perspective"))
          (:article (:p "I have desired for long to explore infosec in depth. Finally, I have decided to
                         commit and invest in it.")))
@@ -92,13 +92,13 @@ just for the sake of movement.")
 
       (:div.description
        (or description
-           (:p "Criteria I use to decide what qualifies as a adventure:")
+           (:p "Criteria I use to decide what qualifies as a journey:")
            (:ol
             (:li (:p "An objective which need a long term commitment")
-                 (:p "A adventure is more than just exploring a topic for a few days/weeks. A
-        adventure starts when I have done the exploration and am ready to make a
+                 (:p "A journey is more than just exploring a topic for a few days/weeks. A
+        journey starts when I have done the exploration and am ready to make a
         commitment."))
             (:li (:p "A feasible method of measuring progress")
                  (:p "It is really a wish if we can't track whether any progress is being made on
-        the adventure or not."))))))
+        the journey or not."))))))
      (render 'footer-w)))))

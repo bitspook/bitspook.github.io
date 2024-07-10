@@ -79,8 +79,8 @@
                 (:p "A Journey is a long term commitment with or without a clear end. Here's a list of journeys I've put
 myself on. On these web pages are footprints I've left as I am going through them."))
        (:div.listing
-        (dolist (adv (registry-query *registry* 'adventure))
-          (render 'journey-listing-item :journey adv))))
+        (dolist (journey (registry-query *registry* 'journey))
+          (render 'journey-listing-item :journey journey))))
 
       (:section.blog-posts
        (:header (:h2.heading "Blog")
@@ -112,5 +112,5 @@ myself on. On these web pages are footprints I've left as I am going through the
   (:div.journey-listing-item
    (:h3.title
     (:a :href (embed-artifact-as journey 'link)
-        (adventure-name journey)))
-   (:p (:raw (plump:text (adventure-summary-dom journey))))))
+        (journey-name journey)))
+   (:p (:raw (plump:text (journey-summary-dom journey))))))
