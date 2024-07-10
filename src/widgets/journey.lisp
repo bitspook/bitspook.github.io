@@ -143,6 +143,8 @@
   (:html
    (:head (:title (journey-name journey))
           (:meta :name "viewport" :content "width=device-width, initial-scale=1")
+          (:meta :name "author" :content (slot-value author 'name))
+          (:meta :name "description" :content (journey-summary journey))
           (when css-file-artifact (:link :rel "stylesheet" :href (embed-artifact-as css-file-artifact 'link)))
           (:link :rel "alternate" :type "application/atom+xml" :href (link-artifact 'atom-feed :type 'all :name 'all))
           (:script :src "/js/app.js"))
@@ -151,10 +153,9 @@
 
     (:section.container
      (:header.main
-      (:h1.title (journey-name journey))
-      (:p (journey-summary journey)))
+      (:h1.title (journey-name journey)))
      (:article.main
-      ;; (:raw (journey-summary journey))
+      (:raw (journey-summary journey))
 
       (:div.insight-btns
        (render 'notebook-btn-w :notes (journey-notes journey))

@@ -113,4 +113,4 @@ myself on. On these web pages are footprints I've left as I am going through the
    (:h3.title
     (:a :href (embed-artifact-as journey 'link)
         (journey-name journey)))
-   (:p (:raw (plump:text (journey-summary-dom journey))))))
+   (:p (journey-summary journey))))

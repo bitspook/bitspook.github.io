@@ -25,10 +25,12 @@
     *registry*)))
 
 (defmethod journey-summary ((journey journey))
+  "Return text of JOURNEY-SUMMARY-DOM."
   (let ((dom (journey-summary-dom journey)))
     (when dom
-      (plump-smart-serialize
-       (resolve-linked-denotes dom *registry*)))))
+      (str:trim
+       (plump:text
+        (resolve-linked-denotes dom *registry*))))))
 
 (defmethod from ((note note) (to (eql 'journey)) &key)
   (let* ((body-dom (note-body-dom note))
