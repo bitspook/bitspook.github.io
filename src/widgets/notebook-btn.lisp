@@ -14,10 +14,11 @@
                              (format nil "with tags ~{#~a ~} and ~d more"
                                      (firstn 2 tags) (- (length tags) 2)))
                             (t (format nil "")))))
-    (:button.btn
-     (:i.icon.icon-nb)
-     (:div.title
-      (:h2 "Notebook")
-      (:div.meta
-       (:span.count ("~a notes" (length notes)))
-       (:span description))))))
+    (unless (emptyp notes)
+      (:button.btn
+       (:i.icon.icon-nb)
+       (:div.title
+        (:h2 "Notebook")
+        (:div.meta
+         (:span.count ("~a notes" (length notes)))
+         (:span description)))))))

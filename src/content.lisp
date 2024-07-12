@@ -24,23 +24,34 @@
   (declare (note note))
   (find "journey" (note-tags note) :test #'equal))
 
-(defun load-denotes ()
+(defun load-denote-posts ()
   (let ((provider (make 'denote-provider)))
     (setf *denotes*
-          (union
-           (apply #'union (multiple-value-list (provide-all provider :tags '("blog-post"))))
-           (apply #'union (multiple-value-list (provide-all provider :tags '("german")))))))
+          (safe-union
+           ;; TODO Build a small query language to query with :and :or etc
+           (apply #'safe-union (multiple-value-list (provide-all provider :tags '("blog-post"))))
+           (apply #'safe-union (multiple-value-list (provide-all provider :tags '("blogpost")))))))
 
   (loop :for note :in *denotes*
         :do (registry-add-artifact
              *registry*
              (cond
-               ((journey-note-p note)
-                (from (from note 'journey)
-                      'html-page-artifact :location "/journeys" :author *author*))
                ((blog-note-p note) (from (from note 'blog-post)
                                          'html-page-artifact :location "/"))
                (t (from note 'html-page-artifact :location "/notes"))))))
+
+(defun load-journeys ()
+  (let* ((provider (make 'journey-provider))
+         (notes (apply #'safe-union (multiple-value-list (provide-all provider :tags '("journey"))))))
+
+    (loop :for journey :in notes
+          :do (registry-add-artifact
+               *registry*
+               (cond
+                 ((journey-note-p journey)
+                  (from (from journey 'journey)
+                        'html-page-artifact :location "/journeys" :author *author*))
+                 (t (from journey 'html-page-artifact :location "/notes")))))))
 
 ;; ---
 
@@ -197,7 +208,8 @@
 
 (defun load-all-content ()
   (load-local-content)
-  (load-denotes)
+  (load-denote-posts)
+  (load-journeys)
   (load-projects)
   (load-listing-pages)
   (load-home-page))

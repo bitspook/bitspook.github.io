@@ -20,6 +20,7 @@
                              (:module "provider"
                               :components ((:file "org-file-provider")
                                            (:file "denote-provider")
+                                           (:file "journey")
                                            (:file "org-project-provider")))
 
                              (:module "lass"

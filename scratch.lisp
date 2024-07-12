@@ -2,6 +2,8 @@
 
 (in-package #:in.bitspook.website)
 
+(toggle-pretty-print-hash-table)
+
 (defparameter *rpc-server* (start-rpc-server 1337))
 ;; (stop-rpc-server *rpc-server*)
 

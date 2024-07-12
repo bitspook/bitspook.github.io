@@ -9,21 +9,17 @@
        (.container
         :max-width 1080px
         :margin 0 auto
-        :color (var --color-grey-800)
 
         ("header.main"
          :margin 2rem 0
 
-         (.title :font-size 2.5rem
-                 :margin 0
+         (.title :margin 0
                  :margin-bottom 0.4rem)
 
-         (.subtitle :font-size 1.4rem
-                    :color (var --color-grey-400)))
+         (.subtitle :font-size 1.4rem))
 
         ("article.main"
          :min-height 40rem
-         :font-size 1.4rem
 
          (p :margin 1rem 0))
 
@@ -158,22 +154,7 @@
       (:raw (journey-summary journey))
 
       (:div.insight-btns
-       (render 'notebook-btn-w :notes (journey-notes journey))
-       (:button.btn
-        (:i.icon.icon-friends)
-        (:div.title
-         (:h2 "Companions")
-         (:div.meta
-          (:span "We are a team of ")
-          (:span.count "3"))))
-       (:button.btn
-        :disabled t
-        (:i.icon.icon-flame)
-        (:div.title
-         (:h2 "Streak")
-         (:div.meta
-          (:span.count "3")
-          (:span "days of daily progress!")))))
+       (render 'notebook-btn-w :notes (journey-notes journey)))
 
       (:section.activity
        (:header.title (:span "Activity log for") (:select.log-time

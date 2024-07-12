@@ -61,3 +61,11 @@ of ITEMs as value."
         (lambda (a b)
           (local-time:timestamp>
            (post-published-at a) (post-published-at b)))))
+
+(defun safe-union (&rest lists)
+  "Like UNION, but doesn't soil its pants if number of LISTS is not exactly 2."
+  (when (null lists) (return-from safe-union nil))
+
+  (when (eq 1 (length lists)) (return-from safe-union (first lists)))
+
+  (apply #'union lists))

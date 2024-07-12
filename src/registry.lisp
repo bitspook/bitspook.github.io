@@ -60,5 +60,3 @@
   (let ((journey-ids (@ (registry-indices reg) 'journey "all")))
     (mapcar (op (@ (registry-store reg) _))
             journey-ids)))
-
-(registry-query *registry* 'journey)

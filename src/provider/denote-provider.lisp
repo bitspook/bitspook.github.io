@@ -14,7 +14,7 @@
       (setf (@ (denote-store prov) (note-id note)) note))
 
     (values notes
-            (reduce #'union (mapcar (op (provide-linked-denotes prov _)) notes)))))
+            (reduce #'safe-union (mapcar (op (provide-linked-denotes prov _)) notes)))))
 
 (defmethod provide-linked-denotes ((prov denote-provider) (note note))
   "Use PROV to provide all denotes linked from NOTE. STORE is a hashmap which stores notes found so
