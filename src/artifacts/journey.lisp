@@ -14,9 +14,9 @@
           :slug (journey-slug journey)
           :summary-dom (journey-summary-dom journey)
           :content-dom (journey-content-dom journey)
-          :notes (journey-notes journey)
+          :note-ids (journey-note-ids journey)
 
           ;; html-page-artifact
           :location html-path
           :root-widget root-widget
-          :deps (append (list css-art) (journey-notes journey)))))
+          :deps (list css-art))))

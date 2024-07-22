@@ -7,9 +7,7 @@
 (defparameter *rpc-server* (start-rpc-server 1337))
 ;; (stop-rpc-server *rpc-server*)
 
-;; expensive operations
 (load-all-content)
-;; end expensive operations
 
 (defun build ()
   (let* ((www (path-join *base-dir* "build/"))

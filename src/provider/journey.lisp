@@ -3,25 +3,16 @@
 (defclass journey-provider (denote-provider) nil)
 
 (defmethod provide-all ((prov journey-provider) &rest script-args)
-  (format t "Journey Providing: ~a" script-args)
-  (multiple-value-bind (journeys deps) (apply #'call-next-method prov script-args)
-    ;; TODO Read 'notebook' from NOTE metadata, request all notes that satisfy it, and populate
-    ;; (JOURNEY-NOTES) with provided notes
-    ;; Perhaps we should change JOURNEY-NOTES to JOURNEY-NOTE-IDS, and make JOURNEY-NOTES a method on
-    ;; JOURNEY which performs (REGISTRY-QUERY *regisry* note-id)
-    (dolist (journey journeys)
-      (when-let* ((notebook (@ (note-metadata journey) "notebook"))
-                  (notebook-tags (read-from-string notebook)))
-        (unless (emptyp notebook-tags)
-          (multiple-value-bind (notes note-deps) (call-next-method prov :tags notebook-tags)
-            (format t "NOTES: ~a~%" notes)
-            (setf deps (safe-union deps notes note-deps))))))
+  (multiple-value-bind (raw-journeys deps) (apply #'call-next-method prov script-args)
+    (let ((journeys nil))
+      (dolist (raw-journey raw-journeys)
+        (when-let* ((journey (from raw-journey 'journey))
+                    (notebook (@ (note-metadata raw-journey) "notebook"))
+                    (notebook-tags (read-from-string notebook)))
+          (unless (emptyp notebook-tags)
+            (multiple-value-bind (notes note-deps) (call-next-method prov :tags notebook-tags)
+              (setf deps (safe-union deps notes note-deps))
+              (setf (journey-note-ids journey) (mapcar #'artifact-id notes))))
+          (push journey journeys)))
 
-    (format t "DEPS: ~a" deps)
-
-    (values journeys deps)))
-
-(defparameter *test-prov* (make 'journey-provider))
-(defparameter *test-js* (provide-all *test-prov* :tags '("journey")))
-
-(multiple-value-list (provide-all *test-prov* :tags '("journey")))
+      (values journeys deps))))

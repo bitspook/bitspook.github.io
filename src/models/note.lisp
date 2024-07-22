@@ -44,6 +44,9 @@
     (note-body-dom note)
     *registry*)))
 
+(defmethod artifact-id ((note note))
+  (note-id note))
+
 (defun denote-links (node)
   (declare (plump:node node))
   (clss:select "a[data-denote-id]" node))

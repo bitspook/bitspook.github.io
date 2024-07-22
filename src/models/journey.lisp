@@ -4,7 +4,7 @@
   ((id :initarg :id :initform nil :accessor journey-id)
    (slug :initarg :slug :initform nil :accessor journey-slug)
    (name :initarg :name :accessor journey-name)
-   (notes :initarg :notes :accessor journey-notes)
+   (note-ids :initarg :note-ids :accessor journey-note-ids)
    (summary-dom :initarg :summary-dom :accessor journey-summary-dom :initform nil)
    (content-dom :initarg :content-dom :accessor journey-content-dom)))
 
@@ -44,4 +44,4 @@
           :slug (note-slug note)
           :summary-dom summary-dom
           :content-dom body-dom
-          :notes (note-linked-notes note))))
+          :note-ids nil)))

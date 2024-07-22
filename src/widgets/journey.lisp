@@ -154,7 +154,7 @@
       (:raw (journey-summary journey))
 
       (:div.insight-btns
-       (render 'notebook-btn-w :notes (journey-notes journey)))
+       (render 'notebook-btn-w :note-ids (journey-note-ids journey)))
 
       (:section.activity
        (:header.title (:span "Activity log for") (:select.log-time

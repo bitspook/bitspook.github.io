@@ -68,4 +68,4 @@ of ITEMs as value."
 
   (when (eq 1 (length lists)) (return-from safe-union (first lists)))
 
-  (apply #'union lists))
+  (reduce #'union lists))
