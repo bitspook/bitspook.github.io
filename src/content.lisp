@@ -41,15 +41,15 @@
 
 (defun load-journeys ()
   (let* ((provider (make 'journey-provider))
-         (journeys (apply #'safe-union (multiple-value-list (provide-all provider :tags '("journey"))))))
+         (notes (apply #'safe-union (multiple-value-list (provide-all provider :tags '("journey"))))))
 
-    (loop :for journey :in journeys
+    (loop :for note :in notes
           :do (progn
                 (registry-add-artifact
                  *registry*
                  (cond
-                   ((journey-p journey) (from journey 'html-page-artifact :location "/journeys" :author *author*))
-                   (t (from journey 'html-page-artifact :location "/notes"))))))))
+                   ((journey-p note) (from note 'html-page-artifact :location "/journeys" :author *author*))
+                   (t (from note 'html-page-artifact :location "/notes"))))))))
 
 ;; ---
 
@@ -98,17 +98,17 @@
 ;; Listings
 (defparameter *listing-page-size* 10)
 
-(defun add-listing-page (type name path items &optional (widget 'blog-post-listing-w))
-  (let* ((listing-id (format nil "listing-~(~a~)-~a" type name))
+(defun add-listing-page (type title path items &optional (widget 'blog-post-listing-w))
+  (let* ((name (slugify (str:downcase title)))
+         (listing-id (format nil "listing-~(~a~)-~a" type name))
          (feed-id (format nil "feed-~(~a~)-~a" type name))
-         (title (str:capitalize name))
          (listing (make-listing-page
                    :id listing-id
                    :path path
                    :items items
                    :author *author*
                    :type type
-                   :name name
+                   :name (slugify (str:downcase name))
                    :title title
                    :page-size *listing-page-size*
                    :widget widget
@@ -129,7 +129,7 @@
               (tags (hash-table-keys index)))
     (dolist (tag tags)
       (add-listing-page
-       'tag tag (format nil "/tags/~a" tag)
+       'tag (str:capitalize tag) (format nil "/tags/~a" tag)
        (get-sorted-posts (registry-query *registry* 'tagged :id tag))))))
 
 (defun load-category-listings ()
@@ -138,31 +138,48 @@
     (dolist (cat cats)
       (unless (equal cat "projects")
         (add-listing-page
-         'category cat (format nil "/~a" cat)
+         'category (str:capitalize cat) (format nil "/~a" cat)
          (get-sorted-posts (registry-query *registry* 'categorized :id cat)))))
 
     (add-listing-page
-     'category "projects" "/projects"
+     'category "Projects" "/projects"
      (registry-query *registry* 'categorized :id "projects")
      'software-project-listing-w)))
 
+(defun load-journey-notebooks ()
+  (let ((journeys (registry-query *registry* 'journey)))
+    (dolist (journey journeys)
+      (let ((name (journey-name journey))
+            (slug (journey-slug journey))
+            (notes (mapcar (op (registry-query *registry* _))
+                           (journey-note-ids journey))))
+        (add-listing-page
+         'journey-notebook
+         (str:capitalize name)
+         (format nil "/journeys/~a/notebook" slug)
+         notes
+         'note-listing-w)))))
 
 (defun load-listing-pages ()
   (load-tag-listings)
-  (load-category-listings))
+  (load-category-listings)
+  (load-journey-notebooks))
 ;; ---
 
 ;;; Home page
 (defun load-home-page ()
   (let* ((blog-posts (get-sorted-posts (hash-table-values (registry-store *registry*))))
-         (archive (make-blog-post-listing-page
+         (archive (make-listing-page
                    :path "/archive"
                    :id "archive"
                    :title "Archive"
                    :name 'all
                    :type 'all
                    :author *author*
-                   :posts blog-posts))
+                   :widget 'blog-post-listing-w
+                   :page-size 10
+                   :css-location "/css/archive.css"
+                   :items blog-posts))
          (archive-feed (make-atom-feed-artifact
                         :title (str:concat *site-title* " : All content")
                         :posts (take 15 blog-posts)

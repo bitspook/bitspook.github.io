@@ -154,55 +154,14 @@
       (:raw (journey-summary journey))
 
       (:div.insight-btns
-       (render 'notebook-btn-w :note-ids (journey-note-ids journey)))
-
-      (:section.activity
-       (:header.title (:span "Activity log for") (:select.log-time
-                                                  (:option :value "last-week" "last week")
-                                                  (:option :value "this-month" "this month")))
-       (:article
-        (:div.activity-graph
-         (:div.graph-placeholder
-          (:p "TODO Add data visualization here")))
-
-        (:div.activity-log
-         (:div.activity-item
-          (:span.icon.icon-simple-cal)
-          (:div.activity-body
-           (:div.date "Wednesday 15 Nov, 2022")
-           (:ul.events
-            (:li
-             (:a :href "#" "1 commit")
-             " made to project "
-             (:a :href "#" "slurp"))
-            (:li
-             "Created "
-             (:a :href "#" "1 new note")))))
-         (:div.activity-item
-          (:span.icon.icon-simple-cal)
-          (:div.activity-body
-           (:div.date "Wednesday 16 Nov, 2022")
-           (:ul.events
-            (:li
-             (:a :href "#" "2 commits")
-             " made to project "
-             (:a :href "#" "cl-ownpress"))
-            (:li
-             "Modified "
-             (:a :href "#" "4 notes"))
-            (:li
-             "Created "
-             (:a :href "#" "2 new notes"))
-            (:li
-             "Pwned "
-             (:a :href "#" "Supermo")
-             " box on "
-             (:a :href "#" "HackTheBox"))))))))
+       (render 'notebook-btn-w
+               :href (link-artifact 'listing :type 'journey-notebook :name (journey-name journey))
+               :note-ids (journey-note-ids journey)))
 
       (:raw (journey-content journey))
 
       (:div#explore
-       (:h2.title "Related content")
+       (:h2.title "Related activity")
        ;; (render 'posts-listing-widget :posts nil)
        ))
      (render 'footer-w :author author)))))

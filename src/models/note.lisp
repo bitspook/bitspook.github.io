@@ -27,10 +27,7 @@
   "Set default value for note-slug."
   (declare (ignorable initargs))
   (unless (note-slug nt)
-    (setf (note-slug nt)
-          (str:join "-" (append1
-                         (mapcar #'slugify (note-tags nt))
-                         (slugify (note-title nt))))))
+    (setf (note-slug nt) (slugify (note-title nt))))
   (unless (note-id nt)
     (setf (note-id nt) (note-slug nt))))
 

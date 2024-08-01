@@ -24,6 +24,29 @@
             :summary (concatenate 'simple-string summary)
             :content (plump:parse body)))))
 
+(defmethod from ((note note) (to (eql 'feeder:entry)) &key)
+  (with-accessors ((slug note-slug)
+                   (author note-author)
+                   (published-at note-created-at)
+                   (updated-at note-updated-at)
+                   (summary "")
+                   (title note-title)
+                   (body note-body))
+      note
+    (let* ((title (concatenate 'simple-string title))
+           (link (make 'feeder:link :url (namestring (artifact-location note))
+                                    :title title)))
+      (make 'feeder:entry
+            :id link
+            :categories '("Note")
+            :authors (list (slot-value author 'name))
+            :published-on published-at
+            :updated-on updated-at
+            :link link
+            :title title
+            :summary (concatenate 'simple-string "")
+            :content (plump:parse body)))))
+
 (defclass atom-feed-artifact (artifact)
   ((location :initarg :location :accessor artifact-location)
    (title :initarg :title)

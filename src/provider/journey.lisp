@@ -12,7 +12,12 @@
           (unless (emptyp notebook-tags)
             (multiple-value-bind (notes note-deps) (call-next-method prov :tags notebook-tags)
               (setf deps (safe-union deps notes note-deps))
-              (setf (journey-note-ids journey) (mapcar #'artifact-id notes))))
+              (setf (journey-note-ids journey)
+                    ;; Remove journey's own id from its notes, in case journey itself has same tag
+                    ;; as its notes
+                    (remove-if
+                     (op (equal _ (artifact-id journey)))
+                     (mapcar #'artifact-id notes)))))
           (push journey journeys)))
 
       (values journeys deps))))

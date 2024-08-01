@@ -1,12 +1,15 @@
 (in-package #:in.bitspook.website)
 
-(defwidget notebook-btn-w (note-ids)
+(defwidget notebook-btn-w (note-ids href)
     (tagged-lass
-     `((.icon-nb :background-image (url "/images/icons/nb.svg"))))
-  (unless (emptyp note-ids)
-    (:button.btn
-     (:i.icon.icon-nb)
-     (:div.title
-      (:h2 "Notebook")
-      (:div.meta
-       (:span.count ("~a notes" (length note-ids))))))))
+     `((.notebook-btn
+        (.icon-nb :background-image (url "/images/icons/nb.svg"))
+        (.btn (.meta :color (var --color-grey-500))))))
+  (:div.notebook-btn
+   (unless (emptyp note-ids)
+     (:a.btn :href href
+             (:i.icon.icon-nb)
+             (:div.title
+              (:h2 "Notebook")
+              (:div.meta
+               (:span.count ("~a notes" (length note-ids)))))))))

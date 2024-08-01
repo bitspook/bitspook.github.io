@@ -18,6 +18,9 @@
   (print-unreadable-object (journey out :type t)
     (format out "~a" (journey-slug journey))))
 
+(defmethod artifact-id ((journey journey))
+  (journey-id journey))
+
 (defmethod journey-content ((journey journey))
   (plump-smart-serialize
    (resolve-linked-denotes

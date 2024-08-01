@@ -45,7 +45,7 @@
 (defmethod registry-query ((reg artifact-registry)
                            (key (eql 'listing))
                            &key type name)
-  (let* ((listing-id (str:downcase (format nil "listing-~a-~a" type name))))
+  (let* ((listing-id (str:downcase (format nil "listing-~(~a~)-~(~a~)" type (slugify name)))))
     (registry-query reg listing-id)))
 
 ;; Query journeys
