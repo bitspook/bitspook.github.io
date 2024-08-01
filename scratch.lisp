@@ -18,10 +18,6 @@
 
     (publish-static :content static :dest-dir www)
 
-    ;; TODO remove draft and micro posts
-    ;; TODO add projects
-    ;; TODO add atom-feeds for every listing
-
     (load-home-page)
 
     ;; Publish home-page and all its dependencies

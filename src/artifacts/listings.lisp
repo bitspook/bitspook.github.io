@@ -43,29 +43,3 @@
       (setf (slot-value first-page 'id) id))
 
     first-page))
-
-(defun make-software-project-listing-page (&key path projects author name title type (page-size 10) (id nil))
-  (make-listing-page
-   :id id
-   :path path
-   :items projects
-   :author author
-   :type type
-   :name name
-   :title title
-   :page-size page-size
-   :widget 'software-project-listing-w
-   :css-location "/css/software-projects.css"))
-
-(defun make-blog-post-listing-page (&key path posts author title type name (page-size 10) (id nil))
-  (make-listing-page
-   :path path
-   :items posts
-   :author author
-   :title title
-   :page-size page-size
-   :widget 'blog-post-listing-w
-   :name name
-   :type type
-   :id id
-   :css-location "/css/blog-posts.css"))

@@ -11,8 +11,8 @@
 
 (defmethod registry-query ((reg artifact-registry)
                            (key (eql 'tagged))
-                           &key tag)
-  (let ((ids (@ (registry-indices reg) 'tagged tag)))
+                           &key id)
+  (let ((ids (@ (registry-indices reg) 'tagged id)))
     (mapcar (op (@ (registry-store reg) _)) ids)))
 
 (registry-add-index *registry* 'categorized)
@@ -23,8 +23,8 @@
 
 (defmethod registry-query ((reg artifact-registry)
                            (key (eql 'categorized))
-                           &key category)
-  (let ((ids (@ (registry-indices reg) 'categorized category)))
+                           &key id)
+  (let ((ids (@ (registry-indices reg) 'categorized id)))
     (mapcar (op (@ (registry-store reg) _)) ids)))
 
 ;; Projects
