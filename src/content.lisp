@@ -89,7 +89,7 @@
          (projects (mapcar
                     (op (from _ 'software-project :author *author*))
                     (provide-all project-provider (path-join *base-dir* "projects/"))))
-         (project-pages (mapcar (op (from _ 'html-page-artifact :location "/"))
+         (project-pages (mapcar (op (from _ 'html-page-artifact :location "/projects"))
                                 projects)))
     (dolist (page project-pages)
       (registry-add-artifact *registry* page))))

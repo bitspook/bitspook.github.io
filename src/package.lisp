@@ -22,7 +22,7 @@
   (asdf:system-relative-pathname "in.bitspook.website" "src/fonts/"))
 
 ;; (defparameter *base-url* "https://bitspook.in")
-(defparameter *base-url* "/")
+(defparameter *base-url* "")
 
 (defparameter *base-dir* (asdf:system-relative-pathname :in.bitspook.website ""))
 

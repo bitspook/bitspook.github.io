@@ -1,4 +1,4 @@
-<html lang=en><head><meta charset=UTF-8><title>Spookfox</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=https://bitspook.in/css/software-project.css><link rel=alternate type=application/atom+xml href=https://bitspook.in/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Spookfox</h1><div class=meta><time class="meta-item date">September 7, 2024</time></div></header><main class=post-body><p>
+<html lang=en><head><meta charset=UTF-8><title>Spookfox</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=https://bitspook.in/css/software-project.css><link rel=alternate type=application/atom+xml href=https://bitspook.in/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Spookfox</h1><div class=meta><time class="meta-item date">September 8, 2024</time></div></header><main class=post-body><p>
 Spookfox is a Browser extension and an Emacs package, which allow Emacs and
 Browser to communicate with each other. Its primary goal is to offer an Emacs
 tinkerer similar (to Emacs) framework to tinker their browser.
@@ -154,55 +154,6 @@ is called. This function also starts the websockets server.
 <pre class="src src-elisp">(spookfox-init)
 </pre>
 </div></li>
-
-<li><p>
-<b>Register custom request handlers</b>
-</p>
-
-<p>
-It is possible to send custom events from browser (e.g using a JavaScript
-bookmarklet), and run elisp code to handle them. For this you need to do 2
-things:
-</p>
-
-<ol class="org-ol">
-<li><p>
-Add a handle for request in Emacs
-</p>
-
-<p>
-Here is some example code for registering a request handler:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">my--capture-the-flag</span> (url)
-  (message <span style="color: #6aaf50;">"CAPTURING THE FLAG: %s"</span> url))
-
-(spookfox--register-req-handler <span style="color: #6aaf50;">"CAPTURE_THE_FLAG"</span> #'my--capture-the-flag)
-</pre>
-</div></li>
-
-<li><p>
-Send a request from browser
-</p>
-
-<div class="org-src-container">
-<pre class="src src-js">postMessage({
-  type: <span style="color: #6aaf50;">'SPOOKFOX_RELAY_TO_EMACS'</span>,
-  action: {
-    name: <span style="color: #6aaf50;">'CAPTURE_THE_FLAG'</span>,
-    payload: { url: window.location.href }
-  }
-})
-</pre>
-</div>
-
-<p>
-<code>action</code> part here decides which request handler will execute. Elisp
-version of <code>payload</code> will be provided to your request-handler as an
-argument.
-</p></li>
-</ol></li>
 </ol>
 </div>
 </div>
@@ -286,7 +237,32 @@ which more-or-less shadow special-mode’s corresponding tables.
 In addition to any hooks its parent mode might have run, this mode runs the hook
 ‘spookfox-itabs-mode-hook’, as the final or penultimate step during initialization.
 </p></li>
+</ul>
 
+
+<p>
+Key             Binding
+</p>
+
+<p>
+SPC							scroll-up-command
+</p>
+<ul class="org-ul">
+<li>negative-argument</li>
+</ul>
+<p>
+0 .. 9					digit-argument
+&lt;								beginning-of-buffer
+&gt;								end-of-buffer
+?								describe-mode
+g								revert-buffer
+h								describe-mode
+q								quit-window
+DEL							scroll-down-command
+H-SPC						[byte-code]
+S-SPC						scroll-down-command
+</p>
+<ul class="org-ul">
 <li><p>
 <code>spookfox-switch-tab</code>
 </p>
@@ -327,20 +303,16 @@ This app provide following functions:
 
 <ul class="org-ul">
 <li><p>
-<code>spookfox-eval-js-in-active-tab</code>
+<code>spookfox-js-injection-eval-in-active-tab</code>
 </p>
 
 <p>
-spookfox-eval-js-in-active-tab is an alias for ‘spookfox-js-injection-eval-in-active-tab’ in
+spookfox-js-injection-eval-in-active-tab is a byte-compiled Lisp function in
 ‘spookfox-js-injection.el’.
 </p>
 
 <p>
-This function is obsolete since v0.3.0; use ‘spookfox-js-injection-eval-in-active-tab’ instead.
-</p>
-
-<p>
-(spookfox-eval-js-in-active-tab JS &amp;optional JUST-THE-TIP-P)
+(spookfox-js-injection-eval-in-active-tab JS &amp;optional JUST-THE-TIP-P)
 </p>
 
 <p>
@@ -377,11 +349,12 @@ automatically added timestamp links.
 </p>
 
 <p>
-spookfox-js-injection-eval is a byte-compiled Lisp function in ‘spookfox-js-injection.el’.
+spookfox-js-injection-eval is a Lisp closure in
+‘/mnt/data/channi-documents/work/spookfox/lisp/apps/spookfox-js-injection.el’.
 </p>
 
 <p>
-(spookfox-js-injection-eval JS &amp;optional (CONTEXT 'background))
+(spookfox-js-injection-eval JS &amp;optional (CONTEXT 'background) (SELECT-TAB-P nil))
 </p>
 
 <p>
@@ -395,6 +368,10 @@ Supported contexts:
 <ol class="org-ol">
 <li>background
 Eval JS in addon’s background page.</li>
+<li>tab
+Eval JS in tab. When non-nil SELECT-TAB-P should be a function which
+receives each tab (a plist of at least :url, :id, :title, :windowId),
+and JS is evaluated in every tab for which it returns non-nil.</li>
 </ol></li>
 </ul>
 </div>
@@ -606,6 +583,98 @@ Please take a look at the <a href="https://github.com/bitspook/spookfox/blob/mas
 environment to hack Spookfox.
 </p></li>
 </ol>
+</div>
+</div>
+<div id="outline-container-Tips" class="outline-2">
+<h2 id="Tips">Tips</h2>
+<div class="outline-text-2" id="text-Tips">
+<p>
+Although making Spookfox apps is easy, you might not need that for some quick and easy tinkering.
+Here are some tips that might be helpful.
+</p>
+</div>
+<div id="outline-container-Make%20browser%20speak%20to%20Emacs" class="outline-3">
+<h3 id="Make%20browser%20speak%20to%20Emacs">Make browser speak to Emacs</h3>
+<div class="outline-text-3" id="text-Make%20browser%20speak%20to%20Emacs">
+<p>
+Spookfox has a request-response model. You can <b>register custom request handlers</b> in Emacs to run
+Elisp code which is triggered from browser e.g using a JavaScript bookmarklet. For this you need to
+do 2 things:
+</p>
+
+<ol class="org-ol">
+<li><p>
+Add a handle for request in Emacs
+</p>
+
+<p>
+Here is some example code for registering a request handler:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">my--capture-the-flag</span> (url)
+  (raise-frame)
+  (message <span style="color: #6aaf50;">"CAPTURING THE FLAG: %s"</span> url))
+
+(spookfox--register-req-handler <span style="color: #6aaf50;">"CAPTURE_THE_FLAG"</span> #'my--capture-the-flag)
+</pre>
+</div></li>
+
+<li><p>
+Send a request from browser
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js">postMessage({
+  type: <span style="color: #6aaf50;">'SPOOKFOX_RELAY_TO_EMACS'</span>,
+  action: {
+    name: <span style="color: #6aaf50;">'CAPTURE_THE_FLAG'</span>,
+    payload: { url: window.location.href }
+  }
+})
+</pre>
+</div>
+
+<p>
+<code>action</code> part here decides which request handler will execute. Elisp version of <code>payload</code> will be
+provided to your request-handler as an argument.
+</p></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-Make%20Emacs%20speak%20to%20browser" class="outline-3">
+<h3 id="Make%20Emacs%20speak%20to%20browser">Make Emacs speak to browser</h3>
+<div class="outline-text-3" id="text-Make%20Emacs%20speak%20to%20browser">
+<p>
+<a href="#js-injection-app">js-injection</a> spookfox app can be used to send requests from Emacs to browser, and even get results
+back. e.g to get current tab's URL, we can use
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(spookfox-js-injection-eval-in-active-tab <span style="color: #6aaf50;">"window.location.href"</span> t)
+<span style="color: #858585; font-style: italic;">;; </span><span style="color: #858585; font-style: italic;">=&gt; "https://github.com/bitspook/spookfox/issues/38"</span>
+</pre>
+</div>
+
+<p>
+<code>spookfox-js-injection-eval-in-active-tab</code> runs js in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent">current-window's</a> active tab. js-injection also
+enable running JS in any tab (and even addon's <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts">background script</a>) with more general purpose
+<code>spookfox-js-injection-eval</code>.
+</p>
+
+<p>
+E.g run following code to run a script in all tabs which are visiting <code>bitspook.in</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(spookfox-js-injection-eval
+ <span style="color: #6aaf50;">"console.log('Hello from Emacs'); 5 + 5;"</span>
+ 'tab
+ (<span style="color: #598bc1;">lambda</span> (tab)
+   (s-contains-p <span style="color: #6aaf50;">"bitspook.in"</span> (plist-get tab <span style="color: #7f7dca;">:url</span>))))
+</pre>
+</div>
+</div>
 </div>
 </div>
 </main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=https://bitspook.in/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>

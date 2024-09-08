@@ -150,39 +150,6 @@ as documented in [[id:7c11ffa6-701d-48a0-ac3c-b839fd210951][apps]] section below
      (spookfox-init)
    #+end_src
 
-4. *Register custom request handlers*
-
-   It is possible to send custom events from browser (e.g using a JavaScript
-   bookmarklet), and run elisp code to handle them. For this you need to do 2
-   things:
-
-   1. Add a handle for request in Emacs
-
-      Here is some example code for registering a request handler:
-
-      #+begin_src elisp
-        (defun my--capture-the-flag (url)
-          (message "CAPTURING THE FLAG: %s" url))
-
-        (spookfox--register-req-handler "CAPTURE_THE_FLAG" #'my--capture-the-flag)
-      #+end_src
-
-   2. Send a request from browser
-
-      #+begin_src js
-        postMessage({
-          type: 'SPOOKFOX_RELAY_TO_EMACS',
-          action: {
-            name: 'CAPTURE_THE_FLAG',
-            payload: { url: window.location.href }
-          }
-        })
-      #+end_src
-
-      =action= part here decides which request handler will execute. Elisp
-      version of =payload= will be provided to your request-handler as an
-      argument.
-
 ** Apps
 :PROPERTIES:
 :ID:       7c11ffa6-701d-48a0-ac3c-b839fd210951
@@ -225,6 +192,7 @@ Basic access to browser's tabs.
 *** js-injection
 :PROPERTIES:
 :CUSTOM_ID: js-injection-app
+:ID:       22a3bcab-21ac-4f8a-89e1-efd347686345
 :END:
 
 Inject Javascript into the browser. From a web extension's pov, there are three
@@ -238,7 +206,7 @@ places to inject JS in:
 This app provide following functions:
 
 #+begin_src elisp :exports results :results raw
-  (spook--func-doc spookfox-eval-js-in-active-tab)
+  (spook--func-doc spookfox-js-injection-eval-in-active-tab)
 #+end_src
 
   Inject Javascript into any website open in your browser's active tab, and get
@@ -357,3 +325,65 @@ existing one).
 
    Please take a look at the [[https://github.com/bitspook/spookfox/blob/master/contributing.org][contributing.org]] for setting up the development
    environment to hack Spookfox.
+
+** Tips
+
+Although making Spookfox apps is easy, you might not need that for some quick and easy tinkering.
+Here are some tips that might be helpful.
+
+*** Make browser speak to Emacs
+
+Spookfox has a request-response model. You can *register custom request handlers* in Emacs to run
+Elisp code which is triggered from browser e.g using a JavaScript bookmarklet. For this you need to
+do 2 things:
+
+1. Add a handle for request in Emacs
+
+   Here is some example code for registering a request handler:
+
+   #+begin_src elisp
+     (defun my--capture-the-flag (url)
+       (raise-frame)
+       (message "CAPTURING THE FLAG: %s" url))
+
+     (spookfox--register-req-handler "CAPTURE_THE_FLAG" #'my--capture-the-flag)
+   #+end_src
+
+2. Send a request from browser
+
+   #+begin_src js
+     postMessage({
+       type: 'SPOOKFOX_RELAY_TO_EMACS',
+       action: {
+         name: 'CAPTURE_THE_FLAG',
+         payload: { url: window.location.href }
+       }
+     })
+   #+end_src
+
+   =action= part here decides which request handler will execute. Elisp version of =payload= will be
+   provided to your request-handler as an argument.
+
+*** Make Emacs speak to browser
+
+[[js-injection]] spookfox app can be used to send requests from Emacs to browser, and even get results
+back. e.g to get current tab's URL, we can use
+
+#+begin_src elisp
+  (spookfox-js-injection-eval-in-active-tab "window.location.href" t)
+  ;; => "https://github.com/bitspook/spookfox/issues/38"
+#+end_src
+
+=spookfox-js-injection-eval-in-active-tab= runs js in [[https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent][current-window's]] active tab. js-injection also
+enable running JS in any tab (and even addon's [[https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts][background script]]) with more general purpose
+=spookfox-js-injection-eval=.
+
+E.g run following code to run a script in all tabs which are visiting =bitspook.in=:
+
+#+begin_src elisp
+  (spookfox-js-injection-eval
+   "console.log('Hello from Emacs'); 5 + 5;"
+   'tab
+   (lambda (tab)
+     (s-contains-p "bitspook.in" (plist-get tab :url))))
+#+end_src
