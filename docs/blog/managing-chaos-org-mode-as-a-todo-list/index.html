@@ -1,13 +1,8 @@
-<html lang=en><head><meta charset=UTF-8><title>Managing Chaos</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=/css/post.css><link rel=alternate type=application/atom+xml href=/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Managing Chaos</h1><div class=meta><time class="meta-item date">January 5, 2019</time><ul class="meta-item tags"><li class=tag><a href=/tags/adhd>#adhd</a><li class=tag><a href=/tags/life>#life</a></ul></div></header><main class=post-body><p>
-I am thinking about doing a small series of posts on how I am managing
+<html lang=en><head><meta charset=UTF-8><title>Managing Chaos</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=https://bitspook.in/css/post.css><link rel=alternate type=application/atom+xml href=https://bitspook.in/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Managing Chaos</h1><div class=meta><time class="meta-item date">January 5, 2019</time><ul class="meta-item tags"><li class=tag><a href=https://bitspook.in/tags/adhd>#adhd</a><li class=tag><a href=https://bitspook.in/tags/life>#life</a></ul></div></header><main class=post-body><p> I am thinking about doing a small series of posts on how I am managing
 the chaos that I am trying to stop fighting. I hope the chaos of an ADHD
 mind can be utilized rather than fought against. So far it has been
 working out pretty great (for past ~8 months). This post is about how I
-manage my ever exploding list of things I want to do.
-</p>
-
-<p>
-I believe one of the most important things is to externalize your
+manage my ever exploding list of things I want to do. </p> <p> I believe one of the most important things is to externalize your
 thoughts. Making it a habit to write them down is immensely helpful. So
 many of my problems stopped being problems as I adopted writing things
 down more and more. I have very small working memory. I forget often and
@@ -15,109 +10,46 @@ I forget most things. Mind is always thinking of new ideas, things to
 do, things to tell people. The knowledge that I am going to forget the
 thing I am thinking right now is a big source of anxiety. The burden of
 remembering innumerable things and then failing to do so has a cognitive
-toll of its own.
-</p>
-
-<p>
-I use org-mode as a lot of things; a TODO list is one of them. I am not
+toll of its own. </p> <p> I use org-mode as a lot of things; a TODO list is one of them. I am not
 going to get into the details of using org-mode for a beginner, but I'll
-share my flow of using org mode as a TODO list.
-</p>
-<div id="outline-container-capturing-things-to-do" class="outline-2">
-<h2 id="capturing-things-to-do">Capturing things to do</h2>
-<div class="outline-text-2" id="text-capturing-things-to-do">
-<p>
-A very useful feature of org-mode is how easy it makes to "capture" TOOD
+share my flow of using org mode as a TODO list. </p> <div id="outline-container-capturing-things-to-do" class="outline-2"> <h2 id="capturing-things-to-do">Capturing things to do</h2> <div class="outline-text-2" id="text-capturing-things-to-do"> <p> A very useful feature of org-mode is how easy it makes to &quot;capture&quot; TOOD
 items. I use Emacs as my primary text editor; being a software
 developer, most of my day time is spent in Emacs. Any time I think of
 something I [want|have] to do, I capture it with 3 keystrokes and
 usually immediately refile it under an appropriate heading. I keep 2
-TODOs.org files, one for work and one for my personal life.
-</p>
-
-<p>
-In my personal TODOs.org file, I keep headings categorizing the kind of
+TODOs.org files, one for work and one for my personal life. </p> <p> In my personal TODOs.org file, I keep headings categorizing the kind of
 thing it is that I want to do; right now, they are =Study, Personal
-Development, Habits, Projects, Reading List, In Basket"."In Basket"
+Development, Habits, Projects, Reading List, In Basket&quot;.&quot;In Basket&quot;
 heading keeps things that are quickly done in a day or few, and/or
-cannot be categorized.
-</p>
-
-<p>
-My work TODOs.org carries all my work related tasks, including Jira
+cannot be categorized. </p> <p> My work TODOs.org carries all my work related tasks, including Jira
 issues, and general things I want/have to do when I am in the office. I
 have a TODO item to integrate org-jira, but right now I am manually
-copying Jira task IDs around like an imbecile.
-</p>
-
-<p>
-This is how my org-capture-templates variable looks like right now:
-</p>
-
-<pre class="example" id="org321e75b">
+copying Jira task IDs around like an imbecile. </p> <p> This is how my org-capture-templates variable looks like right now: </p> <pre class="example" id="orga2819e7">
 (setq
    org-capture-templates
-   '(("d" "Diary Entry" plain (file+datetree org-agenda-diary-file) "\n&lt;%&lt;%I:%M %p&gt;&gt;\n%?\n")
-     ("f" "Feedback" plain (file+datetree trantor-feedback-file) "\n&lt;%&lt;%I:%M %p&gt;&gt;\n%?\n")
-     ("i" "Idea" entry (file org-ideas-file) "* %?\n%T")
-     ("t" "Todo" entry (file+headline "" "Todos") "* TODO %?\n%U\n[[%F]]")
-     ("c" "Contact" entry (file org-contacts-file) "* %^{Name}\n:PROPERTIES:\n:COMPANY %^{Company}\n:PHONE: %^{Phone}\n:END:")))
-</pre>
-</div>
-</div>
-<div id="outline-container-delegating-things-to-future" class="outline-2">
-<h2 id="delegating-things-to-future">Delegating things to future</h2>
-<div class="outline-text-2" id="text-delegating-things-to-future">
-<p>
-Org-mode has a brilliant feature of scheduling tasks. It's rare for me
-to schedule a task for "today"; I delegate stuff to future me. I can
+   '((&quot;d&quot; &quot;Diary Entry&quot; plain (file+datetree org-agenda-diary-file) &quot;\n&lt;%&lt;%I:%M %p&gt;&gt;\n%?\n&quot;)
+     (&quot;f&quot; &quot;Feedback&quot; plain (file+datetree trantor-feedback-file) &quot;\n&lt;%&lt;%I:%M %p&gt;&gt;\n%?\n&quot;)
+     (&quot;i&quot; &quot;Idea&quot; entry (file org-ideas-file) &quot;* %?\n%T&quot;)
+     (&quot;t&quot; &quot;Todo&quot; entry (file+headline &quot;&quot; &quot;Todos&quot;) &quot;* TODO %?\n%U\n[[%F]]&quot;)
+     (&quot;c&quot; &quot;Contact&quot; entry (file org-contacts-file) &quot;* %^{Name}\n:PROPERTIES:\n:COMPANY %^{Company}\n:PHONE: %^{Phone}\n:END:&quot;)))
+</pre> </div> </div> <div id="outline-container-delegating-things-to-future" class="outline-2"> <h2 id="delegating-things-to-future">Delegating things to future</h2> <div class="outline-text-2" id="text-delegating-things-to-future"> <p> Org-mode has a brilliant feature of scheduling tasks. It's rare for me
+to schedule a task for &quot;today&quot;; I delegate stuff to future me. I can
 capture and file things in any header, and then use org-mode's agenda
 views to filter out things past-me assigned for today. I try to finish
-the "today" tasks, and try to stay at peace when I fail to every day.
+the &quot;today&quot; tasks, and try to stay at peace when I fail to every day.
 Org-mode also display a count of for how long I've been missing to do a
 certain task which is a handy reminder that I am falling short on my
-commitments.
-</p>
-</div>
-</div>
-<div id="outline-container-prioritizing-things" class="outline-2">
-<h2 id="prioritizing-things">Prioritizing things</h2>
-<div class="outline-text-2" id="text-prioritizing-things">
-<p>
-Not all tasks are made equal. Although I try my best to not let my
-"Today" tasks list become too big, sometimes there is simply too much on
+commitments. </p> </div> </div> <div id="outline-container-prioritizing-things" class="outline-2"> <h2 id="prioritizing-things">Prioritizing things</h2> <div class="outline-text-2" id="text-prioritizing-things"> <p> Not all tasks are made equal. Although I try my best to not let my
+&quot;Today&quot; tasks list become too big, sometimes there is simply too much on
 the plate. In that case, I define priorities for the most important
-tasks, which are displayed at the top of the list in Day-agenda view.
-</p>
-</div>
-</div>
-<div id="outline-container-tagging-items" class="outline-2">
-<h2 id="tagging-items">Tagging items</h2>
-<div class="outline-text-2" id="text-tagging-items">
-<p>
-I often tag my TODO items so I can easily filter them in the agenda view
+tasks, which are displayed at the top of the list in Day-agenda view. </p> </div> </div> <div id="outline-container-tagging-items" class="outline-2"> <h2 id="tagging-items">Tagging items</h2> <div class="outline-text-2" id="text-tagging-items"> <p> I often tag my TODO items so I can easily filter them in the agenda view
 when I want to find things I have to do in some particular context. I
-often tag things by:
-</p>
-
-<ul class="org-ul">
-<li>The person's name who I need to be with for doing something e.g when I
-want to tell someone something</li>
-<li>The Scrum sprint in which a task need to get done. For this I don't
-tag each task but instead file my tasks in a "Sprint X" heading which
+often tag things by: </p> <ul class="org-ul"> <li>The person's name who I need to be with for doing something e.g when I
+want to tell someone something</li> <li>The Scrum sprint in which a task need to get done. For this I don't
+tag each task but instead file my tasks in a &quot;Sprint X&quot; heading which
 is tagged, and org-mode automatically inherit tags to all the
-subheadings</li>
-<li>Place where I need to be at for doing something</li>
-<li>Some other task specific metadata that I think can be helpful for
-finding this task</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-finding-things-to-do" class="outline-2">
-<h2 id="finding-things-to-do">Finding things to do</h2>
-<div class="outline-text-2" id="text-finding-things-to-do">
-<p>
-Org-mode allow me to write my todo items in any order in any manner; I
+subheadings</li> <li>Place where I need to be at for doing something</li> <li>Some other task specific metadata that I think can be helpful for
+finding this task</li> </ul> </div> </div> <div id="outline-container-finding-things-to-do" class="outline-2"> <h2 id="finding-things-to-do">Finding things to do</h2> <div class="outline-text-2" id="text-finding-things-to-do"> <p> Org-mode allow me to write my todo items in any order in any manner; I
 have several files where I write a lot of stuff, some of it is things to
 do; most if it isn't. It's crucial to write things down for me, because
 I know that I am going to forget it. Org-mode is immensely helpful in
@@ -125,23 +57,10 @@ finding things out when I need it. Org-files being just text files allow
 me to just grep stuff; which is even more powerful with
 helm-projectile-grep. But the killer feature for finding out what I am
 supposed to be doing right now is org's agenda view. It allow me to
-filter things by time and tags.
-</p>
-
-<p>
-Org-mode require you to explicitly add files to a list of
-<code>org-agenda-files</code>. The agenda views only pick tasks from files in this
+filter things by time and tags. </p> <p> Org-mode require you to explicitly add files to a list of <code>org-agenda-files</code>. The agenda views only pick tasks from files in this
 list. I have almost all my org files in my agenda list. It also provides
 different views for the agenda; the one I am using most these days is
-the "Day-agenda" view, and Week-agenda view when I want to plan things
-ahead for the week.
-</p>
-
-<p>
-On my mobile, I use orgzly android app. I am not too happy with it, but
+the &quot;Day-agenda&quot; view, and Week-agenda view when I want to plan things
+ahead for the week. </p> <p> On my mobile, I use orgzly android app. I am not too happy with it, but
 it's the best I've got for now. I've it in my TODO list to create an app
-focused on org-mode and TODO lists the way I want it to work.
-</p>
-</div>
-</div>
-</main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>
+focused on org-mode and TODO lists the way I want it to work. </p> </div> </div> </main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=https://bitspook.in/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>

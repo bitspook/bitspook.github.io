@@ -1,147 +1,42 @@
-<html lang=en><head><meta charset=UTF-8><title>Extending org-mode to handle youtube links</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=/css/post.css><link rel=alternate type=application/atom+xml href=/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Extending org-mode to handle youtube links</h1><div class=meta><time class="meta-item date">September 26, 2022</time><ul class="meta-item tags"><li class=tag><a href=/tags/emacs>#emacs</a><li class=tag><a href=/tags/elisp>#elisp</a><li class=tag><a href=/tags/org-mode>#org-mode</a><li class=tag><a href=/tags/video>#video</a></ul></div></header><main class=post-body><p>
-<iframe width="560" height="315" src="//youtube.com/embed/eaZUZCzaIgw" title="nil" frameborder="0" allowfullscreen></iframe>
-</p>
-<div id="outline-container-Requirement" class="outline-2">
-<h2 id="Requirement">Requirement</h2>
-<div class="outline-text-2" id="text-Requirement">
-<ol class="org-ol">
-<li>I want to open youtube links in my notes in <code>mpv</code> instead of opening the
-browser</li>
-
-<li>When exporting to HTML, youtube links should become embedded videos instead
-of hyperlinks</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-Implementation" class="outline-2">
-<h2 id="Implementation">Implementation</h2>
-<div class="outline-text-2" id="text-Implementation">
-<p>
-Org has a concept of 'link types'. We can add a new type of link and have it
-behave the way we want.
-</p>
-
-<ul class="org-ul">
-<li><p>
-<code>org-link-parameters</code>
-</p>
-
-<p>
-This variable contains link types and how they behave on follow (i.e when
+<html lang=en><head><meta charset=UTF-8><title>Extending org-mode to handle youtube links</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=https://bitspook.in/css/post.css><link rel=alternate type=application/atom+xml href=https://bitspook.in/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Extending org-mode to handle youtube links</h1><div class=meta><time class="meta-item date">September 26, 2022</time><ul class="meta-item tags"><li class=tag><a href=https://bitspook.in/tags/emacs>#emacs</a><li class=tag><a href=https://bitspook.in/tags/elisp>#elisp</a><li class=tag><a href=https://bitspook.in/tags/org-mode>#org-mode</a><li class=tag><a href=https://bitspook.in/tags/video>#video</a></ul></div></header><main class=post-body><p> <iframe width="560" height="315" src="//youtube.com/embed/eaZUZCzaIgw" title="nil" frameborder="0" allowfullscreen=""></iframe> </p> <div id="outline-container-Requirement" class="outline-2"> <h2 id="Requirement">Requirement</h2> <div class="outline-text-2" id="text-Requirement"> <ol class="org-ol"> <li>I want to open youtube links in my notes in <code>mpv</code> instead of opening the
+browser</li> <li>When exporting to HTML, youtube links should become embedded videos instead
+of hyperlinks</li> </ol> </div> </div> <div id="outline-container-Implementation" class="outline-2"> <h2 id="Implementation">Implementation</h2> <div class="outline-text-2" id="text-Implementation"> <p> Org has a concept of 'link types'. We can add a new type of link and have it
+behave the way we want. </p> <ul class="org-ul"> <li><p> <code>org-link-parameters</code> </p> <p> This variable contains link types and how they behave on follow (i.e when
 someone opens the link with <code>C-c C-o</code>), export etc. A type of a link is
-determined by the string before first ":" in it. e.g "<a href="https://bitspook.in">https://bitspook.in</a>" has
-<code>https</code> type, "<a href="file:///etc">file:///etc</a>" has <code>file</code> type.
-</p>
-
-<p>
-Items in this list has 2 main components:
-</p>
-
-<ol class="org-ol">
-<li>First element is string representing the link type</li>
-<li>Key-value pairs of behavior name (e.g <code>:follow</code>, <code>:export</code>) and
-function which handles that behavior</li>
-</ol>
-
-<p>
-For example:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-elisp">((<span style="color: #6aaf50;">"yt"</span> <span style="color: #7f7dca;">:follow</span> spook-org--follow-yt-link <span style="color: #7f7dca;">:export</span> spook-org--export-yt-link)
- (<span style="color: #6aaf50;">"eww"</span> <span style="color: #7f7dca;">:follow</span> org-eww-open <span style="color: #7f7dca;">:store</span> org-eww-store-link))
-</pre>
-</div></li>
-
-<li><p>
-<code>org-link-set-parameters</code>
-</p>
-
-<p>
-This function is used to add new link-types (and also to add new behavior to
+determined by the string before first &quot;:&quot; in it. e.g &quot;<a href="https://bitspook.in">https://bitspook.in</a>&quot; has <code>https</code> type, &quot;<a href="file:///etc">file:///etc</a>&quot; has <code>file</code> type. </p> <p> Items in this list has 2 main components: </p> <ol class="org-ol"> <li>First element is string representing the link type</li> <li>Key-value pairs of behavior name (e.g <code>:follow</code>, <code>:export</code>) and
+function which handles that behavior</li> </ol> <p> For example: </p> <div class="org-src-container"> <pre class="src src-elisp">((<span style="color: #6aaf50;">&quot;yt&quot;</span> <span style="color: #7f7dca;">:follow</span> spook-org--follow-yt-link <span style="color: #7f7dca;">:export</span> spook-org--export-yt-link)
+ (<span style="color: #6aaf50;">&quot;eww&quot;</span> <span style="color: #7f7dca;">:follow</span> org-eww-open <span style="color: #7f7dca;">:store</span> org-eww-store-link))
+</pre> </div></li> <li><p> <code>org-link-set-parameters</code> </p> <p> This function is used to add new link-types (and also to add new behavior to
 existing ones). You can check the docs for <code>org-link-parameters</code> (with <code>C-h v
-  org-link-parameters</code>) to see arguments provided to each type of callback.
-</p></li>
-</ul>
-
-<p>
-Here's the code I've added in <a href="https://github.com/bitspook/spookmax.d">my emacs config</a>:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">spook-org--follow-yt-link</span> (path prefix)
-  (<span style="color: #598bc1;">let*</span> ((url (format <span style="color: #6aaf50;">"https:%s"</span> path))
-         (proc-name (format <span style="color: #6aaf50;">"*yt://%s*"</span> url)))
-    (<span style="color: #598bc1;">if</span> (<span style="color: #598bc1;">and</span> prefix (executable-find <span style="color: #6aaf50;">"mpv"</span>))
+  org-link-parameters</code>) to see arguments provided to each type of callback. </p></li> </ul> <p> Here's the code I've added in <a href="https://github.com/bitspook/spookmax.d">my emacs config</a>: </p> <div class="org-src-container"> <pre class="src src-elisp">(<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">spook-org--follow-yt-link</span> (path prefix)
+  (<span style="color: #598bc1;">let*</span> ((url (format <span style="color: #6aaf50;">&quot;https:%s&quot;</span> path))
+         (proc-name (format <span style="color: #6aaf50;">&quot;*yt://%s*&quot;</span> url)))
+    (<span style="color: #598bc1;">if</span> (<span style="color: #598bc1;">and</span> prefix (executable-find <span style="color: #6aaf50;">&quot;mpv&quot;</span>))
         (browse-url url)
-      (make-process <span style="color: #7f7dca;">:name</span> proc-name <span style="color: #7f7dca;">:buffer</span> proc-name <span style="color: #7f7dca;">:command</span> `(<span style="color: #6aaf50;">"mpv"</span> ,url))
-      (message <span style="color: #6aaf50;">"Launched mpv in buffer: %s"</span> proc-name))))
+      (make-process <span style="color: #7f7dca;">:name</span> proc-name <span style="color: #7f7dca;">:buffer</span> proc-name <span style="color: #7f7dca;">:command</span> `(<span style="color: #6aaf50;">&quot;mpv&quot;</span> ,url))
+      (message <span style="color: #6aaf50;">&quot;Launched mpv in buffer: %s&quot;</span> proc-name))))
 
 (<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">spook-org--export-yt-link</span> (path desc backend)
   (<span style="color: #598bc1;">when</span> (eq backend 'html)
     (<span style="color: #598bc1;">let*</span> ((video-id (cadar (url-parse-query-string path)))
            (url (<span style="color: #598bc1;">if</span> (string-empty-p video-id) path
-                  (format <span style="color: #6aaf50;">"//youtube.com/embed/%s"</span> video-id))))
+                  (format <span style="color: #6aaf50;">&quot;//youtube.com/embed/%s&quot;</span> video-id))))
       (format
-       <span style="color: #6aaf50;">"&lt;iframe width=\"560\" height=\"315\" src=\"%s\" title=\"%s\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;"</span>
+       <span style="color: #6aaf50;">&quot;&lt;iframe width=\&quot;560\&quot; height=\&quot;315\&quot; src=\&quot;%s\&quot; title=\&quot;%s\&quot; frameborder=\&quot;0\&quot; allowfullscreen&gt;&lt;/iframe&gt;&quot;</span>
        url desc))))
 
-(org-link-set-parameters <span style="color: #6aaf50;">"yt"</span> <span style="color: #7f7dca;">:follow</span> #'spook-org--follow-yt-link <span style="color: #7f7dca;">:export</span> #'spook-org--export-yt-link)
-</pre>
-</div>
-
-<p>
-<code>make-process</code> will create a background buffer named <code>*yt://&lt;url&gt;*</code> which
-allow monitoring and killing the mpv process.
-</p>
-
-<p>
-<i>Update</i>: Use <code>make-process</code> instead of <code>async-shell-command</code> for launching mpv.
-Thanks to <a href="https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgmode_to_handle_youtube_links/iplpk57/">nv-elisp on /r/emacs</a>
-</p>
-</div>
-</div>
-<div id="outline-container-Result" class="outline-2">
-<h2 id="Result">Result</h2>
-<div class="outline-text-2" id="text-Result">
-<ol class="org-ol">
-<li><code>C-c C-o</code> (i.e <code>org-open-at-point</code>) on a <code>yt://</code> link opens the youtube video
-in mpv</li>
-<li><code>C-u C-c C-o</code> (i.e <code>org-open-at-point</code> with an prefix argument) on a <code>yt://</code>
-link opens the video in browser</li>
-<li>When exported to HTML, all <code>yt://</code> links file are exported as embedded
-youtube videos</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-Bonus%20gains%20%F0%9F%92%AA" class="outline-2">
-<h2 id="Bonus%20gains%20%F0%9F%92%AA">Bonus gains 💪</h2>
-<div class="outline-text-2" id="text-Bonus%20gains%20%F0%9F%92%AA">
-<p>
-Recently I've been building a tool (<a href="https://github.com/bitspook/cl-ownpress">cl-ownpress</a>) which to make blogging a
+(org-link-set-parameters <span style="color: #6aaf50;">&quot;yt&quot;</span> <span style="color: #7f7dca;">:follow</span> #'spook-org--follow-yt-link <span style="color: #7f7dca;">:export</span> #'spook-org--export-yt-link)
+</pre> </div> <p> <code>make-process</code> will create a background buffer named <code>*yt://&lt;url&gt;*</code> which
+allow monitoring and killing the mpv process. </p> <p> <i>Update</i>: Use <code>make-process</code> instead of <code>async-shell-command</code> for launching mpv.
+Thanks to <a href="https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgmode_to_handle_youtube_links/iplpk57/">nv-elisp on /r/emacs</a> </p> </div> </div> <div id="outline-container-Result" class="outline-2"> <h2 id="Result">Result</h2> <div class="outline-text-2" id="text-Result"> <ol class="org-ol"> <li><code>C-c C-o</code> (i.e <code>org-open-at-point</code>) on a <code>yt://</code> link opens the youtube video
+in mpv</li> <li><code>C-u C-c C-o</code> (i.e <code>org-open-at-point</code> with an prefix argument) on a <code>yt://</code> link opens the video in browser</li> <li>When exported to HTML, all <code>yt://</code> links file are exported as embedded
+youtube videos</li> </ol> </div> </div> <div id="outline-container-Bonus%20gains%20%F0%9F%92%AA" class="outline-2"> <h2 id="Bonus%20gains%20%F0%9F%92%AA">Bonus gains 💪</h2> <div class="outline-text-2" id="text-Bonus%20gains%20%F0%9F%92%AA"> <p> Recently I've been building a tool (<a href="https://github.com/bitspook/cl-ownpress">cl-ownpress</a>) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
 note taking, publishing a subset of my notes will enable maintaining an active
-blog without doing any "work".
-</p>
-
-<p>
-I've also been making thickly-accented-awkardly-narrated youtube videos. These
+blog without doing any &quot;work&quot;. </p> <p> I've also been making thickly-accented-awkardly-narrated youtube videos. These
 are almost always <i>tldr;</i> videos for my blog posts. So they get embedded in my
-blog posts.
-</p>
-
-<p>
-'Blog with notes + embed youtube videos' become easier to do with this little
+blog posts. </p> <p> 'Blog with notes + embed youtube videos' become easier to do with this little
 tinkering. Since <a href="https://github.com/bitspook/cl-ownpress">cl-ownpress</a> uses my running Emacs to publish my posts, I don't
 need to make any change in my blogging setup. I can embed my <i>tldr;</i> videos in
-my blog posts by just prefixing youtube links with <code>yt://</code> instead of
-<code>https://</code>.
-</p>
-
-<p>
-I am pretty happy that I got zero work blogging-setup, and zero work
-extending-the-blogging-setup as well.
-</p>
-</div>
-</div>
-</main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>
+my blog posts by just prefixing youtube links with <code>yt://</code> instead of <code>https://</code>. </p> <p> I am pretty happy that I got zero work blogging-setup, and zero work
+extending-the-blogging-setup as well. </p> </div> </div> </main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=https://bitspook.in/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>

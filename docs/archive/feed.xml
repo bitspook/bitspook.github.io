@@ -1,343 +1,96 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">@bitspook's personal website - </title><id>//archive/feed.xml</id><updated>2024-05-01T12:10:42.784390Z</updated><link href="//archive/feed.xml" rel="self" title="@bitspook's personal website"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>//images/avatar.png</logo><entry><title type="text">Thoughts on HPI and future of cl-ownpress</title><id>/blog/thoughts-on-hpi-and-future-of-cl-ownpress/index.html</id><updated>2024-01-01T10:54:00.000000Z</updated><link href="/blog/thoughts-on-hpi-and-future-of-cl-ownpress/index.html" title="Thoughts on HPI and future of cl-ownpress"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2024-01-01T10:54:00.000000Z</published><summary type="text"></summary><content type="html">&lt;blockquote id=&quot;orgdeb3775&quot;&gt;
-&lt;p&gt;
-Reflecting on similarities and differences b/w HPI and what I want cl-ownpress to build into.
-Thinking out loud.
-&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;
-Recently I came across &lt;a href=&quot;https://github.com/karlicoss/HPI&quot;&gt;HPI&lt;/a&gt; again. HPI has a lot of similarities to what I want cl-ownpress to be.
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">@bitspook's personal website : All content - bitspook.in</title><id>https://bitspook.in//archive/feed.xml</id><updated>2024-09-08T05:00:58.486862Z</updated><link href="https://bitspook.in//archive/feed.xml" rel="self" title="@bitspook's personal website : All content"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in//images/avatar.png</logo><entry><title type="text">Thoughts on HPI and future of cl-ownpress</title><id>/blog/thoughts-on-hpi-and-future-of-cl-ownpress/index.html</id><updated>2024-01-01T10:54:00.000000Z</updated><link href="/blog/thoughts-on-hpi-and-future-of-cl-ownpress/index.html" title="Thoughts on HPI and future of cl-ownpress"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2024-01-01T10:54:00.000000Z</published><summary type="text"></summary><content type="html">&lt;blockquote id=&quot;orgf0fcedb&quot;&gt; &lt;p&gt; Reflecting on similarities and differences b/w HPI and what I want cl-ownpress to build into.
+Thinking out loud. &lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt; Recently I came across &lt;a href=&quot;https://github.com/karlicoss/HPI&quot;&gt;HPI&lt;/a&gt; again. HPI has a lot of similarities to what I want cl-ownpress to be.
 Its goal seem to be enabling a user to take ownership of their own data that's locked in online
 platforms. This is exactly what I want cl-ownpress to do for me. This realization gave me pause, and
-here I am rationalizing continued existence of cl-ownpress.
-&lt;/p&gt;
-
-&lt;p&gt;
-cl-ownpress is supposed to be a part of a bigger ecosystem for personal computing. By personal
+here I am rationalizing continued existence of cl-ownpress. &lt;/p&gt; &lt;p&gt; cl-ownpress is supposed to be a part of a bigger ecosystem for personal computing. By personal
 computing I mean hooking into every aspect of my personal life. My thoughts (daily journal, captured
 ideas), finances, things I own, people I interact with, work I do and everything else. In my ideal
-personal computing ecosystem, different independent pieces interact with and build upon each other.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;i&gt;For example&lt;/i&gt;, I want to have a CRM to manage people and my relationships with them. I want the
+personal computing ecosystem, different independent pieces interact with and build upon each other. &lt;/p&gt; &lt;p&gt; &lt;i&gt;For example&lt;/i&gt;, I want to have a CRM to manage people and my relationships with them. I want the
 ability to mention people from my CRM in my daily journal, and then be able to make queries like
 &amp;quot;all interactions with person &amp;lt;X&amp;gt;&amp;quot;. Similarly, I want to utilize my CRM to also mention people in my
 blog-posts. These mentions however should get intelligently published. e.g on my personal website,
 mention of a person should become a link to their own personal website. When publishing to mastodon,
-it should become a mastodon mention.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;i&gt;Another example&lt;/i&gt;, I'd like to maintain an accounting ledger of all the money I spend. I want to
+it should become a mastodon mention. &lt;/p&gt; &lt;p&gt; &lt;i&gt;Another example&lt;/i&gt;, I'd like to maintain an accounting ledger of all the money I spend. I want to
 utilize this to also maintain a list of things I own. I'd like to utilize this in turn to review
-things I use, and publish my reviews to my personal website and/or where I purchased it from.
-&lt;/p&gt;
-
-&lt;p&gt;
-Publishing a subset of all the data in my personal computing ecosystem is where cl-ownpress comes
-in.
-&lt;/p&gt;
-
-&lt;p&gt;
-At present, cl-ownpress happens to be the most complete component of my ecosystem. I have a &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;few&lt;/a&gt;
-&lt;a href=&quot;https://github.com/bitspook/saunf&quot;&gt;other&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/kharcha&quot;&gt;pieces&lt;/a&gt; in pretty-much abandoned state while I have replaced them with some untracked lisp code
-(mostly in my Emacs setup).
-&lt;/p&gt;
-
-&lt;p&gt;
-HPI seems to provide same functionality as cl-ownpress's &lt;a href=&quot;https://github.com/bitspook/cl-ownpress/blob/master/src/provider/package.lisp#L1-L4&quot;&gt;providers&lt;/a&gt;. So why not replace &lt;code&gt;provider&lt;/code&gt;-s
+things I use, and publish my reviews to my personal website and/or where I purchased it from. &lt;/p&gt; &lt;p&gt; Publishing a subset of all the data in my personal computing ecosystem is where cl-ownpress comes
+in. &lt;/p&gt; &lt;p&gt; At present, cl-ownpress happens to be the most complete component of my ecosystem. I have a &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;few&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/saunf&quot;&gt;other&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/kharcha&quot;&gt;pieces&lt;/a&gt; in pretty-much abandoned state while I have replaced them with some untracked lisp code
+(mostly in my Emacs setup). &lt;/p&gt; &lt;p&gt; HPI seems to provide same functionality as cl-ownpress's &lt;a href=&quot;https://github.com/bitspook/cl-ownpress/blob/master/src/provider/package.lisp#L1-L4&quot;&gt;providers&lt;/a&gt;. So why not replace &lt;code&gt;provider&lt;/code&gt;-s
 with HPI and build on already done work? Well, things I wanted so far (converting my denote notes to
 blog posts while using my Emacs configuration to do the conversion from org to html) don't have a
 replacement in HPI. In future, when I want to deal with an external data source and there is an HPI
-module available for it, perhaps I'll create an &lt;code&gt;hpi-provider&lt;/code&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-That settles one aspect of relationship of cl-ownpress and HPI. They're complimentary instead of
+module available for it, perhaps I'll create an &lt;code&gt;hpi-provider&lt;/code&gt;. &lt;/p&gt; &lt;p&gt; That settles one aspect of relationship of cl-ownpress and HPI. They're complimentary instead of
 contradictory. HPI is essentially a set of cl-ownpress &lt;code&gt;provider&lt;/code&gt;-s. But I believe there is a
-philosophical difference in how both these projects approach gaining ownership over user's data.
-&lt;/p&gt;
-
-&lt;p&gt;
-HPI &lt;b&gt;accepts&lt;/b&gt; that data is going to be produced on walled platforms, while cl-ownpress establishes
+philosophical difference in how both these projects approach gaining ownership over user's data. &lt;/p&gt; &lt;p&gt; HPI &lt;b&gt;accepts&lt;/b&gt; that data is going to be produced on walled platforms, while cl-ownpress establishes
 user's own platform where data is originally published. Cl-ownpress then uses the walled platforms
-for interacting with people these platforms have managed to hold hostage.
-&lt;/p&gt;
-
-&lt;p&gt;
-Admittedly HPI has a broader scope, it deals with more than just getting data back from walled
+for interacting with people these platforms have managed to hold hostage. &lt;/p&gt; &lt;p&gt; Admittedly HPI has a broader scope, it deals with more than just getting data back from walled
 platforms, but in the aspect of 'publishing', I believe this holds true. With cl-ownpress, I want to
 invert the relationship. Instead of &amp;quot;the platform &amp;lt;X&amp;gt; uses me and locks in &lt;b&gt;my&lt;/b&gt; content&amp;quot;, I want it
-to be &amp;quot;&lt;b&gt;I&lt;/b&gt; own my content, and use the walled garden to interact with its hostages&amp;quot;.
-&lt;/p&gt;
-
-&lt;p&gt;
-The subtle difference is important to me. This is an attitude I'd like to have towards life, and
-what is my personal computing ecosystem if not its reflection.
-&lt;/p&gt;
-</content></entry><entry><title type="text">Reading, and not forgetting</title><id>/blog/reading-and-not-forgetting/index.html</id><updated>2023-01-15T19:46:00.000000Z</updated><link href="/blog/reading-and-not-forgetting/index.html" title="Reading, and not forgetting"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2023-01-15T19:46:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-Problem&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Problem&quot;&gt;
-&lt;p&gt;
-I forget everything I read, as soon as I am done reading (a sentence). Over
+to be &amp;quot;&lt;b&gt;I&lt;/b&gt; own my content, and use the walled garden to interact with its hostages&amp;quot;. &lt;/p&gt; &lt;p&gt; The subtle difference is important to me. This is an attitude I'd like to have towards life, and
+what is my personal computing ecosystem if not its reflection. &lt;/p&gt; </content></entry><entry><title type="text">Reading, and not forgetting</title><id>/blog/reading-and-not-forgetting/index.html</id><updated>2023-01-15T19:46:00.000000Z</updated><link href="/blog/reading-and-not-forgetting/index.html" title="Reading, and not forgetting"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2023-01-15T19:46:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-Problem&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Problem&quot;&gt;Problem&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Problem&quot;&gt; &lt;p&gt; I forget everything I read, as soon as I am done reading (a sentence). Over
 time, reading turned from leisure to labor. Pressure of having to remember
 things took the fun out of reading. Small attention span and easily getting
-distracted made it even worse.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Solution&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Solution&quot;&gt;
-&lt;p&gt;
-Take notes to outsource remembering, and make reading more engaging.
-&lt;/p&gt;
-
-&lt;p&gt;
-Creating well-organized notes take the burden of remembering away. The act of
-taking notes keep my attention tethered.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Implementation&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Implementation&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Implementation&quot;&gt;
-&lt;p&gt;
-Note taking process need to be designed to reduce the burden that note-taking
+distracted made it even worse. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Solution&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Solution&quot;&gt;Solution&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Solution&quot;&gt; &lt;p&gt; Take notes to outsource remembering, and make reading more engaging. &lt;/p&gt; &lt;p&gt; Creating well-organized notes take the burden of remembering away. The act of
+taking notes keep my attention tethered. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Implementation&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Implementation&quot;&gt;Implementation&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Implementation&quot;&gt; &lt;p&gt; Note taking process need to be designed to reduce the burden that note-taking
 itself can become. Key here is not taking notes, it is crafting a smooth
-note-taking workflow.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Components&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;Components&quot;&gt;Components&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-Components&quot;&gt;
-&lt;p&gt;
-My reading workflow involves 3 major components
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;Emacs&lt;/li&gt;
-&lt;li&gt;Denote, an Emacs package for managing notes&lt;/li&gt;
-&lt;li&gt;Spookfox: An Emacs package for controlling Firefox from Emacs&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Emacs&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;Emacs&quot;&gt;Emacs&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-Emacs&quot;&gt;
-&lt;p&gt;
-Emacs is the center stage on which everything else plays. I chose Emacs, because
-&lt;/p&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;It is where I spend most time on my computer&lt;/li&gt;
-&lt;li&gt;I am very comfortable hacking on it, so tuning things to make my workflow
-smoother is an already acquired habit.&lt;/li&gt;
-&lt;li&gt;I already have a thriving documenting system/workflow in Emacs. I have to
+note-taking workflow. &lt;/p&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Components&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;Components&quot;&gt;Components&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-Components&quot;&gt; &lt;p&gt; My reading workflow involves 3 major components &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;Emacs&lt;/li&gt; &lt;li&gt;Denote, an Emacs package for managing notes&lt;/li&gt; &lt;li&gt;Spookfox: An Emacs package for controlling Firefox from Emacs&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Emacs&quot; class=&quot;outline-4&quot;&gt; &lt;h4 id=&quot;Emacs&quot;&gt;Emacs&lt;/h4&gt; &lt;div class=&quot;outline-text-4&quot; id=&quot;text-Emacs&quot;&gt; &lt;p&gt; Emacs is the center stage on which everything else plays. I chose Emacs, because &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;It is where I spend most time on my computer&lt;/li&gt; &lt;li&gt;I am very comfortable hacking on it, so tuning things to make my workflow
+smoother is an already acquired habit.&lt;/li&gt; &lt;li&gt;I already have a thriving documenting system/workflow in Emacs. I have to
 externalize a lot of my mind, for which I've been using Emacs for over a
-decade now.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Denote&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;Denote&quot;&gt;Denote&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-Denote&quot;&gt;
-&lt;p&gt;
-&lt;a href=&quot;https://github.com/protesilaos/denote&quot;&gt;Denote&lt;/a&gt; is my present choice of note-taking Emacs package. It provide structure
-to my notes, and thin tooling to navigate this structure. Notes are kept in
-&lt;code&gt;&amp;lt;timestamp&amp;gt;-&amp;lt;slug&amp;gt;__&amp;lt;tags&amp;gt;.org&lt;/code&gt; format. This makes it easy to find a note by
-keywords and tags even from outside Emacs.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Spookfox&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;Spookfox&quot;&gt;Spookfox&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-Spookfox&quot;&gt;
-&lt;p&gt;
-&lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;Spookfox&lt;/a&gt; is my answer to &amp;quot;but what about when you need to leave Emacs?&amp;quot;.
-&lt;/p&gt;
-
-&lt;p&gt;
-I consume most of the educational content on the web, that usually means
+decade now.&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Denote&quot; class=&quot;outline-4&quot;&gt; &lt;h4 id=&quot;Denote&quot;&gt;Denote&lt;/h4&gt; &lt;div class=&quot;outline-text-4&quot; id=&quot;text-Denote&quot;&gt; &lt;p&gt; &lt;a href=&quot;https://github.com/protesilaos/denote&quot;&gt;Denote&lt;/a&gt; is my present choice of note-taking Emacs package. It provide structure
+to my notes, and thin tooling to navigate this structure. Notes are kept in &lt;code&gt;&amp;lt;timestamp&amp;gt;-&amp;lt;slug&amp;gt;__&amp;lt;tags&amp;gt;.org&lt;/code&gt; format. This makes it easy to find a note by
+keywords and tags even from outside Emacs. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Spookfox&quot; class=&quot;outline-4&quot;&gt; &lt;h4 id=&quot;Spookfox&quot;&gt;Spookfox&lt;/h4&gt; &lt;div class=&quot;outline-text-4&quot; id=&quot;text-Spookfox&quot;&gt; &lt;p&gt; &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;Spookfox&lt;/a&gt; is my answer to &amp;quot;but what about when you need to leave Emacs?&amp;quot;. &lt;/p&gt; &lt;p&gt; I consume most of the educational content on the web, that usually means
 Firefox. I built myself a small system (Spookfox) to make Emacs speak with
-Firefox.
-&lt;/p&gt;
-
-&lt;p&gt;
-It is sort of a launch-pad for quickly creating Firefox addons which talk to
+Firefox. &lt;/p&gt; &lt;p&gt; It is sort of a launch-pad for quickly creating Firefox addons which talk to
 Emacs. Most commonly I use it for accessing content I have in browser, e.g
-getting information about current browser tab, video being played etc.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-The%20workflow&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;The%20workflow&quot;&gt;The workflow&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-The%20workflow&quot;&gt;
-&lt;p&gt;
-It boils down to a single key-combo: &lt;code&gt;C-c n r&lt;/code&gt; open a &amp;quot;reading note&amp;quot; in my
+getting information about current browser tab, video being played etc. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-The%20workflow&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;The%20workflow&quot;&gt;The workflow&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-The%20workflow&quot;&gt; &lt;p&gt; It boils down to a single key-combo: &lt;code&gt;C-c n r&lt;/code&gt; open a &amp;quot;reading note&amp;quot; in my
 scratchpad. &lt;code&gt;C-c n r&lt;/code&gt; opens the same note regardless of when I open it; i.e it
 don't re-create a new note every time. This is super useful when you are blessed
-with the combo of laziness and forgetfulness.
-&lt;/p&gt;
-
-&lt;p&gt;
-Scratchpad is a mechanism for quickly launching an Emacs window for capturing
+with the combo of laziness and forgetfulness. &lt;/p&gt; &lt;p&gt; Scratchpad is a mechanism for quickly launching an Emacs window for capturing
 some information. This usually means bringing an Emacs window to focus with a
-keypress.
-&lt;/p&gt;
-
-&lt;p&gt;
-A reading note is a note which has
-&lt;/p&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;code&gt;reading&lt;/code&gt; tag&lt;/li&gt;
-&lt;li&gt;A &lt;code&gt;source&lt;/code&gt; property, which is 95% of the times the web URL (from Firefox)&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;
-&lt;code&gt;reading&lt;/code&gt; subdirectory in my notes
-&lt;/p&gt;
-
-&lt;p&gt;
-It seems redundant given that there is already a &lt;code&gt;reading&lt;/code&gt; tag, but I keep it
+keypress. &lt;/p&gt; &lt;p&gt; A reading note is a note which has &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;code&gt;reading&lt;/code&gt; tag&lt;/li&gt; &lt;li&gt;A &lt;code&gt;source&lt;/code&gt; property, which is 95% of the times the web URL (from Firefox)&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;code&gt;reading&lt;/code&gt; subdirectory in my notes &lt;/p&gt; &lt;p&gt; It seems redundant given that there is already a &lt;code&gt;reading&lt;/code&gt; tag, but I keep it
 not for categorizing the notes but to keep them out of my normal
-notes-search.
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-My &amp;quot;normal&amp;quot; notes are conceptual, they come from different sources and are
+notes-search. &lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt; My &amp;quot;normal&amp;quot; notes are conceptual, they come from different sources and are
 essence of my understanding from different sources. My reading notes &lt;b&gt;are&lt;/b&gt; these
-sources.
-&lt;/p&gt;
-
-&lt;p&gt;
-&amp;quot;Reading&amp;quot; notes free me up to not worry about the structure of the notes I am
+sources. &lt;/p&gt; &lt;p&gt; &amp;quot;Reading&amp;quot; notes free me up to not worry about the structure of the notes I am
 taking or its impact on other notes. After taking the &amp;quot;reading&amp;quot; notes, I review
 them and move appropriate parts (or summary/rephrase) them in my &amp;quot;normal&amp;quot;
-note(s), while linking back to the reading note.
-&lt;/p&gt;
-
-&lt;p&gt;
-This create a neat web of sources and concepts. I get to be free from the burden
+note(s), while linking back to the reading note. &lt;/p&gt; &lt;p&gt; This create a neat web of sources and concepts. I get to be free from the burden
 of keeping track of where the knowledge in my notes is coming from. When I need
 to track something back to its source, I get nice hand-drafted summary of the
-original source.
-&lt;/p&gt;
-
-&lt;p&gt;
-With Spookfox I extend this workflow to (Youtube) videos as well. In addition to
+original source. &lt;/p&gt; &lt;p&gt; With Spookfox I extend this workflow to (Youtube) videos as well. In addition to
 automatically opening the note, I have &lt;a href=&quot;https://github.com/bitspook/spookmax.d/blame/7f5f0fbde3777662d2d2fb2baefc18a71c012855/readme.org#L1528-L1610&quot;&gt;Emacs configured to insert video
 timestamps with my notes&lt;/a&gt;. This essentially annotate Youtube videos, and have
-come super handy recently in my German language study.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">I am moving to Berlin</title><id>/blog/i-am-moving-to-berlin/index.html</id><updated>2022-11-22T15:12:00.000000Z</updated><link href="/blog/i-am-moving-to-berlin/index.html" title="I am moving to Berlin"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-11-22T15:12:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-Why&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Why&quot;&gt;Why&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Why&quot;&gt;
-&lt;p&gt;
-There are several reasons I stated in my &lt;a href=&quot;https://bitspook.in/blog/after-6-months-of-voluntary-unemployment/&quot;&gt;previous blog post&lt;/a&gt;. Other than those,
-here are a few more:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;p&gt;
-Peer pressure
-&lt;/p&gt;
-
-&lt;p&gt;
-At this point it is customary for Punjabis to immigrate to a foreign country.
+come super handy recently in my German language study. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">I am moving to Berlin</title><id>/blog/i-am-moving-to-berlin/index.html</id><updated>2022-11-22T15:12:00.000000Z</updated><link href="/blog/i-am-moving-to-berlin/index.html" title="I am moving to Berlin"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-11-22T15:12:00.000000Z</published><summary type="text"></summary><content type="html">&lt;div id=&quot;outline-container-Why&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Why&quot;&gt;Why&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Why&quot;&gt; &lt;p&gt; There are several reasons I stated in my &lt;a href=&quot;https://bitspook.in/blog/after-6-months-of-voluntary-unemployment/&quot;&gt;previous blog post&lt;/a&gt;. Other than those,
+here are a few more: &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;p&gt; Peer pressure &lt;/p&gt; &lt;p&gt; At this point it is customary for Punjabis to immigrate to a foreign country.
 Since I was little I was conditioned to want to go to a developed country, so
 it had become a deep rooted desire. My choice was of &lt;b&gt;which&lt;/b&gt; country, and
 going against the advice of almost everyone in my family, I chose to not go
 to Canada or Australia. I was promised more money and easier life in those
-countries, but I see more of my personal goals in alignment in Germany.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-Cold weather
-&lt;/p&gt;
-
-&lt;p&gt;
-Punjab has colder weather than most parts of India, and they're my favorite
+countries, but I see more of my personal goals in alignment in Germany. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; Cold weather &lt;/p&gt; &lt;p&gt; Punjab has colder weather than most parts of India, and they're my favorite
 part of the year. I absolutely abhor Punjab's summers. Germany's cold weather
-was appealing.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-Europe
-&lt;/p&gt;
-
-&lt;p&gt;
-The fact that I get access to more than one country was also a factor. If I
-still have the appetite, I can move to a different culture relatively easily.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-Rules
-&lt;/p&gt;
-
-&lt;p&gt;
-I am a sucker for rules. If they are sensible and sensibly implemented, they
+was appealing. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; Europe &lt;/p&gt; &lt;p&gt; The fact that I get access to more than one country was also a factor. If I
+still have the appetite, I can move to a different culture relatively easily. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; Rules &lt;/p&gt; &lt;p&gt; I am a sucker for rules. If they are sensible and sensibly implemented, they
 can free you up in so many ways. Many lines-of-thought can be short-circuited
 and mental resources invested in more interesting things. Germany as far as I
 have researched online have more sensible rules, and a culture of mostly
-following them.
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-How%20I%20am%20feeling&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;How%20I%20am%20feeling&quot;&gt;How I am feeling&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-How%20I%20am%20feeling&quot;&gt;
-&lt;p&gt;
-I am scared shitless. I am full of stress and anxiety, I can barely sleep and
+following them. &lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-How%20I%20am%20feeling&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;How%20I%20am%20feeling&quot;&gt;How I am feeling&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-How%20I%20am%20feeling&quot;&gt; &lt;p&gt; I am scared shitless. I am full of stress and anxiety, I can barely sleep and
 can't focus on anything. I have stopped drinking coffee because I no longer need
-caffeine for the jitters.
-&lt;/p&gt;
-
-&lt;p&gt;
-It is way more scarier than what I imagined. When I decided to move to Berlin I
+caffeine for the jitters. &lt;/p&gt; &lt;p&gt; It is way more scarier than what I imagined. When I decided to move to Berlin I
 was excited, a little scared too but also looking forward to it. Now I am
-fighting myself to not just drop the whole thing every second of the day.
-&lt;/p&gt;
-
-&lt;p&gt;
-I am not an adventurous person, I find all forms of traveling tiresome. I stay
+fighting myself to not just drop the whole thing every second of the day. &lt;/p&gt; &lt;p&gt; I am not an adventurous person, I find all forms of traveling tiresome. I stay
 at home to recharge. Fear I am feeling right now however is more than the
 ambiguity of going somewhere new. Me burning through my savings during past few
 months is also a major contributor. I have made this huge decision, and spent
-almost all my remaining funds to book housing, tickets and stuff.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-What%20lies%20ahead&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;What%20lies%20ahead&quot;&gt;What lies ahead&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-What%20lies%20ahead&quot;&gt;
-&lt;p&gt;
-I intend to come back to India after at most 2 years and at least 1 year.
-&lt;/p&gt;
-
-&lt;p&gt;
-1 year minimum because 1 year is the limit I am putting for myself to buckle up
+almost all my remaining funds to book housing, tickets and stuff. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-What%20lies%20ahead&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;What%20lies%20ahead&quot;&gt;What lies ahead&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-What%20lies%20ahead&quot;&gt; &lt;p&gt; I intend to come back to India after at most 2 years and at least 1 year. &lt;/p&gt; &lt;p&gt; 1 year minimum because 1 year is the limit I am putting for myself to buckle up
 and stay in Berlin, experience stuff even if I don't want to. I am hoping it'll
 be enough to reveal whether my feeling that being outside my comfort zone will
 make me do more fulfilling things is true or not. 2 year maximum because I think
-2 years should be enough for personal growth by being in a foreign country.
-&lt;/p&gt;
-
-&lt;p&gt;
-I find the ideas of e-governance and using technology in public administration
+2 years should be enough for personal growth by being in a foreign country. &lt;/p&gt; &lt;p&gt; I find the ideas of e-governance and using technology in public administration
 most exciting. I think India is the right place to make most impact with these.
 I want to establish a parallel social administration system, which can help the
 State's system, or fight it to make a positive impact. This is also one of the
 reasons I have decided to go work outside India. Because it is a significant
 commitment and I don't want to find myself taking breaks from it for other
-things I wanted to do which might significantly disrupt this commitment.
-&lt;/p&gt;
-
-&lt;p&gt;
-Or all this could just be fantasies. In almost every phase of life, whenever I
+things I wanted to do which might significantly disrupt this commitment. &lt;/p&gt; &lt;p&gt; Or all this could just be fantasies. In almost every phase of life, whenever I
 felt like things need to be improved I have fantasized about how things could
 have been made better. At my home, in school, in college, in software companies,
 in my village, in my city, in the companies I worked in; pretty much everywhere.
@@ -345,391 +98,126 @@ I have not always taken action, and often moved to the newer set of problems
 forgetting the old ones as they became irrelevant to me. I won't fight it if it
 happens this time as well. I can't fight every battle, I prefer letting the
 fights pick themselves for me. But so far I am fully intent on returning to
-India and participate somehow in public administration.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">Insolent Software</title><id>/blog/insolent-software/index.html</id><updated>2022-11-07T00:00:00.000000Z</updated><link href="/blog/insolent-software/index.html" title="Insolent Software"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-11-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-I am used to put limits on myself. Finding reasons, some in authority, most in
-circumstance; to not solve the problems I've judged solvable.
-&lt;/p&gt;
-
-&lt;p&gt;
-People putting limits on themselves is not something new or unique to building
+India and participate somehow in public administration. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">Insolent Software</title><id>/blog/insolent-software/index.html</id><updated>2022-11-07T00:00:00.000000Z</updated><link href="/blog/insolent-software/index.html" title="Insolent Software"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-11-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; I am used to put limits on myself. Finding reasons, some in authority, most in
+circumstance; to not solve the problems I've judged solvable. &lt;/p&gt; &lt;p&gt; People putting limits on themselves is not something new or unique to building
 software. It is a recurring pattern in human behavior. Well meaning reasons are
 often rationalizations for fear of unknown, or that of actually putting in the
 work. Just as often, there are actual limits universe has put on us, crossing
-which come at great cost.
-&lt;/p&gt;
-
-&lt;p&gt;
-But software is &lt;b&gt;our&lt;/b&gt; domain. Things writ in stone in &amp;quot;real&amp;quot; world are not
+which come at great cost. &lt;/p&gt; &lt;p&gt; But software is &lt;b&gt;our&lt;/b&gt; domain. Things writ in stone in &amp;quot;real&amp;quot; world are not
 necessarily so in the wonderful world of software development. What is subjected
 to physical laws in real world is a matter of choice of constraints. Often we
 get to pick and choose, trade the expensive ones for those inconvenient, but
-still make the impossible probable.
-&lt;/p&gt;
-
-&lt;p&gt;
-When the imaginary constraints are dropped, what is left behind is curiosity and
+still make the impossible probable. &lt;/p&gt; &lt;p&gt; When the imaginary constraints are dropped, what is left behind is curiosity and
 wonder. It is in essence, a source of joy. It is similar to re-discovering joy
-in tending to fruitless flowers after a lifetime of growing crops for commerce.
-&lt;/p&gt;
-
-&lt;p&gt;
-When I say imaginary constraints, I am speaking in the sense of Max Stirner's
-spooks. Imaginary constraints, for example those of
-&lt;/p&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;authority: am I allowed to do this?&lt;/li&gt;
-&lt;li&gt;tribalism: will my team adopt it?&lt;/li&gt;
-&lt;li&gt;economy: can I monetize it?&lt;/li&gt;
-&lt;li&gt;romance: will it scale?&lt;/li&gt;
-&lt;li&gt;vanity: is it elegant?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-I wanted a term to express this kind of software. Anarchism comes close to the
+in tending to fruitless flowers after a lifetime of growing crops for commerce. &lt;/p&gt; &lt;p&gt; When I say imaginary constraints, I am speaking in the sense of Max Stirner's
+spooks. Imaginary constraints, for example those of &lt;/p&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;authority: am I allowed to do this?&lt;/li&gt; &lt;li&gt;tribalism: will my team adopt it?&lt;/li&gt; &lt;li&gt;economy: can I monetize it?&lt;/li&gt; &lt;li&gt;romance: will it scale?&lt;/li&gt; &lt;li&gt;vanity: is it elegant?&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; I wanted a term to express this kind of software. Anarchism comes close to the
 meaning I want to convey, but it is too nuanced. What I mean is simpler. An
 unapologetic form of &lt;i&gt;&amp;quot;works on my machine&amp;quot;&lt;/i&gt;. Software which is deliberately
-insolent toward the processes which the creator believes get in their way.
-&lt;/p&gt;
-
-&lt;p&gt;
-It is a deceptively simple thing. It is not easy reaching a solution so free.
+insolent toward the processes which the creator believes get in their way. &lt;/p&gt; &lt;p&gt; It is a deceptively simple thing. It is not easy reaching a solution so free.
 This line of thinking is very much going against the grain of human
 civilization. Unlearning the lessons society has taught us before we knew
-learning, does not come easy.
-&lt;/p&gt;
-
-&lt;p&gt;
-What is even harder is identifying problems which can be solved with insolence.
+learning, does not come easy. &lt;/p&gt; &lt;p&gt; What is even harder is identifying problems which can be solved with insolence.
 These problems are often invisible. Problems we accept and get used to, and
 don't see as problems at all. Until someone solves them and obviousness of it
 hit us like a brick. Perhaps recognizing and solving such problems is what
-separates inventors from the rest of us.
-&lt;/p&gt;
-
-&lt;p&gt;
-As a kid, reading of inventors of the golden age of science would fill me up
+separates inventors from the rest of us. &lt;/p&gt; &lt;p&gt; As a kid, reading of inventors of the golden age of science would fill me up
 with fantasies of becoming one myself someday. It saddens me to think that I
-have not yet become one.
-&lt;/p&gt;
-
-&lt;p&gt;
-Not all software can be written this way. Line between imaginary and real
+have not yet become one. &lt;/p&gt; &lt;p&gt; Not all software can be written this way. Line between imaginary and real
 becomes blurry as more people believe in something. Very often we need to
 maintain the charades of make-believe, simply because we can not be alone in the
-solution.
-&lt;/p&gt;
-
-&lt;p&gt;
-There is one form of software, which almost always can be insolent. Software
+solution. &lt;/p&gt; &lt;p&gt; There is one form of software, which almost always can be insolent. Software
 built for yourself. Not apps to sell or startups to change the world. Simple
 scripts, big and small, to solve your personal problems. Over last few months, I
 have come to associate personal computing with same feelings I have when playing
 something like Factorio or Cities Skylines. It is a joyous endeavor, we shall
-talk of on another day.
-&lt;/p&gt;
-</content></entry><entry><title type="text">After 6 months of voluntary unemployment</title><id>/blog/after-6-months-of-voluntary-unemployment/index.html</id><updated>2022-10-03T00:00:00.000000Z</updated><link href="/blog/after-6-months-of-voluntary-unemployment/index.html" title="After 6 months of voluntary unemployment"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-10-03T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-For the last six months, I have been &lt;a href=&quot;https://bitspook.in/blog/i-have-quit-my-job&quot;&gt;voluntarily unemployed&lt;/a&gt;. Here's a brief
+talk of on another day. &lt;/p&gt; </content></entry><entry><title type="text">After 6 months of voluntary unemployment</title><id>/blog/after-6-months-of-voluntary-unemployment/index.html</id><updated>2022-10-03T00:00:00.000000Z</updated><link href="/blog/after-6-months-of-voluntary-unemployment/index.html" title="After 6 months of voluntary unemployment"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-10-03T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; For the last six months, I have been &lt;a href=&quot;https://bitspook.in/blog/i-have-quit-my-job&quot;&gt;voluntarily unemployed&lt;/a&gt;. Here's a brief
 summary of how the last six months shaped my thoughts, and an abstract plan of
-what I intend to do next.
-&lt;/p&gt;
-&lt;div id=&quot;outline-container-Mental%20health&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Mental%20health&quot;&gt;Mental health&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Mental%20health&quot;&gt;
-&lt;p&gt;
-I needed this break a lot more than I thought I did. Being perpetually restless
-had been my state of being for too long. It felt good, to breath out.
-&lt;/p&gt;
-
-&lt;p&gt;
-When writing software, you reach a certain point where things start falling into
+what I intend to do next. &lt;/p&gt; &lt;div id=&quot;outline-container-Mental%20health&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Mental%20health&quot;&gt;Mental health&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Mental%20health&quot;&gt; &lt;p&gt; I needed this break a lot more than I thought I did. Being perpetually restless
+had been my state of being for too long. It felt good, to breath out. &lt;/p&gt; &lt;p&gt; When writing software, you reach a certain point where things start falling into
 place, the uncertainties are answered for and you can feel that the decisions
 you made were right. Those few seconds of invincibility spanned over several
 (not always consequent) days, because I felt it was me in control. Them I
 remember most cherishingly. It was a kind of high I intend to chase again in
-life.
-&lt;/p&gt;
-
-&lt;p&gt;
-Primary reason for which I quit my job was the curiosity about whether I can
+life. &lt;/p&gt; &lt;p&gt; Primary reason for which I quit my job was the curiosity about whether I can
 manage my ADHD now; or if I still need the crutches of accountability. On job, I
 could effortlessly perform well, in contrast to solo freelancing. My therapist
-had suggested it will get better with age.
-&lt;/p&gt;
-
-&lt;p&gt;
-I had more good days than bad, which is a win. Unfortunately I still don't have
-a definite answer to consider the matter resolved. More on this later (below).
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Social%20work&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Social%20work&quot;&gt;Social work&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Social%20work&quot;&gt;
-&lt;p&gt;
-When busy with material responsibilities, I used to fantasize that if I had more
+had suggested it will get better with age. &lt;/p&gt; &lt;p&gt; I had more good days than bad, which is a win. Unfortunately I still don't have
+a definite answer to consider the matter resolved. More on this later (below). &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Social%20work&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Social%20work&quot;&gt;Social work&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Social%20work&quot;&gt; &lt;p&gt; When busy with material responsibilities, I used to fantasize that if I had more
 free time I could do so much more for people around me. When I had it, I tried
-to start with the place closest to my heart.
-&lt;/p&gt;
-
-&lt;p&gt;
-I tried to &amp;quot;help&amp;quot; my village by contributing to its small primary school, least
+to start with the place closest to my heart. &lt;/p&gt; &lt;p&gt; I tried to &amp;quot;help&amp;quot; my village by contributing to its small primary school, least
 politically charged of situations there. Well, not so much as tried to help as
 probed with a long stick to assess the willingness to be helped. I quickly found
 out that a significant involvement there is a luxury I can't afford just yet.
 Established power structures see everything new as threat, and eagerly sabotage
-what they can get away with.
-&lt;/p&gt;
-
-&lt;p&gt;
-So I chose a different avenue. One just as dear to me, but where I have more
+what they can get away with. &lt;/p&gt; &lt;p&gt; So I chose a different avenue. One just as dear to me, but where I have more
 experience and room to maneuver. I decided to make &lt;a href=&quot;https://entropyhacker.space/&quot;&gt;another attempt&lt;/a&gt; to nurture a
 healthy tech culture in my city. It produced mixed results because I was not
-able to put in as much energy as it demanded.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Mistake%20of%20learning%20Common%20Lisp&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Mistake%20of%20learning%20Common%20Lisp&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Mistake%20of%20learning%20Common%20Lisp&quot;&gt;
-&lt;p&gt;
-I was running full speed building &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;foolish&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;things&lt;/a&gt;. Then lisp came calling.
-&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot; alt=&quot;Wile E Coyote hitting the tunnel. Tunnel hits back.&quot;&gt;
-  &lt;source src=&quot;/videos/hit-it.webm&quot; type=&quot;video/webm&quot;&gt;
-&lt;/video&gt;
-
-&lt;p&gt;
-I was working on &lt;a href=&quot;https://github.com/bitspook/entropy&quot;&gt;Entropy&lt;/a&gt;, to build a software to help me do the leg work of
+able to put in as much energy as it demanded. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Mistake%20of%20learning%20Common%20Lisp&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Mistake%20of%20learning%20Common%20Lisp&quot;&gt;Mistake of learning Common Lisp&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Mistake%20of%20learning%20Common%20Lisp&quot;&gt; &lt;p&gt; I was running full speed building &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;foolish&lt;/a&gt; &lt;a href=&quot;https://github.com/bitspook/spookfox&quot;&gt;things&lt;/a&gt;. Then lisp came calling. &lt;/p&gt; &lt;video autoplay=&quot;&quot; loop=&quot;&quot; alt=&quot;Wile E Coyote hitting the tunnel. Tunnel hits back.&quot;&gt; &lt;source src=&quot;/videos/hit-it.webm&quot; type=&quot;video/webm&quot;&gt; &lt;/video&gt; &lt;p&gt; I was working on &lt;a href=&quot;https://github.com/bitspook/entropy&quot;&gt;Entropy&lt;/a&gt;, to build a software to help me do the leg work of
 building a tech community. Thought came that it is for hackers, so it should be
 hackable. Lisp is praised for how hackable it is. It is also praised for its
 expressiveness. Momentum is something I was finding hard to achieve with Rust,
 because of my inexperience and perhaps the nature of the language and problem I
-was trying to solve with it. At least checking lisp out seemed reasonable.
-&lt;/p&gt;
-
-&lt;p&gt;
-After 30 years of living with them, I have come to recognize desires of pivotal
+was trying to solve with it. At least checking lisp out seemed reasonable. &lt;/p&gt; &lt;p&gt; After 30 years of living with them, I have come to recognize desires of pivotal
 nature. In the face of these sublimely consuming whims, I can either do what
 they say, or not do anything at all (I am told it is common with ADHD, so not to
-beat myself too much about it).
-&lt;/p&gt;
-
-&lt;p&gt;
-I've learned that it is possible to suppress these urges by feigning blindness.
+beat myself too much about it). &lt;/p&gt; &lt;p&gt; I've learned that it is possible to suppress these urges by feigning blindness.
 My mistake was that of indecision. It is not possible to take a sip and not
 gulp. I chose to look at it, but took too long to engage. I got thrown off the
-build-mode.
-&lt;/p&gt;
-
-&lt;p&gt;
-I have observed that I operate in two distinct modes: build-mode and study-mode.
+build-mode. &lt;/p&gt; &lt;p&gt; I have observed that I operate in two distinct modes: build-mode and study-mode.
 Although building something is always a learning experience, and to learn
 something I gotta build something; it is efficient to treat them as separate. It
-is also easier on my mental peace.
-&lt;/p&gt;
-
-&lt;p&gt;
-This time, the transition between the two modes was not smooth. Getting
+is also easier on my mental peace. &lt;/p&gt; &lt;p&gt; This time, the transition between the two modes was not smooth. Getting
 involuntarily thrown out of the workshop left me with (mental) bruises. This
 incident is the reason I still consider the matter of my self-discipline
 unresolved. Although the fact that there were only 2 such incidents over 6
 months is a win by itself (another was when I fell in love with a &lt;a href=&quot;https://practicalguidetoevil.wordpress.com&quot;&gt;book&lt;/a&gt;, and
-spent weeks doing nothing else).
-&lt;/p&gt;
-
-&lt;p&gt;
-I filled the downtime during transition with another thing I wanted to do, and
-probably would not have done otherwise. I traveled.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Travel&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Travel&quot;&gt;Travel&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Travel&quot;&gt;
-&lt;p&gt;
-I am not much of a site-seeing kind of guy. I find traveling exhausting,
+spent weeks doing nothing else). &lt;/p&gt; &lt;p&gt; I filled the downtime during transition with another thing I wanted to do, and
+probably would not have done otherwise. I traveled. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Travel&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Travel&quot;&gt;Travel&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Travel&quot;&gt; &lt;p&gt; I am not much of a site-seeing kind of guy. I find traveling exhausting,
 regardless of how beautiful the views or how fun the activities. Being a tourist
 is not for me. I like to stay and experience. I enjoy exploring/observing people
 (people watching?). Witnessing people go by their lives is soothing. There is a
-warm fuzzy feeling behind every smile, however mundane.
-&lt;/p&gt;
-
-&lt;p&gt;
-So I traveled the way I truly like, perhaps for the first time. For about 3
+warm fuzzy feeling behind every smile, however mundane. &lt;/p&gt; &lt;p&gt; So I traveled the way I truly like, perhaps for the first time. For about 3
 months trotting around the mountains of Uttrakhand, visiting people in their
-homes (home stays). Observing a way of life familiar yet strange.
-&lt;/p&gt;
-
-&lt;p&gt;
-It came as a surprise how eye-opening the experience turned out to be, despite
+homes (home stays). Observing a way of life familiar yet strange. &lt;/p&gt; &lt;p&gt; It came as a surprise how eye-opening the experience turned out to be, despite
 being quite event-less. It was like learning a new language or studying math. I
 could almost feel my brain building new connections. This is one of the few
 feelings which still stays exciting even when the rat-race and hoarding have
 stopped being as stimulating. I did not expect to find an entirely new source of
-it in an experience like this.
-&lt;/p&gt;
-
-&lt;p&gt;
-It is also the easiest methods in terms of active participation, compared to all
+it in an experience like this. &lt;/p&gt; &lt;p&gt; It is also the easiest methods in terms of active participation, compared to all
 the other sources (most are a variations of intellectual exercises; solving a
 challenging problem, crafting an elegant solution etc). It does have its costs,
 but I believe they do not overlap with those of other methods; so they can be
-employed at the same time.
-&lt;/p&gt;
-
-&lt;p&gt;
-I take it to mean I can have twice of what makes me feel most alive, just by
-putting myself in a place 🤯
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-What%20comes%20next%3F&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;What%20comes%20next%3F&quot;&gt;What comes next?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-What%20comes%20next%3F&quot;&gt;
-&lt;p&gt;
-I can perhaps spend a few more months before I run out of savings, but the
+employed at the same time. &lt;/p&gt; &lt;p&gt; I take it to mean I can have twice of what makes me feel most alive, just by
+putting myself in a place 🤯 &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-What%20comes%20next%3F&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;What%20comes%20next%3F&quot;&gt;What comes next?&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-What%20comes%20next%3F&quot;&gt; &lt;p&gt; I can perhaps spend a few more months before I run out of savings, but the
 dimming safety net has already started making me anxious. I miss the tribe-like
 feeling of working in a team, so I am actually looking forward to join work for
-that.
-&lt;/p&gt;
-
-&lt;p&gt;
-Most freeing would be to start a business of my own; not because it will leave
+that. &lt;/p&gt; &lt;p&gt; Most freeing would be to start a business of my own; not because it will leave
 me with more free time, but because I can feel more like myself when working on
 something I find meaningful. But that won't be profitable right out of the door,
-so perhaps after a bit more grinding I can save up to give myself a chance.
-&lt;/p&gt;
-
-&lt;p&gt;
-The grind is decided, but I will not choose misery along with. I intend to chase
+so perhaps after a bit more grinding I can save up to give myself a chance. &lt;/p&gt; &lt;p&gt; The grind is decided, but I will not choose misery along with. I intend to chase
 the feeling of growth and fulfillment. With these constraints, some more
-decisions make themselves:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;I can't stay at home. Being home is extremely comfortable, but with
-comfort comes stagnation.&lt;/li&gt;
-&lt;li&gt;I need a job which leaves me with enough time I can invest in something
-demanding like math&lt;/li&gt;
-&lt;li&gt;I need to put myself in a foreign culture&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-Putting these into practice, I have decided I'll move to Berlin for a few years.
-The city makes itself a good place to be for me for a few reasons:
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;Practically, it is perhaps the easiest to immigrate to for an individual
-Indian citizen, with a job in hand&lt;/li&gt;
-&lt;li&gt;It has a good hacker culture, something I've always wanted to experience but
-have only ever read about&lt;/li&gt;
-&lt;li&gt;German culture seem like a great fit for my personal tastes&lt;/li&gt;
-&lt;li&gt;I get to learn a new language&lt;/li&gt;
-&lt;li&gt;German work culture is praised (on the Internet) for respecting boundaries and
-giving a priority to life over money&lt;/li&gt;
-&lt;li&gt;If I ever decide to seek higher education (which is likely), German education
-policies are good&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-Now that that is decided, what's left to figure out is how to go about it.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Conclusion&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Conclusion&quot;&gt;
-&lt;p&gt;
-After 6 months of voluntary unemployment, I am the same man I was before it.
+decisions make themselves: &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;I can't stay at home. Being home is extremely comfortable, but with
+comfort comes stagnation.&lt;/li&gt; &lt;li&gt;I need a job which leaves me with enough time I can invest in something
+demanding like math&lt;/li&gt; &lt;li&gt;I need to put myself in a foreign culture&lt;/li&gt; &lt;/ol&gt; &lt;p&gt; Putting these into practice, I have decided I'll move to Berlin for a few years.
+The city makes itself a good place to be for me for a few reasons: &lt;/p&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;Practically, it is perhaps the easiest to immigrate to for an individual
+Indian citizen, with a job in hand&lt;/li&gt; &lt;li&gt;It has a good hacker culture, something I've always wanted to experience but
+have only ever read about&lt;/li&gt; &lt;li&gt;German culture seem like a great fit for my personal tastes&lt;/li&gt; &lt;li&gt;I get to learn a new language&lt;/li&gt; &lt;li&gt;German work culture is praised (on the Internet) for respecting boundaries and
+giving a priority to life over money&lt;/li&gt; &lt;li&gt;If I ever decide to seek higher education (which is likely), German education
+policies are good&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; Now that that is decided, what's left to figure out is how to go about it. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Conclusion&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Conclusion&quot;&gt;Conclusion&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Conclusion&quot;&gt; &lt;p&gt; After 6 months of voluntary unemployment, I am the same man I was before it.
 Things I experienced and burdens I unburdened could be achieved by other means
 as well. Perhaps I've sown seeds to make me a different person in future, but
 they will take time to bloom. It is a guessing game, same as what might have
-happened had I done it differently.
-&lt;/p&gt;
-
-&lt;p&gt;
-As for the journey to be where I already was, I'll do it again if I can.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">Extending org-mode to handle youtube links</title><id>/blog/extending-org-mode-to-handle-youtube-links/index.html</id><updated>2022-09-26T00:00:00.000000Z</updated><link href="/blog/extending-org-mode-to-handle-youtube-links/index.html" title="Extending org-mode to handle youtube links"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;div id=&quot;outline-container-Requirement&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Requirement&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Requirement&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
-browser&lt;/li&gt;
-
-&lt;li&gt;When exporting to HTML, youtube links should become embedded videos instead
-of hyperlinks&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Implementation&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Implementation&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Implementation&quot;&gt;
-&lt;p&gt;
-Org has a concept of 'link types'. We can add a new type of link and have it
-behave the way we want.
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;&lt;p&gt;
-&lt;code&gt;org-link-parameters&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-This variable contains link types and how they behave on follow (i.e when
+happened had I done it differently. &lt;/p&gt; &lt;p&gt; As for the journey to be where I already was, I'll do it again if I can. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">Extending org-mode to handle youtube links</title><id>/blog/extending-org-mode-to-handle-youtube-links/index.html</id><updated>2022-09-26T00:00:00.000000Z</updated><link href="/blog/extending-org-mode-to-handle-youtube-links/index.html" title="Extending org-mode to handle youtube links"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;/p&gt; &lt;div id=&quot;outline-container-Requirement&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Requirement&quot;&gt;Requirement&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Requirement&quot;&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
+browser&lt;/li&gt; &lt;li&gt;When exporting to HTML, youtube links should become embedded videos instead
+of hyperlinks&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Implementation&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Implementation&quot;&gt;Implementation&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Implementation&quot;&gt; &lt;p&gt; Org has a concept of 'link types'. We can add a new type of link and have it
+behave the way we want. &lt;/p&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;&lt;p&gt; &lt;code&gt;org-link-parameters&lt;/code&gt; &lt;/p&gt; &lt;p&gt; This variable contains link types and how they behave on follow (i.e when
 someone opens the link with &lt;code&gt;C-c C-o&lt;/code&gt;), export etc. A type of a link is
-determined by the string before first &amp;quot;:&amp;quot; in it. e.g &amp;quot;&lt;a href=&quot;https://bitspook.in&quot;&gt;https://bitspook.in&lt;/a&gt;&amp;quot; has
-&lt;code&gt;https&lt;/code&gt; type, &amp;quot;&lt;a href=&quot;file:///etc&quot;&gt;file:///etc&lt;/a&gt;&amp;quot; has &lt;code&gt;file&lt;/code&gt; type.
-&lt;/p&gt;
-
-&lt;p&gt;
-Items in this list has 2 main components:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;First element is string representing the link type&lt;/li&gt;
-&lt;li&gt;Key-value pairs of behavior name (e.g &lt;code&gt;:follow&lt;/code&gt;, &lt;code&gt;:export&lt;/code&gt;) and
-function which handles that behavior&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-For example:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;((&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;yt&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; spook-org--export-yt-link)
+determined by the string before first &amp;quot;:&amp;quot; in it. e.g &amp;quot;&lt;a href=&quot;https://bitspook.in&quot;&gt;https://bitspook.in&lt;/a&gt;&amp;quot; has &lt;code&gt;https&lt;/code&gt; type, &amp;quot;&lt;a href=&quot;file:///etc&quot;&gt;file:///etc&lt;/a&gt;&amp;quot; has &lt;code&gt;file&lt;/code&gt; type. &lt;/p&gt; &lt;p&gt; Items in this list has 2 main components: &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;First element is string representing the link type&lt;/li&gt; &lt;li&gt;Key-value pairs of behavior name (e.g &lt;code&gt;:follow&lt;/code&gt;, &lt;code&gt;:export&lt;/code&gt;) and
+function which handles that behavior&lt;/li&gt; &lt;/ol&gt; &lt;p&gt; For example: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;((&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;yt&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; spook-org--export-yt-link)
  (&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;eww&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; org-eww-open &lt;span style=&quot;color: #7f7dca;&quot;&gt;:store&lt;/span&gt; org-eww-store-link))
-&lt;/pre&gt;
-&lt;/div&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;code&gt;org-link-set-parameters&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-This function is used to add new link-types (and also to add new behavior to
+&lt;/pre&gt; &lt;/div&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;code&gt;org-link-set-parameters&lt;/code&gt; &lt;/p&gt; &lt;p&gt; This function is used to add new link-types (and also to add new behavior to
 existing ones). You can check the docs for &lt;code&gt;org-link-parameters&lt;/code&gt; (with &lt;code&gt;C-h v
-  org-link-parameters&lt;/code&gt;) to see arguments provided to each type of callback.
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-Here's the code I've added in &lt;a href=&quot;https://github.com/bitspook/spookmax.d&quot;&gt;my emacs config&lt;/a&gt;:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-org--follow-yt-link&lt;/span&gt; (path prefix)
+  org-link-parameters&lt;/code&gt;) to see arguments provided to each type of callback. &lt;/p&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; Here's the code I've added in &lt;a href=&quot;https://github.com/bitspook/spookmax.d&quot;&gt;my emacs config&lt;/a&gt;: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-org--follow-yt-link&lt;/span&gt; (path prefix)
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;let*&lt;/span&gt; ((url (format &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https:%s&amp;quot;&lt;/span&gt; path))
          (proc-name (format &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;*yt://%s*&amp;quot;&lt;/span&gt; url)))
     (&lt;span style=&quot;color: #598bc1;&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color: #598bc1;&quot;&gt;and&lt;/span&gt; prefix (executable-find &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;mpv&amp;quot;&lt;/span&gt;))
@@ -747,252 +235,60 @@ Here's the code I've added in &lt;a href=&quot;https://github.com/bitspook/spook
        url desc))))
 
 (org-link-set-parameters &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;yt&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; #'spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; #'spook-org--export-yt-link)
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-&lt;code&gt;make-process&lt;/code&gt; will create a background buffer named &lt;code&gt;*yt://&amp;lt;url&amp;gt;*&lt;/code&gt; which
-allow monitoring and killing the mpv process.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;i&gt;Update&lt;/i&gt;: Use &lt;code&gt;make-process&lt;/code&gt; instead of &lt;code&gt;async-shell-command&lt;/code&gt; for launching mpv.
-Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgmode_to_handle_youtube_links/iplpk57/&quot;&gt;nv-elisp on /r/emacs&lt;/a&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Result&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Result&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Result&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
-in mpv&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-u C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt; with an prefix argument) on a &lt;code&gt;yt://&lt;/code&gt;
-link opens the video in browser&lt;/li&gt;
-&lt;li&gt;When exported to HTML, all &lt;code&gt;yt://&lt;/code&gt; links file are exported as embedded
-youtube videos&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Bonus%20gains%20%F0%9F%92%AA&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Bonus%20gains%20%F0%9F%92%AA&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Bonus%20gains%20%F0%9F%92%AA&quot;&gt;
-&lt;p&gt;
-Recently I've been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; &lt;code&gt;make-process&lt;/code&gt; will create a background buffer named &lt;code&gt;*yt://&amp;lt;url&amp;gt;*&lt;/code&gt; which
+allow monitoring and killing the mpv process. &lt;/p&gt; &lt;p&gt; &lt;i&gt;Update&lt;/i&gt;: Use &lt;code&gt;make-process&lt;/code&gt; instead of &lt;code&gt;async-shell-command&lt;/code&gt; for launching mpv.
+Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgmode_to_handle_youtube_links/iplpk57/&quot;&gt;nv-elisp on /r/emacs&lt;/a&gt; &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Result&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Result&quot;&gt;Result&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Result&quot;&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
+in mpv&lt;/li&gt; &lt;li&gt;&lt;code&gt;C-u C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt; with an prefix argument) on a &lt;code&gt;yt://&lt;/code&gt; link opens the video in browser&lt;/li&gt; &lt;li&gt;When exported to HTML, all &lt;code&gt;yt://&lt;/code&gt; links file are exported as embedded
+youtube videos&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Bonus%20gains%20%F0%9F%92%AA&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Bonus%20gains%20%F0%9F%92%AA&quot;&gt;Bonus gains 💪&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Bonus%20gains%20%F0%9F%92%AA&quot;&gt; &lt;p&gt; Recently I've been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
 note taking, publishing a subset of my notes will enable maintaining an active
-blog without doing any &amp;quot;work&amp;quot;.
-&lt;/p&gt;
-
-&lt;p&gt;
-I've also been making thickly-accented-awkardly-narrated youtube videos. These
+blog without doing any &amp;quot;work&amp;quot;. &lt;/p&gt; &lt;p&gt; I've also been making thickly-accented-awkardly-narrated youtube videos. These
 are almost always &lt;i&gt;tldr;&lt;/i&gt; videos for my blog posts. So they get embedded in my
-blog posts.
-&lt;/p&gt;
-
-&lt;p&gt;
-'Blog with notes + embed youtube videos' become easier to do with this little
+blog posts. &lt;/p&gt; &lt;p&gt; 'Blog with notes + embed youtube videos' become easier to do with this little
 tinkering. Since &lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt; uses my running Emacs to publish my posts, I don't
 need to make any change in my blogging setup. I can embed my &lt;i&gt;tldr;&lt;/i&gt; videos in
-my blog posts by just prefixing youtube links with &lt;code&gt;yt://&lt;/code&gt; instead of
-&lt;code&gt;https://&lt;/code&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-I am pretty happy that I got zero work blogging-setup, and zero work
-extending-the-blogging-setup as well.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">How I manage my passwords</title><id>/blog/how-i-manage-my-passwords/index.html</id><updated>2022-09-19T00:00:00.000000Z</updated><link href="/blog/how-i-manage-my-passwords/index.html" title="How I manage my passwords"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-19T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;div id=&quot;outline-container-My%20requirements&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;My%20requirements&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-My%20requirements&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;p&gt;
-&lt;b&gt;No third-parties&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-I don't want to put my trust in any third party. Be it Google/Mozilla (via
-saved passwords in browser), or some dedicated password manager like KeyPass.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;b&gt;Simplicity&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-Simple tools are easier to understand and bend to my will. It also means I'll
-be able to intervene when something goes wrong.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;b&gt;Composability&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-I should be able to make the tool a part of my forever changing workflow. It
-should play nice with presence/absence of other tools.
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Tools%20I%20chose&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Tools%20I%20chose&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Tools%20I%20chose&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;p&gt;
-&lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-I think it is as simple as it gets. A password-store in pass is a git repo
+my blog posts by just prefixing youtube links with &lt;code&gt;yt://&lt;/code&gt; instead of &lt;code&gt;https://&lt;/code&gt;. &lt;/p&gt; &lt;p&gt; I am pretty happy that I got zero work blogging-setup, and zero work
+extending-the-blogging-setup as well. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">How I manage my passwords</title><id>/blog/how-i-manage-my-passwords/index.html</id><updated>2022-09-19T00:00:00.000000Z</updated><link href="/blog/how-i-manage-my-passwords/index.html" title="How I manage my passwords"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-19T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;div id=&quot;outline-container-My%20requirements&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;My%20requirements&quot;&gt;My requirements&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-My%20requirements&quot;&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;p&gt; &lt;b&gt;No third-parties&lt;/b&gt; &lt;/p&gt; &lt;p&gt; I don't want to put my trust in any third party. Be it Google/Mozilla (via
+saved passwords in browser), or some dedicated password manager like KeyPass. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;b&gt;Simplicity&lt;/b&gt; &lt;/p&gt; &lt;p&gt; Simple tools are easier to understand and bend to my will. It also means I'll
+be able to intervene when something goes wrong. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;b&gt;Composability&lt;/b&gt; &lt;/p&gt; &lt;p&gt; I should be able to make the tool a part of my forever changing workflow. It
+should play nice with presence/absence of other tools. &lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Tools%20I%20chose&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Tools%20I%20chose&quot;&gt;Tools I chose&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Tools%20I%20chose&quot;&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;p&gt; &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt; &lt;/p&gt; &lt;p&gt; I think it is as simple as it gets. A password-store in pass is a git repo
 (so a directory) which contains gpg encrypted files. Each file represent one
 set of credentials, and can contain all the plain-text, not just password and
-username. E.g I often end up storing recovery codes for accounts in these.
-&lt;/p&gt;
-
-&lt;p&gt;
-There are no third-parties involved, encryption happens on my machine, and I
+username. E.g I often end up storing recovery codes for accounts in these. &lt;/p&gt; &lt;p&gt; There are no third-parties involved, encryption happens on my machine, and I
 can store my password store anywhere I want (e.g a private git repo on
-github).
-&lt;/p&gt;
-
-&lt;p&gt;
-Most pass operations are convenience wrappers on basic operations provided by
+github). &lt;/p&gt; &lt;p&gt; Most pass operations are convenience wrappers on basic operations provided by
 other tools; e.g &lt;code&gt;edit = decrypting a file + open it in an editor +
-   re-encrypting + git-commit&lt;/code&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-Pass has a whole ecosystem of tools written around it, which makes it an easy
+   re-encrypting + git-commit&lt;/code&gt;. &lt;/p&gt; &lt;p&gt; Pass has a whole ecosystem of tools written around it, which makes it an easy
 choice considering how much work it saves me when integrating it in my
-workflow.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;a href=&quot;https://github.com/carnager/rofi-pass&quot;&gt;rofi-pass&lt;/a&gt; - &lt;i&gt;Rofi-based UI for pass for desktop&lt;/i&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;a href=&quot;https://github.com/davatorium/rofi&quot;&gt;Rofi&lt;/a&gt; is a lightweight popup choice-selection UI, which has so far worked
+workflow. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;a href=&quot;https://github.com/carnager/rofi-pass&quot;&gt;rofi-pass&lt;/a&gt; - &lt;i&gt;Rofi-based UI for pass for desktop&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;a href=&quot;https://github.com/davatorium/rofi&quot;&gt;Rofi&lt;/a&gt; is a lightweight popup choice-selection UI, which has so far worked
 out-of-the-box on all window-managers I have used. &lt;i&gt;rofi-pass&lt;/i&gt; extends rofi
-with:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;Ability to search and select credentials stored in pass&lt;/li&gt;
-&lt;li&gt;Auto-fill credentials into any GUI app&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;a href=&quot;https://github.com/bitspook/fireword&quot;&gt;fireword&lt;/a&gt; - &lt;i&gt;Converting easy-to-remember passwords to hard-to-crack ones&lt;/i&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-Not all credentials need to be saved. Occasionally I need to create
-&lt;i&gt;throwaway&lt;/i&gt; accounts, for which I like to keep easy-to-guess (for me)
+with: &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;Ability to search and select credentials stored in pass&lt;/li&gt; &lt;li&gt;Auto-fill credentials into any GUI app&lt;/li&gt; &lt;/ol&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;a href=&quot;https://github.com/bitspook/fireword&quot;&gt;fireword&lt;/a&gt; - &lt;i&gt;Converting easy-to-remember passwords to hard-to-crack ones&lt;/i&gt; &lt;/p&gt; &lt;p&gt; Not all credentials need to be saved. Occasionally I need to create &lt;i&gt;throwaway&lt;/i&gt; accounts, for which I like to keep easy-to-guess (for me)
 passwords. But I want even these password to be opaque (so analyzing them
-wouldn't reveal a theme of my throwaway passwords).
-&lt;/p&gt;
-
-&lt;p&gt;
-Fireword is a small script I wrote many years ago which create insane
+wouldn't reveal a theme of my throwaway passwords). &lt;/p&gt; &lt;p&gt; Fireword is a small script I wrote many years ago which create insane
 passwords from any string. Even a single change of character in a string
 creates wildly different output. So instead of passing a plain easy-to-guess
-password, I give them to fireword and use its output.
-&lt;/p&gt;
-
-&lt;p&gt;
-For example, &lt;code&gt;pass&lt;/code&gt; becomes &lt;code&gt;5B72?[30:F&lt;/code&gt; but &lt;code&gt;passs&lt;/code&gt; is &lt;code&gt;3Ec012aD5(&lt;/code&gt;.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;a href=&quot;https://github.com/android-password-store/Android-Password-Store#readme&quot;&gt;Android Password Store&lt;/a&gt; - Android app for accessing pass
-&lt;/p&gt;
-
-&lt;p&gt;
-Password store on android allows using the passwords I create/edit on my
+password, I give them to fireword and use its output. &lt;/p&gt; &lt;p&gt; For example, &lt;code&gt;pass&lt;/code&gt; becomes &lt;code&gt;5B72?[30:F&lt;/code&gt; but &lt;code&gt;passs&lt;/code&gt; is &lt;code&gt;3Ec012aD5(&lt;/code&gt;. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;a href=&quot;https://github.com/android-password-store/Android-Password-Store#readme&quot;&gt;Android Password Store&lt;/a&gt; - Android app for accessing pass &lt;/p&gt; &lt;p&gt; Password store on android allows using the passwords I create/edit on my
 desktop on my mobile and tablet. I use &lt;a href=&quot;https://syncthing.net/&quot;&gt;syncthing&lt;/a&gt; to sync my password store to
-my mobile devices.
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Workflow&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Workflow&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Workflow&quot;&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Add%2Fedit%2Fdelete%20a%20password&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;Add%2Fedit%2Fdelete%20a%20password&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-Add%2Fedit%2Fdelete%20a%20password&quot;&gt;
-&lt;p&gt;
-For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
+my mobile devices. &lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Workflow&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Workflow&quot;&gt;Workflow&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Workflow&quot;&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Add%2Fedit%2Fdelete%20a%20password&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;Add%2Fedit%2Fdelete%20a%20password&quot;&gt;Add/edit/delete a password&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-Add%2Fedit%2Fdelete%20a%20password&quot;&gt; &lt;p&gt; For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
 for &lt;i&gt;my-acc&lt;/i&gt; account in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm example.com/my-acc&lt;/code&gt;; and
-deleting all accounts in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm -r example.com&lt;/code&gt;.
-&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt;
-  &lt;source src=&quot;/videos/how-i-manage-my-passwords/1--pass-cli.webm&quot; type=&quot;video/webm&quot;&gt;
-&lt;/video&gt;
-
-&lt;p&gt;
-I used to use &lt;code&gt;pass generate&lt;/code&gt; for creating new passwords, which creates cryptic
+deleting all accounts in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm -r example.com&lt;/code&gt;. &lt;/p&gt; &lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt; &lt;source src=&quot;/videos/how-i-manage-my-passwords/1--pass-cli.webm&quot; type=&quot;video/webm&quot;&gt; &lt;/video&gt; &lt;p&gt; I used to use &lt;code&gt;pass generate&lt;/code&gt; for creating new passwords, which creates cryptic
 hard (impossible?) to crack strings. Over time however, I have come to prefer
 password phrases which are easy to type by hand. I pick 3-4 words that come to
 my mind at a time, and make a loose sentence out of them to create a new
-password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Using%20a%20password&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;Using%20a%20password&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-Using%20a%20password&quot;&gt;
-&lt;p&gt;
-Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
-much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-It gives me a nice prompt to search and select the credentials I want, and
+password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt; &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Using%20a%20password&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;Using%20a%20password&quot;&gt;Using a password&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-Using%20a%20password&quot;&gt; &lt;p&gt; Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
+much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;. &lt;/p&gt; &lt;p&gt; It gives me a nice prompt to search and select the credentials I want, and
 autofills them. It is smart enough to recognize that credentials are more than
-just a password; so if you edit your password file to look like:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-text&quot;&gt;mypassword
+just a password; so if you edit your password file to look like: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-text&quot;&gt;mypassword
 
 user: myuser
 some-other-key: some-val
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-&lt;i&gt;rofi-pass&lt;/i&gt; will allow you to select the key and auto-type its value. It
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; &lt;i&gt;rofi-pass&lt;/i&gt; will allow you to select the key and auto-type its value. It
 recognizes first line as the password, and a value with &lt;code&gt;user&lt;/code&gt; key to autotype
 both username and password in forms which ask for first username and then
-password (on the same form).
-&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt;
-  &lt;source src=&quot;/videos/how-i-manage-my-passwords/2--using-rofi-pass.webm&quot; type=&quot;video/webm&quot;&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Throwaway%20passwords&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;Throwaway%20passwords&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-Throwaway%20passwords&quot;&gt;
-&lt;p&gt;
-I don't &amp;quot;install&amp;quot; fireword since it is just a self-contained python script. But
+password (on the same form). &lt;/p&gt; &lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt; &lt;source src=&quot;/videos/how-i-manage-my-passwords/2--using-rofi-pass.webm&quot; type=&quot;video/webm&quot;&gt; &lt;/video&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Throwaway%20passwords&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;Throwaway%20passwords&quot;&gt;Throwaway passwords&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-Throwaway%20passwords&quot;&gt; &lt;p&gt; I don't &amp;quot;install&amp;quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
-(private browsing), I have created a small command in &lt;a href=&quot;https://github.com/bitspook/stumpwm.d&quot;&gt;my stumpwm configuration&lt;/a&gt;
-to make it easy.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-lisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook/fireword-bin&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~/Documents/work/fireword/fireword&amp;quot;&lt;/span&gt;)
+(private browsing), I have created a small command in &lt;a href=&quot;https://github.com/bitspook/stumpwm.d&quot;&gt;my stumpwm configuration&lt;/a&gt; to make it easy. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-lisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook/fireword-bin&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~/Documents/work/fireword/fireword&amp;quot;&lt;/span&gt;)
 
 (defcommand fireword (pass len)
   ((&lt;span style=&quot;color: #7f7dca;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;Password: &amp;quot;&lt;/span&gt;)
@@ -1000,413 +296,129 @@ to make it easy.
   (run-shell-command (format nil  &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~a ~a ~a | xclip -sel clip&amp;quot;&lt;/span&gt; spook/fireword-bin pass len)))
 
 (&lt;span style=&quot;color: #598bc1;&quot;&gt;define-key&lt;/span&gt; *top-map* (kbd &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;s-P&amp;quot;&lt;/span&gt;) &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;fireword&amp;quot;&lt;/span&gt;)
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-In the end I get a nice prompt on pressing &lt;code&gt;C-P&lt;/code&gt; to enter my password and
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; In the end I get a nice prompt on pressing &lt;code&gt;C-P&lt;/code&gt; to enter my password and
 desired length, get the fireword copied to clipboard which I then paste in a
-private browser window.
-&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt;
-  &lt;source src=&quot;/videos/how-i-manage-my-passwords/3-using-fireword-with-stumpwm.webm&quot; type=&quot;video/webm&quot;&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">Using ELisp as an HTML templating engine</title><id>/blog/using-elisp-as-an/index.html</id><updated>2022-04-08T00:00:00.000000Z</updated><link href="/blog/using-elisp-as-an/index.html" title="Using ELisp as an HTML templating engine"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-04-08T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-HTML templating engines like &lt;a href=&quot;https://jinja.palletsprojects.com/en/3.1.x/&quot;&gt;Jinja&lt;/a&gt; or &lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; are commonly used in web
-development for weaving data into HTML.
-&lt;/p&gt;
-
-&lt;p&gt;
-For last couple of days, I've been porting &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;my Hakyll based static-site generator&lt;/a&gt;
-to &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;Emacs Lisp&lt;/a&gt;, for a more fluent thought-publishing workflow. I found myself in
+private browser window. &lt;/p&gt; &lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt; &lt;source src=&quot;/videos/how-i-manage-my-passwords/3-using-fireword-with-stumpwm.webm&quot; type=&quot;video/webm&quot;&gt; &lt;/video&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">Using ELisp as an HTML templating engine</title><id>/blog/using-elisp-as-an/index.html</id><updated>2022-04-08T00:00:00.000000Z</updated><link href="/blog/using-elisp-as-an/index.html" title="Using ELisp as an HTML templating engine"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-04-08T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;/p&gt; &lt;p&gt; HTML templating engines like &lt;a href=&quot;https://jinja.palletsprojects.com/en/3.1.x/&quot;&gt;Jinja&lt;/a&gt; or &lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; are commonly used in web
+development for weaving data into HTML. &lt;/p&gt; &lt;p&gt; For last couple of days, I've been porting &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;my Hakyll based static-site generator&lt;/a&gt; to &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;Emacs Lisp&lt;/a&gt;, for a more fluent thought-publishing workflow. I found myself in
 need of an HTML templating engine so I could convert data about my blog posts
-and notes to HTML.
-&lt;/p&gt;
-
-&lt;p&gt;
-I found that we actually don't need an HTML templating engine to convert ELisp
+and notes to HTML. &lt;/p&gt; &lt;p&gt; I found that we actually don't need an HTML templating engine to convert ELisp
 to HTML. Emacs has built-in capability to work with HTML, we can piggy back on
-that to get a templating engine without adding any new code.
-&lt;/p&gt;
-
-&lt;p&gt;
-We can represent DOM, which is a tree data-structure, as a lisp form
-&lt;/p&gt;
-
-&lt;p&gt;
-Consider following HTML element
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&amp;gt;
+that to get a templating engine without adding any new code. &lt;/p&gt; &lt;p&gt; We can represent DOM, which is a tree data-structure, as a lisp form &lt;/p&gt; &lt;p&gt; Consider following HTML element &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&amp;gt;
   &amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;a&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;href&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;&amp;gt;Google&amp;lt;/&lt;span style=&quot;color: #1d9a79;&quot;&gt;a&lt;/span&gt;&amp;gt;
 &amp;lt;/&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-We can write it as a lisp form like this:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;'(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;))
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; We can write it as a lisp form like this: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;'(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;))
       (a ((href . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;))
          &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;Google&amp;quot;&lt;/span&gt;))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-Note that this is a quoted lisp form. Which means this code isn't actually
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; Note that this is a quoted lisp form. Which means this code isn't actually
 executed, &lt;code&gt;div&lt;/code&gt; or &lt;code&gt;a&lt;/code&gt; aren't lisp functions. We can just put in any symbol
-there, and it is treated as a DOM node.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;shr-dom-to-xml&lt;/code&gt; converts this lisp form to an HTML string:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;))
+there, and it is treated as a DOM node. &lt;/p&gt; &lt;p&gt; &lt;code&gt;shr-dom-to-xml&lt;/code&gt; converts this lisp form to an HTML string: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;))
   (shr-dom-to-xml
    `(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;))
          (a ((href . ,my-url))
             &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;Google&amp;quot;&lt;/span&gt;))))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;pre class=&quot;example&quot;&gt;
+&lt;/pre&gt; &lt;/div&gt; &lt;pre class=&quot;example&quot;&gt;
 &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://google.com&amp;quot;&amp;gt;Google&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-In this example we changed the quote used to showcase how we can run arbitrary
-lisp forms in our DOM to weave data into it.
-&lt;/p&gt;
-
-&lt;p&gt;
-You can check &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;my wip ELisp blogging setup&lt;/a&gt; for more complex examples, and some
-glue code I've written to make using ELisp as HTML templating engine easier.
-&lt;/p&gt;
-</content></entry><entry><title type="text">ਨਸ਼ੇੜੀ</title><id>/poems/poem-nashedi/index.html</id><updated>2022-03-30T00:00:00.000000Z</updated><link href="/poems/poem-nashedi/index.html" title="ਨਸ਼ੇੜੀ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2022-03-30T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-ਮੇਰੇ ਪਿੰਡ ਦਾ ਨਸ਼ੇੜੀ ਜਦ ਨਿੱਕਾ ਸੀ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਉਹਦਾ ਪਿਓ ਮਰ ਗਿਆ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਘਰ ਦੇ ਕਲੇਸ਼ ਤੋਂ ਤੰਗ, ਸਲਫ਼ਾਸ ਪੀ ਕੇ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਆਪਣੀਆਂ ਚੀਕਾਂ ਆਪਣੇ ਪੁੱਤ ਦੇ ਸਿਹਰੇ ਧਰ ਗਿਆ।
-&lt;/p&gt;
-
-&lt;p&gt;
-ਪਿੰਡ ਵਾਲਿਆਂ ਦੇ ਮੇਹਣੇ ਸਹਿਣੇ ਜਦ ਮੁਮਕਿਨ ਨਾ ਰਹੇ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਤਾਂ ਨਸ਼ੇੜੀ ਦੀ ਮਾਂ ਉਸਨੂੰ ਵੇਹੜੇ ਵਿੱਚ ਖੇਢਦੇ ਛੱਡ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਸ਼ਾਯਦ ਆਪਣੀ ਲੀਰੋਂ ਲੀਰ ਹੋਈ ਉਮਰ ਨੂੰ ਸਮੇਟਣ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਆਪਣੀ ਧੀ ਨੂੰ ਕੁੱਛੜ ਚੁੱਕ, ਘਰੋਂ ਭੱਜ ਗਈ।
-&lt;/p&gt;
-
-&lt;p&gt;
-ਰੂੰ ਜਿਹੇ ਜਵਾਕ ਨੂੰ ਹਾਲੇ ਮਤ ਨਹੀਂ ਸੀ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਕਿ ਮਰਨਾ ਕੀ ਹੁੰਦਾ ਏ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਜਦੋਂ ਢਿੱਡ ਵਿੱਚ ਪੈਂਦੇ ਵਲ਼ ਉਸਨੂੰ ਇਹ ਸਿਖਾਣ ਲੱਗੇ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਕਿ ਛਾਬੇ ਵਿੱਚ ਪਈ ਰੋਟੀ ਮੁੱਕ ਵੀ ਜਾਂਦੀ ਏ।
-&lt;/p&gt;
-
-&lt;p&gt;
-ਮੇਰੇ ਪਿੰਡ ਦਾ ਨਸ਼ੇੜੀ, ਇਕ ਮੁੱਛ ਫੁੱਟ ਜਿਹਾ ਜਵਾਕ ਏ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਸਮੇਂ ਦਾ ਹਲੂਣਿਆ ਤੇ ਬਘਿਆੜਾਂ ਦਾ ਚੂੰਡਿਆ ਏ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਪਿੰਡ ਦੇ ਜਵਾਕਾਂ ਨੂੰ ਜ਼ਹਿਰ ਵੇਚ ਕੇ,
-&lt;/p&gt;
-
-&lt;p&gt;
-ਆਪਣੀ ਹੱਡੀਆਂ ਦੀ ਪੰਡ ਪਾਲ਼ ਰਿਹਾ ਏ।
-&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;
-Drug problem in Punjab is real. But it isn't always the addict's own
+&lt;/pre&gt; &lt;p&gt; In this example we changed the quote used to showcase how we can run arbitrary
+lisp forms in our DOM to weave data into it. &lt;/p&gt; &lt;p&gt; You can check &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;my wip ELisp blogging setup&lt;/a&gt; for more complex examples, and some
+glue code I've written to make using ELisp as HTML templating engine easier. &lt;/p&gt; </content></entry><entry><title type="text">ਨਸ਼ੇੜੀ</title><id>/poems/poem-nashedi/index.html</id><updated>2022-03-30T00:00:00.000000Z</updated><link href="/poems/poem-nashedi/index.html" title="ਨਸ਼ੇੜੀ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2022-03-30T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; ਮੇਰੇ ਪਿੰਡ ਦਾ ਨਸ਼ੇੜੀ ਜਦ ਨਿੱਕਾ ਸੀ, &lt;/p&gt; &lt;p&gt; ਉਹਦਾ ਪਿਓ ਮਰ ਗਿਆ, &lt;/p&gt; &lt;p&gt; ਘਰ ਦੇ ਕਲੇਸ਼ ਤੋਂ ਤੰਗ, ਸਲਫ਼ਾਸ ਪੀ ਕੇ, &lt;/p&gt; &lt;p&gt; ਆਪਣੀਆਂ ਚੀਕਾਂ ਆਪਣੇ ਪੁੱਤ ਦੇ ਸਿਹਰੇ ਧਰ ਗਿਆ। &lt;/p&gt; &lt;p&gt; ਪਿੰਡ ਵਾਲਿਆਂ ਦੇ ਮੇਹਣੇ ਸਹਿਣੇ ਜਦ ਮੁਮਕਿਨ ਨਾ ਰਹੇ, &lt;/p&gt; &lt;p&gt; ਤਾਂ ਨਸ਼ੇੜੀ ਦੀ ਮਾਂ ਉਸਨੂੰ ਵੇਹੜੇ ਵਿੱਚ ਖੇਢਦੇ ਛੱਡ, &lt;/p&gt; &lt;p&gt; ਸ਼ਾਯਦ ਆਪਣੀ ਲੀਰੋਂ ਲੀਰ ਹੋਈ ਉਮਰ ਨੂੰ ਸਮੇਟਣ, &lt;/p&gt; &lt;p&gt; ਆਪਣੀ ਧੀ ਨੂੰ ਕੁੱਛੜ ਚੁੱਕ, ਘਰੋਂ ਭੱਜ ਗਈ। &lt;/p&gt; &lt;p&gt; ਰੂੰ ਜਿਹੇ ਜਵਾਕ ਨੂੰ ਹਾਲੇ ਮਤ ਨਹੀਂ ਸੀ, &lt;/p&gt; &lt;p&gt; ਕਿ ਮਰਨਾ ਕੀ ਹੁੰਦਾ ਏ, &lt;/p&gt; &lt;p&gt; ਜਦੋਂ ਢਿੱਡ ਵਿੱਚ ਪੈਂਦੇ ਵਲ਼ ਉਸਨੂੰ ਇਹ ਸਿਖਾਣ ਲੱਗੇ, &lt;/p&gt; &lt;p&gt; ਕਿ ਛਾਬੇ ਵਿੱਚ ਪਈ ਰੋਟੀ ਮੁੱਕ ਵੀ ਜਾਂਦੀ ਏ। &lt;/p&gt; &lt;p&gt; ਮੇਰੇ ਪਿੰਡ ਦਾ ਨਸ਼ੇੜੀ, ਇਕ ਮੁੱਛ ਫੁੱਟ ਜਿਹਾ ਜਵਾਕ ਏ, &lt;/p&gt; &lt;p&gt; ਸਮੇਂ ਦਾ ਹਲੂਣਿਆ ਤੇ ਬਘਿਆੜਾਂ ਦਾ ਚੂੰਡਿਆ ਏ, &lt;/p&gt; &lt;p&gt; ਪਿੰਡ ਦੇ ਜਵਾਕਾਂ ਨੂੰ ਜ਼ਹਿਰ ਵੇਚ ਕੇ, &lt;/p&gt; &lt;p&gt; ਆਪਣੀ ਹੱਡੀਆਂ ਦੀ ਪੰਡ ਪਾਲ਼ ਰਿਹਾ ਏ। &lt;/p&gt; &lt;hr&gt; &lt;p&gt; Drug problem in Punjab is real. But it isn't always the addict's own
 doing. Sometimes, the society which love to hate them, is itself
-responsible for the demise of entire families.
-&lt;/p&gt;
-
-&lt;p&gt;
-This poem tells the story of a young man I know of, who bears the brunt
+responsible for the demise of entire families. &lt;/p&gt; &lt;p&gt; This poem tells the story of a young man I know of, who bears the brunt
 of passionate hate from almost everyone in his village. From people who
-saw his slow death over &lt;b&gt;years&lt;/b&gt;, who are now angry that his &lt;i&gt;existence&lt;/i&gt;
-is corrupting their children.
-&lt;/p&gt;
-</content></entry><entry><title type="text">I have quit my job</title><id>/blog/i-have-quit-my-job/index.html</id><updated>2022-03-24T00:00:00.000000Z</updated><link href="/blog/i-have-quit-my-job/index.html" title="I have quit my job"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-03-24T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-Several years ago, I decided to quit freelancing and do a day job. The
+saw his slow death over &lt;b&gt;years&lt;/b&gt;, who are now angry that his &lt;i&gt;existence&lt;/i&gt; is corrupting their children. &lt;/p&gt; </content></entry><entry><title type="text">I have quit my job</title><id>/blog/i-have-quit-my-job/index.html</id><updated>2022-03-24T00:00:00.000000Z</updated><link href="/blog/i-have-quit-my-job/index.html" title="I have quit my job"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-03-24T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; Several years ago, I decided to quit freelancing and do a day job. The
 job would pay much less but I was struggling with mental health (ADHD).
 On my therapist's suggestion, I decided to give the job thing a try. It
 worked wonderfully, my struggles with discipline are a thing of past. Or
-so I believe.
-&lt;/p&gt;
-
-&lt;p&gt;
-Once again, I have decided to take a drastic step. I have decided to
+so I believe. &lt;/p&gt; &lt;p&gt; Once again, I have decided to take a drastic step. I have decided to
 quit my day job. This is my last week at work, coming Monday I will be
-unemployed.
-&lt;/p&gt;
-
-&lt;p&gt;
-I don't have a plan. I haven't planned to leave work permanently. I
+unemployed. &lt;/p&gt; &lt;p&gt; I don't have a plan. I haven't planned to leave work permanently. I
 don't have an ambition either, world changing or otherwise. This post is
 me deciding to take a break from work and finding reasons for doing so,
-after the fact.
-&lt;/p&gt;
-&lt;div id=&quot;outline-container-curiosity&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;curiosity&quot;&gt;Curiosity&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-curiosity&quot;&gt;
-&lt;p&gt;
-It is exciting. The possibilities are endless. It is scary. Endless
+after the fact. &lt;/p&gt; &lt;div id=&quot;outline-container-curiosity&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;curiosity&quot;&gt;Curiosity&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-curiosity&quot;&gt; &lt;p&gt; It is exciting. The possibilities are endless. It is scary. Endless
 possibilities means a lot of them lead to failure. Odds are stacked in
 my favor in some regards; I am good at what I do, world will still need
 good software engineers 6 months down the road. They are not so much in
 my favor in some regards; precedence says I will fall into inaction and
 misery, and achieve nothing. Complete nothing. I've almost always lost
 in my struggles with ADHD in past. There is a good chance that I am
-deluding myself into believing that this time will be any different.
-&lt;/p&gt;
-
-&lt;p&gt;
-I am curios of whether it is me who has finally tamed the beast, or if I
-am going to need the structure a formal job as crutches.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-exhaustion&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;exhaustion&quot;&gt;Exhaustion&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-exhaustion&quot;&gt;
-&lt;p&gt;
-I am sort of exhausted from making pragmatic decisions all the time.
+deluding myself into believing that this time will be any different. &lt;/p&gt; &lt;p&gt; I am curios of whether it is me who has finally tamed the beast, or if I
+am going to need the structure a formal job as crutches. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-exhaustion&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;exhaustion&quot;&gt;Exhaustion&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-exhaustion&quot;&gt; &lt;p&gt; I am sort of exhausted from making pragmatic decisions all the time.
 Building software needs a delicate balance between what makes your
 software technically good, and what makes it actually good. Actually
-good software solve problems despite its own imperfections.
-&lt;/p&gt;
-
-&lt;p&gt;
-I want to spend some time making impractical decisions. I want to build
+good software solve problems despite its own imperfections. &lt;/p&gt; &lt;p&gt; I want to spend some time making impractical decisions. I want to build
 software which solve the problem of making me happy, or at least
-entertained.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-heartbreak&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;heartbreak&quot;&gt;Heartbreak&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-heartbreak&quot;&gt;
-&lt;p&gt;
-I joined my last company because I was sold on an idea. An idea of a
+entertained. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-heartbreak&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;heartbreak&quot;&gt;Heartbreak&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-heartbreak&quot;&gt; &lt;p&gt; I joined my last company because I was sold on an idea. An idea of a
 project which was solving a meaningful problem, and was challenging
 enough to keep me engaged. I dedicated myself to that, gladly making
 many sacrifices in my personal life. I got to build a team and lead it
 with autonomy, we built a stolid product (actually, a part of it). And
 then I was taken off that project, with what felt like without warning.
-I accepted that decision because it was practical for the company.
-&lt;/p&gt;
-
-&lt;p&gt;
-But I was unprepared for the aftershock. It was traumatizing. With a
+I accepted that decision because it was practical for the company. &lt;/p&gt; &lt;p&gt; But I was unprepared for the aftershock. It was traumatizing. With a
 snap I was plucked out of one project, and added into another with the
 expectation of establishing myself into a similar critical role. The
 fact that I did it without a break didn't help. I could no longer find
 that sense of belonging anymore, in this new project, or others that
-came after.
-&lt;/p&gt;
-
-&lt;p&gt;
-Perhaps I am not suited for working in a services company with rapid
+came after. &lt;/p&gt; &lt;p&gt; Perhaps I am not suited for working in a services company with rapid
 transitions. Perhaps I set my expectations wrong. Perhaps there was a
 lapse in communication. Perhaps, I need to spend some time grieving.
-Regardless, I need a break.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-self-growth&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;self-growth&quot;&gt;Self growth&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-self-growth&quot;&gt;
-&lt;p&gt;
-As good a workplace as Trantor has been, I've been feeling stagnated for
+Regardless, I need a break. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-self-growth&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;self-growth&quot;&gt;Self growth&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-self-growth&quot;&gt; &lt;p&gt; As good a workplace as Trantor has been, I've been feeling stagnated for
 a while. I have learned a lot outside of work, but work has started to
 feel like work, which makes me miserable. Overlap between things I want
 to learn and things which my job needs have been steadily and
-increasingly decreasing.
-&lt;/p&gt;
-
-&lt;p&gt;
-Many of the things I want to learn need dedication which I can't afford
+increasingly decreasing. &lt;/p&gt; &lt;p&gt; Many of the things I want to learn need dedication which I can't afford
 while working full-time as a software engineer. There is no off-switch,
 I am always working; even when I am not sitting in front of a computer.
-Things I want to learn need me 100% there.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-social-work&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;social-work&quot;&gt;Social work&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-social-work&quot;&gt;
-&lt;p&gt;
-This is the most delusional of all the reasons I've cooked up. I imagine
+Things I want to learn need me 100% there. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-social-work&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;social-work&quot;&gt;Social work&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-social-work&quot;&gt; &lt;p&gt; This is the most delusional of all the reasons I've cooked up. I imagine
 building solutions to problems I see in my surroundings. For some
 irrational reason, I feel a desire to give back to society. This is
 perhaps narcissism finding its way around my reasoning, coloring itself
 righteous. More logical would be to uproot myself and immigrate to a
 place where people have already solved the basic problems of human
-coexistence.
-&lt;/p&gt;
-
-&lt;p&gt;
-When I was in school I used to imagine how the school can be reformed,
+coexistence. &lt;/p&gt; &lt;p&gt; When I was in school I used to imagine how the school can be reformed,
 in college it was the education system, as a freelance developer I
 actually started acting on my imaginations and trying to improve my
 local tech community. Several times. As an employee, I tried to uplift
 my team (and imagined work reform, but never acted on it). Now, I
 imagine solutions for many of the problems I see my village face. I am
-curious if I will put them into action.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-what-lies-ahead&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;what-lies-ahead&quot;&gt;What lies ahead?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-what-lies-ahead&quot;&gt;
-&lt;p&gt;
-I don't know. There are too many things. There is a very good chance
+curious if I will put them into action. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-what-lies-ahead&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;what-lies-ahead&quot;&gt;What lies ahead?&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-what-lies-ahead&quot;&gt; &lt;p&gt; I don't know. There are too many things. There is a very good chance
 that I am going to freeze in the face of choice, be miserable for a few
 weeks, and get back to doing a day job. I am going to take time off for
 as long as I feel like it, or run out of money. During this time I will
 try to learn things and build software that bring me joy. Try to teach
-myself how to focus more on the journey.
-&lt;/p&gt;
-
-&lt;p&gt;
-I've observed that many activities (including building software) can be
+myself how to focus more on the journey. &lt;/p&gt; &lt;p&gt; I've observed that many activities (including building software) can be
 a meditative experience. If you can let go of the goals, you can quite
 enjoy the act. Counter intuitively, the result is often much better. But
 it is not always on time, which makes this a dangerous thing to do when
 someone else is paying for my work. Perhaps the last bit is because I am
 not yet well versed in it. This too might be a matter of finding a
-balance. I'll explore.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">Using org-mode as an SQL playground</title><id>/blog/using-org-mode-as-an-sql-playground/index.html</id><updated>2022-02-03T00:00:00.000000Z</updated><link href="/blog/using-org-mode-as-an-sql-playground/index.html" title="Using org-mode as an SQL playground"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-02-03T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-Showcase video:
-&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DY7t4T4TmUU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;
-For every web app I work on, a database client is always present for exploring
+balance. I'll explore. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">Using org-mode as an SQL playground</title><id>/blog/using-org-mode-as-an-sql-playground/index.html</id><updated>2022-02-03T00:00:00.000000Z</updated><link href="/blog/using-org-mode-as-an-sql-playground/index.html" title="Using org-mode as an SQL playground"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-02-03T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; Showcase video: &lt;/p&gt; &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DY7t4T4TmUU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;p&gt; For every web app I work on, a database client is always present for exploring
 data and building complex queries. Recently, I have moved on from my PgAdmin to
-org-mode for this purpose, because why not.
-&lt;/p&gt;
-
-&lt;p&gt;
-Org-mode allows executing code snippets and can show results in a nice tabular
+org-mode for this purpose, because why not. &lt;/p&gt; &lt;p&gt; Org-mode allows executing code snippets and can show results in a nice tabular
 form. But org-mode isn't &lt;a href=&quot;https://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-320/Microsoft-Office.html&quot;&gt;written by Microsoft&lt;/a&gt;. So it don't allow arbitrary code
 execution without our explicit consent. To tell org-mode that it is okay to
-execute SQL snippets, we need to run following elisp snippet:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;with-eval-after-load&lt;/span&gt; 'org
+execute SQL snippets, we need to run following elisp snippet: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;with-eval-after-load&lt;/span&gt; 'org
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((sql . t))))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-Org-mode has a number of &lt;a href=&quot;https://www.orgmode.org/worg/org-contrib/babel/languages/ob-doc-sql.html#org7f0941b&quot;&gt;header arguments for SQL blocks&lt;/a&gt; which can be used to
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; Org-mode has a number of &lt;a href=&quot;https://www.orgmode.org/worg/org-contrib/babel/languages/ob-doc-sql.html#org7f0941b&quot;&gt;header arguments for SQL blocks&lt;/a&gt; which can be used to
 configure how a particular SQL source-code snippet is executed. Most important
-ones perhaps are:
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;&lt;code&gt;:engine&lt;/code&gt; which tells which database to run the SQL against&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;:dbhost&lt;/code&gt; to configure the database host, most likely &lt;code&gt;localhost&lt;/code&gt; for a dev
-environment&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;:dbport&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;:dbuser&lt;/code&gt; and &lt;code&gt;:dbpassword&lt;/code&gt; for database authentication&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;:database&lt;/code&gt; for database name&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-By default org-mode runs the code snippets in current OS environment. I use this
+ones perhaps are: &lt;/p&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;&lt;code&gt;:engine&lt;/code&gt; which tells which database to run the SQL against&lt;/li&gt; &lt;li&gt;&lt;code&gt;:dbhost&lt;/code&gt; to configure the database host, most likely &lt;code&gt;localhost&lt;/code&gt; for a dev
+environment&lt;/li&gt; &lt;li&gt;&lt;code&gt;:dbport&lt;/code&gt;&lt;/li&gt; &lt;li&gt;&lt;code&gt;:dbuser&lt;/code&gt; and &lt;code&gt;:dbpassword&lt;/code&gt; for database authentication&lt;/li&gt; &lt;li&gt;&lt;code&gt;:database&lt;/code&gt; for database name&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; By default org-mode runs the code snippets in current OS environment. I use this
 fact to get the ability to run SQL against our postgres database without passing
 most of the above arguments. Postgres allows setting &lt;a href=&quot;https://www.postgresql.org/docs/current/libpq-envars.html&quot;&gt;some environment&lt;/a&gt; variables,
 which it then use to for making connections by default. In my &lt;a href=&quot;https://github.com/bitspook/entropy/blob/ae5ee52646c2c67ce713938548d67a722b73a294/flake.nix&quot;&gt;flake.nix&lt;/a&gt; file, I
-setup the required environment variables:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-sh&quot;&gt;&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PWD&lt;/span&gt;/storage/postgres
+setup the required environment variables: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-sh&quot;&gt;&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PWD&lt;/span&gt;/storage/postgres
 &lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;PGDATA&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;/data
 &lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;PGHOST&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;/run
 &lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;PGDATABASE&lt;/span&gt;=entropy
 &lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;DATABASE_URL&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;postgresql:///$PGDATABASE?host=$PGHOST&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;not required by postgres, but will be helpful&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-With this, only header option left to set is &lt;code&gt;:engine&lt;/code&gt;, which I prefer to
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; With this, only header option left to set is &lt;code&gt;:engine&lt;/code&gt;, which I prefer to
 configure globally for my &lt;a href=&quot;https://raw.githubusercontent.com/bitspook/entropy/96cc9c0485d972ed819996d61c3730cafb228660/sql-playground.org&quot;&gt;sql-playground.org&lt;/a&gt; since I usually have one database
 for my personal projects. You can check this &lt;a href=&quot;https://github.com/bitspook/entropy/commit/96cc9c0485d972ed819996d61c3730cafb228660&quot;&gt;commit on Entropy project&lt;/a&gt; for how I
 have setup my sql-playground there. Following snippet on top of the
-sql-playground.org does the trick:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+PROPERTY: header-args:sql  :engine postgres&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-Now any SQL snippets that we create can be executed against our development
+sql-playground.org does the trick: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+PROPERTY: header-args:sql  :engine postgres&lt;/span&gt;
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; Now any SQL snippets that we create can be executed against our development
 database right within the org file. For example, pressing &lt;code&gt;C-c C-c&lt;/code&gt; in following
-SQL block produces output shown below that.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+name: events&lt;/span&gt;
+SQL block produces output shown below that. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+name: events&lt;/span&gt;
 &lt;span style=&quot;color: #858585; font-style: italic; text-decoration: underline;&quot;&gt;#+begin_src sql&lt;/span&gt;
 &lt;span style=&quot;color: #aab0ab;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot;color: #598bc1;&quot;&gt;SELECT&lt;/span&gt;&lt;span style=&quot;color: #aab0ab;&quot;&gt; events.title,&lt;/span&gt;
 &lt;span style=&quot;color: #aab0ab;&quot;&gt;         events.slug,&lt;/span&gt;
@@ -1422,131 +434,43 @@ SQL block produces output shown below that.
 &lt;span style=&quot;color: #86b5e8;&quot;&gt;|--------------------+----------------------+---------------------+---------------------+--------+---------|&lt;/span&gt;
 &lt;span style=&quot;color: #86b5e8;&quot;&gt;| Lol bro what       | lol-rofl-lmao        | 2021-11-29 12:30:00 | 2021-11-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
 &lt;span style=&quot;color: #86b5e8;&quot;&gt;| Nested event title | nested-lol-rofl-lmao | 2021-10-29 12:30:00 | 2021-10-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Utilizing%20LSP&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Utilizing%20LSP&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Utilizing%20LSP&quot;&gt;
-&lt;p&gt;
-Building SQL queries is my primary use-case, and org-mode configured so far
+&lt;/pre&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Utilizing%20LSP&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Utilizing%20LSP&quot;&gt;Utilizing LSP&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Utilizing%20LSP&quot;&gt; &lt;p&gt; Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
 post anyway, I thought let's go a step further and try configuring LSP mode for
 SQL snippets in my org file. To my surprise, it is possible. &lt;a href=&quot;https://github.com/lighttiger2505/sqls/&quot;&gt;SQLS&lt;/a&gt; provides an
 LSP server for SQL files, which once configured can provide certain features
 like auto-completing table and column names. I have created a &lt;a href=&quot;https://github.com/bitspook/entropy/blob/96cc9c0485d972ed819996d61c3730cafb228660/.dir-locals.el&quot;&gt;.dir-locals&lt;/a&gt; file
 for &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html&quot;&gt;adding directory local variables&lt;/a&gt; to configure LSP to connect to correct
-database.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;((nil . ((eval (&lt;span style=&quot;color: #598bc1;&quot;&gt;lambda&lt;/span&gt; ()
+database. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;((nil . ((eval (&lt;span style=&quot;color: #598bc1;&quot;&gt;lambda&lt;/span&gt; ()
                  (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq&lt;/span&gt; lsp-sqls-connections `(((driver . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;postgresql&amp;quot;&lt;/span&gt;)
                                                (dataSourceName . ,(getenv &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;DATABASE_URL&amp;quot;&lt;/span&gt;))))))))))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-This snippet isn't actually the right way configuring directory local variables,
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; This snippet isn't actually the right way configuring directory local variables,
 becuase it sets &lt;code&gt;lsp-sqls-connections&lt;/code&gt; globally. This is the result of me
 time-boxing the task of evaluating &lt;code&gt;(getenv &amp;quot;DATABASE_URL&amp;quot;)&lt;/code&gt;, so I won't need to
-duplicate my database configuration here.
-&lt;/p&gt;
-
-&lt;p&gt;
-LSP for org-mode also need to provide a file to which it can tangle source
-blocks. So I added another snippet to top of my org file.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+PROPERTY: header-args:sql  :tangle test.sql&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-I can now run &lt;code&gt;lsp-org&lt;/code&gt; in an SQL block, and 8/10 times it has lsp configured
+duplicate my database configuration here. &lt;/p&gt; &lt;p&gt; LSP for org-mode also need to provide a file to which it can tangle source
+blocks. So I added another snippet to top of my org file. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+PROPERTY: header-args:sql  :tangle test.sql&lt;/span&gt;
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; I can now run &lt;code&gt;lsp-org&lt;/code&gt; in an SQL block, and 8/10 times it has lsp configured
 properly. It isn't flawless though, but that is expected since &lt;a href=&quot;https://emacs-lsp.github.io/lsp-mode/manual-language-docs/lsp-org/#&quot;&gt;lsp support in
-org-snippets&lt;/a&gt; is in alpha stage right now.
-&lt;/p&gt;
-
-&lt;p&gt;
-I also tried setting up lsp support in edit buffer for SQL statements (which you
+org-snippets&lt;/a&gt; is in alpha stage right now. &lt;/p&gt; &lt;p&gt; I also tried setting up lsp support in edit buffer for SQL statements (which you
 get by pressing &lt;code&gt;C-c '&lt;/code&gt; in org src blocks), but because of a &lt;a href=&quot;https://github.com/emacs-lsp/lsp-mode/issues/2525&quot;&gt;bug in lsp-mode&lt;/a&gt;,
-that didn't work out too well.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;org-babel-edit-prep:sql&lt;/span&gt; (babel-info)
+that didn't work out too well. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;org-babel-edit-prep:sql&lt;/span&gt; (babel-info)
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq-local&lt;/span&gt; buffer-file-name (&lt;span style=&quot;color: #598bc1;&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt; babel-info caddr (alist-get &lt;span style=&quot;color: #7f7dca;&quot;&gt;:tangle&lt;/span&gt;)))
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq-local&lt;/span&gt; lsp-buffer-uri (&lt;span style=&quot;color: #598bc1;&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt; babel-info caddr (alist-get &lt;span style=&quot;color: #7f7dca;&quot;&gt;:tangle&lt;/span&gt;) lsp--path-to-uri))
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq-local&lt;/span&gt; lsp-headerline-breadcrumb-enable nil)
   (lsp))
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Problems%20with%20this%20setup&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Problems%20with%20this%20setup&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Problems%20with%20this%20setup&quot;&gt;
-&lt;p&gt;
-There are 2 main problems I face during my primary use-case.
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;Org tables don't work well if a column has a lot of data. e.g &lt;code&gt;description&lt;/code&gt;
-of an &lt;code&gt;event&lt;/code&gt; messes up the table real bad. lsp-mode allow executing queries
-which don't suffer from this.&lt;/li&gt;
-&lt;li&gt;No LSP support in edit buffer is a major bummer.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">Using org-roam as a CRM</title><id>/blog/using-org-roam-as-a-crm/index.html</id><updated>2022-01-22T00:00:00.000000Z</updated><link href="/blog/using-org-roam-as-a-crm/index.html" title="Using org-roam as a CRM"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-01-22T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;
-&lt;/iframe&gt;
-
-&lt;p&gt;
-org-roam is an Emacs application which makes efficiently capturing and finding
+&lt;/pre&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Problems%20with%20this%20setup&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Problems%20with%20this%20setup&quot;&gt;Problems with this setup&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Problems%20with%20this%20setup&quot;&gt; &lt;p&gt; There are 2 main problems I face during my primary use-case. &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;Org tables don't work well if a column has a lot of data. e.g &lt;code&gt;description&lt;/code&gt; of an &lt;code&gt;event&lt;/code&gt; messes up the table real bad. lsp-mode allow executing queries
+which don't suffer from this.&lt;/li&gt; &lt;li&gt;No LSP support in edit buffer is a major bummer.&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">Using org-roam as a CRM</title><id>/blog/using-org-roam-as-a-crm/index.html</id><updated>2022-01-22T00:00:00.000000Z</updated><link href="/blog/using-org-roam-as-a-crm/index.html" title="Using org-roam as a CRM"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-01-22T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt; &lt;p&gt; org-roam is an Emacs application which makes efficiently capturing and finding
 notes easy. It does so a good job at that, I decided to use it as a makeshift
-personal CRM. With a few lines of Elisp, I get to:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;p&gt;
-Take notes about people and events. I usually capture their contact
+personal CRM. With a few lines of Elisp, I get to: &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;p&gt; Take notes about people and events. I usually capture their contact
 information, important dates, how they made me feel during our interactions.
 Documenting meetings and calls has proven to be very helpful on more than one
-occasion.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;SPC P f&lt;/code&gt; to very quickly find or create a person/event.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-Link events and people to build a graph of relationships, which provide
+occasion. &lt;/p&gt; &lt;p&gt; &lt;code&gt;SPC P f&lt;/code&gt; to very quickly find or create a person/event. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; Link events and people to build a graph of relationships, which provide
 context and help me remember our meetings vividly. It is valuable for me
 because it save me from anxiety about forgetting people and things I discuss
-with them.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;SPC P i&lt;/code&gt; to insert link to a person/event in an org file (mostly my diary).
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-I have similar keybindings for taking (&lt;code&gt;SPC n f&lt;/code&gt;) and inserting notes (&lt;code&gt;SPC n
+with them. &lt;/p&gt; &lt;p&gt; &lt;code&gt;SPC P i&lt;/code&gt; to insert link to a person/event in an org file (mostly my diary). &lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt; I have similar keybindings for taking (&lt;code&gt;SPC n f&lt;/code&gt;) and inserting notes (&lt;code&gt;SPC n
 i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings and
-consistent UI.
-&lt;/p&gt;
-&lt;div id=&quot;outline-container-Setup&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Setup&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Setup&quot;&gt;
-&lt;p&gt;
-Elisp I use org-roam as a CRM, while keeping &amp;quot;normal&amp;quot; org-roam available for
-taking notes.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~/Documents/org/people&amp;quot;&lt;/span&gt;
+consistent UI. &lt;/p&gt; &lt;div id=&quot;outline-container-Setup&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Setup&quot;&gt;Setup&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Setup&quot;&gt; &lt;p&gt; Elisp I use org-roam as a CRM, while keeping &amp;quot;normal&amp;quot; org-roam available for
+taking notes. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~/Documents/org/people&amp;quot;&lt;/span&gt;
   &lt;span style=&quot;color: #987654;&quot;&gt;&amp;quot;Directory where org-roam notes related to people are kept.&amp;quot;&lt;/span&gt;)
 
 (&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #d65946;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
@@ -1566,212 +490,50 @@ taking notes.
 (&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--insert-person&lt;/span&gt; ()
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
   (spook--with-org-roam-crm #'org-roam-node-insert))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-Setup keybindings for calling &lt;code&gt;spook-crm--find-person&lt;/code&gt; to quickly search for
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; Setup keybindings for calling &lt;code&gt;spook-crm--find-person&lt;/code&gt; to quickly search for
 (and/or add) a person or event, and &lt;code&gt;spook-crm--insert-person&lt;/code&gt; to add a link to
 a person or event in any org-mode buffer. I frequently use it when adding
-meeting notes and in my diary.
-&lt;/p&gt;
-
-&lt;p&gt;
-Here's how I add the keybindings:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(spook-defkeymap
+meeting notes and in my diary. &lt;/p&gt; &lt;p&gt; Here's how I add the keybindings: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(spook-defkeymap
  &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;spook-people&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;C-c P&amp;quot;&lt;/span&gt;
  '(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;f&amp;quot;&lt;/span&gt; . spook-crm--find-person)
  '(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;i&amp;quot;&lt;/span&gt; . spook-crm--insert-person))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-You can find source of my very naive &lt;code&gt;spook-defkeymap&lt;/code&gt; macro in my &lt;a href=&quot;https://github.com/bitspook/spookmax.d/blob/master/readme.org#helper-utilities&quot;&gt;Emacs
-configuration&lt;/a&gt;. In addition to this, I assign the &lt;code&gt;spook-people&lt;/code&gt; keymap to my
-&lt;a href=&quot;https://github.com/meow-edit/meow/&quot;&gt;meow&lt;/a&gt; leader key, means I can press &lt;code&gt;SPC P f&lt;/code&gt; to find a person/event, and &lt;code&gt;SPC P
-i&lt;/code&gt; to insert a link to a person/event.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Does%20it%20solve%20everything%3F&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Does%20it%20solve%20everything%3F&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Does%20it%20solve%20everything%3F&quot;&gt;
-&lt;p&gt;
-No. But it is the quickest solution which achieves satisfactory result and free
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; You can find source of my very naive &lt;code&gt;spook-defkeymap&lt;/code&gt; macro in my &lt;a href=&quot;https://github.com/bitspook/spookmax.d/blob/master/readme.org#helper-utilities&quot;&gt;Emacs
+configuration&lt;/a&gt;. In addition to this, I assign the &lt;code&gt;spook-people&lt;/code&gt; keymap to my &lt;a href=&quot;https://github.com/meow-edit/meow/&quot;&gt;meow&lt;/a&gt; leader key, means I can press &lt;code&gt;SPC P f&lt;/code&gt; to find a person/event, and &lt;code&gt;SPC P
+i&lt;/code&gt; to insert a link to a person/event. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Does%20it%20solve%20everything%3F&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Does%20it%20solve%20everything%3F&quot;&gt;Does it solve everything?&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Does%20it%20solve%20everything%3F&quot;&gt; &lt;p&gt; No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
 sometimes, and there are a bunch of things I might like but don't need right
-now. e.g
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;More structured way of capturing specific kind of information. e.g contact
-details. Structure of data kept in org files is upto me, which works for now&lt;/li&gt;
-&lt;li&gt;Searching by something which isn't title or tags. This is solved by doing grep
-over&lt;/li&gt;
-&lt;li&gt;Visualize the people and events I participate in. &lt;a href=&quot;https://github.com/org-roam/org-roam-ui&quot;&gt;org-roam-ui&lt;/a&gt; didn't work on
-first shot.&lt;/li&gt;
-&lt;li&gt;Contacts/details on the go i.e a mobile app&lt;/li&gt;
-&lt;li&gt;Psychoanalyze people I meet; building, tracking and concluding experiments.
-But it is perhaps too much to ask without making effort&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Why%20am%20I%20sharing%20this%3F&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Why%20am%20I%20sharing%20this%3F&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Why%20am%20I%20sharing%20this%3F&quot;&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
-&lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
-&lt;li&gt;Hoping someone will solve some problems with this snippet, build on it until I
-come around to do it myself&lt;/li&gt;
-&lt;li&gt;To spread the cult of Emacs/org-mode (my precious-es)&lt;/li&gt;
-&lt;li&gt;To have some activity on my blog. It is too quiet here&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">ਗੀਤ</title><id>/poems/poem-geet/index.html</id><updated>2021-03-31T00:00:00.000000Z</updated><link href="/poems/poem-geet/index.html" title="ਗੀਤ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2021-03-31T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-ਕਿਉਂ ਮੈਂ ਗਾਵਾਂ ਅੱਜ ਕਰਮ ਦਾ ਗੀਤ,
+now. e.g &lt;/p&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;More structured way of capturing specific kind of information. e.g contact
+details. Structure of data kept in org files is upto me, which works for now&lt;/li&gt; &lt;li&gt;Searching by something which isn't title or tags. This is solved by doing grep
+over&lt;/li&gt; &lt;li&gt;Visualize the people and events I participate in. &lt;a href=&quot;https://github.com/org-roam/org-roam-ui&quot;&gt;org-roam-ui&lt;/a&gt; didn't work on
+first shot.&lt;/li&gt; &lt;li&gt;Contacts/details on the go i.e a mobile app&lt;/li&gt; &lt;li&gt;Psychoanalyze people I meet; building, tracking and concluding experiments.
+But it is perhaps too much to ask without making effort&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Why%20am%20I%20sharing%20this%3F&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Why%20am%20I%20sharing%20this%3F&quot;&gt;Why am I sharing this?&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Why%20am%20I%20sharing%20this%3F&quot;&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;To bounce ideas off of internet&lt;/li&gt; &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt; &lt;li&gt;Hoping someone will solve some problems with this snippet, build on it until I
+come around to do it myself&lt;/li&gt; &lt;li&gt;To spread the cult of Emacs/org-mode (my precious-es)&lt;/li&gt; &lt;li&gt;To have some activity on my blog. It is too quiet here&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">ਗੀਤ</title><id>/poems/poem-geet/index.html</id><updated>2021-03-31T00:00:00.000000Z</updated><link href="/poems/poem-geet/index.html" title="ਗੀਤ"/><author type="text">Charanjit Singh</author><category term="poems"/><published>2021-03-31T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; ਕਿਉਂ ਮੈਂ ਗਾਵਾਂ ਅੱਜ ਕਰਮ ਦਾ ਗੀਤ,
 ਮੇਰੇ ਪਿਓ ਦੀ ਮੜ੍ਹੀ ਤੇਰੇ ਧਰਮ ਦਾ ਗੀਤ।
 ਸੱਤਾ ਦੀਆਂ ਲੀਕਾਂ ਮੇਰੇ ਭਰਾ ਨੂੰ ਖਾ ਗਈਆਂ,
-ਤਿੰਨ ਰੰਗਾਂ 'ਚ ਘਰ ਆਇਆ, ਸਰਹੱਦਾਂ ਦਾ ਵੀਰ।
-&lt;/p&gt;
-
-&lt;p&gt;
-ਤੇਰੇ ਖ਼ਾਕੀ ਜੋ ਕੁੱਤੇ ਨੇ, ਸਾਡੀ ਰਾਖੀ ਨੂੰ ਸੁੱਤੇ ਨੇ,
+ਤਿੰਨ ਰੰਗਾਂ 'ਚ ਘਰ ਆਇਆ, ਸਰਹੱਦਾਂ ਦਾ ਵੀਰ। &lt;/p&gt; &lt;p&gt; ਤੇਰੇ ਖ਼ਾਕੀ ਜੋ ਕੁੱਤੇ ਨੇ, ਸਾਡੀ ਰਾਖੀ ਨੂੰ ਸੁੱਤੇ ਨੇ,
 ਪਰ ਧਰਨੇ ਤੇ ਬੈਠੇ ਇਹਨਾਂ, ਮੇਰੇ ਬਾਬੇ ਵੀ ਕੁੱਟੇ ਨੇ।
 ਕੀਰਨੇ ਤੇ ਧਾਵਾਂ ਵੀ, ਮੇਰੀ ਮਾਂ ਦੀਆਂ ਹਾਵਾਂ ਵੀ,
-ਸਾਡੇ ਹੱਕਾਂ ਦਾ ਕਤਲ, ਤੇਰੀ ਦਿੱਲੀ ਦੀ ਰੀਤ।
-&lt;/p&gt;
-
-&lt;p&gt;
-ਜਦੋਂ ਮਰਨੇ ਨੂੰ ਘੱਲਦਾ ਏਂ, ਉਦੋਂ ਸਾਡੇ ਵੱਲ ਦਾ ਏਂ,
+ਸਾਡੇ ਹੱਕਾਂ ਦਾ ਕਤਲ, ਤੇਰੀ ਦਿੱਲੀ ਦੀ ਰੀਤ। &lt;/p&gt; &lt;p&gt; ਜਦੋਂ ਮਰਨੇ ਨੂੰ ਘੱਲਦਾ ਏਂ, ਉਦੋਂ ਸਾਡੇ ਵੱਲ ਦਾ ਏਂ,
 ਰੋਟੀ ਜਦ ਮੰਗੀਏ, ਤੂੰ ਧੂਹ-ਧੂਹ ਕੇ ਬਲ਼ਦਾ ਏਂ।
 ਸਾਡੇ ਘਰ ਜਿਨਾਂ ਜਾਲ਼ੇ ਨੇ, ਤੇਰੇ ਹੀ ਪਾਲ਼ੇ ਨੇ,
-ਸਾਨੂੰ ਗਿਰਝਾਂ ਵਾਂਗ ਚੂੰਡੇ, ਹੱਡ ਖਾਣਾ ਫ਼ਕੀਰ।
-&lt;/p&gt;
-
-&lt;p&gt;
-ਤੇਰੇ ਉੱਜੜੇ ਬਾਗ਼ ਵਕਾਰਾਂ ਦੇ, ਸਾਡੇ ਲਹੂ ਨਾਲ਼ ਤੂੰ ਸਿੰਜੇ ਨੇ,
+ਸਾਨੂੰ ਗਿਰਝਾਂ ਵਾਂਗ ਚੂੰਡੇ, ਹੱਡ ਖਾਣਾ ਫ਼ਕੀਰ। &lt;/p&gt; &lt;p&gt; ਤੇਰੇ ਉੱਜੜੇ ਬਾਗ਼ ਵਕਾਰਾਂ ਦੇ, ਸਾਡੇ ਲਹੂ ਨਾਲ਼ ਤੂੰ ਸਿੰਜੇ ਨੇ,
 ਤੇਰੀ ਚੰਦਰੀ ਰੂਹ ਦੀਆਂ ਝਾਤਾਂ ਜੋ, ਹਲੇ ਪਹਿਲੇ ਜਖ਼ਮ ਵੀ ਪਿੰਡੇ ਨੇ।
 ਜ਼ਬਰ ਜ਼ੁਲਮ ਦੀਆਂ ਪੰਡਾਂ ਤੂੰ, ਨਿੱਤ ਬੰਨ੍ਹ ਬੰਨ੍ਹ ਕੇ ਘੱਲਦਾ ਏਂ,
-ਅਗਲਾ ਹੁਕਮ ਹੈ ਸਾਡੇ ਪੀਰ ਦਾ, ਹੱਥ ਲੈ ਲੈਣੀ ਸ਼ਮਸ਼ੀਰ।
-&lt;/p&gt;
-</content></entry><entry><title type="text">Find a functional programmer for your Javascript team</title><id>/blog/find-a-functional-programmer-for-your-javascript-team/index.html</id><updated>2020-11-07T00:00:00.000000Z</updated><link href="/blog/find-a-functional-programmer-for-your-javascript-team/index.html" title="Find a functional programmer for your Javascript team"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2020-11-07T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;blockquote&gt;
-&lt;p&gt;
-Written below are some opinions and rationalizations for them. I have come to
-these opinions by interviewing and working with people for years. However
-strongly I feel about them, they can still be wrong. If you have feedback for
-these, please do contact me on &lt;a href=&quot;https://www.linkedin.com/in/bitspook&quot;&gt;LinkedIn&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/bitspook&quot;&gt;Twitter&lt;/a&gt;. All kind of feedback is
-very much appreciated.
-&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;
-From &amp;quot;Functional programmer&amp;quot; I mean a programmer familiar with concepts of
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-A good teammate is someone:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;b&gt;Who takes care of themselves&lt;/b&gt;. They invest in themselves. They care
-about their software as a craft, as something more than just cramming
-a whole bunch of frameworks and libraries.&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;Who take care of their teammates&lt;/b&gt;.
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;They help their teammates grow, by mentoring and/or by serving as
-an example&lt;/li&gt;
-&lt;li&gt;They are empathetic towards other developers. This is most visible
-in kind of code a person writes. An empathetic developer writes
-code for other people.
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;They give preference to readability of code over
-micro-optimizations that make them feel clever&lt;/li&gt;
-&lt;li&gt;They write modular code with independent modules each of which do
-one thing well. And are easily composed to build more complex
-functionality.&lt;/li&gt;
-&lt;li&gt;They write clean, predictable and intuitive APIs&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-FP is steadily gaining popularity, but it is still not popular enough to
-breach the talent pool I get to interview from. Familiarity with FP is a
-very good indication that the person invest in themselves. And they do
-that in a manner which goes beyond just increasing the number of
-&amp;quot;frameworks&amp;quot; they have built a Todo App in.
-&lt;/p&gt;
-
-&lt;p&gt;
-Developer empathy is surprisingly rare. In almost a decade of writing
-code, I have met so few developers who really give a fuck that someone
-else will also read their abomination. Most software is written in
-vacuum. Familiarity with FP don't fix that magically.
-&lt;/p&gt;
-
-&lt;p&gt;
-However there is another factor at play here. Ironically, as a
-side-effect of FP, code written in a functional manner is often a lot
-more readable than its imperative and OOP equivalents (Impromptu quiz:
-What's so ironic about this statement?). Not only is functional code
-itself naturally declarative, an FP person is more likely to wtf when
-they see unreadable code in PR reviews.
-&lt;/p&gt;
-
-&lt;p&gt;
-Basic principles of FP also make for great advice for inexperienced
-developers. Good software architecture is hard to learn, it is a lot
-harder to teach. You need a mind capable of holding large amounts of
-complex code before the fancy design patterns even start making sense.
-In comparison, &amp;quot;pure functions + composition&amp;quot; and you are good to go.
-That is it. That is all you need to know to get started with writing
-modular, testable, simple code; which is easy to write and easier to
-maintain. As a mere side effect of avoiding side effects, you write
-naturally &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID&quot;&gt;SOLID&lt;/a&gt; (in spirit)
-code.
-&lt;/p&gt;
-
-&lt;p&gt;
-FP is not a silver bullet, but looking for functional programmers skew
-the universe in your favor a little. You are a lot more likely to get
-good people among functional programmers.
-&lt;/p&gt;
-</content></entry><entry><title type="text">Microservices</title><id>/talks/microservices-techblend/index.html</id><updated>2020-08-06T00:00:00.000000Z</updated><link href="/talks/microservices-techblend/index.html" title="Microservices"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2020-08-06T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-I recently joined a Whatsapp group named &amp;quot;Tech Blend&amp;quot;, which conduct
+ਅਗਲਾ ਹੁਕਮ ਹੈ ਸਾਡੇ ਪੀਰ ਦਾ, ਹੱਥ ਲੈ ਲੈਣੀ ਸ਼ਮਸ਼ੀਰ। &lt;/p&gt; </content></entry><entry><title type="text">Microservices</title><id>/talks/microservices-techblend/index.html</id><updated>2020-08-06T00:00:00.000000Z</updated><link href="/talks/microservices-techblend/index.html" title="Microservices"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2020-08-06T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; I recently joined a Whatsapp group named &amp;quot;Tech Blend&amp;quot;, which conduct
 weekly online meetups. Topic for last meetup was &amp;quot;Microservices&amp;quot;, for
 which I volunteered. Since I was working for around 2 years on a
 microservices based project of decent complexity, I thought it would be
-fun to talk about my experience.
-&lt;/p&gt;
-
-&lt;p&gt;
-The meetup was fun. I ran out of time. The meetup is quite well managed.
+fun to talk about my experience. &lt;/p&gt; &lt;p&gt; The meetup was fun. I ran out of time. The meetup is quite well managed.
 Manpreet, the guy who organizes the meetup does a very good job
 respecting everyone's time while managing to have meaningful discussions
 at the same time. Their topics/talks are usually quite shallow, but this
 event management is something I can learn from participating in this
-group.
-&lt;/p&gt;
-
-&lt;p&gt;
-Here are the slides for I created for the meetup. I was holding on to
+group. &lt;/p&gt; &lt;p&gt; Here are the slides for I created for the meetup. I was holding on to
 them hoping I'll create a video, but that's not happening. So I am just
-putting the slides over here.
-&lt;/p&gt;
-
-&lt;p&gt;
-Feel free to hit me up if you need some help regarding microservices, or
-if you need me to explain some slide, or just for a chat.
-&lt;/p&gt;
-
-&lt;iframe src=&quot;//slides.com/bitspook/microservices/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;
-&lt;/iframe&gt;
-</content></entry><base href="/"/></feed>
+putting the slides over here. &lt;/p&gt; &lt;p&gt; Feel free to hit me up if you need some help regarding microservices, or
+if you need me to explain some slide, or just for a chat. &lt;/p&gt; &lt;iframe src=&quot;//slides.com/bitspook/microservices/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt; </content></entry><entry><title type="text">Personal Brands for Software Developers (Talk)</title><id>/talks/personal-brands-for-software-developers-talk/index.html</id><updated>2019-10-21T00:00:00.000000Z</updated><link href="/talks/personal-brands-for-software-developers-talk/index.html" title="Personal Brands for Software Developers (Talk)"/><author type="text">Charanjit Singh</author><category term="talks"/><published>2019-10-21T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; After long diligence, me and my old (Trantor) team decided to organize a meetup
+to showcase our efforts, and to share our ideas with the local community. &lt;a href=&quot;https://www.meetup.com/Chandigarh-Programmers-Club/events/263862634/&quot;&gt;The
+meetup&lt;/a&gt; was organized in Trantor on September 18, 2019. &lt;/p&gt; &lt;p&gt; It was a collaborative talk given in 3 parts be me, Ayush Sharma, and
+Sheenam Narula. Attendance was very low, but that's usually how it is in
+Tricity. Overall it was a fun session with lengthy, and mostly fruitful
+discussions. &lt;/p&gt; &lt;p&gt; Here's my set of slides from the talk: &lt;/p&gt; &lt;iframe src=&quot;//slides.com/bitspook/personal-brands-for-software-developers/embed?style=light&quot; width=&quot;100%&quot; height=&quot;420&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt; </content></entry><base href="https://bitspook.in/"/></feed>

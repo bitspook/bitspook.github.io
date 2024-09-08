@@ -160,8 +160,9 @@
 
       (:raw (journey-content journey))
 
-      (:div#explore
-       (:h2.title "Related activity")
-       ;; (render 'posts-listing-widget :posts nil)
-       ))
-     (render 'footer-w :author author)))))
+      ;; (:div#explore
+      ;;  (:h2.title "Related content")
+      ;;  (render 'posts-listing-widget :posts nil)
+      ;;  )
+      ))
+    (render 'footer-w :author author))))

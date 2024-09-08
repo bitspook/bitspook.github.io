@@ -1,75 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Elisp - </title><id>//tags/elisp/feed.xml</id><updated>2024-05-01T12:10:44.008323Z</updated><link href="//tags/elisp/feed.xml" rel="self" title="Elisp"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>//images/avatar.png</logo><entry><title type="text">Extending org-mode to handle youtube links</title><id>/blog/extending-org-mode-to-handle-youtube-links/index.html</id><updated>2022-09-26T00:00:00.000000Z</updated><link href="/blog/extending-org-mode-to-handle-youtube-links/index.html" title="Extending org-mode to handle youtube links"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;div id=&quot;outline-container-Requirement&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Requirement&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Requirement&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
-browser&lt;/li&gt;
-
-&lt;li&gt;When exporting to HTML, youtube links should become embedded videos instead
-of hyperlinks&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Implementation&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Implementation&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Implementation&quot;&gt;
-&lt;p&gt;
-Org has a concept of 'link types'. We can add a new type of link and have it
-behave the way we want.
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;&lt;p&gt;
-&lt;code&gt;org-link-parameters&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-This variable contains link types and how they behave on follow (i.e when
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">@bitspook's personal website: Elisp - bitspook.in</title><id>https://bitspook.in//tags/elisp/feed.xml</id><updated>2024-09-08T05:00:58.737027Z</updated><link href="https://bitspook.in//tags/elisp/feed.xml" rel="self" title="@bitspook's personal website: Elisp"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in//images/avatar.png</logo><entry><title type="text">Extending org-mode to handle youtube links</title><id>/blog/extending-org-mode-to-handle-youtube-links/index.html</id><updated>2022-09-26T00:00:00.000000Z</updated><link href="/blog/extending-org-mode-to-handle-youtube-links/index.html" title="Extending org-mode to handle youtube links"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;/p&gt; &lt;div id=&quot;outline-container-Requirement&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Requirement&quot;&gt;Requirement&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Requirement&quot;&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
+browser&lt;/li&gt; &lt;li&gt;When exporting to HTML, youtube links should become embedded videos instead
+of hyperlinks&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Implementation&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Implementation&quot;&gt;Implementation&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Implementation&quot;&gt; &lt;p&gt; Org has a concept of 'link types'. We can add a new type of link and have it
+behave the way we want. &lt;/p&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;&lt;p&gt; &lt;code&gt;org-link-parameters&lt;/code&gt; &lt;/p&gt; &lt;p&gt; This variable contains link types and how they behave on follow (i.e when
 someone opens the link with &lt;code&gt;C-c C-o&lt;/code&gt;), export etc. A type of a link is
-determined by the string before first &amp;quot;:&amp;quot; in it. e.g &amp;quot;&lt;a href=&quot;https://bitspook.in&quot;&gt;https://bitspook.in&lt;/a&gt;&amp;quot; has
-&lt;code&gt;https&lt;/code&gt; type, &amp;quot;&lt;a href=&quot;file:///etc&quot;&gt;file:///etc&lt;/a&gt;&amp;quot; has &lt;code&gt;file&lt;/code&gt; type.
-&lt;/p&gt;
-
-&lt;p&gt;
-Items in this list has 2 main components:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;First element is string representing the link type&lt;/li&gt;
-&lt;li&gt;Key-value pairs of behavior name (e.g &lt;code&gt;:follow&lt;/code&gt;, &lt;code&gt;:export&lt;/code&gt;) and
-function which handles that behavior&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-For example:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;((&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;yt&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; spook-org--export-yt-link)
+determined by the string before first &amp;quot;:&amp;quot; in it. e.g &amp;quot;&lt;a href=&quot;https://bitspook.in&quot;&gt;https://bitspook.in&lt;/a&gt;&amp;quot; has &lt;code&gt;https&lt;/code&gt; type, &amp;quot;&lt;a href=&quot;file:///etc&quot;&gt;file:///etc&lt;/a&gt;&amp;quot; has &lt;code&gt;file&lt;/code&gt; type. &lt;/p&gt; &lt;p&gt; Items in this list has 2 main components: &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;First element is string representing the link type&lt;/li&gt; &lt;li&gt;Key-value pairs of behavior name (e.g &lt;code&gt;:follow&lt;/code&gt;, &lt;code&gt;:export&lt;/code&gt;) and
+function which handles that behavior&lt;/li&gt; &lt;/ol&gt; &lt;p&gt; For example: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;((&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;yt&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; spook-org--export-yt-link)
  (&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;eww&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; org-eww-open &lt;span style=&quot;color: #7f7dca;&quot;&gt;:store&lt;/span&gt; org-eww-store-link))
-&lt;/pre&gt;
-&lt;/div&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;code&gt;org-link-set-parameters&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-This function is used to add new link-types (and also to add new behavior to
+&lt;/pre&gt; &lt;/div&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;code&gt;org-link-set-parameters&lt;/code&gt; &lt;/p&gt; &lt;p&gt; This function is used to add new link-types (and also to add new behavior to
 existing ones). You can check the docs for &lt;code&gt;org-link-parameters&lt;/code&gt; (with &lt;code&gt;C-h v
-  org-link-parameters&lt;/code&gt;) to see arguments provided to each type of callback.
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-Here's the code I've added in &lt;a href=&quot;https://github.com/bitspook/spookmax.d&quot;&gt;my emacs config&lt;/a&gt;:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-org--follow-yt-link&lt;/span&gt; (path prefix)
+  org-link-parameters&lt;/code&gt;) to see arguments provided to each type of callback. &lt;/p&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; Here's the code I've added in &lt;a href=&quot;https://github.com/bitspook/spookmax.d&quot;&gt;my emacs config&lt;/a&gt;: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-org--follow-yt-link&lt;/span&gt; (path prefix)
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;let*&lt;/span&gt; ((url (format &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https:%s&amp;quot;&lt;/span&gt; path))
          (proc-name (format &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;*yt://%s*&amp;quot;&lt;/span&gt; url)))
     (&lt;span style=&quot;color: #598bc1;&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color: #598bc1;&quot;&gt;and&lt;/span&gt; prefix (executable-find &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;mpv&amp;quot;&lt;/span&gt;))
@@ -87,142 +26,39 @@ Here's the code I've added in &lt;a href=&quot;https://github.com/bitspook/spook
        url desc))))
 
 (org-link-set-parameters &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;yt&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; #'spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; #'spook-org--export-yt-link)
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-&lt;code&gt;make-process&lt;/code&gt; will create a background buffer named &lt;code&gt;*yt://&amp;lt;url&amp;gt;*&lt;/code&gt; which
-allow monitoring and killing the mpv process.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;i&gt;Update&lt;/i&gt;: Use &lt;code&gt;make-process&lt;/code&gt; instead of &lt;code&gt;async-shell-command&lt;/code&gt; for launching mpv.
-Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgmode_to_handle_youtube_links/iplpk57/&quot;&gt;nv-elisp on /r/emacs&lt;/a&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Result&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Result&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Result&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
-in mpv&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-u C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt; with an prefix argument) on a &lt;code&gt;yt://&lt;/code&gt;
-link opens the video in browser&lt;/li&gt;
-&lt;li&gt;When exported to HTML, all &lt;code&gt;yt://&lt;/code&gt; links file are exported as embedded
-youtube videos&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Bonus%20gains%20%F0%9F%92%AA&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Bonus%20gains%20%F0%9F%92%AA&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Bonus%20gains%20%F0%9F%92%AA&quot;&gt;
-&lt;p&gt;
-Recently I've been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; &lt;code&gt;make-process&lt;/code&gt; will create a background buffer named &lt;code&gt;*yt://&amp;lt;url&amp;gt;*&lt;/code&gt; which
+allow monitoring and killing the mpv process. &lt;/p&gt; &lt;p&gt; &lt;i&gt;Update&lt;/i&gt;: Use &lt;code&gt;make-process&lt;/code&gt; instead of &lt;code&gt;async-shell-command&lt;/code&gt; for launching mpv.
+Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgmode_to_handle_youtube_links/iplpk57/&quot;&gt;nv-elisp on /r/emacs&lt;/a&gt; &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Result&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Result&quot;&gt;Result&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Result&quot;&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
+in mpv&lt;/li&gt; &lt;li&gt;&lt;code&gt;C-u C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt; with an prefix argument) on a &lt;code&gt;yt://&lt;/code&gt; link opens the video in browser&lt;/li&gt; &lt;li&gt;When exported to HTML, all &lt;code&gt;yt://&lt;/code&gt; links file are exported as embedded
+youtube videos&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Bonus%20gains%20%F0%9F%92%AA&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Bonus%20gains%20%F0%9F%92%AA&quot;&gt;Bonus gains 💪&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Bonus%20gains%20%F0%9F%92%AA&quot;&gt; &lt;p&gt; Recently I've been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
 note taking, publishing a subset of my notes will enable maintaining an active
-blog without doing any &amp;quot;work&amp;quot;.
-&lt;/p&gt;
-
-&lt;p&gt;
-I've also been making thickly-accented-awkardly-narrated youtube videos. These
+blog without doing any &amp;quot;work&amp;quot;. &lt;/p&gt; &lt;p&gt; I've also been making thickly-accented-awkardly-narrated youtube videos. These
 are almost always &lt;i&gt;tldr;&lt;/i&gt; videos for my blog posts. So they get embedded in my
-blog posts.
-&lt;/p&gt;
-
-&lt;p&gt;
-'Blog with notes + embed youtube videos' become easier to do with this little
+blog posts. &lt;/p&gt; &lt;p&gt; 'Blog with notes + embed youtube videos' become easier to do with this little
 tinkering. Since &lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt; uses my running Emacs to publish my posts, I don't
 need to make any change in my blogging setup. I can embed my &lt;i&gt;tldr;&lt;/i&gt; videos in
-my blog posts by just prefixing youtube links with &lt;code&gt;yt://&lt;/code&gt; instead of
-&lt;code&gt;https://&lt;/code&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-I am pretty happy that I got zero work blogging-setup, and zero work
-extending-the-blogging-setup as well.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">Using ELisp as an HTML templating engine</title><id>/blog/using-elisp-as-an/index.html</id><updated>2022-04-08T00:00:00.000000Z</updated><link href="/blog/using-elisp-as-an/index.html" title="Using ELisp as an HTML templating engine"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-04-08T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-HTML templating engines like &lt;a href=&quot;https://jinja.palletsprojects.com/en/3.1.x/&quot;&gt;Jinja&lt;/a&gt; or &lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; are commonly used in web
-development for weaving data into HTML.
-&lt;/p&gt;
-
-&lt;p&gt;
-For last couple of days, I've been porting &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;my Hakyll based static-site generator&lt;/a&gt;
-to &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;Emacs Lisp&lt;/a&gt;, for a more fluent thought-publishing workflow. I found myself in
+my blog posts by just prefixing youtube links with &lt;code&gt;yt://&lt;/code&gt; instead of &lt;code&gt;https://&lt;/code&gt;. &lt;/p&gt; &lt;p&gt; I am pretty happy that I got zero work blogging-setup, and zero work
+extending-the-blogging-setup as well. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">Using ELisp as an HTML templating engine</title><id>/blog/using-elisp-as-an/index.html</id><updated>2022-04-08T00:00:00.000000Z</updated><link href="/blog/using-elisp-as-an/index.html" title="Using ELisp as an HTML templating engine"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-04-08T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;/p&gt; &lt;p&gt; HTML templating engines like &lt;a href=&quot;https://jinja.palletsprojects.com/en/3.1.x/&quot;&gt;Jinja&lt;/a&gt; or &lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; are commonly used in web
+development for weaving data into HTML. &lt;/p&gt; &lt;p&gt; For last couple of days, I've been porting &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;my Hakyll based static-site generator&lt;/a&gt; to &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;Emacs Lisp&lt;/a&gt;, for a more fluent thought-publishing workflow. I found myself in
 need of an HTML templating engine so I could convert data about my blog posts
-and notes to HTML.
-&lt;/p&gt;
-
-&lt;p&gt;
-I found that we actually don't need an HTML templating engine to convert ELisp
+and notes to HTML. &lt;/p&gt; &lt;p&gt; I found that we actually don't need an HTML templating engine to convert ELisp
 to HTML. Emacs has built-in capability to work with HTML, we can piggy back on
-that to get a templating engine without adding any new code.
-&lt;/p&gt;
-
-&lt;p&gt;
-We can represent DOM, which is a tree data-structure, as a lisp form
-&lt;/p&gt;
-
-&lt;p&gt;
-Consider following HTML element
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&amp;gt;
+that to get a templating engine without adding any new code. &lt;/p&gt; &lt;p&gt; We can represent DOM, which is a tree data-structure, as a lisp form &lt;/p&gt; &lt;p&gt; Consider following HTML element &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&amp;gt;
   &amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;a&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;href&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;&amp;gt;Google&amp;lt;/&lt;span style=&quot;color: #1d9a79;&quot;&gt;a&lt;/span&gt;&amp;gt;
 &amp;lt;/&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-We can write it as a lisp form like this:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;'(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;))
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; We can write it as a lisp form like this: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;'(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;))
       (a ((href . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;))
          &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;Google&amp;quot;&lt;/span&gt;))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-Note that this is a quoted lisp form. Which means this code isn't actually
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; Note that this is a quoted lisp form. Which means this code isn't actually
 executed, &lt;code&gt;div&lt;/code&gt; or &lt;code&gt;a&lt;/code&gt; aren't lisp functions. We can just put in any symbol
-there, and it is treated as a DOM node.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;shr-dom-to-xml&lt;/code&gt; converts this lisp form to an HTML string:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;))
+there, and it is treated as a DOM node. &lt;/p&gt; &lt;p&gt; &lt;code&gt;shr-dom-to-xml&lt;/code&gt; converts this lisp form to an HTML string: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;))
   (shr-dom-to-xml
    `(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;))
          (a ((href . ,my-url))
             &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;Google&amp;quot;&lt;/span&gt;))))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;pre class=&quot;example&quot;&gt;
+&lt;/pre&gt; &lt;/div&gt; &lt;pre class=&quot;example&quot;&gt;
 &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://google.com&amp;quot;&amp;gt;Google&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-In this example we changed the quote used to showcase how we can run arbitrary
-lisp forms in our DOM to weave data into it.
-&lt;/p&gt;
-
-&lt;p&gt;
-You can check &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;my wip ELisp blogging setup&lt;/a&gt; for more complex examples, and some
-glue code I've written to make using ELisp as HTML templating engine easier.
-&lt;/p&gt;
-</content></entry><base href="/"/></feed>
+&lt;/pre&gt; &lt;p&gt; In this example we changed the quote used to showcase how we can run arbitrary
+lisp forms in our DOM to weave data into it. &lt;/p&gt; &lt;p&gt; You can check &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;my wip ELisp blogging setup&lt;/a&gt; for more complex examples, and some
+glue code I've written to make using ELisp as HTML templating engine easier. &lt;/p&gt; </content></entry><base href="https://bitspook.in/"/></feed>

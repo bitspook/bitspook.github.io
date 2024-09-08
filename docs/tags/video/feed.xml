@@ -1,75 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">Video - </title><id>//tags/video/feed.xml</id><updated>2024-05-01T12:10:43.870041Z</updated><link href="//tags/video/feed.xml" rel="self" title="Video"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>//images/avatar.png</logo><entry><title type="text">Extending org-mode to handle youtube links</title><id>/blog/extending-org-mode-to-handle-youtube-links/index.html</id><updated>2022-09-26T00:00:00.000000Z</updated><link href="/blog/extending-org-mode-to-handle-youtube-links/index.html" title="Extending org-mode to handle youtube links"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-&lt;div id=&quot;outline-container-Requirement&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Requirement&quot;&gt;Requirement&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Requirement&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
-browser&lt;/li&gt;
-
-&lt;li&gt;When exporting to HTML, youtube links should become embedded videos instead
-of hyperlinks&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Implementation&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Implementation&quot;&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Implementation&quot;&gt;
-&lt;p&gt;
-Org has a concept of 'link types'. We can add a new type of link and have it
-behave the way we want.
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;&lt;p&gt;
-&lt;code&gt;org-link-parameters&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-This variable contains link types and how they behave on follow (i.e when
+<?xml version="1.0" encoding="UTF-8"?><feed xlmns="http://www.w3.org/2005/Atom"><title type="text">@bitspook's personal website: Video - bitspook.in</title><id>https://bitspook.in//tags/video/feed.xml</id><updated>2024-09-08T05:00:58.654812Z</updated><link href="https://bitspook.in//tags/video/feed.xml" rel="self" title="@bitspook's personal website: Video"/><author type="text">Charanjit Singh</author><subtitle type="text"></subtitle><logo>https://bitspook.in//images/avatar.png</logo><entry><title type="text">Extending org-mode to handle youtube links</title><id>/blog/extending-org-mode-to-handle-youtube-links/index.html</id><updated>2022-09-26T00:00:00.000000Z</updated><link href="/blog/extending-org-mode-to-handle-youtube-links/index.html" title="Extending org-mode to handle youtube links"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-26T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//youtube.com/embed/eaZUZCzaIgw&quot; title=&quot;nil&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;/p&gt; &lt;div id=&quot;outline-container-Requirement&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Requirement&quot;&gt;Requirement&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Requirement&quot;&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;I want to open youtube links in my notes in &lt;code&gt;mpv&lt;/code&gt; instead of opening the
+browser&lt;/li&gt; &lt;li&gt;When exporting to HTML, youtube links should become embedded videos instead
+of hyperlinks&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Implementation&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Implementation&quot;&gt;Implementation&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Implementation&quot;&gt; &lt;p&gt; Org has a concept of 'link types'. We can add a new type of link and have it
+behave the way we want. &lt;/p&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;&lt;p&gt; &lt;code&gt;org-link-parameters&lt;/code&gt; &lt;/p&gt; &lt;p&gt; This variable contains link types and how they behave on follow (i.e when
 someone opens the link with &lt;code&gt;C-c C-o&lt;/code&gt;), export etc. A type of a link is
-determined by the string before first &amp;quot;:&amp;quot; in it. e.g &amp;quot;&lt;a href=&quot;https://bitspook.in&quot;&gt;https://bitspook.in&lt;/a&gt;&amp;quot; has
-&lt;code&gt;https&lt;/code&gt; type, &amp;quot;&lt;a href=&quot;file:///etc&quot;&gt;file:///etc&lt;/a&gt;&amp;quot; has &lt;code&gt;file&lt;/code&gt; type.
-&lt;/p&gt;
-
-&lt;p&gt;
-Items in this list has 2 main components:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;First element is string representing the link type&lt;/li&gt;
-&lt;li&gt;Key-value pairs of behavior name (e.g &lt;code&gt;:follow&lt;/code&gt;, &lt;code&gt;:export&lt;/code&gt;) and
-function which handles that behavior&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-For example:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;((&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;yt&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; spook-org--export-yt-link)
+determined by the string before first &amp;quot;:&amp;quot; in it. e.g &amp;quot;&lt;a href=&quot;https://bitspook.in&quot;&gt;https://bitspook.in&lt;/a&gt;&amp;quot; has &lt;code&gt;https&lt;/code&gt; type, &amp;quot;&lt;a href=&quot;file:///etc&quot;&gt;file:///etc&lt;/a&gt;&amp;quot; has &lt;code&gt;file&lt;/code&gt; type. &lt;/p&gt; &lt;p&gt; Items in this list has 2 main components: &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;First element is string representing the link type&lt;/li&gt; &lt;li&gt;Key-value pairs of behavior name (e.g &lt;code&gt;:follow&lt;/code&gt;, &lt;code&gt;:export&lt;/code&gt;) and
+function which handles that behavior&lt;/li&gt; &lt;/ol&gt; &lt;p&gt; For example: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;((&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;yt&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; spook-org--export-yt-link)
  (&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;eww&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; org-eww-open &lt;span style=&quot;color: #7f7dca;&quot;&gt;:store&lt;/span&gt; org-eww-store-link))
-&lt;/pre&gt;
-&lt;/div&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;code&gt;org-link-set-parameters&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-This function is used to add new link-types (and also to add new behavior to
+&lt;/pre&gt; &lt;/div&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;code&gt;org-link-set-parameters&lt;/code&gt; &lt;/p&gt; &lt;p&gt; This function is used to add new link-types (and also to add new behavior to
 existing ones). You can check the docs for &lt;code&gt;org-link-parameters&lt;/code&gt; (with &lt;code&gt;C-h v
-  org-link-parameters&lt;/code&gt;) to see arguments provided to each type of callback.
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-Here's the code I've added in &lt;a href=&quot;https://github.com/bitspook/spookmax.d&quot;&gt;my emacs config&lt;/a&gt;:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-org--follow-yt-link&lt;/span&gt; (path prefix)
+  org-link-parameters&lt;/code&gt;) to see arguments provided to each type of callback. &lt;/p&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; Here's the code I've added in &lt;a href=&quot;https://github.com/bitspook/spookmax.d&quot;&gt;my emacs config&lt;/a&gt;: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-org--follow-yt-link&lt;/span&gt; (path prefix)
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;let*&lt;/span&gt; ((url (format &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https:%s&amp;quot;&lt;/span&gt; path))
          (proc-name (format &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;*yt://%s*&amp;quot;&lt;/span&gt; url)))
     (&lt;span style=&quot;color: #598bc1;&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color: #598bc1;&quot;&gt;and&lt;/span&gt; prefix (executable-find &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;mpv&amp;quot;&lt;/span&gt;))
@@ -87,252 +26,60 @@ Here's the code I've added in &lt;a href=&quot;https://github.com/bitspook/spook
        url desc))))
 
 (org-link-set-parameters &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;yt&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #7f7dca;&quot;&gt;:follow&lt;/span&gt; #'spook-org--follow-yt-link &lt;span style=&quot;color: #7f7dca;&quot;&gt;:export&lt;/span&gt; #'spook-org--export-yt-link)
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-&lt;code&gt;make-process&lt;/code&gt; will create a background buffer named &lt;code&gt;*yt://&amp;lt;url&amp;gt;*&lt;/code&gt; which
-allow monitoring and killing the mpv process.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;i&gt;Update&lt;/i&gt;: Use &lt;code&gt;make-process&lt;/code&gt; instead of &lt;code&gt;async-shell-command&lt;/code&gt; for launching mpv.
-Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgmode_to_handle_youtube_links/iplpk57/&quot;&gt;nv-elisp on /r/emacs&lt;/a&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Result&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Result&quot;&gt;Result&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Result&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
-in mpv&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-u C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt; with an prefix argument) on a &lt;code&gt;yt://&lt;/code&gt;
-link opens the video in browser&lt;/li&gt;
-&lt;li&gt;When exported to HTML, all &lt;code&gt;yt://&lt;/code&gt; links file are exported as embedded
-youtube videos&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Bonus%20gains%20%F0%9F%92%AA&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Bonus%20gains%20%F0%9F%92%AA&quot;&gt;Bonus gains 💪&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Bonus%20gains%20%F0%9F%92%AA&quot;&gt;
-&lt;p&gt;
-Recently I've been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; &lt;code&gt;make-process&lt;/code&gt; will create a background buffer named &lt;code&gt;*yt://&amp;lt;url&amp;gt;*&lt;/code&gt; which
+allow monitoring and killing the mpv process. &lt;/p&gt; &lt;p&gt; &lt;i&gt;Update&lt;/i&gt;: Use &lt;code&gt;make-process&lt;/code&gt; instead of &lt;code&gt;async-shell-command&lt;/code&gt; for launching mpv.
+Thanks to &lt;a href=&quot;https://www.reddit.com/r/emacs/comments/xls0ih/extending_orgmode_to_handle_youtube_links/iplpk57/&quot;&gt;nv-elisp on /r/emacs&lt;/a&gt; &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Result&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Result&quot;&gt;Result&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Result&quot;&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt;) on a &lt;code&gt;yt://&lt;/code&gt; link opens the youtube video
+in mpv&lt;/li&gt; &lt;li&gt;&lt;code&gt;C-u C-c C-o&lt;/code&gt; (i.e &lt;code&gt;org-open-at-point&lt;/code&gt; with an prefix argument) on a &lt;code&gt;yt://&lt;/code&gt; link opens the video in browser&lt;/li&gt; &lt;li&gt;When exported to HTML, all &lt;code&gt;yt://&lt;/code&gt; links file are exported as embedded
+youtube videos&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Bonus%20gains%20%F0%9F%92%AA&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Bonus%20gains%20%F0%9F%92%AA&quot;&gt;Bonus gains 💪&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Bonus%20gains%20%F0%9F%92%AA&quot;&gt; &lt;p&gt; Recently I've been building a tool (&lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt;) which to make blogging a
 zero-effort activity for me. Since I have already built a habit of judicious
 note taking, publishing a subset of my notes will enable maintaining an active
-blog without doing any &amp;quot;work&amp;quot;.
-&lt;/p&gt;
-
-&lt;p&gt;
-I've also been making thickly-accented-awkardly-narrated youtube videos. These
+blog without doing any &amp;quot;work&amp;quot;. &lt;/p&gt; &lt;p&gt; I've also been making thickly-accented-awkardly-narrated youtube videos. These
 are almost always &lt;i&gt;tldr;&lt;/i&gt; videos for my blog posts. So they get embedded in my
-blog posts.
-&lt;/p&gt;
-
-&lt;p&gt;
-'Blog with notes + embed youtube videos' become easier to do with this little
+blog posts. &lt;/p&gt; &lt;p&gt; 'Blog with notes + embed youtube videos' become easier to do with this little
 tinkering. Since &lt;a href=&quot;https://github.com/bitspook/cl-ownpress&quot;&gt;cl-ownpress&lt;/a&gt; uses my running Emacs to publish my posts, I don't
 need to make any change in my blogging setup. I can embed my &lt;i&gt;tldr;&lt;/i&gt; videos in
-my blog posts by just prefixing youtube links with &lt;code&gt;yt://&lt;/code&gt; instead of
-&lt;code&gt;https://&lt;/code&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-I am pretty happy that I got zero work blogging-setup, and zero work
-extending-the-blogging-setup as well.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">How I manage my passwords</title><id>/blog/how-i-manage-my-passwords/index.html</id><updated>2022-09-19T00:00:00.000000Z</updated><link href="/blog/how-i-manage-my-passwords/index.html" title="How I manage my passwords"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-19T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;div id=&quot;outline-container-My%20requirements&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;My%20requirements&quot;&gt;My requirements&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-My%20requirements&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;p&gt;
-&lt;b&gt;No third-parties&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-I don't want to put my trust in any third party. Be it Google/Mozilla (via
-saved passwords in browser), or some dedicated password manager like KeyPass.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;b&gt;Simplicity&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-Simple tools are easier to understand and bend to my will. It also means I'll
-be able to intervene when something goes wrong.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;b&gt;Composability&lt;/b&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-I should be able to make the tool a part of my forever changing workflow. It
-should play nice with presence/absence of other tools.
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Tools%20I%20chose&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Tools%20I%20chose&quot;&gt;Tools I chose&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Tools%20I%20chose&quot;&gt;
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;p&gt;
-&lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-I think it is as simple as it gets. A password-store in pass is a git repo
+my blog posts by just prefixing youtube links with &lt;code&gt;yt://&lt;/code&gt; instead of &lt;code&gt;https://&lt;/code&gt;. &lt;/p&gt; &lt;p&gt; I am pretty happy that I got zero work blogging-setup, and zero work
+extending-the-blogging-setup as well. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">How I manage my passwords</title><id>/blog/how-i-manage-my-passwords/index.html</id><updated>2022-09-19T00:00:00.000000Z</updated><link href="/blog/how-i-manage-my-passwords/index.html" title="How I manage my passwords"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-09-19T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/faFJzaAjy0E&quot; title=&quot;tldr; video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;div id=&quot;outline-container-My%20requirements&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;My%20requirements&quot;&gt;My requirements&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-My%20requirements&quot;&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;p&gt; &lt;b&gt;No third-parties&lt;/b&gt; &lt;/p&gt; &lt;p&gt; I don't want to put my trust in any third party. Be it Google/Mozilla (via
+saved passwords in browser), or some dedicated password manager like KeyPass. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;b&gt;Simplicity&lt;/b&gt; &lt;/p&gt; &lt;p&gt; Simple tools are easier to understand and bend to my will. It also means I'll
+be able to intervene when something goes wrong. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;b&gt;Composability&lt;/b&gt; &lt;/p&gt; &lt;p&gt; I should be able to make the tool a part of my forever changing workflow. It
+should play nice with presence/absence of other tools. &lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Tools%20I%20chose&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Tools%20I%20chose&quot;&gt;Tools I chose&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Tools%20I%20chose&quot;&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;p&gt; &lt;a href=&quot;http://www.passwordstore.org/&quot;&gt;Pass&lt;/a&gt; - &lt;i&gt;The simple password manager&lt;/i&gt; &lt;/p&gt; &lt;p&gt; I think it is as simple as it gets. A password-store in pass is a git repo
 (so a directory) which contains gpg encrypted files. Each file represent one
 set of credentials, and can contain all the plain-text, not just password and
-username. E.g I often end up storing recovery codes for accounts in these.
-&lt;/p&gt;
-
-&lt;p&gt;
-There are no third-parties involved, encryption happens on my machine, and I
+username. E.g I often end up storing recovery codes for accounts in these. &lt;/p&gt; &lt;p&gt; There are no third-parties involved, encryption happens on my machine, and I
 can store my password store anywhere I want (e.g a private git repo on
-github).
-&lt;/p&gt;
-
-&lt;p&gt;
-Most pass operations are convenience wrappers on basic operations provided by
+github). &lt;/p&gt; &lt;p&gt; Most pass operations are convenience wrappers on basic operations provided by
 other tools; e.g &lt;code&gt;edit = decrypting a file + open it in an editor +
-   re-encrypting + git-commit&lt;/code&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-Pass has a whole ecosystem of tools written around it, which makes it an easy
+   re-encrypting + git-commit&lt;/code&gt;. &lt;/p&gt; &lt;p&gt; Pass has a whole ecosystem of tools written around it, which makes it an easy
 choice considering how much work it saves me when integrating it in my
-workflow.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;a href=&quot;https://github.com/carnager/rofi-pass&quot;&gt;rofi-pass&lt;/a&gt; - &lt;i&gt;Rofi-based UI for pass for desktop&lt;/i&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;a href=&quot;https://github.com/davatorium/rofi&quot;&gt;Rofi&lt;/a&gt; is a lightweight popup choice-selection UI, which has so far worked
+workflow. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;a href=&quot;https://github.com/carnager/rofi-pass&quot;&gt;rofi-pass&lt;/a&gt; - &lt;i&gt;Rofi-based UI for pass for desktop&lt;/i&gt; &lt;/p&gt; &lt;p&gt; &lt;a href=&quot;https://github.com/davatorium/rofi&quot;&gt;Rofi&lt;/a&gt; is a lightweight popup choice-selection UI, which has so far worked
 out-of-the-box on all window-managers I have used. &lt;i&gt;rofi-pass&lt;/i&gt; extends rofi
-with:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;Ability to search and select credentials stored in pass&lt;/li&gt;
-&lt;li&gt;Auto-fill credentials into any GUI app&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;a href=&quot;https://github.com/bitspook/fireword&quot;&gt;fireword&lt;/a&gt; - &lt;i&gt;Converting easy-to-remember passwords to hard-to-crack ones&lt;/i&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-Not all credentials need to be saved. Occasionally I need to create
-&lt;i&gt;throwaway&lt;/i&gt; accounts, for which I like to keep easy-to-guess (for me)
+with: &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;Ability to search and select credentials stored in pass&lt;/li&gt; &lt;li&gt;Auto-fill credentials into any GUI app&lt;/li&gt; &lt;/ol&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;a href=&quot;https://github.com/bitspook/fireword&quot;&gt;fireword&lt;/a&gt; - &lt;i&gt;Converting easy-to-remember passwords to hard-to-crack ones&lt;/i&gt; &lt;/p&gt; &lt;p&gt; Not all credentials need to be saved. Occasionally I need to create &lt;i&gt;throwaway&lt;/i&gt; accounts, for which I like to keep easy-to-guess (for me)
 passwords. But I want even these password to be opaque (so analyzing them
-wouldn't reveal a theme of my throwaway passwords).
-&lt;/p&gt;
-
-&lt;p&gt;
-Fireword is a small script I wrote many years ago which create insane
+wouldn't reveal a theme of my throwaway passwords). &lt;/p&gt; &lt;p&gt; Fireword is a small script I wrote many years ago which create insane
 passwords from any string. Even a single change of character in a string
 creates wildly different output. So instead of passing a plain easy-to-guess
-password, I give them to fireword and use its output.
-&lt;/p&gt;
-
-&lt;p&gt;
-For example, &lt;code&gt;pass&lt;/code&gt; becomes &lt;code&gt;5B72?[30:F&lt;/code&gt; but &lt;code&gt;passs&lt;/code&gt; is &lt;code&gt;3Ec012aD5(&lt;/code&gt;.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-&lt;a href=&quot;https://github.com/android-password-store/Android-Password-Store#readme&quot;&gt;Android Password Store&lt;/a&gt; - Android app for accessing pass
-&lt;/p&gt;
-
-&lt;p&gt;
-Password store on android allows using the passwords I create/edit on my
+password, I give them to fireword and use its output. &lt;/p&gt; &lt;p&gt; For example, &lt;code&gt;pass&lt;/code&gt; becomes &lt;code&gt;5B72?[30:F&lt;/code&gt; but &lt;code&gt;passs&lt;/code&gt; is &lt;code&gt;3Ec012aD5(&lt;/code&gt;. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; &lt;a href=&quot;https://github.com/android-password-store/Android-Password-Store#readme&quot;&gt;Android Password Store&lt;/a&gt; - Android app for accessing pass &lt;/p&gt; &lt;p&gt; Password store on android allows using the passwords I create/edit on my
 desktop on my mobile and tablet. I use &lt;a href=&quot;https://syncthing.net/&quot;&gt;syncthing&lt;/a&gt; to sync my password store to
-my mobile devices.
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Workflow&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Workflow&quot;&gt;Workflow&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Workflow&quot;&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Add%2Fedit%2Fdelete%20a%20password&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;Add%2Fedit%2Fdelete%20a%20password&quot;&gt;Add/edit/delete a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-Add%2Fedit%2Fdelete%20a%20password&quot;&gt;
-&lt;p&gt;
-For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
+my mobile devices. &lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Workflow&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Workflow&quot;&gt;Workflow&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Workflow&quot;&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Add%2Fedit%2Fdelete%20a%20password&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;Add%2Fedit%2Fdelete%20a%20password&quot;&gt;Add/edit/delete a password&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-Add%2Fedit%2Fdelete%20a%20password&quot;&gt; &lt;p&gt; For all these operations, I use the &lt;code&gt;pass&lt;/code&gt; cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
 for &lt;i&gt;my-acc&lt;/i&gt; account in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm example.com/my-acc&lt;/code&gt;; and
-deleting all accounts in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm -r example.com&lt;/code&gt;.
-&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt;
-  &lt;source src=&quot;/videos/how-i-manage-my-passwords/1--pass-cli.webm&quot; type=&quot;video/webm&quot;&gt;
-&lt;/video&gt;
-
-&lt;p&gt;
-I used to use &lt;code&gt;pass generate&lt;/code&gt; for creating new passwords, which creates cryptic
+deleting all accounts in &lt;i&gt;example.com&lt;/i&gt; is &lt;code&gt;pass rm -r example.com&lt;/code&gt;. &lt;/p&gt; &lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt; &lt;source src=&quot;/videos/how-i-manage-my-passwords/1--pass-cli.webm&quot; type=&quot;video/webm&quot;&gt; &lt;/video&gt; &lt;p&gt; I used to use &lt;code&gt;pass generate&lt;/code&gt; for creating new passwords, which creates cryptic
 hard (impossible?) to crack strings. Over time however, I have come to prefer
 password phrases which are easy to type by hand. I pick 3-4 words that come to
 my mind at a time, and make a loose sentence out of them to create a new
-password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Using%20a%20password&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;Using%20a%20password&quot;&gt;Using a password&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-Using%20a%20password&quot;&gt;
-&lt;p&gt;
-Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
-much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;.
-&lt;/p&gt;
-
-&lt;p&gt;
-It gives me a nice prompt to search and select the credentials I want, and
+password. For example &lt;code&gt;libauvutilcelingfan&lt;/code&gt; &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Using%20a%20password&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;Using%20a%20password&quot;&gt;Using a password&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-Using%20a%20password&quot;&gt; &lt;p&gt; Using &lt;code&gt;pass&lt;/code&gt; CLI for using a password gets tedious quickly. Using a password is
+much more common than adding/editing/deleting one. So I use &lt;i&gt;rofi-pass&lt;/i&gt;. &lt;/p&gt; &lt;p&gt; It gives me a nice prompt to search and select the credentials I want, and
 autofills them. It is smart enough to recognize that credentials are more than
-just a password; so if you edit your password file to look like:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-text&quot;&gt;mypassword
+just a password; so if you edit your password file to look like: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-text&quot;&gt;mypassword
 
 user: myuser
 some-other-key: some-val
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-&lt;i&gt;rofi-pass&lt;/i&gt; will allow you to select the key and auto-type its value. It
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; &lt;i&gt;rofi-pass&lt;/i&gt; will allow you to select the key and auto-type its value. It
 recognizes first line as the password, and a value with &lt;code&gt;user&lt;/code&gt; key to autotype
 both username and password in forms which ask for first username and then
-password (on the same form).
-&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt;
-  &lt;source src=&quot;/videos/how-i-manage-my-passwords/2--using-rofi-pass.webm&quot; type=&quot;video/webm&quot;&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Throwaway%20passwords&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;Throwaway%20passwords&quot;&gt;Throwaway passwords&lt;/h3&gt;
-&lt;div class=&quot;outline-text-3&quot; id=&quot;text-Throwaway%20passwords&quot;&gt;
-&lt;p&gt;
-I don't &amp;quot;install&amp;quot; fireword since it is just a self-contained python script. But
+password (on the same form). &lt;/p&gt; &lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt; &lt;source src=&quot;/videos/how-i-manage-my-passwords/2--using-rofi-pass.webm&quot; type=&quot;video/webm&quot;&gt; &lt;/video&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Throwaway%20passwords&quot; class=&quot;outline-3&quot;&gt; &lt;h3 id=&quot;Throwaway%20passwords&quot;&gt;Throwaway passwords&lt;/h3&gt; &lt;div class=&quot;outline-text-3&quot; id=&quot;text-Throwaway%20passwords&quot;&gt; &lt;p&gt; I don't &amp;quot;install&amp;quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
-(private browsing), I have created a small command in &lt;a href=&quot;https://github.com/bitspook/stumpwm.d&quot;&gt;my stumpwm configuration&lt;/a&gt;
-to make it easy.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-lisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook/fireword-bin&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~/Documents/work/fireword/fireword&amp;quot;&lt;/span&gt;)
+(private browsing), I have created a small command in &lt;a href=&quot;https://github.com/bitspook/stumpwm.d&quot;&gt;my stumpwm configuration&lt;/a&gt; to make it easy. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-lisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook/fireword-bin&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~/Documents/work/fireword/fireword&amp;quot;&lt;/span&gt;)
 
 (defcommand fireword (pass len)
   ((&lt;span style=&quot;color: #7f7dca;&quot;&gt;:password&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;Password: &amp;quot;&lt;/span&gt;)
@@ -340,182 +87,59 @@ to make it easy.
   (run-shell-command (format nil  &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~a ~a ~a | xclip -sel clip&amp;quot;&lt;/span&gt; spook/fireword-bin pass len)))
 
 (&lt;span style=&quot;color: #598bc1;&quot;&gt;define-key&lt;/span&gt; *top-map* (kbd &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;s-P&amp;quot;&lt;/span&gt;) &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;fireword&amp;quot;&lt;/span&gt;)
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-In the end I get a nice prompt on pressing &lt;code&gt;C-P&lt;/code&gt; to enter my password and
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; In the end I get a nice prompt on pressing &lt;code&gt;C-P&lt;/code&gt; to enter my password and
 desired length, get the fireword copied to clipboard which I then paste in a
-private browser window.
-&lt;/p&gt;
-
-&lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt;
-  &lt;source src=&quot;/videos/how-i-manage-my-passwords/3-using-fireword-with-stumpwm.webm&quot; type=&quot;video/webm&quot;&gt;
-&lt;/video&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">Using ELisp as an HTML templating engine</title><id>/blog/using-elisp-as-an/index.html</id><updated>2022-04-08T00:00:00.000000Z</updated><link href="/blog/using-elisp-as-an/index.html" title="Using ELisp as an HTML templating engine"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-04-08T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-HTML templating engines like &lt;a href=&quot;https://jinja.palletsprojects.com/en/3.1.x/&quot;&gt;Jinja&lt;/a&gt; or &lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; are commonly used in web
-development for weaving data into HTML.
-&lt;/p&gt;
-
-&lt;p&gt;
-For last couple of days, I've been porting &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;my Hakyll based static-site generator&lt;/a&gt;
-to &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;Emacs Lisp&lt;/a&gt;, for a more fluent thought-publishing workflow. I found myself in
+private browser window. &lt;/p&gt; &lt;video autoplay=&quot;&quot; loop=&quot;&quot;&gt; &lt;source src=&quot;/videos/how-i-manage-my-passwords/3-using-fireword-with-stumpwm.webm&quot; type=&quot;video/webm&quot;&gt; &lt;/video&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">Using ELisp as an HTML templating engine</title><id>/blog/using-elisp-as-an/index.html</id><updated>2022-04-08T00:00:00.000000Z</updated><link href="/blog/using-elisp-as-an/index.html" title="Using ELisp as an HTML templating engine"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-04-08T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/9Pcv5W1Gnvg&quot; title=&quot;TLDR Video&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;/p&gt; &lt;p&gt; HTML templating engines like &lt;a href=&quot;https://jinja.palletsprojects.com/en/3.1.x/&quot;&gt;Jinja&lt;/a&gt; or &lt;a href=&quot;https://handlebarsjs.com/&quot;&gt;handlebars&lt;/a&gt; are commonly used in web
+development for weaving data into HTML. &lt;/p&gt; &lt;p&gt; For last couple of days, I've been porting &lt;a href=&quot;https://github.com/bitspook/brandi&quot;&gt;my Hakyll based static-site generator&lt;/a&gt; to &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;Emacs Lisp&lt;/a&gt;, for a more fluent thought-publishing workflow. I found myself in
 need of an HTML templating engine so I could convert data about my blog posts
-and notes to HTML.
-&lt;/p&gt;
-
-&lt;p&gt;
-I found that we actually don't need an HTML templating engine to convert ELisp
+and notes to HTML. &lt;/p&gt; &lt;p&gt; I found that we actually don't need an HTML templating engine to convert ELisp
 to HTML. Emacs has built-in capability to work with HTML, we can piggy back on
-that to get a templating engine without adding any new code.
-&lt;/p&gt;
-
-&lt;p&gt;
-We can represent DOM, which is a tree data-structure, as a lisp form
-&lt;/p&gt;
-
-&lt;p&gt;
-Consider following HTML element
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&amp;gt;
+that to get a templating engine without adding any new code. &lt;/p&gt; &lt;p&gt; We can represent DOM, which is a tree data-structure, as a lisp form &lt;/p&gt; &lt;p&gt; Consider following HTML element &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-html&quot;&gt;&amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;class&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&amp;gt;
   &amp;lt;&lt;span style=&quot;color: #1d9a79;&quot;&gt;a&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;href&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;&amp;gt;Google&amp;lt;/&lt;span style=&quot;color: #1d9a79;&quot;&gt;a&lt;/span&gt;&amp;gt;
 &amp;lt;/&lt;span style=&quot;color: #1d9a79;&quot;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-We can write it as a lisp form like this:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;'(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;))
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; We can write it as a lisp form like this: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;'(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;))
       (a ((href . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;))
          &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;Google&amp;quot;&lt;/span&gt;))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-Note that this is a quoted lisp form. Which means this code isn't actually
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; Note that this is a quoted lisp form. Which means this code isn't actually
 executed, &lt;code&gt;div&lt;/code&gt; or &lt;code&gt;a&lt;/code&gt; aren't lisp functions. We can just put in any symbol
-there, and it is treated as a DOM node.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;shr-dom-to-xml&lt;/code&gt; converts this lisp form to an HTML string:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;))
+there, and it is treated as a DOM node. &lt;/p&gt; &lt;p&gt; &lt;code&gt;shr-dom-to-xml&lt;/code&gt; converts this lisp form to an HTML string: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;let&lt;/span&gt; ((my-url &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;https://google.com&amp;quot;&lt;/span&gt;))
   (shr-dom-to-xml
    `(div ((class . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;container&amp;quot;&lt;/span&gt;))
          (a ((href . ,my-url))
             &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;Google&amp;quot;&lt;/span&gt;))))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;pre class=&quot;example&quot;&gt;
+&lt;/pre&gt; &lt;/div&gt; &lt;pre class=&quot;example&quot;&gt;
 &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://google.com&amp;quot;&amp;gt;Google&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-In this example we changed the quote used to showcase how we can run arbitrary
-lisp forms in our DOM to weave data into it.
-&lt;/p&gt;
-
-&lt;p&gt;
-You can check &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;my wip ELisp blogging setup&lt;/a&gt; for more complex examples, and some
-glue code I've written to make using ELisp as HTML templating engine easier.
-&lt;/p&gt;
-</content></entry><entry><title type="text">Using org-mode as an SQL playground</title><id>/blog/using-org-mode-as-an-sql-playground/index.html</id><updated>2022-02-03T00:00:00.000000Z</updated><link href="/blog/using-org-mode-as-an-sql-playground/index.html" title="Using org-mode as an SQL playground"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-02-03T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt;
-Showcase video:
-&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DY7t4T4TmUU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;
-For every web app I work on, a database client is always present for exploring
+&lt;/pre&gt; &lt;p&gt; In this example we changed the quote used to showcase how we can run arbitrary
+lisp forms in our DOM to weave data into it. &lt;/p&gt; &lt;p&gt; You can check &lt;a href=&quot;https://github.com/bitspook/press.el&quot;&gt;my wip ELisp blogging setup&lt;/a&gt; for more complex examples, and some
+glue code I've written to make using ELisp as HTML templating engine easier. &lt;/p&gt; </content></entry><entry><title type="text">Using org-mode as an SQL playground</title><id>/blog/using-org-mode-as-an-sql-playground/index.html</id><updated>2022-02-03T00:00:00.000000Z</updated><link href="/blog/using-org-mode-as-an-sql-playground/index.html" title="Using org-mode as an SQL playground"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-02-03T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;p&gt; Showcase video: &lt;/p&gt; &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DY7t4T4TmUU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;p&gt; For every web app I work on, a database client is always present for exploring
 data and building complex queries. Recently, I have moved on from my PgAdmin to
-org-mode for this purpose, because why not.
-&lt;/p&gt;
-
-&lt;p&gt;
-Org-mode allows executing code snippets and can show results in a nice tabular
+org-mode for this purpose, because why not. &lt;/p&gt; &lt;p&gt; Org-mode allows executing code snippets and can show results in a nice tabular
 form. But org-mode isn't &lt;a href=&quot;https://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-320/Microsoft-Office.html&quot;&gt;written by Microsoft&lt;/a&gt;. So it don't allow arbitrary code
 execution without our explicit consent. To tell org-mode that it is okay to
-execute SQL snippets, we need to run following elisp snippet:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;with-eval-after-load&lt;/span&gt; 'org
+execute SQL snippets, we need to run following elisp snippet: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;with-eval-after-load&lt;/span&gt; 'org
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((sql . t))))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-Org-mode has a number of &lt;a href=&quot;https://www.orgmode.org/worg/org-contrib/babel/languages/ob-doc-sql.html#org7f0941b&quot;&gt;header arguments for SQL blocks&lt;/a&gt; which can be used to
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; Org-mode has a number of &lt;a href=&quot;https://www.orgmode.org/worg/org-contrib/babel/languages/ob-doc-sql.html#org7f0941b&quot;&gt;header arguments for SQL blocks&lt;/a&gt; which can be used to
 configure how a particular SQL source-code snippet is executed. Most important
-ones perhaps are:
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;&lt;code&gt;:engine&lt;/code&gt; which tells which database to run the SQL against&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;:dbhost&lt;/code&gt; to configure the database host, most likely &lt;code&gt;localhost&lt;/code&gt; for a dev
-environment&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;:dbport&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;:dbuser&lt;/code&gt; and &lt;code&gt;:dbpassword&lt;/code&gt; for database authentication&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;:database&lt;/code&gt; for database name&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;
-By default org-mode runs the code snippets in current OS environment. I use this
+ones perhaps are: &lt;/p&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;&lt;code&gt;:engine&lt;/code&gt; which tells which database to run the SQL against&lt;/li&gt; &lt;li&gt;&lt;code&gt;:dbhost&lt;/code&gt; to configure the database host, most likely &lt;code&gt;localhost&lt;/code&gt; for a dev
+environment&lt;/li&gt; &lt;li&gt;&lt;code&gt;:dbport&lt;/code&gt;&lt;/li&gt; &lt;li&gt;&lt;code&gt;:dbuser&lt;/code&gt; and &lt;code&gt;:dbpassword&lt;/code&gt; for database authentication&lt;/li&gt; &lt;li&gt;&lt;code&gt;:database&lt;/code&gt; for database name&lt;/li&gt; &lt;/ul&gt; &lt;p&gt; By default org-mode runs the code snippets in current OS environment. I use this
 fact to get the ability to run SQL against our postgres database without passing
 most of the above arguments. Postgres allows setting &lt;a href=&quot;https://www.postgresql.org/docs/current/libpq-envars.html&quot;&gt;some environment&lt;/a&gt; variables,
 which it then use to for making connections by default. In my &lt;a href=&quot;https://github.com/bitspook/entropy/blob/ae5ee52646c2c67ce713938548d67a722b73a294/flake.nix&quot;&gt;flake.nix&lt;/a&gt; file, I
-setup the required environment variables:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-sh&quot;&gt;&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PWD&lt;/span&gt;/storage/postgres
+setup the required environment variables: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-sh&quot;&gt;&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PWD&lt;/span&gt;/storage/postgres
 &lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;PGDATA&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;/data
 &lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;PGHOST&lt;/span&gt;=$&lt;span style=&quot;color: #b6b635;&quot;&gt;PGDIR&lt;/span&gt;/run
 &lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;PGDATABASE&lt;/span&gt;=entropy
 &lt;span style=&quot;color: #7f7dca;&quot;&gt;export&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;DATABASE_URL&lt;/span&gt;=&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;postgresql:///$PGDATABASE?host=$PGHOST&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;not required by postgres, but will be helpful&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-With this, only header option left to set is &lt;code&gt;:engine&lt;/code&gt;, which I prefer to
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; With this, only header option left to set is &lt;code&gt;:engine&lt;/code&gt;, which I prefer to
 configure globally for my &lt;a href=&quot;https://raw.githubusercontent.com/bitspook/entropy/96cc9c0485d972ed819996d61c3730cafb228660/sql-playground.org&quot;&gt;sql-playground.org&lt;/a&gt; since I usually have one database
 for my personal projects. You can check this &lt;a href=&quot;https://github.com/bitspook/entropy/commit/96cc9c0485d972ed819996d61c3730cafb228660&quot;&gt;commit on Entropy project&lt;/a&gt; for how I
 have setup my sql-playground there. Following snippet on top of the
-sql-playground.org does the trick:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+PROPERTY: header-args:sql  :engine postgres&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-Now any SQL snippets that we create can be executed against our development
+sql-playground.org does the trick: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+PROPERTY: header-args:sql  :engine postgres&lt;/span&gt;
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; Now any SQL snippets that we create can be executed against our development
 database right within the org file. For example, pressing &lt;code&gt;C-c C-c&lt;/code&gt; in following
-SQL block produces output shown below that.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+name: events&lt;/span&gt;
+SQL block produces output shown below that. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+name: events&lt;/span&gt;
 &lt;span style=&quot;color: #858585; font-style: italic; text-decoration: underline;&quot;&gt;#+begin_src sql&lt;/span&gt;
 &lt;span style=&quot;color: #aab0ab;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot;color: #598bc1;&quot;&gt;SELECT&lt;/span&gt;&lt;span style=&quot;color: #aab0ab;&quot;&gt; events.title,&lt;/span&gt;
 &lt;span style=&quot;color: #aab0ab;&quot;&gt;         events.slug,&lt;/span&gt;
@@ -531,131 +155,43 @@ SQL block produces output shown below that.
 &lt;span style=&quot;color: #86b5e8;&quot;&gt;|--------------------+----------------------+---------------------+---------------------+--------+---------|&lt;/span&gt;
 &lt;span style=&quot;color: #86b5e8;&quot;&gt;| Lol bro what       | lol-rofl-lmao        | 2021-11-29 12:30:00 | 2021-11-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
 &lt;span style=&quot;color: #86b5e8;&quot;&gt;| Nested event title | nested-lol-rofl-lmao | 2021-10-29 12:30:00 | 2021-10-29 13:30:00 | local  | 60 mins |&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Utilizing%20LSP&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Utilizing%20LSP&quot;&gt;Utilizing LSP&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Utilizing%20LSP&quot;&gt;
-&lt;p&gt;
-Building SQL queries is my primary use-case, and org-mode configured so far
+&lt;/pre&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Utilizing%20LSP&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Utilizing%20LSP&quot;&gt;Utilizing LSP&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Utilizing%20LSP&quot;&gt; &lt;p&gt; Building SQL queries is my primary use-case, and org-mode configured so far
 serves that purpose. But since I am putting all this effort in writing this blog
 post anyway, I thought let's go a step further and try configuring LSP mode for
 SQL snippets in my org file. To my surprise, it is possible. &lt;a href=&quot;https://github.com/lighttiger2505/sqls/&quot;&gt;SQLS&lt;/a&gt; provides an
 LSP server for SQL files, which once configured can provide certain features
 like auto-completing table and column names. I have created a &lt;a href=&quot;https://github.com/bitspook/entropy/blob/96cc9c0485d972ed819996d61c3730cafb228660/.dir-locals.el&quot;&gt;.dir-locals&lt;/a&gt; file
 for &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html&quot;&gt;adding directory local variables&lt;/a&gt; to configure LSP to connect to correct
-database.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;((nil . ((eval (&lt;span style=&quot;color: #598bc1;&quot;&gt;lambda&lt;/span&gt; ()
+database. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;((nil . ((eval (&lt;span style=&quot;color: #598bc1;&quot;&gt;lambda&lt;/span&gt; ()
                  (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq&lt;/span&gt; lsp-sqls-connections `(((driver . &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;postgresql&amp;quot;&lt;/span&gt;)
                                                (dataSourceName . ,(getenv &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;DATABASE_URL&amp;quot;&lt;/span&gt;))))))))))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-This snippet isn't actually the right way configuring directory local variables,
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; This snippet isn't actually the right way configuring directory local variables,
 becuase it sets &lt;code&gt;lsp-sqls-connections&lt;/code&gt; globally. This is the result of me
 time-boxing the task of evaluating &lt;code&gt;(getenv &amp;quot;DATABASE_URL&amp;quot;)&lt;/code&gt;, so I won't need to
-duplicate my database configuration here.
-&lt;/p&gt;
-
-&lt;p&gt;
-LSP for org-mode also need to provide a file to which it can tangle source
-blocks. So I added another snippet to top of my org file.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+PROPERTY: header-args:sql  :tangle test.sql&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-I can now run &lt;code&gt;lsp-org&lt;/code&gt; in an SQL block, and 8/10 times it has lsp configured
+duplicate my database configuration here. &lt;/p&gt; &lt;p&gt; LSP for org-mode also need to provide a file to which it can tangle source
+blocks. So I added another snippet to top of my org file. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-org&quot;&gt;&lt;span style=&quot;color: #858585; font-style: italic;&quot;&gt;#+PROPERTY: header-args:sql  :tangle test.sql&lt;/span&gt;
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; I can now run &lt;code&gt;lsp-org&lt;/code&gt; in an SQL block, and 8/10 times it has lsp configured
 properly. It isn't flawless though, but that is expected since &lt;a href=&quot;https://emacs-lsp.github.io/lsp-mode/manual-language-docs/lsp-org/#&quot;&gt;lsp support in
-org-snippets&lt;/a&gt; is in alpha stage right now.
-&lt;/p&gt;
-
-&lt;p&gt;
-I also tried setting up lsp support in edit buffer for SQL statements (which you
+org-snippets&lt;/a&gt; is in alpha stage right now. &lt;/p&gt; &lt;p&gt; I also tried setting up lsp support in edit buffer for SQL statements (which you
 get by pressing &lt;code&gt;C-c '&lt;/code&gt; in org src blocks), but because of a &lt;a href=&quot;https://github.com/emacs-lsp/lsp-mode/issues/2525&quot;&gt;bug in lsp-mode&lt;/a&gt;,
-that didn't work out too well.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;org-babel-edit-prep:sql&lt;/span&gt; (babel-info)
+that didn't work out too well. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;org-babel-edit-prep:sql&lt;/span&gt; (babel-info)
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq-local&lt;/span&gt; buffer-file-name (&lt;span style=&quot;color: #598bc1;&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt; babel-info caddr (alist-get &lt;span style=&quot;color: #7f7dca;&quot;&gt;:tangle&lt;/span&gt;)))
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq-local&lt;/span&gt; lsp-buffer-uri (&lt;span style=&quot;color: #598bc1;&quot;&gt;-&amp;gt;&amp;gt;&lt;/span&gt; babel-info caddr (alist-get &lt;span style=&quot;color: #7f7dca;&quot;&gt;:tangle&lt;/span&gt;) lsp--path-to-uri))
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;setq-local&lt;/span&gt; lsp-headerline-breadcrumb-enable nil)
   (lsp))
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Problems%20with%20this%20setup&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Problems%20with%20this%20setup&quot;&gt;Problems with this setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Problems%20with%20this%20setup&quot;&gt;
-&lt;p&gt;
-There are 2 main problems I face during my primary use-case.
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;Org tables don't work well if a column has a lot of data. e.g &lt;code&gt;description&lt;/code&gt;
-of an &lt;code&gt;event&lt;/code&gt; messes up the table real bad. lsp-mode allow executing queries
-which don't suffer from this.&lt;/li&gt;
-&lt;li&gt;No LSP support in edit buffer is a major bummer.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><entry><title type="text">Using org-roam as a CRM</title><id>/blog/using-org-roam-as-a-crm/index.html</id><updated>2022-01-22T00:00:00.000000Z</updated><link href="/blog/using-org-roam-as-a-crm/index.html" title="Using org-roam as a CRM"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-01-22T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;
-&lt;/iframe&gt;
-
-&lt;p&gt;
-org-roam is an Emacs application which makes efficiently capturing and finding
+&lt;/pre&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Problems%20with%20this%20setup&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Problems%20with%20this%20setup&quot;&gt;Problems with this setup&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Problems%20with%20this%20setup&quot;&gt; &lt;p&gt; There are 2 main problems I face during my primary use-case. &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;Org tables don't work well if a column has a lot of data. e.g &lt;code&gt;description&lt;/code&gt; of an &lt;code&gt;event&lt;/code&gt; messes up the table real bad. lsp-mode allow executing queries
+which don't suffer from this.&lt;/li&gt; &lt;li&gt;No LSP support in edit buffer is a major bummer.&lt;/li&gt; &lt;/ol&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><entry><title type="text">Using org-roam as a CRM</title><id>/blog/using-org-roam-as-a-crm/index.html</id><updated>2022-01-22T00:00:00.000000Z</updated><link href="/blog/using-org-roam-as-a-crm/index.html" title="Using org-roam as a CRM"/><author type="text">Charanjit Singh</author><category term="blog"/><published>2022-01-22T00:00:00.000000Z</published><summary type="text"></summary><content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DteN5uBV5ts&quot; title=&quot;TLDR video&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt; &lt;p&gt; org-roam is an Emacs application which makes efficiently capturing and finding
 notes easy. It does so a good job at that, I decided to use it as a makeshift
-personal CRM. With a few lines of Elisp, I get to:
-&lt;/p&gt;
-
-&lt;ol class=&quot;org-ol&quot;&gt;
-&lt;li&gt;&lt;p&gt;
-Take notes about people and events. I usually capture their contact
+personal CRM. With a few lines of Elisp, I get to: &lt;/p&gt; &lt;ol class=&quot;org-ol&quot;&gt; &lt;li&gt;&lt;p&gt; Take notes about people and events. I usually capture their contact
 information, important dates, how they made me feel during our interactions.
 Documenting meetings and calls has proven to be very helpful on more than one
-occasion.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;SPC P f&lt;/code&gt; to very quickly find or create a person/event.
-&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;
-Link events and people to build a graph of relationships, which provide
+occasion. &lt;/p&gt; &lt;p&gt; &lt;code&gt;SPC P f&lt;/code&gt; to very quickly find or create a person/event. &lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt; Link events and people to build a graph of relationships, which provide
 context and help me remember our meetings vividly. It is valuable for me
 because it save me from anxiety about forgetting people and things I discuss
-with them.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;code&gt;SPC P i&lt;/code&gt; to insert link to a person/event in an org file (mostly my diary).
-&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;
-I have similar keybindings for taking (&lt;code&gt;SPC n f&lt;/code&gt;) and inserting notes (&lt;code&gt;SPC n
+with them. &lt;/p&gt; &lt;p&gt; &lt;code&gt;SPC P i&lt;/code&gt; to insert link to a person/event in an org file (mostly my diary). &lt;/p&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt; I have similar keybindings for taking (&lt;code&gt;SPC n f&lt;/code&gt;) and inserting notes (&lt;code&gt;SPC n
 i&lt;/code&gt;), so it builds into a nice theme for easy-to-remember keybindings and
-consistent UI.
-&lt;/p&gt;
-&lt;div id=&quot;outline-container-Setup&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Setup&quot;&gt;Setup&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Setup&quot;&gt;
-&lt;p&gt;
-Elisp I use org-roam as a CRM, while keeping &amp;quot;normal&amp;quot; org-roam available for
-taking notes.
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~/Documents/org/people&amp;quot;&lt;/span&gt;
+consistent UI. &lt;/p&gt; &lt;div id=&quot;outline-container-Setup&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Setup&quot;&gt;Setup&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Setup&quot;&gt; &lt;p&gt; Elisp I use org-roam as a CRM, while keeping &amp;quot;normal&amp;quot; org-roam available for
+taking notes. &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(&lt;span style=&quot;color: #598bc1;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #b6b635;&quot;&gt;spook--org-roam-crm-dir&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;~/Documents/org/people&amp;quot;&lt;/span&gt;
   &lt;span style=&quot;color: #987654;&quot;&gt;&amp;quot;Directory where org-roam notes related to people are kept.&amp;quot;&lt;/span&gt;)
 
 (&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook--with-org-roam-crm&lt;/span&gt; (func &lt;span style=&quot;color: #d65946;&quot;&gt;&amp;amp;rest&lt;/span&gt; args)
@@ -675,70 +211,21 @@ taking notes.
 (&lt;span style=&quot;color: #598bc1;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #1d9a79;&quot;&gt;spook-crm--insert-person&lt;/span&gt; ()
   (&lt;span style=&quot;color: #598bc1;&quot;&gt;interactive&lt;/span&gt;)
   (spook--with-org-roam-crm #'org-roam-node-insert))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-Setup keybindings for calling &lt;code&gt;spook-crm--find-person&lt;/code&gt; to quickly search for
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; Setup keybindings for calling &lt;code&gt;spook-crm--find-person&lt;/code&gt; to quickly search for
 (and/or add) a person or event, and &lt;code&gt;spook-crm--insert-person&lt;/code&gt; to add a link to
 a person or event in any org-mode buffer. I frequently use it when adding
-meeting notes and in my diary.
-&lt;/p&gt;
-
-&lt;p&gt;
-Here's how I add the keybindings:
-&lt;/p&gt;
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-&lt;pre class=&quot;src src-elisp&quot;&gt;(spook-defkeymap
+meeting notes and in my diary. &lt;/p&gt; &lt;p&gt; Here's how I add the keybindings: &lt;/p&gt; &lt;div class=&quot;org-src-container&quot;&gt; &lt;pre class=&quot;src src-elisp&quot;&gt;(spook-defkeymap
  &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;spook-people&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;C-c P&amp;quot;&lt;/span&gt;
  '(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;f&amp;quot;&lt;/span&gt; . spook-crm--find-person)
  '(&lt;span style=&quot;color: #6aaf50;&quot;&gt;&amp;quot;i&amp;quot;&lt;/span&gt; . spook-crm--insert-person))
-&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;
-You can find source of my very naive &lt;code&gt;spook-defkeymap&lt;/code&gt; macro in my &lt;a href=&quot;https://github.com/bitspook/spookmax.d/blob/master/readme.org#helper-utilities&quot;&gt;Emacs
-configuration&lt;/a&gt;. In addition to this, I assign the &lt;code&gt;spook-people&lt;/code&gt; keymap to my
-&lt;a href=&quot;https://github.com/meow-edit/meow/&quot;&gt;meow&lt;/a&gt; leader key, means I can press &lt;code&gt;SPC P f&lt;/code&gt; to find a person/event, and &lt;code&gt;SPC P
-i&lt;/code&gt; to insert a link to a person/event.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Does%20it%20solve%20everything%3F&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Does%20it%20solve%20everything%3F&quot;&gt;Does it solve everything?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Does%20it%20solve%20everything%3F&quot;&gt;
-&lt;p&gt;
-No. But it is the quickest solution which achieves satisfactory result and free
+&lt;/pre&gt; &lt;/div&gt; &lt;p&gt; You can find source of my very naive &lt;code&gt;spook-defkeymap&lt;/code&gt; macro in my &lt;a href=&quot;https://github.com/bitspook/spookmax.d/blob/master/readme.org#helper-utilities&quot;&gt;Emacs
+configuration&lt;/a&gt;. In addition to this, I assign the &lt;code&gt;spook-people&lt;/code&gt; keymap to my &lt;a href=&quot;https://github.com/meow-edit/meow/&quot;&gt;meow&lt;/a&gt; leader key, means I can press &lt;code&gt;SPC P f&lt;/code&gt; to find a person/event, and &lt;code&gt;SPC P
+i&lt;/code&gt; to insert a link to a person/event. &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Does%20it%20solve%20everything%3F&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Does%20it%20solve%20everything%3F&quot;&gt;Does it solve everything?&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Does%20it%20solve%20everything%3F&quot;&gt; &lt;p&gt; No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
 sometimes, and there are a bunch of things I might like but don't need right
-now. e.g
-&lt;/p&gt;
-
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;More structured way of capturing specific kind of information. e.g contact
-details. Structure of data kept in org files is upto me, which works for now&lt;/li&gt;
-&lt;li&gt;Searching by something which isn't title or tags. This is solved by doing grep
-over&lt;/li&gt;
-&lt;li&gt;Visualize the people and events I participate in. &lt;a href=&quot;https://github.com/org-roam/org-roam-ui&quot;&gt;org-roam-ui&lt;/a&gt; didn't work on
-first shot.&lt;/li&gt;
-&lt;li&gt;Contacts/details on the go i.e a mobile app&lt;/li&gt;
-&lt;li&gt;Psychoanalyze people I meet; building, tracking and concluding experiments.
-But it is perhaps too much to ask without making effort&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-Why%20am%20I%20sharing%20this%3F&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;Why%20am%20I%20sharing%20this%3F&quot;&gt;Why am I sharing this?&lt;/h2&gt;
-&lt;div class=&quot;outline-text-2&quot; id=&quot;text-Why%20am%20I%20sharing%20this%3F&quot;&gt;
-&lt;ul class=&quot;org-ul&quot;&gt;
-&lt;li&gt;To bounce ideas off of internet&lt;/li&gt;
-&lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt;
-&lt;li&gt;Hoping someone will solve some problems with this snippet, build on it until I
-come around to do it myself&lt;/li&gt;
-&lt;li&gt;To spread the cult of Emacs/org-mode (my precious-es)&lt;/li&gt;
-&lt;li&gt;To have some activity on my blog. It is too quiet here&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content></entry><base href="/"/></feed>
+now. e.g &lt;/p&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;More structured way of capturing specific kind of information. e.g contact
+details. Structure of data kept in org files is upto me, which works for now&lt;/li&gt; &lt;li&gt;Searching by something which isn't title or tags. This is solved by doing grep
+over&lt;/li&gt; &lt;li&gt;Visualize the people and events I participate in. &lt;a href=&quot;https://github.com/org-roam/org-roam-ui&quot;&gt;org-roam-ui&lt;/a&gt; didn't work on
+first shot.&lt;/li&gt; &lt;li&gt;Contacts/details on the go i.e a mobile app&lt;/li&gt; &lt;li&gt;Psychoanalyze people I meet; building, tracking and concluding experiments.
+But it is perhaps too much to ask without making effort&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;outline-container-Why%20am%20I%20sharing%20this%3F&quot; class=&quot;outline-2&quot;&gt; &lt;h2 id=&quot;Why%20am%20I%20sharing%20this%3F&quot;&gt;Why am I sharing this?&lt;/h2&gt; &lt;div class=&quot;outline-text-2&quot; id=&quot;text-Why%20am%20I%20sharing%20this%3F&quot;&gt; &lt;ul class=&quot;org-ul&quot;&gt; &lt;li&gt;To bounce ideas off of internet&lt;/li&gt; &lt;li&gt;Hoping someone will point me in a better direction if there is one&lt;/li&gt; &lt;li&gt;Hoping someone will solve some problems with this snippet, build on it until I
+come around to do it myself&lt;/li&gt; &lt;li&gt;To spread the cult of Emacs/org-mode (my precious-es)&lt;/li&gt; &lt;li&gt;To have some activity on my blog. It is too quiet here&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; </content></entry><base href="https://bitspook.in/"/></feed>

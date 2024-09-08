@@ -1,57 +1,21 @@
-<html lang=en><head><meta charset=UTF-8><title>Using org-roam as a CRM</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=/css/post.css><link rel=alternate type=application/atom+xml href=/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Using org-roam as a CRM</h1><div class=meta><time class="meta-item date">January 22, 2022</time><ul class="meta-item tags"><li class=tag><a href=/tags/org-roam>#org-roam</a><li class=tag><a href=/tags/org-mode>#org-mode</a><li class=tag><a href=/tags/workflow>#workflow</a><li class=tag><a href=/tags/emacs>#emacs</a><li class=tag><a href=/tags/video>#video</a></ul></div></header><main class=post-body><iframe width="560" height="315" src="https://www.youtube.com/embed/DteN5uBV5ts" title="TLDR video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
-
-<p>
-org-roam is an Emacs application which makes efficiently capturing and finding
+<html lang=en><head><meta charset=UTF-8><title>Using org-roam as a CRM</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=https://bitspook.in/css/post.css><link rel=alternate type=application/atom+xml href=https://bitspook.in/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Using org-roam as a CRM</h1><div class=meta><time class="meta-item date">January 22, 2022</time><ul class="meta-item tags"><li class=tag><a href=https://bitspook.in/tags/org-roam>#org-roam</a><li class=tag><a href=https://bitspook.in/tags/org-mode>#org-mode</a><li class=tag><a href=https://bitspook.in/tags/workflow>#workflow</a><li class=tag><a href=https://bitspook.in/tags/emacs>#emacs</a><li class=tag><a href=https://bitspook.in/tags/video>#video</a></ul></div></header><main class=post-body><iframe width="560" height="315" src="https://www.youtube.com/embed/DteN5uBV5ts" title="TLDR video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""> </iframe> <p> org-roam is an Emacs application which makes efficiently capturing and finding
 notes easy. It does so a good job at that, I decided to use it as a makeshift
-personal CRM. With a few lines of Elisp, I get to:
-</p>
-
-<ol class="org-ol">
-<li><p>
-Take notes about people and events. I usually capture their contact
+personal CRM. With a few lines of Elisp, I get to: </p> <ol class="org-ol"> <li><p> Take notes about people and events. I usually capture their contact
 information, important dates, how they made me feel during our interactions.
 Documenting meetings and calls has proven to be very helpful on more than one
-occasion.
-</p>
-
-<p>
-<code>SPC P f</code> to very quickly find or create a person/event.
-</p></li>
-
-<li><p>
-Link events and people to build a graph of relationships, which provide
+occasion. </p> <p> <code>SPC P f</code> to very quickly find or create a person/event. </p></li> <li><p> Link events and people to build a graph of relationships, which provide
 context and help me remember our meetings vividly. It is valuable for me
 because it save me from anxiety about forgetting people and things I discuss
-with them.
-</p>
-
-<p>
-<code>SPC P i</code> to insert link to a person/event in an org file (mostly my diary).
-</p></li>
-</ol>
-
-<p>
-I have similar keybindings for taking (<code>SPC n f</code>) and inserting notes (<code>SPC n
+with them. </p> <p> <code>SPC P i</code> to insert link to a person/event in an org file (mostly my diary). </p></li> </ol> <p> I have similar keybindings for taking (<code>SPC n f</code>) and inserting notes (<code>SPC n
 i</code>), so it builds into a nice theme for easy-to-remember keybindings and
-consistent UI.
-</p>
-<div id="outline-container-Setup" class="outline-2">
-<h2 id="Setup">Setup</h2>
-<div class="outline-text-2" id="text-Setup">
-<p>
-Elisp I use org-roam as a CRM, while keeping "normal" org-roam available for
-taking notes.
-</p>
-
-<div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #598bc1;">defvar</span> <span style="color: #b6b635;">spook--org-roam-crm-dir</span> <span style="color: #6aaf50;">"~/Documents/org/people"</span>
-  <span style="color: #987654;">"Directory where org-roam notes related to people are kept."</span>)
+consistent UI. </p> <div id="outline-container-Setup" class="outline-2"> <h2 id="Setup">Setup</h2> <div class="outline-text-2" id="text-Setup"> <p> Elisp I use org-roam as a CRM, while keeping &quot;normal&quot; org-roam available for
+taking notes. </p> <div class="org-src-container"> <pre class="src src-elisp">(<span style="color: #598bc1;">defvar</span> <span style="color: #b6b635;">spook--org-roam-crm-dir</span> <span style="color: #6aaf50;">&quot;~/Documents/org/people&quot;</span>
+  <span style="color: #987654;">&quot;Directory where org-roam notes related to people are kept.&quot;</span>)
 
 (<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">spook--with-org-roam-crm</span> (func <span style="color: #d65946;">&amp;rest</span> args)
-  <span style="color: #987654;">"Evaluate FUNC with ARGS org-roam set for working as CRM."</span>
+  <span style="color: #987654;">&quot;Evaluate FUNC with ARGS org-roam set for working as CRM.&quot;</span>
   (<span style="color: #598bc1;">let*</span> ((org-roam-directory spook--org-roam-crm-dir)
-         (org-roam-db-location (concat org-roam-directory <span style="color: #6aaf50;">"/roam.db"</span>)))
+         (org-roam-db-location (concat org-roam-directory <span style="color: #6aaf50;">&quot;/roam.db&quot;</span>)))
     (apply func args)))
 
 (<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">spook-crm--db-sync</span> ()
@@ -65,70 +29,21 @@ taking notes.
 (<span style="color: #598bc1;">defun</span> <span style="color: #1d9a79;">spook-crm--insert-person</span> ()
   (<span style="color: #598bc1;">interactive</span>)
   (spook--with-org-roam-crm #'org-roam-node-insert))
-</pre>
-</div>
-
-<p>
-Setup keybindings for calling <code>spook-crm--find-person</code> to quickly search for
+</pre> </div> <p> Setup keybindings for calling <code>spook-crm--find-person</code> to quickly search for
 (and/or add) a person or event, and <code>spook-crm--insert-person</code> to add a link to
 a person or event in any org-mode buffer. I frequently use it when adding
-meeting notes and in my diary.
-</p>
-
-<p>
-Here's how I add the keybindings:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-elisp">(spook-defkeymap
- <span style="color: #6aaf50;">"spook-people"</span> <span style="color: #6aaf50;">"C-c P"</span>
- '(<span style="color: #6aaf50;">"f"</span> . spook-crm--find-person)
- '(<span style="color: #6aaf50;">"i"</span> . spook-crm--insert-person))
-</pre>
-</div>
-
-<p>
-You can find source of my very naive <code>spook-defkeymap</code> macro in my <a href="https://github.com/bitspook/spookmax.d/blob/master/readme.org#helper-utilities">Emacs
-configuration</a>. In addition to this, I assign the <code>spook-people</code> keymap to my
-<a href="https://github.com/meow-edit/meow/">meow</a> leader key, means I can press <code>SPC P f</code> to find a person/event, and <code>SPC P
-i</code> to insert a link to a person/event.
-</p>
-</div>
-</div>
-<div id="outline-container-Does%20it%20solve%20everything%3F" class="outline-2">
-<h2 id="Does%20it%20solve%20everything%3F">Does it solve everything?</h2>
-<div class="outline-text-2" id="text-Does%20it%20solve%20everything%3F">
-<p>
-No. But it is the quickest solution which achieves satisfactory result and free
+meeting notes and in my diary. </p> <p> Here's how I add the keybindings: </p> <div class="org-src-container"> <pre class="src src-elisp">(spook-defkeymap
+ <span style="color: #6aaf50;">&quot;spook-people&quot;</span> <span style="color: #6aaf50;">&quot;C-c P&quot;</span>
+ '(<span style="color: #6aaf50;">&quot;f&quot;</span> . spook-crm--find-person)
+ '(<span style="color: #6aaf50;">&quot;i&quot;</span> . spook-crm--insert-person))
+</pre> </div> <p> You can find source of my very naive <code>spook-defkeymap</code> macro in my <a href="https://github.com/bitspook/spookmax.d/blob/master/readme.org#helper-utilities">Emacs
+configuration</a>. In addition to this, I assign the <code>spook-people</code> keymap to my <a href="https://github.com/meow-edit/meow/">meow</a> leader key, means I can press <code>SPC P f</code> to find a person/event, and <code>SPC P
+i</code> to insert a link to a person/event. </p> </div> </div> <div id="outline-container-Does%20it%20solve%20everything%3F" class="outline-2"> <h2 id="Does%20it%20solve%20everything%3F">Does it solve everything?</h2> <div class="outline-text-2" id="text-Does%20it%20solve%20everything%3F"> <p> No. But it is the quickest solution which achieves satisfactory result and free
 me up to focus on other things. I feel org-roam itself to be over-engineered
 sometimes, and there are a bunch of things I might like but don't need right
-now. e.g
-</p>
-
-<ul class="org-ul">
-<li>More structured way of capturing specific kind of information. e.g contact
-details. Structure of data kept in org files is upto me, which works for now</li>
-<li>Searching by something which isn't title or tags. This is solved by doing grep
-over</li>
-<li>Visualize the people and events I participate in. <a href="https://github.com/org-roam/org-roam-ui">org-roam-ui</a> didn't work on
-first shot.</li>
-<li>Contacts/details on the go i.e a mobile app</li>
-<li>Psychoanalyze people I meet; building, tracking and concluding experiments.
-But it is perhaps too much to ask without making effort</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-Why%20am%20I%20sharing%20this%3F" class="outline-2">
-<h2 id="Why%20am%20I%20sharing%20this%3F">Why am I sharing this?</h2>
-<div class="outline-text-2" id="text-Why%20am%20I%20sharing%20this%3F">
-<ul class="org-ul">
-<li>To bounce ideas off of internet</li>
-<li>Hoping someone will point me in a better direction if there is one</li>
-<li>Hoping someone will solve some problems with this snippet, build on it until I
-come around to do it myself</li>
-<li>To spread the cult of Emacs/org-mode (my precious-es)</li>
-<li>To have some activity on my blog. It is too quiet here</li>
-</ul>
-</div>
-</div>
-</main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>
+now. e.g </p> <ul class="org-ul"> <li>More structured way of capturing specific kind of information. e.g contact
+details. Structure of data kept in org files is upto me, which works for now</li> <li>Searching by something which isn't title or tags. This is solved by doing grep
+over</li> <li>Visualize the people and events I participate in. <a href="https://github.com/org-roam/org-roam-ui">org-roam-ui</a> didn't work on
+first shot.</li> <li>Contacts/details on the go i.e a mobile app</li> <li>Psychoanalyze people I meet; building, tracking and concluding experiments.
+But it is perhaps too much to ask without making effort</li> </ul> </div> </div> <div id="outline-container-Why%20am%20I%20sharing%20this%3F" class="outline-2"> <h2 id="Why%20am%20I%20sharing%20this%3F">Why am I sharing this?</h2> <div class="outline-text-2" id="text-Why%20am%20I%20sharing%20this%3F"> <ul class="org-ul"> <li>To bounce ideas off of internet</li> <li>Hoping someone will point me in a better direction if there is one</li> <li>Hoping someone will solve some problems with this snippet, build on it until I
+come around to do it myself</li> <li>To spread the cult of Emacs/org-mode (my precious-es)</li> <li>To have some activity on my blog. It is too quiet here</li> </ul> </div> </div> </main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=https://bitspook.in/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>

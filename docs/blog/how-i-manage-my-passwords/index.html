@@ -1,212 +1,51 @@
-<html lang=en><head><meta charset=UTF-8><title>How I manage my passwords</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=/css/post.css><link rel=alternate type=application/atom+xml href=/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>How I manage my passwords</h1><div class=meta><time class="meta-item date">September 19, 2022</time><ul class="meta-item tags"><li class=tag><a href=/tags/workflow>#workflow</a><li class=tag><a href=/tags/video>#video</a></ul></div></header><main class=post-body><iframe width="560" height="315" src="https://www.youtube.com/embed/faFJzaAjy0E" title="tldr; video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<div id="outline-container-My%20requirements" class="outline-2">
-<h2 id="My%20requirements">My requirements</h2>
-<div class="outline-text-2" id="text-My%20requirements">
-<ol class="org-ol">
-<li><p>
-<b>No third-parties</b>
-</p>
-
-<p>
-I don't want to put my trust in any third party. Be it Google/Mozilla (via
-saved passwords in browser), or some dedicated password manager like KeyPass.
-</p></li>
-
-<li><p>
-<b>Simplicity</b>
-</p>
-
-<p>
-Simple tools are easier to understand and bend to my will. It also means I'll
-be able to intervene when something goes wrong.
-</p></li>
-
-<li><p>
-<b>Composability</b>
-</p>
-
-<p>
-I should be able to make the tool a part of my forever changing workflow. It
-should play nice with presence/absence of other tools.
-</p></li>
-</ol>
-</div>
-</div>
-<div id="outline-container-Tools%20I%20chose" class="outline-2">
-<h2 id="Tools%20I%20chose">Tools I chose</h2>
-<div class="outline-text-2" id="text-Tools%20I%20chose">
-<ol class="org-ol">
-<li><p>
-<a href="http://www.passwordstore.org/">Pass</a> - <i>The simple password manager</i>
-</p>
-
-<p>
-I think it is as simple as it gets. A password-store in pass is a git repo
+<html lang=en><head><meta charset=UTF-8><title>How I manage my passwords</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=https://bitspook.in/css/post.css><link rel=alternate type=application/atom+xml href=https://bitspook.in/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>How I manage my passwords</h1><div class=meta><time class="meta-item date">September 19, 2022</time><ul class="meta-item tags"><li class=tag><a href=https://bitspook.in/tags/workflow>#workflow</a><li class=tag><a href=https://bitspook.in/tags/video>#video</a></ul></div></header><main class=post-body><iframe width="560" height="315" src="https://www.youtube.com/embed/faFJzaAjy0E" title="tldr; video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> <div id="outline-container-My%20requirements" class="outline-2"> <h2 id="My%20requirements">My requirements</h2> <div class="outline-text-2" id="text-My%20requirements"> <ol class="org-ol"> <li><p> <b>No third-parties</b> </p> <p> I don't want to put my trust in any third party. Be it Google/Mozilla (via
+saved passwords in browser), or some dedicated password manager like KeyPass. </p></li> <li><p> <b>Simplicity</b> </p> <p> Simple tools are easier to understand and bend to my will. It also means I'll
+be able to intervene when something goes wrong. </p></li> <li><p> <b>Composability</b> </p> <p> I should be able to make the tool a part of my forever changing workflow. It
+should play nice with presence/absence of other tools. </p></li> </ol> </div> </div> <div id="outline-container-Tools%20I%20chose" class="outline-2"> <h2 id="Tools%20I%20chose">Tools I chose</h2> <div class="outline-text-2" id="text-Tools%20I%20chose"> <ol class="org-ol"> <li><p> <a href="http://www.passwordstore.org/">Pass</a> - <i>The simple password manager</i> </p> <p> I think it is as simple as it gets. A password-store in pass is a git repo
 (so a directory) which contains gpg encrypted files. Each file represent one
 set of credentials, and can contain all the plain-text, not just password and
-username. E.g I often end up storing recovery codes for accounts in these.
-</p>
-
-<p>
-There are no third-parties involved, encryption happens on my machine, and I
+username. E.g I often end up storing recovery codes for accounts in these. </p> <p> There are no third-parties involved, encryption happens on my machine, and I
 can store my password store anywhere I want (e.g a private git repo on
-github).
-</p>
-
-<p>
-Most pass operations are convenience wrappers on basic operations provided by
+github). </p> <p> Most pass operations are convenience wrappers on basic operations provided by
 other tools; e.g <code>edit = decrypting a file + open it in an editor +
-   re-encrypting + git-commit</code>.
-</p>
-
-<p>
-Pass has a whole ecosystem of tools written around it, which makes it an easy
+   re-encrypting + git-commit</code>. </p> <p> Pass has a whole ecosystem of tools written around it, which makes it an easy
 choice considering how much work it saves me when integrating it in my
-workflow.
-</p></li>
-
-<li><p>
-<a href="https://github.com/carnager/rofi-pass">rofi-pass</a> - <i>Rofi-based UI for pass for desktop</i>
-</p>
-
-<p>
-<a href="https://github.com/davatorium/rofi">Rofi</a> is a lightweight popup choice-selection UI, which has so far worked
+workflow. </p></li> <li><p> <a href="https://github.com/carnager/rofi-pass">rofi-pass</a> - <i>Rofi-based UI for pass for desktop</i> </p> <p> <a href="https://github.com/davatorium/rofi">Rofi</a> is a lightweight popup choice-selection UI, which has so far worked
 out-of-the-box on all window-managers I have used. <i>rofi-pass</i> extends rofi
-with:
-</p>
-
-<ol class="org-ol">
-<li>Ability to search and select credentials stored in pass</li>
-<li>Auto-fill credentials into any GUI app</li>
-</ol></li>
-
-<li><p>
-<a href="https://github.com/bitspook/fireword">fireword</a> - <i>Converting easy-to-remember passwords to hard-to-crack ones</i>
-</p>
-
-<p>
-Not all credentials need to be saved. Occasionally I need to create
-<i>throwaway</i> accounts, for which I like to keep easy-to-guess (for me)
+with: </p> <ol class="org-ol"> <li>Ability to search and select credentials stored in pass</li> <li>Auto-fill credentials into any GUI app</li> </ol></li> <li><p> <a href="https://github.com/bitspook/fireword">fireword</a> - <i>Converting easy-to-remember passwords to hard-to-crack ones</i> </p> <p> Not all credentials need to be saved. Occasionally I need to create <i>throwaway</i> accounts, for which I like to keep easy-to-guess (for me)
 passwords. But I want even these password to be opaque (so analyzing them
-wouldn't reveal a theme of my throwaway passwords).
-</p>
-
-<p>
-Fireword is a small script I wrote many years ago which create insane
+wouldn't reveal a theme of my throwaway passwords). </p> <p> Fireword is a small script I wrote many years ago which create insane
 passwords from any string. Even a single change of character in a string
 creates wildly different output. So instead of passing a plain easy-to-guess
-password, I give them to fireword and use its output.
-</p>
-
-<p>
-For example, <code>pass</code> becomes <code>5B72?[30:F</code> but <code>passs</code> is <code>3Ec012aD5(</code>.
-</p></li>
-
-<li><p>
-<a href="https://github.com/android-password-store/Android-Password-Store#readme">Android Password Store</a> - Android app for accessing pass
-</p>
-
-<p>
-Password store on android allows using the passwords I create/edit on my
+password, I give them to fireword and use its output. </p> <p> For example, <code>pass</code> becomes <code>5B72?[30:F</code> but <code>passs</code> is <code>3Ec012aD5(</code>. </p></li> <li><p> <a href="https://github.com/android-password-store/Android-Password-Store#readme">Android Password Store</a> - Android app for accessing pass </p> <p> Password store on android allows using the passwords I create/edit on my
 desktop on my mobile and tablet. I use <a href="https://syncthing.net/">syncthing</a> to sync my password store to
-my mobile devices.
-</p></li>
-</ol>
-</div>
-</div>
-<div id="outline-container-Workflow" class="outline-2">
-<h2 id="Workflow">Workflow</h2>
-<div class="outline-text-2" id="text-Workflow">
-</div>
-<div id="outline-container-Add%2Fedit%2Fdelete%20a%20password" class="outline-3">
-<h3 id="Add%2Fedit%2Fdelete%20a%20password">Add/edit/delete a password</h3>
-<div class="outline-text-3" id="text-Add%2Fedit%2Fdelete%20a%20password">
-<p>
-For all these operations, I use the <code>pass</code> cli. It is simple and intuitive, and
+my mobile devices. </p></li> </ol> </div> </div> <div id="outline-container-Workflow" class="outline-2"> <h2 id="Workflow">Workflow</h2> <div class="outline-text-2" id="text-Workflow"> </div> <div id="outline-container-Add%2Fedit%2Fdelete%20a%20password" class="outline-3"> <h3 id="Add%2Fedit%2Fdelete%20a%20password">Add/edit/delete a password</h3> <div class="outline-text-3" id="text-Add%2Fedit%2Fdelete%20a%20password"> <p> For all these operations, I use the <code>pass</code> cli. It is simple and intuitive, and
 mostly just delegates to other Linux utilities. For example, deleting a password
 for <i>my-acc</i> account in <i>example.com</i> is <code>pass rm example.com/my-acc</code>; and
-deleting all accounts in <i>example.com</i> is <code>pass rm -r example.com</code>.
-</p>
-
-<video autoplay loop>
-  <source src="/videos/how-i-manage-my-passwords/1--pass-cli.webm" type="video/webm">
-</video>
-
-<p>
-I used to use <code>pass generate</code> for creating new passwords, which creates cryptic
+deleting all accounts in <i>example.com</i> is <code>pass rm -r example.com</code>. </p> <video autoplay="" loop=""> <source src="/videos/how-i-manage-my-passwords/1--pass-cli.webm" type="video/webm"> </video> <p> I used to use <code>pass generate</code> for creating new passwords, which creates cryptic
 hard (impossible?) to crack strings. Over time however, I have come to prefer
 password phrases which are easy to type by hand. I pick 3-4 words that come to
 my mind at a time, and make a loose sentence out of them to create a new
-password. For example <code>libauvutilcelingfan</code>
-</p>
-</div>
-</div>
-<div id="outline-container-Using%20a%20password" class="outline-3">
-<h3 id="Using%20a%20password">Using a password</h3>
-<div class="outline-text-3" id="text-Using%20a%20password">
-<p>
-Using <code>pass</code> CLI for using a password gets tedious quickly. Using a password is
-much more common than adding/editing/deleting one. So I use <i>rofi-pass</i>.
-</p>
-
-<p>
-It gives me a nice prompt to search and select the credentials I want, and
+password. For example <code>libauvutilcelingfan</code> </p> </div> </div> <div id="outline-container-Using%20a%20password" class="outline-3"> <h3 id="Using%20a%20password">Using a password</h3> <div class="outline-text-3" id="text-Using%20a%20password"> <p> Using <code>pass</code> CLI for using a password gets tedious quickly. Using a password is
+much more common than adding/editing/deleting one. So I use <i>rofi-pass</i>. </p> <p> It gives me a nice prompt to search and select the credentials I want, and
 autofills them. It is smart enough to recognize that credentials are more than
-just a password; so if you edit your password file to look like:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-text">mypassword
+just a password; so if you edit your password file to look like: </p> <div class="org-src-container"> <pre class="src src-text">mypassword
 
 user: myuser
 some-other-key: some-val
-</pre>
-</div>
-
-<p>
-<i>rofi-pass</i> will allow you to select the key and auto-type its value. It
+</pre> </div> <p> <i>rofi-pass</i> will allow you to select the key and auto-type its value. It
 recognizes first line as the password, and a value with <code>user</code> key to autotype
 both username and password in forms which ask for first username and then
-password (on the same form).
-</p>
-
-<video autoplay loop>
-  <source src="/videos/how-i-manage-my-passwords/2--using-rofi-pass.webm" type="video/webm">
-</video>
-</div>
-</div>
-<div id="outline-container-Throwaway%20passwords" class="outline-3">
-<h3 id="Throwaway%20passwords">Throwaway passwords</h3>
-<div class="outline-text-3" id="text-Throwaway%20passwords">
-<p>
-I don't "install" fireword since it is just a self-contained python script. But
+password (on the same form). </p> <video autoplay="" loop=""> <source src="/videos/how-i-manage-my-passwords/2--using-rofi-pass.webm" type="video/webm"> </video> </div> </div> <div id="outline-container-Throwaway%20passwords" class="outline-3"> <h3 id="Throwaway%20passwords">Throwaway passwords</h3> <div class="outline-text-3" id="text-Throwaway%20passwords"> <p> I don't &quot;install&quot; fireword since it is just a self-contained python script. But
 because throwaway passwords, although temporary, tend to be entered frequently
-(private browsing), I have created a small command in <a href="https://github.com/bitspook/stumpwm.d">my stumpwm configuration</a>
-to make it easy.
-</p>
-
-<div class="org-src-container">
-<pre class="src src-lisp">(<span style="color: #598bc1;">defvar</span> <span style="color: #b6b635;">spook/fireword-bin</span> <span style="color: #6aaf50;">"~/Documents/work/fireword/fireword"</span>)
+(private browsing), I have created a small command in <a href="https://github.com/bitspook/stumpwm.d">my stumpwm configuration</a> to make it easy. </p> <div class="org-src-container"> <pre class="src src-lisp">(<span style="color: #598bc1;">defvar</span> <span style="color: #b6b635;">spook/fireword-bin</span> <span style="color: #6aaf50;">&quot;~/Documents/work/fireword/fireword&quot;</span>)
 
 (defcommand fireword (pass len)
-  ((<span style="color: #7f7dca;">:password</span> <span style="color: #6aaf50;">"Password: "</span>)
-   (<span style="color: #7f7dca;">:password</span> <span style="color: #6aaf50;">"Length: "</span>))
-  (run-shell-command (format nil  <span style="color: #6aaf50;">"~a ~a ~a | xclip -sel clip"</span> spook/fireword-bin pass len)))
+  ((<span style="color: #7f7dca;">:password</span> <span style="color: #6aaf50;">&quot;Password: &quot;</span>)
+   (<span style="color: #7f7dca;">:password</span> <span style="color: #6aaf50;">&quot;Length: &quot;</span>))
+  (run-shell-command (format nil  <span style="color: #6aaf50;">&quot;~a ~a ~a | xclip -sel clip&quot;</span> spook/fireword-bin pass len)))
 
-(<span style="color: #598bc1;">define-key</span> *top-map* (kbd <span style="color: #6aaf50;">"s-P"</span>) <span style="color: #6aaf50;">"fireword"</span>)
-</pre>
-</div>
-
-<p>
-In the end I get a nice prompt on pressing <code>C-P</code> to enter my password and
+(<span style="color: #598bc1;">define-key</span> *top-map* (kbd <span style="color: #6aaf50;">&quot;s-P&quot;</span>) <span style="color: #6aaf50;">&quot;fireword&quot;</span>)
+</pre> </div> <p> In the end I get a nice prompt on pressing <code>C-P</code> to enter my password and
 desired length, get the fireword copied to clipboard which I then paste in a
-private browser window.
-</p>
-
-<video autoplay loop>
-  <source src="/videos/how-i-manage-my-passwords/3-using-fireword-with-stumpwm.webm" type="video/webm">
-</video>
-</div>
-</div>
-</div>
-</main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>
+private browser window. </p> <video autoplay="" loop=""> <source src="/videos/how-i-manage-my-passwords/3-using-fireword-with-stumpwm.webm" type="video/webm"> </video> </div> </div> </div> </main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=https://bitspook.in/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>

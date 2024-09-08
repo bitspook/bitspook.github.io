@@ -10,7 +10,7 @@
 (load-all-content)
 
 (defun build ()
-  (let* ((www (path-join *base-dir* "build/"))
+  (let* ((www (path-join *base-dir* "docs/"))
          (static (path-join *base-dir* "src/static/"))
          (*print-pretty* nil))
 

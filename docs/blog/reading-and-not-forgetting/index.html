@@ -1,157 +1,34 @@
-<html lang=en><head><meta charset=UTF-8><title>Reading, and not forgetting</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=/css/post.css><link rel=alternate type=application/atom+xml href=/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Reading, and not forgetting</h1><div class=meta><time class="meta-item date">January 15, 2023</time><ul class="meta-item tags"><li class=tag><a href=/tags/workflow>#workflow</a></ul></div></header><main class=post-body><div id="outline-container-Problem" class="outline-2">
-<h2 id="Problem">Problem</h2>
-<div class="outline-text-2" id="text-Problem">
-<p>
-I forget everything I read, as soon as I am done reading (a sentence). Over
+<html lang=en><head><meta charset=UTF-8><title>Reading, and not forgetting</title><meta name=viewport content="width=device-width, initial-scale=1"><link rel=stylesheet href=https://bitspook.in/css/post.css><link rel=alternate type=application/atom+xml href=https://bitspook.in/archive/feed.xml><script src=/js/app.js></script></head><body><div><nav class=top-nav><div class=brand><a href="/"><img class=brand-avatar src=/images/avatar.png alt=Brand></a></div><ul class=nav><li><a href="/">Home</a><li><a href=/blog>Blog</a><li><a href=/projects>Projects</a><li><a href=/about>About me</a></ul></nav><article class=content><header class=header><h1>Reading, and not forgetting</h1><div class=meta><time class="meta-item date">January 15, 2023</time><ul class="meta-item tags"><li class=tag><a href=https://bitspook.in/tags/workflow>#workflow</a></ul></div></header><main class=post-body><div id="outline-container-Problem" class="outline-2"> <h2 id="Problem">Problem</h2> <div class="outline-text-2" id="text-Problem"> <p> I forget everything I read, as soon as I am done reading (a sentence). Over
 time, reading turned from leisure to labor. Pressure of having to remember
 things took the fun out of reading. Small attention span and easily getting
-distracted made it even worse.
-</p>
-</div>
-</div>
-<div id="outline-container-Solution" class="outline-2">
-<h2 id="Solution">Solution</h2>
-<div class="outline-text-2" id="text-Solution">
-<p>
-Take notes to outsource remembering, and make reading more engaging.
-</p>
-
-<p>
-Creating well-organized notes take the burden of remembering away. The act of
-taking notes keep my attention tethered.
-</p>
-</div>
-</div>
-<div id="outline-container-Implementation" class="outline-2">
-<h2 id="Implementation">Implementation</h2>
-<div class="outline-text-2" id="text-Implementation">
-<p>
-Note taking process need to be designed to reduce the burden that note-taking
+distracted made it even worse. </p> </div> </div> <div id="outline-container-Solution" class="outline-2"> <h2 id="Solution">Solution</h2> <div class="outline-text-2" id="text-Solution"> <p> Take notes to outsource remembering, and make reading more engaging. </p> <p> Creating well-organized notes take the burden of remembering away. The act of
+taking notes keep my attention tethered. </p> </div> </div> <div id="outline-container-Implementation" class="outline-2"> <h2 id="Implementation">Implementation</h2> <div class="outline-text-2" id="text-Implementation"> <p> Note taking process need to be designed to reduce the burden that note-taking
 itself can become. Key here is not taking notes, it is crafting a smooth
-note-taking workflow.
-</p>
-</div>
-<div id="outline-container-Components" class="outline-3">
-<h3 id="Components">Components</h3>
-<div class="outline-text-3" id="text-Components">
-<p>
-My reading workflow involves 3 major components
-</p>
-
-<ol class="org-ol">
-<li>Emacs</li>
-<li>Denote, an Emacs package for managing notes</li>
-<li>Spookfox: An Emacs package for controlling Firefox from Emacs</li>
-</ol>
-</div>
-<div id="outline-container-Emacs" class="outline-4">
-<h4 id="Emacs">Emacs</h4>
-<div class="outline-text-4" id="text-Emacs">
-<p>
-Emacs is the center stage on which everything else plays. I chose Emacs, because
-</p>
-<ol class="org-ol">
-<li>It is where I spend most time on my computer</li>
-<li>I am very comfortable hacking on it, so tuning things to make my workflow
-smoother is an already acquired habit.</li>
-<li>I already have a thriving documenting system/workflow in Emacs. I have to
+note-taking workflow. </p> </div> <div id="outline-container-Components" class="outline-3"> <h3 id="Components">Components</h3> <div class="outline-text-3" id="text-Components"> <p> My reading workflow involves 3 major components </p> <ol class="org-ol"> <li>Emacs</li> <li>Denote, an Emacs package for managing notes</li> <li>Spookfox: An Emacs package for controlling Firefox from Emacs</li> </ol> </div> <div id="outline-container-Emacs" class="outline-4"> <h4 id="Emacs">Emacs</h4> <div class="outline-text-4" id="text-Emacs"> <p> Emacs is the center stage on which everything else plays. I chose Emacs, because </p> <ol class="org-ol"> <li>It is where I spend most time on my computer</li> <li>I am very comfortable hacking on it, so tuning things to make my workflow
+smoother is an already acquired habit.</li> <li>I already have a thriving documenting system/workflow in Emacs. I have to
 externalize a lot of my mind, for which I've been using Emacs for over a
-decade now.</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-Denote" class="outline-4">
-<h4 id="Denote">Denote</h4>
-<div class="outline-text-4" id="text-Denote">
-<p>
-<a href="https://github.com/protesilaos/denote">Denote</a> is my present choice of note-taking Emacs package. It provide structure
-to my notes, and thin tooling to navigate this structure. Notes are kept in
-<code>&lt;timestamp&gt;-&lt;slug&gt;__&lt;tags&gt;.org</code> format. This makes it easy to find a note by
-keywords and tags even from outside Emacs.
-</p>
-</div>
-</div>
-<div id="outline-container-Spookfox" class="outline-4">
-<h4 id="Spookfox">Spookfox</h4>
-<div class="outline-text-4" id="text-Spookfox">
-<p>
-<a href="https://github.com/bitspook/spookfox">Spookfox</a> is my answer to "but what about when you need to leave Emacs?".
-</p>
-
-<p>
-I consume most of the educational content on the web, that usually means
+decade now.</li> </ol> </div> </div> <div id="outline-container-Denote" class="outline-4"> <h4 id="Denote">Denote</h4> <div class="outline-text-4" id="text-Denote"> <p> <a href="https://github.com/protesilaos/denote">Denote</a> is my present choice of note-taking Emacs package. It provide structure
+to my notes, and thin tooling to navigate this structure. Notes are kept in <code>&lt;timestamp&gt;-&lt;slug&gt;__&lt;tags&gt;.org</code> format. This makes it easy to find a note by
+keywords and tags even from outside Emacs. </p> </div> </div> <div id="outline-container-Spookfox" class="outline-4"> <h4 id="Spookfox">Spookfox</h4> <div class="outline-text-4" id="text-Spookfox"> <p> <a href="https://github.com/bitspook/spookfox">Spookfox</a> is my answer to &quot;but what about when you need to leave Emacs?&quot;. </p> <p> I consume most of the educational content on the web, that usually means
 Firefox. I built myself a small system (Spookfox) to make Emacs speak with
-Firefox.
-</p>
-
-<p>
-It is sort of a launch-pad for quickly creating Firefox addons which talk to
+Firefox. </p> <p> It is sort of a launch-pad for quickly creating Firefox addons which talk to
 Emacs. Most commonly I use it for accessing content I have in browser, e.g
-getting information about current browser tab, video being played etc.
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-The%20workflow" class="outline-3">
-<h3 id="The%20workflow">The workflow</h3>
-<div class="outline-text-3" id="text-The%20workflow">
-<p>
-It boils down to a single key-combo: <code>C-c n r</code> open a "reading note" in my
+getting information about current browser tab, video being played etc. </p> </div> </div> </div> <div id="outline-container-The%20workflow" class="outline-3"> <h3 id="The%20workflow">The workflow</h3> <div class="outline-text-3" id="text-The%20workflow"> <p> It boils down to a single key-combo: <code>C-c n r</code> open a &quot;reading note&quot; in my
 scratchpad. <code>C-c n r</code> opens the same note regardless of when I open it; i.e it
 don't re-create a new note every time. This is super useful when you are blessed
-with the combo of laziness and forgetfulness.
-</p>
-
-<p>
-Scratchpad is a mechanism for quickly launching an Emacs window for capturing
+with the combo of laziness and forgetfulness. </p> <p> Scratchpad is a mechanism for quickly launching an Emacs window for capturing
 some information. This usually means bringing an Emacs window to focus with a
-keypress.
-</p>
-
-<p>
-A reading note is a note which has
-</p>
-<ol class="org-ol">
-<li><code>reading</code> tag</li>
-<li>A <code>source</code> property, which is 95% of the times the web URL (from Firefox)</li>
-<li><p>
-<code>reading</code> subdirectory in my notes
-</p>
-
-<p>
-It seems redundant given that there is already a <code>reading</code> tag, but I keep it
+keypress. </p> <p> A reading note is a note which has </p> <ol class="org-ol"> <li><code>reading</code> tag</li> <li>A <code>source</code> property, which is 95% of the times the web URL (from Firefox)</li> <li><p> <code>reading</code> subdirectory in my notes </p> <p> It seems redundant given that there is already a <code>reading</code> tag, but I keep it
 not for categorizing the notes but to keep them out of my normal
-notes-search.
-</p></li>
-</ol>
-
-<p>
-My "normal" notes are conceptual, they come from different sources and are
+notes-search. </p></li> </ol> <p> My &quot;normal&quot; notes are conceptual, they come from different sources and are
 essence of my understanding from different sources. My reading notes <b>are</b> these
-sources.
-</p>
-
-<p>
-"Reading" notes free me up to not worry about the structure of the notes I am
-taking or its impact on other notes. After taking the "reading" notes, I review
-them and move appropriate parts (or summary/rephrase) them in my "normal"
-note(s), while linking back to the reading note.
-</p>
-
-<p>
-This create a neat web of sources and concepts. I get to be free from the burden
+sources. </p> <p> &quot;Reading&quot; notes free me up to not worry about the structure of the notes I am
+taking or its impact on other notes. After taking the &quot;reading&quot; notes, I review
+them and move appropriate parts (or summary/rephrase) them in my &quot;normal&quot;
+note(s), while linking back to the reading note. </p> <p> This create a neat web of sources and concepts. I get to be free from the burden
 of keeping track of where the knowledge in my notes is coming from. When I need
 to track something back to its source, I get nice hand-drafted summary of the
-original source.
-</p>
-
-<p>
-With Spookfox I extend this workflow to (Youtube) videos as well. In addition to
+original source. </p> <p> With Spookfox I extend this workflow to (Youtube) videos as well. In addition to
 automatically opening the note, I have <a href="https://github.com/bitspook/spookmax.d/blame/7f5f0fbde3777662d2d2fb2baefc18a71c012855/readme.org#L1528-L1610">Emacs configured to insert video
 timestamps with my notes</a>. This essentially annotate Youtube videos, and have
-come super handy recently in my German language study.
-</p>
-</div>
-</div>
-</div>
-</main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>
+come super handy recently in my German language study. </p> </div> </div> </div> </main></article><footer class="footer postamble"><div id=mc_embed_signup><form class=validate action="https://bitspook.us14.list-manage.com/subscribe/post?u=de25614414d7e23ac4c3ea700&amp;id=b8b47d5b6e" method=post id=subscribe-form name=subscribe-form target=_blank><div id=mc_embed_signup_scroll><h2 class=newsletter-title>Follow blog via email</h2><div class=mc-field-group><input class="required email newsletter-email" type=email value="" placeholder="Email Address" name=EMAIL id=mce-EMAIL></div><div style="position: absolute; left: -5000px;" aria-hidden=true><input type=text name=b_de25614414d7e23ac4c3ea700_b8b47d5b6e tabindex=-1 value=""></div><div class="clear foot" id=mce-responses><div class=response id=mce-error-response style="display: none"></div><div class=response id=mce-success-response style="display: none"></div></div><div class=optionalParent><div class="clear foot"><input class=btn type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe></div></div></div></form></div><p class=rss-sub><a href=https://bitspook.in/archive/feed.xml title="Follow via RSS" target=blank><span class=rss></span>Follow via RSS</a><div class=author>Author: Charanjit Singh <a class="handle github" title="Follow Charanjit Singh via Github" href=https://github.com/bitspook></a><a class="handle mastodon" title="Follow Charanjit Singh via Mastodon" href=https://infosec.exchange/@bitspook></a><a class="handle linkedin" title="Follow Charanjit Singh via LinkedIn" href="https://www.linkedin.com/in/bitspook/"></a><a class="handle rss" title="Follow Charanjit Singh via RSS" href=/archive/feed.xml></a></div></footer></div></body></html>
