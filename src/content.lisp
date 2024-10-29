@@ -4,6 +4,17 @@
 (defparameter *local-blog-posts* nil)
 (defparameter *projects* nil)
 
+(defparameter *published-tag* "published"
+  "Only content which has this tag should be published.")
+
+(defparameter *control-tags* (list *published-tag*)
+  "List of tags which are meant for controlling the publishing flow and should themselves never be
+published.")
+
+(defun publish-tag-p (tag)
+  "Return `t' if TAG should be published."
+  (not (find *control-tags* tag :test #'equal)))
+
 ;; Author
 (defparameter *author*
   (make 'persona
@@ -89,8 +100,10 @@
          (projects (mapcar
                     (op (from _ 'software-project :author *author*))
                     (provide-all project-provider (path-join *base-dir* "projects/"))))
-         (project-pages (mapcar (op (from _ 'html-page-artifact :location "/projects"))
-                                projects)))
+         (project-pages (remove-if-not
+                         (op (find *published-tag* (artifact-tags _) :test #'equal))
+                         (mapcar (op (from _ 'html-page-artifact :location "/projects"))
+                                 projects))))
     (dolist (page project-pages)
       (registry-add-artifact *registry* page))))
 ;; ---
@@ -128,9 +141,10 @@
   (when-let* ((index (@ (registry-indices *registry*) 'tagged))
               (tags (hash-table-keys index)))
     (dolist (tag tags)
-      (add-listing-page
-       'tag (str:capitalize tag) (format nil "/tags/~a" tag)
-       (get-sorted-posts (registry-query *registry* 'tagged :id tag))))))
+      (when (publish-tag-p tag)
+        (add-listing-page
+         'tag (str:capitalize tag) (format nil "/tags/~a" tag)
+         (get-sorted-posts (registry-query *registry* 'tagged :id tag)))))))
 
 (defun load-category-listings ()
   (when-let* ((index (@ (registry-indices *registry*) 'categorized))
