@@ -54,6 +54,23 @@ published as a listing page.")
   (or (find "blog-post" (note-tags note) :test #'equal)
       (find "blogpost" (note-tags note) :test #'equal)))
 
+(defun publishable-note (note)
+  "Convert NOTE to a publish-able HTML-PAGE-ARTIFACT. e.g notes which are blog-posts are converted to
+blog-posts."
+  (cond
+    ((blog-note-p note) (from (from note 'blog-post)
+                              'html-page-artifact :location "/"))
+    (t (from note 'html-page-artifact :location "/notes"))))
+
+(defun load-denote-post (id)
+  "Load a single denote with ID as blog post. It loads "
+  (multiple-value-bind (notes deps)
+      (provide-all (make 'denote-provider) :ids (list id))
+    (mapcar #'publishable-note (append notes deps))
+    ;; (dolist (post (mapcar #'publishable-note (append notes deps)))
+    ;;   (registry-add-artifact *registry* post))
+    ))
+
 (defun load-denote-posts ()
   (let ((provider (make 'denote-provider)))
     (setf *denotes*
@@ -62,13 +79,9 @@ published as a listing page.")
            (apply #'safe-union (multiple-value-list (provide-all provider :tags '("blog-post"))))
            (apply #'safe-union (multiple-value-list (provide-all provider :tags '("blogpost")))))))
 
-  (loop :for note :in *denotes*
-        :do (registry-add-artifact
-             *registry*
-             (cond
-              ((blog-note-p note) (from (from note 'blog-post)
-                                        'html-page-artifact :location "/"))
-              (t (from note 'html-page-artifact :location "/notes"))))))
+  (mapcar
+   (op (registry-add-artifact *registry* (publishable-note _)))
+   *denotes*))
 
 (defun journey-p (journey)
   (eq 'journey (class-name-of journey)))
