@@ -31,23 +31,16 @@
 
 (defparameter *site-title* "@bitspook's personal website")
 
-(defparameter *blacklisted-tags* '("draft" "micro")
-  "Artifact with these tags will not get published.")
-
-(defparameter *unpublished-tags* (append *blacklisted-tags* '("blog-post" "blogpost"))
-  "These tags will not get published.")
-
 (defgeneric artifact-tags (artifact)
   (:method ((artifact artifact)) nil))
 
 (defmethod embed-artifact-as ((artifact html-page-artifact) (as (eql 'link)) &key)
-  (unless (draft-p artifact)
+  (unless (unpublished-p artifact)
     (call-next-method artifact 'link)))
 
-(defun build (env)
-  "Build the complete website for ENV. ENV can be `dev' or `prod'."
-  (let* ((*build-env* env)
-         (www (path-join *base-dir* "build/"))
+(defun build ()
+  "Build the complete website for *BUILD-ENV*"
+  (let* ((www (path-join *base-dir* "build/"))
          (static (path-join *base-dir* "src/static/"))
          (*print-pretty* (eq *build-env* 'dev))
          (*base-url* (if (eq *build-env* 'prod)

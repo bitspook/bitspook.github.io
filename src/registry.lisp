@@ -3,6 +3,20 @@
 ;; Registry
 (defparameter *registry* (make 'artifact-registry))
 
+;; Utils
+(defun chronological-posts (artifacts)
+  (sort (remove-if-not (op (eq (class-name-of _1) 'blog-post-page)) artifacts)
+        (lambda (a b)
+          (local-time:timestamp>
+           (post-published-at a) (post-published-at b)))))
+
+;; Blog posts
+(defmethod registry-query ((reg artifact-registry)
+                           (key (eql 'blog-posts))
+                           &key)
+  (remove-unpublished (chronological-posts (hash-table-values (registry-store *registry*)))))
+
+;; By tag
 (registry-add-index *registry* 'tagged)
 (defmethod registry-on-index-artifact ((reg artifact-registry)
                                        (post blog-post-page)
@@ -13,8 +27,11 @@
                            (key (eql 'tagged))
                            &key id)
   (let ((ids (@ (registry-indices reg) 'tagged id)))
-    (mapcar (op (@ (registry-store reg) _)) ids)))
+    (remove-unpublished
+     (chronological-posts
+      (mapcar (op (@ (registry-store reg) _)) ids)))))
 
+;; By category
 (registry-add-index *registry* 'categorized)
 (defmethod registry-on-index-artifact ((reg artifact-registry)
                                        (post blog-post-page)
@@ -25,7 +42,9 @@
                            (key (eql 'categorized))
                            &key id)
   (let ((ids (@ (registry-indices reg) 'categorized id)))
-    (mapcar (op (@ (registry-store reg) _)) ids)))
+    (remove-unpublished
+     (chronological-posts
+      (mapcar (op (@ (registry-store reg) _)) ids)))))
 
 ;; Projects
 (defmethod registry-on-index-artifact ((reg artifact-registry)

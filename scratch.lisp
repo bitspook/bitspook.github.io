@@ -9,12 +9,13 @@
 
 (load-all-content)
 
-(defun rebuild ()
-  (load-projects)
-  (load-listing-pages)
-  (build 'dev))
+(defun rebuild (env)
+  (let ((*build-env* env))
+    ;; (load-projects)
+    (load-listing-pages)
+    (build)))
 
-(rebuild)
+(rebuild 'prod)
 ;; quick hack to auto-build
 ;; elisp
 ;; (defun build-website (successp notes buffer loadp)

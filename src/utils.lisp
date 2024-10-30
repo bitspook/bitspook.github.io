@@ -43,21 +43,6 @@ of ITEMs as value."
         (embed-artifact-as artifact 'link)
         (warn "Failed to find artifact [query=~a]" query))))
 
-(defun draft-p (artifact)
-  (not (some (op (find _ *blacklisted-tags* :test #'equal))
-             (artifact-tags artifact))))
-
-(defun remove-drafts (artifacts)
-  (remove-if (op (draft-p _1)) artifacts))
-
-(defun get-sorted-posts (artifacts)
-  (sort (remove-if-not (op (and (eq (class-name-of _1) 'blog-post-page)
-                                (publish-artifact-p _1)))
-                       artifacts)
-        (lambda (a b)
-          (local-time:timestamp>
-           (post-published-at a) (post-published-at b)))))
-
 (defun safe-union (&rest lists)
   "Like UNION, but doesn't soil its pants if number of LISTS is not exactly 2."
   (when (null lists) (return-from safe-union nil))

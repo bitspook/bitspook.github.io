@@ -4,16 +4,39 @@
 (defparameter *local-blog-posts* nil)
 (defparameter *projects* nil)
 
-(defparameter *published-tag* "published"
-  "Only content which has this tag should be published.")
+(defparameter *published-tags* '("published" "blog-post" "blogpost" "journey")
+  "Only artifacts which have any of these tag should be published.")
 
-(defparameter *control-tags* (list *published-tag*)
+(defparameter *unpublished-tags* '("draft" "micro")
+  "Artifact with any of these tags will not get published. Takes precedence over published-tags.")
+
+(defparameter *control-tags*
+  (append *unpublished-tags*  *published-tags* '("blog-post" "blogpost"))
   "List of tags which are meant for controlling the publishing flow and should themselves never be
-published.")
+published as a listing page.")
 
 (defun publish-tag-p (tag)
   "Return `t' if TAG should be published."
-  (not (find *control-tags* tag :test #'equal)))
+  (not (find tag *control-tags* :test #'equal)))
+
+(defun unpublished-p (artifact)
+  "An artifact is a draft if:
+1. *BUILD-ENV* is not PROD
+2. It has any of the *UNPUBLISHED-TAGS*
+3. It has none of the *PUBLISHED-TAGS*"
+  (let ((tags (artifact-tags artifact)))
+    (and
+     (not (emptyp tags))
+     (or
+      (some (op (find _ *unpublished-tags* :test #'equal)) tags)
+      (not (some (op (find _ *published-tags* :test #'equal)) tags)))
+     (eq *build-env* 'prod))))
+
+(defun remove-unpublished (artifacts)
+  (remove-if
+   (op (and (eq 'prod *build-env*)
+            (unpublished-p _1)))
+   artifacts))
 
 ;; Author
 (defparameter *author*
@@ -100,8 +123,8 @@ published.")
          (projects (mapcar
                     (op (from _ 'software-project :author *author*))
                     (provide-all project-provider (path-join *base-dir* "projects/"))))
-         (project-pages (remove-if-not
-                         (op (find *published-tag* (artifact-tags _) :test #'equal))
+         (project-pages (remove-if
+                         #'unpublished-p
                          (mapcar (op (from _ 'html-page-artifact :location "/projects"))
                                  projects))))
     (dolist (page project-pages)
@@ -144,7 +167,7 @@ published.")
       (when (publish-tag-p tag)
         (add-listing-page
          'tag (str:capitalize tag) (format nil "/tags/~a" tag)
-         (get-sorted-posts (registry-query *registry* 'tagged :id tag)))))))
+         (registry-query *registry* 'tagged :id tag))))))
 
 (defun load-category-listings ()
   (when-let* ((index (@ (registry-indices *registry*) 'categorized))
@@ -153,7 +176,7 @@ published.")
       (unless (equal cat "projects")
         (add-listing-page
          'category (str:capitalize cat) (format nil "/~a" cat)
-         (get-sorted-posts (registry-query *registry* 'categorized :id cat)))))
+         (registry-query *registry* 'categorized :id cat))))
 
     (add-listing-page
      'category "Projects" "/projects"
@@ -182,7 +205,7 @@ published.")
 
 ;;; Home page
 (defun load-home-page ()
-  (let* ((blog-posts (get-sorted-posts (hash-table-values (registry-store *registry*))))
+  (let* ((blog-posts (registry-query *registry* 'blog-posts))
          (archive (make-listing-page
                    :path "/archive"
                    :id "archive"
