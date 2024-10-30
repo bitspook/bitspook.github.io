@@ -12,6 +12,15 @@
 
 (load-file (expand-file-name "./clown-common.el" (file-name-directory load-file-name)))
 
+(defun clown-get-post-commit-dates (file)
+  "Return created-at and updated-at dates for FILE based on oldeast and latest commits in git."
+  (let* ((dir (file-name-parent-directory file))
+         (cmd "cd %s; git log %s --pretty='%%cd' --date=format:\"%%Y-%%m-%%d %%H:%%M:%%S\" %s | head -n1" )
+         (created-at (string-trim (shell-command-to-string (format cmd dir "--reverse" file))))
+         (updated-at (string-trim (shell-command-to-string (format cmd dir "" file)))))
+    (list (cons 'created-at created-at)
+          (cons 'updated-at updated-at))))
+
 (defun clown-get-post-meta (org-file)
   "Get post metadata for org file with ORG-FILE published to PUBLISHED-FILE."
   (let* ((props (cl-ownpress--get-org-file-props org-file)))
@@ -24,8 +33,10 @@
            (push (cons 'date (format-time-string "%Y-%m-%d %H:%M:%S" (org-time-string-to-time val))) props))
           ("filetags" (push (cons 'tags (split-string val "[ :]" t "[ \t]")) props)))))
 
+    (setf props (seq-concatenate 'list (clown-get-post-commit-dates org-file) props))
+
     (when (not (assq 'date props))
-      (push (cons 'date (format-time-string "%Y-%m-%d %H:%M:%S" (current-time))) props))
+      (push (cons 'date (alist-get 'created-at props)) props))
 
     props))
 

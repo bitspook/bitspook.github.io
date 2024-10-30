@@ -37,8 +37,8 @@
           :slug (@ metadata "slug")
           :tags (@ metadata "tags")
           :metadata metadata
-          :created-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
-          :updated-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
+          :created-at (local-time:parse-timestring (@ metadata "created-at") :date-time-separator #\Space)
+          :updated-at (local-time:parse-timestring (@ metadata "updated-at") :date-time-separator #\Space)
           :body-dom (plump:parse body)
           :author author)))
 
@@ -53,8 +53,8 @@
           :title (@ metadata "title")
           :slug (@ metadata "slug")
           :tags (@ metadata "tags")
-          :created-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
-          :updated-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
+          :created-at (local-time:parse-timestring (@ metadata "created-at") :date-time-separator #\Space)
+          :updated-at (local-time:parse-timestring (@ metadata "updated-at") :date-time-separator #\Space)
           :published-at (local-time:parse-timestring (@ metadata "date") :date-time-separator #\Space)
           :body-dom (plump:parse body)
           :summary-dom nil
