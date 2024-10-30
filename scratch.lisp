@@ -9,25 +9,12 @@
 
 (load-all-content)
 
-(defun build ()
-  (let* ((www (path-join *base-dir* "docs/"))
-         (static (path-join *base-dir* "src/static/"))
-         (*print-pretty* nil))
+(defun rebuild ()
+  (load-projects)
+  (load-listing-pages)
+  (build 'dev))
 
-    (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
-
-    (publish-static :content static :dest-dir www)
-
-    (load-home-page)
-
-    ;; Publish home-page and all its dependencies
-    (let ((*already-published-artifacts* nil)
-          (home (registry-query *registry* "home")))
-      (handler-bind ((file-already-exists #'skip-existing))
-        (publish-artifact home www)))
-
-    t))
-
+(rebuild)
 ;; quick hack to auto-build
 ;; elisp
 ;; (defun build-website (successp notes buffer loadp)

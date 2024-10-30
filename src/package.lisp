@@ -24,6 +24,9 @@
 ;; (defparameter *base-url* "https://bitspook.in")
 (defparameter *base-url* "")
 
+(defparameter *build-env* 'prod
+  "Possible values: `dev' `prod'")
+
 (defparameter *base-dir* (asdf:system-relative-pathname :in.bitspook.website ""))
 
 (defparameter *site-title* "@bitspook's personal website")
@@ -38,5 +41,29 @@
   (:method ((artifact artifact)) nil))
 
 (defmethod embed-artifact-as ((artifact html-page-artifact) (as (eql 'link)) &key)
-  (when (publish-artifact-p artifact)
+  (unless (draft-p artifact)
     (call-next-method artifact 'link)))
+
+(defun build (env)
+  "Build the complete website for ENV. ENV can be `dev' or `prod'."
+  (let* ((*build-env* env)
+         (www (path-join *base-dir* "build/"))
+         (static (path-join *base-dir* "src/static/"))
+         (*print-pretty* (eq *build-env* 'dev))
+         (*base-url* (if (eq *build-env* 'prod)
+                         "https://bitspook.in"
+                         "")))
+
+    (uiop:delete-directory-tree www :validate t :if-does-not-exist :ignore)
+
+    (publish-static :content static :dest-dir www)
+
+    (load-home-page)
+
+    ;; Publish home-page and all its dependencies
+    (let ((*already-published-artifacts* nil)
+          (home (registry-query *registry* "home")))
+      (handler-bind ((file-already-exists #'skip-existing))
+        (publish-artifact home www)))
+
+    t))

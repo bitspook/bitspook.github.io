@@ -43,16 +43,12 @@ of ITEMs as value."
         (embed-artifact-as artifact 'link)
         (warn "Failed to find artifact [query=~a]" query))))
 
-(defun publish-artifact-p (artifact)
-  "Can this artifact be published?"
-  (and
-   (not (some (op (find _ *blacklisted-tags* :test #'equal))
-              (artifact-tags artifact)))
+(defun draft-p (artifact)
+  (not (some (op (find _ *blacklisted-tags* :test #'equal))
+             (artifact-tags artifact))))
 
-   (not (let ((loc (namestring (artifact-location artifact))))
-          (and (string-contains-p "/tags/" loc)
-               (some (op (string-contains-p _ loc))
-                     *unpublished-tags*))))))
+(defun remove-drafts (artifacts)
+  (remove-if (op (draft-p _1)) artifacts))
 
 (defun get-sorted-posts (artifacts)
   (sort (remove-if-not (op (and (eq (class-name-of _1) 'blog-post-page)
