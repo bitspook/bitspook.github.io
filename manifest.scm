@@ -1,4 +1,4 @@
 (use-modules (guix packages)
-             (gnu packages node))
+             (gnu packages base))
 
-(packages->manifest (list node-lts))
+(packages->manifest (list gnu-make))
