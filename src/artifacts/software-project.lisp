@@ -6,9 +6,9 @@
                  &key location (css-location "/css/software-project.css"))
   (with-slots (slug name description tagline issue-tracker source-code tags languages created-at updated-at body author) project
     (let* ((html-path (base-path-join location "/" slug "/index.html"))
-           (root-widget (make 'software-project-w :project project))
-           (css-art (make 'css-file-artifact :location css-location :root-widget root-widget)))
-      (setf (slot-value root-widget 'css-file-artifact) css-art)
+           (root-component (make 'software-project-w :project project))
+           (css-art (make 'css-file-artifact :location css-location :root-component root-component)))
+      (setf (slot-value root-component 'css-file-artifact) css-art)
       (make 'software-project-page
             ;; software project
             :name name
@@ -26,7 +26,7 @@
             ;; html-page-artifact
             :id (format nil "project-~a" name)
             :location html-path
-            :root-widget root-widget
+            :root-component root-component
             :deps (list css-art)))))
 
 (defmethod artifact-tags ((obj software-project-page))

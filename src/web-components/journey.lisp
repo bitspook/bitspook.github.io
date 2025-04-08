@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget journey-w (journey related-posts css-file-artifact author)
+(defcomponent journey-w (journey related-posts css-file-artifact author)
     (tagged-lass
      (base-lass)
 
@@ -162,7 +162,7 @@
 
       ;; (:div#explore
       ;;  (:h2.title "Related content")
-      ;;  (render 'posts-listing-widget :posts nil)
+      ;;  (render 'posts-listing-component :posts nil)
       ;;  )
       ))
     (render 'footer-w :author author))))

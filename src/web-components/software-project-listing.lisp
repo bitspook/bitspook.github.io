@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget software-project-listing-w (css-file-artifact name type items project-publisher title author next-page previous-page)
+(defcomponent software-project-listing-w (css-file-artifact name type items project-publisher title author next-page previous-page)
     (tagged-lass
      (base-lass)
 

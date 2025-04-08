@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget notebook-btn-w (note-ids href)
+(defcomponent notebook-btn-w (note-ids href)
     (tagged-lass
      `((.notebook-btn
         (.icon-nb :background-image (url "/images/icons/nb.svg"))

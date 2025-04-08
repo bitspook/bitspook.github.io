@@ -18,27 +18,31 @@
          (cmd "cd %s; git log %s --pretty='%%cd' --date=format:\"%%Y-%%m-%%d %%H:%%M:%%S\" %s | head -n1" )
          (created-at (string-trim (shell-command-to-string (format cmd dir "--reverse" file))))
          (updated-at (string-trim (shell-command-to-string (format cmd dir "" file)))))
-    (list (cons 'created-at created-at)
-          (cons 'updated-at updated-at))))
+    (unless (string-empty-p created-at)
+      (list (cons 'created-at created-at)
+            (cons 'updated-at updated-at)))))
 
 (defun clown-get-post-meta (org-file)
   "Get post metadata for org file with ORG-FILE published to PUBLISHED-FILE."
-  (let* ((props (cl-ownpress--get-org-file-props org-file)))
-    (cl-dolist (pcell props)
-      (let ((key (downcase (car pcell)))
-            (val (cdr pcell)))
-        (pcase key
-          ("date"
-           (setf props (cl-remove-if (lambda (cell) (equal (car cell) "date")) props))
-           (push (cons 'date (format-time-string "%Y-%m-%d %H:%M:%S" (org-time-string-to-time val))) props))
-          ("filetags" (push (cons 'tags (split-string val "[ :]" t "[ \t]")) props)))))
+  (let* ((props (cl-ownpress--get-org-file-props org-file))
+         (commit-dates (clown-get-post-commit-dates org-file)))
+    ;; work only with git-committed files
+    (when commit-dates
+      (cl-dolist (pcell props)
+        (let ((key (downcase (car pcell)))
+              (val (cdr pcell)))
+          (pcase key
+            ("date"
+             (setf props (cl-remove-if (lambda (cell) (equal (car cell) "date")) props))
+             (push (cons 'date (format-time-string "%Y-%m-%d %H:%M:%S" (org-time-string-to-time val))) props))
+            ("filetags" (push (cons 'tags (split-string val "[ :]" t "[ \t]")) props)))))
 
-    (setf props (seq-concatenate 'list (clown-get-post-commit-dates org-file) props))
+      (setf props (seq-concatenate 'list commit-dates props))
 
-    (when (not (assq 'date props))
-      (push (cons 'date (alist-get 'created-at props)) props))
+      (when (not (assq 'date props))
+        (push (cons 'date (alist-get 'created-at props)) props))
 
-    props))
+      props)))
 
 (defun clown-org-to-html (org-content)
   "Return ORG-CONTENT as HTML."
@@ -61,21 +65,24 @@
   "Convert org FILE (with optional ID) to msg to be send to cl-ownpress."
   (let ((meta (clown-get-post-meta file))
         (org-content (org-file-contents file)))
-    (list
-     :id (or
-          id
-          (alist-get 'id meta)
-          (alist-get 'slug meta))
-     :filepath file
-     :metadata (json-encode-alist meta)
-     :body_raw org-content
-     :body_html (clown-org-to-html org-content))))
+    ;; work only when we can get meta
+    (when meta
+      (list
+       :id (or
+            id
+            (alist-get 'id meta)
+            (alist-get 'slug meta))
+       :filepath file
+       :metadata (json-encode-alist meta)
+       :body_raw org-content
+       :body_html (clown-org-to-html org-content)))))
 
 (defun main (content-dir)
   "Send all org-files from CONTENT-DIR."
   (let ((files (directory-files-recursively content-dir "")))
     (cl-dolist (file files)
-      (clown-rpc-send :event (clown-org-file-to-msg file)))
+      (let ((msg (clown-org-file-to-msg file)))
+        (when msg (clown-rpc-send :event msg))))
 
     (clown-rpc-send :done nil)))
 

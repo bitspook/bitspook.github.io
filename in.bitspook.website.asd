@@ -4,6 +4,7 @@
   :author "Charanjit Singh"
   :license "AGPL-3.0-only"
   :depends-on (:in.bitspook.cl-ownpress
+               :in.bitspook.web-components
                :local-time :serapeum :trivia
                :feeder :plump :quri :clss :lquery)
   :components ((:module "src"
@@ -28,7 +29,7 @@
                                            (:file "pollen")
                                            (:file "global-lass")))
 
-                             (:module "widgets"
+                             (:module "web-components"
                               :components ((:file "navbar")
                                            (:file "footer")
                                            (:file "notebook-btn")

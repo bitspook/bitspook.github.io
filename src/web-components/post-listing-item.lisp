@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget blog-post-listing-item-w (post)
+(defcomponent blog-post-listing-item-w (post)
     (tagged-lass
      `((li :display flex
            :line-height 1.3

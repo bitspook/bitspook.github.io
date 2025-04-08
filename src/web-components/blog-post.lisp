@@ -34,7 +34,7 @@
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
-(defwidget blog-post-w (post css-file-artifact)
+(defcomponent blog-post-w (post css-file-artifact)
     (bp-lass)
   (with-slots (title published-at author tags category) post
     (:html

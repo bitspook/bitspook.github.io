@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget journeys-listing-w (journeys title description css-file-artifact)
+(defcomponent journeys-listing-w (journeys title description css-file-artifact)
     (tagged-lass
      (base-lass)
 

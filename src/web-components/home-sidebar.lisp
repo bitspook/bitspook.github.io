@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget home-sidebar-w (author)
+(defcomponent home-sidebar-w (author)
     (tagged-lass
      `((.sidebar
         :left 0 :top 0 :bottom 0

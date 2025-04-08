@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget newsletter-form-w ()
+(defcomponent newsletter-form-w ()
     (tagged-lass
      `(("#mc_embed_signup"
         :max-width (var --width-sm)
@@ -72,7 +72,7 @@
                                  :class "btn"))))))))
 
 
-(defwidget footer-w (author)
+(defcomponent footer-w (author)
     (tagged-lass
      `((.footer
         :color (var --color-grey-600)

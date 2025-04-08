@@ -34,7 +34,7 @@
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
-(defwidget software-project-w (css-file-artifact project)
+(defcomponent software-project-w (css-file-artifact project)
     (sp-lass)
   (with-slots (name created-at author tags body) project
     (:html

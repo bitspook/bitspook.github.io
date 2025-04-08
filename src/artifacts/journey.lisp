@@ -4,9 +4,9 @@
 
 (defmethod from ((journey journey) (to (eql 'html-page-artifact)) &key author location (css-location "/css/journey.css"))
   (let* ((html-path (base-path-join location "/" (journey-slug journey) "/index.html"))
-         (root-widget (make 'journey-w :journey journey :author author))
-         (css-art (make 'css-file-artifact :location css-location :root-widget root-widget)))
-    (setf (slot-value root-widget 'css-file-artifact) css-art)
+         (root-component (make 'journey-w :journey journey :author author))
+         (css-art (make 'css-file-artifact :location css-location :root-component root-component)))
+    (setf (slot-value root-component 'css-file-artifact) css-art)
     (make 'journey-page
           ;; journey
           :id (journey-id journey)
@@ -18,5 +18,5 @@
 
           ;; html-page-artifact
           :location html-path
-          :root-widget root-widget
+          :root-component root-component
           :deps (list css-art))))

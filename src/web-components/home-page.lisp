@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget home-page-w (title posts author about-summary css-file-artifact)
+(defcomponent home-page-w (title posts author about-summary css-file-artifact)
     (tagged-lass
      (base-lass)
 
@@ -92,7 +92,7 @@ myself on. On these web pages are footprints I've left as I am going through the
           (render 'blog-post-listing-item-w :post post)))
        (:footer (:a.read-more-btn :href (link-artifact "archive") "View all"))))))))
 
-(defwidget journey-listing-item (journey)
+(defcomponent journey-listing-item (journey)
     (tagged-lass
      `((.journey-listing-item
         :display flex

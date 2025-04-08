@@ -1,7 +1,7 @@
 (in-package #:in.bitspook.website)
 
-(defwidget note-listing-w (items title author next-page name type
-                                 previous-page css-file-artifact)
+(defcomponent note-listing-w (items title author next-page name type
+                                    previous-page css-file-artifact)
     (tagged-lass
      (base-lass)
 

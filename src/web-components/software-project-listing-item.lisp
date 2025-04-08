@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget note-listing-item-w (note)
+(defcomponent software-project-listing-item-w (project publisher)
     (tagged-lass
      `((li :display flex
            :line-height 1.3
@@ -8,17 +8,6 @@
            :align-items center
            :list-style-type none
            :margin-bottom 0.6rem)
-
-       (.li-icon :display block
-                 :background-repeat no-repeat
-                 :background-position 0 0
-                 :background-size contain
-                 :content ""
-                 :width 88px
-                 :height 48px
-                 :flex-shrink 0)
-
-       (.li-icon--blog :background-image "url(/images/icons/post.svg)")
 
        (.li-title :font-size (var --size-5))
 
@@ -36,16 +25,19 @@
                    :border-right 1px solid (var --color-grey-500))
 
        ((:and .meta-item :last-child) :padding-right 0
-                                      :border none))
+                                      :border none)
+       (.tags :display flex
+              :flex-wrap wrap
+
+              (a :margin-left 1rem)))
 
      :dark `((.li-meta :color (var --color-grey-600))
              (.meta-item :border-color (var --color-grey-800))))
   (:li
-   (:span :class (format nil "li-icon li-icon--blog"))
    (:div.li-content
-    (:a.li-title :href (embed-artifact-as note 'link) (note-title note))
+    (:a.li-title :href (embed-artifact-as project 'link) (project-name project))
     (:span.li-meta
      (:span :class "meta-item date"
             (local-time:format-timestring
-             nil (note-updated-at note)
+             nil (project-updated-at project)
              :format '(:long-month " " :day ", " :year)))))))

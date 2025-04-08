@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget about-me-summary-w (categories)
+(defcomponent about-me-summary-w (categories)
     (tagged-lass
      `((.about-me-snippet
         :line-height 1.5

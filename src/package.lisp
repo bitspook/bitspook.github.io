@@ -6,12 +6,15 @@
   (:import-from #:in.bitspook.cl-ownpress
    :start-rpc-server :stop-rpc-server
    :artifact :css-file-artifact :html-page-artifact :artifact-deps
-   :make-font-artifact :embed-artifact-as :link :tagged-lass
-   :defwidget :render :make-html-page-artifact :emacs-provider :script :provide-all
-   :publish-static :publish-artifact :font-face :*base-url*
-   :skip-existing :file-already-exists :*already-published-artifacts* :artifact-location
-   :artifact-id :artifact-registry :registry-indices :registry-on-index-artifact
-   :registry-add-artifact :registry-add-index :registry-query :registry-store)
+   :make-font-artifact :embed-artifact-as :link :make-html-page-artifact
+   :emacs-provider :script :provide-all :publish-static
+   :publish-artifact :font-face :*base-url* :skip-existing
+   :file-already-exists :*already-published-artifacts*
+   :artifact-location :artifact-id :artifact-registry :registry-indices
+   :registry-on-index-artifact :registry-add-artifact
+   :registry-add-index :registry-query :registry-store)
+  (:import-from #:in.bitspook.web-components
+   :tagged-lass :defcomponent :render)
   (:local-nicknames
    (:feeder #:org.shirakumo.feeder) ;; entry feed link serialize-feed
    (:clown #:in.bitspook.cl-ownpress)))

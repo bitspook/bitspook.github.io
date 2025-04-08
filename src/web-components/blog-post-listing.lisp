@@ -40,8 +40,8 @@
    :lg `((.content :max-width (var --width-md)
                    :margin 0 auto))))
 
-(defwidget blog-post-listing-w (items title author next-page name type
-                                      previous-page css-file-artifact)
+(defcomponent blog-post-listing-w (items title author next-page name type
+                                         previous-page css-file-artifact)
     (bp-listing-lass)
   (:html
    (:head (:title title)

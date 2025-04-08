@@ -5,9 +5,9 @@
 (defmethod from ((post blog-post) (to (eql 'html-page-artifact))
                  &key location (css-location "/css/post.css"))
   (let* ((html-path (base-path-join location "/" (post-category post) "/" (post-slug post) "/index.html"))
-         (root-widget (make 'blog-post-w :post post))
-         (css-art (make 'css-file-artifact :location css-location :root-widget root-widget)))
-    (setf (slot-value root-widget 'css-file-artifact) css-art)
+         (root-component (make 'blog-post-w :post post))
+         (css-art (make 'css-file-artifact :location css-location :root-component root-component)))
+    (setf (slot-value root-component 'css-file-artifact) css-art)
     (make 'blog-post-page
           ;; blog-post
           :id (post-id post)
@@ -24,7 +24,7 @@
 
           ;; html-page-artifact
           :location html-path
-          :root-widget root-widget
+          :root-component root-component
           :deps (list css-art))))
 
 (defmethod artifact-tags ((obj blog-post-page))

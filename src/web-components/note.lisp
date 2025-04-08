@@ -1,6 +1,6 @@
 (in-package #:in.bitspook.website)
 
-(defwidget note-w (note css-file-artifact)
+(defcomponent note-w (note css-file-artifact)
     (tagged-lass
      (base-lass)
 

@@ -38,7 +38,7 @@
 
            (ul.nav (li :padding 0 (var --size-4)))))))
 
-(defwidget navbar-w (links) navbar-lass
+(defcomponent navbar-w (links) navbar-lass
   (let ((links (or links '(("Home" "/")
                            ("Blog" "/blog")
                            ("Projects" "/projects")
