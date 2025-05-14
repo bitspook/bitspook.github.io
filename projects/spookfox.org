@@ -138,7 +138,7 @@ as documented in [[id:7c11ffa6-701d-48a0-ac3c-b839fd210951][apps]] section below
    Provide the list of enabled apps to =spookfox-enabled-apps= variable:
 
    #+begin_src elisp :eval never-export
-     (setq spookfox-enabled-apps '(spookfox-org-tabs))
+     (setq spookfox-enabled-apps (list spookfox-org-tabs))
    #+end_src
 
 3. *Initialize spookfox*
