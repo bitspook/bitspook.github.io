@@ -73,7 +73,7 @@ Using straight.el
             <span style="color: #7f7dca;">:repo</span> <span style="color: #6aaf50;">"bitspook/spookfox"</span>
             <span style="color: #7f7dca;">:files</span> (<span style="color: #6aaf50;">"lisp/*.el"</span> <span style="color: #6aaf50;">"lisp/apps/*.el"</span>))
   <span style="color: #7f7dca;">:config</span>
-  (spookfox-init))
+  (spookfox-start-server))
 </pre>
 </div></li>
 
@@ -106,10 +106,10 @@ Add spookfox and its apps <code>load-path</code>
 <div id="outline-container-use" class="outline-2">
 <h2 id="use">Usage</h2>
 <div class="outline-text-2" id="text-use">
-<p>
-Spookfox itself is a thin layer which provide websockets based communication between Emacs and
-Browser. More functionality on top of it is provided with <a href="#apps">apps</a>. Different apps need to be configured
-as documented in <a href="#apps">apps</a> section below.
+  <p>
+    Spookfox itself is a thin layer which provide websockets based communication between Emacs and
+    Browser. More functionality on top of it is provided with apps; an app is simply some elisp that
+    uses primitives provided by <code>spookfox.el</code> to do something useful.  See <a href="#apps">apps</a> section below.
 </p>
 
 <ol class="org-ol">
@@ -119,39 +119,27 @@ as documented in <a href="#apps">apps</a> section below.
 
 <p>
 If you followed the <a href="#install">installation</a> instructions, all apps bundled with the package itself should be
-ready to be loaded with a call to <code>require</code>. For example, to load <code>spookfox-org-tabs</code> app, you'd
+ready to be loaded with a call to <code>require</code>. For example, to load <code>spookfox-tabs</code> app, you'd
 write this Elisp:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #598bc1;">require</span> '<span style="color: #ab75c3;">spookfox-tabs</span>)
-</pre>
-</div></li>
+  <pre class="src src-elisp">(<span style="color: #598bc1;">require</span> '<span style="color: #ab75c3;">spookfox-tabs</span>)
+  </pre>
+</div>
+Or call an autoloaded function like <code>spookfox-switch-tab</code>.
+</li>
 
 <li><p>
-<b>Tell spookfox which apps you want to enable</b>
+  <b>Start spookfox</b>
 </p>
 
 <p>
-Provide the list of enabled apps to <code>spookfox-enabled-apps</code> variable:
+  Start the websockets server so spookfox addon in Firefox can connect to it.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #598bc1;">setq</span> spookfox-enabled-apps (list spookfox-org-tabs))
-</pre>
-</div></li>
-
-<li><p>
-<b>Initialize spookfox</b>
-</p>
-
-<p>
-Changes to <code>spookfox-enabled-apps</code> take effect when <code>spookfox-init</code> function
-is called. This function also starts the websockets server.
-</p>
-
-<div class="org-src-container">
-<pre class="src src-elisp">(spookfox-init)
+<pre class="src src-elisp">(spookfox-start-server)
 </pre>
 </div></li>
 </ol>
@@ -160,10 +148,10 @@ is called. This function also starts the websockets server.
 <div id="outline-container-apps" class="outline-2">
 <h2 id="apps">Apps</h2>
 <div class="outline-text-2" id="text-apps">
-<p>
-Spookfox has a modular architecture. An "app" is a bundle of functionality
-isolated and opt-in. Following apps come bundled with this package.
-</p>
+  <p>
+    Spookfox has a modular architecture. An "app" is a bundle of functionality written using primitives
+    from =spookfox.el=. Following apps come bundled with this package.
+  </p>
 
 <style>[role=doc-toc] li { margin-left: 2rem; }</style>
 
@@ -175,8 +163,6 @@ isolated and opt-in. Following apps come bundled with this package.
 </ul>
 </li>
 <li><a href="#js-injection-app">js-injection</a></li>
-<li><a href="#jscl-app">jscl</a></li>
-<li><a href="#spookfox-org-tabs-app">spookfox-org-tabs</a>
 <ul>
 <li><a href="#spookfox-org-tabs-features">Features</a></li>
 <li><a href="#spookfox-org-tabs-config">Configuration</a></li>
@@ -376,176 +362,7 @@ and JS is evaluated in every tab for which it returns non-nil.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-jscl-app" class="outline-3">
-<h3 id="jscl-app">jscl</h3>
-<div class="outline-text-3" id="text-jscl-app">
-<p>
-Spookfox ships <a href="https://github.com/jscl-project/jscl">JSCL</a> compiler, which can be used to run a subset of common-lisp
-in the browser. For example:
-</p>
 
-<div class="org-src-container">
-<pre class="src src-emacs-lisp">(sfcl-eval
-   `(<span style="color: #598bc1;">progn</span>
-      (js:browser:tabs:update ,tab-id ,(sfcl-js-obj '((<span style="color: #6aaf50;">"active"</span> . t))))
-      (js:browser:windows:update ,window-id ,(sfcl-js-obj '((<span style="color: #6aaf50;">"focused"</span> . t))))
-      t))
-</pre>
-</div>
-
-<p>
-<a href="https://github.com/bitspook/spookfox/blob/fde29fcb95e1f7cfba52bcfa31417d3b2f6dbfb0/lisp/apps/spookfox-tabs.el#L66-L70">spookfox-tabs.el use jscl</a> for <a href="https://github.com/bitspook/spookfox/blob/fde29fcb95e1f7cfba52bcfa31417d3b2f6dbfb0/lisp/apps/spookfox-tabs.el#L49">spookfox-switch-tab</a>
-</p>
-
-<p>
-Following functions are available:
-</p>
-
-<ul class="org-ul">
-<li><p>
-<code>spookfox-jscl-eval</code>
-</p>
-
-<p>
-spookfox-jscl-eval is a byte-compiled Lisp function in ‘spookfox-jscl.el’.
-</p>
-
-<p>
-(spookfox-jscl-eval FORM &amp;optional (CONTEXT 'background))
-</p>
-
-<p>
-Evaluate LISP FORM in background script in CONTEXT.
-CONTEXT can be one of (background).
-</p>
-
-<p>
-Note: JSCL uses #j: for FFI, but FORM must use ‘js:‘ for that,
-because emacs-lisp do not allow writing #j: forms, even in quoted
-form.
-</p></li>
-</ul>
-
-
-<p>
-To make it a little easier to work with JS from CL, following utility functions
-can be used:
-</p>
-
-<ul class="org-ul">
-<li><p>
-<code>spookfox-jscl-js-obj</code>
-</p>
-
-<p>
-spookfox-jscl-js-obj is a byte-compiled Lisp function in ‘spookfox-jscl.el’.
-</p>
-
-<p>
-(spookfox-jscl-js-obj ALIST)
-</p>
-
-<p>
-Create a javascript object from ALIST.
-</p></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-spookfox-org-tabs-app" class="outline-3">
-<h3 id="spookfox-org-tabs-app">spookfox-org-tabs</h3>
-<div class="outline-text-3" id="text-spookfox-org-tabs-app">
-<blockquote>
-<p>
-⚠️ I am not using this app myself anymore. It is the most buggy of 'em all. I am
-keeping it around because list of my open tabs is increasing again, and I might
-once again need this.
-</p>
-</blockquote>
-
-<p>
-Manage browser's tabs in an org file (separate file or as a subtree in an
-existing one).
-</p>
-</div>
-<div id="outline-container-spookfox-org-tabs-features" class="outline-4">
-<h4 id="spookfox-org-tabs-features">Features</h4>
-<div class="outline-text-4" id="text-spookfox-org-tabs-features">
-<ol class="org-ol">
-<li><p>
-Organize tabs freely in org file
-</p>
-
-<p>
-Tabs are stored as org-mode subtrees, which you are free to structure as you
-desire. You can <b>group tabs</b> by assigning org-mode tags, to manipulate tabs
-(open, close) in bulk.
-</p></li>
-
-<li><b>Chain tabs</b>, so any changes to the tab in Browser (e.g url change) are
-synced with the org-file</li>
-
-<li>Commands for manipulating tabs
-
-<ul class="org-ul">
-<li><p>
-<code>spookfox-org-tabs-open-group</code>
-</p>
-
-<p>
-Prompt for a tab group, and open all tabs belonging to that group.
-</p></li>
-<li><p>
-<code>spookfox-org-tabs-open</code>
-</p>
-
-<p>
-Prompt user to select a tab and open it in spookfox browser.
-</p></li>
-<li><p>
-<code>spookfox-org-tabs-save-active-tab</code>
-</p>
-
-<p>
-Save active tab in browser.
-</p></li>
-<li><p>
-<code>spookfox-org-tabs-save-all-tabs</code>
-</p>
-
-<p>
-Save all currently open browser tabs at ‘spookfox-saved-tabs-target‘.
-It will open a capture buffer so user get a chance to preview and
-make changes.
-</p></li>
-</ul></li>
-</ol>
-</div>
-</div>
-<div id="outline-container-spookfox-org-tabs-config" class="outline-4">
-<h4 id="spookfox-org-tabs-config">Configuration</h4>
-<div class="outline-text-4" id="text-spookfox-org-tabs-config">
-<ol class="org-ol">
-<li><p>
-<code>spookfox-saved-tabs-target</code>
-</p>
-
-<p>
-<code>spookfox-saved-tabs-target</code> is an <a href="https://orgmode.org/manual/Template-elements.html">org-capture-templates target</a>, where the
-browser tabs are saved. For example:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-elisp"><span style="color: #858585; font-style: italic;">;; </span><span style="color: #858585; font-style: italic;">Store tabs in a file named =spookfox.org=, under '* Tabs' heading</span>
-(<span style="color: #598bc1;">setq</span> spookfox-saved-tabs-target
-      `(file+headline
-        ,(expand-file-name <span style="color: #6aaf50;">"spookfox.org"</span> org-directory)
-        <span style="color: #6aaf50;">"Tabs"</span>))
-</pre>
-</div></li>
-</ol>
-</div>
-</div>
-</div>
 </div>
 <div id="outline-container-contribute" class="outline-2">
 <h2 id="contribute">Contribute</h2>
