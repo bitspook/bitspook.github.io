@@ -47,15 +47,17 @@
     (format out "~a/~a" (post-category post) (post-slug post))))
 
 (defmethod post-body ((post blog-post))
-  (plump-smart-serialize
-   (resolve-linked-denotes
-    (post-body-dom post)
-    *registry*)))
+  (let ((clown:*self* post))
+    (plump-smart-serialize
+     (resolve-linked-denotes
+      (post-body-dom post)
+      *registry*))))
 
 (defmethod post-summary ((post blog-post))
-  (when-let ((summary-dom (post-summary-dom post)))
-    (plump-smart-serialize
-     (resolve-linked-denotes summary-dom *registry*))))
+  (let ((clown:*self* post))
+    (when-let ((summary-dom (post-summary-dom post)))
+      (plump-smart-serialize
+       (resolve-linked-denotes summary-dom *registry*)))))
 
 (defmethod from ((note note) (to (eql 'blog-post)) &key)
   (with-accessors ((id note-id)

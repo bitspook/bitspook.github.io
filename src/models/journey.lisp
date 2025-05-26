@@ -29,7 +29,7 @@
 
 (defmethod journey-summary ((journey journey))
   "Return text of JOURNEY-SUMMARY-DOM."
-  (let ((dom (journey-summary-dom journey)))
+  (let* ((dom (journey-summary-dom journey)))
     (when dom
       (str:trim
        (plump:text

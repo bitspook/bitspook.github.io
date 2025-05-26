@@ -199,14 +199,6 @@ places to inject JS in:
 This app provide following functions:
 
 #+begin_src elisp :exports results :results raw
-  (spook--func-doc spookfox-js-injection-eval-in-active-tab)
-#+end_src
-
-  Inject Javascript into any website open in your browser's active tab, and get
-  the results back. I use it to help me take notes for Youtube videos with
-  automatically added timestamp links.
-
-#+begin_src elisp :exports results :results raw
   (spook--func-doc spookfox-js-injection-eval)
 #+end_src
 

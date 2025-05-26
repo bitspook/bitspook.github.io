@@ -1,7 +1,12 @@
 (in-package #:in.bitspook.website)
 
 (defclass listing-page (html-page-artifact)
-  ((id :initform nil :initarg :id :accessor artifact-id)))
+  ((id :initarg :id)))
+
+(defmethod artifact-id ((art listing-page))
+  (if (and (slot-exists-p art 'id) (slot-boundp art 'id))
+      (slot-value art 'id)
+      (artifact-location art)))
 
 (defun make-listing-page (&key path items author title type name (page-size 10) component css-location (id nil))
   (let* ((page-size (or page-size (length items)))

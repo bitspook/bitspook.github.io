@@ -1,6 +1,7 @@
 (in-package #:in.bitspook.website)
 
 (defparameter *denotes* nil)
+(defparameter *journeys* nil)
 (defparameter *local-blog-posts* nil)
 (defparameter *projects* nil)
 
@@ -21,20 +22,18 @@ published as a listing page.")
 
 (defun unpublished-p (artifact)
   "An artifact is a draft if:
-1. *BUILD-ENV* is not PROD
-2. It has any of the *UNPUBLISHED-TAGS*
-3. It has none of the *PUBLISHED-TAGS*"
+1. It has any of the *UNPUBLISHED-TAGS*
+2. It has none of the *PUBLISHED-TAGS*"
   (let ((tags (artifact-tags artifact)))
     (and
      (not (emptyp tags))
      (or
       (some (op (find _ *unpublished-tags* :test #'equal)) tags)
-      (not (some (op (find _ *published-tags* :test #'equal)) tags)))
-     (eq *build-env* 'prod))))
+      (not (some (op (find _ *published-tags* :test #'equal)) tags))))))
 
 (defun remove-unpublished (artifacts)
   (remove-if
-   (op (and (eq 'prod *build-env*)
+   (op (and (find *build-env* '(prod preview))
             (unpublished-p _1)))
    artifacts))
 
@@ -66,10 +65,8 @@ blog-posts."
   "Load a single denote with ID as blog post. It loads "
   (multiple-value-bind (notes deps)
       (provide-all (make 'denote-provider) :ids (list id))
-    (mapcar #'publishable-note (append notes deps))
-    ;; (dolist (post (mapcar #'publishable-note (append notes deps)))
-    ;;   (registry-add-artifact *registry* post))
-    ))
+    (dolist (post (mapcar #'publishable-note (append notes deps)))
+      (registry-add-artifact *registry* post))))
 
 (defun load-denote-posts ()
   (let ((provider (make 'denote-provider)))
@@ -89,7 +86,7 @@ blog-posts."
 (defun load-journeys ()
   (let* ((provider (make 'journey-provider))
          (notes (apply #'safe-union (multiple-value-list (provide-all provider :tags '("journey"))))))
-
+    (setf *journeys* notes)
     (loop :for note :in notes
           :do (progn
                 (registry-add-artifact
@@ -147,7 +144,7 @@ blog-posts."
 ;; Listings
 (defparameter *listing-page-size* 10)
 
-(defun add-listing-page (type title path items &optional (widget 'blog-post-listing-w))
+(defun add-listing-page (type title path items &optional (component 'blog-post-listing-w))
   (let* ((name (slugify (str:downcase title)))
          (listing-id (format nil "listing-~(~a~)-~a" type name))
          (feed-id (format nil "feed-~(~a~)-~a" type name))
@@ -160,7 +157,7 @@ blog-posts."
                    :name (slugify (str:downcase name))
                    :title title
                    :page-size *listing-page-size*
-                   :widget widget
+                   :component component
                    :css-location (format nil "/css/~(~a~).css" type)))
          (feed (make-atom-feed-artifact
                 :title (str:concat *site-title* ": " title)
@@ -197,18 +194,20 @@ blog-posts."
      'software-project-listing-w)))
 
 (defun load-journey-notebooks ()
-  (let ((journeys (registry-query *registry* 'journey)))
-    (dolist (journey journeys)
+  (let ((journeys (registry-query *registry* 'journey))
+        (notebooks nil))
+    (dolist (journey journeys notebooks)
       (let ((name (journey-name journey))
             (slug (journey-slug journey))
             (notes (mapcar (op (registry-query *registry* _))
                            (journey-note-ids journey))))
-        (add-listing-page
-         'journey-notebook
-         (str:capitalize name)
-         (format nil "/journeys/~a/notebook" slug)
-         notes
-         'note-listing-w)))))
+        (push (add-listing-page
+               'journey-notebook
+               (str:capitalize name)
+               (format nil "/journeys/~a/notebook" slug)
+               notes
+               'note-listing-w)
+              notebooks)))))
 
 (defun load-listing-pages ()
   (load-tag-listings)
@@ -226,7 +225,7 @@ blog-posts."
                    :name 'all
                    :type 'all
                    :author *author*
-                   :widget 'blog-post-listing-w
+                   :component 'blog-post-listing-w
                    :page-size 10
                    :css-location "/css/archive.css"
                    :items blog-posts))

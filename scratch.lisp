@@ -11,11 +11,11 @@
 
 (defun rebuild (env)
   (let ((*build-env* env))
-    ;; (load-projects)
+    (load-projects)
     (load-listing-pages)
     (build)))
 
-(rebuild 'prod)
+(rebuild 'preview)
 ;; quick hack to auto-build
 ;; elisp
 ;; (defun build-website (successp notes buffer loadp)

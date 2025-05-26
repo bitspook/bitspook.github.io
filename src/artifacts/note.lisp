@@ -26,3 +26,7 @@
 
 (defmethod artifact-tags ((obj note-page))
   (note-tags obj))
+
+(defmethod note-body ((n note-page))
+  (let ((clown:*self* n))
+    (call-next-method n)))

@@ -125,7 +125,6 @@
 
      ((:or code kbd samp pre)
       :font-size (var --scale-0)
-      :padding (var --size-1)
       :font-family (var --font-mono)
       :background-color (var --color-grey-200)
       :border 1px solid (var --color-grey-300)

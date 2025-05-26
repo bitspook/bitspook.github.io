@@ -10,9 +10,11 @@
    :emacs-provider :script :provide-all :publish-static
    :publish-artifact :font-face :*base-url* :skip-existing
    :file-already-exists :*already-published-artifacts*
-   :artifact-location :artifact-id :artifact-registry :registry-indices
-   :registry-on-index-artifact :registry-add-artifact
-   :registry-add-index :registry-query :registry-store)
+   :already-published-p :artifact-location
+   :artifact-id :artifact-registry
+   :registry-indices :registry-on-index-artifact
+   :registry-add-artifact :registry-add-index
+   :registry-query :registry-store)
   (:import-from #:in.bitspook.web-components
    :tagged-lass :defcomponent :render)
   (:local-nicknames
@@ -28,9 +30,10 @@
 (defparameter *base-url* "")
 
 (defparameter *build-env* 'prod
-  "Possible values: `dev' `prod'")
+  "Possible values: `dev' `prod' `preview'")
 
 (defparameter *base-dir* (asdf:system-relative-pathname :in.bitspook.website ""))
+(defparameter *build-dir* (path-join *base-dir* "docs/"))
 
 (defparameter *site-title* "@bitspook's personal website")
 
@@ -38,14 +41,13 @@
   (:method ((artifact artifact)) nil))
 
 (defmethod embed-artifact-as ((artifact html-page-artifact) (as (eql 'link)) &key)
-  (unless (unpublished-p artifact)
-    (call-next-method artifact 'link)))
+  (call-next-method artifact 'link))
 
 (defun build ()
   "Build the complete website for *BUILD-ENV*"
-  (let* ((www (path-join *base-dir* "build/"))
+  (let* ((www *build-dir*)
          (static (path-join *base-dir* "src/static/"))
-         (*print-pretty* (eq *build-env* 'dev))
+         (*print-pretty* t)
          (*base-url* (if (eq *build-env* 'prod)
                          "https://bitspook.in"
                          "")))

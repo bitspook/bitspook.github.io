@@ -90,9 +90,9 @@
         (plump:serialize feed-dom str)))))
 
 (defmethod publish-artifact ((art atom-feed-artifact) dest-dir)
-  (when (find (artifact-location art) *already-published-artifacts*)
-    (return-from publish-artifact))
-  (appendf *already-published-artifacts* (list (artifact-location art)))
+  (when (already-published-p art) (return-from publish-artifact))
+
+  (call-next-method art dest-dir)
 
   (setf *already-published-artifacts*
         (concatenate 'list *already-published-artifacts* (list art)))

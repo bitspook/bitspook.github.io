@@ -24,7 +24,8 @@ far. STORE is needed to resolve circular dependencies of denotes."
                               (op (@ (denote-store prov) _))
                               linked-denote-ids)))
 
-    (unless (emptyp missing-linked-ids)
-      (provide-all prov :ids missing-linked-ids))
-
-    (mapcar (op (@ (denote-store prov) _)) linked-denote-ids)))
+    (if (emptyp missing-linked-ids)
+        (mapcar (op (@ (denote-store prov) _)) linked-denote-ids)
+        (apply #'safe-union
+               (multiple-value-list
+                (provide-all prov :ids missing-linked-ids))))))
