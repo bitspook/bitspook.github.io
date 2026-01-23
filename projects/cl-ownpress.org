@@ -1,0 +1,43 @@
+#+title: cl-ownpress
+#+tagline: Common Lisp library to create static websites.
+#+id: cl-ownpress
+#+source_code: https://github.com/bitspook/cl-ownpress
+#+issue_tracker: https://github.com/bitspook/cl-ownpress/issues
+#+languages: ["Common Lisp", "Emacs Lisp"]
+#+updated_at: <2023-02-28>
+#+filetags: :emacs:commonlisp:
+
+* Concepts
+
+** Artifacts
+
+* Convenience
+
+** Registry
+
+=registry= is a store of all the artifacts which are going to be published. All artifacts are first
+collected into a =registry=, and subsequently retrieved to build Trees to be published.
+
+Registry provides convenient API for:
+
+- Frequent use-case of repeatedly accessing same content in multiple ways.
+
+  For example getting list of blog-posts for each tag, category etc.
+
+- Resolving circular dependencies in artifacts where two artifacts link to each other.
+
+  Registry is a database of =id -> artifact=. Since linking one artifact from another needs only its
+  =id=, registry can be used to resolve circular dependencies.
+
+*** API
+
+**** Indexing
+
+- You can add any number =index= to the registry. An =index= is simply a hash-table with a name. For
+  example, a =tagged= index for listing artifacts by tags, =categorized= index for listing artifacts
+  by category.
+
+- =registry-on-index-artifact= is called for every index every time a new artifact has been added to
+  registry. This gives you the opportunity to add the artifact id to your index.
+
+- =registry-query= method is how artifacts indexed by your =index= are retrieved.

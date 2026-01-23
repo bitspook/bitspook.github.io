@@ -46,6 +46,9 @@
   (print-unreadable-object (post out :type t)
     (format out "~a/~a" (post-category post) (post-slug post))))
 
+(defmethod published-at ((post blog-post))
+  (post-published-at post))
+
 (defmethod post-body ((post blog-post))
   (let ((clown:*self* post))
     (plump-smart-serialize
@@ -75,7 +78,7 @@
           :tags (@ metadata "tags")
           :created-at created-at
           :updated-at updated-at
-          :published-at updated-at
+          :published-at created-at
           :body-dom body-dom
           :summary-dom nil
           :author author)))

@@ -38,6 +38,9 @@
            :initform (error "Project `author` is required")
            :accessor project-author)))
 
+(defmethod published-at ((proj software-project))
+  (project-updated-at proj))
+
 (defmethod initialize-instance :after ((project software-project) &rest initargs &key)
   "Set default value for project-slug."
   (declare (ignorable initargs))

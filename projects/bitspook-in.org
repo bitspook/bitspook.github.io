@@ -1,0 +1,32 @@
+#+title: bitspook.in
+#+tagline: My personal website, a static site written in common-lisp using cl-ownpress
+#+id: bitspookin
+#+source_code: https://github.com/bitspook/bitspook.github.io
+#+issue_tracker: https://github.com/bitspook/bitspook.github.io/issues
+#+languages: ["Emacs Lisp", "Common Lisp"]
+#+updated_at: <2023-02-28>
+#+filetags: :emacs:commonlisp:
+
+* Features
+
+** Building the static site
+
+- =build= function
+
+** Publishing denotes
+
+** Publish org file as multiple HTML pages
+
+using =html-multi-page-artifact=
+
+I sometimes want to structure a big org file into chew-able pieces. For example documentation of a
+project. In such cases, I often have a single org file which is rather long, but when published, I
+want to produce a nice documentation site with certain sections on their own separate HTML pages.
+
+This artifact accepts a tree of content, and produces multiple HTML pages that fit together well.
+
+Multiple html pages published
+
+- Need a 'template' page with
+  - ToC
+  - Body

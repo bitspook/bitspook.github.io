@@ -35,6 +35,9 @@
   (print-unreadable-object (nt out :type t)
     (format out "~a" (note-slug nt))))
 
+(defmethod published-at ((nt note))
+  (note-updated-at nt))
+
 (defmethod note-body ((note note))
   (plump-smart-serialize
    (resolve-linked-denotes

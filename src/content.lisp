@@ -128,15 +128,14 @@ blog-posts."
 ;; ---
 ;; Projects
 (defun load-projects ()
-  ;; TODO This ain't complete.
+  ;; TODO This ain't complete.; still need to add projects from denotes
   (let* ((project-provider (make 'org-project-provider))
          (projects (mapcar
                     (op (from _ 'software-project :author *author*))
                     (provide-all project-provider (path-join *base-dir* "projects/"))))
-         (project-pages (remove-if
-                         #'unpublished-p
-                         (mapcar (op (from _ 'html-page-artifact :location "/projects"))
-                                 projects))))
+         (project-pages
+           (mapcar (op (from _ 'html-page-artifact :location "/projects"))
+                   projects)))
     (dolist (page project-pages)
       (registry-add-artifact *registry* page))))
 ;; ---
@@ -183,10 +182,10 @@ blog-posts."
   (when-let* ((index (@ (registry-indices *registry*) 'categorized))
               (cats (hash-table-keys index)))
     (dolist (cat cats)
-      (unless (equal cat "projects")
-        (add-listing-page
-         'category (str:capitalize cat) (format nil "/~a" cat)
-         (registry-query *registry* 'categorized :id cat))))
+      (unless (equal cat "projects"))
+      (add-listing-page
+       'category (str:capitalize cat) (format nil "/~a" cat)
+       (registry-query *registry* 'categorized :id cat)))
 
     (add-listing-page
      'category "Projects" "/projects"
